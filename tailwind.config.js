@@ -1,0 +1,44 @@
+module.exports = {
+  mode: 'jit',
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    fontFamily: {
+      mono: [
+        'Roboto Mono',
+        'Menlo',
+        'Monaco',
+        'Consolas',
+        'courier new',
+        'monospace',
+      ],
+    },
+    extend: {
+      colors: {
+        'primary-dark': '#0D1117',
+        'text-primary': '#f2f2f2',
+        'text-strong': '#AD2680',
+        'footer-bg': '#161B22',
+      },
+    },
+  },
+  variants: {
+    extend: {
+      fontWeight: {
+        100: '100',
+        200: '200',
+        300: '300',
+        400: '400',
+        500: '500',
+        600: '600',
+        700: '700',
+        800: '800',
+        900: '900',
+      },
+    },
+  },
+  // eslint-disable-next-line
+  plugins: [require('@tailwindcss/typography')],
+};

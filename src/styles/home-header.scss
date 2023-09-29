@@ -1,0 +1,54 @@
+.atropos-header {
+  width: 100%;
+  aspect-ratio: 631 / 383;
+}
+.atropos-header .atropos-inner {
+  border-radius: 10px;
+}
+.atropos-header img {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  object-fit: contain;
+  display: block;
+  z-index: 1;
+  transform-style: preserve-3d;
+  pointer-events: none;
+  max-width: none;
+}
+.atropos-header img.atropos-header-spacer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+}
+.atropos-header .atropos-shadow {
+  filter: blur(50px);
+  opacity: 0.25;
+}
+.atropos-header .atropos-highlight {
+  z-index: 100;
+}
+.atropos-header-text {
+  position: absolute;
+  color: #fff;
+  font-weight: bold;
+  left: 0%;
+  top: 0%;
+}
+
+.atropos-header-button-wrap {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
