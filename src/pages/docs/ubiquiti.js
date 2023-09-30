@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { FaMousePointer, FaSignInAlt, FaWindows } from 'react-icons/fa';
 import { Nav } from '../../components/Nav';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
@@ -7,8 +8,19 @@ import { BrandsSwitch } from '../../components/BrandsSwitch';
 import { Pre } from '../../components/Pre';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
+import Modal from 'react-modal';
 
 export default function UbiquitiDocs() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <TitlesContextProvider>
       <Nav className="backdrop-blur-md bg-transparent fixed w-full h-12 z-10" />
@@ -56,10 +68,33 @@ export default function UbiquitiDocs() {
               <li>Dispositivo + PoE:</li>
               <div className="images-client flex justify-left m-auto">
                 <img
-                  src="https://github.com/solidsnk86/NeoTecs-NextJS/blob/master/public/images/poe-injector-ubiquiti-poe-24-24w-g-gigabit-removebg-preview.png?raw=true"
+                  src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/poe-injector-ubiquiti-poe-24-24w-g-gigabit-removebg-preview.png?raw=true"
                   alt="imágen menú principal pharos os"
                   id="imgAP"
+                  onClick={openModal}
+                  style={{ cursor: 'pointer' }}
                 />
+                <Modal
+                  isOpen={modalIsOpen}
+                  onRequestClose={closeModal}
+                  contentLabel="Image Modal"
+                >
+                  <img
+                    src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/poe-injector-ubiquiti-poe-24-24w-g-gigabit.jpg?raw=true"
+                    alt="imágen menú principal pharos os"
+                    style={{
+                      width: '100%',
+                      maxHeight: '80vh',
+                      objectFit: 'contain',
+                    }}
+                  />
+                  <button
+                    onClick={closeModal}
+                    className="bg-slate-800 px-2 py-1 rounded-full text-md font-semibold text-red-400 hover:scale-[1.1]"
+                  >
+                    Cerrar
+                  </button>
+                </Modal>
               </div>
             </ul>
             <p>Configuración desde la PC:</p>
@@ -76,10 +111,33 @@ export default function UbiquitiDocs() {
             </p>
             <div className="images-client">
               <img
-                src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-propiedades-red.png?raw=true"
-                alt="imágen menú principal pharos os"
+                src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/protocolo-ip-ubiquiti.png?raw=true"
+                alt="imágen menú principal ubiquiti os"
                 id="imgAP"
+                onClick={openModal}
+                style={{ cursor: 'pointer' }}
               />
+              <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                contentLabel="Image Modal"
+              >
+                <img
+                  src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/protocolo-ip-ubiquiti.png?raw=true"
+                  alt="imágen menú principal ubiquiti os"
+                  style={{
+                    width: '100%',
+                    maxHeight: '80vh',
+                    objectFit: 'contain',
+                  }}
+                />
+                <button
+                  onClick={closeModal}
+                  className="bg-slate-800 px-2 py-1 rounded-full text-md font-semibold text-red-400 hover:scale-[1.1]"
+                >
+                  Cerrar
+                </button>
+              </Modal>
             </div>
             <p>Vamos a "Propiedades".</p>
             <p>
@@ -244,7 +302,30 @@ export default function UbiquitiDocs() {
                 src="http://i.imgur.com/mUZX5Fq.png"
                 alt="imágen menú inalámbrico"
                 id="imgAP"
+                onClick={openModal}
+                style={{ cursor: 'pointer' }}
               />
+              <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                contentLabel="Image Modal"
+              >
+                <img
+                  src="http://i.imgur.com/mUZX5Fq.png"
+                  alt="imágen menú inalámbrico escaneo"
+                  style={{
+                    width: '100%',
+                    maxHeight: '80vh',
+                    objectFit: 'contain',
+                  }}
+                />
+                <button
+                  onClick={closeModal}
+                  className="bg-slate-800 px-2 py-1 rounded-full text-md font-semibold text-red-400 hover:scale-[1.1]"
+                >
+                  Cerrar
+                </button>
+              </Modal>
             </div>
 
             <p>Puede hacer click en el botón:</p>
@@ -274,7 +355,30 @@ export default function UbiquitiDocs() {
                 src="https://wifisafe.b-cdn.net/wp-content/uploads/2012/02/3_main_enlazado.png"
                 alt="imágen menú inalámbrico"
                 id="imgAP"
+                onClick={openModal}
+                style={{ cursor: 'pointer' }}
               />
+              <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                contentLabel="Image Modal"
+              >
+                <img
+                  src="https://wifisafe.b-cdn.net/wp-content/uploads/2012/02/3_main_enlazado.png"
+                  alt="imágen menú inalámbrico"
+                  style={{
+                    width: '100%',
+                    maxHeight: '80vh',
+                    objectFit: 'contain',
+                  }}
+                />
+                <button
+                  onClick={closeModal}
+                  className="bg-slate-800 px-2 py-1 rounded-full text-md font-semibold text-red-400 hover:scale-[1.1]"
+                >
+                  Cerrar
+                </button>
+              </Modal>
             </div>
 
             <p>Damos por hecho la conexíon viendo éste último panel.</p>
