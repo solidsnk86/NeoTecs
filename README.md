@@ -1,6 +1,8 @@
 # NeoTecs Website
 
+<div align="center">
 [![Netlify Status](https://api.netlify.com/api/v1/badges/206087bc-35c5-4333-a3e1-0c9e688e1953/deploy-status)](https://app.netlify.com/sites/neotecs/deploys)
+</div>
 
 **🔧 Herramientas y frames que he utilizado:**
 
