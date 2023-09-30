@@ -21,6 +21,7 @@
     "react-background-video": "^2.0.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
+    "react-modal": "^3.16.1",
     "react-slick": "^0.29.0",
     "react-video": "^1.5.3",
     "strip-indent": "^4.0.0"
