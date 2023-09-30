@@ -21,7 +21,7 @@ export default function UbiquitiDocs() {
           <section className="text-white">
             <p>
               Este artículo aplica a los siguientes modelos:
-              <strong className="text-text-strong">
+              <strong className="text-text-strong mx-1">
                 Lite Beam M5 - Grid M5 - M2 - airMAX - NanoStation M5 - M2
               </strong>
             </p>
