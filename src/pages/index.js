@@ -5,6 +5,7 @@ import { Nav } from '../components/Nav';
 import { HomeHeader } from '../components/HomeHeader';
 import { Footer } from '../components/Footer';
 import { GithubStats } from '../components/GithubStats';
+import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 
 const HomeBlock = ({ className = '', children }) => {
   return (
@@ -28,62 +29,15 @@ export default function Home() {
       <HomeBlock>
         <HomeBlockTitle>Configurá tu CPE</HomeBlockTitle>
         <h2>Videos de configuración</h2>
-
         <ul className="inline-flex text-left m-auto mt-2 mb-4 gap-6">
           <li className="custom-text-shadow">✅ Rápido</li>
           <li className="custom-text-shadow">✅ Fácil</li>
           <li className="custom-text-shadow">✅ Práctico</li>
         </ul>
+      </HomeBlock>
 
-        <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center justify-center">
-          <article className="bg-[#161B22] p-4 rounded-lg">
-            <iframe
-              src="https://www.youtube.com/embed/brN50pXmZR8"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen=""
-              className="rounded-md flex m-auto w-[100%] md:w-[100%]"
-            />
-            <h3>Tp-Link</h3>
-            <hr />
-            <p>
-              Configuración de antena Tp-Link CPE 510 de 5Ghz desde smartphone.
-              Configuración de puertos desde el router, fácil y práctico.
-            </p>
-          </article>
-
-          <article className="bg-[#161B22] p-4 rounded-lg">
-            <iframe
-              src="https://www.youtube.com/embed/BRCsYxWUvpU"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen=""
-              className="rounded-md flex m-auto w-[100%] md-:w-[100%]"
-            />
-            <h3>Tp-Link</h3>
-            <hr />
-            <p>
-              Configuración antena Tp.Link CPE 510 de 5 Ghz desde una PC.
-              Configuración de puertos desde el panel de control de Windows.
-            </p>
-          </article>
-
-          <article className="bg-[#161B22] p-4 rounded-lg">
-            <iframe
-              src="https://www.youtube.com/embed/Q9bFZgllF7k"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen=""
-              className="rounded-md flex m-auto w-[100%] md-:w-[100%]"
-            />
-            <h3>Ubiquiti</h3>
-            <hr />
-            <p>
-              Configuración de antena Ubiquiti modelo Air Grid M2 HP de 2.4 Ghz
-              desde smartphone, modo estación router. Guía rápida y fácil!
-            </p>
-          </article>
-        </section>
+      <HomeBlock>
+        <YouTubeVideoSection />
       </HomeBlock>
 
       <HomeBlock>
@@ -168,7 +122,7 @@ export default function Home() {
               key={item.title}
             >
               <img
-                className="w-12 sm:w-32 sm:h-32 mr-4 sm:mr-0"
+                className="w-32 min-w-[400px]: mr-4 sm:mr-0"
                 src={item.repo}
                 alt={item.title}
               />
