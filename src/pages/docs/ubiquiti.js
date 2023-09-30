@@ -91,7 +91,7 @@ export default function UbiquitiDocs() {
             </Pre>
             <div className="images-client flex justify-center m-auto">
               <img
-                src="https://github.com/solidsnk86/NeoTecs-NextJS/blob/master/public/images/protocolo-ip-ubiquiti.png?raw=true"
+                src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/protocolo-ip-ubiquiti.png?raw=true"
                 alt="imágen menú principal pharos os"
                 id="imgAP"
               />
