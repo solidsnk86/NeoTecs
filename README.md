@@ -13,6 +13,9 @@
 | ![Tailwind.CSS](https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC.svg?logo=tailwind-css&logoColor=white) 
 | Tailwind CSS       |
 
+Site deployed at:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/206087bc-35c5-4333-a3e1-0c9e688e1953/deploy-status)](https://app.netlify.com/sites/neotecs/deploys)
+
 Neotecs website to use these docs offline
 
 ## Next.js
