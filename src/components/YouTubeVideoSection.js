@@ -24,7 +24,7 @@ const videos = [
 export function YouTubeVideoSection() {
   return (
     <>
-      <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center justify-center">
+      <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center justify-center my-5">
         {videos.map(({ video, cpe, children }) => (
           <YouTubeVideo
             video={video}

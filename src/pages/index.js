@@ -34,9 +34,6 @@ export default function Home() {
           <li className="custom-text-shadow">✅ Fácil</li>
           <li className="custom-text-shadow">✅ Práctico</li>
         </ul>
-      </HomeBlock>
-
-      <HomeBlock>
         <YouTubeVideoSection />
       </HomeBlock>
 
