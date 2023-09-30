@@ -14,7 +14,7 @@
 | ![Next.js](https://img.shields.io/badge/Next.js-%23E34F26.svg?logo=next.js&logoColor=white)          | Framework de React  |
 | ![Sass](https://img.shields.io/badge/Sass-%23CC6699.svg?logo=sass&logoColor=white)                   | Estilos             |
 
-Neotecs website to use these docs offline
+Neotecs website - to use these docs offline
 
 ## Next.js
 

@@ -225,8 +225,8 @@ export default function UbiquitiDocs() {
               </li>
             </ol>
             <p>
-              En ésta imagen puede observar la pestaña{' '}
-              <span className="bg-[#DBDFE4] text-[#56575A] text-[bold] px-2 py-1 rounded-sm uppercase">
+              En ésta imagen puede observar la pestaña
+              <span className="bg-[#DBDFE4] text-[#56575A] text-[bold] px-2 py-1 mx-2 rounded-sm uppercase">
                 Wireless
               </span>
             </p>

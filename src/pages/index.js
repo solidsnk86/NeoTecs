@@ -86,7 +86,7 @@ export default function Home() {
 
       <HomeBlock>
         <HomeBlockTitle>Mis proyectos en Github</HomeBlockTitle>
-        <div className="sm:flex items-stretch max-w-3xl mx-auto space-y-4 text-left sm:space-y-0 sm:space-x-8 sm:text-center gr">
+        <div className="sm:flex items-stretch max-w-3xl mx-auto space-y-4 text-left sm:space-y-0 sm:space-x-8 sm:text-center">
           {[
             {
               url: 'https://solidsnk86.github.io/formularioWeb/',
@@ -114,18 +114,15 @@ export default function Home() {
             },
           ].map((item) => (
             <div
-              className="flex sm:flex-col items-center w-full border-white border-opacity-10 border rounded-xl px-4 py-6 duration-200 hover:shadow-lg sm:hover:shadow-2xl hover:border-opacity-0 hover:bg-primary hover:bg-opacity-5 hover:scale-[1.05]"
-              target="_blank"
+              className="flex flex-col items-center w-full sm:w-1/2 lg:w-1/3 xl:w-1/3 border-white border-opacity-10 border rounded-xl px-4 py-6 duration-200 hover:shadow-lg sm:hover:shadow-2xl hover:border-opacity-0 hover:bg-primary hover:bg-opacity-5 hover:scale-[1.05]"
               key={item.title}
             >
               <img
-                className="w-32 min-w-[400px]: mr-4 sm:mr-0"
+                className="w-20 sm:w-auto xl:w-32 sm:mr-0"
                 src={item.repo}
                 alt={item.title}
               />
-              <span className="font-semibold sm:mt-4 sm:mb-2">
-                {item.title}
-              </span>
+              <span className="font-semibold mt-4 mb-2">{item.title}</span>
               <span className="text-sm opacity-75 mb-2">
                 {item.description}
               </span>
@@ -133,10 +130,12 @@ export default function Home() {
               <GithubStats repoName={item.repoName} />
               <a
                 href={item.url}
-                className="hover:opacity-[.6] px-3 py-0 rounded mt-1 bg-gray-800 max-[400px]:px-0 max-[400px]:text-xs"
+                className="hover:opacity-60 px-3 py-1 rounded mt-1 bg-gray-800 text-md"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Link{' '}
-                <FaExternalLinkAlt className="inline-flex mb-1 relative text-sm sm:text-xs" />
+                <FaExternalLinkAlt className="inline-flex mb-1 relative text-md" />
               </a>
             </div>
           ))}
