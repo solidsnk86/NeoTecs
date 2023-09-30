@@ -11,10 +11,10 @@ export function YouTubeVideo({ video, cpe, children }) {
       />
       <div class="hr-container">
         <hr />
-        <h3>{cpe}</h3>
+        <h3 className="text-xl text-gray-400 font-bold">{cpe}</h3>
         <hr />
       </div>
-      <p className="mt-2">{children}</p>
+      <p className="mx-2 text-md">{children}</p>
     </article>
   );
 }
