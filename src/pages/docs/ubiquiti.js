@@ -56,7 +56,7 @@ export default function UbiquitiDocs() {
               <li>Dispositivo + PoE:</li>
               <div className="images-client flex justify-left m-auto">
                 <img
-                  src="https://github.com/solidsnk86/NeoTecs-NextJS/blob/master/public/images/poe-injector-ubiquiti-poe-24-24w-g-gigabit-removebg-preview.png?raw=true"
+                  src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/poe-injector-ubiquiti-poe-24-24w-g-gigabit-removebg-preview.png?raw=true"
                   alt="imágen menú principal pharos os"
                   id="imgAP"
                 />
@@ -87,7 +87,7 @@ export default function UbiquitiDocs() {
               lo siguiente:
             </p>
             <Pre>
-              Dirección IP: 198.168.1.25 || Máscara de Subred: 255.255.255.0
+              Dirección IP: 198.168.1.25 & Máscara de Subred: 255.255.255.0
             </Pre>
             <div className="images-client flex justify-center m-auto">
               <img
@@ -104,8 +104,8 @@ export default function UbiquitiDocs() {
             </p>
             <div className="images-client flex justify-center m-auto">
               <img
-                src="https://mikrotrik.com/wp-content/uploads/2020/02/ubnt-lite-beam-m2-access-point-mode.jpg"
-                alt="imágen menú inalámbrico pharos os."
+                src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/protocolo-ip-ubiquiti.png?raw=true"
+                alt="Propiedades panel de control TCP/IPv4."
                 id="imgAP"
               />
             </div>
