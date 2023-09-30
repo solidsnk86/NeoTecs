@@ -12,7 +12,6 @@
 | Lenguaje                                                                                             | Descripción         |
 | ---------------------------------------------------------------------------------------------------- | ------------------- |
 | ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white)                | Lenguaje de marcado |
-| ![CSS](https://img.shields.io/badge/CSS-%231572B6.svg?logo=css3&logoColor=white)                     | Hojas de estilo     |
 | ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black) | Programación        |
 | ![Next.js](https://img.shields.io/badge/Next.js-%23E34F26.svg?logo=next.js&logoColor=white)          | Framework de React  |
 | ![Sass](https://img.shields.io/badge/Sass-%23CC6699.svg?logo=sass&logoColor=white)                   | Estilos             |
