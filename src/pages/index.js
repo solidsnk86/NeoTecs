@@ -72,7 +72,7 @@ export default function Home() {
       </HomeBlock>
 
       <HomeBlock className="bg-[url-de-tu-imagen] bg-cover">
-        <HomeBlockTitle>Aprende a configurar</HomeBlockTitle>
+        <HomeBlockTitle>Aprende ahora</HomeBlockTitle>
         <p>Configura tu dispositovo inalámbrico</p>
         <p className="mt-4">
           <Link
@@ -130,7 +130,7 @@ export default function Home() {
               <GithubStats repoName={item.repoName} />
               <a
                 href={item.url}
-                className="hover:opacity-60 px-3 py-1 rounded mt-1 bg-gray-800 text-md"
+                className="hover:opacity-60 px-3 py-1 rounded mt-2 bg-gray-800 text-md"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -18,8 +18,12 @@ export const RouterMode = () => {
         pueden compartir una red de área amplia a través del acceso a la red
         inalámbrica que proporciona este dispositivo. Tomemos el CPE como
         ejemplo: para acceder a su página de gestión web y configurarlo, puedes
-        seguir este{' '}
-        <a href="https://192.168.0.254/" className="text-[lightblue]">
+        seguir este
+        <a
+          href="https://192.168.0.254/"
+          className="text-[lightblue] mx-1"
+          target="_blank"
+        >
           enlace.
         </a>
         A través de esta interfaz web, puedes realizar configuraciones rápidas y
@@ -28,9 +32,9 @@ export const RouterMode = () => {
 
       <ol>
         <li>
-          Vaya a Configuración rápida{' '}
-          <span className="text-xl relative bottom-0">👉</span> Elija "Router
-          AP" , haga clic en
+          Vaya a Configuración rápida
+          <span className="text-xl relative mx-1 bottom-0">👉</span>Elija
+          "Router AP" , haga clic en
           <span className="bg-[#CCCCCC] text-black border-[#1C67B8] border-[1px] px-2 py-1 mx-2">
             Next / Siguiente
           </span>
