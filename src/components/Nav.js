@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { GithubIcon } from './GithubIcon';
+
+import { Github } from 'lucide-react';
 
 export const Nav = ({ className }) => {
   return (
@@ -22,7 +23,7 @@ export const Nav = ({ className }) => {
           <span className=" px-2 py-1 rounded-full bg-slate-200 font-semibold text-sm text-[#222] hover:opacity-[.6] hover:transition-all">
             Sígueme
           </span>
-          <GithubIcon className="cursor-pointer hover:opacity-[.7] w-7 h-7" />
+          <Github className="cursor-pointer hover:opacity-[.7] w-7 h-7" />
         </Link>
       </div>
     </div>
