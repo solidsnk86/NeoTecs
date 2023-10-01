@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/206087bc-35c5-4333-a3e1-0c9e688e1953/deploy-status)](https://app.netlify.com/sites/neotecs/deploys)
 
-**🔧 Herramientas y frames que he utilizado:**
+**🔧 Tools and frames which i use in this project:**
 
 [![Built with Tailwind CSS](https://img.shields.io/badge/Built_with-Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Powered by Firebase](https://img.shields.io/badge/Powered_by-Firebase-FFCA28?style=flat&logo=firebase&logoColor=white)](https://firebase.google.com/)
