@@ -1,4 +1,3 @@
-/* eslint-disable react/function-component-definition */
 import Link from 'next/link';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { Nav } from '../components/Nav';
@@ -39,6 +38,7 @@ export default function Home() {
 
       <HomeBlock>
         <HomeBlockTitle>Características</HomeBlockTitle>
+
         <section className="grid md:grid-cols-2 gap-4 md:gap-8">
           <div className="p-4 rounded-lg border-white border-opacity-10 border">
             <span className="text-xl font-bold mb-4">Práctico</span>
