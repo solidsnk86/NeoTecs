@@ -1,4 +1,4 @@
-import { FaWindows } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaWindows } from 'react-icons/fa';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
@@ -24,9 +24,10 @@ export const RouterMode = () => {
           className="text-[lightblue] mx-1"
           target="_blank"
         >
-          enlace.
+          enlace
+          <FaExternalLinkAlt className="inline-flex mx-1 mb-1" />
         </a>
-        A través de esta interfaz web, puedes realizar configuraciones rápidas y
+        a través de esta interfaz web, puedes realizar configuraciones rápidas y
         personalizar la red inalámbrica según tus necesidades:
       </p>
 
