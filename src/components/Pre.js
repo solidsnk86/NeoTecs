@@ -51,7 +51,7 @@ export const Pre = ({ children, lang = '' }) => {
                 ))}
                 <Copy
                   onClick={handleCopyClick}
-                  className=" w-5 h-5 inline-flex my-auto absolute right-2 cursor-pointer rounded hover:text-white transition-all"
+                  className=" w-5 h-5 inline-flex my-auto absolute right-2 mt-[2px] cursor-pointer rounded hover:text-white transition-all"
                 />
               </div>
             ))}
