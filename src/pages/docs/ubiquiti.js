@@ -27,22 +27,23 @@ export default function UbiquitiDocs() {
             </p>
             <hr />
             <h3 className="text-[cornflowerblue]">
-              Iniciar sesión y configurar UBNT Lite Beam M5 como punto de acceso
+              Configuración del Lite Beam M5 en Modo Estación
             </h3>
             <p>
-              Los dispositivos Lite Beam se pueden conectar con cualquier punto
-              de acceso de marca en modo estación. Para configurar un
-              dispositivo de la serie Lite Beam M como modo de estación con
-              estaciones base de diferentes marcas, primero es necesario
-              configurarlo. Para iniciar sesión en el dispositivo Lite Beam en
-              la configuración del modo predeterminado, debe conectarse
-              físicamente con el dispositivo. Esta guía del usuario le ayudará a
-              iniciar sesión y configurar ubnt lite beam como modo de punto de
-              acceso para la estación base. Para actualizar el firmware ,
+              Los dispositivos Lite Beam se pueden configurar como estaciones
+              para conectarse con cualquier punto de acceso de marca Ubiquiti.
+              Si desea configurar un dispositivo de la serie Lite Beam M como
+              una estación para conectarse a estaciones base de diferentes
+              marcas, siga estos pasos. Inicialmente, será necesario conectar
+              físicamente el dispositivo para acceder a la configuración del
+              modo predeterminado. Esta guía del usuario le ayudará a iniciar
+              sesión y configurar el Lite Beam como una estación para la
+              estación base. Para realizar actualizaciones de firmware,
               configurar el modo inalámbrico, cambiar la dirección IP de la LAN
-              y cambiar la contraseña de inicio de sesión, debe acceder a la
-              configuración del Lite Beam mediante la dirección IP.
+              y actualizar la contraseña de inicio de sesión, deberá acceder a
+              la configuración del Lite Beam a través de su dirección IP.
             </p>
+
             <ul>
               <li>
                 Los dispositivos Lite Beam M5 y Lite Beam M2 tienen un único

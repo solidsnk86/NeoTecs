@@ -1,12 +1,6 @@
 import React from 'react';
-import {
-  FaFacebookSquare,
-  FaTelegram,
-  FaLinkedin,
-  FaWhatsappSquare,
-  FaTwitterSquare,
-  FaChevronCircleUp,
-} from 'react-icons/fa';
+import { FaWhatsapp, FaTelegramPlane, FaChevronCircleUp } from 'react-icons/fa';
+import { FacebookIcon, TwitterIcon, Linkedin } from 'lucide-react';
 
 export const Footer = () => {
   function compartirFacebook() {
@@ -14,33 +8,33 @@ export const Footer = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u= ${encodeU}`);
   }
 
-  function compartirWhatsapp() {
+  const compartirWhatsapp = () => {
     const winLoc = window.location.href;
     const mensaje = `¡Echa un vistazo a esta web para aprender a configurar tu WiFi!: ${winLoc}`;
     const encodeM = encodeURIComponent(mensaje);
     window.open(`https://wa.me/?text=${encodeM}`);
-  }
+  };
 
-  function compartirTwitter() {
+  const compartirTwitter = () => {
     const encodeUr = encodeURIComponent(window.location.href);
     window.open(`https://twitter.com/share?url=${encodeUr}`);
-  }
+  };
 
-  function compartirLinkedIn() {
+  const compartirLinkedIn = () => {
     const url = encodeURIComponent(window.location.href);
     const title = encodeURIComponent(document.title);
     const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}`;
     window.open(shareUrl, '_blank');
-  }
+  };
 
-  function compartiTelegram() {
+  const compartiTelegram = () => {
     const text = '¡Aprende a configurar tu Wifi en minutos!';
     const url = encodeURIComponent(window.location.href);
     const encodeT = encodeURIComponent(text) + url;
     const telegramLink = `https://t.me/share/url?text=${encodeT}`;
 
     window.open(telegramLink, '_blank');
-  }
+  };
 
   const toTop = () => {
     window.location.href = '#';
@@ -58,27 +52,27 @@ export const Footer = () => {
         <h3 className="text-center ">Compartir en las redes:</h3>
 
         <div className="flex items-center justify-center gap-x-6 text-2xl mt-3">
-          <FaFacebookSquare
+          <FacebookIcon
             className="cursor-pointer hover:opacity-[.6]"
             title="Facebook"
             onClick={() => compartirFacebook()}
           />
-          <FaTwitterSquare
+          <TwitterIcon
             className="cursor-pointer hover:opacity-[.6]"
             title="Twitter"
             onClick={() => compartirTwitter()}
           />
-          <FaWhatsappSquare
+          <FaWhatsapp
             className="cursor-pointer hover:opacity-[.6]"
             title="Whatsapp"
             onClick={() => compartirWhatsapp()}
           />
-          <FaLinkedin
+          <Linkedin
             className="bx bxl-linkedin cursor-pointer hover:opacity-[.6]"
             title="Linked In"
             onClick={() => compartirLinkedIn()}
           />
-          <FaTelegram
+          <FaTelegramPlane
             className="bx bxl-telegram cursor-pointer hover:opacity-[.6]"
             title="Telegram"
             onClick={() => compartiTelegram()}

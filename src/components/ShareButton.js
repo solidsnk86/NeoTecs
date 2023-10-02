@@ -1,4 +1,4 @@
-import { FaShareAlt } from 'react-icons/fa';
+import { Share2Icon } from 'lucide-react';
 
 export function ShareButton() {
   const shareButton = () => {
@@ -13,7 +13,7 @@ export function ShareButton() {
 
   return (
     <section className="relative text-right text-xl">
-      <FaShareAlt
+      <Share2Icon
         className="inline-flex text-xl cursor-pointer hover:opacity-[.6] transition-all"
         title="Compartir"
         onClick={shareButton}

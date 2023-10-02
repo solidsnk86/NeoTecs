@@ -23,6 +23,7 @@ export const Pre = ({ children, lang = '' }) => {
       document.execCommand('copy');
       toast.success('Contenido copiado al portapapeles', {
         position: toast.POSITION.BOTTOM_LEFT,
+        theme: 'colored',
       });
     } catch (err) {
       toast.error('Error al intentar copiar al portapapeles', {
@@ -35,7 +36,7 @@ export const Pre = ({ children, lang = '' }) => {
 
   return (
     <>
-      <ToastContainer theme="dark" />
+      <ToastContainer />
       <Highlight
         theme={themes.synthwave84}
         code={removeIndent(children)}
@@ -50,7 +51,7 @@ export const Pre = ({ children, lang = '' }) => {
                 ))}
                 <Copy
                   onClick={handleCopyClick}
-                  className="inline-flex absolute right-2 cursor-pointer rounded hover:text-white transition-all"
+                  className=" w-5 h-5 inline-flex my-auto absolute right-2 cursor-pointer rounded hover:text-white transition-all"
                 />
               </div>
             ))}
