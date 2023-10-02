@@ -233,6 +233,12 @@ export default function UbiquitiDocs() {
                 Wireless
               </span>
             </p>
+            <p>Hacemos click en el botón:</p>
+            <span className="bg-[#CCCCCC] ml-1 text-black border-[#000] border-[1px] px-3 py-1 cursor-default">
+              Seleccione
+            </span>
+            <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] text-[#FFFFFF] border-[#000]" />
+
             <div className="images-client flex justify-center m-auto">
               <img
                 src="https://i.imgur.com/wwzwKTO.png"
