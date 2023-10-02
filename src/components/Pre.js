@@ -22,11 +22,11 @@ export const Pre = ({ children, lang = '' }) => {
     try {
       document.execCommand('copy');
       toast.success('Contenido copiado al portapapeles', {
-        position: toast.POSITION.BOTTOM_RIGHT,
+        position: toast.POSITION.BOTTOM_LEFT,
       });
     } catch (err) {
       toast.error('Error al intentar copiar al portapapeles', {
-        position: toast.POSITION.BOTTOM_RIGHT,
+        position: toast.POSITION.BOTTOM_LEFT,
       });
     }
 

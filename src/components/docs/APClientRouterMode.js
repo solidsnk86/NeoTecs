@@ -87,7 +87,7 @@ export const APClientRouterMode = () => {
         />
       </div>
 
-      <p className="px-2 py-2 bg-gray-800 rounded w-fit text-text-strong">
+      <p className="px-2 py-2 bg-gray-800 rounded w-fit text-text-strong font-mono font-semibold">
         Continuamos a 192.168.0.254 de todas formas.
       </p>
 
