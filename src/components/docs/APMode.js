@@ -30,7 +30,12 @@ export const APMode = () => {
         siguiente dirección IP). Ponemos lo siguiente:
       </p>
 
-      <Pre>Dirección IP: 192.168.0.100 & Máscara de sub-red: 255.255.255.0</Pre>
+      <ol>
+        <li>Dirección IP:</li>
+        <Pre>192.168.0.100</Pre>
+        <li>Máscara de sub red:</li>
+        <Pre>255.255.255.0</Pre>
+      </ol>
 
       <hr />
       <p>Vista del menú principal Pharos OS:</p>

@@ -87,7 +87,9 @@ export const APClientRouterMode = () => {
         />
       </div>
 
-      <Pre>Continuamos a 192.168.0.254 de todas formas.</Pre>
+      <p className="px-2 py-2 bg-gray-800 rounded w-fit text-text-strong">
+        Continuamos a 192.168.0.254 de todas formas.
+      </p>
 
       <p>
         Ingresamos (admin) en usuario y (admin) en contraseña, ambos por igual,
