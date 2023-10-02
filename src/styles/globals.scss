@@ -183,10 +183,8 @@ a {
   box-sizing: border-box;
 }
 
-@media (min-width: 1100px) {
-  pre {
-    width: fit-content;
-  }
+pre {
+  position: relative;
 }
 
 @import 'atropos/scss';

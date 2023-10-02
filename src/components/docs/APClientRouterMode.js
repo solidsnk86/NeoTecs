@@ -59,7 +59,12 @@ export const APClientRouterMode = () => {
       </div>
       <p>Escribimos los siguientes parámetros:</p>
 
-      <Pre>Dirección IP: 192.168.0.100 & Máscara de sub-red: 255.255.255.0</Pre>
+      <ol>
+        <li>Dirección IP:</li>
+        <Pre>192.168.0.100</Pre>
+        <li>Máscara de sub red:</li>
+        <Pre>255.255.255.0</Pre>
+      </ol>
 
       <div className="images-client flex m-auto justify-center">
         <img
