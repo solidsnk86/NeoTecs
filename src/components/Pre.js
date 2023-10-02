@@ -2,7 +2,7 @@ import { Highlight, themes } from 'prism-react-renderer';
 import stripIndent from 'strip-indent';
 import React, { useRef } from 'react';
 import { Copy } from 'lucide-react';
-import { ToastContainer, toast, Toastify } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const removeIndent = (code = '') => {
@@ -35,7 +35,7 @@ export const Pre = ({ children, lang = '' }) => {
 
   return (
     <>
-      <ToastContainer theme={'dark'} />
+      <ToastContainer theme="dark" />
       <Highlight
         theme={themes.synthwave84}
         code={removeIndent(children)}
