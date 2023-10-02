@@ -64,9 +64,12 @@ export default function MikrotikDocs() {
               propiedades del protocolo; colocamos lo siguiente:
             </p>
 
-            <Pre>
-              Dirección IP: 198.168.88.10 & Máscara de Subred: 255.255.255.0
-            </Pre>
+            <ol>
+              <li>Dirección IP:</li>
+              <Pre>192.168.88.10</Pre>
+              <li>Máscara de sub red:</li>
+              <Pre>255.255.255.0</Pre>
+            </ol>
 
             <div className="images-client flex justify-center m-auto">
               <img

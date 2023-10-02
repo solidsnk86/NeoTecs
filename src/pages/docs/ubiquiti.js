@@ -86,9 +86,12 @@ export default function UbiquitiDocs() {
               Luego seleccionamos propiedades del protocolo TCP /IP y colocamos
               lo siguiente:
             </p>
-            <Pre>
-              Dirección IP: 198.168.1.25 & Máscara de Subred: 255.255.255.0
-            </Pre>
+            <ol>
+              <li>Dirección IP:</li>
+              <Pre>192.168.1.25</Pre>
+              <li>Máscara de sub red:</li>
+              <Pre>255.255.255.0</Pre>
+            </ol>
             <div className="images-client flex justify-center m-auto">
               <img
                 src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/protocolo-ip-ubiquiti.png?raw=true"
