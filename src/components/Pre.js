@@ -50,7 +50,7 @@ export const Pre = ({ children, lang = '' }) => {
                 ))}
                 <Copy
                   onClick={handleCopyClick}
-                  className="w-5 h-5 inline-flex absolute right-2 cursor-pointer hover:bg-gray-700 rounded px-fit py-fit"
+                  className="inline-flex absolute right-2 cursor-pointer rounded hover:text-white transition-all"
                 />
               </div>
             ))}
