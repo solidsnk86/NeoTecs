@@ -23,7 +23,7 @@ export const Pre = ({ children, lang = '' }) => {
       document.execCommand('copy');
       toast.success('Contenido copiado al portapapeles', {
         position: toast.POSITION.BOTTOM_LEFT,
-        theme: 'colored',
+        theme: 'dark',
       });
     } catch (err) {
       toast.error('Error al intentar copiar al portapapeles', {
