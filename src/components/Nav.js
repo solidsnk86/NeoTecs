@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-import { Github } from 'lucide-react';
+import { Github, SunIcon } from 'lucide-react';
 
 export const Nav = ({ className }) => {
   return (
     <div className={className || ''}>
-      <div className="h-16 flex items-center justify-between max-w-screen-xl mx-auto px-4 md:px-8 z-10 relative text-white">
+      <div className="h-16 flex justify-between max-w-screen-xl mx-auto px-4 md:px-8 z-10 relative text-white">
         <div className="flex items-center space-x-2 sm:space-x-4">
           <Link href="/">
             <img
@@ -15,7 +15,6 @@ export const Nav = ({ className }) => {
             />
           </Link>
         </div>
-
         <Link
           href="https://github.com/solidsnk86"
           className="flex items-center space-x-4 mb-3"

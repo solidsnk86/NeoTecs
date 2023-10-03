@@ -12,6 +12,11 @@ body {
   scroll-behavior: smooth;
 }
 
+body.light {
+  background-color: #f2f2f2;
+  color: #1e1e1e;
+}
+
 html::-webkit-scrollbar {
   width: 11px;
   background-color: rgba(180, 189, 197, 0.877);
