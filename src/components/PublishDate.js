@@ -2,7 +2,7 @@ import React from 'react';
 import { Calendar } from 'lucide-react';
 
 export const PublishDate = () => {
-  const postedtDate = '01/10/2023';
+  const postedtDate = '01 de Oct.';
 
   return (
     <div>
