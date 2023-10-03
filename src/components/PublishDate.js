@@ -10,6 +10,9 @@ export const PublishDate = () => {
         {
           text: 'Publicado el ',
           date: currentDate,
+          icon: (
+            <Calendar className="inline-flex w-[13px] h-[13px] mr-2 mb-1" />
+          ),
         },
       ].map((item) => (
         <p className="text-gray-700 text-sm italic">
@@ -17,7 +20,7 @@ export const PublishDate = () => {
           <span className="inline-flex mx-1">
             {item.date.toLocaleDateString()}
           </span>
-          <Calendar className="inline-flex w-[13px] h-[13px] mr-2 mb-1" />
+          {item.icon}
         </p>
       ))}
     </div>
