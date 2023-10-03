@@ -79,24 +79,6 @@ a {
   animation-fill-mode: both;
 }
 
-.clip-path-wave {
-  clip-path: polygon(
-    0% 30%,
-    10% 20%,
-    20% 35%,
-    30% 25%,
-    40% 40%,
-    50% 30%,
-    60% 45%,
-    70% 35%,
-    80% 50%,
-    90% 40%,
-    100% 30%,
-    100% 100%,
-    0% 100%
-  );
-}
-
 @keyframes shake {
   0%,
   100% {
@@ -152,15 +134,6 @@ a {
   scroll-snap-align: start;
 }
 
-#snowglobe {
-  background: linear-gradient(
-    4deg,
-    rgba(134, 100, 0, 1) 0%,
-    rgba(121, 9, 9, 1) 32%,
-    rgba(4, 0, 70, 1) 100%
-  );
-}
-
 /* ==============> HR <============== */
 
 .hr-container {
@@ -190,5 +163,4 @@ pre {
 @import 'atropos/scss';
 @import './home-header.scss';
 @import './home-demos.scss';
-@import './precode.scss';
 @import './prose.scss';
