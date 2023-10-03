@@ -15,7 +15,6 @@ export default function Docs() {
         <DocsNav />
         <div className="w-full max-w-none prose px-4 md:px-8">
           <BrandsSwitch inline />
-
           <TpLinkDocs />
         </div>
       </div>
