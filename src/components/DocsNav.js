@@ -14,7 +14,7 @@ export function DocsNav() {
 
   return (
     <div className="w-80 px-4 md:px-8 hidden lg:block">
-      <Link href={'/'}>
+      <Link href={'/'} title={'Volver al inicio'}>
         <ArrowLeftIcon className="text-white cursor-pointer" />
       </Link>
       <div className="sticky top-4">

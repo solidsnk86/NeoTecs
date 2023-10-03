@@ -12,7 +12,7 @@ export function ShareButton() {
   };
 
   return (
-    <section className="relative text-right text-xl">
+    <section className="relative text-right text-xl" title="Compartir">
       <Share2Icon
         className="inline-flex text-xl cursor-pointer hover:opacity-[.6] transition-all"
         title="Compartir"
