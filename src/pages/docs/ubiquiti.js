@@ -294,6 +294,7 @@ export default function UbiquitiDocs() {
               Muchas gracias por llegar hasta aquí, pueden ver el vídeo
               explicativo en mi canal
             </p>
+            <ShareButton />
 
             <SectionTitle title="Video Explicativo" />
 
@@ -304,7 +305,6 @@ export default function UbiquitiDocs() {
               allowFullScreen=""
               className="rounded-lg w-96 h-64 flex justify-center m-auto max-sm:w-[100%] mb-5"
             />
-            <ShareButton />
           </section>
         </div>
       </div>

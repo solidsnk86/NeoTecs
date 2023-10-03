@@ -143,6 +143,7 @@ export default function MikrotikDocs() {
               rango óptimo de conexión; aplicamos los cambios.
             </p>
 
+            <ShareButton />
             <SectionTitle title="Sección WebFig" />
 
             <p>
@@ -187,7 +188,6 @@ export default function MikrotikDocs() {
                 seleccionar país Japon.
               </li>
             </ol>
-            <ShareButton />
           </section>
         </div>
       </div>
