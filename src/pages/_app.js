@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import '../styles/globals.scss';
+import { DoNotCopy } from '../components/DoNotCopy';
 
 function MyApp({ Component, pageProps }) {
   const title = Component.title || 'Neotecs - Informática';
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content="/images/logo.png" />
       </Head>
+      <DoNotCopy />
       <Component {...pageProps} />
     </>
   );

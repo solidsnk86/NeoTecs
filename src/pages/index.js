@@ -5,7 +5,6 @@ import { HomeHeader } from '../components/HomeHeader';
 import { Footer } from '../components/Footer';
 import { GithubStats } from '../components/GithubStats';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
-import { DoNotCopy } from '../components/DoNotCopy';
 
 const HomeBlock = ({ className = '', children }) => {
   return (
@@ -24,7 +23,6 @@ const HomeBlockTitle = ({ Tag = 'h2', children }) => {
 export default function Home() {
   return (
     <div className="bg-page-dark-bg text-white">
-      <DoNotCopy />
       <Nav />
       <HomeHeader />
       <HomeBlock>
