@@ -2,6 +2,7 @@ import { FaWindows } from 'react-icons/fa';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
+import { PublishDate } from '../PublishDate';
 
 export const APClientRouterMode = () => {
   return (
@@ -16,6 +17,7 @@ export const APClientRouterMode = () => {
           CPE510 - CPE610 - CPE220 - CPE210 - CPE520 - CPE605
         </strong>
       </p>
+      <PublishDate />
       <hr />
       <p>
         Para poder configurar el modo AP Router Cliente desde 0, vamos a

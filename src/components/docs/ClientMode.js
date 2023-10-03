@@ -1,4 +1,5 @@
 import { Pre } from '../Pre';
+import { PublishDate } from '../PublishDate';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
 
@@ -17,7 +18,7 @@ export const ClientMode = () => {
           CPE510 , CPE610 , CPE220 , CPE210 , CPE520 , CPE605.
         </strong>
       </p>
-
+      <PublishDate />
       <p>
         Por lo general, usaremos dos CPE para establecer la cobertura de la red
         en las áreas exteriores sin cableado de larga distancia. Por ejemplo, en

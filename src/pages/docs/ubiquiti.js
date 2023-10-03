@@ -7,6 +7,7 @@ import { BrandsSwitch } from '../../components/BrandsSwitch';
 import { Pre } from '../../components/Pre';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
+import { PublishDate } from '../../components/PublishDate';
 
 export default function UbiquitiDocs() {
   return (
@@ -25,6 +26,7 @@ export default function UbiquitiDocs() {
                 Lite Beam M5 - Grid M5 - M2 - airMAX - NanoStation M5 - M2
               </strong>
             </p>
+            <PublishDate />
             <hr />
             <h3 className="text-[cornflowerblue]">
               Configuración del Lite Beam M5 en Modo Estación

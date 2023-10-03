@@ -2,13 +2,14 @@ import { FaExternalLinkAlt, FaWindows } from 'react-icons/fa';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
+import { PublishDate } from '../PublishDate';
 
 export const RouterMode = () => {
   return (
     <section className="text-white">
       <hr />
       <SectionTitle title="Modo Router" />
-
+      <PublishDate />
       <p>
         <strong className="text-text-strong">Definición:</strong> Es similar al
         Router inalámbrico doméstico, el dispositivo en modo Router AP se

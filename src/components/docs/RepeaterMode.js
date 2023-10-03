@@ -1,3 +1,4 @@
+import { PublishDate } from '../PublishDate';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
 
@@ -5,6 +6,7 @@ export const RepeaterMode = () => {
   return (
     <section className="text-white">
       <SectionTitle title="Modo Repetidor" />
+      <PublishDate />
       <div className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/repeater-removebg-preview.png?raw=true"

@@ -1,4 +1,5 @@
 import { Pre } from '../Pre';
+import { PublishDate } from '../PublishDate';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
 
@@ -13,6 +14,7 @@ export const APMode = () => {
         </strong>
       </p>
       <p>Vamos a configurar la CPE en modo punto de acceso:</p>
+      <PublishDate />
       <hr />
       <p>Para realizarlo de la PC:</p>
       <p>

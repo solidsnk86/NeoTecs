@@ -7,6 +7,7 @@ import { BrandsSwitch } from '../../components/BrandsSwitch';
 import { Pre } from '../../components/Pre';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
+import { PublishDate } from '../../components/PublishDate';
 
 export default function MikrotikDocs() {
   return (
@@ -25,7 +26,7 @@ export default function MikrotikDocs() {
                 AC5 5Ghz - LHG HP5 5Ghz - STX 2.4Ghz y 5Ghz - OmniTik Series
               </strong>
             </p>
-
+            <PublishDate />
             <hr />
 
             <p>
