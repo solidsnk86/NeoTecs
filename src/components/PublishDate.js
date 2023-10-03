@@ -11,8 +11,8 @@ export const PublishDate = () => {
           text: 'Publicado el ',
           date: currentDate,
         },
-      ].map((item, index) => (
-        <p key={index} className="text-gray-700 text-sm italic">
+      ].map((item) => (
+        <p className="text-gray-700 text-sm italic">
           {item.text}
           <span className="inline-flex mx-1">
             {item.date.toLocaleDateString()}
