@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Github, SunIcon } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 export const Nav = ({ className }) => {
   return (
