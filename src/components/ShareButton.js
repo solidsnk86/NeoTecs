@@ -13,7 +13,7 @@ export function ShareButton() {
   };
 
   return (
-    <section className="relative text-right text-xl space-x-2">
+    <section className="relative text-right text-xl space-x-4">
       <Link href="#">
         <ArrowUpCircle className="text-white inline-flex cursor-pointer hover:translate-y-[-3px] transition-all" />
       </Link>
