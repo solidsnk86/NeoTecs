@@ -2,14 +2,24 @@ import React from 'react';
 import { Calendar } from 'lucide-react';
 
 export const PublishDate = () => {
-  const date = '1 de Octubre';
+  const currentDate = new Date();
+
   return (
     <div>
-      <p className="text-gray-700 text-sm italic">
-        <Calendar className="inline-flex w-[13px] h-[13px] mr-2 mb-1" />
-        Publicado el
-        <span className="inline-flex mx-1">{date}</span>
-      </p>
+      {[
+        {
+          text: 'Publicado el ',
+          date: currentDate,
+        },
+      ].map((item, index) => (
+        <p key={index} className="text-gray-700 text-sm italic">
+          {item.text}
+          <span className="inline-flex mx-1">
+            {item.date.toLocaleDateString()}
+          </span>
+          <Calendar className="inline-flex w-[13px] h-[13px] mr-2 mb-1" />
+        </p>
+      ))}
     </div>
   );
 };
