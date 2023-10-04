@@ -5,6 +5,7 @@ import { HomeHeader } from '../components/HomeHeader';
 import { Footer } from '../components/Footer';
 import { GithubStats } from '../components/GithubStats';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
+import { MarqueeLogos } from '../sections/sponsors.tsx';
 
 const HomeBlock = ({ className = '', children }) => {
   return (
@@ -83,6 +84,8 @@ export default function Home() {
           </Link>
         </p>
       </HomeBlock>
+
+      <MarqueeLogos />
 
       <HomeBlock>
         <HomeBlockTitle>Mis proyectos en Github</HomeBlockTitle>

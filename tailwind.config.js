@@ -1,3 +1,5 @@
+// tailwind.config.js
+
 module.exports = {
   mode: 'jit',
   content: [
@@ -21,6 +23,15 @@ module.exports = {
         'text-primary': '#f2f2f2',
         'text-strong': '#AD2680',
         'footer-bg': '#161B22',
+      },
+      animation: {
+        marquee: 'marquee var(--duration) linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-50% - var(--gap)/2))' },
+        },
       },
     },
   },

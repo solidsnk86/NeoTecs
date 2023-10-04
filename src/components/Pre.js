@@ -4,7 +4,6 @@ import React, { useRef } from 'react';
 import { Copy } from 'lucide-react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Toast } from 'react-toastify/dist/components';
 
 const removeIndent = (code = '') => {
   return stripIndent(code).trim();
