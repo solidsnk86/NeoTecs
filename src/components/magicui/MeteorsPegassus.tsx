@@ -1,5 +1,3 @@
-// 'use client' no es necesario y debe ser 'use strict'
-
 import React, { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 
