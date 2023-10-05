@@ -38,6 +38,7 @@ module.exports = {
           '100%': {
             transform: 'rotate(215deg) translateX(-500px)',
             opacity: 0,
+            overflow: 'hidden',
           },
         },
       },

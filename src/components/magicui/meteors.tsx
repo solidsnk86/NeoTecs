@@ -1,12 +1,12 @@
 import React from 'react'
 import clsx from 'clsx'
-import { CSSProperties, useEffect, useState, } from 'react'
+import { CSSProperties, useEffect, useState } from 'react'
 
 interface MeteorsProps {
     number?: number
 }
 
-export const Meteors = ({ number = 13 }: MeteorsProps) => {
+export const Meteors = ({ number = 20 }: MeteorsProps) => {
     const [meteorStyles, setMeteorStyles] = useState<Array<CSSProperties>>([])
 
     useEffect(() => {
