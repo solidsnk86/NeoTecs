@@ -5,7 +5,7 @@ import { HomeHeader } from '../components/HomeHeader';
 import { Footer } from '../components/Footer';
 import { GithubStats } from '../components/GithubStats';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
-import { MarqueeLogos } from '../sections/sponsors.tsx';
+import { MarqueeLogos } from '../sections/Brands';
 import { Meteors } from '../components/magicui/MeteorsPegassus';
 
 const HomeBlock = ({ className = '', children }) => {
