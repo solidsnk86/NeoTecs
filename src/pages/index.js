@@ -26,9 +26,9 @@ export default function Home() {
   return (
     <div className="bg-page-dark-bg text-white">
       <Nav />
+      <Meteors />
       <HomeHeader />
       <HomeBlock>
-        <Meteors />
         <HomeBlockTitle>Configurá tu CPE</HomeBlockTitle>
         <h2>Videos de configuración</h2>
         <ul className="inline-flex text-left m-auto mt-2 mb-4 gap-6">
