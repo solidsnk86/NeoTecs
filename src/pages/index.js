@@ -6,6 +6,7 @@ import { Footer } from '../components/Footer';
 import { GithubStats } from '../components/GithubStats';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import { MarqueeLogos } from '../sections/sponsors.tsx';
+import { Meteors } from '../components/magicui/meteors';
 
 const HomeBlock = ({ className = '', children }) => {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <Nav />
       <HomeHeader />
       <HomeBlock>
+        <Meteors />
         <HomeBlockTitle>Configurá tu CPE</HomeBlockTitle>
         <h2>Videos de configuración</h2>
         <ul className="inline-flex text-left m-auto mt-2 mb-4 gap-6">

@@ -15,7 +15,7 @@ export function DocsNav() {
   return (
     <div className="w-80 px-4 md:px-8 hidden lg:block">
       <Link href="/" title="Volver al inicio">
-        <ArrowLeftIcon className="text-white cursor-pointer hover:translate-x-[-4px] transition-all" />
+        <ArrowLeftIcon className="text-white cursor-pointer hover:animate-pulse hover:translate-x-[-2px] transition-all" />
       </Link>
       <div className="sticky top-4">
         <BrandsSwitch />

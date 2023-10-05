@@ -1,5 +1,4 @@
 // tailwind.config.js
-
 module.exports = {
   mode: 'jit',
   content: [
@@ -26,11 +25,20 @@ module.exports = {
       },
       animation: {
         marquee: 'marquee var(--duration) linear infinite',
+        meteor: 'meteor 5s linear infinite',
       },
       keyframes: {
         marquee: {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(calc(-50% - var(--gap)/2))' },
+        },
+        meteor: {
+          '0%': { transform: 'rotate(215deg) translateX(0)', opacity: 1 },
+          '70%': { opacity: 1 },
+          '100%': {
+            transform: 'rotate(215deg) translateX(-500px)',
+            opacity: 0,
+          },
         },
       },
     },

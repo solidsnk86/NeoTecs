@@ -19,7 +19,7 @@ export const Marquee = ({
         <div
             {...props}
             className={cn(
-                'flex w-full overflow-x-hidden [--duration:40s] [--gap:1rem]',
+                'flex w-full overflow-x-hidden [--duration:40s] [--gap:5rem]',
                 className
             )}
         >
@@ -36,7 +36,6 @@ export const Marquee = ({
     );
 };
 
-// Añade defaultProps para resolver los errores de react/require-default-props
 Marquee.defaultProps = {
     className: '',
     reverse: false,
