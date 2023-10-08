@@ -1,8 +1,8 @@
 import React from 'react';
-import { Calendar } from 'lucide-react';
+import { History } from 'lucide-react';
 
 export const PublishDate = () => {
-  const postedtDate = '01 de Oct. /2023';
+  const postedtDate = '01 Octubre, 2023';
 
   return (
     <div>
@@ -10,9 +10,7 @@ export const PublishDate = () => {
         {
           text: 'Publicado ',
           date: postedtDate,
-          icon: (
-            <Calendar className="inline-flex w-[13px] h-[13px] mr-2 mb-1" />
-          ),
+          icon: <History className="inline-flex w-[13px] h-[13px] mr-2 mb-1" />,
         },
       ].map((item) => (
         <p className="text-gray-700 text-sm italic">
