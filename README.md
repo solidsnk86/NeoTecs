@@ -7,13 +7,22 @@
 [![Built with Tailwind CSS](https://img.shields.io/badge/Built_with-Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Powered by Supabase](https://img.shields.io/badge/Powered_by-Supabase-3548A3?style=flat&logo=supabase&logoColor=white)](https://supabase.io/)
 
-
 | Lenguaje                                                                                             | Descripción         |
 | ---------------------------------------------------------------------------------------------------- | ------------------- |
 | ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white)                | Lenguaje de marcado |
 | ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black) | Programación        |
 | ![Next.js](https://img.shields.io/badge/Next.js-%23E34F26.svg?logo=next.js&logoColor=white)          | Framework de React  |
 | ![Sass](https://img.shields.io/badge/Sass-%23CC6699.svg?logo=sass&logoColor=white)                   | Estilos             |
+
+![Static Badge](https://img.shields.io/badge/CONTRIBUCIONES-EC4899)
+
+Si encuentras errores o deseas mejorar este proyecto, ¡te invito a contribuir! Puedes hacerlo a través de un fork del repositorio y luego realizar tus modificaciones. Siéntete libre de agregar más contenido, ejemplos de código, instrucciones de instalación o cualquier otra mejora que consideres relevante.
+
+Una vez que hayas realizado tus cambios, puedes enviar una solicitud de pull para que podamos revisar tus contribuciones y considerar su incorporación al proyecto principal.
+
+`¡Esperamos tus contribuciones!`
+
+![GitHub Stars](https://img.shields.io/github/stars/solidsnk86/NeoTecs.svg?style=social)
 
 Neotecs website - to use these docs offline
 
