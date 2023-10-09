@@ -19,6 +19,29 @@ const HomeBlockTitle = ({ Tag = 'h2', children }) => {
   return <Tag className="text-4xl font-bold sm:text-5xl mb-10">{children}</Tag>;
 };
 
+const cardContent = [
+  {
+    feature: 'Práctico',
+    children:
+      ' Neotecs es una guía rápida para aprender a configurar CPE inalámbricos Tp-Link, Ubiquiti, Mikrotik',
+  },
+  {
+    feature: 'Tutoriales',
+    children:
+      'Neotecs tiene un canal de youtube con videos muy bien explicados en poco tiempo.',
+  },
+  {
+    feature: 'Documentación',
+    children:
+      'Sí, Neotecs tiene documentación más extensa sobre varios modelos y marcas de dispositivos inalámbricos',
+  },
+  {
+    feature: 'Paso a paso',
+    children:
+      ' Se explican los distintos tipos de configuración detalladamete en la documentación con imágenes y figuras.',
+  },
+];
+
 export default function Home() {
   return (
     <div className="bg-page-dark-bg text-white">
@@ -37,36 +60,13 @@ export default function Home() {
 
       <HomeBlock>
         <HomeBlockTitle>Características</HomeBlockTitle>
-
         <section className="grid md:grid-cols-2 gap-4 md:gap-8">
-          <div className="p-4 rounded-lg border-white border-opacity-10 border">
-            <span className="text-xl font-bold mb-4">Práctico</span>
-            <p>
-              Neotecs es una guía rápida para aprender a configurar CPE
-              inalámbricos Tp-Link, Ubiquiti, Mikrotik
-            </p>
-          </div>
-          <div className="p-4 rounded-lg border-white border-opacity-10 border">
-            <span className="text-xl font-bold mb-4">Tutoriales</span>
-            <p>
-              Neotecs tiene un canal de youtube con videos muy bien explicados
-              en poco tiempo.
-            </p>
-          </div>
-          <div className="p-4 rounded-lg border-white border-opacity-10 border">
-            <span className="text-xl font-bold mb-4">Documentación</span>
-            <p>
-              Sí, Neotecs tiene documentación más extensa sobre varios modelos y
-              marcas de dispositivos inalámbricos
-            </p>
-          </div>
-          <div className="p-4 rounded-lg border-white border-opacity-10 border">
-            <span className="text-xl font-bold mb-4">Paso a paso</span>
-            <p>
-              Se explican los distintos tipos de configuración detalladamete en
-              la documentación con imágenes y figuras.
-            </p>
-          </div>
+          {cardContent.map((card) => (
+            <div className="p-4 rounded-lg border-white border-opacity-10 border">
+              <span className="text-xl font-bold mb-4">{card.feature}</span>
+              <p>{card.children}</p>
+            </div>
+          ))}
         </section>
       </HomeBlock>
 
