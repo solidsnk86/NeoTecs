@@ -3,22 +3,15 @@ import '../styles/globals.scss';
 import { DoNotCopy } from '../components/DoNotCopy';
 
 function MyApp({ Component, pageProps }) {
-  const title = Component.title || 'Neotecs - Informática';
+  const title = Component.title || 'Neotecs - Blog';
   const description = 'Aprende a configurar tu WiFi fácil y rápido.';
+  const favicon = '../../public/favicon-32x32.png';
 
   return (
     <>
       <Head>
-        {[
-          {
-            ic: '🌴',
-          },
-        ].map((item) => {
-          <>
-            <link rel="shortcut icon" key={item.ic} href={item.ic} />
-            <link rel="apple-touch-icon" key={item.ic} href={item.ic} />
-          </>;
-        })}
+        <link rel="shortcut icon" href={favicon} />
+        <link rel="apple-touch-icon" href={favicon} />
         <title>{title}</title>
         <meta property="og:title" content={title} />
         <meta name="description" content={description} />
