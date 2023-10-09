@@ -5,10 +5,10 @@ import { History } from 'lucide-react';
 export const PublishDate = () => {
   const postedtDate = '01 Octubre, 2023';
 
-  const BackHome = [{ link: 'Inicio /', href: '/' }];
+  const BackHome = [{ link: 'Inicio', href: '/' }];
 
   return (
-    <div className="flex space-x-2">
+    <div className="flex space-x-1">
       {BackHome.map((i) => (
         <Link key={i.link} href={i.href}>
           <p className="text-gray-700 text-sm italic no-underline hover:animate-pulse antialiased">
@@ -18,7 +18,7 @@ export const PublishDate = () => {
       ))}
       {[
         {
-          text: 'Publicado, ',
+          text: '· Publicado, ',
           date: postedtDate,
           icon: (
             <History className="inline-flex w-[13px] h-[13px] mr-2 mb-[2px]" />

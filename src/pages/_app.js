@@ -5,7 +5,8 @@ import { DoNotCopy } from '../components/DoNotCopy';
 function MyApp({ Component, pageProps }) {
   const title = Component.title || 'Neotecs - Blog';
   const description = 'Aprende a configurar tu WiFi fácil y rápido.';
-  const favicon = '../../public/favicon-32x32.png';
+  const favicon =
+    'https://github.com/solidsnk86/neotecs.tech/blob/master/img/wifi.png?raw=true';
 
   return (
     <>
