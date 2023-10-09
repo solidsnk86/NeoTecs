@@ -36,8 +36,3 @@ export const Marquee = ({
     );
 };
 
-Marquee.defaultProps = {
-    className: '',
-    reverse: false,
-    pauseOnHover: false,
-};

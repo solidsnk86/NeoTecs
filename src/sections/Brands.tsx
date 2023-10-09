@@ -98,14 +98,14 @@ const ReviewCard = ({
 
 export const MarqueeLogos = () => {
     return (
-        <section className="flex flex-col flex-wrap items-center justify-center my-48">
+        <section className="block flex-wrap items-center justify-center my-48">
             <h2 className="text-6xl font-bold text-center text-white my-3">
                 Configuraciones de las siguientes
             </h2>
             <p className="max-w-xl text-xl text-sky-200 text-center [†ext-wrap:balance] my-4 py-4">
                 Marcas:
             </p>
-            <div className="relative flex flex-col items-center justify-center w-full h-full gap-4 py-20 overflow-hidden rounded-lg bg-background">
+            <div className="relative flex-col items-center justify-center w-full h-full gap-4 py-20 my-5 overflow-hidden rounded-lg bg-background">
                 <Marquee pauseOnHover className="[--duration:40s]">
                     {reviews.map((review) => (
                         <ReviewCard key={review.name} {...review} />
