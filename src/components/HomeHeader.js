@@ -1,12 +1,10 @@
 import { Atropos } from 'atropos/react';
 import Link from 'next/link';
-import { Meteors } from './magicui/MeteorsPegassus';
 
 export const HomeHeader = () => {
   return (
     <div className="bg-gradient-to-b from-primary-dark to-primary-dark -mt-16 border-b-2 border-primary">
       <div className="max-w-screen-lg mx-auto pt-32 pb-16 px-4 md:px-8 lg:px-16">
-        <Meteors />
         <Atropos
           className="atropos-header w-full"
           rotateTouch="scroll-y"

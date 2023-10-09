@@ -4,7 +4,6 @@ import { HomeHeader } from '../components/HomeHeader';
 import { Footer } from '../components/Footer';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import { MarqueeLogos } from '../sections/Brands';
-import { Meteors } from '../components/magicui/MeteorsPegassus';
 
 const HomeBlock = ({ className = '', children }) => {
   return (
@@ -24,7 +23,6 @@ export default function Home() {
   return (
     <div className="bg-page-dark-bg text-white">
       <Nav />
-      <Meteors />
       <HomeHeader />
       <HomeBlock>
         <HomeBlockTitle>Configurá tu CPE</HomeBlockTitle>
