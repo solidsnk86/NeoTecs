@@ -195,4 +195,4 @@ export default function MikrotikDocs() {
     </TitlesContextProvider>
   );
 }
-MikrotikDocs.title = 'NeoTecs - Configuración MikroTik';
+MikrotikDocs.title = 'NeoTecs · MikroTik';

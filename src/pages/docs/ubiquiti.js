@@ -312,4 +312,4 @@ export default function UbiquitiDocs() {
     </TitlesContextProvider>
   );
 }
-UbiquitiDocs.title = 'NeoTecs - Ubiquiti Configuración';
+UbiquitiDocs.title = 'NeoTecs · Ubiquiti';

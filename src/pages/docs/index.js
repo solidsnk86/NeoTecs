@@ -22,4 +22,4 @@ export default function Docs() {
     </TitlesContextProvider>
   );
 }
-Docs.title = 'NeoTecs - WiFi Configuración';
+Docs.title = 'NeoTecs · Tp Link';
