@@ -9,8 +9,16 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="images/favicon.svg" />
-        <link rel="apple-touch-icon" href="images/favicon.svg" />
+        {[
+          {
+            ic: '🌴',
+          },
+        ].map((item) => {
+          <>
+            <link rel="shortcut icon" key={item.ic} href={item.ic} />
+            <link rel="apple-touch-icon" key={item.ic} href={item.ic} />
+          </>;
+        })}
         <title>{title}</title>
         <meta property="og:title" content={title} />
         <meta name="description" content={description} />
@@ -20,7 +28,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@CalcagniGabriel" />
         <meta name="twitter:creator" content="@solidSnk86" />
-        <meta name="twitter:title" content="Neotecs WiFi" />
+        <meta name="twitter:title" content="Neotecs WiFi Documentation" />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content="/images/logo.png" />
       </Head>
