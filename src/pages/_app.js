@@ -1,18 +1,26 @@
 import Head from 'next/head';
 import '../styles/globals.scss';
+import { renderToString } from 'react-dom/server';
 import { DoNotCopy } from '../components/DoNotCopy';
+import { NeoTecsIcon } from '../components/NeoTecsIcon';
 
 function MyApp({ Component, pageProps }) {
   const title = Component.title || 'Neotecs - Blog';
   const description = 'Aprende a configurar tu WiFi fácil y rápido.';
-  const favicon =
-    'https://github.com/solidsnk86/neotecs.tech/blob/master/img/wifi.png?raw=true';
+
+  const neoTecsIconString = renderToString(<NeoTecsIcon />);
 
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href={favicon} />
-        <link rel="apple-touch-icon" href={favicon} />
+        <link
+          rel="shortcut icon"
+          href={`data:image/svg+xml,${encodeURIComponent(neoTecsIconString)}`}
+        />
+        <link
+          rel="apple-touch-icon"
+          href={`data:image/svg+xml,${encodeURIComponent(neoTecsIconString)}`}
+        />
         <title>{title}</title>
         <meta property="og:title" content={title} />
         <meta name="description" content={description} />
