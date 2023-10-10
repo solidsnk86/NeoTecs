@@ -1,4 +1,3 @@
-// tailwind.config.js
 module.exports = {
   mode: 'jit',
   content: [
@@ -6,17 +5,17 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    fontFamily: {
-      mono: [
-        'Roboto Mono',
-        'Menlo',
-        'Monaco',
-        'Consolas',
-        'courier new',
-        'monospace',
-      ],
-    },
     extend: {
+      fontFamily: {
+        mono: [
+          'Roboto Mono',
+          'Menlo',
+          'Monaco',
+          'Consolas',
+          'courier new',
+          'monospace',
+        ],
+      },
       colors: {
         'primary-dark': '#0D1117',
         'text-primary': '#f2f2f2',
@@ -26,6 +25,8 @@ module.exports = {
       animation: {
         marquee: 'marquee var(--duration) linear infinite',
         meteor: 'meteor 5s linear infinite',
+        spin: 'spin calc(var(--speed) * 2) infinite linear',
+        slide: 'slide var(--speed) ease-in-out infinite alternate',
       },
       keyframes: {
         marquee: {
@@ -41,24 +42,40 @@ module.exports = {
             overflow: 'hidden',
           },
         },
+        spin: {
+          '0%': {
+            rotate: '0deg',
+          },
+          '15%, 35%': {
+            rotate: '90deg',
+          },
+          '65%, 85%': {
+            rotate: '270deg',
+          },
+          '100%': {
+            rotate: '360deg',
+          },
+        },
+        slide: {
+          to: { transform: 'translate(calc(100cqw - 100%), 0)' },
+        },
       },
     },
   },
   variants: {
     extend: {
-      fontWeight: {
-        100: '100',
-        200: '200',
-        300: '300',
-        400: '400',
-        500: '500',
-        600: '600',
-        700: '700',
-        800: '800',
-        900: '900',
-      },
+      fontWeight: [
+        '100',
+        '200',
+        '300',
+        '400',
+        '500',
+        '600',
+        '700',
+        '800',
+        '900',
+      ],
     },
   },
-  // eslint-disable-next-line
   plugins: [require('@tailwindcss/typography')],
 };

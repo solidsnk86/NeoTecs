@@ -4,6 +4,7 @@ import { HomeHeader } from '../components/HomeHeader';
 import { Footer } from '../components/Footer';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import { MarqueeLogos } from '../sections/Brands';
+import { ShimmerButton } from '../components/magicui/ShimmerButton';
 
 const HomeBlock = ({ className = '', children }) => {
   return (
@@ -74,12 +75,9 @@ export default function Home() {
         <HomeBlockTitle>Aprende ahora</HomeBlockTitle>
         <p>Configura tu dispositovo inalámbrico</p>
         <p className="mt-4">
-          <Link
-            href="/docs/"
-            className="bg-[#484848] text-white rounded-full px-8 py-4 font-bold text-xl inline-flex duration-200 hover:shadow-lg sm:hover:shadow-2xl hover:border-opacity-0 hover:opacity-[.8] hover:scale-[1.05]"
-          >
-            Comencemos
-          </Link>
+          <ShimmerButton shimmerDuration="2s" size="large">
+            <Link href="/docs/">Comencemos</Link>
+          </ShimmerButton>
         </p>
       </HomeBlock>
 
