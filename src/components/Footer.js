@@ -40,6 +40,8 @@ export const Footer = () => {
     window.location.href = '#';
   };
 
+  const myUrl = 'https://solidsnk86.netlify.app/';
+
   return (
     <section className=" bg-footer-bg border-t-2 text-white mt-14">
       <span className="relative flex justify-center m-auto bg-[#E5E7EB] px-[2px] py-[2px] w-fit h-fit rounded-full bottom-[19px]">
@@ -81,11 +83,7 @@ export const Footer = () => {
 
         <p className="flex justify-center mt-16">
           2023 © NeoTecs · By
-          <a
-            href="https://www.linkedin.com/in/gabriel-calcagni/"
-            target="_blank"
-            rel="noopener"
-          >
+          <a href={myUrl} target="_blank" rel="noopener">
             <img
               className="w-16 h-16 relative bottom-6 ml-2 drop-shadow-xl text-[#111] hover:scale-[1.1] transition-all"
               src="/images/neo_pixelart-removebg-preview.png"
