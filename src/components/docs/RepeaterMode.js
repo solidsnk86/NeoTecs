@@ -7,21 +7,25 @@ export const RepeaterMode = () => {
     <section className="text-white">
       <SectionTitle title="Modo Repetidor" />
       <PublishDate />
-      <div className="images-client">
+
+      <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/repeater-removebg-preview.png?raw=true"
           className="flex justify-center items-center m-auto"
           alt=""
         />
-      </div>
+      </figure>
+
       <p>Los pasos para instalar el repetidor wifi son sencillos:</p>
-      <div className="images-web">
+
+      <figure className="images-web">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/repetidor1.png?raw=true"
           id="imgAP"
           alt=""
         />
-      </div>
+      </figure>
+
       <p>
         Conecta el repetidor wifi al POE y conecta el POE a la corriente
         eléctrica y a tu router wifi. A través de tu ordenador accede al panel

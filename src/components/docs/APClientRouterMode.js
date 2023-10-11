@@ -18,7 +18,6 @@ export const APClientRouterMode = () => {
         </strong>
       </p>
       <PublishDate />
-      <hr />
       <p>
         Para poder configurar el modo AP Router Cliente desde 0, vamos a
         ingresar desde una pc, o desde un smartphone, a continuación voy a
@@ -34,12 +33,13 @@ export const APClientRouterMode = () => {
       <Pre>ncpa.cpl</Pre>
       <p>Damos enter para ejecutar el comando, veremos la siguiente ventana:</p>
 
-      <div className="images-web">
+      <figure className="images-web">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-propiedades-red.png?raw=true"
           alt="panel de control-conexiones de red captura de pantalla"
         />
-      </div>
+      </figure>
+
       <p className="paragraph">
         En Red o (Ethernet) hacemos clic derecho sobre el ícono, nos dirijimos a
         propiedades. Dónde está la opción Habilitar el protocolo de Internet
@@ -53,12 +53,13 @@ export const APClientRouterMode = () => {
       />
       <p>Propiedades TCP/IPv4</p>
 
-      <div className="images-web">
+      <figure className="images-web">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-TCP-IP.png?raw=true"
           alt="panel de control-conexiones de red captura de pantalla"
         />
-      </div>
+      </figure>
+
       <p>Escribimos los siguientes parámetros:</p>
 
       <ol>
@@ -68,12 +69,13 @@ export const APClientRouterMode = () => {
         <Pre>255.255.255.0</Pre>
       </ol>
 
-      <div className="images-client flex m-auto justify-center">
+      <figure className="images-client flex m-auto justify-center">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/propiedades-ethernet.png?raw=true"
           alt="propiedades ethernet"
         />
-      </div>
+      </figure>
+
       <p>
         Aceptamos los cambios. E ingresamos en el navegador web, en la url
         escribimos:
@@ -82,12 +84,13 @@ export const APClientRouterMode = () => {
       <Pre>https://192.168.0.254/</Pre>
 
       <p>damos enter y avanzamos.</p>
-      <div className="images-web">
+
+      <figure className="images-web">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/navegador.png?raw=true"
           alt="imágen navegador 192.168.0.254"
         />
-      </div>
+      </figure>
 
       <p className="px-2 py-2 bg-gray-800 rounded w-fit text-text-strong font-mono font-semibold">
         Continuamos a 192.168.0.254 de todas formas.
@@ -100,47 +103,52 @@ export const APClientRouterMode = () => {
         <strong className="text-text-strong"> (Test Mode)</strong> en selección
         de país.
       </p>
-      <div className="images-web">
+
+      <figure className="images-web">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente2.png?raw=true"
           alt="captura de pantalla sistema pharos tp-link"
         />
-      </div>
+      </figure>
+
       <p>
-        {' '}
         En la siguiente parte creamos un usuario y contraseña que recordemos y
         accedemos al panel general de TP-LINK.
       </p>
-      <div className="images-web">
+
+      <figure className="images-web">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente3.png?raw=true"
           alt="captura de pantalla sistema pharos tp-link"
         />
-      </div>
+      </figure>
+
       <p>
         Una vez dentro del menú principal de la interfaz de Pharos OS de
         TP-Link, seleccionamos en la pestaña Modo de Operación, y seleccionamos
         AP Router Cliente. Nos va a aparecer si deseamos aceptar el cambio de
         modo, hacemos clic en ( Si ).
       </p>
-      <div className="images-web">
+
+      <figure className="images-web">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente4.png?raw=true"
           alt="captura de pantalla sistema pharos tp-link"
         />
-      </div>
+      </figure>
+
       <p>
         En el modo Ap Router Cliente nos vamos a la pestaña (Inalámbrico), vamos
         al apartado de configuración de cliente inalámbrico. Hacemos clic en
         Inspección.
       </p>
 
-      <div className="images-web">
+      <figure className="images-web">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente5.png?raw=true"
           alt="captura de pantalla sistema pharos tp-link"
         />
-      </div>
+      </figure>
 
       <p>
         Esperamos que termine de escanear y seleccionamos el nodo del Gobierno,
@@ -149,12 +157,13 @@ export const APClientRouterMode = () => {
         Configuramos la distancia, en éste caso estamos a 200 metros de la
         antena, 2 cuadras aproximadamente; ponemos: 0.2. Aplicamos y guardamos.
       </p>
-      <div className="images-web">
+
+      <figure className="images-web">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente6.png?raw=true"
           alt="captura de pantalla sistema pharos tp-link"
         />
-      </div>
+      </figure>
       <p>
         Una vez hemos terminado los pasos, volvemos a la pestaña (Estado) y
         observamos los indicadores de señal, ruido, SNR y transmisión de antena
@@ -162,12 +171,12 @@ export const APClientRouterMode = () => {
         internet.
       </p>
 
-      <div className="images-web">
+      <figure className="images-web">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente7.png?raw=true"
           alt="captura de pantalla sistema pharos tp-link"
         />
-      </div>
+      </figure>
 
       <p>
         Si has llegado hasta este punto, espero que este tutorial haya sido de

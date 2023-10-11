@@ -42,12 +42,12 @@ export const RouterMode = () => {
           </span>
         </li>
 
-        <div className="images-client flex justify-center m-auto">
+        <figure className="images-client flex justify-center m-auto">
           <img
             src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/How_to_Configure_the_AP_Router_Mode_on_the_CPE510image002.png?raw=true"
             alt=""
           />
-        </div>
+        </figure>
 
         <li>
           Elija el tipo de conexión WAN que está usando su ISP. Para la mayoría
@@ -55,12 +55,12 @@ export const RouterMode = () => {
           Consulte con el servicio de atención al cliente de su ISP.
         </li>
 
-        <div className="images-client flex justify-center m-auto">
+        <figure className="images-client flex justify-center m-auto">
           <img
             src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/How_to_Configure_the_AP_Router_Mode_on_the_CPE510image004.png?raw=true"
             alt=""
           />
-        </div>
+        </figure>
       </ol>
 
       <p>
@@ -83,12 +83,12 @@ export const RouterMode = () => {
           </span>
         </li>
 
-        <div className="images-client flex justify-center m-auto">
+        <figure className="images-client flex justify-center m-auto">
           <img
             src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/how-config-router-ap.png?raw=true"
             alt=""
           />
-        </div>
+        </figure>
 
         <li>
           Seleccione IP estática.Ingrese los parámetros de IP proporcionados por
@@ -182,14 +182,14 @@ export const RouterMode = () => {
         </li>
         <li>Haga clic en OK nuevamente para aplicar la configuración.</li>
       </ol>
-      <center>
-        <div className="images-client flex justify-center m-auto">
-          <img
-            src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/propiedades-ethernet2.png?raw=true"
-            alt=""
-          />
-        </div>
-      </center>
+
+      <figure className="images-client flex justify-center m-auto">
+        <img
+          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/propiedades-ethernet2.png?raw=true"
+          alt=""
+        />
+      </figure>
+
       <p>
         Reversión final de la configuración de la computadora (para Mac OS X)
         Vaya a Apple → Preferencias del sistema → Red → Resaltar Ethernet →
@@ -197,12 +197,12 @@ export const RouterMode = () => {
       </p>
       <br />
 
-      <div className="images-client flex justify-center m-auto">
+      <figure className="images-client flex justify-center m-auto">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/mac-imag-redes.png?raw=true"
           alt=""
         />
-      </div>
+      </figure>
 
       <hr />
       <p>

@@ -32,12 +32,14 @@ export const ClientMode = () => {
         configuración.
       </p>
       <p>Escenario de red:</p>
-      <div className="images-client flex justify-center m-auto">
+
+      <figure className="images-client flex justify-center m-auto">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/antena-dinamica-removebg-preview.png?raw=true"
           alt="esceneraio-diagrama-ap-cliente"
         />
-      </div>
+      </figure>
+
       <p>
         El problema puede estar relacionado con dos razones como a continuación:
       </p>
@@ -75,12 +77,12 @@ export const ClientMode = () => {
       </p>
       <p>CPE_Client’s Radio Status/Estado de la radio:</p>
 
-      <div className="images-client">
+      <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/estado-radio.png?raw=true"
           alt=""
         />
-      </div>
+      </figure>
 
       <p>
         Si no puede ver ninguna información sobre el CPE_AP en esta página,
@@ -99,12 +101,12 @@ export const ClientMode = () => {
         de CPE, consulte FAQ_2080 en el manual de TP-Link. Conexión eléctrica:
       </p>
 
-      <div className="images-client flex justify-center m-auto">
+      <figure className="images-client flex justify-center m-auto">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/diagrama-poe-cpe-lan-removebg-preview.png?raw=true"
           alt=""
         />
-      </div>
+      </figure>
 
       <p>
         Paso 2: asegúrese de que el AP y el cliente estén en la misma frecuencia
@@ -121,21 +123,21 @@ export const ClientMode = () => {
         Configuración inalámbrica de AP:
       </p>
 
-      <div className="images-client">
+      <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/config-canal-cpe.png?raw=true"
           alt=""
         />
-      </div>
+      </figure>
 
       <p>Escaneo de la página SSID:</p>
 
-      <div className="images-client">
+      <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/escaner-ssid.png?raw=true"
           alt=""
         />
-      </div>
+      </figure>
 
       <ol>
         <p>
@@ -175,12 +177,12 @@ export const ClientMode = () => {
         </li>
       </ol>
 
-      <div className="images-client">
+      <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/monitor.png?raw=true"
           alt=""
         />
-      </div>
+      </figure>
 
       <p>
         Si el Cliente puede ver el SSID del AP, pero no puede conectarse al AP,

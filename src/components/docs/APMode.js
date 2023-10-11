@@ -15,7 +15,6 @@ export const APMode = () => {
       </p>
       <p>Vamos a configurar la CPE en modo punto de acceso:</p>
       <PublishDate />
-      <hr />
       <p>Para realizarlo de la PC:</p>
       <p>
         Desde una PC con Sistema Operativo de Windows, nos dirigimos a panel de
