@@ -99,12 +99,12 @@ export const RouterMode = () => {
         </li>
       </ol>
 
-      <div className="images-client flex justify-center m-auto">
+      <figure className="images-client flex justify-center m-auto">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/how-config-router-ap2.png?raw=true"
           alt=""
         />
-      </div>
+      </figure>
 
       <p>
         Personalice su nombre inalámbrico (SSID) y contraseña SSID: (Cambie el
@@ -116,25 +116,25 @@ export const RouterMode = () => {
         </span>
       </p>
 
-      <div className="images-client flex justify-center m-auto">
+      <figure className="images-client flex justify-center m-auto">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/how-config-router-ap3.png?raw=true"
           alt="how-config-router-ap3.png"
         />
         <br />
-      </div>
+      </figure>
 
       <p>
         Haga clic en: Finalizar y espere a que la configuración surta efecto,
         tarda aproximadamente 1 minuto.
       </p>
 
-      <div className="images-client flex justify-center m-auto">
+      <figure className="images-client flex justify-center m-auto">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/how-config-router-ap4.png?raw=true"
           alt=""
         />
-      </div>
+      </figure>
 
       <ol>
         <span className="px-4 py-2 bg-gray-800 border-l-4 border-green-600 rounded">
