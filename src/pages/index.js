@@ -76,7 +76,7 @@ export default function Home() {
         <p>Configura tu dispositovo inalámbrico</p>
         <p className="mt-4">
           <Link href="/docs/">
-            <ShimmerButton shimmerDuration="2s" size="large">
+            <ShimmerButton shimmerDuration="1.8s" size="large">
               Comencemos
             </ShimmerButton>
           </Link>
