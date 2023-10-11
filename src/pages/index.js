@@ -75,9 +75,11 @@ export default function Home() {
         <HomeBlockTitle>Aprende ahora</HomeBlockTitle>
         <p>Configura tu dispositovo inalámbrico</p>
         <p className="mt-4">
-          <ShimmerButton shimmerDuration="2s" size="large">
-            <Link href="/docs/">Comencemos</Link>
-          </ShimmerButton>
+          <Link href="/docs/">
+            <ShimmerButton shimmerDuration="2s" size="large">
+              Comencemos
+            </ShimmerButton>
+          </Link>
         </p>
       </HomeBlock>
 
