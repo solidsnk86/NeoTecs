@@ -6,8 +6,8 @@ export function ShareButton() {
     if (navigator.share) {
       navigator.share({
         title: 'Neotecs Informática',
-        text: 'Aprende a configurar tu WiFi en tan solo 5 minutos',
-        url: 'https://neotecs.tech',
+        text: 'Aprende a configurar tu WiFi en tan solo 5 minutos. Documentación web de para CPE inalámbros de diferentes marcas.',
+        url: 'https://neotecs.netlify.app',
       });
     }
   };
