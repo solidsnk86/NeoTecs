@@ -27,7 +27,6 @@ export default function UbiquitiDocs() {
               </strong>
             </p>
             <PublishDate />
-            <hr />
             <h3 className="text-[cornflowerblue]">
               Configuración del Lite Beam M5 en Modo Estación
             </h3>

@@ -27,8 +27,6 @@ export default function MikrotikDocs() {
               </strong>
             </p>
             <PublishDate />
-            <hr />
-
             <p>
               Para poder configurar el modo AP Router Cliente desde 0, vamos a
               ingresar desde una pc, o desde un smartphone, a continuación voy a
