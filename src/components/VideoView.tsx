@@ -78,7 +78,7 @@ export const VideoView = ({ videoId }) => {
   }
 
   return (
-    <span className="flex my-1 text-[1rem] space-x-40 gap-2 justify-center m-auto">
+    <span className="flex my-1 text-[1rem] space-x-[60%] gap-1 justify-center m-auto">
       <ViewIcon className='relative top-[4px] w-5 h-5' /> {views}
       <LikeButton className='relative top-1 w-4 h-4' /> {likes}
     </span>
