@@ -1,4 +1,5 @@
 import { YouTubeVideo } from './YouTubeVideo';
+import { VideoView } from './VideoView';
 
 const videos = [
   {
@@ -26,6 +27,7 @@ export function YouTubeVideoSection() {
     <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center justify-center my-5">
       {videos.map(({ video, cpe, children }) => (
         <YouTubeVideo key={video} video={video} cpe={cpe}>
+          <VideoView videoId={video} />
           {children}
         </YouTubeVideo>
       ))}
