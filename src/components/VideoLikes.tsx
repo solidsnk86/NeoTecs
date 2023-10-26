@@ -90,7 +90,7 @@ export const VideoLikes = ({ videoId }) => {
   }
   return (
     <div className="flex gap-[10px] xl:gap-[16px] lg:gap-[14px] md:gap-[12px] my-2">
-      <img className="rounded-full w-10 h-10" src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/logos/NeoTecs%20_Tutorial_logo.png?raw=true" alt="logo" />
+      <img className="rounded-full w-10 h-10" src="/images/logos/NeoTecs _Tutorial_logo.png" alt="logo" />
       <div className="flex-col">
         <span className="font-bold">Neo TECs</span>
         <p className="font-light text-[#5D5D5D]">{suscriptors} suscriptores</p>
