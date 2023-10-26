@@ -3,10 +3,8 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 
-export const VideoView = ({ videoId }) => {
-  const [views, setViews] = useState(0);
+export const VideoLikes = ({ videoId }) => {
   const [likes, setLikes] = useState(0);
-  const [datePublished, setDatePublished] = useState("");
 
   useEffect(() => {
     const getVideoDetails = async () => {
@@ -20,13 +18,10 @@ export const VideoView = ({ videoId }) => {
 
         if (data.items && data.items.length > 0) {
           const video = data.items[0];
-          const views = video.statistics.viewCount;
-          const likes = video.statistics.likeCount;
-          const datePublished = video.snippet.publishedAt;
 
-          setViews(views);
+          const likes = video.statistics.likeCount;
+
           setLikes(likes);
-          setDatePublished(datePublished);
         } else {
           console.error('No se encontraron datos del video en la respuesta de la API de YouTube');
         }
@@ -38,49 +33,54 @@ export const VideoView = ({ videoId }) => {
     getVideoDetails();
   }, [videoId]);
 
-  const ViewIcon = (props) => {
-    const { ...attrs } = props
-    return (
-      <svg xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        className="feather feather-eye"
-        {...attrs}>
-        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z">
-        </path>
-        <circle cx="12" cy="12" r="3"></circle>
-      </svg>
-    )
-  }
-
   const LikeButton = (props) => {
     const { ...attrs } = props
     return (
       <svg xmlns="http://www.w3.org/2000/svg"
-        width="22"
-        height="22"
+        width="18"
+        height="18"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         className="feather feather-thumbs-up">
         <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
       </svg>
     )
   }
 
+  const DisLikeButton = (props) => {
+    const { ...attrs } = props
+    return (
+      <svg xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none" stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="feather feather-thumbs-down">
+
+        <path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"></path>
+      </svg>
+    )
+  }
+
   return (
-    <span className="flex my-1 text-[1rem] space-x-[60%] gap-1 justify-center m-auto">
-      <ViewIcon className='relative top-[4px] w-5 h-5' /> {views}
-      <LikeButton className="relative top-1 w-4 h-4" /> {likes}
-    </span>
+    <div className="flex space-x-5">
+      <img className="rounded-full w-5 h-5" src="/public/images/logos\NeoTecs _Tutorial_logo.png" alt="logo" />
+      <span>Neo TECs</span>
+      <span className="font-light">Suscríbete</span>
+      <aside className="flex bg-[#272727] rounded-full my-2 w-fit px-3 py-1">
+        <span className="flex gap-2 relative top-[2px]">
+          <LikeButton /> {likes}
+          <hr className="border-l-[1px] h-6 border-[#575757]" />
+          <DisLikeButton />
+        </span>
+      </aside>
+    </div>
   );
 }
