@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 export const DescriptionViews = ({ videoId }) => {
   const [views, setViews] = useState(0);
+  const [datePublished, setDatePublished] = useState('');
 
   useEffect(() => {
     const getVideoDetails = async () => {
@@ -18,8 +19,16 @@ export const DescriptionViews = ({ videoId }) => {
         if (data.items && data.items.length > 0) {
           const video = data.items[0];
           const views = video.statistics.viewCount;
+          const datePublished = video.snippet.publishedAt;
+
+          const options = { year: 'numeric', month: 'short', day: 'numeric' };
+          const formattedDate = new Date(datePublished).toLocaleDateString(
+            undefined,
+            options,
+          );
 
           setViews(views);
+          setDatePublished(formattedDate);
         } else {
           console.error(
             'No se encontraron datos del video en la respuesta de la API de YouTube',
@@ -36,6 +45,7 @@ export const DescriptionViews = ({ videoId }) => {
   return (
     <div className="text-left my-1 font-bold">
       <span>{views} Vistas</span>
+      <span> - Publicado el {datePublished}</span>
     </div>
   );
 };
