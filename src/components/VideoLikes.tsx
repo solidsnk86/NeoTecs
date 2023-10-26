@@ -69,11 +69,17 @@ export const VideoLikes = ({ videoId }) => {
     )
   }
 
+  const suscribeButton = () => {
+    window.open('https://www.youtube.com/@tutosNeoTecs')
+  }
+
   return (
-    <div className="flex space-x-5">
-      <img className="rounded-full w-5 h-5" src="/public/images/logos\NeoTecs _Tutorial_logo.png" alt="logo" />
-      <span>Neo TECs</span>
-      <span className="font-light">Suscríbete</span>
+    <div className="flex gap-3 my-2">
+      <img className="rounded-full w-10 h-10" src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/logos/NeoTecs%20_Tutorial_logo.png?raw=true" alt="logo" />
+      <div className="flex-col">
+        <span className="font-bold">Neo TECs</span>
+        <p className="font-light cursor-pointer" onClick={suscribeButton}>Suscríbete</p>
+      </div>
       <aside className="flex bg-[#272727] rounded-full my-2 w-fit px-3 py-1">
         <span className="flex gap-2 relative top-[2px]">
           <LikeButton /> {likes}
