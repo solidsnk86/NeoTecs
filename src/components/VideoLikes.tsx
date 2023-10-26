@@ -91,7 +91,7 @@ export const VideoLikes = ({ videoId }) => {
       <img className="rounded-full w-10 h-10" src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/logos/NeoTecs%20_Tutorial_logo.png?raw=true" alt="logo" />
       <div className="flex-col">
         <span className="font-bold">Neo TECs</span>
-        <p className="font-light text-[#5D5D5D] text-xs xl:text-sm">{suscriptors} suscriptores</p>
+        <p className="font-light text-[#5D5D5D]">{suscriptors} suscriptores</p>
       </div>
       <div>
         <p className="relative top-[6px] mx-1 font-bold px-2 text-[#4E4E4E] py-1 rounded-full bg-[#F1F1F1] cursor-pointer hover:opacity-80" onClick={suscribeButton}>Suscríbete</p>
