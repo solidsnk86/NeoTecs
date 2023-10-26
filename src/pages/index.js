@@ -73,7 +73,7 @@ export default function Home() {
 
       <HomeBlock className="bg-[url-de-tu-imagen] bg-cover">
         <HomeBlockTitle>Aprende ahora</HomeBlockTitle>
-        <p>Configura tu dispositovo inalámbrico</p>
+        <p>Configura tu dispositivo inalámbrico</p>
         <p className="mt-4">
           <Link href="/docs/">
             <ShimmerButton shimmerDuration="1.8s" size="large">
