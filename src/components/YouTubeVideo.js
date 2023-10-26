@@ -6,7 +6,7 @@ export function YouTubeVideo({ video, cpe, children }) {
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen=""
-        className="rounded-tl-xl rounded-tr-xl flex m-auto w-[100%] md-:w-[100%]"
+        className="rounded-xl flex m-auto w-[100%] md-:w-[100%]"
         height={200}
       />
       <h3 className="text-lg text-gray-400 font-bold line-clamp-1">{cpe}</h3>
