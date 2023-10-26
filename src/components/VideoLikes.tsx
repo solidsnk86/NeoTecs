@@ -48,7 +48,9 @@ export const VideoLikes = ({ videoId }) => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="feather feather-thumbs-up">
+        className="feather feather-thumbs-up"
+        {...attrs}
+      >
         <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
       </svg>
     )
@@ -87,7 +89,7 @@ export const VideoLikes = ({ videoId }) => {
     }
   }
   return (
-    <div className="flex gap-[10px] xl:gap-[14px] my-2 w-full">
+    <div className="flex gap-[10px] xl:gap-[16px] lg:gap-[14px] md:gap-[12px] my-2">
       <img className="rounded-full w-10 h-10" src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/logos/NeoTecs%20_Tutorial_logo.png?raw=true" alt="logo" />
       <div className="flex-col">
         <span className="font-bold">Neo TECs</span>
@@ -103,7 +105,7 @@ export const VideoLikes = ({ videoId }) => {
           <DisLikeButton />
         </span>
       </aside>
-      <div className="text-[#575757] bg-[#272727] rounded-full h-[28px] relative top-[6px] px-[6px] ml-1" onClick={ShareButton}>
+      <div className="text-[#575757] bg-[#272727] rounded-full h-[28px] relative top-[6px] px-[6px]" onClick={ShareButton}>
         <ReplyOutlinedIcon className="w-4 h4 relative top-[1px] right-[1px] text-[#FFFFFF] cursor-pointer hover:opacity-80" />
       </div>
     </div>

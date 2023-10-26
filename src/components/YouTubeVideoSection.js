@@ -25,7 +25,7 @@ const videos = [
 
 export function YouTubeVideoSection() {
   return (
-    <section className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center justify-center my-5">
+    <section className="grid grid-cols-1 gap-[14px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center justify-center my-5">
       {videos.map(({ video, cpe, children }) => (
         <YouTubeVideo key={video} video={video} cpe={cpe}>
           <VideoLikes videoId={video} />
