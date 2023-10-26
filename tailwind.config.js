@@ -17,10 +17,10 @@ module.exports = {
         ],
       },
       colors: {
-        'primary-dark': '#0D1117',
+        'primary-dark': '#0F0F0F',
         'text-primary': '#f2f2f2',
         'text-strong': '#AD2680',
-        'footer-bg': '#161B22',
+        'footer-bg': '#0F0F0F',
       },
       animation: {
         marquee: 'marquee var(--duration) linear infinite',
