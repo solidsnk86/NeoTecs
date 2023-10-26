@@ -45,7 +45,7 @@ export const DescriptionViews = ({ videoId }) => {
   return (
     <div className="text-left my-1 font-bold">
       <span>{views} Vistas</span>
-      <span> - Publicado el {datePublished}</span>
+      <span> · Publicado el {datePublished}</span>
     </div>
   );
 };
