@@ -145,7 +145,7 @@ export const HtmlDoc = () => {
                   computadora o el enlace a una imagen en línea. También incluye un atributo alt, que proporciona 
                   una descripción en caso de que la imagen no se pueda cargar. -->
                   Una imagen:
-                  <img src="../../images/duck.jpeg" alt="Imagen de Neo, mi mascota">
+                  <img src="../../images/neo.npg" alt="Imagen de Neo, mi mascota">
                   <!-- También podemos ver arriba que para algunos elementos que no contienen otros, las 
                   etiquetas de cierre no son necesarias. -->
           
@@ -228,7 +228,7 @@ export const HtmlDoc = () => {
         </html>
         `
       }</Pre>
-      <h1 className="text-slate-100">Prontito habrá más... ツ</h1>
+      <img src="/images/form.png" />
     </main>
   );
 };
