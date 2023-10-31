@@ -72,10 +72,10 @@ export default function Home() {
       </HomeBlock>
 
       <HomeBlock className="bg-[url-de-tu-imagen] bg-cover">
-        <HomeBlockTitle>Aprende ahora</HomeBlockTitle>
-        <p>Configura tu dispositivo inalámbrico</p>
+        <HomeBlockTitle>Aprende Programación Ahora</HomeBlockTitle>
+        <p>Principios Báscicos de la programación</p>
         <p className="mt-4">
-          <Link href="/docs/">
+          <Link href="/docs/program">
             <ShimmerButton shimmerDuration="1.8s" size="large">
               Comencemos
             </ShimmerButton>

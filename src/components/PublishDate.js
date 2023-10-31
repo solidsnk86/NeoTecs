@@ -10,10 +10,8 @@ export const PublishDate = () => {
   return (
     <div className="flex space-x-1">
       {BackHome.map((i) => (
-        <Link key={i.link} href={i.href}>
-          <p className="text-gray-700 text-sm italic no-underline hover:animate-pulse antialiased">
-            {i.link}
-          </p>
+        <Link key={i.link} href={i.href} className="no-underline">
+          <p className="text-gray-700 text-sm italic antialiased">{i.link}</p>
         </Link>
       ))}
       {[
@@ -25,7 +23,7 @@ export const PublishDate = () => {
           ),
         },
       ].map((item) => (
-        <p className="text-gray-700 text-sm italic">
+        <p className="text-gray-700 text-sm italic antialiased">
           {item.text}
           <span className="inline-flex mx-1">{item.date}</span>
           {item.icon}
