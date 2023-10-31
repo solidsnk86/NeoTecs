@@ -165,7 +165,28 @@ pre {
   position: relative;
 }
 
+.nav-switch {
+  position: sticky;
+  top: 48px;
+  animation: add-shadow linear both;
+  animation-timeline: scroll();
+  animation-range: 0 150px;
+}
+
+@keyframes add-shadow {
+  to {
+    box-shadow: 0 5px 5px -3px rgba(255, 255, 255, 0.25);
+    background: #1f2937;
+  }
+}
+
+.list-css-span span {
+  border: 1px solid #1e293b;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin: 0 3px;
+}
+
 @import 'atropos/scss';
 @import './home-header.scss';
-@import './home-demos.scss';
 @import './prose.scss';

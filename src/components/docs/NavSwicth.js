@@ -22,19 +22,19 @@ export const NavSwitch = ({ inline }) => {
       title: 'Python',
     },
     {
-      href: '',
+      href: '/docs/django',
       title: 'Django',
     },
     {
-      href: '',
+      href: '/docs/sql',
       title: 'SQL, Modelos y Migraciones',
     },
     {
-      href: '',
+      href: 'docs/ui',
       title: 'Interfaz de Usuario',
     },
     {
-      href: '',
+      href: '/docs/test',
       title: 'Pruebas (Testing)CI/DI',
     },
     {
@@ -47,7 +47,7 @@ export const NavSwitch = ({ inline }) => {
     <div
       className={`inline-block mb-4 border border-slate-400 border-opacity-20 rounded overflow-hidden mt-16 w-100% ${
         inline
-          ? 'mb-8 lg:hidden w-100% flex overflow-x-scroll border-none text-xs gap-2'
+          ? 'mb-8 lg:hidden w-100% flex overflow-x-scroll border-none text-xs gap-1 z-10 nav-switch'
           : ''
       }`}
     >
@@ -57,7 +57,7 @@ export const NavSwitch = ({ inline }) => {
           key={link.href}
           className={`p-1 xl:p-2 w-full flex duration-100 ${
             isActive(link)
-              ? 'xl:bg-[#484848] border-slate-300 border-b-2 xl:border-none'
+              ? 'xl:bg-[#484848] border-orange-300 border-b-4 xl:border-none'
               : 'hover:bg-[#CCCCCC] hover:bg-opacity-10'
           }`}
           title={link.title}
