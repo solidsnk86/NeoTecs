@@ -37,6 +37,10 @@ export const Pre = ({ children, lang = '' }) => {
   return (
     <>
       <ToastContainer />
+      <Copy
+        onClick={handleCopyClick}
+        className=" w-5 h-5 inline-flex my-auto absolute z-10 xl:right-20 xl:mt-4 right-6 cursor-pointer rounded hover:text-white transition-all"
+      />
       <Highlight
         theme={themes.vsDark}
         code={removeIndent(children)}
@@ -44,10 +48,6 @@ export const Pre = ({ children, lang = '' }) => {
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre className={className} style={style} ref={preRef}>
-            <Copy
-              onClick={handleCopyClick}
-              className=" w-5 h-5 inline-flex my-auto absolute right-2 mt-[2px] cursor-pointer rounded hover:text-white transition-all"
-            />
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => (
