@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 
@@ -178,6 +179,17 @@ export const HtmlDoc = () => {
         `
         }
       </Pre>
+      <p>
+        Para poder renderizar ésto en el navegador, vamos a instalar un
+        extensión de Visual Studio Code llamada,
+        <Link
+          href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
+          className="mx-1 text-amber-400"
+        >
+          Live Server
+        </Link>
+        .
+      </p>
       <p>Cuando se renderice esta página, veremos algo como ésto:</p>
       <div className="image-client">
         <img src="/images/html-elements-commit.png" />
