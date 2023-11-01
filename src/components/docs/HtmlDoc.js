@@ -329,7 +329,8 @@ export const HtmlDoc = () => {
 
         <input /> <!-- Crea un campo para entrada de datos. -->
 
-        <legend>...</legend> <!-- Se utiliza en conjunto con <fieldset> para descripción o título de un grupo de elementos. -->
+        <legend>...</legend> <!-- Se utiliza en conjunto con <fieldset> para descripción o título de un 
+                              grupo de elementos. -->
 
         `
       }</Pre>
