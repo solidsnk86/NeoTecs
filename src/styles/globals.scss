@@ -17,12 +17,14 @@ body.light {
   color: #1e1e1e;
 }
 
-html::-webkit-scrollbar {
+html::-webkit-scrollbar,
+.scroll-style::-webkit-scrollbar {
   width: 11px;
   background-color: rgba(180, 189, 197, 0.877);
 }
 
-html::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb,
+.scroll-style::-webkit-scrollbar-thumb {
   width: 10px;
   height: 60px;
   background-color: #1e1e1e;

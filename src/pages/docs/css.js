@@ -634,10 +634,10 @@ export default function CssDoc() {
             </div>
             <li>
               Otra forma de manejar diferentes tamaños de pantalla es utilizando
-              un nuevo atributo CSS conocido como{' '}
+              un nuevo atributo CSS conocido como
               <Link
                 href="https://www.w3schools.com/css/css3_flexbox.asp"
-                className="text-amber-400"
+                className="text-amber-400 mx-1"
               >
                 flexbox
               </Link>
@@ -748,6 +748,357 @@ export default function CssDoc() {
               </html>
               `
             }</Pre>
+            <div className="images-client">
+              <img
+                src="https://cs50.harvard.edu/web/2020/notes/0/images/grid.gif"
+                alt="gif-3"
+              />
+            </div>
+            <SectionTitle title="Bootstrap" />
+            <ul>
+              <li>
+                Resulta que existen muchas bibliotecas que otras personas ya han
+                desarrollado y que pueden facilitar la estilización de una
+                página web. Una biblioteca popular que utilizaremos en todo el
+                curso se llama Bootstrap.
+              </li>
+              <li>
+                Podemos incluir Bootstrap en nuestro código agregando una sola
+                línea en la sección head de nuestro archivo HTML:
+              </li>
+            </ul>
+            <Pre lang="html">{
+              /*html */ `
+              <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+              integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+              `
+            }</Pre>
+            <ul>
+              <li>
+                A continuación, podemos explorar algunas de las características
+                de
+                <Link
+                  href="https://getbootstrap.com/docs/4.5/components/"
+                  className="text-amber-400 mx-1"
+                >
+                  Bootstrap
+                </Link>
+                navegando a la sección de documentación de su sitio web. En esta
+                página, encontrarás numerosos ejemplos de clases que puedes
+                agregar a elementos para estilizarlos con Bootstrap.
+              </li>
+              <li>
+                Una característica popular de Bootstrap es su
+                <Link
+                  href="https://getbootstrap.com/docs/4.0/layout/grid/"
+                  className="text-amber-400 mx-1"
+                >
+                  sistema de cuadrícula
+                </Link>
+                . Bootstrap divide automáticamente una página en 12 columnas, y
+                podemos decidir cuántas columnas ocupa un elemento agregando la
+                clase{' '}
+                <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px]">
+                  col-x
+                </span>
+                , donde x es un número entre 1 y 12. Por ejemplo, en la página
+                siguiente, tenemos una fila de columnas de ancho igual y luego
+                una fila donde la columna del centro es más grande:
+              </li>
+            </ul>
+            <Pre lang="html">{
+              /*html */ `
+              <!DOCTYPE html>
+              <html lang="es">
+                  <head>
+                      <title>Mi Página Web</title>
+                      <link rel="stylesheet" 
+                      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+                      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+                      crossorigin="anonymous">
+                      <style>
+                          .row > div {
+                              padding: 20px;
+                              background-color: teal;
+                              border: 2px solid black;
+                          }
+                      </style>
+                  </head>
+                  <body>
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-4">
+                                  Esto es una sección.
+                              </div>
+                              <div class="col-4">
+                                  Esto es otra sección.
+                              </div>
+                              <div class="col-4">
+                                  Esto es una tercera sección.
+                              </div>
+                          </div>
+                      </div>
+                      <br/>
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-3">
+                                  Esto es una sección.
+                              </div>
+                              <div class="col-6">
+                                  Esto es otra sección.
+                              </div>
+                              <div class="col-3">
+                                  Esto es una tercera sección.
+                              </div>
+                          </div>
+                      </div>
+                  </body>
+              </html>
+              
+              `
+            }</Pre>
+            <SectionTitle title="Columnas" />
+            <li>
+              Para mejorar la capacidad de respuesta en dispositivos móviles,
+              Bootstrap también nos permite especificar tamaños de columna que
+              varían según el tamaño de la pantalla. En el siguiente ejemplo,
+              utilizamos
+              <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+                'col-lg-3'
+              </span>
+              para indicar que un elemento debería ocupar 3 columnas en una
+              pantalla grande, y
+              <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+                'col-sm-6'
+              </span>
+              para indicar que un elemento debería ocupar 6 columnas cuando la
+              pantalla es pequeña:
+            </li>
+            <Pre lang="html">{
+              /*html */ `
+              <!DOCTYPE html>
+              <html lang="en">
+                  <head>
+                      <title>My Web Page!</title>
+                      <link rel="stylesheet" 
+                      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+                      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+                      crossorigin="anonymous">
+                      <style>
+                          .row > div {
+                              padding: 20px;
+                              background-color: teal;
+                              border: 2px solid black;
+                          }
+                      </style>
+                  </head>
+                  <body>
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-lg-3 col-sm-6">
+                                  This is a section.
+                              </div>
+                              <div class="col-lg-3 col-sm-6">
+                                  This is another section.
+                              </div>
+                              <div class="col-lg-3 col-sm-6">
+                                  This is a third section.
+                              </div>
+                              <div class="col-lg-3 col-sm-6">
+                                  This is a fourth section.
+                              </div>
+                          </div>
+                      </div>
+                  </body>
+              </html>
+              `
+            }</Pre>
+            <SectionTitle title="Sass (Hojas de Estilo Sintácticamente Asombrosas)" />
+            <ul>
+              <li>
+                Hasta ahora, hemos encontrado varias formas de eliminar la
+                redundancia en CSS, como moverlo a archivos separados o usar
+                Bootstrap, pero aún hay muchas áreas donde podemos hacer
+                mejoras. Por ejemplo, ¿qué pasa si queremos que varios elementos
+                tengan estilos diferentes, pero que todos tengan el mismo color?
+                Si decidimos más tarde que queremos cambiar el color, tendríamos
+                que hacerlo en varios elementos diferentes.
+              </li>
+              <li>
+                <Link
+                  href="https://sass-lang.com/"
+                  className="text-amber-400 mx-1"
+                >
+                  Sass
+                </Link>
+                es un lenguaje que nos permite escribir CSS de manera más
+                eficiente de varias maneras, una de las cuales es permitiéndonos
+                utilizar variables, como se muestra en el siguiente ejemplo.
+              </li>
+              <li>
+                Cuando escribimos en Sass, creamos un nuevo archivo con la
+                extensión
+                <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+                  variables.scss
+                </span>
+                . En este archivo, podemos crear una nueva variable agregando un
+                signo de dólar ($) antes de un nombre, seguido de dos puntos y
+                luego un valor. Por ejemplo, escribiríamos
+                <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+                  $color: red;
+                </span>
+                para establecer la variable color en el valor rojo. Luego,
+                accedemos a esa variable usando
+                <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+                  $color
+                </span>
+                . Aquí tienes un ejemplo de nuestro archivo variables.scss:
+              </li>
+            </ul>
+            <Pre lang="css">{
+              /*css */ `
+              $color: red;
+
+              ul {
+                  font-size: 14px;
+                  color: $color;
+              }
+              
+              ol {
+                  font-size: 18px;
+                  color: $color;
+              }
+              `
+            }</Pre>
+            <ul>
+              <li>
+                Para vincular este estilo a nuestro archivo HTML, no podemos
+                simplemente enlazar el archivo
+                <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+                  .scss
+                </span>
+                , ya que la mayoría de los navegadores web solo reconocen
+                archivos
+                <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+                  .css
+                </span>
+                . Para resolver este problema, debemos
+                <Link
+                  href="https://sass-lang.com/install"
+                  className="text-amber-400 mx-1"
+                >
+                  descargar un programa llamado Sass
+                </Link>
+                en nuestras computadoras. Luego, en la terminal, escribimos
+                <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+                  sass variables.scss:variables.css
+                </span>
+                . Este comando compilará un archivo
+                <b className="text-amber-400 mx-1">".scss"</b> llamado
+                variables.scss en un archivo
+                <b className="text-amber-400 mx-1">".css"</b> llamado
+                <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+                  variables.css
+                </span>
+                , al cual puedes agregar un enlace en tu página HTML.
+              </li>
+              <li>
+                Mientras usamos Sass, también podemos anidar físicamente nuestro
+                estilo en lugar de usar los selectores CSS de los que hablamos
+                anteriormente. Por ejemplo, si deseamos aplicar un estilo solo a
+                los párrafos y listas desordenadas dentro de un div, podemos
+                escribir lo siguiente:
+              </li>
+            </ul>
+            <Pre lang="css">{
+              /*css */ `
+              div {
+                font-size: 18px;
+            
+                p {
+                    color: blue;
+                }
+            
+                ul {
+                    color: green;
+                }
+            
+              `
+            }</Pre>
+            <p>
+              Una vez compilado en CSS, obtendríamos un archivo que se vería
+              así:
+            </p>
+            <Pre lang="css">{
+              /*css */ `
+              div {
+                font-size: 18px;
+            }
+            
+            div p {
+                color: blue;
+            }
+            
+            div ul {
+                color: green;
+            }
+              `
+            }</Pre>
+            <li>
+              Otra característica que Sass nos brinda se conoce como
+              <Link
+                href="https://sass-lang.com/guide"
+                className="mx-1 text-amber-400"
+              >
+                herencia
+              </Link>
+              . Esto nos permite crear un conjunto básico de estilos que pueden
+              ser compartidos por varios elementos diferentes. Lo hacemos
+              agregando un <b className="text-amber-400 mx-1">'%'</b> antes del
+              nombre de una clase, agregando algunos estilos y luego, más
+              adelante, agregando la línea
+              <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+                `@extend %nombre-de-clase`
+              </span>
+              al principio de algunos estilos. Por ejemplo, el siguiente código
+              aplica los estilos dentro de la clase{' '}
+              <b className="text-amber-400 mx-1">"message"</b> a cada una de las
+              clases diferentes a continuación, lo que resulta en una página web
+              que se ve de la siguiente manera:
+            </li>
+            <Pre lang="css">{
+              /*css */ `
+              %message {
+                font-family: sans-serif;
+                font-size: 18px;
+                font-weight: bold;
+                border: 1px solid black;
+                padding: 20px;
+                margin: 20px;
+            }
+            
+            .success {
+                @extend %message;
+                background-color: green;
+            }
+            
+            .warning {
+                @extend %message;
+                background-color: orange;
+            }
+            
+            .error {
+                @extend %message;
+                background-color: red;
+            }
+              `
+            }</Pre>
+            <div className="images-client">
+              <img src="https://cs50.harvard.edu/web/2020/notes/0/images/inherit.png" />
+            </div>
+            <h4 className="text-slate-100">
+              ¡Eso concluye nuestro contenido por hoy! ツ
+            </h4>
           </div>
         </div>
       </TitlesContextProvider>
