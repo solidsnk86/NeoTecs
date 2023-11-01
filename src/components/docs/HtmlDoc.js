@@ -123,7 +123,7 @@ export const HtmlDoc = () => {
                   <!-- Las etiquetas strong e i nos proporcionan negritas e itálicas respectivamente. -->
                   Una palabra <strong>en negrita</strong> y una palabra <i>en cursiva</i>!
           
-                  <!-- Podemos enlazar a otra página (como la página de CS50) usando la etiqueta a. -->
+                  <!-- Podemos enlazar a otra página (como la página de NeoTecs) usando la etiqueta a. -->
                   Visita el <a href="https://neotecs.netlify.app/">Sitio web de NeoTecs</a>!
           
                   <!-- Usamos ul para una lista desordenada y ol para una ordenada. Ambas listas contienen li,
@@ -229,6 +229,28 @@ export const HtmlDoc = () => {
         `
       }</Pre>
       <img src="/images/form.png" />
+      <ul>
+        <li>
+          Te dejo un cheat-sheet de etiqueteas <em>HTML</em> para una mejor
+          legibilidad semántica.
+        </li>
+      </ul>
+      <Pre lang="html">{
+        /*html */ `
+        <!-- CHEAT SHEET HTML -->
+
+        <html>...</html> <!-- El elemento raíz (root). Indica que una página web está escrita en HTML5. -->
+
+        <head>...</head> <!-- Esta etiqueta para contener información del documento. -->
+
+        <title>...</title> <!-- Para colocar el título de la página. -->
+
+        <body>...</body> <!-- Contiene todo el contenido que se muestra en la UI (Interfaz de Usuario). -->
+
+        <!-- Los comentarios se envuelven en ésta etiqueta -->
+
+        `
+      }</Pre>
     </main>
   );
 };
