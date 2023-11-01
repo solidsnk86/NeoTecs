@@ -247,10 +247,95 @@ export const HtmlDoc = () => {
 
         <body>...</body> <!-- Contiene todo el contenido que se muestra en la UI (Interfaz de Usuario). -->
 
-        <!-- Los comentarios se envuelven en ésta etiqueta -->
+        <!-- Los comentarios se envuelven en ésta etiqueta. -->
+
+        <!-- ESTRUCTURA DE LA PAGINA -->
+
+        <h1>...</h1> => <h6>...</h6> <!-- Desde el encabezado de página más importante hasta el menor que es 6. -->
+
+        <p>...</p> <!-- Define un párrafo. -->
+
+        <section>...</section> <!-- Crea una sección para contener elementos. -->
+
+        <div>...</div> <!-- Crea un contenedor de elementos. -->
+
+        <span>...</span> <!-- Crea un contenedor alineado (inline-block) -->
+
+        <br/> <!-- Crea un quiebre de línea simple -->
+
+        <hr/> <!-- Crea una regla o línea horizontal visible, usada para dividir o separar contenidos. -->
+
+        <!-- METADATA -->
+
+        <meta /> <!-- Contiene metadata acerca del documento. -->
+
+        <link/> <!-- Define la relación entre el documento actual y un recurso externo -->
+
+        <style>..</style> <!-- Define la información de estilos del documento. -->
+
+        <script>...</script> <!-- Embeber o incorporar algún script del lado del cliente. -->
+
+        <!-- TEXTO -->
+
+        <strong>...</strong> <!-- Define un texto importante, y muestra en negrita (bold). -->
+
+        <b>...</b  <!-- Crea texto en negrita (bold). -->
+
+        <em>...</em> <!-- Define el texto con enfatizado. -->
+
+        <i>...</i> <!-- Texto en "italics" / También se pueden definir íconos dentro de ésta etiqueta. -->
+
+        <strike>...</strike> <!-- Muestra un texto tachado. -->
+
+        <!-- IMAGENES Y VIDEOS -->
+
+        <img /> <!-- Embebe una imágen al documento -->
+
+        <video /> <!-- Ebebe videos. -->
+
+        <map>...</map> <!-- Crea un mapa de imágenes con áreas para hacer clicks. -->
+
+        <area /> <!-- Especificar un áerea dentro del mapa de imágenes. -->
+
+        <!-- LISTAS & TABLAS -->
+
+        <ul>...</ul> <!-- Lista desordenada. -->
+
+        <ol>...</ol> <!-- Lista ordenada numerada. -->
+
+        <li>...</li> <!-- Crea una lista de ítems dentro de sus padres <ol> o <ul>. -->
+
+        <table>...</table> <!-- Un contenedor para un formulario o tabla. -->
+
+        <caption>...</caption> <!-- Crea una descripción de texto para la tabla. -->
+
+        <thead>...</thead> <!-- Agrega los encabezados de la tabla. -->
+
+        <tbody>...</tbody> <!-- Contenido principal del cuerpo de la tabla. -->
+
+        <tr>...</tr> <!-- Crea una fila para contener datos. -->
+
+        <th>...<th> <!-- Crean un simple ítem de encabezado. -->
+
+        <td>...</td> <!-- Crea una celda simple para la tabla. -->
+
+        <!-- FORMULARIOS -->
+
+        <forms>...</forms> <!-- Crea una sección dónde se atribuyen como debe operar un formulario. -->
+
+        <fieldset>...</fieldset> <!-- Define un número de campos del formulario -->
+
+        <label>...</label> <!-- Crea una etiqueta de un campo con entrada(input). -->
+
+        <input /> <!-- Crea un campo para entrada de datos. -->
+
+        <legend>...</legend> <!-- Se utiliza en conjunto con <fieldset> para descripción o título de un grupo de elementos. -->
 
         `
       }</Pre>
+      <h4 className="text-slate-100">
+        ¡Eso concluye nuestro contenido por aquí! ツ
+      </h4>
     </main>
   );
 };
