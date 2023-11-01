@@ -20,7 +20,7 @@ const reviews = [
     },
     {
         name: 'Html5',
-        link: 'https://mikrotik.com/',
+        link: 'https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started',
         logo: (
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ const reviews = [
     },
     {
         name: 'Sass',
-        link: 'https://www.tp-link.com/ar/',
+        link: 'https://sass-lang.com/documentation/',
         logo: (
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ const reviews = [
     },
     {
         name: 'Postgree SQL',
-        link: 'https://www.tp-link.com/ar/',
+        link: 'https://sqlbolt.com/',
         logo: (
             <svg
                 role='img'
@@ -79,7 +79,7 @@ const reviews = [
                     <stop offset="1" stop-color="#ffffff" />
                 </linearGradient>
                 <path d="M162.898 196.167H373.59l-4.157 41.122H167.98l-5.082-41.122z" fill="url(#d)" />
-                <path d="M269.168 196.167h-106.27l5.082 41.122h101.188v-41.122z" opacity=".05" />
+                <path d="M269.168 196.167h-106.27l5.082 41.122h101.188v-41.122z" opacity=".05" fill='#fff' />
             </svg>
         ),
     },
@@ -120,7 +120,7 @@ const ReviewCard = ({
             rel="noopener noreferrer"
             className="relative min-w-[250px] flex justify-center items-center overflow-hidden rounded-xl bg-slate-800/50 w-full py-4 px-14 transitio"
         >
-            <div className="flex flex-row items-center justify-center w-full h-auto gap-2">
+            <div className="flex flex-row items-center justify-center w-full h-auto">
                 {logo}
             </div>
         </a>
@@ -133,7 +133,7 @@ export const MarqueeLogos = () => {
             <h2 className="text-6xl font-bold text-center text-white my-3">
                 Lenguajes que vas aprender a continuación
             </h2>
-            <div className="relative flex-col items-center justify-center w-full h-full gap-4 py-20 my-5 overflow-hidden rounded-lg bg-background">
+            <div className="relative flex-col items-center justify-center w-full h-full gap-2 py-20 my-5 overflow-hidden rounded-lg bg-background">
                 <Marquee pauseOnHover className="[--duration:40s]">
                     {reviews.map((review) => (
                         <ReviewCard key={review.name} {...review} />

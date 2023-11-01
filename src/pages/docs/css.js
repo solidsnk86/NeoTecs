@@ -4,6 +4,7 @@ import { NavSwitch } from '../../components/docs/NavSwicth';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
+import Link from 'next/link';
 
 export default function CssDoc() {
   const CssTitle = ({ Tag = 'h1', children }) => {
@@ -545,6 +546,12 @@ export default function CssDoc() {
               <html>
               `
             }</Pre>
+            <div className="images-client">
+              <img
+                src="https://cs50.harvard.edu/web/2020/notes/0/images/buttons.gif"
+                alt="gif-1"
+              />
+            </div>
             <SectionTitle title="Diseño Responsivo" />
             <ul>
               <li>
@@ -615,6 +622,128 @@ export default function CssDoc() {
                   </head>
                   <body>
                       <h1>Bienvenidos a la página!</h1>
+                  </body>
+              </html>
+              `
+            }</Pre>
+            <div className="images-client">
+              <img
+                src="https://cs50.harvard.edu/web/2020/notes/0/images/responsive0.gif"
+                alt="gif"
+              />
+            </div>
+            <li>
+              Otra forma de manejar diferentes tamaños de pantalla es utilizando
+              un nuevo atributo CSS conocido como{' '}
+              <Link
+                href="https://www.w3schools.com/css/css3_flexbox.asp"
+                className="text-amber-400"
+              >
+                flexbox
+              </Link>
+              . Esto nos permite que los elementos se ajusten fácilmente a la
+              siguiente línea si no caben horizontalmente. Para lograrlo,
+              colocamos todos nuestros elementos en un contenedor que llamaremos
+              "nuestro contenedor". Luego, añadimos estilo a ese div
+              especificando que queremos utilizar un diseño de flexbox para los
+              elementos dentro de él. También hemos agregado estilo adicional a
+              los div internos para ilustrar mejor el ajuste que está ocurriendo
+              aquí.
+            </li>
+            <Pre lang="html">{
+              /*html */ `
+              <!DOCTYPE html>
+              <html lang="en">
+                  <head>
+                      <title>Screen Size</title>
+                      <style>
+                          #container {
+                              display: flex;
+                              flex-wrap: wrap;
+                          }
+              
+                          #container > div {
+                              background-color: green;
+                              font-size: 20px;
+                              margin: 20px;
+                              padding: 20px;
+                              width: 200px;
+                          }
+                      </style>
+                  </head>
+                  <body>
+                      <div id="container">
+                          <div>Some text 1!</div>
+                          <div>Some text 2!</div>
+                          <div>Some text 3!</div>
+                          <div>Some text 4!</div>
+                          <div>Some text 5!</div>
+                          <div>Some text 6!</div>
+                          <div>Some text 7!</div>
+                          <div>Some text 8!</div>
+                          <div>Some text 9!</div>
+                          <div>Some text 10!</div>
+                          <div>Some text 11!</div>
+                          <div>Some text 12!</div>
+                      </div>
+                  </body>
+              </html>
+              `
+            }</Pre>
+            <div className="images-client">
+              <img
+                src="https://cs50.harvard.edu/web/2020/notes/0/images/flexbox.gif"
+                alt="gif-3"
+              />
+            </div>
+            <li>
+              Otra forma popular de estilizar una página es utilizando una
+              cuadrícula HTML. En esta cuadrícula, podemos especificar atributos
+              de estilo como anchos de columna y espacios entre columnas y
+              filas, como se muestra a continuación. Ten en cuenta que cuando
+              especificamos anchos de columna, decimos que el tercero es "auto",
+              lo que significa que debería ocupar el resto de la página.
+            </li>
+            <Pre lang="html">{
+              /*html */ `
+              <!DOCTYPE html>
+              <html lang="en">
+                  <head>
+                      <title>My Web Page!</title>
+                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                      <style>
+                          .grid {
+                              background-color: green;
+                              display: grid;
+                              padding: 20px;
+                              grid-column-gap: 20px;
+                              grid-row-gap: 10px;
+                              grid-template-columns: 200px 200px auto;
+                          }
+              
+                          .grid-item {
+                              background-color: white;
+                              font-size: 20px;
+                              padding: 20px;
+                              text-align: center;
+                          }
+                      </style>
+                  </head>
+                  <body>
+                      <div class="grid">
+                          <div class="grid-item">1</div>
+                          <div class="grid-item">2</div>
+                          <div class="grid-item">3</div>
+                          <div class="grid-item">4</div>
+                          <div class="grid-item">5</div>
+                          <div class="grid-item">6</div>
+                          <div class="grid-item">7</div>
+                          <div class="grid-item">8</div>
+                          <div class="grid-item">9</div>
+                          <div class="grid-item">10</div>
+                          <div class="grid-item">11</div>
+                          <div class="grid-item">12</div>
+                      </div>
                   </body>
               </html>
               `

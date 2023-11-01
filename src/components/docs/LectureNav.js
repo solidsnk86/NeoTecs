@@ -17,9 +17,9 @@ export function LectureNav() {
       <Link href="/" title="Volver al inicio">
         <ArrowLeftIcon className="text-white cursor-pointer hover:animate-pulse hover:translate-x-[-2px] transition-all" />
       </Link>
-      <div className="sticky top-4 overflow-y-auto overflow-hidden">
+      <div className="sticky top-4">
         <NavSwitch />
-        <ul className="text-sm">
+        <ul className="text-sm overflow-y-auto">
           {titles.map((title) => (
             <li key={title.slug}>
               <a
