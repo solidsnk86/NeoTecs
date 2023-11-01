@@ -598,7 +598,7 @@ export default function CssDoc() {
               <!DOCTYPE html>
               <html lang="en">
                   <head>
-                      <title>Screen Size</title>
+                      <title>Tamaño de pantalla</title>
                       <style>
                           @media (min-width: 600px) {
                               body {
@@ -614,7 +614,7 @@ export default function CssDoc() {
                       </style>
                   </head>
                   <body>
-                      <h1>Welcome to the page!</h1>
+                      <h1>Bienvenidos a la página!</h1>
                   </body>
               </html>
               `
