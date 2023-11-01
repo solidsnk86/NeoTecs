@@ -38,7 +38,7 @@ export const Pre = ({ children, lang = '' }) => {
     <>
       <ToastContainer />
       <Highlight
-        theme={themes.synthwave84}
+        theme={themes.vsDark}
         code={removeIndent(children)}
         language={lang}
       >
