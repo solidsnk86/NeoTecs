@@ -435,6 +435,150 @@ export default function JavaScript() {
                 }
                 `
               }</Pre>
+              <div className="images-client">
+                <img
+                  src="https://cs50.harvard.edu/web/2020/notes/5/images/count3.gif"
+                  alt="javascript-query"
+                />
+              </div>
+              <p>
+                Ahora, veamos algunas formas en las que podemos mejorar el
+                diseño de esta página. En primer lugar, al igual que tratamos de
+                evitar el estilo en línea con CSS, queremos evitar el uso de
+                JavaScript en línea tanto como sea posible. Podemos hacerlo en
+                nuestro ejemplo de contador agregando una línea de script que
+                cambia el atributo
+                <span className="text-[#95D1F1] mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
+                  onclick
+                </span>
+                de un botón en la página y eliminando el atributo
+                <span className="text-[#95D1F1] mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
+                  onclick
+                </span>
+                del interior de la etiqueta del
+                <span className="text-[#95D1F1] mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
+                  botón
+                </span>
+                .
+              </p>
+              <Pre lang="javascript">{
+                /*javascript */ `
+                <!DOCTYPE html>
+                <html>
+                  <head>
+                    <title>Contador en JavaScript</title>
+                    <script>
+                      // Variable para almacenar el contador
+                      let counterValue = 0;
+                
+                      // Función para incrementar el contador y mostrar una alerta si es múltiplo de 10
+                      function incrementCounter() {
+                        counterValue++;
+                        document.querySelector('h1').innerHTML = counterValue;
+                
+                        if (counterValue % 10 === 0) {
+                          alert('Count is now ' + counterValue);
+                        }
+                      }
+                
+                      // Función para cambiar el evento onclick del botón
+                      function setupCounterButton() {
+                        const button = document.querySelector('#counterButton');
+                        button.onclick = incrementCounter;
+                      }
+                    </script>
+                  </head>
+                  <body>
+                    <h1>Contador</h1>
+                    <p id="counter">0</p>
+                    <button id="counterButton">Incrementar</button>
+                
+                    <script>
+                      // Llamamos a la función para configurar el botón una vez que se haya cargado el DOM
+                      window.onload = setupCounterButton;
+                    </script>
+                  </body>
+                </html>
+                
+                `
+              }</Pre>
+              <p>
+                Una cosa importante a tener en cuenta acerca de lo que acabamos
+                de hacer es que no estamos llamando a la función "count"
+                añadiendo paréntesis después, sino que simplemente estamos
+                nombrando la función. Esto especifica que solo deseamos llamar a
+                esta función cuando se haga clic en el botón. Esto funciona
+                porque, al igual que en Python, JavaScript admite la
+                programación funcional, por lo que las funciones pueden tratarse
+                como valores por sí mismas.
+              </p>
+              <p>
+                Sin embargo, el cambio anterior por sí solo no es suficiente,
+                como podemos ver al inspeccionar la página y observar la consola
+                de nuestro navegador.
+              </p>
+              <Pre lang="javascript">{
+                /*javascript */ `
+                document.querySelector('button').onclick = count;
+                `
+              }</Pre>
+              <div className="images-client">
+                <img
+                  src="https://cs50.harvard.edu/web/2020/notes/5/images/error0.png"
+                  alt="javascript-query"
+                />
+              </div>
+              <p>
+                Este error surgió porque cuando JavaScript buscó un elemento
+                utilizando document.querySelector('button'), no encontró nada.
+                Esto se debe a que toma un pequeño tiempo para que la página se
+                cargue y nuestro código JavaScript se ejecutó antes de que el
+                botón se renderizara. Para tener en cuenta esto, podemos
+                especificar que el código se ejecutará solo después de que la
+                página se haya cargado utilizando la función addEventListener.
+                Esta función toma dos argumentos:
+              </p>
+              <ol>
+                <li>
+                  El evento al que escuchar (por ejemplo,
+                  <b className="text-amber-400 mx-1">"click"</b>).
+                </li>
+                <li>
+                  Una función que se ejecutará cuando se detecte el evento (por
+                  ejemplo, la función
+                  <b className="text-amber-400 mx-1">"hello"</b> de arriba).
+                </li>
+              </ol>
+              <p>
+                Podemos utilizar esta función para ejecutar el código solo una
+                vez que todo el contenido se haya cargado:
+              </p>
+              <Pre lang="javascript">{
+                /*javascript */ `
+                // Esperar a que la página se cargue por completo antes de ejecutar el código
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Otro código acá
+                });
+                // Otro ejemplo
+
+                window.addEventListener('load', function() {
+                  // El código que deseamos ejecutar después de que la página se ha cargado
+                  // Puede incluir configuraciones, interacciones con elementos, etc.
+                });
+                `
+              }</Pre>
+              <p>
+                En el ejemplo anterior, hemos utilizado una función
+                <Link
+                  href="https://www.w3schools.com/js/js_function_definition.asp"
+                  className="text-amber-600 mx-1"
+                >
+                  anónima
+                </Link>
+                , que es una función a la que nunca se le da un nombre.
+                Reuniendo todo esto, nuestro código JavaScript ahora se ve de la
+                siguiente manera:
+              </p>
             </article>
             <SectionTitle title="Intérvalos" />
             <SectionTitle title="Almacenamieno local" />
