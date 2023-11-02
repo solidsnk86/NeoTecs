@@ -15,7 +15,7 @@ export default function CssDoc() {
   return (
     <main className="text-slate-100">
       <TitlesContextProvider>
-        <Nav className="backdrop-blur-md bg-transparent fixed w-full h-12 z-10" />
+        <Nav className="backdrop-blur-md bg-transparent fixed w-full h-12 z-30" />
         <div className="max-w-screen-xl mx-auto flex items-stretch py-16">
           <LectureNav />
           <div className="w-full max-w-none prose px-4 md:px-8 text-slate-100">
