@@ -25,7 +25,10 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:title" content={title} />
         <meta name="description" content={description} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="/images/logo.png" />
+        <meta
+          property="og:image"
+          content="/images/NeoTecs _Tutorial_logo.png"
+        />
         <meta property="og:site_name" content="Neotecs" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@CalcagniGabriel" />

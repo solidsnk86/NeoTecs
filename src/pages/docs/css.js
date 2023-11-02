@@ -1102,6 +1102,7 @@ export default function CssDoc() {
             <h4 className="text-slate-100">
               ¡Eso concluye nuestro contenido por hoy! ツ
             </h4>
+            <ShareButton />
           </div>
         </div>
         <Footer />

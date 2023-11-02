@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
+import { ShareButton } from '../ShareButton';
 
 export const HtmlDoc = () => {
   return (
@@ -91,6 +92,7 @@ export const HtmlDoc = () => {
         estructura similar a un árbol. Arriba tienes un ejemplo del diseño del
         DOM para la página que acabamos de escribir.
       </li>
+      <ShareButton />
       <SectionTitle title="Más Elementos HTML" />
       <ul>
         <li>
@@ -243,7 +245,10 @@ export const HtmlDoc = () => {
       <img src="/images/form.png" />
       <SectionTitle title="Cheat Sheet HTML" />
       <ul>
-        <li>Mejora la legibilidad semántica con este Cheat-Sheet de HTML</li>
+        <li>
+          Mejora la legibilidad semántica recordando las etiquetas con este
+          Cheat-Sheet de HTML
+        </li>
       </ul>
       <Pre lang="html">{
         /*html */ `
@@ -269,9 +274,9 @@ export const HtmlDoc = () => {
 
         <div>...</div> <!-- Crea un contenedor de elementos. -->
 
-        <span>...</span> <!-- Crea un contenedor alineado (inline-block) -->
+        <span>...</span> <!-- Crea un contenedor alineado (inline-block). -->
 
-        <br/> <!-- Crea un quiebre de línea simple -->
+        <br/> <!-- Crea un espacio en blanco. -->
 
         <hr/> <!-- Crea una regla o línea horizontal visible, usada para dividir o separar contenidos. -->
 
@@ -347,6 +352,7 @@ export const HtmlDoc = () => {
       <h4 className="text-slate-100">
         ¡Eso concluye nuestro contenido por aquí! ツ
       </h4>
+      <ShareButton />
     </main>
   );
 };
