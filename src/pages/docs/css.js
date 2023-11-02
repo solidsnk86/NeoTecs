@@ -5,6 +5,7 @@ import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import Link from 'next/link';
+import { Footer } from '../../components/Footer';
 
 export default function CssDoc() {
   const CssTitle = ({ Tag = 'h1', children }) => {
@@ -1101,6 +1102,7 @@ export default function CssDoc() {
             </h4>
           </div>
         </div>
+        <Footer />
       </TitlesContextProvider>
     </main>
   );
