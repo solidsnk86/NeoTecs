@@ -40,7 +40,7 @@ export const Pre = ({ children, lang = '' }) => {
 
       <Copy
         onClick={handleCopyClick}
-        className=" w-5 h-5 inline-flex my-auto absolute z-10 right-2 mt-5 cursor-pointer rounded hover:text-white transition-all"
+        className=" w-5 h-5 inline-flex my-auto absolute z-10 right-2 mt-4 cursor-pointer rounded hover:text-white transition-all"
       />
       <Highlight
         theme={themes.vsDark}
