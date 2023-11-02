@@ -241,11 +241,9 @@ export const HtmlDoc = () => {
         `
       }</Pre>
       <img src="/images/form.png" />
+      <SectionTitle title="Cheat Sheet HTML" />
       <ul>
-        <li>
-          Te dejo un cheat-sheet de etiqueteas <em>HTML</em> para una mejor
-          legibilidad semántica.
-        </li>
+        <li>Mejora la legibilidad semántica con este Cheat-Sheet de HTML</li>
       </ul>
       <Pre lang="html">{
         /*html */ `
@@ -283,7 +281,7 @@ export const HtmlDoc = () => {
 
         <link/> <!-- Define la relación entre el documento actual y un recurso externo -->
 
-        <style>..</style> <!-- Define la información de estilos del documento. -->
+        <style>...</style> <!-- Define la información de estilos del documento. -->
 
         <script>...</script> <!-- Embeber o incorporar algún script del lado del cliente. -->
 

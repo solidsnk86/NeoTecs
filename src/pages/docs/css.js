@@ -6,6 +6,7 @@ import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import Link from 'next/link';
 import { Footer } from '../../components/Footer';
+import { ShareButton } from '../../components/ShareButton';
 
 export default function CssDoc() {
   const CssTitle = ({ Tag = 'h1', children }) => {
@@ -553,6 +554,7 @@ export default function CssDoc() {
                 alt="gif-1"
               />
             </div>
+            <ShareButton />
             <SectionTitle title="Diseño Responsivo" />
             <ul>
               <li>
