@@ -45,7 +45,7 @@ export const NavSwitch = ({ inline }) => {
   const isActive = (link) => link.href === router.asPath;
   return (
     <div
-      className={`inline-block mb-4 border border-slate-400 border-opacity-20 rounded overflow-hidden mt-16 w-100% xl:h-60 xl:overflow-y-auto scroll-style ${
+      className={`inline-block mb-4 border border-slate-400 border-opacity-20 overflow-hidden mt-16 w-100% xl:h-60 xl:overflow-y-auto scroll-style ${
         inline
           ? 'mb-8 lg:hidden w-100% flex overflow-x-scroll border-none text-xs gap-1 z-20 nav-switch'
           : ''
