@@ -742,8 +742,15 @@ export default function JavaScript() {
                 </li>
                 <li>
                   Utilizamos #name dentro de document.querySelector para
-                  encontrar un elemento con un identificador (id) de "name".
-                  Podemos utilizar los mismos selectores en esta función que
+                  encontrar un elemento con un identificador
+                  <span className="text-amber-400 mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
+                    (id)
+                  </span>
+                  de
+                  <span className="text-amber-400 mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
+                    "name"
+                  </span>
+                  . Podemos utilizar los mismos selectores en esta función que
                   podríamos usar en CSS.
                 </li>
                 <li>
