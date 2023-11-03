@@ -28,6 +28,7 @@ export const Pre = ({ children, lang = '' }) => {
     } catch (err) {
       toast.error('Error al intentar copiar al portapapeles', {
         position: toast.POSITION.BOTTOM_LEFT,
+        theme: 'dark',
       });
     }
 
@@ -40,7 +41,7 @@ export const Pre = ({ children, lang = '' }) => {
 
       <Copy
         onClick={handleCopyClick}
-        className=" w-5 h-5 inline-flex my-auto absolute z-10 right-2 mt-4 cursor-pointer rounded hover:text-white transition-all"
+        className=" w-5 h-5 inline-flex my-auto absolute z-10 right-2 mt-3 cursor-pointer rounded hover:text-white transition-all"
       />
       <Highlight
         theme={themes.vsDark}

@@ -7,6 +7,7 @@ import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
+import { OpenInNew } from '@mui/icons-material';
 
 export default function JavaScript() {
   const JavascriptTitle = ({ Tag = 'h1', children }) => {
@@ -143,6 +144,7 @@ export default function JavaScript() {
                   className="mx-1 text-amber-600"
                 >
                   Programación Orientada a Eventos
+                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 .
               </p>
@@ -162,6 +164,7 @@ export default function JavaScript() {
                   className="mx-1 text-amber-600"
                 >
                   Escuchadores de Eventos
+                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 que esperan a que ocurran ciertos eventos y luego ejecutan algún
                 código.
@@ -174,6 +177,7 @@ export default function JavaScript() {
                   className="mx-1 text-amber-600"
                 >
                   función
+                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 llamada "hola":
               </p>
@@ -314,6 +318,7 @@ export default function JavaScript() {
                   className="text-amber-600 mx-1"
                 >
                   condiciones
+                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 en JavaScript. Por ejemplo, supongamos que en lugar de cambiar
                 siempre nuestro encabezado a "Goodbye!", queremos alternar entre
@@ -363,10 +368,7 @@ export default function JavaScript() {
                 `
               }</Pre>
               <div className="images-client">
-                <img
-                  src="https://cs50.harvard.edu/web/2020/notes/5/images/toggle.gif"
-                  alt="javascript-query"
-                />
+                <img src="/images/toggle.gif" alt="javascript-query" />
               </div>
             </article>
             <SectionTitle title="Manipuación del DOM" />
@@ -397,10 +399,7 @@ export default function JavaScript() {
                 `
               }</Pre>
               <div className="images-client">
-                <img
-                  src="https://cs50.harvard.edu/web/2020/notes/5/images/count2.gif"
-                  alt="javascript-query"
-                />
+                <img src="/images/count2.gif" alt="javascript-query" />
               </div>
               <p>
                 Podemos hacer que esta página sea aún más interesante mostrando
@@ -436,10 +435,7 @@ export default function JavaScript() {
                 `
               }</Pre>
               <div className="images-client">
-                <img
-                  src="https://cs50.harvard.edu/web/2020/notes/5/images/count3.gif"
-                  alt="javascript-query"
-                />
+                <img src="/images/count3.gif" alt="javascript-query" />
               </div>
               <p>
                 Ahora, veamos algunas formas en las que podemos mejorar el
@@ -494,12 +490,11 @@ export default function JavaScript() {
                     <button id="counterButton">Incrementar</button>
                 
                     <script>
-                      // Llamamos a la función para configurar el botón una vez que se haya cargado el DOM
+                    // Llamamos a la función para configurar el botón una vez que se haya cargado el DOM
                       window.onload = setupCounterButton;
                     </script>
                   </body>
-                </html>
-                
+                </html>                
                 `
               }</Pre>
               <p>
@@ -523,10 +518,7 @@ export default function JavaScript() {
                 `
               }</Pre>
               <div className="images-client">
-                <img
-                  src="https://cs50.harvard.edu/web/2020/notes/5/images/error0.png"
-                  alt="javascript-query"
-                />
+                <img src="/images/error0.png" alt="javascript-query" />
               </div>
               <p>
                 Este error surgió porque cuando JavaScript buscó un elemento
@@ -574,6 +566,7 @@ export default function JavaScript() {
                   className="text-amber-600 mx-1"
                 >
                   anónima
+                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 , que es una función a la que nunca se le da un nombre.
                 Reuniendo todo esto, nuestro código JavaScript ahora se ve de la
@@ -668,6 +661,7 @@ export default function JavaScript() {
                 });
                 `
               }</Pre>
+              <ShareButton />
               <p>
                 Tener JavaScript en un archivo separado es útil por varias
                 razones:
@@ -686,8 +680,15 @@ export default function JavaScript() {
                 <li>
                   Importación: Tenemos la capacidad de importar bibliotecas de
                   JavaScript que otras personas ya han escrito. Por ejemplo,
-                  Bootstrap tiene su propia biblioteca de JavaScript que puedes
-                  incluir para hacer tu sitio más interactivo.
+                  <Link
+                    href="https://getbootstrap.com/docs/4.5/getting-started/introduction/#js"
+                    className="text-amber-400 mx-1"
+                  >
+                    Bootstrap
+                    <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                  </Link>
+                  tiene su propia biblioteca de JavaScript que puedes incluir
+                  para hacer tu sitio más interactivo.
                 </li>
               </ul>
               <p>
@@ -699,26 +700,26 @@ export default function JavaScript() {
               <Pre lang="html">
                 {
                   /*html */ `
-                <!DOCTYPE html>
-                <html lang="en">
-                <head>
-                    <title>Hola</title>
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function() {
-                            document.querySelector('form').onsubmit = function() {
-                                const name = document.querySelector('#name').value;
-                                alert(\`Hola, \${name}\`);
-                            };
-                        });
-                    </script>
-                </head>
-                <body>
-                    <form>
-                        <input autofocus id="name" placeholder="Name" type="text">
-                        <input type="submit">
-                    </form>
-                </body>
-                </html>
+                  <!DOCTYPE html>
+                  <html lang="en">
+                  <head>
+                      <title>Hola</title>
+                      <script>
+                          document.addEventListener('DOMContentLoaded', function() {
+                              document.querySelector('form').onsubmit = function() {
+                                  const name = document.querySelector('#name').value;
+                                  alert(\`Hola, \${name}\`);
+                              };
+                          });
+                      </script>
+                  </head>
+                  <body>
+                      <form>
+                          <input autofocus id="name" placeholder="Name" type="text">
+                          <input type="submit">
+                      </form>
+                  </body>
+                  </html>
                 `
                 }
               </Pre>
@@ -764,11 +765,573 @@ export default function JavaScript() {
                 página. En la página a continuación, utilizamos botones para
                 cambiar el color de nuestro encabezado.
               </p>
+              <Pre lang="javascript">{
+                /*javascript */ `
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                     <title>Colors</title>
+                     <script>
+                         document.addEventListener('DOMContentLoaded', function() {
+                            document.querySelectorAll('button').forEach(function(button) {
+                                button.onclick = function() {
+                                    document.querySelector("#hello").style.color = button.dataset.color;
+                                }
+                            });
+                         });
+                     </script>
+                </head>
+                <body>
+                    <h1 id="hello">Hello</h1>
+                    <button data-color="red">Red</button>
+                    <button data-color="blue">Blue</button>
+                    <button data-color="green">Green</button>
+                </body>
+                </html>
+                `
+              }</Pre>
+              <div className="images-client">
+                <img src="/videos/colors.gif" />
+              </div>
+              <p>Algunas notas en la página anterior:</p>
+              <ul>
+                <li>
+                  Cambiamos el estilo de un elemento utilizando el atributo
+                  <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                    style.ALGO
+                  </span>
+                  .
+                </li>
+                <li>
+                  Utilizamos el atributo
+                  <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                    data-ALGO
+                  </span>
+                  para asignar datos a un elemento HTML. Posteriormente, podemos
+                  acceder a esos datos en JavaScript utilizando la propiedad
+                  dataset del elemento.
+                </li>
+                <li>
+                  Usamos la función
+                  <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                    querySelectorAll
+                  </span>
+                  para obtener una lista de nodos (similar a una lista en Python
+                  o a un arreglo en JavaScript) con todos los elementos que
+                  coinciden con la consulta.
+                </li>
+                <li>
+                  La función
+                  <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                    forEach
+                  </span>
+                  en JavaScript toma como argumento otra función y aplica esa
+                  función a cada elemento en una lista o arreglo.
+                </li>
+              </ul>
+            </article>
+            <SectionTitle title="Consola Javascript" />
+            <article>
+              <p>
+                La consola es una herramienta útil para probar pequeños
+                fragmentos de código y depurar. Puedes escribir y ejecutar
+                código JavaScript en la consola, la cual se encuentra al
+                inspeccionar un elemento en tu navegador web y luego haciendo
+                clic en <b className="text-amber-400 mx-[2px]">"consola"</b> (el
+                proceso exacto puede variar según el navegador). Una herramienta
+                útil para la depuración es imprimir en la consola, lo cual
+                puedes hacer utilizando la función
+                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                  console.log
+                </span>
+                . Por ejemplo, en la página
+                <b className="text-amber-400 mx-1">"colors.html"</b>
+                mencionada arriba, puedo agregar la siguiente línea:
+              </p>
+              <Pre lang="javascript">{
+                /*javascript */ `
+                console.log(document.querySelectorAll('button'));
+                `
+              }</Pre>
+              <div className="images-client">
+                <img src="/images/consoleList.png" />
+              </div>
+              <Header>Funciones Flecha</Header>
+              <p>
+                Funciones de Flecha Además de la notación tradicional de
+                funciones que hemos visto anteriormente, JavaScript ahora nos
+                proporciona la capacidad de utilizar Funciones de Flecha, donde
+                tenemos una entrada (o paréntesis cuando no hay entrada) seguida
+                de
+                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                  {'=>'}
+                </span>
+                y luego algún código que se ejecutará. Por ejemplo, podemos
+                modificar nuestro script anterior para utilizar una función de
+                flecha anónima:
+              </p>
+              <Pre lang="javascript">{
+                /*javascript */ `
+                document.addEventListener('DOMContentLoaded', () => {
+                    document.querySelectorAll('button').forEach(button => {
+                        button.onclick = () => {
+                            document.querySelector("#hello").style.color = button.dataset.color;
+                        }
+                    });
+                });
+                `
+              }</Pre>
+              <p>
+                También podemos tener funciones con nombres que utilizan
+                flechas, como en esta reescritura de la función
+                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                  count
+                </span>
+                :
+              </p>
+              <Pre lang="javascript">{
+                /*javascript */ `
+                count = () => {
+                    counter++;
+                    document.querySelector('h1').innerHTML = counter;
+                    
+                    if (counter % 10 === 0) {
+                        alert(\`Count is now \${counter}\`)
+                    }
+                }
+                `
+              }</Pre>
+              <p>
+                Para obtener una idea sobre algunos otros eventos que podemos
+                utilizar, veamos cómo podemos implementar nuestro cambiador de
+                colores utilizando un menú desplegable en lugar de tres botones
+                separados. Podemos detectar cambios en un elemento select
+                utilizando el atributo
+                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                  onchange
+                </span>
+                . En JavaScript, esto es una palabra clave que cambia según el
+                contexto en el que se utiliza. En el caso de un manejador de
+                eventos,
+                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                  this
+                </span>
+                se refiere al objeto que desencadenó el evento.
+              </p>
+              <Pre lang="javascript">{
+                /*html  */ `
+                <!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <title>Colors</title>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                document.querySelector('select').onchange = function() {
+                                    document.querySelector('#hello').style.color = this.value;
+                                }
+                            });
+                        </script>
+                    </head>
+                    <body>
+                        <h1 id="hello">Hello</h1>
+                        <select>
+                            <option value="black">Black</option>
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                        </select>
+                
+                    </body>
+                </html>
+                `
+              }</Pre>
+              <div className="images-client">
+                <img src="/images/colors2.gif" />
+              </div>
+              <p>
+                Hay muchos otros eventos que podemos detectar en Javascript
+                incluyendo los más comunes, a continuación:
+              </p>
+              <ul>
+                <li>
+                  <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                    onclick
+                  </span>
+                </li>
+                <li>
+                  <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                    onmouseover
+                  </span>
+                </li>
+                <li>
+                  <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                    onkeydown
+                  </span>
+                </li>
+                <li>
+                  <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                    onkeyup
+                  </span>
+                </li>
+                <li>
+                  <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                    onload
+                  </span>
+                </li>
+                <li>
+                  <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                    onblur
+                  </span>
+                </li>
+                <li>
+                  <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                    ...
+                  </span>
+                </li>
+              </ul>
+            </article>
+            <Header>TODO List</Header>
+            <article>
+              <p>
+                Para aplicar algunas de las cosas que hemos aprendido en esta
+                conferencia, trabajemos en la creación de una lista de tareas
+                <b className="text-amber-400 mx-1">(TODO List)</b> completamente
+                en JavaScript. Comenzaremos escribiendo la estructura HTML de la
+                página. Observa a continuación cómo dejamos espacio para una
+                lista no ordenada, pero aún no agregamos elementos a ella.
+                También observa que agregamos un enlace a
+                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                  tasks.js
+                </span>
+                , donde escribiremos nuestro JavaScript.
+              </p>
+              <Pre lang="html">{
+                /*html */ `
+                <!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <title>Tasks</title>
+                        <script src="tasks.js"></script>
+                    </head>
+                    <body>
+                        <h1>Tasks</h1>
+                        <ul id="tasks"></ul>
+                        <form>
+                            <input id="task" placeholder = "New Task" type="text">
+                            <input id="submit" type="submit">
+                        </form>
+                    </body>
+                </html>
+                `
+              }</Pre>
+              <p>
+                Ahora, aquí está nuestro código que podemos mantener en
+                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                  tasks.js
+                </span>
+                . Algunas notas sobre lo que verás a continuación:
+              </p>
+              <ul>
+                <li>
+                  Este código es ligeramente diferente al código de la
+                  conferencia. Aquí, solo consultamos nuestro botón de envío y
+                  el campo de entrada de tareas una vez al principio y
+                  almacenamos esos dos valores en las variables submit y
+                  newTask.
+                </li>
+                <li>
+                  Podemos habilitar/deshabilitar un botón estableciendo su
+                  atributo disabled en{' '}
+                  <b className="text-amber-400 mx-1">false/true</b>.
+                </li>
+                <li>
+                  En JavaScript, usamos
+                  <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                    .length
+                  </span>
+                  para encontrar la longitud de objetos como cadenas y arreglos.
+                </li>
+                <li>
+                  Al final del script, agregamos la línea return false. Esto
+                  evita la presentación predeterminada del formulario, que
+                  implica recargar la página actual o redirigir a una nueva.
+                </li>
+                <li>
+                  En JavaScript, podemos crear elementos HTML utilizando la
+                  función
+                  <Link
+                    href="https://www.w3schools.com/jsref/met_document_createelement.asp"
+                    className="mx-1 text-amber-600"
+                  >
+                    createElement
+                    <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                  </Link>
+                  . Luego, podemos agregar esos elementos al DOM utilizando la
+                  función
+                  <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                    append
+                  </span>
+                  .
+                </li>
+              </ul>
+              <Pre lang="javascript">{
+                /*javascript */ `
+                // Selecciona el botón de envío y el campo de entrada para su uso posterior
+                const submit = document.querySelector('#submit');
+                const newTask = document.querySelector('#task');
+                
+                // Deshabilita el botón de envío de forma predeterminada:
+                submit.disabled = true;
+                
+                // Escucha la entrada en el campo de entrada
+                newTask.onkeyup = () => {
+                    if (newTask.value.length > 0) {
+                        submit.disabled = false;
+                    }
+                    else {
+                        submit.disabled = true;
+                    }
+                }
+                
+                // Escucha la presentación del formulario
+                document.querySelector('form').onsubmit = () => {
+                
+                    // Encuentra la tarea que el usuario acaba de enviar
+                    const task = newTask.value;
+                
+                    // Crea un elemento de lista para la nueva tarea y agrega la tarea a él
+                    const li = document.createElement('li');
+                    li.innerHTML = task;
+                
+                    // Agrega el nuevo elemento a nuestra lista desordenada:
+                    document.querySelector('#tasks').append(li);
+                
+                    // Limpia el campo de entrada:
+                    newTask.value = '';
+                
+                    // Vuelve a deshabilitar el botón de envío:
+                    submit.disabled = true;
+                
+                    // Evita que el formulario se envíe de forma predeterminada
+                    return false;
+                }
+                
+                `
+              }</Pre>
+              <div className="images-client">
+                <img src="/images/tasks.gif" />
+              </div>
             </article>
             <SectionTitle title="Intérvalos" />
-            <SectionTitle title="Almacenamieno local" />
+            <p>
+              Además de especificar que las funciones se ejecutan cuando se
+              desencadena un evento, también podemos programar funciones para
+              que se ejecuten después de un período de tiempo determinado. Por
+              ejemplo, volvamos al script de nuestra página de contador y
+              agreguemos un intervalo para que, incluso si el usuario no hace
+              clic en nada, el contador se incremente cada segundo. Para hacer
+              esto, utilizamos la función
+              <Link
+                href="https://www.w3schools.com/jsref/met_win_setinterval.asp"
+                className="mx-1 text-amber-600"
+              >
+                setIntervals
+                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+              </Link>
+              , que toma como argumento una función que se ejecutará y un
+              intervalo de tiempo (en milisegundos) entre las ejecuciones de la
+              función.
+            </p>
+            <Pre lang="javascript">{
+              /*javascript */ `
+                let counter = 0;
+            
+                function count() {
+                    counter++;
+                    document.querySelector('h1').innerHTML = counter;
+                }
+                
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.querySelector('button').onclick = count;
+                
+                    setInterval(count, 1000);
+                });
+                `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/count4.gif" />
+            </div>
+            <ShareButton />
+            <SectionTitle title="Almacenamiento Local" />
+            <article>
+              <p>
+                Una cosa a notar sobre todos nuestros sitios hasta ahora es que
+                cada vez que recargamos la página, toda nuestra información se
+                pierde. El color del encabezado vuelve a ser negro, el contador
+                vuelve a 0 y todas las tareas se borran. A veces esto es lo que
+                pretendemos, pero otras veces querremos poder almacenar
+                información que podamos utilizar cuando un usuario regrese al
+                sitio.
+              </p>
+              <p>
+                Una forma de hacerlo es utilizando el Almacenamiento Local
+                (Local Storage), es decir, almacenar información en el navegador
+                web del usuario que podamos acceder más tarde. Esta información
+                se almacena como un conjunto de pares clave-valor, casi como un
+                diccionario en Python. Para utilizar el almacenamiento local,
+                utilizaremos dos funciones clave:
+              </p>
+              <ul>
+                <li>
+                  <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                    localStorage.getItem(key)
+                  </span>
+                  : Esta función busca una entrada en el almacenamiento local
+                  con una clave dada y devuelve el valor asociado con esa clave.
+                </li>
+                <li>
+                  <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                    localStorage.setItem(key, value)
+                  </span>
+                  : Esta función establece una entrada en el almacenamiento
+                  local, asociando la clave con un nuevo valor.
+                </li>
+              </ul>
+              <p>
+                Veamos cómo podemos usar estas nuevas funciones para actualizar
+                nuestro contador. En el código a continuación,
+              </p>
+              <Pre lang="javascript">{
+                /*javascript */ `
+                // Verificar si ya existe un valor en el almacenamiento local
+                if (!localStorage.getItem('counter')) {
+                
+                    // Si no existe, establecer el contador en 0 en el almacenamiento local
+                    localStorage.setItem('counter', 0);
+                }
+                            
+                function count() {
+                    // Recuperar el valor del contador desde el almacenamiento local
+                    let counter = localStorage.getItem('counter');
+                
+                    // Actualizar el contador
+                    counter++;
+                    document.querySelector('h1').innerHTML = counter;
+                
+                    // Almacenar el contador en el almacenamiento local
+                    localStorage.setItem('counter', counter);
+                }
+                
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Establecer el encabezado con el valor actual en el almacenamiento local
+                    document.querySelector('h1').innerHTML = localStorage.getItem('counter');
+                    document.querySelector('button').onclick = count;
+                });
+                
+                `
+              }</Pre>
+            </article>
             <SectionTitle title="APIs" />
+            <hr />
             <SectionTitle title="Objetos en Javascript" />
+            <p>
+              Un objeto de JavaScript es muy similar a un diccionario en Python,
+              ya que nos permite almacenar pares clave-valor. Por ejemplo,
+              podría crear un objeto de JavaScript que represente a Harry
+              Potter:
+            </p>
+            <Pre lang="javascript">{
+              /*javascript */ `
+                const harryPotter = {
+                    name: "Harry Potter",
+                    age: 17,
+                    house: "Gryffindor",
+                    wand: "Holly and phoenix feather, 11 inches",
+                    friends: ["Hermione Granger", "Ron Weasley"],
+                    isWizard: true
+                };
+                `
+            }</Pre>
+            <p>
+              Puedo acceder o cambiar partes de este objeto utilizando tanto la
+              notación de corchetes como la notación de punto:
+            </p>
+            <Pre lang="javascript">{
+              /*javascript */ `
+              console.log(harryPotter.name); // Muestra "Harry Potter"
+              console.log(harryPotter.age); // Muestra 17
+              
+                `
+            }</Pre>
+            <p>Acceder a los valores utilizando la notación de corchetes:</p>
+            <Pre lang="javascript">{
+              /*javascript */ `
+              console.log(harryPotter['name']); // Muestra "Harry Potter"
+              console.log(harryPotter['age']); // Muestra 17              
+                `
+            }</Pre>
+            <p>
+              Una forma en la que los objetos de JavaScript son realmente útiles
+              es en la transferencia de datos de un sitio a otro, especialmente
+              al usar
+              <Link
+                href="https://www.mulesoft.com/resources/api/what-is-an-api"
+                className="text-amber-600 mx-1"
+              >
+                APIs
+                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+              </Link>
+              .
+            </p>
+            <p>
+              Una API, o Interfaz de Programación de Aplicaciones, es una forma
+              estructurada de comunicación entre dos aplicaciones diferentes.
+            </p>
+            <p>
+              Por ejemplo, es posible que deseemos que nuestra aplicación
+              obtenga información de Google Maps, Amazon o algún servicio
+              meteorológico. Podemos hacer esto realizando llamadas a la API de
+              un servicio, la cual nos devolverá datos estructurados, a menudo
+              en formato JSON{' '}
+              <b className="text-amber-400">(Notación de Objetos JavaScript)</b>
+              . Por ejemplo, un vuelo en formato
+              <Link
+                href="https://www.w3schools.com/js/js_json_intro.asp"
+                className="text-amber-600 mx-1"
+              >
+                JSON
+                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+              </Link>
+              podría verse así:
+            </p>
+            <Pre lang="javascript">{
+              /*json */ `
+                {
+                    "origin": "New York",
+                    "destination": "London",
+                    "duration": 415
+                }
+                `
+            }</Pre>
+            <p>
+              Los valores dentro de un JSON no tienen por qué ser solo cadenas y
+              números, como en el ejemplo anterior. También podemos almacenar
+              listas o incluso otros objetos de JavaScript:
+            </p>
+            <Pre lang="javascript">{
+              /*json */ `
+              {
+                "flightNumber": "A123",
+                "departureCity": "New York",
+                "arrivalCity": "Los Angeles",
+                "passengers": ["Alice", "Bob", "Charlie"],
+                "aircraft": {
+                  "model": "Boeing 747",
+                  "seats": 400
+                }
+              }
+                `
+            }</Pre>
           </div>
         </div>
         <Footer />

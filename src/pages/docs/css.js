@@ -640,9 +640,10 @@ export default function CssDoc() {
               un nuevo atributo CSS conocido como
               <Link
                 href="https://www.w3schools.com/css/css3_flexbox.asp"
-                className="text-amber-400 mx-1"
+                className="text-amber-600 mx-1"
               >
                 flexbox
+                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               . Esto nos permite que los elementos se ajusten fácilmente a la
               siguiente línea si no caben horizontalmente. Para lograrlo,
@@ -782,9 +783,10 @@ export default function CssDoc() {
                 de
                 <Link
                   href="https://getbootstrap.com/docs/4.5/components/"
-                  className="text-amber-400 mx-1"
+                  className="text-amber-600 mx-1"
                 >
                   Bootstrap
+                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 navegando a la sección de documentación de su sitio web. En esta
                 página, encontrarás numerosos ejemplos de clases que puedes
@@ -794,9 +796,10 @@ export default function CssDoc() {
                 Una característica popular de Bootstrap es su
                 <Link
                   href="https://getbootstrap.com/docs/4.0/layout/grid/"
-                  className="text-amber-400 mx-1"
+                  className="text-amber-600 mx-1"
                 >
                   sistema de cuadrícula
+                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 . Bootstrap divide automáticamente una página en 12 columnas, y
                 podemos decidir cuántas columnas ocupa un elemento agregando la
@@ -930,9 +933,10 @@ export default function CssDoc() {
               <li>
                 <Link
                   href="https://sass-lang.com/"
-                  className="text-amber-400 mx-1"
+                  className="text-amber-600 mx-1"
                 >
                   Sass
+                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 es un lenguaje que nos permite escribir CSS de manera más
                 eficiente de varias maneras, una de las cuales es permitiéndonos
@@ -988,9 +992,10 @@ export default function CssDoc() {
                 . Para resolver este problema, debemos
                 <Link
                   href="https://sass-lang.com/install"
-                  className="text-amber-400 mx-1"
+                  className="text-amber-600 mx-1"
                 >
                   descargar un programa llamado Sass
+                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 en nuestras computadoras. Luego, en la terminal, escribimos
                 <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
@@ -1051,9 +1056,10 @@ export default function CssDoc() {
               Otra característica que Sass nos brinda se conoce como
               <Link
                 href="https://sass-lang.com/guide"
-                className="mx-1 text-amber-400"
+                className="mx-1 text-amber-600"
               >
                 herencia
+                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               . Esto nos permite crear un conjunto básico de estilos que pueden
               ser compartidos por varios elementos diferentes. Lo hacemos

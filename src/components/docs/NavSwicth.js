@@ -14,10 +14,6 @@ export const NavSwitch = ({ inline }) => {
       title: 'Css',
     },
     {
-      href: '/docs/javascript',
-      title: 'Javascript',
-    },
-    {
       href: '/docs/python',
       title: 'Python',
     },
@@ -26,8 +22,12 @@ export const NavSwitch = ({ inline }) => {
       title: 'Django',
     },
     {
+      href: '/docs/javascript',
+      title: 'Javascript',
+    },
+    {
       href: '/docs/sql',
-      title: 'SQL, Modelos y Migraciones',
+      title: 'SQL Modelos y Migraciones',
     },
     {
       href: 'docs/ui',
@@ -62,7 +62,7 @@ export const NavSwitch = ({ inline }) => {
           }`}
           title={link.title}
         >
-          <h3 className="font-semibold text-slate-100 line-clamp-1 xl:line-clamp-none">
+          <h3 className="font-semibold text-slate-100 line-clamp-2 xl:line-clamp-none">
             {link.title}
           </h3>
         </Link>

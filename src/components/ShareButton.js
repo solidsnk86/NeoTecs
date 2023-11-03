@@ -13,13 +13,12 @@ export function ShareButton() {
   };
 
   return (
-    <section className="relative text-right space-x-4 text-lg">
+    <section
+      className="relative text-right space-x-4 text-lg cursor-pointer hover:opacity-[.6] transition-all"
+      onClick={shareButton}
+    >
       Compartir
-      <Share2Icon
-        className="inline-flex text-xl cursor-pointer hover:opacity-[.6] mx-1 transition-all"
-        title="Compartir"
-        onClick={shareButton}
-      />
+      <Share2Icon className="inline-flex text-xl mx-1" title="Compartir" />
     </section>
   );
 }
