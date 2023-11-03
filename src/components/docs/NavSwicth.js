@@ -27,15 +27,15 @@ export const NavSwitch = ({ inline }) => {
     },
     {
       href: '/docs/sql',
-      title: 'SQL Modelos y Migraciones',
+      title: 'SQL ',
     },
     {
       href: 'docs/ui',
-      title: 'Interfaz de Usuario',
+      title: 'UI/UX',
     },
     {
       href: '/docs/test',
-      title: 'Pruebas (Testing)CI/DI',
+      title: 'CI/DI',
     },
     {
       href: '',
@@ -62,7 +62,7 @@ export const NavSwitch = ({ inline }) => {
           }`}
           title={link.title}
         >
-          <h3 className="font-semibold text-slate-100 line-clamp-2 xl:line-clamp-none">
+          <h3 className="font-semibold text-slate-100 line-clamp-1 xl:line-clamp-none">
             {link.title}
           </h3>
         </Link>
