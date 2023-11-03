@@ -268,6 +268,9 @@ export default function Python() {
                 print("Hello, " + name)
                 `
             }</Pre>
+            <div className="images-client">
+              <img src="/images/python-terminal-1.png" />
+            </div>
           </div>
         </div>
         <Footer />

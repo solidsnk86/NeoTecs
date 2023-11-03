@@ -550,10 +550,7 @@ export default function CssDoc() {
               `
             }</Pre>
             <div className="images-client">
-              <img
-                src="https://cs50.harvard.edu/web/2020/notes/0/images/buttons.gif"
-                alt="gif-1"
-              />
+              <img src="/images/buttons.gif" alt="gif-1" />
             </div>
             <ShareButton />
             <SectionTitle title="Diseño Responsivo" />
@@ -631,10 +628,7 @@ export default function CssDoc() {
               `
             }</Pre>
             <div className="images-client">
-              <img
-                src="https://cs50.harvard.edu/web/2020/notes/0/images/responsive0.gif"
-                alt="gif"
-              />
+              <img src="/images/responsive0.gif" alt="gif" />
             </div>
             <li>
               Otra forma de manejar diferentes tamaños de pantalla es utilizando
@@ -696,10 +690,7 @@ export default function CssDoc() {
               `
             }</Pre>
             <div className="images-client">
-              <img
-                src="https://cs50.harvard.edu/web/2020/notes/0/images/flexbox.gif"
-                alt="gif-3"
-              />
+              <img src="/images/flexbox.gif" alt="gif-3" />
             </div>
             <li>
               Otra forma popular de estilizar una página es utilizando una
@@ -754,10 +745,7 @@ export default function CssDoc() {
               `
             }</Pre>
             <div className="images-client">
-              <img
-                src="https://cs50.harvard.edu/web/2020/notes/0/images/grid.gif"
-                alt="gif-3"
-              />
+              <img src="/images/grid.gif" alt="gif-3" />
             </div>
             <SectionTitle title="Bootstrap" />
             <ul>
@@ -1104,7 +1092,7 @@ export default function CssDoc() {
               `
             }</Pre>
             <div className="images-client">
-              <img src="https://cs50.harvard.edu/web/2020/notes/0/images/inherit.png" />
+              <img src="/images/inherit.png" />
             </div>
             <h4 className="text-slate-100">
               ¡Eso concluye nuestro contenido por hoy! ツ
