@@ -7,6 +7,7 @@ import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
+import { OpenInNew } from '@mui/icons-material';
 
 export default function CssDoc() {
   const CssTitle = ({ Tag = 'h1', children }) => {
