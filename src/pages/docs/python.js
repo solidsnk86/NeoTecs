@@ -270,6 +270,7 @@ export default function Python() {
             }</Pre>
           </div>
         </div>
+        <Footer />
       </TitlesContextProvider>
     </main>
   );
