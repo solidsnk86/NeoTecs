@@ -430,7 +430,7 @@ export default function JavaScript() {
                     document.querySelector('h1').innerHTML = counter;
                     
                     if (counter % 10 === 0) {
-                        alert('Count is now \${{counter}}')
+                        alert('Count is now \${counter}')
                     }
                 }
                 `
@@ -579,6 +579,184 @@ export default function JavaScript() {
                 Reuniendo todo esto, nuestro código JavaScript ahora se ve de la
                 siguiente manera:
               </p>
+              <Pre lang="javascript">{
+                /*javascript */ `
+                let counter = 0;
+
+                function count() {
+                    counter++;
+                    document.querySelector('h1').innerHTML = counter;
+                    
+                    if (counter % 10 === 0) {
+                        alert('Count is now \${counter}')
+                    }
+                }
+                
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.querySelector('button').onclick = count;
+                });
+                `
+              }</Pre>
+              <p>
+                Otra forma en la que podemos mejorar nuestro diseño es moviendo
+                nuestro JavaScript a un archivo separado. La manera de hacerlo
+                es muy similar a cómo colocamos nuestro CSS en un archivo
+                separado para dar estilo:
+              </p>
+              <ol>
+                <li>
+                  Escribe todo tu código JavaScript en un archivo separado que
+                  termine en
+                  <span className="text-amber-400 mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
+                    .js
+                  </span>
+                  , quizás
+                  <span className="text-amber-400 mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
+                    index.js
+                  </span>
+                  .
+                </li>
+                <li>
+                  Añade un atributo src a la etiqueta
+                  <span className="text-[#95D1F1] mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
+                    {'<script>'}
+                  </span>
+                  que apunte a este nuevo archivo.
+                </li>
+              </ol>
+              <p>
+                Para nuestra página de contador, podríamos tener un archivo
+                llamado counter.html que se ve así:
+              </p>
+              <Pre lang="html">{
+                /*html */ `
+                <!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <title>Count</title>
+                        <script src="counter.js"></script>
+                    </head>
+                    <body>
+                        <h1>0</h1>
+                        <button>Count</button>
+                    </body>
+                </html>
+                `
+              }</Pre>
+              <p>
+                Y un archivo llamado
+                <span className="text-amber-400 mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
+                  counter.js
+                </span>
+                que se vería de la siguiente manera:
+              </p>
+              <Pre lang="javascript">{
+                /*javascript */ `
+                let counter = 0;
+
+                function count() {
+                    counter++;
+                    document.querySelector('h1').innerHTML = counter;
+                    
+                    if (counter % 10 === 0) {
+                        alert('Count is now \${counter}');
+                    }
+                }
+                
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.querySelector('button').onclick = count;
+                });
+                `
+              }</Pre>
+              <p>
+                Tener JavaScript en un archivo separado es útil por varias
+                razones:
+              </p>
+              <ul>
+                <li>
+                  Atractivo visual: Nuestros archivos HTML y JavaScript
+                  individuales se vuelven más legibles. Acceso entre archivos
+                  HTML: Ahora podemos tener varios archivos HTML que comparten
+                  el mismo JavaScript
+                </li>
+                <li>
+                  Colaboración: Ahora es fácil que una persona trabaje en el
+                  JavaScript mientras otra trabaja en el HTML.
+                </li>
+                <li>
+                  Importación: Tenemos la capacidad de importar bibliotecas de
+                  JavaScript que otras personas ya han escrito. Por ejemplo,
+                  Bootstrap tiene su propia biblioteca de JavaScript que puedes
+                  incluir para hacer tu sitio más interactivo.
+                </li>
+              </ul>
+              <p>
+                Comencemos con otro ejemplo de una página que puede ser un poco
+                más interactiva. A continuación, crearemos una página en la que
+                un usuario pueda escribir su nombre para obtener un saludo
+                personalizado.
+              </p>
+              <Pre lang="html">
+                {
+                  /*html */ `
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <title>Hola</title>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            document.querySelector('form').onsubmit = function() {
+                                const name = document.querySelector('#name').value;
+                                alert(\`Hola, \${name}\`);
+                            };
+                        });
+                    </script>
+                </head>
+                <body>
+                    <form>
+                        <input autofocus id="name" placeholder="Name" type="text">
+                        <input type="submit">
+                    </form>
+                </body>
+                </html>
+                `
+                }
+              </Pre>
+              <p>
+                Si ustedes lo pruban pueden ver que el nombre que pongas lo va a
+                mostrar en el alert:
+              </p>
+              <div className="images-client">
+                <img src="/images/javascript-alert-name.png" />
+              </div>
+              <p>Otro nombre:</p>
+              <div className="images-client">
+                <img src="/images/javascript-alert-name2.png" />
+              </div>
+              <p>Algunas notas sobre la página anterior:</p>
+              <ul>
+                <li>
+                  Usamos el campo de enfoque automático (autofocus) en la
+                  entrada de nombre para indicar que el cursor debe situarse
+                  dentro de ese campo tan pronto como se carga la página.
+                </li>
+                <li>
+                  Utilizamos #name dentro de document.querySelector para
+                  encontrar un elemento con un identificador (id) de "name".
+                  Podemos utilizar los mismos selectores en esta función que
+                  podríamos usar en CSS.
+                </li>
+                <li>
+                  Utilizamos el atributo value de un campo de entrada para
+                  obtener lo que se ha escrito en él.
+                </li>
+              </ul>
+              <p>
+                ¡Podemos hacer más que simplemente añadir HTML a nuestra página
+                utilizando JavaScript! También podemos cambiar el estilo de una
+                página. En la página a continuación, utilizamos botones para
+                cambiar el color de nuestro encabezado.
+              </p>
             </article>
             <SectionTitle title="Intérvalos" />
             <SectionTitle title="Almacenamieno local" />
@@ -586,6 +764,7 @@ export default function JavaScript() {
             <SectionTitle title="Objetos en Javascript" />
           </div>
         </div>
+        <Footer />
       </TitlesContextProvider>
     </main>
   );
