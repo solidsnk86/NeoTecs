@@ -451,15 +451,22 @@ export default function Python() {
             <Header>Listas</Header>
             <ol>
               <li>Ordenadas: Sí</li>
-              <li>Mutables: No</li>
+              <li>Mutables: Sí</li>
             </ol>
             <p>
-              Una lista en Python te permite almacenar cualquier tipo de
-              variable. Creamos una lista utilizando corchetes cuadrados y
-              comas, como se muestra a continuación. Al igual que con las
-              cadenas, podemos imprimir una lista completa o algunos elementos
-              individuales. También podemos agregar elementos a una lista
-              utilizando
+              Una
+              <Link
+                href="https://www.w3schools.com/python/python_lists.asp"
+                className="text-sky-800 mx-1"
+              >
+                lista en Python
+                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+              </Link>
+              te permite almacenar cualquier tipo de variable. Creamos una lista
+              utilizando corchetes cuadrados y comas, como se muestra a
+              continuación. Al igual que con las cadenas, podemos imprimir una
+              lista completa o algunos elementos individuales. También podemos
+              agregar elementos a una lista utilizando
               <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
                 append
               </span>
@@ -469,6 +476,255 @@ export default function Python() {
               </span>
               .
             </p>
+            <Pre lang="javascript">{
+              /*python */ `
+              # Esto es un comentario en Python
+              nombres = ["Harry", "Ron", "Hermione"]
+              # Imprimir la lista completa:
+              print(nombres)
+              # Imprimir el segundo elemento de la lista:
+              print(nombres[1])
+              # Agregar un nuevo nombre a la lista:
+              nombres.append("Draco")
+              # Ordenar la lista:
+              nombres.sort()
+              # Imprimir la nueva lista:
+              print(nombres)
+                `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/python-console-2.png" />
+            </div>
+            <Header>Tuplas</Header>
+            <article>
+              <ol>
+                <li>Ordenadas: Sí</li>
+                <li>Mutables: No</li>
+              </ol>
+              <p>
+                Las tuplas generalmente se utilizan cuando necesitas almacenar
+                solo dos o tres valores juntos, como los valores x e y para un
+                punto. En el código de Python, utilizamos paréntesis:
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                point = (12.5, 10.6)
+                # Otra tupla
+                mitupla = ("manzana", "banana", "frutilla")
+                `
+              }</Pre>
+              <p>
+                Una
+                <Link
+                  href="https://www.w3schools.com/python/python_lists.asp"
+                  className="text-sky-800 mx-1"
+                >
+                  tupla
+                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                </Link>
+                es uno de los 4 tipos de datos incorporados en Python que se
+                utilizan para almacenar colecciones de datos. Los otros 3 son
+                List, Set y Dictionary, todos con diferentes características y
+                usos.
+              </p>
+              <p>
+                Una tupla es una colección que está ordenada y no se puede
+                modificar.
+              </p>
+              <ol>
+                <li>
+                  Los elementos de una tupla están ordenados, no se pueden
+                  cambiar y permiten valores duplicados.
+                </li>
+                <li>
+                  Los elementos de una tupla se indexan, el primer elemento
+                  tiene el índice
+                  <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-red-400">
+                    [0]
+                  </span>
+                  , el segundo elemento tiene el índice
+                  <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-red-400">
+                    [1]
+                  </span>
+                  , y así sucesivamente.
+                </li>
+              </ol>
+            </article>
+            <Header>Conjuntos</Header>
+            <article>
+              <ol>
+                <li>Ordenadas: No</li>
+                <li>Mutables: N/D</li>
+              </ol>
+              <p>
+                Los
+                <Link
+                  href="https://www.w3schools.com/python/python_sets.asp"
+                  className="text-sky-800 mx-1"
+                >
+                  conjuntos
+                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                </Link>
+                son diferentes de las listas y las tuplas en que son
+                desordenados. También son diferentes porque, mientras puedes
+                tener dos o más elementos iguales dentro de una lista/tupla, un
+                conjunto solo almacenará cada valor una vez. Podemos definir un
+                conjunto vacío utilizando la función
+                <b className="text-sky-400 mx-1">"set"</b>. Luego, podemos usar
+                <b className="text-sky-400 mx-1">"add"</b> y
+                <b className="text-sky-400 mx-1">"remove"</b> para agregar y
+                quitar elementos de ese conjunto, y la función
+                <b className="text-sky-400 mx-1">"len"</b> para encontrar el
+                tamaño del conjunto. Ten en cuenta que la función
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  "len"
+                </span>
+                funciona en todas las secuencias en Python. También ten en
+                cuenta que, a pesar de agregar 4 y 3 al conjunto dos veces, cada
+                elemento solo puede aparecer una vez en un conjunto.
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                # Crear un conjunto vacío:
+                s = set()
+                
+                # Agregar algunos elementos:
+                s.add(1)
+                s.add(2)
+                s.add(3)
+                s.add(4)
+                s.add(3)
+                s.add(1)
+                
+                # Quitar el 2 del conjunto
+                s.remove(2)
+                
+                # Imprimir el conjunto:
+                print(s)
+                
+                # Encontrar el tamaño del conjunto:
+                print(f"El conjunto tiene {len(s)} elementos.")
+                
+                """ Este es un comentario de varias líneas en Python:
+                Salida:
+                {1, 3, 4}
+                El conjunto tiene 3 elementos.
+                """
+                `
+              }</Pre>
+            </article>
+            <Header>Diccionarios</Header>
+            <article>
+              <ol>
+                <li>Ordenadas: No</li>
+                <li>Mutables: Sí</li>
+              </ol>
+              <p>
+                Los
+                <Link
+                  href="https://www.w3schools.com/python/python_sets.asp"
+                  className="text-sky-800 mx-1"
+                >
+                  diccionarios
+                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                </Link>
+                de Python, o dicts, serán especialmente útiles en este curso. Un
+                diccionario es un conjunto de pares clave-valor, donde cada
+                clave tiene un valor correspondiente, al igual que en un
+                diccionario, cada palabra
+                <b className="text-sky-400 mx-1">(la clave)</b> tiene una
+                definición correspondiente
+                <b className="text-sky-400 mx-1">(el valor)</b>. En Python,
+                utilizamos llaves
+                <b className="text-sky-400 mx-1">(corchetes)</b> para contener
+                un diccionario y dos puntos para indicar claves y valores. Por
+                ejemplo:
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                # Definir un diccionario
+                casas = {"Harry": "Gryffindor", "Draco": "Slytherin"}
+                # Imprimir la casa de Harry
+                print(casas["Harry"])
+                # Agregar valores a un diccionario:
+                casas["Hermione"] = "Gryffindor"
+                # Imprimir la Casa de Hermione:
+                print(casas["Hermione"])
+                
+                """ Salida:
+                Gryffindor
+                Gryffindor
+                """
+                `
+              }</Pre>
+            </article>
+            <Header>Bucles</Header>
+            <article>
+              <ol>
+                <li>Ordenadas: No</li>
+                <li>Mutables: Sí</li>
+              </ol>
+              <p>
+                Los
+                <Link
+                  href="https://www.w3schools.com/python/python_for_loops.asp"
+                  className="text-sky-800 mx-1"
+                >
+                  bucles
+                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                </Link>
+                Los son una parte increíblemente importante de cualquier
+                lenguaje de programación, y en Python, existen dos formas
+                principales: bucles for y bucles while. Por ahora, nos
+                centraremos en los bucles for.
+              </p>
+              <ul>
+                <li>
+                  Los bucles for se utilizan para iterar sobre una secuencia de
+                  elementos, realizando un bloque de código (sangrado debajo)
+                  para cada elemento en una secuencia. Por ejemplo, el siguiente
+                  código imprimirá los números del 0 al 5:
+                </li>
+              </ul>
+              <Pre lang="javascript">{
+                /*python */ `
+                for i in [0, 1, 2, 3, 4, 5]:
+                print(i)
+            
+            """ Output:
+            0
+            1
+            2
+            3
+            4
+            5
+            """
+                `
+              }</Pre>
+              <ul>
+                <li>
+                  Podemos condensar este código utilizando la función range de
+                  Python, que nos permite obtener fácilmente una secuencia de
+                  números. El siguiente código produce el mismo resultado que
+                  nuestro código anterior:
+                </li>
+              </ul>
+              <Pre lang="javascript">{
+                /*python */ `
+                for i in range(6):
+                print(i)
+            
+            """ Output:
+            0
+            1
+            2
+            3
+            4
+            5
+            """
+                `
+              }</Pre>
+            </article>
           </div>
         </div>
         <Footer />
