@@ -32,7 +32,7 @@ export default function DjangoDocs() {
               <a href="#introduccion">Introducción</a>
             </li>
             <li>
-              <a href="#aplicaciones-web">Aplicaciones Web</a>
+              <a href="#web">Aplicaciones Web</a>
             </li>
             <li>
               <a href="#http">HTTP</a>
@@ -69,6 +69,7 @@ export default function DjangoDocs() {
               <a href="#sesiones">Sesiones</a>
             </li>
           </ol>
+          <span id="introduccion" />
           <SectionTitle title="Introducción" />
           <article>
             <ul>
@@ -85,7 +86,54 @@ export default function DjangoDocs() {
               </li>
             </ul>
           </article>
+          <span id="web" />
           <SectionTitle title="Aplicaciones Web" />
+          <article>
+            <p>
+              Hasta ahora, todas las aplicaciones web que hemos desarrollado han
+              sido estáticas. Esto significa que cada vez que abrimos esa página
+              web, se ve exactamente igual. Sin embargo, muchos sitios web que
+              visitamos a diario cambian cada vez que los visitamos. Si visitas
+              los sitios web de
+              <Link
+                href="https://www.nytimes.com/"
+                className="mx-1 text-slate-400"
+              >
+                The New York Times
+                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+              </Link>
+              o
+              <Link
+                href="https://www.nytimes.com/"
+                className="mx-1 text-slate-400"
+              >
+                Facebook
+                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+              </Link>
+              , por ejemplo, es probable que veas cosas diferentes hoy que
+              mañana. Para sitios grandes como esos, sería poco razonable que
+              los empleados tengan que editar manualmente un archivo HTML grande
+              cada vez que se realice un cambio, es ahí donde las páginas web
+              dinámicas pueden ser extremadamente útiles. Un sitio web dinámico
+              es aquel que aprovecha un lenguaje de programación (como Python)
+              para generar dinámicamente archivos HTML y CSS. Durante esta
+              conferencia, aprenderemos cómo crear nuestras primeras
+              aplicaciones dinámicas.
+            </p>
+          </article>
+          <span id="http" />
+          <SectionTitle title="HTTP" />
+          <article>
+            <p>
+              HTTP, o Protocolo de Transferencia de Hipertexto en español, es un
+              protocolo ampliamente aceptado para la transferencia de mensajes
+              de ida y vuelta a través de Internet. Normalmente, la información
+              en línea se intercambia entre un cliente (usuario) y un servidor.
+            </p>
+            <div className="images-client">
+              <img src="/images/client-removebg-preview.png" />
+            </div>
+          </article>
         </div>
       </div>
     </TitlesContextProvider>
