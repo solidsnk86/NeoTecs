@@ -58,6 +58,7 @@ export default function CssDoc() {
                 <a href="#tareas">Sass</a>
               </li>
             </ol>
+            <SectionTitle title="Introducción" />
             <ul>
               <li>
                 CSS se utiliza para personalizar la apariencia de un sitio web.
