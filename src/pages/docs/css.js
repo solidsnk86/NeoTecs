@@ -13,6 +13,9 @@ export default function CssDoc() {
   const CssTitle = ({ Tag = 'h1', children }) => {
     return <Tag className="text-slate-100 font-mono">{children}</Tag>;
   };
+  const Header = ({ Tag = 'h2', children }) => {
+    return <Tag className="text-slate-100">{children}</Tag>;
+  };
   return (
     <main className="text-slate-100">
       <TitlesContextProvider>
@@ -23,7 +26,49 @@ export default function CssDoc() {
             <NavSwitch inline />
             <CssTitle>CSS (Hojas de Estilo de Cascada)</CssTitle>
             <hr />
-            <SectionTitle title="Introducción a CSS" />
+            <Header>Índice</Header>
+            <ol className="indice">
+              <li>
+                <a href="#introduccion">Introducción</a>
+              </li>
+              <li>
+                <a href="#aplicaciones-web">Aplicaciones Web</a>
+              </li>
+              <li>
+                <a href="#http">HTTP</a>
+              </li>
+              <li>
+                <a href="#django">Django</a>
+              </li>
+              <li>
+                <a href="#rutas">Rutas</a>
+              </li>
+              <li>
+                <a href="#plantillas">Plantillas</a>
+                <ul>
+                  <li>
+                    <a href="#condicionales">Condicionales</a>
+                  </li>
+                  <li>
+                    <a href="#estilos">Estilos</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#tareas">Tareas</a>
+              </li>
+              <li>
+                <a href="#formularios">Formularios</a>
+                <ul>
+                  <li>
+                    <a href="#formularios-django">Formularios Django</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#sesiones">Sesiones</a>
+              </li>
+            </ol>
             <ul>
               <li>
                 CSS se utiliza para personalizar la apariencia de un sitio web.

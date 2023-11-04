@@ -26,7 +26,7 @@ export default function Python() {
             <NavSwitch inline />
             <PythontTitle>Python</PythontTitle>
             <hr />
-            <Header>Indice</Header>
+            <Header>Índice</Header>
             <ol>
               <li>Introducción</li>
               <li>Python</li>

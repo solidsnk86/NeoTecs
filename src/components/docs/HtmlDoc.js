@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
-import { CoffeeIcon } from '../CoffeeIcon';
 
 export const HtmlDoc = () => {
   return (
     <main className="text-slate-100 w-full">
+      <span id="html" />
       <SectionTitle title="HTML (Lenguaje de Marcado de Hipertexto)" />
       <ul>
         <li>
@@ -83,6 +83,7 @@ export const HtmlDoc = () => {
           </li>
         </ul>
       </ol>
+      <span id="dom" />
       <SectionTitle title="DOM (Document Object Model)" />
       <div className="images-client">
         <img src="/images/dom.png" />
@@ -94,6 +95,7 @@ export const HtmlDoc = () => {
         DOM para la página que acabamos de escribir.
       </li>
       <ShareButton />
+      <span id="mas-elementos-html" />
       <SectionTitle title="Más Elementos HTML" />
       <ul>
         <li>

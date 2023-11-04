@@ -5,28 +5,51 @@ export const Introduction = () => {
   const IntroTitle = ({ Tag = 'h1', children }) => {
     return <Tag className="text-slate-100 font-mono">{children}</Tag>;
   };
+  const Header = ({ Tag = 'h2', children }) => {
+    return <Tag className="text-slate-100">{children}</Tag>;
+  };
   return (
     <main className="text-slate-100">
       <IntroTitle>Curso de Programación</IntroTitle>
       <hr />
-      <header>
-        <ol>
-          <li>Introducción</li>
-          <li>Programación Web</li>
-          <li>
-            HTML (Lenguaje de Marcado de Hipertexto)
-            <ul>
-              <li>Document Object Model (DOM)</li>
-              <li>Más Elementos HTML</li>
-              <li>Formularios</li>
-            </ul>
-          </li>
-          <li>CSS (Hojas de estilo de cascada)</li>
-          <li>Diseño Responsivo</li>
-          <li>Bootstrap</li>
-          <li>Sass (Hojas de estilo Sintácticamente impresionantes)</li>
-        </ol>
-      </header>
+      <Header>Índice</Header>
+      <ol className="indice">
+        <li>
+          <a href="#introduccion">Introducción</a>
+        </li>
+        <li>
+          <a href="#programacion-web">Programación Web</a>
+        </li>
+        <li>
+          <a href="#html">HTML (Lenguaje de Marcado de Hipertexto)</a>
+          <ul>
+            <li>
+              <a href="#dom">Document Object Model (DOM)</a>
+            </li>
+            <li>
+              <a href="#mas-elementos-html">Más Elementos HTML</a>
+            </li>
+            <li>
+              <a href="#formularios">Formularios</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#css">CSS (Hojas de estilo en cascada)</a>
+        </li>
+        <li>
+          <a href="#diseno-responsivo">Diseño Responsivo</a>
+        </li>
+        <li>
+          <a href="#bootstrap">Bootstrap</a>
+        </li>
+        <li>
+          <a href="#sass">
+            Sass (Hojas de estilo Sintácticamente impresionantes)
+          </a>
+        </li>
+      </ol>
+      <span id="introduccion" />
       <SectionTitle title="Introducción" />
       <p>
         En este curso, voy a enseñar algo de lo que aprendí en Harvard Edx y
@@ -56,6 +79,7 @@ export const Introduction = () => {
         </Link>
         , ¡pero hay muchas opciones más para elegir!
       </p>
+      <span id="programacion-web" />
       <SectionTitle title="Programación Web" />
       <section>
         <p>

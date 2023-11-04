@@ -25,25 +25,56 @@ export default function JavaScript() {
           <NavSwitch inline />
           <JavascriptTitle>Javascript</JavascriptTitle>
           <hr />
-          <Header>Indice</Header>
+          <Header>Índice</Header>
           <ol>
-            <li>Introducción</li>
-            <li>JavaScript</li>
-            <li>Eventos</li>
-            <li>Variables</li>
-            <li>querySelector</li>
-            <li>Manipulación del DOM</li>
-            <ul>
-              <li>Consola de JavaScript</li>
-              <li>Funciones de flecha</li>
-              <li>Lista de tareas pendientes (TODO List)</li>
-            </ul>
-            <li>Intervalos</li>
-            <li>Almacenamiento local</li>
-            <li>APIs</li>
-            <li>Objetos en JavaScript</li>
-            <li>Cambio de moneda</li>
+            <li>
+              <a href="#introduccion">Introducción</a>
+            </li>
+            <li>
+              <a href="#javascript">JavaScript</a>
+            </li>
+            <li>
+              <a href="#eventos">Eventos</a>
+            </li>
+            <li>
+              <a href="#variables">Variables</a>
+            </li>
+            <li>
+              <a href="#queryselector">querySelector</a>
+            </li>
+            <li>
+              <a href="#manipulacion-del-dom">Manipulación del DOM</a>
+              <ul>
+                <li>
+                  <a href="#consola-de-javascript">Consola de JavaScript</a>
+                </li>
+                <li>
+                  <a href="#funciones-de-flecha">Funciones de flecha</a>
+                </li>
+                <li>
+                  <a href="#lista-de-tareas-pendientes">
+                    Lista de tareas pendientes (TODO List)
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#intervalos">Intervalos</a>
+            </li>
+            <li>
+              <a href="#almacenamiento-local">Almacenamiento local</a>
+            </li>
+            <li>
+              <a href="#apis">APIs</a>
+            </li>
+            <li>
+              <a href="#objetos-en-javascript">Objetos en JavaScript</a>
+            </li>
+            <li>
+              <a href="#cambio-de-moneda">Cambio de moneda</a>
+            </li>
           </ol>
+
           <SectionTitle title="Introducción a Javascript" />
           <ul>
             <li>
