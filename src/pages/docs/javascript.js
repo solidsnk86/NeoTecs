@@ -43,16 +43,16 @@ export default function JavaScript() {
               <a href="#queryselector">querySelector</a>
             </li>
             <li>
-              <a href="#manipulacion-del-dom">Manipulación del DOM</a>
+              <a href="#dom">Manipulación del DOM</a>
               <ul>
                 <li>
-                  <a href="#consola-de-javascript">Consola de JavaScript</a>
+                  <a href="#consola">Consola de JavaScript</a>
                 </li>
                 <li>
                   <a href="#funciones-de-flecha">Funciones de flecha</a>
                 </li>
                 <li>
-                  <a href="#lista-de-tareas-pendientes">
+                  <a href="#todo-list">
                     Lista de tareas pendientes (TODO List)
                   </a>
                 </li>
@@ -62,19 +62,19 @@ export default function JavaScript() {
               <a href="#intervalos">Intervalos</a>
             </li>
             <li>
-              <a href="#almacenamiento-local">Almacenamiento local</a>
+              <a href="#local">Almacenamiento local</a>
             </li>
             <li>
               <a href="#apis">APIs</a>
             </li>
             <li>
-              <a href="#objetos-en-javascript">Objetos en JavaScript</a>
+              <a href="#objetos">Objetos en JavaScript</a>
             </li>
             <li>
               <a href="#cambio-de-moneda">Cambio de moneda</a>
             </li>
           </ol>
-
+          <span id="introduccion" />
           <SectionTitle title="Introducción a Javascript" />
           <ul>
             <li>
@@ -163,6 +163,7 @@ export default function JavaScript() {
           <div className="images-client">
             <img src="/images/javascript-alert.png" alt="alert" />
           </div>
+          <span id="eventos" />
           <SectionTitle title="Eventos" />
           <article>
             <p>
@@ -229,6 +230,7 @@ export default function JavaScript() {
                 <button onclick="hola()">Click Here</button>
                 `
           }</Pre>
+          <span id="variables" />
           <SectionTitle title="Variables" />
           <article>
             <p>
@@ -307,6 +309,7 @@ export default function JavaScript() {
               <img src="/images/javascript-alert-count.png" alt="alert-count" />
             </div>
           </article>
+          <span id="queryselector" />
           <SectionTitle title="querySelector" />
           <article>
             <p>
@@ -396,6 +399,7 @@ export default function JavaScript() {
               <img src="/images/toggle.gif" alt="javascript-query" />
             </div>
           </article>
+          <span id="dom" />
           <SectionTitle title="Manipuación del DOM" />
           <article>
             <p>
@@ -854,6 +858,7 @@ export default function JavaScript() {
               </li>
             </ul>
           </article>
+          <span id="consola" />
           <SectionTitle title="Consola Javascript" />
           <article>
             <p>
@@ -880,6 +885,7 @@ export default function JavaScript() {
             <div className="images-client">
               <img src="/images/consoleList.png" />
             </div>
+            <span id="funciones-de-flecha" />
             <Header>Funciones Flecha</Header>
             <p>
               Funciones de Flecha Además de la notación tradicional de funciones
@@ -1013,6 +1019,7 @@ export default function JavaScript() {
               </li>
             </ul>
           </article>
+          <span id="todo-list" />
           <Header>TODO List</Header>
           <article>
             <p>
@@ -1144,6 +1151,7 @@ export default function JavaScript() {
               <img src="/images/tasks.gif" />
             </div>
           </article>
+          <span id="intervalos" />
           <SectionTitle title="Intérvalos" />
           <p>
             Además de especificar que las funciones se ejecutan cuando se
@@ -1184,6 +1192,7 @@ export default function JavaScript() {
             <img src="/images/count4.gif" />
           </div>
           <ShareButton />
+          <span id="local" />
           <SectionTitle title="Almacenamiento Local" />
           <article>
             <p>
@@ -1253,8 +1262,10 @@ export default function JavaScript() {
                 `
             }</Pre>
           </article>
+          <span id="apis" />
           <SectionTitle title="APIs" />
           <hr />
+          <span id="objetos" />
           <SectionTitle title="Objetos en Javascript" />
           <p>
             Un
@@ -1372,6 +1383,7 @@ export default function JavaScript() {
               }
                 `
           }</Pre>
+          <span id="cambio-de-moneda" />
           <Header>Cambio de moneda</Header>
           <article>
             <p>

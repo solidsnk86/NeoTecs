@@ -55,7 +55,7 @@ export default function CssDoc() {
                 </ul>
               </li>
               <li>
-                <a href="#tareas">Sass</a>
+                <a href="#sass">Sass</a>
               </li>
             </ol>
             <SectionTitle title="Introducción" />
@@ -949,6 +949,7 @@ export default function CssDoc() {
               </html>
               `
             }</Pre>
+            <span id="sass" />
             <SectionTitle title="Sass (Hojas de Estilo Sintácticamente Asombrosas)" />
             <ul>
               <li>
