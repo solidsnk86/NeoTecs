@@ -145,7 +145,7 @@ export default function Python() {
                 vería así:
               </li>
             </ul>
-            <Pre lang="python">{
+            <Pre lang="javascript">{
               /*python */ `
                 print("Hello, world!")
                 `
@@ -210,7 +210,7 @@ export default function Python() {
                 a una variable en Python, la sintaxis se ve así:
               </li>
             </ul>
-            <Pre lang="python">{
+            <Pre lang="javascript">{
               /*python */ `
                 a = 28
                 b = 1.5
@@ -262,7 +262,7 @@ export default function Python() {
               </span>
               :
             </p>
-            <Pre lang="python">{
+            <Pre lang="javascript">{
               /*python */ `
                 name = input("Name: ")
                 print("Hello, " + name)
@@ -271,6 +271,204 @@ export default function Python() {
             <div className="images-client">
               <img src="/images/python-terminal-1.png" />
             </div>
+            <p>Un par de cosas para señalar aquí:</p>
+            <ul>
+              <li>
+                En la primera línea, en lugar de asignar la variable
+                <b className="text-sky-400 mx-1">"name"</b> a un valor
+                explícito, la estamos asignando a lo que devuelve la función
+                <b className="text-sky-400 mx-1">"input"</b>.
+              </li>
+              <li>
+                En la segunda línea, estamos utilizando el operador
+                <b className="text-sky-400 mx-1">"+"</b> para combinar o
+                concatenar dos cadenas. En Python, el operador
+                <b className="text-sky-400 mx-1">"+"</b> se puede utilizar para
+                sumar números o concatenar cadenas y listas.
+              </li>
+            </ul>
+            <SectionTitle title="Formato de Cadenas" />
+            <article>
+              <p>
+                Si bien podemos utilizar el operador
+                <b className="text-sky-400 mx-1">"+"</b> para combinar cadenas
+                como hicimos anteriormente, en las últimas versiones de Python,
+                existen formas aún más sencillas de trabajar con cadenas,
+                conocidas como
+                <b className="text-sky-400 mx-1">"cadenas formateadas"</b> o
+                <b className="text-sky-400 mx-1">"f-strings"</b> en resumen.
+              </p>
+              <p>
+                Para indicar que estamos utilizando cadenas formateadas,
+                simplemente agregamos una f antes de las comillas. Por ejemplo,
+                en lugar de usar "Hello, " + name como hicimos anteriormente,
+                podríamos escribir
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  {'f"Hello, {name}" '}
+                </span>
+                para obtener el mismo resultado. Incluso podemos insertar una
+                función en esta cadena si lo deseamos, y convertir nuestro
+                programa anterior en una sola línea:
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                name = input("Cómo te llamas? ")
+                print(f"Hola, {name}")
+                `
+              }</Pre>
+            </article>
+            <SectionTitle title="Condiciones" />
+            <ul>
+              <li>
+                Al igual que en otros lenguajes de programación, Python nos
+                brinda la capacidad de ejecutar segmentos de código diferentes
+                basados en diferentes condiciones. Por ejemplo, en el programa a
+                continuación, cambiaremos nuestra salida dependiendo del número
+                que un usuario escriba:
+              </li>
+              <Pre lang="javascript">{
+                /*python */ `
+                num = input("Number: ")
+                if num > 0:
+                    print("Number is positive")
+                elif num < 0:
+                    print("Number is negative")
+                else:
+                `
+              }</Pre>
+              <li>
+                Entrando en cómo funciona el programa anterior, las sentencias
+                condicionales en Python contienen una palabra clave
+                <b className="text-sky-400 mx-1">(if, elif o else)</b>y luego
+                <b className="text-sky-400 mx-1">
+                  (excepto en el caso de else)
+                </b>
+                una expresión booleana, es decir, una expresión que se evalúa
+                como True o False. Luego, todo el código que queremos ejecutar
+                si cierta expresión es verdadera se encuentra sangrado
+                directamente debajo de la declaración. La sangría es obligatoria
+                como parte de la sintaxis de Python.
+              </li>
+              <li>
+                Sin embargo, al ejecutar este programa, nos encontramos con una
+                <Link
+                  href="https://docs.python.org/3/tutorial/errors.html"
+                  className="text-sky-800 mx-1"
+                >
+                  excepción
+                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                </Link>
+                que se ve así:
+              </li>
+              <div className="images-client">
+                <img src="/images/python-terminal-error.png" />
+              </div>
+              <li>
+                Una excepción es lo que sucede cuando ocurre un error mientras
+                estamos ejecutando nuestro código Python, y con el tiempo te
+                volverás mejor en la interpretación de estos errores, lo que es
+                una habilidad muy valiosa.
+              </li>
+              <li>
+                Veamos un poco más de cerca esta excepción específica: Si
+                observamos en la parte inferior, veremos que nos encontramos con
+                un TypeError, lo que generalmente significa que Python esperaba
+                que una variable fuera de un tipo específico, pero encontró que
+                era de otro tipo. En este caso, la excepción nos dice que no
+                podemos usar el símbolo
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  {'>'}
+                </span>
+                para comparar una cadena
+                <b className="text-sky-400 mx-1">(str)</b>y un entero
+                <b className="text-sky-400 mx-1">(int)</b>, y luego arriba
+                podemos ver que esta comparación ocurre en la línea 2.
+              </li>
+              <li>
+                En este caso, es evidente que 0 es un entero, por lo que debe
+                ser el caso que nuestra variable
+                <b className="text-sky-400 mx-1">"num</b> es una cadena. Esto
+                sucede porque resulta que la función
+                <b className="text-sky-400 mx-1">"input</b> siempre devuelve una
+                cadena, y debemos especificar que debe convertirse
+                <b className="text-sky-400 mx-1">(o fundirse)</b>
+                en un entero utilizando la función
+                <b className="text-sky-400 mx-1">"int</b>. Esto significa que
+                nuestra primera línea ahora se vería así:
+              </li>
+              <Pre lang="javascript">{
+                /*python */ `
+                num = int(input("Number: "))
+                `
+              }</Pre>
+              <li>
+                Ahora, el programa funcionará tal como lo teníamos previsto!
+              </li>
+            </ul>
+            <SectionTitle title="Secuencias" />
+            <article>
+              <p>
+                Una de las partes más poderosas del lenguaje Python es su
+                capacidad para trabajar con secuencias de datos además de
+                variables individuales.
+              </p>
+              <p>
+                Hay varios tipos de secuencias que son similares en algunos
+                aspectos, pero diferentes en otros. Al explicar esas
+                diferencias, utilizaremos los términos mutables/inmutables y
+                ordenados/desordenados. Mutable significa que una vez que se ha
+                definido una secuencia, podemos cambiar elementos individuales
+                de esa secuencia, y ordenado significa que el orden de los
+                objetos es importante.
+              </p>
+              <Header>Cadenas</Header>
+              <ol>
+                <li>Ordenadas: Sí</li>
+                <li>Mutables: No</li>
+              </ol>
+              <p>
+                Ya hemos examinado las cadenas un poco, pero en lugar de solo
+                variables, podemos pensar en una cadena como una secuencia de
+                caracteres. Esto significa que podemos acceder a elementos
+                individuales dentro de la cadena. Por ejemplo:
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                name = "Mario"
+                print(name[0])
+                print(name[1])
+                `
+              }</Pre>
+              <p>
+                imprime el primer carácter
+                <b className="text-sky-400 mx-1">(o índice-0)</b> en la cadena,
+                que en este caso es <b className="text-sky-400 mx-1">H</b>, y
+                luego imprime el segundo carácter
+                <b className="text-sky-400 mx-1">(índice-1)</b>, que es
+                <b className="text-sky-400 mx-1">"a"</b>.
+              </p>
+            </article>
+            <Header>Listas</Header>
+            <ol>
+              <li>Ordenadas: Sí</li>
+              <li>Mutables: No</li>
+            </ol>
+            <p>
+              Una lista en Python te permite almacenar cualquier tipo de
+              variable. Creamos una lista utilizando corchetes cuadrados y
+              comas, como se muestra a continuación. Al igual que con las
+              cadenas, podemos imprimir una lista completa o algunos elementos
+              individuales. También podemos agregar elementos a una lista
+              utilizando
+              <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                append
+              </span>
+              y ordenar una lista utilizando
+              <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                sort
+              </span>
+              .
+            </p>
           </div>
         </div>
         <Footer />
