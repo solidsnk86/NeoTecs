@@ -32,41 +32,30 @@ export default function CssDoc() {
                 <a href="#introduccion">Introducción</a>
               </li>
               <li>
-                <a href="#aplicaciones-web">Aplicaciones Web</a>
+                <a href="#propiedades">Propiedades CSS</a>
               </li>
               <li>
-                <a href="#http">HTTP</a>
+                <a href="#selectores">Selectores</a>
               </li>
               <li>
-                <a href="#django">Django</a>
+                <a href="#selectores-descendientes">Selectores Descendientes</a>
               </li>
               <li>
-                <a href="#rutas">Rutas</a>
+                <a href="#selectores-atributos">Selectores de Atributos</a>
               </li>
               <li>
-                <a href="#plantillas">Plantillas</a>
+                <a href="#responsive">Diseño Responsivo</a>
                 <ul>
                   <li>
-                    <a href="#condicionales">Condicionales</a>
+                    <a href="#bootstrap">Bootstrap</a>
                   </li>
                   <li>
-                    <a href="#estilos">Estilos</a>
+                    <a href="#col">Columnas</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="#tareas">Tareas</a>
-              </li>
-              <li>
-                <a href="#formularios">Formularios</a>
-                <ul>
-                  <li>
-                    <a href="#formularios-django">Formularios Django</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#sesiones">Sesiones</a>
+                <a href="#tareas">Sass</a>
               </li>
             </ol>
             <ul>
@@ -219,6 +208,7 @@ export default function CssDoc() {
               `
               }
             </Pre>
+            <span id="propiedades" />
             <SectionTitle title="Propiedades CSS" />
             <ul>
               <li>
@@ -375,6 +365,7 @@ export default function CssDoc() {
               `
               }
             </Pre>
+            <span id="selectores" />
             <SectionTitle title="Selectores CSS" />
             <ul>
               <li>
@@ -477,6 +468,7 @@ export default function CssDoc() {
                 }
               `
             }</Pre>
+            <span id="selectores-descendientes" />
             <SectionTitle title="Selectores descendientes" />
             <p>
               Selector de descendencia: Aquí, utilizamos el selector de
@@ -598,6 +590,7 @@ export default function CssDoc() {
               <img src="/images/buttons.gif" alt="gif-1" />
             </div>
             <ShareButton />
+            <span id="responsive" />
             <SectionTitle title="Diseño Responsivo" />
             <ul>
               <li>
@@ -792,6 +785,7 @@ export default function CssDoc() {
             <div className="images-client">
               <img src="/images/grid.gif" alt="gif-3" />
             </div>
+            <span id="bootstrap" />
             <SectionTitle title="Bootstrap" />
             <ul>
               <li>
@@ -897,6 +891,7 @@ export default function CssDoc() {
               
               `
             }</Pre>
+            <span id="col" />
             <SectionTitle title="Columnas" />
             <li>
               Para mejorar la capacidad de respuesta en dispositivos móviles,

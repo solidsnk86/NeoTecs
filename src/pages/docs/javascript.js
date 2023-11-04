@@ -26,7 +26,7 @@ export default function JavaScript() {
           <JavascriptTitle>Javascript</JavascriptTitle>
           <hr />
           <Header>Índice</Header>
-          <ol>
+          <ol className="indice">
             <li>
               <a href="#introduccion">Introducción</a>
             </li>
