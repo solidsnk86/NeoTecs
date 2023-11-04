@@ -675,15 +675,26 @@ export default function Python() {
                 </Link>
                 Los son una parte increíblemente importante de cualquier
                 lenguaje de programación, y en Python, existen dos formas
-                principales: bucles for y bucles while. Por ahora, nos
-                centraremos en los bucles for.
+                principales:
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  bucles for
+                </span>
+                y
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  bucles while
+                </span>
+                . Por ahora, nos centraremos en los bucles for.
               </p>
               <ul>
                 <li>
-                  Los bucles for se utilizan para iterar sobre una secuencia de
-                  elementos, realizando un bloque de código (sangrado debajo)
-                  para cada elemento en una secuencia. Por ejemplo, el siguiente
-                  código imprimirá los números del 0 al 5:
+                  Los bucles
+                  <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                    for
+                  </span>
+                  se utilizan para iterar sobre una secuencia de elementos,
+                  realizando un bloque de código (sangrado debajo) para cada
+                  elemento en una secuencia. Por ejemplo, el siguiente código
+                  imprimirá los números del 0 al 5:
                 </li>
               </ul>
               <Pre lang="javascript">{
@@ -724,7 +735,48 @@ export default function Python() {
             """
                 `
               }</Pre>
+              <li>
+                ¡Este tipo de bucle puede funcionar para cualquier secuencia!
+                Por ejemplo, si deseamos imprimir cada nombre en una lista,
+                podríamos escribir el siguiente código:
+              </li>
+              <Pre lang="javascript">{
+                /*python */ `
+                # Create a list:
+                names = ["Harry", "Ron", "Hermione"]
+                
+                # Print each name:
+                for name in names:
+                    print(name)
+                
+                """ Output:
+                Harry
+                Ron
+                Hermione
+                """
+                `
+              }</Pre>
+              <li>
+                Podemos ser aún más específicos si lo deseamos y recorrer cada
+                carácter en un solo nombre.
+              </li>
+              <Pre lang="javascript">{
+                /*python */ `
+                name = "Harry"
+                for char in name:
+                    print(char)
+                
+                """ Output:
+                H
+                a
+                r
+                r
+                y
+                """
+                `
+              }</Pre>
             </article>
+            <SectionTitle title="Funciones" />
           </div>
         </div>
         <Footer />

@@ -26,7 +26,7 @@ export function LectureNav() {
                 href={`#${title.slug}`}
                 className={`text-[cornflowerblue] px-2 py-1 block rounded hover:bg-[#CCCCCC] hover:bg-opacity-10 hover:text-primary font-medium duration-100 ${
                   selectedSlug === title.slug
-                    ? 'bg-[#CCCCCC] bg-opacity-10 text-text-strong'
+                    ? 'bg-[#CCCCCC] bg-opacity-10 text-[#6E51F3]'
                     : ''
                 }`}
                 onClick={() => handleTitleClick(title.slug)}

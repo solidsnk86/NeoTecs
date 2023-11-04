@@ -66,7 +66,7 @@ export default function JavaScript() {
           <p>Comencemos por volver a examinar un diagrama:</p>
           <div className="images-client">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Client-server-model.svg/1200px-Client-server-model.svg.png"
+              src="/images/client-server-1-removebg-preview.png"
               alt="Diagrama"
             />
           </div>
@@ -1226,9 +1226,17 @@ export default function JavaScript() {
           <hr />
           <SectionTitle title="Objetos en Javascript" />
           <p>
-            Un objeto de JavaScript es muy similar a un diccionario en Python,
-            ya que nos permite almacenar pares clave-valor. Por ejemplo, podría
-            crear un objeto de JavaScript que represente a Harry Potter:
+            Un
+            <Link
+              href="https://www.w3schools.com/js/js_objects.asp"
+              className="mx-1 text-amber-600"
+            >
+              objeto de JavaScript
+              <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+            </Link>
+            es muy similar a un diccionario en Python, ya que nos permite
+            almacenar pares clave-valor. Por ejemplo, podría crear un objeto de
+            JavaScript que represente a Harry Potter:
           </p>
           <Pre lang="javascript">{
             /*javascript */ `
@@ -1260,6 +1268,18 @@ export default function JavaScript() {
               console.log(harryPotter['age']); // Muestra 17              
                 `
           }</Pre>
+          <p>Otro ejemplo:</p>
+          <Pre lang="javascript">{
+            /*javascript */ `
+            let person = {
+                first: 'Harry',
+                last: 'Potter'
+            };              
+                `
+          }</Pre>
+          <div className="images-client">
+            <img src="/images/console.png" />
+          </div>
           <p>
             Una forma en la que los objetos de JavaScript son realmente útiles
             es en la transferencia de datos de un sitio a otro, especialmente al
@@ -1321,6 +1341,37 @@ export default function JavaScript() {
               }
                 `
           }</Pre>
+          <Header>Cambio de moneda</Header>
+          <article>
+            <p>
+              Para mostrar cómo podemos usar API en nuestras aplicaciones,
+              trabajemos en la construcción de una aplicación donde podemos
+              encontrar tasas de cambio entre dos monedas. A lo largo del
+              ejercicio, utilizaremos la API de tipos de cambio del
+              <Link
+                href="https://exchangeratesapi.io/"
+                className="text-amber-600 mx-1"
+              >
+                Banco Central Europeo
+                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+              </Link>
+              . Si visitas su sitio web, verás la documentación de la API, que
+              generalmente es un buen lugar para comenzar cuando deseas utilizar
+              una API. Podemos probar esta API visitando la URL:
+              <Link
+                href="https://api.exchangeratesapi.io/latest?base=USD"
+                className="text-amber-600 mx-1"
+              >
+                https://api.exchangeratesapi.io/latest?base=USD
+                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+              </Link>
+              . Cuando visites esta página, verás la tasa de cambio entre el
+              dólar estadounidense y muchas otras monedas, escrita en formato
+              JSON. También puedes cambiar el parámetro GET en la URL de USD a
+              cualquier otro código de moneda para cambiar las tasas que
+              obtienes.
+            </p>
+          </article>
         </div>
       </div>
       <Footer />
