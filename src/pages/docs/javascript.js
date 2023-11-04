@@ -1301,7 +1301,7 @@ export default function JavaScript() {
             Por ejemplo, es posible que deseemos que nuestra aplicación obtenga
             información de Google Maps, Amazon o algún servicio meteorológico.
             Podemos hacer esto realizando llamadas a la API de un servicio, la
-            cual nos devolverá datos estructurados, a menudo en formato JSON{' '}
+            cual nos devolverá datos estructurados, a menudo en formato JSON
             <b className="text-amber-400">(Notación de Objetos JavaScript)</b>.
             Por ejemplo, un vuelo en formato
             <Link
@@ -1370,6 +1370,165 @@ export default function JavaScript() {
               JSON. También puedes cambiar el parámetro GET en la URL de USD a
               cualquier otro código de moneda para cambiar las tasas que
               obtienes.
+            </p>
+            <p>
+              Echemos un vistazo a cómo implementar esta API en una aplicación
+              creando un nuevo archivo HTML llamado "currency.html" y
+              vinculándolo a un archivo JavaScript, pero dejemos el cuerpo del
+              archivo HTML vacío:
+            </p>
+            <Pre lang="html">{
+              /*html */ `
+                <!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <title>Currency Exchange</title>
+                        <script src="currency.js"></script>
+                    </head>
+                    <body></body>
+                </html>
+                `
+            }</Pre>
+            <p>
+              Ahora, utilizaremos algo llamado AJAX, o Asynchronous JavaScript
+              And XML (JavaScript y XML asincrónicos), que nos permite acceder a
+              información de páginas externas incluso después de que nuestra
+              página se haya cargado. Para hacerlo, utilizaremos la función
+              fetch, que nos permitirá enviar una solicitud HTTP. La función
+              fetch devuelve una promesa. No entraremos en detalles sobre qué es
+              una promesa aquí, pero podemos pensar en ella como un valor que
+              llegará en algún momento, pero no necesariamente de inmediato.
+              Tratamos con promesas proporcionándoles un atributo .then que
+              describe qué hacer cuando obtenemos una respuesta. El fragmento de
+              código a continuación registrará nuestra respuesta en la consola.
+            </p>
+            <Pre lang="javascript">{
+              /*javascript */ `
+            document.addEventListener('DOMContentLoaded', function() {
+                // Enviar una solicitud GET a la URL
+                fetch('https://api.exchangeratesapi.io/latest?base=USD')
+                // Convertir la respuesta a formato JSON
+                .then(response => response.json())
+                .then(data => {
+                    // Registrar los datos en la consola
+                    console.log(data);
+                });
+            });
+            
+                `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/curr_log.png" />
+            </div>
+            <p>
+              Un punto importante sobre el código anterior es que el argumento
+              de .then siempre es una función. Aunque parece que estamos creando
+              las variables response y data, en realidad son los parámetros de
+              dos funciones anónimas.
+            </p>
+            <p>
+              En lugar de simplemente registrar estos datos, podemos usar
+              JavaScript para mostrar un mensaje en la pantalla, como se muestra
+              en el siguiente código:
+            </p>
+            <Pre lang="javascript">{
+              /*javascript */ `
+              document.addEventListener('DOMContentLoaded', function() {
+                // Enviar una solicitud GET a la URL
+                fetch('https://api.exchangeratesapi.io/latest?base=USD')
+                // Convertir la respuesta a formato JSON
+                .then(response => response.json())
+                .then(data => {
+                    // Obtener la tasa de cambio de los datos
+                    const tasaDeCambio = data.rates.EUR;
+            
+                    // Mostrar un mensaje en la pantalla
+                    document.querySelector('body').innerHTML = \`1 USD es igual a \${tasaDeCambio.toFixed(3)} EUR.\`;
+                });
+            });
+            
+                `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/exchange.png" />
+            </div>
+            <p>
+              Ahora, vamos a hacer que el sitio sea un poco más interactivo al
+              permitir que el usuario elija la moneda que le gustaría ver.
+              Comenzaremos modificando nuestro HTML para permitir al usuario
+              ingresar una moneda:
+            </p>
+            <Pre lang="html">{
+              /*javascript */ `
+              <!DOCTYPE html>
+              <html lang="en">
+                  <head>
+                      <title>Currency Exchange</title>
+                      <script src="currency.js"></script>
+                  </head>
+                  <body>
+                      <form>
+                          <input id="currency" placeholder="Currency" type="text">
+                          <input type="submit" value="Convert">
+                      </form>
+                      <div id="result"></div>
+                  </body>
+              </html>            
+                `
+            }</Pre>
+            <p>
+              Ahora, haremos algunos cambios en nuestro JavaScript para que solo
+              se actualice cuando se envíe el formulario y para que tenga en
+              cuenta la entrada del usuario. También agregaremos algunas
+              verificaciones de errores aquí:
+            </p>
+            <Pre lang="javascript">{
+              /*javascript */ `
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.querySelector('form').onsubmit = function() {
+                
+                        // Enviar una solicitud GET a la URL
+                        fetch('https://api.exchangeratesapi.io/latest?base=USD')
+                        // Convertir la respuesta a formato JSON
+                        .then(response => response.json())
+                        .then(data => {
+                            // Obtener la moneda ingresada por el usuario y convertirla a mayúsculas
+                            const currency = document.querySelector('#currency').value.toUpperCase();
+                
+                            // Obtener la tasa de cambio de los datos
+                            const rate = data.rates[currency];
+                
+                            // Verificar si la moneda es válida:
+                            if (rate !== undefined) {
+                                // Mostrar el tipo de cambio en la pantalla
+                                document.querySelector('#result').innerHTML = \`1 USD es igual a \${rate.toFixed(3)} \${currency}.\`;
+                            }
+                            else {
+                                // Mostrar un mensaje de error en la pantalla
+                                document.querySelector('#result').innerHTML = 'Moneda no válida.';
+                            }
+                        })
+                        // Capturar cualquier error y registrarlo en la consola
+                        .catch(error => {
+                            console.log('Error:', error);
+                        });
+                        // Prevenir la presentación por defecto del formulario
+                        return false;
+                    }
+                });
+                
+                `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/exchange-2.gif" />
+            </div>
+            <p>
+              ¡Eso es todo para este curso de
+              <b className="px-1 py-[2px] bg-amber-400 mx-1 text-md text-black">
+                Js
+              </b>
+              ! La próxima vez, trabajaré para crear interfaces de usuario aún
+              más atractivas.
             </p>
           </article>
         </div>

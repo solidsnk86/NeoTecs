@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
+import { CoffeeIcon } from '../CoffeeIcon';
 
 export const HtmlDoc = () => {
   return (
