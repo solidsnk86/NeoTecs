@@ -27,29 +27,70 @@ export default function Python() {
             <PythontTitle>Python</PythontTitle>
             <hr />
             <Header>Índice</Header>
-            <ol>
-              <li>Introducción</li>
-              <li>Python</li>
-              <li>Variables</li>
-              <li>Formateo de Cadenas</li>
-              <li>Condiciones</li>
-              <li>Secuencias</li>
-              <ul>
-                <li>Cadenas de Texto</li>
-                <li>Listas</li>
-                <li>Tuplas</li>
-                <li>Conjuntos</li>
-                <li>Diccionarios</li>
-                <li>Bucles</li>
-              </ul>
-              <li>Funciones</li>
-              <li>Módulos</li>
-              <li>Programación Orientada a Objetos</li>
-              <li>Programación Funcional</li>
-              <li>Decoradores</li>
-              <li>Funciones Lambda</li>
-              <li>Excepciones</li>
+            <ol className="indice">
+              <li>
+                <a href="#introduccion">Introducción</a>
+              </li>
+              <li>
+                <a href="#python">Python</a>
+              </li>
+              <li>
+                <a href="#variables">Variables</a>
+              </li>
+              <li>
+                <a href="#formateo-de-cadenas">Formateo de Cadenas</a>
+              </li>
+              <li>
+                <a href="#condiciones">Condiciones</a>
+              </li>
+              <li>
+                <a href="#secuencias">Secuencias</a>
+                <ul>
+                  <li>
+                    <a href="#cadenas-de-texto">Cadenas de Texto</a>
+                  </li>
+                  <li>
+                    <a href="#listas">Listas</a>
+                  </li>
+                  <li>
+                    <a href="#tuplas">Tuplas</a>
+                  </li>
+                  <li>
+                    <a href="#conjuntos">Conjuntos</a>
+                  </li>
+                  <li>
+                    <a href="#diccionarios">Diccionarios</a>
+                  </li>
+                  <li>
+                    <a href="#bucles">Bucles</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#funciones">Funciones</a>
+              </li>
+              <li>
+                <a href="#modulos">Módulos</a>
+              </li>
+              <li>
+                <a href="#programacion-orientada-a-objetos">
+                  Programación Orientada a Objetos
+                </a>
+              </li>
+              <li>
+                <a href="#programacion-funcional">Programación Funcional</a>
+              </li>
+              <li>
+                <a href="#decoradores">Decoradores</a>
+              </li>
+              <li>
+                <a href="#funciones-lambda">Funciones Lambda</a>
+              </li>
+              <li>
+                <a href="#excepciones">Excepciones</a>
+              </li>
             </ol>
+            <span id="introduccion" />
             <SectionTitle title="Introducción" />
             <article>
               <p>
@@ -64,6 +105,7 @@ export default function Python() {
                 curso.
               </p>
             </article>
+            <span id="python" />
             <SectionTitle title="Python" />
             <figure>
               <svg xmlns="http://www.w3.org/2000/svg" width="300" height="60">
@@ -202,6 +244,7 @@ export default function Python() {
                 código de máquina antes de poder ejecutarse.
               </li>
             </ul>
+            <span id="variables" />
             <SectionTitle title="Variables" />
             <ul>
               <li>
@@ -287,6 +330,7 @@ export default function Python() {
                 sumar números o concatenar cadenas y listas.
               </li>
             </ul>
+            <span id="formateo-de-cadenas" />
             <SectionTitle title="Formato de Cadenas" />
             <article>
               <p>
@@ -317,6 +361,7 @@ export default function Python() {
                 `
               }</Pre>
             </article>
+            <span id="condiciones" />
             <SectionTitle title="Condiciones" />
             <ul>
               <li>
@@ -405,6 +450,7 @@ export default function Python() {
                 Ahora, el programa funcionará tal como lo teníamos previsto!
               </li>
             </ul>
+            <span id="secuencias" />
             <SectionTitle title="Secuencias" />
             <article>
               <p>
@@ -421,6 +467,7 @@ export default function Python() {
                 de esa secuencia, y ordenado significa que el orden de los
                 objetos es importante.
               </p>
+              <span id="cadenas-de-texto" />
               <Header>Cadenas</Header>
               <ol>
                 <li>Ordenadas: Sí</li>
@@ -448,6 +495,7 @@ export default function Python() {
                 <b className="text-sky-400 mx-1">"a"</b>.
               </p>
             </article>
+            <span id="listas" />
             <Header>Listas</Header>
             <ol>
               <li>Ordenadas: Sí</li>
@@ -495,6 +543,7 @@ export default function Python() {
             <div className="images-client">
               <img src="/images/python-console-2.png" />
             </div>
+            <span id="tuplas" />
             <Header>Tuplas</Header>
             <article>
               <ol>
@@ -550,6 +599,7 @@ export default function Python() {
                 </li>
               </ol>
             </article>
+            <span id="conjuntos" />
             <Header>Conjuntos</Header>
             <article>
               <ol>
@@ -613,6 +663,7 @@ export default function Python() {
                 `
               }</Pre>
             </article>
+            <span id="diccionarios" />
             <Header>Diccionarios</Header>
             <article>
               <ol>
@@ -658,6 +709,7 @@ export default function Python() {
                 `
               }</Pre>
             </article>
+            <span id="bucles" />
             <Header>Bucles</Header>
             <article>
               <ol>
@@ -776,6 +828,7 @@ export default function Python() {
                 `
               }</Pre>
             </article>
+            <span id="Funciones" />
             <SectionTitle title="Funciones" />
           </div>
         </div>
