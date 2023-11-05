@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import { OpenInNew } from '@mui/icons-material';
+import CurrencyConverter from '../../components/CurrencyComponent';
 
 export default function JavaScript() {
   const JavascriptTitle = ({ Tag = 'h1', children }) => {
@@ -16,6 +17,7 @@ export default function JavaScript() {
   const Header = ({ Tag = 'h2', children }) => {
     return <Tag className="text-slate-100">{children}</Tag>;
   };
+
   return (
     <TitlesContextProvider>
       <Nav className="backdrop-blur-md bg-transparent fixed w-full h-12 z-30" />
@@ -1565,6 +1567,7 @@ export default function JavaScript() {
             <div className="images-client">
               <img src="/images/exchange-2.gif" />
             </div>
+            <CurrencyConverter />
             <p>
               ¡Eso es todo para este curso de
               <b className="px-1 py-[2px] bg-amber-400 mx-1 text-md text-black">

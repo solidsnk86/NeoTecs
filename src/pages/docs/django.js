@@ -173,20 +173,35 @@ export default function DjangoDocs() {
           <SectionTitle title="Django" />
           <article>
             <p>
-              Django es un marco de trabajo web basado en Python que nos
-              permitirá escribir código en Python que genera dinámicamente HTML
-              y CSS. La ventaja de utilizar un marco de trabajo como Django es
-              que ya hay mucho código escrito para nosotros que podemos
-              aprovechar.
+              <Link
+                href="https://www.djangoproject.com/"
+                className="mr-1 text-[#0C4B33]"
+              >
+                Django
+              </Link>
+              es un marco de trabajo web basado en Python que nos permitirá
+              escribir código en Python que genera dinámicamente HTML y CSS. La
+              ventaja de utilizar un marco de trabajo como Django es que ya hay
+              mucho código escrito para nosotros que podemos aprovechar.
             </p>
             <ul>
-              <li>
+              <li className="list-css-span">
                 Para comenzar, tendremos que instalar Django, lo que significa
-                que también tendrás que instalar pip si aún no lo has hecho.
+                que también tendrás que
+                <Link
+                  href="https://pip.pypa.io/en/stable/installing/"
+                  className="mx-[3px] text-[#0C4B33]"
+                >
+                  instalar
+                </Link>
+                <span>pip</span> si aún no lo has hecho.
               </li>
               <li>
-                Una vez que tengas Pip instalado, puedes ejecutar pip3 install
-                Django en tu terminal para instalar Django.
+                Una vez que tengas Pip instalado, puedes ejecutar
+                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded border-[#0C4B33] border-b-2">
+                  pip3 install Django
+                </span>
+                en tu terminal para instalar Django.
               </li>
             </ul>
             <p>
