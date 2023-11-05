@@ -9,7 +9,7 @@ export function YouTubeVideo({ video, cpe, children }) {
         className="rounded-xl flex m-auto w-[100%] md-:w-[100%]"
         height={200}
       />
-      <h3 className="text-lg text-slate-100 text-left my-2 font-bold line-clamp-1">
+      <h3 className="text-lg text-slate-100 text-left my-2 font-bold line-clamp-1 xl:line-clamp-2">
         {cpe}
       </h3>
       <div className="text-sm text-left">{children}</div>
