@@ -195,44 +195,54 @@ export default function DjangoDocs() {
             </p>
             <ol>
               <li>
-                Ejecuta django-admin startproject NOMBRE_DEL_PROYECTO para crear
-                una serie de archivos iniciales para nuestro proyecto.
+                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded border-[#0C4B33] border-b-2">
+                  django-admin startproject NOMBRE_DEL_PROYECTO
+                </span>
+                Ejecuta para crear una serie de archivos iniciales para nuestro
+                proyecto.
               </li>
               <li>
-                Ejecuta cd NOMBRE_DEL_PROYECTO para navegar al directorio de tu
-                nuevo proyecto.
+                Ejecuta
+                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded border-[#0C4B33] border-b-2">
+                  cd NOMBRE_DEL_PROYECTO
+                </span>
+                para navegar al directorio de tu nuevo proyecto.
               </li>
               <li>
                 Abre el directorio en tu editor de texto de elección. Notarás
                 que se han creado algunos archivos para ti. No necesitaremos
                 mirar la mayoría de ellos por ahora, pero hay tres que serán muy
                 importantes desde el principio:
-                <ul>
+                <ul className="list-css-span">
                   <li>
-                    manage.py es lo que usamos para ejecutar comandos en nuestro
-                    terminal. No tendremos que editarlo, pero lo usaremos con
-                    frecuencia.
+                    <span>manage.py</span>
+                    es lo que usamos para ejecutar comandos en nuestro terminal.
+                    No tendremos que editarlo, pero lo usaremos con frecuencia.
                   </li>
                   <li>
-                    settings.py contiene algunas configuraciones importantes
-                    para nuestro nuevo proyecto. Hay algunas configuraciones
-                    predeterminadas, pero es posible que deseemos cambiar
-                    algunas de ellas de vez en cuando.
+                    <span>settings.py</span>
+                    contiene algunas configuraciones importantes para nuestro
+                    nuevo proyecto. Hay algunas configuraciones predeterminadas,
+                    pero es posible que deseemos cambiar algunas de ellas de vez
+                    en cuando.
                   </li>
                   <li>
-                    urls.py contiene instrucciones sobre hacia dónde deben ser
-                    dirigidos los usuarios después de navegar a una determinada
-                    URL.
+                    <span>urls.py</span>
+                    contiene instrucciones sobre hacia dónde deben ser dirigidos
+                    los usuarios después de navegar a una determinada URL.
                   </li>
                 </ul>
               </li>
               <li>
-                Para comenzar el proyecto, ejecuta python manage.py runserver.
-                Esto abrirá un servidor de desarrollo al que puedes acceder
-                visitando la URL proporcionada. Este servidor de desarrollo se
-                ejecuta localmente en tu máquina, lo que significa que otras
-                personas no pueden acceder a tu sitio web. Esto te llevará a una
-                página de inicio predeterminada.
+                Para comenzar el proyecto, ejecuta
+                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded border-[#0C4B33] border-b-2">
+                  python manage.py
+                </span>
+                runserver. Esto abrirá un servidor de desarrollo al que puedes
+                acceder visitando la URL proporcionada. Este servidor de
+                desarrollo se ejecuta localmente en tu máquina, lo que significa
+                que otras personas no pueden acceder a tu sitio web. Esto te
+                llevará a una página de inicio predeterminada.
               </li>
             </ol>
             <div className="images-client">
