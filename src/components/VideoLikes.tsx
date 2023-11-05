@@ -89,7 +89,7 @@ export const VideoLikes = ({ videoId }) => {
     }
   }
   return (
-    <div className="flex gap-[12px] xl:gap-[15px] lg:gap-[14px] md:gap-[12px] my-2 sm:mx-2">
+    <div className="flex gap-[12px] xl:gap-[14px] lg:gap-[14px] md:gap-[12px] my-2 sm:mx-2">
       <img className="rounded-full w-10 h-10" src="/images/logos/NeoTecs _Tutorial_logo.png" alt="logo" />
       <div className="flex-col">
         <span className="font-bold">Neo TECs</span>
@@ -100,9 +100,9 @@ export const VideoLikes = ({ videoId }) => {
       </div>
       <aside className="flex bg-[#272727] relative bottom-[2px] rounded-full my-2 w-fit px-3 py-1">
         <span className="flex relative top-[1px] gap-2">
-          <LikeButton /> {likes}
+          <LikeButton onClick={suscribeButton} className='hover:fill-sky-500 cursor-pointer' /> {likes}
           <hr className="border-l-[1px] h-5 border-[#575757] relative bottom-[1px]" />
-          <DisLikeButton />
+          <DisLikeButton className='hover:fill-[tomato] cursor-pointer' onClick={suscribeButton} />
         </span>
       </aside>
       <div className="text-[#575757] bg-[#272727] rounded-full h-[28px] relative top-[6px] px-[6px]" onClick={ShareButton}>

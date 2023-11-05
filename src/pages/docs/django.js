@@ -148,6 +148,9 @@ export default function DjangoDocs() {
               </span>
               indican que podríamos estar pasando más información también.
             </p>
+            <div className="images-client">
+              <img src="/images/request.png" />
+            </div>
           </article>
         </div>
       </div>
