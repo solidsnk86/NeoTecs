@@ -98,7 +98,7 @@ export const VideoLikes = ({ videoId }) => {
       <div>
         <p className="relative top-[6px] mx-1 font-bold px-2 text-[#4E4E4E] py-1 rounded-full bg-[#F1F1F1] cursor-pointer hover:opacity-80" onClick={suscribeButton}>Suscríbete</p>
       </div>
-      <aside className="flex bg-[#272727] relative bottom-[2px] rounded-full my-2 w-fit px-3 py-1">
+      <aside className="flex bg-[#272727] relative bottom-[2px] rounded-full my-2 w-fit px-3 py-1 transition-all">
         <span className="flex relative top-[1px] gap-2">
           <LikeButton onClick={suscribeButton} className='hover:fill-sky-500 cursor-pointer' /> {likes}
           <hr className="border-l-[1px] h-5 border-[#575757] relative bottom-[1px]" />

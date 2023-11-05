@@ -24,22 +24,22 @@ const cardContent = [
   {
     feature: 'Práctico',
     children:
-      ' Neotecs es una guía rápida para aprender a configurar CPE inalámbricos Tp-Link, Ubiquiti, Mikrotik',
+      'Nuestro curso de programación se enfoca en ejercicios prácticos para que puedas aplicar lo que aprendes en proyectos reales.',
   },
   {
     feature: 'Tutoriales',
     children:
-      'Neotecs tiene un canal de youtube con videos muy bien explicados en poco tiempo.',
+      'Ofrecemos tutoriales en video y recursos didácticos para que puedas comprender los conceptos de programación de manera efectiva.',
   },
   {
     feature: 'Documentación',
     children:
-      'Sí, Neotecs tiene documentación más extensa sobre varios modelos y marcas de dispositivos inalámbricos',
+      'Sí, nuestro curso incluye documentación detallada y extensa sobre diversos lenguajes de programación y tecnologías relacionadas.',
   },
   {
     feature: 'Paso a paso',
     children:
-      ' Se explican los distintos tipos de configuración detalladamete en la documentación con imágenes y figuras.',
+      'Explicamos los conceptos de programación paso a paso, con ejemplos y ejercicios que te ayudarán a comprenderlos a fondo.',
   },
 ];
 
