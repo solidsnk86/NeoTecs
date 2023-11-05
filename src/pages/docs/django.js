@@ -133,6 +133,21 @@ export default function DjangoDocs() {
             <div className="images-client">
               <img src="/images/client-removebg-preview.png" />
             </div>
+            <p>
+              En este protocolo, el cliente enviará una solicitud al servidor,
+              que podría lucir algo como el siguiente ejemplo. En el ejemplo a
+              continuación, GET es simplemente un tipo de solicitud, uno de los
+              tres que discutiremos en este curso. La barra diagonal
+              <span className="mx-1 bg-gray-800 px-1 py-[2px] rounded">
+                (/)
+              </span>
+              generalmente indica que estamos buscando la página de inicio del
+              sitio web, y los tres puntos suspensivos
+              <span className="mx-1 bg-gray-800 px-1 py-[2px] rounded">
+                (...)
+              </span>
+              indican que podríamos estar pasando más información también.
+            </p>
           </article>
         </div>
       </div>
