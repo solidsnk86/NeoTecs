@@ -151,6 +151,8 @@ export default function DjangoDocs() {
           </article>
         </div>
       </div>
+      <ShareButton />
+      <Footer />
     </TitlesContextProvider>
   );
 }
