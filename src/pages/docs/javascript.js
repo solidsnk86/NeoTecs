@@ -1567,6 +1567,7 @@ export default function JavaScript() {
             <div className="images-client">
               <img src="/images/exchange-2.gif" />
             </div>
+            <SectionTitle title="Convertir Divisas" />
             <CurrencyConverter />
             <p>
               ¡Eso es todo para este curso de

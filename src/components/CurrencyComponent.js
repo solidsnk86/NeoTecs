@@ -37,7 +37,6 @@ export default function CurrencyConverter() {
 
   return (
     <div>
-      <h2 className="text-slate-300">Convertidor de Moneda</h2>
       <form>
         <label
           htmlFor="currency"
