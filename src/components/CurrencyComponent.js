@@ -40,6 +40,7 @@ export default function CurrencyConverter() {
         >
           Ingresa una divisa (por ejemplo: ARS, BRL, EUR, GBP, etc):
         </label>
+          </br>
         <input
           type="text"
           id="currency"
