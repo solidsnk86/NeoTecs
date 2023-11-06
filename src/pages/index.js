@@ -85,7 +85,7 @@ export default function Home() {
       </HomeBlock>
 
       <MarqueeLogos />
-      <HomeBlock className="justify-center flex m-auto">
+      <HomeBlock>
         <h1 className="text-3xl font-semibold my-4">Cambio de Divisas</h1>
         <p>
           Este es un ejemplo de lo que pueden aprender en éste curso de
