@@ -46,7 +46,7 @@ export default function CurrencyConverter() {
         />
         <button
           type="submit"
-          className="rounded px-4 py-2 mx-2 my-2 outline-2 outline-double hover:bg-gray-800"
+          className="rounded px-4 py-2 mx-3 my-2 outline-2 outline-amber-400 outline-offset-[3px] outline-double bg-gray-800 hover:brightness-150"
         >
           Convertir
         </button>
