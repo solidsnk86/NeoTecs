@@ -1549,7 +1549,8 @@ export default function JavaScript() {
                             // Verificar si la moneda es válida:
                             if (rate !== undefined) {
                                 // Mostrar el tipo de cambio en la pantalla
-                                document.querySelector('#result').innerHTML = \`1 USD es igual a \${rate.toFixed(3)} \${currency}.\`;
+                                document.querySelector('#result').innerHTML = 
+                                \`1 USD es igual a \${rate.toFixed(3)} \${currency}.\`;
                             }
                             else {
                                 // Mostrar un mensaje de error en la pantalla
