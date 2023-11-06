@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 export default function CurrencyConverter() {
   const [currency, setCurrency] = useState('');
   const [result, setResult] = useState('');
+  const [borderColor, setborderColor] = useState('border-red-400');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setborderColor('border-green-400');
 
     try {
       const response = await fetch(`/api/currency`);
@@ -18,6 +20,7 @@ export default function CurrencyConverter() {
           setResult(`1 USD es igual a $ ${rate.toFixed(2)} ${currency}.`);
         } else {
           setResult('Moneda no válida.');
+          setborderColor('border-red-400');
         }
       } else {
         setResult('Error al obtener datos de la API.');
@@ -35,7 +38,7 @@ export default function CurrencyConverter() {
           htmlFor="currency"
           className="mr-2 bg-amber-200 px-1 py-1 text-black font-semibold"
         >
-          Ingresa una moneda (por ejemplo: ARS):
+          Ingresa una moneda (por ejemplo: ARS, EUR, GBP):
         </label>
         <input
           type="text"
@@ -53,7 +56,7 @@ export default function CurrencyConverter() {
       </form>
       <div
         id="result"
-        className="bg-gray-800 px-1 my-2 w-fit border-l-4 border-amber-400"
+        className={`xl:justify-center xl:flex xl:m-auto bg-gray-800 px-1 my-2 w-fit border-l-4 ${borderColor}`}
       >
         {result}
       </div>

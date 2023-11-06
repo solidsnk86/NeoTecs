@@ -5,6 +5,7 @@ import { Footer } from '../components/Footer';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import { MarqueeLogos } from '../sections/Brands';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
+import CurrencyConverter from '../components/CurrencyComponent';
 
 const HomeBlock = ({ className = '', children }) => {
   return (
@@ -84,6 +85,10 @@ export default function Home() {
       </HomeBlock>
 
       <MarqueeLogos />
+      <HomeBlock>
+        <h2 className="text-2xl">Cambio de Divisas</h2>
+        <CurrencyConverter />
+      </HomeBlock>
 
       <Footer />
     </div>

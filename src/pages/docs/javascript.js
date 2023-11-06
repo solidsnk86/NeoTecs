@@ -75,6 +75,9 @@ export default function JavaScript() {
             <li>
               <a href="#cambio-de-moneda">Cambio de moneda</a>
             </li>
+            <li>
+              <a href="#cambio-divisas">Cambio de divisas (ejemplo)</a>
+            </li>
           </ol>
           <span id="introduccion" />
           <SectionTitle title="Introducción a Javascript" />
