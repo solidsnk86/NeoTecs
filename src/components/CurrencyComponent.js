@@ -36,9 +36,9 @@ export default function CurrencyConverter() {
       <form onSubmit={handleSubmit}>
         <label
           htmlFor="currency"
-          className="mr-2 bg-amber-200 px-1 py-1 text-black font-semibold"
+          className="mr-2 bg-zinc-400 rounded px-1 py-1 text-black font-semibold"
         >
-          Ingresa una moneda (por ejemplo: ARS, EUR, GBP):
+          Ingresa una moneda (por ejemplo: ARS, BRL, EUR, GBP):
         </label>
         <input
           type="text"
@@ -56,7 +56,7 @@ export default function CurrencyConverter() {
       </form>
       <div
         id="result"
-        className={`xl:justify-center xl:flex xl:m-auto bg-gray-800 px-1 my-2 w-fit border-l-4 ${borderColor}`}
+        className={`rounded font-mono xl:justify-center xl:flex xl:m-auto bg-gray-800 px-1 my-2 w-fit border-l-[5px] ${borderColor}`}
       >
         {result}
       </div>
