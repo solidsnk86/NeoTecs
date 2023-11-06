@@ -33,7 +33,7 @@ export default function CurrencyConverter() {
       <form onSubmit={handleSubmit}>
         <label
           htmlFor="currency"
-          className="mx-2 bg-amber-200 px-1 py-1 text-black font-semibold"
+          className="mr-2 bg-amber-200 px-1 py-1 text-black font-semibold"
         >
           Ingresa una moneda (por ejemplo: ARS):
         </label>
@@ -46,7 +46,7 @@ export default function CurrencyConverter() {
         />
         <button
           type="submit"
-          className="rounded px-4 py-2 mx-3 my-2 outline-2 outline-amber-400 outline-offset-[3px] outline-double bg-gray-800 hover:brightness-150"
+          className="rounded px-4 py-2 mx-3 my-4 outline-2 outline-amber-400 outline-offset-[3px] outline-double bg-gray-800 hover:brightness-150"
         >
           Convertir
         </button>

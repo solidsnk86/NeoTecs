@@ -13,7 +13,7 @@ export default function handlerCurrency(req, res) {
       AMD: 428.251678,
       ANG: 1.918236,
       AOA: 893.378488,
-      ARS: 372.720703,
+      ARS: 925.720703,
       AUD: 1.64709,
       AWG: 1.931631,
       AZN: 1.825974,
