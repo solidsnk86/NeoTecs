@@ -32,31 +32,31 @@ export default function CurrencyConverter() {
   };
 
   return (
-    <div>
+    <div className="flex flex-col space-y-1">
       <form onSubmit={handleSubmit}>
         <label
           htmlFor="currency"
-          className="mr-2 bg-zinc-400 rounded px-1 py-1 text-black font-semibold"
+          className="mr-2 mt-4 bg-zinc-400 rounded px-1 py-1 text-black font-semibold"
         >
-          Ingresa una moneda (por ejemplo: ARS, BRL, EUR, GBP):
+          Ingresa una moneda (por ejemplo: ARS, BRL, EUR, GBP, etc):
         </label>
         <input
           type="text"
           id="currency"
           value={currency}
           onChange={(e) => setCurrency(e.target.value)}
-          className="text-black uppercase font-semibold"
+          className="text-black uppercase font-semibold my-6"
         />
         <button
           type="submit"
-          className="rounded px-4 py-2 mx-3 my-4 outline-2 outline-amber-400 outline-offset-[3px] outline-double bg-gray-800 hover:brightness-150"
+          className="rounded px-4 py-2 mx-3 mb-3 outline-2 outline-amber-400 outline-offset-[3px] outline-double bg-gray-800 hover:brightness-150"
         >
           Convertir
         </button>
       </form>
       <div
         id="result"
-        className={`rounded font-mono xl:justify-center xl:flex xl:m-auto bg-gray-800 px-1 my-2 w-fit border-l-[5px] ${borderColor}`}
+        className={`rounded font-mono xl:justify-center xl:flex xl:m-auto bg-gray-800 px-1 my-6 w-fit border-l-[5px] ${borderColor}`}
       >
         {result}
       </div>

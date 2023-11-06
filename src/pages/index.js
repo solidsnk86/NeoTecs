@@ -86,7 +86,7 @@ export default function Home() {
 
       <MarqueeLogos />
       <HomeBlock>
-        <h2 className="text-2xl">Cambio de Divisas</h2>
+        <h2 className="text-2xl my-4">Cambio de Divisas</h2>
         <CurrencyConverter />
       </HomeBlock>
 
