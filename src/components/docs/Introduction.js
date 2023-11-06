@@ -1,5 +1,6 @@
 import { SectionTitle } from '../SectionTitle';
 import Link from 'next/link';
+import { OpenInNew } from '@mui/icons-material';
 
 export const Introduction = () => {
   const IntroTitle = ({ Tag = 'h1', children }) => {
@@ -35,18 +36,7 @@ export const Introduction = () => {
           </ul>
         </li>
         <li>
-          <a href="#css">CSS (Hojas de estilo en cascada)</a>
-        </li>
-        <li>
-          <a href="#diseno-responsivo">Diseño Responsivo</a>
-        </li>
-        <li>
-          <a href="#bootstrap">Bootstrap</a>
-        </li>
-        <li>
-          <a href="#sass">
-            Sass (Hojas de estilo Sintácticamente impresionantes)
-          </a>
+          <a href="#cheat">Cheat Sheet HTML</a>
         </li>
       </ol>
       <span id="introduccion" />
@@ -64,18 +54,22 @@ export const Introduction = () => {
           href="https://code.visualstudio.com/"
         >
           Visual Studio Code
+          <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
         </Link>
         ,
         <Link className="mx-1 text-red-400" href="https://www.sublimetext.com/">
           Sublime Text
+          <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
         </Link>
         ,
         <Link className="mx-1 text-red-400" href="https://atom.io/">
           Atom
+          <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
         </Link>
         y
         <Link className="mx-1 text-red-400" href="https://www.vim.org/">
           Vim
+          <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
         </Link>
         , ¡pero hay muchas opciones más para elegir!
       </p>

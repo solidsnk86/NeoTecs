@@ -1,8 +1,7 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
-import { useEffect } from "react";
 
 export const VideoLikes = ({ videoId }) => {
   const [likes, setLikes] = useState(0);

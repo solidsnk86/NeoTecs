@@ -100,7 +100,7 @@ export default function DjangoDocs() {
                 className="mx-1 text-slate-400"
               >
                 The New York Times
-                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               o
               <Link
@@ -108,7 +108,7 @@ export default function DjangoDocs() {
                 className="mx-1 text-slate-400"
               >
                 Facebook
-                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               , por ejemplo, es probable que veas cosas diferentes hoy que
               mañana. Para sitios grandes como esos, sería poco razonable que

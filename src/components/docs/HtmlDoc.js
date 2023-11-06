@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
+import { OpenInNew } from '@mui/icons-material';
 
 export const HtmlDoc = () => {
   return (
@@ -192,6 +193,7 @@ export const HtmlDoc = () => {
           className="mx-1 text-amber-400"
         >
           Live Server
+          <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
         </Link>
         .
       </p>

@@ -5,7 +5,6 @@ import { Footer } from '../components/Footer';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import { MarqueeLogos } from '../sections/Brands';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
-import CurrencyConverter from '../components/CurrencyComponent';
 
 const HomeBlock = ({ className = '', children }) => {
   return (
@@ -25,17 +24,17 @@ const cardContent = [
   {
     feature: 'Práctico',
     children:
-      'Nuestro curso de programación se enfoca en ejercicios prácticos para que puedas aplicar lo que aprendes en proyectos reales.',
+      'Este curso de programación se enfoca en ejercicios prácticos para que puedas aplicar lo que aprendes en proyectos reales.',
   },
   {
     feature: 'Tutoriales',
     children:
-      'Ofrecemos tutoriales en video y recursos didácticos para que puedas comprender los conceptos de programación de manera efectiva.',
+      'NeoTecs ofrece tutoriales en video y recursos didácticos para que puedas comprender a configurar tu wifi de manera efectiva.',
   },
   {
     feature: 'Documentación',
     children:
-      'Sí, nuestro curso incluye documentación detallada y extensa sobre diversos lenguajes de programación y tecnologías relacionadas.',
+      'Sí, el curso incluye documentación detallada y extensa sobre diversos lenguajes de programación y tecnologías relacionadas.',
   },
   {
     feature: 'Paso a paso',
@@ -85,21 +84,6 @@ export default function Home() {
       </HomeBlock>
 
       <MarqueeLogos />
-      <HomeBlock>
-        <h1 className="text-3xl font-semibold my-4">Cambio de Divisas</h1>
-        <p>
-          Este es un ejemplo de lo que pueden aprender en éste curso de
-          Javascript
-          <Link
-            href="/docs/javascript#cambio-de-moneda"
-            className="text-amber-400 underline mx-1"
-          >
-            aquí
-          </Link>
-          .
-        </p>
-        <CurrencyConverter />
-      </HomeBlock>
 
       <Footer />
     </div>

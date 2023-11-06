@@ -179,7 +179,7 @@ export default function JavaScript() {
                 className="mx-1 text-amber-600"
               >
                 Programación Orientada a Eventos
-                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               .
             </p>
@@ -199,7 +199,7 @@ export default function JavaScript() {
                 className="mx-1 text-amber-600"
               >
                 Escuchadores de Eventos
-                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               que esperan a que ocurran ciertos eventos y luego ejecutan algún
               código.
@@ -212,7 +212,7 @@ export default function JavaScript() {
                 className="mx-1 text-amber-600"
               >
                 función
-                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               llamada "hola":
             </p>
@@ -351,7 +351,7 @@ export default function JavaScript() {
                 className="text-amber-600 mx-1"
               >
                 condiciones
-                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               en JavaScript. Por ejemplo, supongamos que en lugar de cambiar
               siempre nuestro encabezado a "Goodbye!", queremos alternar entre
@@ -599,7 +599,7 @@ export default function JavaScript() {
                 className="text-amber-600 mx-1"
               >
                 anónima
-                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               , que es una función a la que nunca se le da un nombre. Reuniendo
               todo esto, nuestro código JavaScript ahora se ve de la siguiente
@@ -718,7 +718,7 @@ export default function JavaScript() {
                   className="text-amber-400 mx-1"
                 >
                   Bootstrap
-                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 tiene su propia biblioteca de JavaScript que puedes incluir para
                 hacer tu sitio más interactivo.
@@ -1098,7 +1098,7 @@ export default function JavaScript() {
                   className="mx-1 text-amber-600"
                 >
                   createElement
-                  <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 . Luego, podemos agregar esos elementos al DOM utilizando la
                 función
@@ -1171,7 +1171,7 @@ export default function JavaScript() {
               className="mx-1 text-amber-600"
             >
               setIntervals
-              <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+              <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
             </Link>
             , que toma como argumento una función que se ejecutará y un
             intervalo de tiempo (en milisegundos) entre las ejecuciones de la
@@ -1279,7 +1279,7 @@ export default function JavaScript() {
               className="mx-1 text-amber-600"
             >
               objeto de JavaScript
-              <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+              <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
             </Link>
             es muy similar a un diccionario en Python, ya que nos permite
             almacenar pares clave-valor. Por ejemplo, podría crear un objeto de
@@ -1336,7 +1336,7 @@ export default function JavaScript() {
               className="text-amber-600 mx-1"
             >
               APIs
-              <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+              <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
             </Link>
             .
           </p>
@@ -1356,7 +1356,7 @@ export default function JavaScript() {
               className="text-amber-600 mx-1"
             >
               JSON
-              <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+              <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
             </Link>
             podría verse así:
           </p>
@@ -1401,7 +1401,7 @@ export default function JavaScript() {
                 className="text-amber-600 mx-1"
               >
                 Banco Central Europeo
-                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               . Si visitas su sitio web, verás la documentación de la API, que
               generalmente es un buen lugar para comenzar cuando deseas utilizar
@@ -1411,7 +1411,7 @@ export default function JavaScript() {
                 className="text-amber-600 mx-1"
               >
                 https://api.exchangeratesapi.io/latest?base=USD
-                <OpenInNew className="inline w-4 h-4 font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               . Cuando visites esta página, verás la tasa de cambio entre el
               dólar estadounidense y muchas otras monedas, escrita en formato
