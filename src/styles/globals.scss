@@ -87,6 +87,11 @@ body.light {
   color: #1e1e1e;
 }
 
+body.dark {
+  background-color: #0f0f0f;
+  color: #fafafa;
+}
+
 html::-webkit-scrollbar,
 .scroll-style::-webkit-scrollbar {
   width: 11px;
