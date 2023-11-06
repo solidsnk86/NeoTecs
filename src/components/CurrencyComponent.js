@@ -4,41 +4,36 @@ export default function CurrencyConverter() {
   const [currency, setCurrency] = useState('');
   const [result, setResult] = useState('');
 
-  useEffect(() => {
-    const handleSubmit = (e) => {
-      e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-      fetch('/api/currency')
-        .then((response) => response.json())
-        .then((data) => {
-          const rate = data.rates[currency.toUpperCase()];
+    try {
+      const response = await fetch(`/api/currency`);
 
-          if (rate !== undefined) {
-            setResult(`1 USD es igual a $ ${rate.toFixed(3)} ${currency}.`);
-          } else {
-            setResult('Moneda no válida.');
-          }
-        })
-        .catch((error) => {
-          console.log('Error:', error);
-        });
-    };
+      if (response.ok) {
+        const data = await response.json();
+        const rate = data.rates[currency.toUpperCase()];
 
-    document.querySelector('form').addEventListener('submit', handleSubmit);
-
-    return () => {
-      document
-        .querySelector('form')
-        .removeEventListener('submit', handleSubmit);
-    };
-  }, [currency]);
+        if (rate !== undefined) {
+          setResult(`1 USD es igual a $ ${rate.toFixed(2)} ${currency}.`);
+        } else {
+          setResult('Moneda no válida.');
+        }
+      } else {
+        setResult('Error al obtener datos de la API.');
+      }
+    } catch (error) {
+      console.log('Error:', error);
+      setResult('Error al obtener datos de la API.');
+    }
+  };
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label
           htmlFor="currency"
-          className="mr-2 bg-amber-200 px-1 py-1 text-black font-semibold"
+          className="mx-2 bg-amber-200 px-1 py-1 text-black font-semibold"
         >
           Ingresa una moneda (por ejemplo: ARS):
         </label>
@@ -51,14 +46,14 @@ export default function CurrencyConverter() {
         />
         <button
           type="submit"
-          className="rounded px-4 py-1 mx-3 my-4 hover:outline-2 outline-amber-400 hover:outline-double outline-offset-2 bg-[#484848]"
+          className="rounded px-4 py-2 mx-2 my-2 outline-2 outline-double hover:bg-gray-800"
         >
           Convertir
         </button>
       </form>
       <div
         id="result"
-        className="bg-gray-800 px-1 my-2 w-fit border-l-4 border-amber-400 visible"
+        className="bg-gray-800 px-1 my-2 w-fit border-l-4 border-amber-400"
       >
         {result}
       </div>
