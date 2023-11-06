@@ -8,9 +8,7 @@ export default function CurrencyConverter() {
     const handleSubmit = (e) => {
       e.preventDefault();
 
-      fetch(
-        `http://api.exchangeratesapi.io/v1/latest?access_key=1f570f73b9cc19ca2273e8b1b2616999`,
-      )
+      fetch('/api/currency')
         .then((response) => response.json())
         .then((data) => {
           const rate = data.rates[currency.toUpperCase()];
@@ -40,7 +38,7 @@ export default function CurrencyConverter() {
       <form>
         <label
           htmlFor="currency"
-          className="mx-2 bg-amber-200 px-1 py-1 text-black font-semibold"
+          className="mr-2 bg-amber-200 px-1 py-1 text-black font-semibold"
         >
           Ingresa una moneda (por ejemplo: ARS):
         </label>
@@ -53,14 +51,14 @@ export default function CurrencyConverter() {
         />
         <button
           type="submit"
-          className=" rounded px-4 py-2 mx-2 outline-2 outline-double hover:bg-gray-800"
+          className="rounded px-4 py-1 mx-3 my-4 hover:outline-2 outline-amber-400 hover:outline-double outline-offset-2 bg-[#484848]"
         >
           Convertir
         </button>
       </form>
       <div
         id="result"
-        className="bg-gray-800 px-1 my-2 w-fit border-l-4 border-amber-400"
+        className="bg-gray-800 px-1 my-2 w-fit border-l-4 border-amber-400 visible"
       >
         {result}
       </div>
