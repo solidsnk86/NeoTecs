@@ -247,9 +247,10 @@ export const MarqueeLogos = () => {
                             <ReviewCard key={review.name} {...review} />
                         ))}
                 </Marquee>
+
+                <div className="absolute inset-y-0 left-0 w-40 pointer-events-none from-[#000214] to-transparent bg-gradient-to-r "></div>
+                <div className="absolute inset-y-0 right-0 w-1/3 pointer-events-none bg-gradient-to-l from-[#000214]"></div>
             </div>
-            <div className="absolute inset-y-0 left-0 w-40 pointer-events-none from-[#000214] to-transparent bg-gradient-to-r "></div>
-            <div className="absolute inset-y-0 right-0 w-1/3 pointer-events-none bg-gradient-to-l from-[#000214]"></div>
         </section>
     );
 };

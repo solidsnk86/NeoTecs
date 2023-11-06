@@ -60,9 +60,11 @@ export const NavSwitch = ({ inline }) => {
               ? 'xl:bg-[#484848] border-orange-300 border-b-4 xl:border-none'
               : 'hover:bg-[#CCCCCC] hover:bg-opacity-10'
           }`}
-          title={link.title}
         >
-          <h3 className="font-semibold text-slate-100 line-clamp-1 xl:line-clamp-none">
+          <h3
+            className="font-semibold text-slate-100 line-clamp-1 xl:line-clamp-none tooltip"
+            data-tooltip={link.title}
+          >
             {link.title}
           </h3>
         </Link>

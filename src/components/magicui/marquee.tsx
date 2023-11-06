@@ -19,7 +19,7 @@ export const Marquee = ({
         <div
             {...props}
             className={cn(
-                'flex xl:w-1/2 md:w-3/4 sm:w-full m-auto overflow-x-hidden [--duration:40s] [--gap:5rem]',
+                'flex xl:w-1/2 md:w-3/4 sm:w-full m-auto overflow-x-hidden [--duration:40s] [--gap:5rem] grayscale-[100%] transition-all hover:grayscale-0',
                 className
             )}
         >

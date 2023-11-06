@@ -24,6 +24,7 @@ export default function CurrencyConverter() {
         }
       } else {
         setResult('Error al obtener datos de la API.');
+        setborderColor('border-amber-400');
       }
     } catch (error) {
       console.log('Error:', error);

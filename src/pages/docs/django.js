@@ -116,9 +116,9 @@ export default function DjangoDocs() {
               cada vez que se realice un cambio, es ahí donde las páginas web
               dinámicas pueden ser extremadamente útiles. Un sitio web dinámico
               es aquel que aprovecha un lenguaje de programación (como Python)
-              para generar dinámicamente archivos HTML y CSS. Durante esta
-              conferencia, aprenderemos cómo crear nuestras primeras
-              aplicaciones dinámicas.
+              para generar dinámicamente archivos HTML y CSS. Durante este
+              curso, aprenderemos cómo crear nuestras primeras aplicaciones
+              dinámicas.
             </p>
           </article>
           <span id="http" />
