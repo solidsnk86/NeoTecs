@@ -19,7 +19,7 @@ export default function Python() {
   return (
     <main>
       <TitlesContextProvider>
-        <Nav className="backdrop-blur-md bg-transparent fixed w-full h-12 z-30" />
+        <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-30" />
         <div className="max-w-screen-xl mx-auto flex items-stretch py-16">
           <LectureNav />
           <div className="w-full max-w-none prose px-4 md:px-8 text-slate-100">
@@ -831,6 +831,14 @@ export default function Python() {
             <ShareButton />
             <span id="Funciones" />
             <SectionTitle title="Funciones" />
+            <article>
+              <p>
+                Ya hemos visto algunas funciones de Python, como print e input,
+                pero ahora vamos a adentrarnos en escribir nuestras propias
+                funciones. Para comenzar, escribiremos una función que toma un
+                número y lo eleva al cuadrado:
+              </p>
+            </article>
           </div>
         </div>
         <Footer />

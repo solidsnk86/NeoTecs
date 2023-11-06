@@ -2,6 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary-shade: #004892;
+  --color-primary-tint: #0070e4;
+  --color-primary-rgb: 0, 92, 187;
+  --color-primary: #005cbb;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #d7e3ff;
+  --color-on-primary-container: #001b3f;
+  --color-secondary: #565e71;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #dae2f9;
+  --color-on-secondary-container: #131c2b;
+  // --color-surface: #fdfbff;
+  --color-surface: #ffffff;
+  --color-on-surface: #1a1b1f;
+  --color-surface-variant: #e0e2ec;
+  --color-on-surface-variant: #44474e;
+  --color-outline: #74777f;
+  --color-outline-variant: #c4c6d0;
+  --color-inverse-surface: #2f3033;
+  --color-inverse-on-surface: #f2f0f4;
+  --color-inverse-primary: #abc7ff;
+  --color-surface-0: #f3f5f9;
+  --color-surface-1: #f0f3fc;
+  --color-surface-2: #e9eefa;
+  --color-surface-3: #e1eaf8;
+  --color-surface-4: #dfe8f7;
+  --color-surface-5: #dae5f5;
+
+  --color-code: #6f43c0;
+  --color-pre-bg: #21242a;
+  --color-pre-color: #e3e2e6;
+  --color-red: #c0000a;
+  --color-green: #006e24;
+  --color-orange: #8c5000;
+}
+.dark {
+  --color-primary-shade: #82acff;
+  --color-primary-tint: #d4e2ff;
+  --color-primary-rgb: 171, 199, 255;
+  --color-primary: #abc7ff;
+  --color-on-primary: #002f65;
+  --color-primary-container: #00458f;
+  --color-on-primary-container: #d7e3ff;
+  --color-secondary: #bec6dc;
+  --color-on-secondary: #283041;
+  --color-secondary-container: #3e4759;
+  --color-on-secondary-container: #dae2f9;
+  --color-surface: #1a1b1f;
+  --color-on-surface: #e3e2e6;
+  --color-surface-variant: #44474e;
+  --color-on-surface-variant: #c4c6d0;
+  --color-outline: #8e9099;
+  --color-outline-variant: #44474e;
+  --color-inverse-surface: #e3e2e6;
+  --color-inverse-on-surface: #2f3033;
+  --color-inverse-primary: #005cbb;
+  --color-surface-0: #141518;
+  --color-surface-1: #21242a;
+  --color-surface-2: #262931;
+  --color-surface-3: #2a2e38;
+  --color-surface-4: #2b303a;
+  --color-surface-5: #2e333e;
+
+  --color-code: #d3bbff;
+  --color-red: #ffb4aa;
+  --color-green: #55e16b;
+  --color-orange: #ffb874;
+}
+
 html,
 body {
   padding: 0;
