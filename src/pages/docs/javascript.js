@@ -1570,6 +1570,7 @@ export default function JavaScript() {
             <div className="images-client">
               <img src="/images/exchange-2.gif" />
             </div>
+            <span id="cambio-divisas" />
             <SectionTitle title="Convertir Divisas" />
             <CurrencyConverter />
             <p>

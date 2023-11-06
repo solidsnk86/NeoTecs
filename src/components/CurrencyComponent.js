@@ -38,12 +38,13 @@ export default function CurrencyConverter() {
           htmlFor="currency"
           className="mr-2 mt-4 bg-zinc-400 rounded px-1 py-1 text-black font-semibold"
         >
-          Ingresa una moneda (por ejemplo: ARS, BRL, EUR, GBP, etc):
+          Ingresa una divisa (por ejemplo: ARS, BRL, EUR, GBP, etc):
         </label>
         <input
           type="text"
           id="currency"
           value={currency}
+          placeholder="divisa"
           onChange={(e) => setCurrency(e.target.value)}
           className="text-black uppercase font-semibold my-6"
         />
@@ -56,7 +57,7 @@ export default function CurrencyConverter() {
       </form>
       <div
         id="result"
-        className={`rounded font-mono xl:justify-center xl:flex xl:m-auto bg-gray-800 px-1 my-6 w-fit border-l-[5px] ${borderColor}`}
+        className={`rounded font-mono  bg-gray-800 px-1 my-6 w-fit border-l-[5px] ${borderColor}`}
       >
         {result}
       </div>

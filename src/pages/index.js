@@ -85,8 +85,19 @@ export default function Home() {
       </HomeBlock>
 
       <MarqueeLogos />
-      <HomeBlock>
-        <h2 className="text-2xl my-4">Cambio de Divisas</h2>
+      <HomeBlock className="justify-center flex m-auto">
+        <h1 className="text-3xl font-semibold my-4">Cambio de Divisas</h1>
+        <p>
+          Este es un ejemplo de lo que pueden aprender en éste curso de
+          Javascript
+          <Link
+            href="/docs/javascript#cambio-de-moneda"
+            className="text-amber-400 underline mx-1"
+          >
+            aquí
+          </Link>
+          .
+        </p>
         <CurrencyConverter />
       </HomeBlock>
 
