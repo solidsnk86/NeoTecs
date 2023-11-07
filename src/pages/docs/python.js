@@ -223,7 +223,7 @@ export default function Python() {
                   className="mx-1 text-sky-600"
                 >
                   Python
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 si aún no lo han hecho. Después de instalar Python, recomendamos
                 que también descarguen
@@ -232,7 +232,7 @@ export default function Python() {
                   className="mx-1 text-sky-600"
                 >
                   Pip
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 , ya que lo necesitarán más adelante en el curso.
               </li>
@@ -401,7 +401,7 @@ export default function Python() {
                   className="text-sky-800 mx-1"
                 >
                   excepción
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 que se ve así:
               </li>
@@ -508,7 +508,7 @@ export default function Python() {
                 className="text-sky-800 mx-1"
               >
                 lista en Python
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               te permite almacenar cualquier tipo de variable. Creamos una lista
               utilizando corchetes cuadrados y comas, como se muestra a
@@ -569,7 +569,7 @@ export default function Python() {
                   className="text-sky-800 mx-1"
                 >
                   tupla
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 es uno de los 4 tipos de datos incorporados en Python que se
                 utilizan para almacenar colecciones de datos. Los otros 3 son
@@ -613,7 +613,7 @@ export default function Python() {
                   className="text-sky-800 mx-1"
                 >
                   conjuntos
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 son diferentes de las listas y las tuplas en que son
                 desordenados. También son diferentes porque, mientras puedes
@@ -677,7 +677,7 @@ export default function Python() {
                   className="text-sky-800 mx-1"
                 >
                   diccionarios
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 de Python, o dicts, serán especialmente útiles en este curso. Un
                 diccionario es un conjunto de pares clave-valor, donde cada
@@ -723,7 +723,7 @@ export default function Python() {
                   className="text-sky-800 mx-1"
                 >
                   bucles
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
                 </Link>
                 Los son una parte increíblemente importante de cualquier
                 lenguaje de programación, y en Python, existen dos formas

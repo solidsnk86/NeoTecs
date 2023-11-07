@@ -673,7 +673,7 @@ export default function CssDoc() {
               className="text-amber-600 mx-1"
             >
               flexbox
-              <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
+              <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
             </Link>
             . Esto nos permite que los elementos se ajusten fácilmente a la
             siguiente línea si no caben horizontalmente. Para lograrlo,
@@ -809,7 +809,7 @@ export default function CssDoc() {
                 className="text-amber-600 mx-1"
               >
                 Bootstrap
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               navegando a la sección de documentación de su sitio web. En esta
               página, encontrarás numerosos ejemplos de clases que puedes
@@ -822,7 +822,7 @@ export default function CssDoc() {
                 className="text-amber-600 mx-1"
               >
                 sistema de cuadrícula
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               . Bootstrap divide automáticamente una página en 12 columnas, y
               podemos decidir cuántas columnas ocupa un elemento agregando la
@@ -961,7 +961,7 @@ export default function CssDoc() {
                 className="text-amber-600 mx-1"
               >
                 Sass
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               es un lenguaje que nos permite escribir CSS de manera más
               eficiente de varias maneras, una de las cuales es permitiéndonos
@@ -1019,7 +1019,7 @@ export default function CssDoc() {
                 className="text-amber-600 mx-1"
               >
                 descargar un programa llamado Sass
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
               </Link>
               en nuestras computadoras. Luego, en la terminal, escribimos
               <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
@@ -1082,7 +1082,7 @@ export default function CssDoc() {
               className="mx-1 text-amber-600"
             >
               herencia
-              <OpenInNew className="inline xl:w-4 xl:h-4 w-[14px] h-[14px] font-thin bottom-[1px] relative mx-[2px]" />
+              <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
             </Link>
             . Esto nos permite crear un conjunto básico de estilos que pueden
             ser compartidos por varios elementos diferentes. Lo hacemos
