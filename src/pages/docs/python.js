@@ -702,7 +702,7 @@ export default function Python() {
                 # Imprimir la Casa de Hermione:
                 print(casas["Hermione"])
                 
-                """ Salida:
+                """ Output:
                 Gryffindor
                 Gryffindor
                 """
@@ -754,14 +754,14 @@ export default function Python() {
                 for i in [0, 1, 2, 3, 4, 5]:
                 print(i)
             
-            """ Output:
-            0
-            1
-            2
-            3
-            4
-            5
-            """
+                """ Output:
+                0
+                1
+                2
+                3
+                4   
+                5
+                """
                 `
               }</Pre>
               <ul>
@@ -794,10 +794,10 @@ export default function Python() {
               </li>
               <Pre lang="javascript">{
                 /*python */ `
-                # Create a list:
+                # Crea una lista:
                 names = ["Harry", "Ron", "Hermione"]
                 
-                # Print each name:
+                # Imprime en pantalla cada nombre:
                 for name in names:
                     print(name)
                 
@@ -833,10 +833,551 @@ export default function Python() {
             <SectionTitle title="Funciones" />
             <article>
               <p>
-                Ya hemos visto algunas funciones de Python, como print e input,
-                pero ahora vamos a adentrarnos en escribir nuestras propias
+                Ya hemos visto algunas funciones de Python, como
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  print
+                </span>
+                e
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  input
+                </span>
+                , pero ahora vamos a adentrarnos en escribir nuestras propias
                 funciones. Para comenzar, escribiremos una función que toma un
                 número y lo eleva al cuadrado:
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                def square(x):
+                return x * x
+                `
+              }</Pre>
+              <p>
+                Observa cómo utilizamos la palabra clave
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  "def"
+                </span>
+                para indicar que estamos definiendo una función, que estamos
+                tomando una única entrada llamada
+                <b className="text-sky-400 mx-1">"x"</b> y que utilizamos la
+                palabra clave
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  "return"
+                </span>
+                para indicar cuál debe ser la salida de la función.
+              </p>
+              <p>
+                Luego podemos <b className="text-sky-400 mx-1">"llamar"</b> a
+                esta función de la misma manera en que hemos llamado a otras:
+                <br />
+                utilizando paréntesis:
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                for i in range(10):
+                print(f"The square of {i} is {square(i)}")
+            
+                """ Output:
+                El cuadrado de 0 es 0
+                El cuadrado de 1 es 1
+                El cuadrado de 2 es 4
+                El cuadrado de 3 es 9
+                El cuadrado de 4 es 16
+                El cuadrado de 5 es 25
+                El cuadrado de 6 es 36
+                El cuadrado de 7 es 49
+                El cuadrado de 8 es 64
+                El cuadrado de 9 es 81
+                """
+                `
+              }</Pre>
+            </article>
+            <span id="modulos" />
+            <SectionTitle title="Módulos" />
+            <article>
+              <p>
+                A medida que nuestros proyectos se vuelvan más grandes, será
+                útil poder escribir funciones en un archivo y ejecutarlas en
+                otro. En el caso anterior, podríamos crear un archivo llamado
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  "functions.py"
+                </span>
+                con el código:
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                def square(x):
+                return x * x
+                `
+              }</Pre>
+              <p>
+                Y otro archivo llamado
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  "square.py"
+                </span>
+                con el código:
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                for i in range(10):
+                print(f"The square of {i} is {square(i)}")
+                `
+              }</Pre>
+              <p>
+                Sin embargo, cuando intentemos ejecutar
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  "square.py"
+                </span>
+                , nos adentraremos en el siguiente error:
+              </p>
+              <div className="images-client">
+                <img src="/images/NameError.png" />
+              </div>
+              <p>
+                Nos encontramos con este problema porque, de forma
+                predeterminada, los archivos de Python no saben acerca de los
+                demás, por lo que debemos importar explícitamente la función
+                <b className="text-sky-400 mx-1">"square"</b> desde el módulo
+                <b className="text-sky-400 mx-1">"functions"</b> que acabamos de
+                escribir. Ahora, cuando
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  "square.py"
+                </span>
+                se ve así:
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                from functions import square
+
+                for i in range(10):
+                    print(f"The square of {i} is {square(i)}")
+                `
+              }</Pre>
+              <p>
+                Alternativamente, podemos optar por importar el módulo completo
+                <b className="text-sky-400 mx-1">"functions"</b> y luego
+                utilizar la notación de punto para acceder a la función
+                <b className="text-sky-400 mx-1">"square"</b>:
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                import functions
+
+                for i in range(10):
+                    print(f"The square of {i} is {functions.square(i)}")
+                `
+              }</Pre>
+              <p>
+                Existen muchos módulos incorporados en Python que podemos
+                importar, como "math" o "csv", que nos brindan acceso a aún más
+                funciones. Además, podemos descargar aún más módulos para
+                acceder a una funcionalidad adicional. Pasaremos mucho tiempo
+                utilizando el módulo Django, que veremos en la próxima etapa.
+              </p>
+            </article>
+            <span id="programacion-orientada-a-objetos" />
+            <SectionTitle title="Programación Orientada a Objetos" />
+            <article>
+              <p>
+                La
+                <Link
+                  href="https://en.wikipedia.org/wiki/Object-oriented_programming"
+                  className="mx-1 text-sky-600"
+                >
+                  Programación Orientada a Objetos
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
+                </Link>
+                es un paradigma de programación, o una forma de pensar acerca de
+                la programación, que se centra en objetos que pueden almacenar
+                información y realizar acciones.
+              </p>
+              <ul>
+                <li>
+                  <b>Clases</b>: Ya hemos visto varios tipos diferentes de
+                  variables en Python, pero ¿qué pasa si queremos crear nuestro
+                  propio tipo? Una clase en Python es esencialmente una
+                  plantilla para un nuevo tipo de objeto que puede almacenar
+                  información y realizar acciones. Aquí tienes una clase que
+                  define un punto bidimensional:
+                </li>
+              </ul>
+              <Pre lang="javascript">{
+                /*python */ `
+                class Point():
+                # Un método para definir como crear un punto:
+                def __init__(self, x, y):
+                    self.x = x
+                    self.y = y
+                `
+              }</Pre>
+              <p>
+                en en cuenta que en el código anterior, utilizamos la palabra
+                clave
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  "self"
+                </span>
+                para representar el objeto con el que estamos trabajando
+                actualmente.
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  "self"
+                </span>
+                debe ser el primer argumento para cualquier método dentro de una
+                clase de Python.
+              </p>
+              <ul>
+                <li>
+                  Ahora, veamos cómo realmente podemos usar la clase de arriba
+                  para crear un objeto:
+                </li>
+              </ul>
+              <Pre lang="javascript">{
+                /*python */ `
+                p = Point(2, 8)
+                print(p.x)
+                print(p.y)
+                
+                """ Output:
+                2
+                8
+                """
+                `
+              }</Pre>
+              <p>
+                Ahora, veamos un ejemplo más interesante en el que, en lugar de
+                almacenar solo las coordenadas de un punto, creamos una clase
+                que representa un vuelo de aerolínea:
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                class Flight():
+                # Método para crear un vuelo nuevo y su capacidad:
+                def __init__(self, capacity):
+                    self.capacity = capacity
+                    self.passengers = []
+            
+                    # Método para agregar pasajeros al vuelo:
+                def add_passenger(self, name):
+                    self.passengers.append(name)
+                `
+              }</Pre>
+              <p>
+                Sin embargo, esta clase tiene una falla, ya que aunque
+                establecemos una capacidad, todavía podríamos agregar demasiados
+                pasajeros. Vamos a mejorarla para que antes de agregar un
+                pasajero, verifiquemos si hay espacio en el vuelo:
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                class Flight():
+                # Método para crear un vuelo nuevo y su capacidad:
+                def __init__(self, capacity):
+                    self.capacity = capacity
+                    self.passengers = []
+            
+                # Método para agregar pasajeros al vuelo:
+                def add_passenger(self, name):
+                    if not self.open_seats():
+                        return False
+                    self.passengers.append(name)
+                    return True
+            
+                # Método para devolver el número de los asientos disponibles:
+                def open_seats(self):
+                    return self.capacity - len(self.passengers)
+                `
+              }</Pre>
+              <p>
+                Observa que arriba utilizamos la línea
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  "if not self.open_seats()"
+                </span>
+                para determinar si hay o no asientos disponibles. Esto funciona
+                porque en Python, el número 0 puede interpretarse como False, y
+                también podemos usar la palabra clave
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  "not"
+                </span>
+                para indicar lo contrario de la declaración siguiente, por lo
+                que <b className="text-sky-400 mx-1">"not True"</b> es False y
+                <b className="text-sky-400 mx-1">"not False"</b> es True. Por lo
+                tanto, si <b className="text-sky-400 mx-1">"open_seats"</b>
+                devuelve 0, toda la expresión se evaluará como True.
+              </p>
+              <p>
+                Ahora, probemos la clase que hemos creado instanciando algunos
+                objetos:
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                # Crear un nuevo vuelo con capacidad para 3 pasajeros
+                vuelo = Vuelo(3)
+                
+                # Crear una lista de personas
+                personas = ["Harry", "Ron", "Hermione", "Ginny"]
+                
+                # Intentar añadir a cada persona de la lista al vuelo
+                for persona in personas:
+                    if vuelo.add_pasajero(persona):
+                        print(f"Se añadió a {persona} al vuelo con éxito")
+                    else:
+                        print(f"No hay asientos disponibles para {persona}")
+                
+                """ Resultado:
+                Se añadió a Harry al vuelo con éxito
+                Se añadió a Ron al vuelo con éxito
+                Se añadió a Hermione al vuelo con éxito
+                No hay asientos disponibles para Ginny
+                """
+                `
+              }</Pre>
+            </article>
+            <span id="programacion-funcional" />
+            <SectionTitle title="Programación Funcional" />
+            <article>
+              <p>
+                Además de admitir la Programación Orientada a Objetos, Python
+                también admite el Paradigma de
+                <Link
+                  href="https://en.wikipedia.org/wiki/Functional_programming"
+                  className="mx-1 text-sky-600"
+                >
+                  Programación Funcional
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
+                </Link>
+                , en el cual las funciones se tratan como valores, al igual que
+                cualquier otra variable.
+              </p>
+            </article>
+            <SectionTitle title="Decoradores" />
+            <article>
+              <p>
+                Una cosa que es posible gracias a la programación funcional es
+                la idea de un decorador, que es una función de orden superior
+                que puede modificar otra función. Por ejemplo, escribamos un
+                decorador que anuncie cuándo una función está a punto de
+                comenzar y cuándo termina. Luego, podemos aplicar este decorador
+                utilizando el símbolo <b className="text-sky-400 mx-1">"@"</b>.
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                def anunciar(f):
+                def envoltorio():
+                    print("A punto de ejecutar la función")
+                    f()
+                    print("Terminado con la función")
+                return envoltorio
+        
+                @anunciar
+                def hola():
+                print("¡Hola, mundo!")
+        
+                hola()
+        
+                """ Resultado:
+                A punto de ejecutar la función
+                ¡Hola, mundo!
+                Terminado con la función
+                """
+                `
+              }</Pre>
+            </article>
+            <span id="funciones-lambda" />
+            <SectionTitle title="Funciones Lambda" />
+            <article>
+              <p>
+                Las funciones lambda proporcionan otra forma de crear funciones
+                en Python. Por ejemplo, si queremos definir la misma función
+                cuadrado que hicimos anteriormente, podemos escribir:
+              </p>
+              <Pre lang="javascript">{
+                /*python */ `
+                square = lambda x: x * x
+                `
+              }</Pre>
+              <p>
+                Donde la entrada está a la izquierda de los dos puntos (:) y la
+                salida está a la derecha.
+              </p>
+              <p>
+                Esto puede ser útil cuando no queremos escribir una función
+                completamente separada para un uso único o pequeño. Por ejemplo,
+                si deseamos ordenar algunos objetos donde inicialmente no está
+                claro cómo deben ordenarse. Imagina que tenemos una lista de
+                personas, pero con nombres y casas en lugar de solo nombres que
+                deseamos ordenar:
+              </p>
+              <Pre lang="javascript">{
+                /*pyhton */ `
+                people = [
+                  {"name": "Harry", "house": "Gryffindor"},
+                  {"name": "Cho", "house": "Ravenclaw"},
+                  {"name": "Draco", "house": "Slytherin"}
+                ]
+              
+                people.sort()
+              
+                print(people)
+                `
+              }</Pre>
+              <p>Esto, sin embargo nos deja este error:</p>
+              <div className="images-client">
+                <img src="/images/TypeError.png" />
+              </div>
+              <p>
+                Esto sucede porque Python no sabe cómo comparar dos diccionarios
+                para verificar si uno es menor que el otro.
+              </p>
+              <p>
+                Podemos resolver este problema incluyendo un argumento "key" en
+                la función de ordenamiento, que especifica qué parte del
+                diccionario deseamos utilizar para ordenar:
+              </p>
+              <Pre lang="javascript">{
+                /*pyhton */ `
+                people = [
+                  {"name": "Harry", "house": "Gryffindor"},
+                  {"name": "Cho", "house": "Ravenclaw"},
+                  {"name": "Draco", "house": "Slytherin"}
+              ]
+              
+              def f(person):
+                  return person["name"]
+              
+              people.sort(key=f)
+              
+              print(people)
+              
+              """ Output:
+              [{'name': 'Cho', 'house': 'Ravenclaw'}, 
+              {'name': 'Draco', 'house': 'Slytherin'}, 
+              {'name': 'Harry', 'house': 'Gryffindor'}]
+              """
+                `
+              }</Pre>
+              <p>
+                Si bien esto funciona, hemos tenido que escribir una función
+                completa que solo estamos utilizando una vez. Podemos hacer que
+                nuestro código sea más legible utilizando una función lambda:
+              </p>
+              <Pre lang="javascript">{
+                /*pyhton */ `
+                people = [
+                  {"name": "Harry", "house": "Gryffindor"},
+                  {"name": "Cho", "house": "Ravenclaw"},
+                  {"name": "Draco", "house": "Slytherin"}
+              ]
+              
+              people.sort(key=lambda person: person["name"])
+              
+              print(people)
+              
+              """ Output:
+              [{'name': 'Cho', 'house': 'Ravenclaw'}, 
+              {'name': 'Draco', 'house': 'Slytherin'}, 
+              {'name': 'Harry', 'house': 'Gryffindor'}]
+              """
+                `
+              }</Pre>
+            </article>
+            <SectionTitle title="Excepciones" />
+            <article>
+              <p>
+                Durante esta conferencia, nos hemos encontrado con varias
+                excepciones diferentes, por lo que ahora veremos algunas nuevas
+                formas de lidiar con ellas.
+              </p>
+              <p>
+                En el siguiente fragmento de código, tomaremos dos números
+                enteros del usuario e intentaremos dividirlos:
+              </p>
+              <Pre lang="javascript">{
+                /*pyhton */ `
+                x = int(input("x: "))
+                y = int(input("y: "))
+                
+                result = x / y
+                
+                print(f"{x} / {y} = {result}")
+                `
+              }</Pre>
+              <p>En muchos casos, el programa funciona bien:</p>
+              <div className="images-client">
+                <img src="/images/dividegood.png" />
+              </div>
+              <p>
+                Sin embargo, nos encontraremos con problemas cuando intentemos
+                dividir por 0:
+              </p>
+              <div className="images-client">
+                <img src="/images/dividebad.png" />
+              </div>
+              <p className="list-css-span">
+                Podemos manejar este error desordenado utilizando el
+                <Link
+                  href="https://www.w3schools.com/python/python_try_except.asp"
+                  className="mx-1 text-sky-600"
+                >
+                  manejo de excepciones
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
+                </Link>
+                . En el siguiente bloque de código,
+                <b className="text-sky-400 mx-1">intentaremos</b> dividir los
+                dos números,<b className="text-sky-400 mx-1">excepto</b>cuando
+                obtengamos un
+                <span>ZeroDivisionError</span> :
+              </p>
+              <Pre lang="javascript">{
+                /*pyhton */ `
+                import sys
+
+                x = int(input("x: "))
+                y = int(input("y: "))
+                
+                try:
+                    result = x / y
+                except ZeroDivisionError:
+                    print("Error: No se puee dividir por 0.")
+                    # Salir del programa
+                    sys.exit(1)
+                
+                print(f"{x} / {y} = {result}")
+                `
+              }</Pre>
+              <p>En este caso cuando intentemos esto de nuevo:</p>
+              <div className="image-client">
+                <img src="/images/divide0.png" />
+              </div>
+              <p>
+                Sin embargo, aún nos encontramos con un error cuando el usuario
+                ingresa valores que no son números para x e y:
+              </p>
+              <div className="image-client">
+                <img src="/images/valueError.png" />
+              </div>
+              <p>Podemos resolver este problema de similar manera:</p>
+              <Pre lang="javascript">{
+                /*pyhton */ `
+                import sys
+
+                try:
+                    x = int(input("x: "))
+                    y = int(input("y: "))
+                except ValueError:
+                    print("Error: Entrada no válida.")
+                    sys.exit(1)
+                
+                try:
+                    result = x / y
+                except ZeroDivisionError:
+                    print("Error: No se puede dividir por 0.")
+                    # Salir del programa
+                    sys.exit(1)
+                
+                print(f"{x} / {y} = {result}")
+                `
+              }</Pre>
+              <p>
+                ¡Eso es todo para esta clase! La próxima clase, usaremos el
+                módulo Django de Python para construir algunas aplicaciones.
               </p>
             </article>
           </div>
