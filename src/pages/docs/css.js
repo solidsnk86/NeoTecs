@@ -11,17 +11,17 @@ import { OpenInNew } from '@mui/icons-material';
 
 export default function CssDoc() {
   const CssTitle = ({ Tag = 'h1', children }) => {
-    return <Tag className="text-slate-100 font-mono">{children}</Tag>;
+    return <Tag className="text-text-primary font-mono">{children}</Tag>;
   };
   const Header = ({ Tag = 'h2', children }) => {
-    return <Tag className="text-slate-100">{children}</Tag>;
+    return <Tag className="text-text-primary">{children}</Tag>;
   };
   return (
     <TitlesContextProvider>
       <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-30" />
       <div className="max-w-screen-xl mx-auto flex items-stretch py-16">
         <LectureNav />
-        <div className="w-full max-w-none prose px-4 md:px-8 text-slate-100">
+        <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
           <CssTitle>CSS (Hojas de Estilo de Cascada)</CssTitle>
           <hr />
@@ -1128,7 +1128,7 @@ export default function CssDoc() {
           <div className="images-client">
             <img src="/images/inherit.png" />
           </div>
-          <h4 className="text-slate-100">
+          <h4 className="text-text-primary">
             ¡Eso concluye nuestro contenido por hoy! ツ
           </h4>
           <ShareButton />

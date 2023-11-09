@@ -14,7 +14,7 @@ export function ShareButton() {
 
   return (
     <section
-      className="relative text-right space-x-4 text-lg cursor-pointer hover:opacity-[.6] transition-all text-slate-100"
+      className="relative text-right space-x-4 text-lg cursor-pointer hover:opacity-[.6] transition-all text-primary"
       onClick={shareButton}
     >
       Compartir

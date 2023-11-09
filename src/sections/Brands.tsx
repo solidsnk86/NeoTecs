@@ -218,7 +218,7 @@ const ReviewCard = ({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative min-w-[250px] flex justify-center items-center overflow-hidden rounded-xl bg-slate-800/50 w-full py-4 px-14 transitio"
+            className="relative min-w-[250px] flex justify-center items-center overflow-hidden rounded-xl bg-slate-800/50 w-full py-4 px-14"
         >
             <div className="flex flex-row items-center justify-center w-full h-auto">
                 {logo}
@@ -230,7 +230,7 @@ const ReviewCard = ({
 export const MarqueeLogos = () => {
     return (
         <section className="block flex-wrap items-center justify-center my-48">
-            <h1 className=" text-xl font-bold text-center text-white my-4">
+            <h1 className=" text-xl font-bold text-center text-text-primary my-4">
                 Lenguajes que vas aprender a continuación
             </h1>
             <div className="relative flex-col items-center justify-center w-full h-full gap-2 py-20 my-5 overflow-hidden rounded-lg bg-background">

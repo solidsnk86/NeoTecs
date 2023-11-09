@@ -4,13 +4,13 @@ import { OpenInNew } from '@mui/icons-material';
 
 export const Introduction = () => {
   const IntroTitle = ({ Tag = 'h1', children }) => {
-    return <Tag className="text-slate-100 font-mono">{children}</Tag>;
+    return <Tag className="text-text-primary font-mono">{children}</Tag>;
   };
   const Header = ({ Tag = 'h2', children }) => {
-    return <Tag className="text-slate-100">{children}</Tag>;
+    return <Tag className="text-text-primary">{children}</Tag>;
   };
   return (
-    <main className="text-slate-100">
+    <main className="text-text-primary">
       <IntroTitle>Curso de Programación</IntroTitle>
       <hr />
       <Header>Índice</Header>

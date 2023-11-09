@@ -6,7 +6,7 @@ import { PublishDate } from '../PublishDate';
 
 export const APClientRouterMode = () => {
   return (
-    <section className="max-w-800 text-white">
+    <section className="max-w-800 text-text-primary">
       <SectionTitle title="Modo Ap Router Cliente" />
 
       <p>Guía de Configuración:</p>

@@ -2,6 +2,7 @@ export const GithubIcon = (props) => {
   const { children, ...attrs } = props;
   return (
     <svg
+      className="github-icon"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"

@@ -19,7 +19,7 @@ export default function UbiquitiDocs() {
           <BrandsSwitch inline />
           <SectionTitle title="Configuración Ubiquiti" />
 
-          <section className="text-white">
+          <section className="text-text-primary">
             <p>
               Este artículo aplica a los siguientes modelos:
               <strong className="text-text-strong mx-1">
@@ -231,7 +231,7 @@ export default function UbiquitiDocs() {
             </ol>
             <p>
               En ésta imagen puede observar la pestaña
-              <span className="bg-[#DBDFE4] text-[#56575A] text-[bold] px-2 py-1 mx-2 rounded-sm uppercase">
+              <span className="bg-button-variant text-text-variant px-2 py-1 mx-2 rounded-sm uppercase">
                 Wireless
               </span>
             </p>
@@ -270,7 +270,7 @@ export default function UbiquitiDocs() {
 
             <p>
               En ésta imagen puede observar la pestaña
-              <span className="bg-[#DBDFE4] text-[#56575A] text-[bold] px-2 py-1 rounded-sm uppercase mx-2">
+              <span className=" bg-button-variant text-text-variant px-2 py-1 rounded-sm uppercase mx-2">
                 main
               </span>
             </p>

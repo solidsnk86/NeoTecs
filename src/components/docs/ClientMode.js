@@ -5,9 +5,9 @@ import { ShareButton } from '../ShareButton';
 
 export const ClientMode = () => {
   return (
-    <section className="text-white">
+    <section className="text-text-primary">
       <SectionTitle title="Modo Cliente" />
-      <h2 className="text-slate-400">
+      <h2 className="text-text-primary">
         Como Configurar la topologia CPE AP + CPE Cliente con éxito
       </h2>
 

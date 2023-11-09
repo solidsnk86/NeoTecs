@@ -5,7 +5,7 @@ import { ShareButton } from '../ShareButton';
 
 export const APMode = () => {
   return (
-    <section className="text-white">
+    <section className="text-text-primary">
       <SectionTitle title="Modo Punto de Acceso" />
       <p>
         Este artículo aplica a los siguientes modelos:

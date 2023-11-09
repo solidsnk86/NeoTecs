@@ -18,7 +18,7 @@ const HomeBlock = ({ className = '', children }) => {
 
 export const HomeBlockTitle = ({ Tag = 'h2', children }) => {
   return (
-    <Tag className="text-4xl font-bold sm:text-5xl mb-10 text-slate-100">
+    <Tag className="text-4xl font-bold sm:text-5xl mb-10 text-text-primary">
       {children}
     </Tag>
   );
@@ -49,7 +49,7 @@ const cardContent = [
 
 export default function Home() {
   return (
-    <div className="bg-page-dark-bg text-white">
+    <div className="text-text-primary">
       <Nav />
       <HomeHeader />
       <HomeBlock>
@@ -67,7 +67,7 @@ export default function Home() {
         <HomeBlockTitle>Características</HomeBlockTitle>
         <section className="grid md:grid-cols-2 gap-4 md:gap-8">
           {cardContent.map((card) => (
-            <div className="p-4 rounded-lg border-white border-opacity-10 border">
+            <div className="p-4 rounded-lg border-outline border-opacity-10 border">
               <span className="text-xl font-bold mb-4">{card.feature}</span>
               <p>{card.children}</p>
             </div>
@@ -75,7 +75,7 @@ export default function Home() {
         </section>
       </HomeBlock>
 
-      <HomeBlock className="bg-[url-de-tu-imagen] bg-cover">
+      <HomeBlock className="bg-cover">
         <HomeBlockTitle>Aprende Programación Ahora</HomeBlockTitle>
         <p>Principios Báscicos de la programación</p>
         <p className="mt-4">

@@ -45,10 +45,10 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <section className=" bg-footer-bg border-t-2 text-white mt-14">
-      <span className="relative flex justify-center m-auto bg-[#E5E7EB] px-[2px] py-[2px] w-fit h-fit rounded-full bottom-[19px]">
+    <section className="border-t-2 border-outline text-text-primary mt-14">
+      <span className="relative flex justify-center m-auto bg-outline px-[2px] py-[2px] w-fit h-fit rounded-full bottom-[19px]">
         <FaChevronCircleUp
-          className="text-[#333] text-[33px] relative cursor-pointer hover:text-[#575757] transition-all"
+          className="text-text-variant text-[33px] relative cursor-pointer hover:opacity-[.6] transition-all"
           onClick={toTop}
         />
       </span>

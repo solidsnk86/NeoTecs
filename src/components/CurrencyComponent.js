@@ -54,14 +54,14 @@ export default function CurrencyConverter() {
         />
         <button
           type="submit"
-          className="rounded px-4 mx-3 mb-3 outline-2 outline-amber-400 outline-offset-[3px] outline-double bg-gray-800 hover:brightness-150"
+          className="rounded px-4 mx-3 mb-3 outline-2 dark:outline-amber-400 outline-[cornflowerblue] outline-offset-[3px] outline-double bg-card-bg text-text-primary hover:brightness-110"
         >
           Convertir
         </button>
       </form>
       <div
         id="result"
-        className={`rounded font-mono  bg-gray-800 px-1 my-6 w-fit border-l-[5px] ${borderColor}`}
+        className={`rounded font-mono text-slate-100 bg-gray-800 px-1 my-6 w-fit border-l-[5px] ${borderColor}`}
       >
         {result}
       </div>

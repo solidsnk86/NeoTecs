@@ -47,7 +47,7 @@ export const NavSwitch = ({ inline }) => {
     <div
       className={`inline-block mb-4 border border-slate-400 border-opacity-20 overflow-hidden mt-16 w-100% xl:h-60 xl:overflow-y-auto scroll-style ${
         inline
-          ? 'mb-8 lg:hidden w-100% flex overflow-x-scroll border-none text-xs gap-1 z-20 nav-switch'
+          ? 'mb-8 lg:hidden w-100% flex overflow-x-scroll border-none text-text-primary text-xs gap-1 z-20 nav-switch'
           : ''
       }`}
     >
@@ -62,7 +62,7 @@ export const NavSwitch = ({ inline }) => {
           }`}
         >
           <h3
-            className="font-semibold text-slate-100 line-clamp-1 xl:line-clamp-none tooltip"
+            className="font-semibold text-text-primary line-clamp-1 xl:line-clamp-none tooltip"
             data-tooltip={link.title}
           >
             {link.title}

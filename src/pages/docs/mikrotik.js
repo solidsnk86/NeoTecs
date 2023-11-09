@@ -19,7 +19,7 @@ export default function MikrotikDocs() {
           <BrandsSwitch inline />
           <SectionTitle title="Configuración Mikrotik" />
 
-          <section className="text-white">
+          <section className="text-text-primary">
             <p>
               Este artículo aplica a los siguientes modelos:
               <strong className="text-text-strong mx-1">
@@ -177,7 +177,7 @@ export default function MikrotikDocs() {
             </ul>
 
             <ol>
-              <p className="bg-gray-800 w-fit px-2 rounded border-l-4 border-green-400">
+              <p className="bg-gray-800 w-fit px-2 text-[aliceblue] rounded border-l-4 border-green-400">
                 Modelo: Mikrotik Lhg Xl 5 Ac 802.11a/n/ac
               </p>
               <li>

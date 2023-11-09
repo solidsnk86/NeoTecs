@@ -4,7 +4,7 @@ import { ShareButton } from '../ShareButton';
 
 export const RepeaterMode = () => {
   return (
-    <section className="text-white">
+    <section className="text-text-primary">
       <SectionTitle title="Modo Repetidor" />
       <PublishDate />
 

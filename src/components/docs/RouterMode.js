@@ -6,7 +6,7 @@ import { PublishDate } from '../PublishDate';
 
 export const RouterMode = () => {
   return (
-    <section className="text-white">
+    <section className="text-text-primary">
       <hr />
       <SectionTitle title="Modo Router" />
       <PublishDate />

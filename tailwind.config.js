@@ -17,8 +17,11 @@ module.exports = {
         ],
       },
       colors: {
-        'primary-dark': '#0F0F0F',
-        'text-primary': '#f2f2f2',
+        'text-primary': 'var(--color-on-surface)',
+        'card-bg': 'var(--color-surface-variant)',
+        'button-variant': 'var(--button-variant)',
+        outline: 'var(--color-outline)',
+        'text-variant': 'var(--color-surface-variant)',
         'text-strong': '#AD2680',
         'footer-bg': '#0F0F0F',
       },

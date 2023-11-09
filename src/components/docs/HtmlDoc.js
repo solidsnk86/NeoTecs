@@ -6,7 +6,7 @@ import { OpenInNew } from '@mui/icons-material';
 
 export const HtmlDoc = () => {
   return (
-    <main className="text-slate-100 w-full">
+    <main className="text-text-primary w-full">
       <span id="html" />
       <SectionTitle title="HTML (Lenguaje de Marcado de Hipertexto)" />
       <ul>

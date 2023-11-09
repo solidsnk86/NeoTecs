@@ -15,7 +15,7 @@ export function DocsNav() {
   return (
     <div className="w-80 px-4 md:px-8 hidden lg:block">
       <Link href="/" title="Volver al inicio">
-        <ArrowLeftIcon className="text-white cursor-pointer hover:animate-pulse hover:translate-x-[-2px] transition-all" />
+        <ArrowLeftIcon className="text-text-primary cursor-pointer hover:animate-pulse hover:translate-x-[-2px] transition-all" />
       </Link>
       <div className="sticky top-4">
         <BrandsSwitch />
@@ -24,7 +24,7 @@ export function DocsNav() {
             <li key={title.slug}>
               <a
                 href={`#${title.slug}`}
-                className={`text-[cornflowerblue] px-2 py-1 block rounded hover:bg-[#CCCCCC] hover:bg-opacity-10 hover:text-primary font-medium duration-100 ${
+                className={`text-[cornflowerblue] px-2 py-1 block rounded hover:bg-outline hover:bg-opacity-10 hover:text-text-primary font-medium duration-100 ${
                   selectedSlug === title.slug
                     ? 'bg-[#CCCCCC] bg-opacity-10 text-text-strong'
                     : ''
