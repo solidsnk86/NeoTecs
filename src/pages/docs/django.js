@@ -100,7 +100,7 @@ export default function DjangoDocs() {
                 className="mx-1 text-slate-400"
               >
                 The New York Times
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               o
               <Link
@@ -108,7 +108,7 @@ export default function DjangoDocs() {
                 className="mx-1 text-slate-400"
               >
                 Facebook
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               , por ejemplo, es probable que veas cosas diferentes hoy que
               mañana. Para sitios grandes como esos, sería poco razonable que
@@ -178,7 +178,7 @@ export default function DjangoDocs() {
                 className="mr-1 text-[#0C4B33]"
               >
                 Django
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               es un marco de trabajo web basado en Python que nos permitirá
               escribir código en Python que genera dinámicamente HTML y CSS. La
@@ -194,7 +194,7 @@ export default function DjangoDocs() {
                   className="mx-[3px] text-[#0C4B33]"
                 >
                   instalar
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
                 </Link>
                 <span>pip</span> si aún no lo has hecho.
               </li>
@@ -261,10 +261,36 @@ export default function DjangoDocs() {
                 que otras personas no pueden acceder a tu sitio web. Esto te
                 llevará a una página de inicio predeterminada.
               </li>
+              <div className="images-client">
+                <img src="/images/landing.png" />
+              </div>
+              <li>
+                A continuación, tendremos que crear una aplicación. Los
+                proyectos de Django se dividen en una o más aplicaciones. La
+                mayoría de nuestros proyectos solo requerirán una aplicación,
+                pero los sitios más grandes pueden aprovechar esta capacidad
+                para dividir un sitio en varias aplicaciones. Para crear una
+                aplicación, ejecutamos el comando
+                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded border-[#0C4B33] border-b-2">
+                  python manage.py startapp NOMBRE_DE_LA_APP
+                </span>
+                . Esto creará algunos directorios y archivos adicionales que
+                serán útiles en breve, incluido views.py.
+              </li>
+              <li className="list-css-span">
+                Ahora, debemos instalar nuestra nueva aplicación. Para hacerlo,
+                vamos al archivo <span>settings.py</span>, nos desplazamos hacia
+                abajo hasta la lista de <span>INSTALLED_APPS</span> y agregamos
+                el nombre de nuestra nueva aplicación a esta lista.
+              </li>
             </ol>
             <div className="images-client">
-              <img src="/images/landing.png" />
+              <img src="/images/installed.png" />
             </div>
+          </article>
+          <SectionTitle title="Rutas" />
+          <article>
+            <p>Ahora, para comenzar con nuestra aplicación:</p>
           </article>
         </div>
       </div>

@@ -2,7 +2,7 @@ export default function handlerCurrency(req, res) {
   res.status(200).json({
     success: true,
     timestamp: 1699228203,
-    base: 'USD',
+    base: 'ARS',
     date: '2023-11-05',
     rates: {
       AED: 3.941622,

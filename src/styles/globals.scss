@@ -312,6 +312,11 @@ pre {
 .tooltip img {
   cursor: pointer;
 }
+@media (max-width: 400px) {
+  .link-icon {
+    font-size: smaller;
+  }
+}
 
 @import 'atropos/scss';
 @import './home-header.scss';

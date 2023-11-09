@@ -193,7 +193,7 @@ export const HtmlDoc = () => {
           className="mx-1 text-amber-400"
         >
           Live Server
-          <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px]" />
+          <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
         </Link>
         .
       </p>
