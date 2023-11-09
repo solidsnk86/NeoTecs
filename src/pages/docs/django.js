@@ -291,6 +291,236 @@ export default function DjangoDocs() {
           <SectionTitle title="Rutas" />
           <article>
             <p>Ahora, para comenzar con nuestra aplicación:</p>
+            <ol>
+              <li className="list-css-span">
+                A continuación, navegaremos hasta <span>views.py</span>. Este
+                archivo contendrá varias vistas diferentes, y por ahora podemos
+                pensar en una vista como una página que el usuario podría querer
+                ver. Para crear nuestra primera vista, escribiremos una función
+                que reciba una solicitud <b>(request)</b>. Por ahora,
+                simplemente devolveremos una HttpResponse (una respuesta muy
+                simple que incluye un código de respuesta de 200 y una cadena de
+                texto que se puede mostrar en un navegador web) que diga
+                <span>"Hola, Mundo"</span>. Para hacer esto, debemos incluir
+                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded border-[#0C4B33] border-b-2">
+                  from django.http import HttpResponse
+                </span>
+                . Nuestro archivo se verá así:
+              </li>
+              <Pre lang="javascript">{
+                /*django */ `
+                from django.shortcuts import render
+                from django.http import HttpResponse
+               
+                # Crea tus vistas aquí.
+               
+                def index(request):
+                    return HttpResponse("Hello, world!")
+                `
+              }</Pre>
+              <li className="list-css-span">
+                Ahora, necesitamos asociar de alguna manera esta vista que
+                acabamos de crear con una URL específica. Para hacerlo,
+                crearemos otro archivo llamado <span>urls.py</span> en el mismo
+                directorio que <span>views.py</span>. Ya tenemos un archivo{' '}
+                <span>urls.py</span> para todo el proyecto, pero es mejor tener
+                uno separado para cada aplicación individual.
+              </li>
+              <li>
+                Dentro de nuestro nuevo urls.py, crearemos una lista de patrones
+                de URL que un usuario podría visitar al usar nuestro sitio web.
+                Para hacerlo:
+                <ol>
+                  <li>
+                    Realizaremos algunas importaciones: from django.urls import
+                    path nos proporcionará la capacidad de redirigir URLs. from
+                    . import views importará cualquier función que hayamos
+                    creado en views.py.
+                  </li>
+                  <li>Crearemos una lista llamada urlpatterns.</li>
+                  <li>
+                    Para cada URL deseada, agregaremos un elemento a la lista
+                    urlpatterns que contenga una llamada a la función path con
+                    dos o tres argumentos: una cadena que represente la ruta de
+                    la URL, una función de views.py que deseamos llamar cuando
+                    se visite esa URL y (opcionalmente) un nombre para esa ruta,
+                    en el formato name="algo". Aquí tienes un ejemplo de cómo se
+                    vería nuestra aplicación simple ahora:
+                  </li>
+                </ol>
+              </li>
+              <Pre lang="javascript">{
+                /*django */ `
+                from django.urls import path
+                from . import views
+               
+                urlpatterns = [
+                    path("", views.index, name="index")
+                ]
+                `
+              }</Pre>
+              <li className="list-css-span">
+                Ahora, hemos creado un <span>urls.py</span> para esta aplicación
+                específica, y es hora de editar el urls.py creado para todo el
+                proyecto. Cuando abras este archivo, deberías ver que ya existe
+                una ruta llamada <b>"admin"</b>, que explicaremos en
+                conferencias posteriores. Queremos agregar otra ruta para
+                nuestra nueva aplicación, por lo que agregaremos un elemento a
+                la lista de urlpatterns. Esto sigue el mismo patrón que nuestras
+                rutas anteriores, excepto que en lugar de agregar una función de
+                <span>views.py</span> como segundo argumento, queremos poder
+                incluir todas las rutas del archivo
+                <span>urls.py</span> dentro de nuestra aplicación. Para hacer
+                esto, escribimos:
+                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
+                  include("NOMBRE_DE_LA_APP.urls")
+                </span>
+                , donde include es una función a la que obtenemos acceso
+                importando include desde django.urls, como se muestra en el
+                <span>urls.py</span> a continuación:
+              </li>
+              <Pre lang="javascript">{
+                /*django */ `
+                from django.contrib import admin
+                from django.urls import path, include
+                
+                urlpatterns = [
+                    path('admin/', admin.site.urls),
+                    path('hello/', include("hello.urls"))
+                ]
+                `
+              }</Pre>
+              <li className="list-css-span">
+                Al hacer esto, hemos especificado que cuando un usuario visite
+                nuestro sitio y luego agregue /hello a la URL en la barra de
+                búsqueda, serán redirigidos a las rutas dentro de nuestra nueva
+                aplicación. En otras palabras, al acceder a
+                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
+                  http://tu-sitio.com/hello/
+                </span>
+                , se activará la lógica de rutas definida en el archivo
+                <span>urls.py</span>
+                de tu nueva aplicación, y se dirigirá a la vista
+                correspondiente, que en este caso es la vista hello_world que
+                devuelve "Hello, World". Esto permite que los usuarios accedan a
+                esta vista específica al agregar /hello a la URL de tu sitio
+                web.
+              </li>
+            </ol>
+            <p>
+              Cuando inicias tu aplicación usando python manage.py runserver y
+              visitas la URL proporcionada, te encontrarás con una pantalla. Sin
+              embargo, no proporcionaste detalles específicos sobre la pantalla
+              que estás viendo. Dependiendo de lo que veas, podría haber varias
+              razones detrás de ello.
+            </p>
+            <div className="images-client">
+              <img src="/images/404.png" />
+            </div>
+            <p>
+              Esto ocurre porque solo hemos definido la URL
+              <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
+                localhost:8000/hello
+              </span>
+              , pero no hemos definido la URL
+              <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
+                localhost:8000
+              </span>
+              sin nada añadido al final. Entonces, cuando agrego /hello a la URL
+              en la barra de búsqueda:
+            </p>
+            <div className="images-client">
+              <img src="/images/helloworld.png" />
+            </div>
+            <p>
+              Ahora que hemos tenido cierto éxito, repasemos lo que acaba de
+              suceder para llegar a ese punto:
+            </p>
+            <ol>
+              <li className="list-css-span">
+                Cuando accedimos a la URL
+                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
+                  localhost:8000/hello
+                </span>
+                , Django examinó lo que venía después de la URL base
+                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
+                  (localhost:8000/)
+                </span>
+                y fue al archivo<span>urls.py </span>
+                de nuestro proyecto, buscando un patrón que coincidiera con
+                "hello".
+              </li>
+              <li>
+                Encontró esa extensión porque la definimos, y vio que cuando se
+                encontrara con esa extensión, debía incluir nuestro archivo
+                urls.py desde dentro de nuestra aplicación.
+              </li>
+              <li>
+                Luego, Django ignoró las partes de la URL que ya había utilizado
+                en la redirección (localhost:8000/hello/ o todo el URL) y buscó
+                dentro de nuestro otro archivo urls.py un patrón que coincidiera
+                con la parte restante de la URL.
+              </li>
+              <li>
+                Descubrió que nuestra única ruta hasta el momento <b>("") </b>
+                coincidía con lo que quedaba de la URL, y nos dirigió a la
+                función de views.py asociada con esa ruta.
+              </li>
+              <li>
+                Finalmente, Django ejecutó esa función dentro de views.py y
+                devolvió el resultado
+                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
+                  (HttpResponse("Hello, world!"))
+                </span>
+                a nuestro navegador web.
+              </li>
+            </ol>
+            <p>
+              Ahora, si lo deseamos, podemos cambiar la función hello_world
+              dentro de views.py para que devuelva cualquier cosa que queramos.
+              Incluso podríamos llevar un seguimiento de variables y realizar
+              cálculos dentro de la función antes de devolver algo.
+            </p>
+            <p>
+              Ahora, veamos cómo podemos agregar más de una vista a nuestra
+              aplicación. Podemos seguir muchos de los mismos pasos dentro de
+              nuestra aplicación para crear páginas que saluden a Neo.
+            </p>
+            <p className="list-css-span">
+              Dentro de<span>views.py</span>:
+            </p>
+            <Pre lang="javascript">{
+              /*django */ `
+              from django.shortcuts import render
+              from django.http import HttpResponse
+              
+              # Creamos nuestras vistas aquí.
+              
+              def index(request):
+                  return HttpResponse("Hello, world!")
+              
+              def neotecs(request):
+                  return HttpResponse("Hello, Neo!")
+              
+              def dev(request):
+                  return HttpResponse("Hello, Gabriel!")
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Dentro de<span>urls.py</span>(sin nuestra aplicación)
+            </p>
+            <Pre lang="javascript">{
+              /*django */ `
+              from django.urls import path
+              from . import views
+              
+              urlpatterns = [
+                  path("", views.index, name="index"),
+                  path("neotecs", views.brian, name="neo"),
+                  path("dev", views.david, name="gabriel")
+              ]
+              `
+            }</Pre>
           </article>
         </div>
       </div>
