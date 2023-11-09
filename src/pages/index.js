@@ -16,8 +16,12 @@ const HomeBlock = ({ className = '', children }) => {
   );
 };
 
-const HomeBlockTitle = ({ Tag = 'h2', children }) => {
-  return <Tag className="text-4xl font-bold sm:text-5xl mb-10">{children}</Tag>;
+export const HomeBlockTitle = ({ Tag = 'h2', children }) => {
+  return (
+    <Tag className="text-4xl font-bold sm:text-5xl mb-10 text-slate-100">
+      {children}
+    </Tag>
+  );
 };
 
 const cardContent = [

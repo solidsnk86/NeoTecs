@@ -118,8 +118,8 @@ export default function Python() {
                     y2="35.404"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop offset="0" stop-color="#5a9fd4" />
-                    <stop offset="1" stop-color="#306998" />
+                    <stop offset="0" stopColor="#5a9fd4" />
+                    <stop offset="1" stopColor="#306998" />
                   </linearGradient>
                   <linearGradient
                     id="B"
@@ -129,8 +129,8 @@ export default function Python() {
                     y2="46.288"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop offset="0" stop-color="#ffd43b" />
-                    <stop offset="1" stop-color="#ffe873" />
+                    <stop offset="0" stopColor="#ffd43b" />
+                    <stop offset="1" stopColor="#ffe873" />
                   </linearGradient>
                   <radialGradient
                     id="C"
@@ -142,8 +142,8 @@ export default function Python() {
                     r="29.037"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop offset="0" stop-color="#b8b8b8" stop-opacity=".498" />
-                    <stop offset="1" stop-color="#7f7f7f" stop-opacity="0" />
+                    <stop offset="0" stopColor="#b8b8b8" stopOpacity=".498" />
+                    <stop offset="1" stopColor="#7f7f7f" stopOpacity="0" />
                   </radialGradient>
                 </defs>
                 <g transform="matrix(.281963 0 0 .281963 -17.339271 18.541234)">
