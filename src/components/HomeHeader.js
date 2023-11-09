@@ -21,26 +21,6 @@ export const HomeHeader = () => {
             alt="stars"
           />
           <img
-            data-atropos-offset="-2.5"
-            src="/images/header/atropos-mountains.svg"
-            alt="mountains"
-          />
-          <img
-            data-atropos-offset="0"
-            src="/images/header/atropos-forest-back.svg"
-            alt="forest"
-          />
-          <img
-            data-atropos-offset="2"
-            src="/images/header/atropos-forest-mid.svg"
-            alt="forest"
-          />
-          <img
-            data-atropos-offset="4"
-            src="/images/header/atropos-forest-front.svg"
-            alt="forest"
-          />
-          <img
             data-atropos-offset="5"
             src="/images/header/logo-card-space-letter.png"
             alt="neotecs logo"
