@@ -516,8 +516,8 @@ export default function DjangoDocs() {
               
               urlpatterns = [
                   path("", views.index, name="index"),
-                  path("neotecs", views.brian, name="neo"),
-                  path("dev", views.david, name="gabriel")
+                  path("neotecs", views.neotecs, name="neo"),
+                  path("dev", views.dev, name="gabriel")
               ]
               `
             }</Pre>

@@ -312,9 +312,10 @@ pre {
 .tooltip img {
   cursor: pointer;
 }
-@media (min-width: 400px) {
+@media (max-width: 700px) {
   .link-icon {
-    font-size: 10px;
+    height: 9px;
+    width: 9px;
   }
 }
 
