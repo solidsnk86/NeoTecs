@@ -539,11 +539,46 @@ export default function DjangoDocs() {
                 https://twitter.com/CalcagniGabriel
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
-              se muestran todos mis tweets, y al dirigirse a www.github.com/cs50
-              se accede a la página de GitHub de CS50. Incluso puedes encontrar
-              tus propios repositorios públicos de GitHub navegando a
+              se muestran todos mis tweets, y al dirigirse a
+              <Link
+                href="https://twitter.com/CalcagniGabriel"
+                className="mx-[3px] text-[#0C4B33]"
+              >
+                https://github.com/solidsnk86
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              se accede a la página de GitHub de solidSnk86. Incluso puedes
+              encontrar tus propios repositorios públicos de GitHub navegando a
               www.github.com/TU_NOMBRE_DE_USUARIO.
             </p>
+            <p className="list-css-span">
+              Al pensar en cómo se implementa esto, parece imposible que sitios
+              como GitHub y Twitter tengan una ruta de URL individual para cada
+              usuario. Entonces, veamos cómo podríamos hacer una ruta más
+              flexible. Comenzaremos agregando una función más general llamada
+              <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
+                "greet"
+              </span>
+              a <span>views.py</span>:
+            </p>
+            <Pre lang="javascript">{
+              /*django */ `
+              def greet(request, name):
+              return HttpResponse(f"Hello, {name}!")
+              `
+            }</Pre>
+            <p>
+              Esta función recibe no solo una solicitud (request) sino también
+              un argumento adicional que es el nombre de un usuario, y luego
+              devuelve una respuesta HTTP personalizada basada en ese nombre. A
+              continuación, debemos crear una ruta más flexible en urls.py, que
+              podría lucir algo así:
+            </p>
+            <Pre lang="javascript">{
+              /*django */ `
+              path("<str:name>", views.greet, name="greet")
+              `
+            }</Pre>
           </article>
         </div>
       </div>
