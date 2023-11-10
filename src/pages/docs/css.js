@@ -127,7 +127,7 @@ export default function CssDoc() {
             <ol>
               <li>
                 Una forma de hacerlo es añadir tu estilo entre etiquetas
-                <span className="bg-gray-800 px-1 py-[2px] rounded mx-1">
+                <span className="border-gray-800 border rounded mx-1">
                   {'<style>'}
                 </span>
                 en la sección
@@ -164,7 +164,7 @@ export default function CssDoc() {
           </Pre>
           <li>
             Otra forma es incluir un elemento
-            <span className="bg-gray-800 px-1 py-[2px] rounded mx-1">
+            <span className="border-gray-800 border rounded mx-1">
               {'<link>'}
             </span>
             en la sección
@@ -300,11 +300,11 @@ export default function CssDoc() {
           <li>
             Lo anterior se parece mucho a lo que teníamos antes, pero ahora, ya
             sea incluyendo una etiqueta de estilo
-            <span className="bg-gray-800 px-1 py-[2px] rounded mx-1">
+            <span className="border-gray-800 border rounded mx-1">
               {'<style>'}
             </span>
             o un enlace a una hoja de estilo
-            <span className="border-gray-800 border rounded mx-1 border-b-2 border-green-400 px-1">
+            <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
               {'<link rel="stylesheet" href="styles.css">'}
             </span>
             en la sección head de nuestro documento html. Agregamos el siguiente
