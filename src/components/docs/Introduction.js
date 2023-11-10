@@ -12,7 +12,7 @@ export const Introduction = () => {
   return (
     <main className="text-text-primary">
       <IntroTitle>Curso de Programación</IntroTitle>
-      <hr />
+      <hr className="border-text-primary" />
       <Header>Índice</Header>
       <ol className="indice">
         <li>
