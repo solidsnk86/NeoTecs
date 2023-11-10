@@ -106,6 +106,7 @@ export const HtmlDoc = () => {
         </li>
         <li>
           Una cosa más que debes tener en cuenta:
+          <br />
           <span className="border-gray-600 border px-1 mx-1 text-green-800 rounded">
             {'<'}!-- --{'>'}
           </span>

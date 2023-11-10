@@ -272,7 +272,7 @@ export default function DjangoDocs() {
               <div className="images-client">
                 <img src="/images/landing.png" />
               </div>
-              <li>
+              <li className="list-css-span">
                 A continuación, tendremos que crear una aplicación. Los
                 proyectos de Django se dividen en una o más aplicaciones. La
                 mayoría de nuestros proyectos solo requerirán una aplicación,
@@ -283,7 +283,7 @@ export default function DjangoDocs() {
                   python manage.py startapp NOMBRE_DE_LA_APP
                 </span>
                 . Esto creará algunos directorios y archivos adicionales que
-                serán útiles en breve, incluido views.py.
+                serán útiles en breve, incluido<span>views.py</span>.
               </li>
               <li className="list-css-span">
                 Ahora, debemos instalar nuestra nueva aplicación. Para hacerlo,

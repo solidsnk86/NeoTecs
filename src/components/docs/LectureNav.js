@@ -24,7 +24,7 @@ export function LectureNav() {
             <li key={title.slug}>
               <a
                 href={`#${title.slug}`}
-                className={`text-[cornflowerblue] px-2 py-1 block rounded hover:bg-outline hover:bg-opacity-10 hover:text-primary font-medium duration-100 ${
+                className={`text-[cornflowerblue] px-2 py-1 block rounded hover:underline hover:text-primary font-medium duration-100 ${
                   selectedSlug === title.slug
                     ? 'bg-[#CCCCCC] bg-opacity-10 text-[#6E51F3]'
                     : ''
