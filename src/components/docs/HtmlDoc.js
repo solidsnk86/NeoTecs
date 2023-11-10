@@ -105,10 +105,10 @@ export const HtmlDoc = () => {
           negrita. En el siguiente ejemplo, veremos algunos de estos en acción.
         </li>
         <li>
-          Una cosa más que debes tener en cuenta:{' '}
-          <span className="bg-gray-600 px-1 py-[2px] w-fit rounded-sm">
+          Una cosa más que debes tener en cuenta:
+          <span className="border-gray-600 border px-1 mx-1 text-green-800 rounded">
             {'<'}!-- --{'>'}
-          </span>{' '}
+          </span>
           nos permite agregar comentarios en HTML, por lo que lo utilizaremos a
           continuación para explicar algunos de los elementos.
         </li>
@@ -190,7 +190,7 @@ export const HtmlDoc = () => {
         extensión de Visual Studio Code llamada,
         <Link
           href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
-          className="mx-1 text-amber-400"
+          className="mx-1 text-[tomato]"
         >
           Live Server
           <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -205,7 +205,15 @@ export const HtmlDoc = () => {
         En caso de que te preocupe, ten en cuenta que nunca tendrás que
         memorizar estos elementos. Es muy fácil simplemente buscar algo como
         "imagen en HTML" para encontrar la etiqueta img. Un recurso que es
-        especialmente útil para aprender sobre estos elementos es W3 Schools.
+        especialmente útil para aprender sobre estos elementos es
+        <Link
+          href="https://https://www.w3schools.com/html/default.asp"
+          className="mx-1 text-[tomato]"
+        >
+          W3 Schools
+          <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+        </Link>
+        .
       </li>
       <SectionTitle title="Formularios" />
       <ul>
@@ -354,7 +362,7 @@ export const HtmlDoc = () => {
 
         `
       }</Pre>
-      <h4 className="text-primary">
+      <h4 className="text-text-primary">
         ¡Eso concluye nuestro contenido por aquí! ツ
       </h4>
       <ShareButton />

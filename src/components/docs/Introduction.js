@@ -48,7 +48,8 @@ export const Introduction = () => {
         proyectos a lo largo del curso, incluyendo un proyecto final de diseño
         abierto donde tendrás la oportunidad de crear tu propio sitio web. En
         este curso, necesitarás un editor de texto donde puedas escribir código
-        en tu computadora local. Algunos populares incluyen
+        en tu computadora local. Algunos populares incluyen:
+        <br />
         <Link
           className="mx-1 text-red-400"
           href="https://code.visualstudio.com/"
@@ -71,7 +72,7 @@ export const Introduction = () => {
           Vim
           <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
         </Link>
-        , ¡pero hay muchas opciones más para elegir!
+        , pero hay muchas opciones más para elegir!
       </p>
       <span id="programacion-web" />
       <SectionTitle title="Programación Web" />

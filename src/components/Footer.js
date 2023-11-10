@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaWhatsapp, FaTelegramPlane, FaChevronCircleUp } from 'react-icons/fa';
-import { FacebookIcon, TwitterIcon, Linkedin } from 'lucide-react';
+import { FacebookIcon, Linkedin } from 'lucide-react';
+import { TwitterIcon } from './TwitterIcon';
 
 export const Footer = () => {
   function compartirFacebook() {

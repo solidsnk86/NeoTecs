@@ -80,7 +80,7 @@ export default function JavaScript() {
             </li>
           </ol>
           <span id="introduccion" />
-          <SectionTitle title="Introducción a Javascript" />
+          <SectionTitle title="Introducción" />
           <ul>
             <li>
               Hasta ahora, hemos discutido cómo construir páginas web simples

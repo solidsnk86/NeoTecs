@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import { OpenInNew } from '@mui/icons-material';
+import { DjangoIcon } from '../../components/DjangoIcon';
 
 export default function DjangoDocs() {
   const DjangoTitle = ({ Tag = 'h1', children }) => {
@@ -17,6 +18,7 @@ export default function DjangoDocs() {
   const Header = ({ Tag = 'h2', children }) => {
     return <Tag className="text-text-primary">{children}</Tag>;
   };
+
   return (
     <TitlesContextProvider>
       <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-30" />
@@ -88,6 +90,9 @@ export default function DjangoDocs() {
           </article>
           <span id="web" />
           <SectionTitle title="Aplicaciones Web" />
+          <figure>
+            <DjangoIcon />
+          </figure>
           <article>
             <p>
               Hasta ahora, todas las aplicaciones web que hemos desarrollado han
@@ -97,7 +102,7 @@ export default function DjangoDocs() {
               los sitios web de
               <Link
                 href="https://www.nytimes.com/"
-                className="mx-1 text-slate-400"
+                className="mx-1 text-[#0C4B33]"
               >
                 The New York Times
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -105,7 +110,7 @@ export default function DjangoDocs() {
               o
               <Link
                 href="https://www.nytimes.com/"
-                className="mx-1 text-slate-400"
+                className="mx-1 text-[#0C4B33]"
               >
                 Facebook
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -138,12 +143,12 @@ export default function DjangoDocs() {
               que podría lucir algo como el siguiente ejemplo. En el ejemplo a
               continuación, GET es simplemente un tipo de solicitud, uno de los
               tres que discutiremos en este curso. La barra diagonal
-              <span className="mx-1 bg-gray-800 px-1 py-[2px] rounded">
+              <span className="mx-1 border border-slate-800 px-1 rounded">
                 (/)
               </span>
               generalmente indica que estamos buscando la página de inicio del
               sitio web, y los tres puntos suspensivos
-              <span className="mx-1 bg-gray-800 px-1 py-[2px] rounded">
+              <span className="mx-1 border border-slate-800 px-1 rounded">
                 (...)
               </span>
               indican que podríamos estar pasando más información también.
@@ -154,9 +159,12 @@ export default function DjangoDocs() {
             <p>
               Después de recibir una solicitud, un servidor enviará una
               respuesta HTTP, que podría verse algo así como la siguiente. Tal
-              respuesta incluirá la versión de HTTP, un código de estado (200
-              significa OK), una descripción del contenido y luego alguna
-              información adicional.
+              respuesta incluirá la versión de HTTP, un código de estado
+              <span className="mx-1 border border-slate-800 px-1 rounded">
+                200 significa OK
+              </span>
+              , una descripción del contenido y luego alguna información
+              adicional.
             </p>
             <div className="images-client">
               <img src="/images/response.png" />
@@ -521,6 +529,21 @@ export default function DjangoDocs() {
               ]
               `
             }</Pre>
+            <p>
+              Muchos sitios web utilizan parámetros en la URL para mostrar
+              información específica. Por ejemplo, al ir a
+              <Link
+                href="https://twitter.com/CalcagniGabriel"
+                className="mx-[3px] text-[#0C4B33]"
+              >
+                https://twitter.com/CalcagniGabriel
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              se muestran todos mis tweets, y al dirigirse a www.github.com/cs50
+              se accede a la página de GitHub de CS50. Incluso puedes encontrar
+              tus propios repositorios públicos de GitHub navegando a
+              www.github.com/TU_NOMBRE_DE_USUARIO.
+            </p>
           </article>
         </div>
       </div>
