@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Github } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { useIsomorphicLayoutEffect } from './hooks/useIsomorphicLayoutEffect';
+import { NeotecsLogo } from './NeotecsLogo';
 
 function updateColorTheme() {
   if (
@@ -68,11 +69,7 @@ export const Nav = ({ className }) => {
       <div className="h-16 flex justify-between max-w-screen-xl mx-auto px-4 md:px-8 z-20 relative text-text-primary">
         <div className="flex items-center space-x-2 sm:space-x-4">
           <Link href="/">
-            <img
-              src="/images/logos/neotecs-logo.svg"
-              className="w-20 h-16 mb-3 neotecs-logo"
-              alt="Neo"
-            />
+            <NeotecsLogo className="cursor-pointer w-20 h-20 relative bottom-2" />
           </Link>
         </div>
         <aside className="flex space-x-3">

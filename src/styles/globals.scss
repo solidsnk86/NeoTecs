@@ -112,6 +112,7 @@ a {
   width: 100%;
   aspect-ratio: 631 / 383;
   object-fit: cover;
+  filter: drop-shadow(3px 6px 9px #333);
 
   view-timeline-name: --image;
   view-timeline-axis: block;
@@ -248,7 +249,7 @@ pre {
 }
 
 .github-icon,
-.neotecs-logo {
+.neotecs-logo path {
   fill: var(--color-on-surface);
 }
 
