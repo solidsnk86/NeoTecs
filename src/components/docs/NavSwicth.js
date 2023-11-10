@@ -39,7 +39,7 @@ export const NavSwitch = ({ inline }) => {
     },
     {
       href: '',
-      title: 'Escalabilidad y Seguridad',
+      title: 'Escalabilidad',
     },
   ];
   const isActive = (link) => link.href === router.asPath;

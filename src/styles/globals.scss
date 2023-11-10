@@ -94,6 +94,12 @@ html::-webkit-scrollbar,
   background-color: rgba(180, 189, 197, 0.877);
 }
 
+@media (min-width: 400px) {
+  .scroll-style::-webkit-scrollbar {
+    height: 3px;
+  }
+}
+
 html::-webkit-scrollbar-thumb,
 .scroll-style::-webkit-scrollbar-thumb {
   width: 10px;
@@ -248,17 +254,17 @@ pre {
   animation-range: 0 150px;
 }
 
+@keyframes add-shadow {
+  to {
+    box-shadow: 0 5px 5px -3px rgba(255, 255, 255, 0.25);
+    background: var(--color-inverse-on-surface);
+  }
+}
+
 .github-icon,
 .neotecs-logo path,
 .html-icon {
   fill: var(--color-on-surface);
-}
-
-@keyframes add-shadow {
-  to {
-    box-shadow: 0 5px 5px -3px rgba(255, 255, 255, 0.25);
-    background: var(--color-on-surface-variant);
-  }
 }
 
 .list-css-span span {
