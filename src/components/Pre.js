@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 import { Highlight, themes } from 'prism-react-renderer';
 import stripIndent from 'strip-indent';
 import { Copy } from 'lucide-react';
@@ -22,6 +22,10 @@ export const Pre = ({ children, lang = '' }) => {
 
     try {
       document.execCommand('copy');
+
+      const isDarkMode = window.matchMedia(
+        '(prefers-color-scheme: dark)',
+      ).matches;
 
       toast.success('Contenido copiado al portapapeles', {
         position: toast.POSITION.BOTTOM_LEFT,
