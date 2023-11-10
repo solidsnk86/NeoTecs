@@ -94,7 +94,7 @@ export const VideoLikes = ({ videoId }) => {
         <span className="font-bold">Neo TECs</span>
         <p className="font-light text-[#5D5D5D]">{suscriptors} suscriptores</p>
       </div>
-      <aside className="flex space-x-3 xl:flex xl:space-x-[10px] xl:left-0 xl:relative xl:scale-[1] lg:flex lg:space-x-1 lg:scale-[0.9] lg:relative lg:left-[-30px]">
+      <aside className="flex space-x-3 xl:flex xl:space-x-4 xl:left-0 xl:relative xl:scale-[1] lg:flex lg:space-x-1 lg:scale-[0.9] lg:relative lg:left-[-30px]">
         <div>
           <p className="relative top-[6px] mx-1 font-bold px-2 text-text-variant py-1 rounded-full bg-button-variant cursor-pointer hover:opacity-80" onClick={suscribeButton}>Suscríbete</p>
         </div>
