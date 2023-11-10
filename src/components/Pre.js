@@ -22,6 +22,7 @@ export const Pre = ({ children, lang = '' }) => {
 
     try {
       document.execCommand('copy');
+      const isDarkMode = window.matchMedia('prefers-color-scheme: dark').matches
 
       toast.success('Contenido copiado al portapapeles', {
         position: toast.POSITION.BOTTOM_LEFT,
