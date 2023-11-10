@@ -15,7 +15,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
             rel="stylesheet"
           />
-          <meta name="theme-color" content="#6E51F3" />
+          <meta name="theme-color" content="#6f43c0" />
         </Head>
         <body>
           <Main />

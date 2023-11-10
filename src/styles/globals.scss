@@ -32,6 +32,7 @@
     --color-surface-4: #dfe8f7;
     --color-surface-5: #dae5f5;
     --button-variant: #0f0f0f;
+    --text-shadow: #6f43c0;
 
     --color-code: #6f43c0;
     --color-pre-bg: #21242a;
@@ -70,6 +71,7 @@
     --color-surface-4: #2b303a;
     --color-surface-5: #2e333e;
     --button-variant: #f1f1f1;
+    --text-shadow: #88d456;
 
     --color-code: #d3bbff;
     --color-red: #ffb4aa;
@@ -189,7 +191,7 @@ a {
 }
 
 .custom-text-shadow {
-  text-shadow: 0 0 10px #88d456;
+  text-shadow: 0 0 10px var(--text-shadow);
 }
 
 /**=================|
