@@ -69,7 +69,7 @@ export const Nav = ({ className }) => {
       <div className="h-16 flex justify-between max-w-screen-xl mx-auto px-4 md:px-8 z-20 relative text-text-primary">
         <div className="flex items-center space-x-2 sm:space-x-4">
           <Link href="/">
-            <NeotecsLogo className="cursor-pointer w-20 h-20 relative bottom-2" />
+            <NeotecsLogo className="cursor-pointer relative bottom-2" />
           </Link>
         </div>
         <aside className="flex space-x-3">

@@ -2,8 +2,8 @@ export const NeotecsLogo = (props) => {
   const { children, ...attrs } = props;
   return (
     <svg
-      width="370"
-      height="97"
+      width="80"
+      height="80"
       viewBox="0 0 370 97"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
