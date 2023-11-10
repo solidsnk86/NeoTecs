@@ -335,17 +335,14 @@ export default function CssDoc() {
           <li>
             Es posible que ya estés pensando que hay cierta repetición
             innecesaria en nuestro CSS en este momento, ya que tanto
-            <b className="bg-gray-800 px-1 py-[2px] border-b-2 border-[tomato] mx-1">
+            <b className="border border-[#395692] rounded px-1 border-l-4 mx-1">
               td
             </b>
             como
-            <b className="bg-gray-800 px-1 py-[2px] border-b-2 border-[tomato] mx-1">
+            <b className="border border-[#395692] rounded px-1 border-l-4 mx-1">
               th
             </b>
-            tienen el mismo estilo. Podemos y
-            <b className="bg-[#541B1F] px-1 py-[2px] rounded-sm border-b-2 border-[tomato] mx-1">
-              debemos
-            </b>
+            tienen el mismo estilo. Podemos y <em>"debemos" </em>
             condensar esto en el siguiente código, utilizando una coma para
             indicar que el estilo debe aplicarse a más de un tipo de elemento.
           </li>
@@ -381,11 +378,11 @@ export default function CssDoc() {
                 Id: Otra opción es dar a nuestros elementos HTML un id de la
                 siguiente manera:
                 <br />
-                <span className="border-gray-800 border rounded mx-1 border-b-2 border-green-400 px-1">
+                <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
                   {'<h1 id="primer-encabezado">¡Hola!</h1>'}
                 </span>
                 y luego aplicar estilos usando
-                <span className="border-gray-800 border rounded mx-1 border-b-2 border-green-400 px-1">
+                <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
                   {'#first-header {...}'}
                 </span>
                 utilizando el signo de numeral para indicar que estamos buscando
@@ -399,13 +396,13 @@ export default function CssDoc() {
                 tener más de una clase. Agregamos clases a un elemento HTML de
                 la siguiente manera:
                 <br />
-                <span className="border-gray-800 border rounded mx-1 border-b-2 border-green-400 px-1">
+                <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
                   {'<h1 class="texto-pagina atenuado">¡Hola!</h1>'}
                 </span>
                 (nota que acabamos de agregar dos clases al elemento:
                 texto-pagina y atenuado). Luego, estilizamos en función de la
-                clase usando un punto en lugar de un signo de numeral:{' '}
-                <span className="border-gray-800 border rounded mx-1 border-b-2 border-green-400 px-1">
+                clase usando un punto en lugar de un signo de numeral:
+                <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
                   {'.atenuado {...}'}
                 </span>
               </li>
@@ -548,8 +545,8 @@ export default function CssDoc() {
               luego especificando la circunstancia después de esos dos puntos.
             </li>
             <li>
-              En el caso del botón, agregaríamos{' '}
-              <span className="bg-gray-800 px-1 py-[2px] border-l-2 border-lime-400 rounded mx-1">
+              En el caso del botón, agregaríamos
+              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
                 :hover
               </span>
               al selector del botón para indicar el diseño que se aplicará solo
@@ -630,7 +627,7 @@ export default function CssDoc() {
               Como ejemplo de una consulta de medios (media query), intentemos
               cambiar simplemente el color de la pantalla cuando se reduce a un
               cierto tamaño. Indicamos una consulta de medios escribiendo
-              <span className="bg-gray-800 px-1 py-[2px] border-l-2 border-lime-400 rounded mx-1">
+              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
                 @media
               </span>
               , seguido del tipo de consulta entre paréntesis:
@@ -670,7 +667,7 @@ export default function CssDoc() {
             un nuevo atributo CSS conocido como
             <Link
               href="https://www.w3schools.com/css/css3_flexbox.asp"
-              className="text-amber-600 mx-1"
+              className="text-[#395692] mx-1"
             >
               flexbox
               <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -806,7 +803,7 @@ export default function CssDoc() {
               A continuación, podemos explorar algunas de las características de
               <Link
                 href="https://getbootstrap.com/docs/4.5/components/"
-                className="text-amber-600 mx-1"
+                className="text-[#395692] mx-1"
               >
                 Bootstrap
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -819,15 +816,15 @@ export default function CssDoc() {
               Una característica popular de Bootstrap es su
               <Link
                 href="https://getbootstrap.com/docs/4.0/layout/grid/"
-                className="text-amber-600 mx-1"
+                className="text-[#395692] mx-1"
               >
                 sistema de cuadrícula
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               . Bootstrap divide automáticamente una página en 12 columnas, y
               podemos decidir cuántas columnas ocupa un elemento agregando la
-              clase{' '}
-              <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px]">
+              clase
+              <span className="border-b-2 border-[#395692] rounded px-1 border mx-1">
                 col-x
               </span>
               , donde x es un número entre 1 y 12. Por ejemplo, en la página
@@ -893,12 +890,12 @@ export default function CssDoc() {
             Bootstrap también nos permite especificar tamaños de columna que
             varían según el tamaño de la pantalla. En el siguiente ejemplo,
             utilizamos
-            <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+            <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
               'col-lg-3'
             </span>
             para indicar que un elemento debería ocupar 3 columnas en una
             pantalla grande, y
-            <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+            <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
               'col-sm-6'
             </span>
             para indicar que un elemento debería ocupar 6 columnas cuando la
@@ -958,7 +955,7 @@ export default function CssDoc() {
             <li>
               <Link
                 href="https://sass-lang.com/"
-                className="text-amber-600 mx-1"
+                className="text-[#395692] mx-1"
               >
                 Sass
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -970,18 +967,20 @@ export default function CssDoc() {
             <li>
               Cuando escribimos en Sass, creamos un nuevo archivo con la
               extensión
-              <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
                 variables.scss
               </span>
               . En este archivo, podemos crear una nueva variable agregando un
-              signo de dólar ($) antes de un nombre, seguido de dos puntos y
-              luego un valor. Por ejemplo, escribiríamos
-              <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+              signo de dólar
+              <span className="text-[#395692] mx-1">("$")</span>
+              antes de un nombre, seguido de dos puntos y luego un valor. Por
+              ejemplo, escribiríamos
+              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
                 $color: red;
               </span>
               para establecer la variable color en el valor rojo. Luego,
               accedemos a esa variable usando
-              <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
                 $color
               </span>
               . Aquí tienes un ejemplo de nuestro archivo variables.scss:
@@ -1006,30 +1005,30 @@ export default function CssDoc() {
             <li>
               Para vincular este estilo a nuestro archivo HTML, no podemos
               simplemente enlazar el archivo
-              <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
                 .scss
               </span>
               , ya que la mayoría de los navegadores web solo reconocen archivos
-              <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
                 .css
               </span>
               . Para resolver este problema, debemos
               <Link
                 href="https://sass-lang.com/install"
-                className="text-amber-600 mx-1"
+                className="text-[#395692] mx-1"
               >
                 descargar un programa llamado Sass
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               en nuestras computadoras. Luego, en la terminal, escribimos
-              <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
                 sass variables.scss:variables.css
               </span>
               . Este comando compilará un archivo
-              <b className="text-amber-400 mx-1">".scss"</b> llamado
+              <b className="text-[#395692] mx-1">".scss"</b> llamado
               variables.scss en un archivo
-              <b className="text-amber-400 mx-1">".css"</b> llamado
-              <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+              <b className="text-[#395692] mx-1">".css"</b> llamado
+              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
                 variables.css
               </span>
               , al cual puedes agregar un enlace en tu página HTML.
@@ -1079,22 +1078,22 @@ export default function CssDoc() {
             Otra característica que Sass nos brinda se conoce como
             <Link
               href="https://sass-lang.com/guide"
-              className="mx-1 text-amber-600"
+              className="mx-1 text-[#395692]"
             >
               herencia
               <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
             </Link>
             . Esto nos permite crear un conjunto básico de estilos que pueden
             ser compartidos por varios elementos diferentes. Lo hacemos
-            agregando un <b className="text-amber-400 mx-1">'%'</b> antes del
+            agregando un <b className="text-[#395692] mx-1">'%'</b> antes del
             nombre de una clase, agregando algunos estilos y luego, más
             adelante, agregando la línea
-            <span className="bg-gray-800 border-b-2 border-amber-400 rounded px-1 py-[2px] mx-1">
+            <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
               `@extend %nombre-de-clase`
             </span>
             al principio de algunos estilos. Por ejemplo, el siguiente código
-            aplica los estilos dentro de la clase{' '}
-            <b className="text-amber-400 mx-1">"message"</b> a cada una de las
+            aplica los estilos dentro de la clase
+            <b className="text-[#395692] mx-1">"message"</b> a cada una de las
             clases diferentes a continuación, lo que resulta en una página web
             que se ve de la siguiente manera:
           </li>

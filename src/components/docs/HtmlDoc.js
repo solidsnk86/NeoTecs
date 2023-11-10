@@ -354,7 +354,7 @@ export const HtmlDoc = () => {
 
         `
       }</Pre>
-      <h4 className="text-slate-100">
+      <h4 className="text-primary">
         ¡Eso concluye nuestro contenido por aquí! ツ
       </h4>
       <ShareButton />
