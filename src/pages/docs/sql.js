@@ -25,7 +25,7 @@ export default function SqlDocs() {
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
           <SqlTitle>SQL</SqlTitle>
-          <hr />
+          <hr className="border-text-primary" />
           <Header>Índice</Header>
           <ol className="indice">
             <li>

@@ -25,7 +25,7 @@ export default function DjangoDocs() {
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
           <DjangoTitle>Django</DjangoTitle>
-          <hr />
+          <hr className="border-text-primary" />
           <Header>Indice</Header>
           <ol className="indice">
             <li>

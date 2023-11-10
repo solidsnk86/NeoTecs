@@ -24,7 +24,7 @@ export default function CssDoc() {
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
           <CssTitle>CSS (Hojas de Estilo de Cascada)</CssTitle>
-          <hr />
+          <hr className="border-text-primary" />
           <Header>Índice</Header>
           <ol className="indice">
             <li>

@@ -199,13 +199,13 @@ export default function UbiquitiDocs() {
                 nodo más próximo a conectar, que tenga buena intensidad de señal
                 en Dbi por ejemplo:
                 <ul>
-                  <li className="text-green-400 uppercase">
+                  <li className="text-green-500 uppercase">
                     [-42Dbi o -55Dbi] óptimo.
                   </li>
-                  <li className="text-orange-400 uppercase">
+                  <li className="text-orange-500 uppercase">
                     [-62Dbi o -75Dbi] es bueno.
                   </li>
-                  <li className="text-red-400 uppercase">
+                  <li className="text-red-500 uppercase">
                     [-82Dbi o -95Dbi] es débil.
                   </li>
                 </ul>
