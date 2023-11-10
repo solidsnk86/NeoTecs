@@ -22,7 +22,6 @@ export const Pre = ({ children, lang = '' }) => {
 
     try {
       document.execCommand('copy');
-      const isDarkMode = window.matchMedia('prefers-color-scheme: dark').matches
 
       const isDarkMode = window.matchMedia(
         '(prefers-color-scheme: dark)',
