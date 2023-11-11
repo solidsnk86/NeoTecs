@@ -6,7 +6,7 @@ export function ShareButton() {
     if (navigator.share) {
       navigator.share({
         title: 'Neotecs Informática',
-        text: 'Aprende a configurar tu WiFi en tan solo 5 minutos. Documentación web de para CPE inalámbros de diferentes marcas.',
+        text: 'Aprende a programar con éste curso gratuito en NeoTecs. Documentación web para aprender diferentes lenguajes de programación y más. También te informo como configurar diferentes equipos inalámbricos WiFi, ¡Echa un vistazo al sitio!',
         url: 'https://neotecs.netlify.app',
       });
     }

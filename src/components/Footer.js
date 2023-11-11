@@ -11,7 +11,7 @@ export const Footer = () => {
 
   const compartirWhatsapp = () => {
     const winLoc = window.location.href;
-    const mensaje = `¡Echa un vistazo a esta web para aprender a configurar tu WiFi!: ${winLoc}`;
+    const mensaje = `¡Echa un vistazo a esta web para aprender programación y a configurar tu Wi-Fi!: ${winLoc}`;
     const encodeM = encodeURIComponent(mensaje);
     window.open(`https://wa.me/?text=${encodeM}`);
   };
