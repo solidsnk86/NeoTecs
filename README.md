@@ -17,11 +17,11 @@
 
 ![Static Badge](https://img.shields.io/badge/CONTRIBUCIONES-EC4899)
 
-Si encuentras errores o deseas mejorar este proyecto, ¡te invito a contribuir! Puedes hacerlo a través de un fork del repositorio y luego realizar tus modificaciones. Siéntete libre de agregar más contenido, ejemplos de código, instrucciones de instalación o cualquier otra mejora que consideres relevante.
+If you find errors or wish to enhance this project, I invite you to contribute! You can do so by forking the repository and then making your modifications. Feel free to add more content, code examples, installation instructions, or any other improvements you deem relevant.
 
-Una vez que hayas realizado tus cambios, puedes enviar una solicitud de pull para que podamos revisar tus contribuciones y considerar su incorporación al proyecto principal.
+Once you've made your changes, you can submit a pull request for us to review your contributions and consider incorporating them into the main project.
 
-`¡Esperamos tus contribuciones!`
+`I look forward to your contributions!!`
 
 ![GitHub Stars](https://img.shields.io/github/stars/solidsnk86/NeoTecs.svg?style=social)
 
@@ -45,7 +45,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction)I have created this REST API to be used in an example for JavaScript, allowing access to currency exchange functionality, can be accessed on [https://neotecs.netlify.app/api/currency](https://neotecs.netlify.app/api/currency). This endpoint can be edited in `pages/api/currency.js`.
+[API routes](https://nextjs.org/docs/api-routes/introduction) I have created this REST API to be used in an example for JavaScript, allowing access to currency exchange functionality, can be accessed on [https://neotecs.netlify.app/api/currency](https://neotecs.netlify.app/api/currency). This endpoint can be edited in `pages/api/currency.js`.
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
