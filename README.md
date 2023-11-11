@@ -5,7 +5,8 @@
 **🔧 Tools and frames which i use in this project:**
 
 [![Built with Tailwind CSS](https://img.shields.io/badge/Built_with-Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Powered by Supabase](https://img.shields.io/badge/Powered_by-Supabase-3548A3?style=flat&logo=supabase&logoColor=white)](https://supabase.io/)
+[![Powered by Next.js](https://img.shields.io/badge/Powered_by-Next.js-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
+
 
 | Lenguaje                                                                                             | Descripción         |
 | ---------------------------------------------------------------------------------------------------- | ------------------- |
