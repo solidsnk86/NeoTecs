@@ -3,37 +3,27 @@
 import React, { useState, useEffect } from "react";
 import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
 
-export const VideoLikes = ({ videoId }) => {
+export const VideoLikes = () => {
   const [likes, setLikes] = useState(0);
-  const [suscriptors, setSuscriptors] = useState(0);
 
   useEffect(() => {
-    const getVideoDetails = async () => {
-      try {
-        const apiKey = 'AIzaSyCu_A2nFDYi0TWRgASZJz89Zkuk_yIGhLE'
-        const response = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${videoId}&key=${apiKey}`);
-        if (!response.ok) {
-          throw new Error('Error al obtener datos de la API de YouTube');
-        }
-        const data = await response.json();
+    const storedLikes = localStorage.getItem('likes');
+    if (storedLikes) {
+      setLikes(parseInt(storedLikes, likes));
+    }
+  }, []);
 
-        if (data.items && data.items.length > 0) {
-          const video = data.items[0];
-          const likes = video.statistics.likeCount;
-          const suscriptors = video.statistics.subscriberCount;
+  useEffect(() => {
+    localStorage.setItem('likes', likes.toString());
+  }, [likes]);
 
-          setLikes(likes);
-          setSuscriptors(suscriptors)
-        } else {
-          console.error('No se encontraron datos del video en la respuesta de la API de YouTube');
-        }
-      } catch (error) {
-        console.error('Error al obtener los detalles del video:', error);
-      }
-    };
+  const incrementLikes = () => {
+    setLikes(likes + 1)
+  }
 
-    getVideoDetails();
-  }, [videoId]);
+  const decrementLikes = () => {
+    setLikes(likes - 1)
+  }
 
   const LikeButton = (props) => {
     const { ...attrs } = props
@@ -92,7 +82,7 @@ export const VideoLikes = ({ videoId }) => {
       <img className="rounded-full w-10 h-10" src="/images/logos/NeoTecs _Tutorial_logo.png" alt="logo" />
       <div className="flex-col">
         <span className="font-bold">Neo TECs</span>
-        <p className="font-light text-[#5D5D5D]">{suscriptors} suscriptores</p>
+        <p className="font-light text-[#5D5D5D]">suscriptores</p>
       </div>
       <aside className="flex space-x-3 xl:flex xl:space-x-4 xl:left-0 xl:relative xl:scale-[1] lg:flex lg:space-x-1 lg:scale-[0.9] lg:relative lg:left-[-30px]">
         <div>
@@ -100,9 +90,9 @@ export const VideoLikes = ({ videoId }) => {
         </div>
         <span className="flex bg-card-bg relative bottom-[2px] rounded-full my-2 w-fit px-3 py-1 transition-all">
           <span className="flex relative top-[1px] gap-2">
-            <LikeButton onClick={suscribeButton} className='hover:fill-gray-500 cursor-pointer' /> {likes}
+            <LikeButton onClick={incrementLikes} className='hover:fill-gray-500 cursor-pointer' /> {likes}
             <hr className="border-l-[1px] h-5 border-[#575757] relative bottom-[1px]" />
-            <DisLikeButton className='hover:fill-gray-500 cursor-pointer' onClick={suscribeButton} />
+            <DisLikeButton className='hover:fill-gray-500 cursor-pointer' onClick={decrementLikes} />
           </span>
         </span>
         <div className="text-[#575757] bg-card-bg rounded-full h-[28px] relative top-[6px] px-[6px]" onClick={ShareButton}>
