@@ -48,7 +48,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) I have created this REST API to be used in an example for JavaScript, allowing access to currency exchange functionality, can be accessed on [https://neotecs.netlify.app/api/currency](https://neotecs.netlify.app/api/currency). This endpoint can be edited in `pages/api/currency.js`. If you are intrested how i use this REST API i leave the example here:
-[![Currency Exchange](https://img.shields.io/badge/Formulario-WEB-green)](https://neotecs.netlify.app/docs/javascript#convertir-divisas)
+[![Currency Exchange](https://img.shields.io/badge/Currency-Exchange-gold)](https://neotecs.netlify.app/docs/javascript#convertir-divisas)
 
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
