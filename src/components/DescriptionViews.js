@@ -12,7 +12,7 @@ export const DescriptionViews = ({ videoId }) => {
           `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${videoId}&key=${apiKey}`,
         );
         if (!response.ok) {
-          throw new Error('Error al obtener datos de la API de YouTube');
+          throw new Error('Error al obtener datos');
         }
         const data = await response.json();
 
