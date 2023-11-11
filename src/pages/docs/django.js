@@ -380,6 +380,7 @@ export default function DjangoDocs() {
                 incluir todas las rutas del archivo
                 <span>urls.py</span> dentro de nuestra aplicación. Para hacer
                 esto, escribimos:
+                <br />
                 <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
                   include("NOMBRE_DE_LA_APP.urls")
                 </span>

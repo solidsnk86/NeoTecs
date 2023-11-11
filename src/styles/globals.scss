@@ -100,6 +100,16 @@ html::-webkit-scrollbar,
     height: 2px;
   }
 }
+@media (min-width: 360px) {
+  .scroll-style::-webkit-scrollbar {
+    height: 2px;
+  }
+  .youtube-aside {
+    transform: scale(0.8);
+    position: relative;
+    left: -30px;
+  }
+}
 
 html::-webkit-scrollbar-thumb,
 .scroll-style::-webkit-scrollbar-thumb {
