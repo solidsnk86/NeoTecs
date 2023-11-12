@@ -287,8 +287,8 @@ export default function DjangoDocs() {
               </li>
               <li className="list-css-span">
                 Ahora, debemos instalar nuestra nueva aplicación. Para hacerlo,
-                vamos al archivo <span>settings.py</span>, nos desplazamos hacia
-                abajo hasta la lista de <span>INSTALLED_APPS</span> y agregamos
+                vamos al archivo<span>settings.py</span>, nos desplazamos hacia
+                abajo hasta la lista de<span>INSTALLED_APPS</span> y agregamos
                 el nombre de nuestra nueva aplicación a esta lista.
               </li>
             </ol>
@@ -301,7 +301,7 @@ export default function DjangoDocs() {
             <p>Ahora, para comenzar con nuestra aplicación:</p>
             <ol>
               <li className="list-css-span">
-                A continuación, navegaremos hasta <span>views.py</span>. Este
+                A continuación, navegaremos hasta<span>views.py</span>. Este
                 archivo contendrá varias vistas diferentes, y por ahora podemos
                 pensar en una vista como una página que el usuario podría querer
                 ver. Para crear nuestra primera vista, escribiremos una función
@@ -329,31 +329,42 @@ export default function DjangoDocs() {
               <li className="list-css-span">
                 Ahora, necesitamos asociar de alguna manera esta vista que
                 acabamos de crear con una URL específica. Para hacerlo,
-                crearemos otro archivo llamado <span>urls.py</span> en el mismo
-                directorio que <span>views.py</span>. Ya tenemos un archivo{' '}
-                <span>urls.py</span> para todo el proyecto, pero es mejor tener
+                crearemos otro archivo llamado<span>urls.py</span>en el mismo
+                directorio que<span>views.py</span>. Ya tenemos un archivo
+                <span>urls.py</span>para todo el proyecto, pero es mejor tener
                 uno separado para cada aplicación individual.
               </li>
               <li>
-                Dentro de nuestro nuevo urls.py, crearemos una lista de patrones
-                de URL que un usuario podría visitar al usar nuestro sitio web.
-                Para hacerlo:
+                Dentro de nuestro nuevo<span>urls.py</span>, crearemos una lista
+                de patrones de URL que un usuario podría visitar al usar nuestro
+                sitio web. Para hacerlo:
                 <ol>
-                  <li>
-                    Realizaremos algunas importaciones: from django.urls import
-                    path nos proporcionará la capacidad de redirigir URLs. from
-                    . import views importará cualquier función que hayamos
-                    creado en views.py.
+                  <li className="list-css-span">
+                    Realizaremos algunas importaciones:
+                    <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded border-[#0C4B33] border-b-2">
+                      from django.urls import path
+                    </span>
+                    nos proporcionará la capacidad de redirigir URLs. from .
+                    import views importará cualquier función que hayamos creado
+                    en
+                    <span>views.py</span>.
                   </li>
                   <li>Crearemos una lista llamada urlpatterns.</li>
-                  <li>
+                  <li className="list-css-span">
                     Para cada URL deseada, agregaremos un elemento a la lista
-                    urlpatterns que contenga una llamada a la función path con
-                    dos o tres argumentos: una cadena que represente la ruta de
-                    la URL, una función de views.py que deseamos llamar cuando
-                    se visite esa URL y (opcionalmente) un nombre para esa ruta,
-                    en el formato name="algo". Aquí tienes un ejemplo de cómo se
-                    vería nuestra aplicación simple ahora:
+                    urlpatterns que contenga una llamada a la función
+                    <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded border-[#0C4B33] border-b-2">
+                      path
+                    </span>
+                    con dos o tres argumentos: una cadena que represente la ruta
+                    de la URL, una función de<span>views.py</span>que deseamos
+                    llamar cuando se visite esa URL y (opcionalmente) un nombre
+                    para esa ruta, en el formato
+                    <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded border-[#0C4B33] border-b-2">
+                      name="algo"
+                    </span>
+                    . Aquí tienes un ejemplo de cómo se vería nuestra aplicación
+                    simple ahora:
                   </li>
                 </ol>
               </li>
@@ -371,11 +382,11 @@ export default function DjangoDocs() {
                 Ahora, hemos creado un <span>urls.py</span> para esta aplicación
                 específica, y es hora de editar el urls.py creado para todo el
                 proyecto. Cuando abras este archivo, deberías ver que ya existe
-                una ruta llamada <b>"admin"</b>, que explicaremos en
-                conferencias posteriores. Queremos agregar otra ruta para
-                nuestra nueva aplicación, por lo que agregaremos un elemento a
-                la lista de urlpatterns. Esto sigue el mismo patrón que nuestras
-                rutas anteriores, excepto que en lugar de agregar una función de
+                una ruta llamada <b>"admin"</b>, que explicaremos en otros
+                cursos posteriores. Queremos agregar otra ruta para nuestra
+                nueva aplicación, por lo que agregaremos un elemento a la lista
+                de urlpatterns. Esto sigue el mismo patrón que nuestras rutas
+                anteriores, excepto que en lugar de agregar una función de
                 <span>views.py</span> como segundo argumento, queremos poder
                 incluir todas las rutas del archivo
                 <span>urls.py</span> dentro de nuestra aplicación. Para hacer
@@ -386,7 +397,7 @@ export default function DjangoDocs() {
                 </span>
                 , donde include es una función a la que obtenemos acceso
                 importando include desde django.urls, como se muestra en el
-                <span>urls.py</span> a continuación:
+                <span>urls.py</span>a continuación:
               </li>
               <Pre lang="javascript">{
                 /*django */ `
@@ -395,7 +406,7 @@ export default function DjangoDocs() {
                 
                 urlpatterns = [
                     path('admin/', admin.site.urls),
-                    path('hello/', include("hello.urls"))
+                    path('hola/', include("hola.urls"))
                 ]
                 `
               }</Pre>
@@ -455,7 +466,7 @@ export default function DjangoDocs() {
                 <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
                   (localhost:8000/)
                 </span>
-                y fue al archivo<span>urls.py </span>
+                y fue al archivo<span>urls.py</span>
                 de nuestro proyecto, buscando un patrón que coincidiera con
                 "hello".
               </li>
