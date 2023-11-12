@@ -323,7 +323,7 @@ export default function DjangoDocs() {
                 # Crea tus vistas aquí.
                
                 def index(request):
-                    return HttpResponse("Hello, world!")
+                    return HttpResponse("Hola, Mundo!")
                 `
               }</Pre>
               <li className="list-css-span">
@@ -334,7 +334,7 @@ export default function DjangoDocs() {
                 <span>urls.py</span>para todo el proyecto, pero es mejor tener
                 uno separado para cada aplicación individual.
               </li>
-              <li>
+              <li className="list-css-span">
                 Dentro de nuestro nuevo<span>urls.py</span>, crearemos una lista
                 de patrones de URL que un usuario podría visitar al usar nuestro
                 sitio web. Para hacerlo:
@@ -412,19 +412,18 @@ export default function DjangoDocs() {
               }</Pre>
               <li className="list-css-span">
                 Al hacer esto, hemos especificado que cuando un usuario visite
-                nuestro sitio y luego agregue /hello a la URL en la barra de
+                nuestro sitio y luego agregue /hola a la URL en la barra de
                 búsqueda, serán redirigidos a las rutas dentro de nuestra nueva
                 aplicación. En otras palabras, al acceder a
                 <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
-                  http://tu-sitio.com/hello/
+                  http://tu-sitio.com/hola/
                 </span>
                 , se activará la lógica de rutas definida en el archivo
                 <span>urls.py</span>
                 de tu nueva aplicación, y se dirigirá a la vista
                 correspondiente, que en este caso es la vista hello_world que
-                devuelve "Hello, World". Esto permite que los usuarios accedan a
-                esta vista específica al agregar /hello a la URL de tu sitio
-                web.
+                devuelve "Hola, Neo". Esto permite que los usuarios accedan a
+                esta vista específica al agregar /hola a la URL de tu sitio web.
               </li>
             </ol>
             <p>
@@ -446,7 +445,7 @@ export default function DjangoDocs() {
               <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
                 localhost:8000
               </span>
-              sin nada añadido al final. Entonces, cuando agrego /hello a la URL
+              sin nada añadido al final. Entonces, cuando agrego /hola a la URL
               en la barra de búsqueda:
             </p>
             <div className="images-client">
@@ -460,7 +459,7 @@ export default function DjangoDocs() {
               <li className="list-css-span">
                 Cuando accedimos a la URL
                 <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
-                  localhost:8000/hello
+                  localhost:8000/hola
                 </span>
                 , Django examinó lo que venía después de la URL base
                 <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
@@ -468,12 +467,12 @@ export default function DjangoDocs() {
                 </span>
                 y fue al archivo<span>urls.py</span>
                 de nuestro proyecto, buscando un patrón que coincidiera con
-                "hello".
+                "hola".
               </li>
-              <li>
+              <li className="list-css-span">
                 Encontró esa extensión porque la definimos, y vio que cuando se
                 encontrara con esa extensión, debía incluir nuestro archivo
-                urls.py desde dentro de nuestra aplicación.
+                <span>urls.py</span>desde dentro de nuestra aplicación.
               </li>
               <li>
                 Luego, Django ignoró las partes de la URL que ya había utilizado

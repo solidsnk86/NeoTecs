@@ -1,7 +1,5 @@
-from django.contrib import admin
-from django.urls import path, include
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('hola/', include("hola.urls"))
-]
+from django.shortcuts import render
+from django.http import HttpResponse
+               
+def index(request):
+    return HttpResponse("Hola, Neo!")
