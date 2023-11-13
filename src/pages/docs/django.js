@@ -706,6 +706,210 @@ export default function DjangoDocs() {
             <div className="images-client">
               <img src="/images/solidsnk.png" alt="usuarios" />
             </div>
+            <p>
+              Otra cosa que también podemos hacer es darle mayúscula a la cadena
+              de texto, con la función de python
+              <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
+                capitalize
+              </span>
+              ejemplo:
+            </p>
+            <Pre lang="javascript">{
+              /*python */ `
+              def saludo(request, name):
+              return HttpResponse(f"Hola, {name.capitalize()}!")
+              `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/capitalize.png" alt="usuarios" />
+            </div>
+            <p>
+              Esta es una excelente ilustración de cómo cualquier funcionalidad
+              que tengamos en Python puede ser utilizada en Django antes de ser
+              devuelta.
+            </p>
+          </article>
+          <SectionTitle title="Plantillas" />
+          <article>
+            <p>
+              Hasta ahora, nuestras respuestas HTTP han sido solo texto, ¡pero
+              podemos incluir cualquier elemento HTML que deseemos! Por ejemplo,
+              podría decidir devolver un encabezado magenta en lugar de solo el
+              texto en nuestra función de índice:
+            </p>
+            <Pre lang="javascript">{
+              /*python */ `
+              def index(request):
+               return HttpResponse("<h1 style=\\"color:#F0196D;\\">Bienvenidos, Brillantes!</h1>")
+              `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/color-header.png" alt="Style header" />
+            </div>
+            <p>
+              Sería muy tedioso escribir una página HTML completa dentro de
+              views.py. También constituiría un mal diseño, ya que queremos
+              mantener partes separadas de nuestro proyecto en archivos
+              separados siempre que sea posible.
+            </p>
+            <p>
+              Es por eso que ahora vamos a introducir las plantillas de Django,
+              que nos permitirán escribir HTML y CSS en archivos separados y
+              renderizar esos archivos usando Django. La sintaxis que
+              utilizaremos para renderizar una plantilla se ve así:
+            </p>
+            <Pre lang="javascript">{
+              /*python */ `
+              from django.shortcuts import render
+
+              def index(request):
+                return render(request, "hola/index.html")
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Ahora, necesitaremos crear esa plantilla. Para hacer esto,
+              crearemos una carpeta llamada templates dentro de nuestra
+              aplicación, luego crearemos una carpeta llamada<span>hola</span>
+              (o cualquier nombre que tenga nuestra aplicación) dentro de esa
+              carpeta, y luego agregaremos un archivo llamado
+              <span>index.html</span>.
+            </p>
+            <div className="images-client">
+              <img src="/images/templates.png" alt="Style header" />
+            </div>
+            <p className="list-css-span">
+              Podemos agregar lo siguiente a nuestro archivo
+              <span>index.html</span>:
+            </p>
+            <Pre lang="html">{
+              /*html */ `
+              <!DOCTYPE html>
+              <html lang="en">
+              <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Bienvenidos a NeoTecs</title>
+              </head>
+              <style>
+              body {
+              background: #0f0f0f;
+              color: aliceblue;
+              font-family:system-ui, -apple-system, BlinkMacSystemFont,
+               'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+              }
+              .container {
+                  text-align: center;
+                  margin: 20px auto;
+                  width: fit-content;
+                  border: 1px solid #444;
+                  border-radius: 10px;
+                  padding: 20px;
+              }
+              .list {
+                  text-align: left;
+                  color: #77F34E;
+              }
+              input:focus {
+                  border-color: #77F34E;
+              }
+              button {
+                  border: none;
+                  background-color: transparent;
+                  padding: 4px 8px;
+                  border: 1px solid #fafafa;
+                  outline: 2px solid #77F34E;
+                  outline-offset: 3px;
+                  color: #fafafa;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  margin-inline: 6px;
+              }
+              button:hover {
+                  transform: scale(1.05);
+                  background-color: blueviolet;
+                  color: #000 bold;
+                  filter: drop-shadow(0 0 10px #77F34E);
+              }
+          </style>
+              <body>
+                  <div class="container">
+                  <h1>Bienvenidos a éste curso de Django</h1>
+                  <p>En este HTML podemos escribir más cómodo un documento HTML.</p>
+                  <ol class="list">
+                      <li>
+                          Es que también podemos agregar estilos CSS.
+                      </li>
+                      <li>
+                          También podemos agregar Javascript al documento!
+                      </li>
+                  </ol>
+                  <legend>
+                      Escribe tu correo electrónico:
+                      <input id="email" type="email" placeholder="Ingresa tu correo">
+                      <button type="button" id="sendButton">Enviar</button>
+                  </legend>
+              </div>
+              </body>
+              <script>
+                  document.addEventListener('DOMContentLoaded', function () {
+                      const mail = document.getElementById('email');
+                      const sendButton = document.getElementById('sendButton');
+              
+                      sendButton.addEventListener('click', function () {
+                          const inputValue = mail.value;
+                          alert(\`Bienvenido: \${inputValue}\`);
+                      });
+                  });
+              
+              </script>
+              </html>
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Ya tenemos algo mucho más estético e interactivo con
+              <span>CSS</span>y<span>Javascript</span>
+            </p>
+            <div className="images-client">
+              <img src="/images/template1.png" alt="Template 1" />
+            </div>
+            <div className="images-client">
+              <img src="/images/template2.png" alt="Template 1" />
+            </div>
+            <p>
+              Además de escribir algunas páginas HTML estáticas, también podemos
+              utilizar el lenguaje de
+              <Link
+                href="https://docs.djangoproject.com/en/4.0/ref/templates/language/"
+                className="mx-[3px] text-[#0C4B33]"
+              >
+                plantillas de Django
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              para cambiar el contenido de nuestros archivos HTML según la URL
+              visitada. Vamos a probarlo cambiando nuestra función
+              <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
+                saludo
+              </span>
+              de antes:
+            </p>
+            <Pre lang="javascript">{
+              /*python */ `
+              from django.shortcuts import render
+
+              def saludo(request, name):
+              return render(request, "hola/index.html", {
+                  "name": name.capitalize()
+              })
+              `
+            }</Pre>
+            <p>
+              Observa que pasamos un tercer argumento a la función render aquí,
+              que se conoce como el contexto. En este contexto, podemos
+              proporcionar información que nos gustaría tener disponible dentro
+              de nuestros archivos HTML. Este contexto toma la forma de un
+              diccionario de Python. Ahora, podemos crear un archivo greet.html:
+            </p>
           </article>
         </div>
       </div>
