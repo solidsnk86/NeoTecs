@@ -868,7 +868,7 @@ export default function DjangoDocs() {
             }</Pre>
             <p className="list-css-span">
               Ya tenemos algo mucho más estético e interactivo con
-              <span>CSS</span>y<span>Javascript</span>
+              <span>CSS</span>y<span>Javascript</span>.
             </p>
             <div className="images-client">
               <img src="/images/template1.png" alt="Template 1" />

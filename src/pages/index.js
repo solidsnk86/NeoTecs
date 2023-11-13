@@ -5,6 +5,7 @@ import { Footer } from '../components/Footer';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import { MarqueeLogos } from '../sections/Brands';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
+import { Card } from '../components/Card';
 
 const HomeBlock = ({ className = '', children }) => {
   return (
@@ -67,10 +68,12 @@ export default function Home() {
         <HomeBlockTitle>Características</HomeBlockTitle>
         <section className="grid md:grid-cols-2 gap-4 md:gap-8">
           {cardContent.map((card) => (
-            <div className="p-4 rounded-lg border-outline border-opacity-10 border">
-              <span className="text-xl font-bold mb-4">{card.feature}</span>
-              <p>{card.children}</p>
-            </div>
+            <Card>
+              <div className="p-4 rounded-lg border-outline border-opacity-10 border">
+                <span className="text-xl font-bold mb-4">{card.feature}</span>
+                <p>{card.children}</p>
+              </div>
+            </Card>
           ))}
         </section>
       </HomeBlock>
