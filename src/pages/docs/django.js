@@ -740,16 +740,16 @@ export default function DjangoDocs() {
             <Pre lang="javascript">{
               /*python */ `
               def index(request):
-               return HttpResponse("<h1 style=\\"color:#F0196D;\\">Bienvenidos, Brillantes!</h1>")
+              return HttpResponse("<h1 style=\\"color:#8F41D8;\\">Bienvenidos a NeoTecs!</h1>")
               `
             }</Pre>
             <div className="images-client">
               <img src="/images/color-header.png" alt="Style header" />
             </div>
-            <p>
+            <p className="list-css-span">
               Sería muy tedioso escribir una página HTML completa dentro de
-              views.py. También constituiría un mal diseño, ya que queremos
-              mantener partes separadas de nuestro proyecto en archivos
+              <span>views.py</span>. También constituiría un mal diseño, ya que
+              queremos mantener partes separadas de nuestro proyecto en archivos
               separados siempre que sea posible.
             </p>
             <p>
