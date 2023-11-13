@@ -261,13 +261,13 @@ export default function DjangoDocs() {
               <li>
                 Para comenzar el proyecto, ejecuta
                 <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded border-[#0C4B33] border-b-2">
-                  python manage.py
+                  python manage.py runserver
                 </span>
-                runserver. Esto abrirá un servidor de desarrollo al que puedes
-                acceder visitando la URL proporcionada. Este servidor de
-                desarrollo se ejecuta localmente en tu máquina, lo que significa
-                que otras personas no pueden acceder a tu sitio web. Esto te
-                llevará a una página de inicio predeterminada.
+                . Esto abrirá un servidor de desarrollo al que puedes acceder
+                visitando la URL proporcionada. Este servidor de desarrollo se
+                ejecuta localmente en tu máquina, lo que significa que otras
+                personas no pueden acceder a tu sitio web. Esto te llevará a una
+                página de inicio predeterminada.
               </li>
               <div className="images-client">
                 <img src="/images/landing.png" />
@@ -285,16 +285,7 @@ export default function DjangoDocs() {
                 . Esto creará algunos directorios y archivos adicionales que
                 serán útiles en breve, incluido<span>views.py</span>.
               </li>
-              <li className="list-css-span">
-                Ahora, debemos instalar nuestra nueva aplicación. Para hacerlo,
-                vamos al archivo<span>settings.py</span>, nos desplazamos hacia
-                abajo hasta la lista de<span>INSTALLED_APPS</span> y agregamos
-                el nombre de nuestra nueva aplicación a esta lista.
-              </li>
             </ol>
-            <div className="images-client">
-              <img src="/images/installed.png" />
-            </div>
           </article>
           <SectionTitle title="Rutas" />
           <article>
@@ -323,7 +314,7 @@ export default function DjangoDocs() {
                 # Crea tus vistas aquí.
                
                 def index(request):
-                    return HttpResponse("Hola, Mundo!")
+                    return HttpResponse("Hola Neo!")
                 `
               }</Pre>
               <li className="list-css-span">
@@ -334,6 +325,108 @@ export default function DjangoDocs() {
                 <span>urls.py</span>para todo el proyecto, pero es mejor tener
                 uno separado para cada aplicación individual.
               </li>
+              <p className="list-css-span">
+                En mi caso yo he creado mi proyecto con el nombre
+                <span>mysite</span> luego cuando cree la aplicación
+                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded border-[#0C4B33] border-b-2">
+                  python manage.py startapp polls
+                </span>
+                ; en el cual mi raíz de carpetas se verá así:
+              </p>
+              <div>
+                <img
+                  className="images-client"
+                  src="/images/root_.png"
+                  alt="root image"
+                />
+              </div>
+              <p className="list-css-span">
+                La carpeta principal<span>mysite</span> y sus archivos:
+              </p>
+              <pre className="text-left flex bg-[#0f0f0f]">{`
+                mysite/
+                  |- manage.py
+                  |- mysite/
+                  |- __init__.py
+                  |- settings.py
+                  |- urls.py
+                  |- asgi.py
+                  |- wsgi.py
+                  `}</pre>
+              <p>Estos archivos son:</p>
+              <ul className="list-css-span">
+                <li>
+                  El directorio raíz externo <b>mysite/</b> es un contenedor
+                  para tu proyecto. Su nombre no importa para Django; puedes
+                  renombrarlo como desees.
+                </li>
+                <li>
+                  <span>manage.py</span>: Una utilidad de línea de comandos que
+                  te permite interactuar con este proyecto de Django de varias
+                  maneras. Puedes leer todos los detalles sobre manage.py en
+                  django-admin y manage.py.
+                </li>
+                <li>
+                  El directorio interno <b>mysite/</b> es el paquete Python real
+                  para tu proyecto. Su nombre es el nombre del paquete Python
+                  que necesitarás usar para importar cualquier cosa dentro de él
+                  (por ejemplo, mysite.urls).
+                </li>
+                <li>
+                  <span>mysite/init.py</span>: Un archivo vacío que le dice a
+                  Python que este directorio debe considerarse un paquete
+                  Python. Si eres un principiante en Python, lee más sobre
+                  paquetes en la documentación oficial de Python.
+                </li>
+                <li>
+                  <span>mysite/settings.py</span>: Configuración para este
+                  proyecto de Django. La configuración de Django te dirá todo
+                  sobre cómo funcionan las configuraciones.
+                </li>
+                <li>
+                  <span>mysite/urls.py</span>: Las declaraciones de URL para
+                  este proyecto de Django; una "tabla de contenidos" de tu sitio
+                  impulsado por Django. Puedes leer más sobre las URL en el
+                  despachador de URL.
+                </li>
+                <li>
+                  <span>mysite/asgi.py</span>: Un punto de entrada para
+                  servidores web compatibles con ASGI para servir tu proyecto.
+                  Consulta Cómo implementar con ASGI para obtener más detalles.
+                </li>
+                <li>
+                  <span>mysite/wsgi.py</span>: Un punto de entrada para
+                  servidores web compatibles con WSGI para servir tu proyecto.
+                  Consulta Cómo implementar con WSGI para obtener más detalles.
+                </li>
+              </ul>
+              <p>
+                Para crear tu aplicación, asegúrate de crearla dentro del mismo
+                directorio que <b>manage.py</b>, en mi caso la voy a llamar
+                <b> polls</b>:<br />
+                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded border-[#0C4B33] border-b-2">
+                  python manage.py startapp polls
+                </span>
+              </p>
+              <p>
+                Nos creará un directorio <b>polls</b> que contendrá los
+                siguientes archivos dentro:
+              </p>
+              <pre className="text-left flex bg-[#0f0f0f]">{`
+                polls/
+                 |- __init__.py
+                 |- admin.py
+                 |- apps.py
+                 |- migrations/
+                 |- __init__.py
+                 |- models.py
+                 |- tests.py
+                 |- views.py
+                  `}</pre>
+              <p className="list-css-span">
+                Bien ya habbíamos creado nuestro archivo<span>views.py</span>,
+                ahora seguimos:
+              </p>
               <li className="list-css-span">
                 Dentro de nuestro nuevo<span>urls.py</span>, crearemos una lista
                 de patrones de URL que un usuario podría visitar al usar nuestro
@@ -371,10 +464,10 @@ export default function DjangoDocs() {
               <Pre lang="javascript">{
                 /*django */ `
                 from django.urls import path
-                from . import views
+                from polls import views
                
                 urlpatterns = [
-                    path("", views.index, name="index")
+                    path("", views.index, name="index"),
                 ]
                 `
               }</Pre>
@@ -405,51 +498,39 @@ export default function DjangoDocs() {
                 from django.urls import path, include
                 
                 urlpatterns = [
-                    path('admin/', admin.site.urls),
-                    path('hola/', include("hola.urls"))
+                  path("polls/", include("polls.urls")),
+                  path("admin/", admin.site.urls),
                 ]
                 `
               }</Pre>
               <li className="list-css-span">
                 Al hacer esto, hemos especificado que cuando un usuario visite
-                nuestro sitio y luego agregue /hola a la URL en la barra de
+                nuestro sitio y luego agregue /polls a la URL en la barra de
                 búsqueda, serán redirigidos a las rutas dentro de nuestra nueva
                 aplicación. En otras palabras, al acceder a
                 <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
-                  http://tu-sitio.com/hola/
+                  http://127.0.0.1:8000/polls/
                 </span>
                 , se activará la lógica de rutas definida en el archivo
                 <span>urls.py</span>
                 de tu nueva aplicación, y se dirigirá a la vista
-                correspondiente, que en este caso es la vista hello_world que
-                devuelve "Hola, Neo". Esto permite que los usuarios accedan a
-                esta vista específica al agregar /hola a la URL de tu sitio web.
+                correspondiente, que en este caso es la vista que devuelve
+                <b> "Hola Neo"</b>. Esto permite que los usuarios accedan a esta
+                vista específica al agregar /polls a la URL de tu sitio web.
               </li>
             </ol>
             <p>
               Cuando inicias tu aplicación usando python manage.py runserver y
-              visitas la URL proporcionada, te encontrarás con una pantalla. Sin
-              embargo, no proporcionaste detalles específicos sobre la pantalla
-              que estás viendo. Dependiendo de lo que veas, podría haber varias
-              razones detrás de ello.
+              visitas la URL proporcionada:
             </p>
+            <Link
+              href="http://localhost:8000/polls/"
+              className="text-[#0C4B33]"
+            >
+              http://localhost:8000/polls/
+            </Link>
             <div className="images-client">
-              <img src="/images/404.png" />
-            </div>
-            <p>
-              Esto ocurre porque solo hemos definido la URL
-              <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
-                localhost:8000/hello
-              </span>
-              , pero no hemos definido la URL
-              <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
-                localhost:8000
-              </span>
-              sin nada añadido al final. Entonces, cuando agrego /hola a la URL
-              en la barra de búsqueda:
-            </p>
-            <div className="images-client">
-              <img src="/images/helloworld.png" />
+              <img src="/images/polls.png" />
             </div>
             <p>
               Ahora que hemos tenido cierto éxito, repasemos lo que acaba de
@@ -459,7 +540,7 @@ export default function DjangoDocs() {
               <li className="list-css-span">
                 Cuando accedimos a la URL
                 <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
-                  localhost:8000/hola
+                  localhost:8000/polls
                 </span>
                 , Django examinó lo que venía después de la URL base
                 <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
@@ -467,7 +548,7 @@ export default function DjangoDocs() {
                 </span>
                 y fue al archivo<span>urls.py</span>
                 de nuestro proyecto, buscando un patrón que coincidiera con
-                "hola".
+                "polls".
               </li>
               <li className="list-css-span">
                 Encontró esa extensión porque la definimos, y vio que cuando se
@@ -476,7 +557,7 @@ export default function DjangoDocs() {
               </li>
               <li>
                 Luego, Django ignoró las partes de la URL que ya había utilizado
-                en la redirección (localhost:8000/hello/ o todo el URL) y buscó
+                en la redirección (localhost:8000/polls/ o todo el URL) y buscó
                 dentro de nuestro otro archivo urls.py un patrón que coincidiera
                 con la parte restante de la URL.
               </li>
@@ -489,16 +570,17 @@ export default function DjangoDocs() {
                 Finalmente, Django ejecutó esa función dentro de views.py y
                 devolvió el resultado
                 <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
-                  (HttpResponse("Hello, world!"))
+                  (HttpResponse("Hola Neo!"))
                 </span>
                 a nuestro navegador web.
               </li>
             </ol>
-            <p>
-              Ahora, si lo deseamos, podemos cambiar la función hello_world
-              dentro de views.py para que devuelva cualquier cosa que queramos.
-              Incluso podríamos llevar un seguimiento de variables y realizar
-              cálculos dentro de la función antes de devolver algo.
+            <p className="list-css-span">
+              Ahora, si lo deseamos, podemos cambiar la función
+              <span>index</span>dentro de<span>views.py</span>para que devuelva
+              cualquier cosa que queramos. Incluso podríamos llevar un
+              seguimiento de variables y realizar cálculos dentro de la función
+              antes de devolver algo.
             </p>
             <p>
               Ahora, veamos cómo podemos agregar más de una vista a nuestra
@@ -541,6 +623,14 @@ export default function DjangoDocs() {
               `
             }</Pre>
             <p>
+              Cuando ejecutemos el servidor, en la url si cambiamos como se
+              muestra a continuación:
+            </p>
+            <div className="images-client">
+              <img src="/images/dev.png" alt="dev_polls" />
+              <img src="/images/neotecs.png" alt="neo_polls" />
+            </div>
+            <p>
               Muchos sitios web utilizan parámetros en la URL para mostrar
               información específica. Por ejemplo, al ir a
               <Link
@@ -574,8 +664,11 @@ export default function DjangoDocs() {
             </p>
             <Pre lang="javascript">{
               /*django */ `
-              def greet(request, name):
-              return HttpResponse(f"Hello, {name}!")
+              from django.http import HttpResponse
+
+              def saludo(request, name):
+                  return HttpResponse(f"Hola, {name}!")
+              
               `
             }</Pre>
             <p>
@@ -587,9 +680,32 @@ export default function DjangoDocs() {
             </p>
             <Pre lang="javascript">{
               /*django */ `
-              path("<str:name>", views.greet, name="greet")
+              from django.urls import path
+
+              from . import views
+              
+              urlpatterns = [
+                  path("<str:name>", views.saludo, name="saludo")
+              ]
               `
             }</Pre>
+            <p>
+              Esta es una nueva sintaxis, pero básicamente lo que está
+              sucediendo aquí es que ya no estamos buscando una palabra o nombre
+              específico en la URL, sino cualquier cadena que un usuario pueda
+              ingresar. Ahora, podemos probar el sitio con algunas otras URL:
+            </p>
+            <div className="images-client">
+              <img src="/images/mario.png" alt="usuarios" />
+            </div>
+            <p className="list-css-span">
+              En este ejemplo he puesto un nombre con espacio y automáticamente
+              se genera la url con<span>%20</span>lo que significa un espacio en
+              blanco.
+            </p>
+            <div className="images-client">
+              <img src="/images/solidsnk.png" alt="usuarios" />
+            </div>
           </article>
         </div>
       </div>
