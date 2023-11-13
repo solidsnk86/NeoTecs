@@ -19,7 +19,7 @@ export const Card: React.FC<PropsWithChildren> = ({ children }) => {
 	const style = { maskImage, WebkitMaskImage: maskImage }
 
 	return (
-		<section className='dark:bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0'>
+		<section className='dark:bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0 rounded'>
 			<div
 				onMouseMove={onMouseMove}
 				className='overflow-hidden relative duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600 '

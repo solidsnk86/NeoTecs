@@ -6,6 +6,7 @@ import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import { MarqueeLogos } from '../sections/Brands';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { Card } from '../components/Card';
+import { MT } from '../components/MeteorLanguages';
 
 const HomeBlock = ({ className = '', children }) => {
   return (
@@ -52,6 +53,7 @@ export default function Home() {
   return (
     <div className="text-text-primary">
       <Nav />
+      <MT />
       <HomeHeader />
       <HomeBlock>
         <HomeBlockTitle>Configurá tu CPE</HomeBlockTitle>
