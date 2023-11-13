@@ -658,7 +658,7 @@ export default function DjangoDocs() {
               usuario. Entonces, veamos cómo podríamos hacer una ruta más
               flexible. Comenzaremos agregando una función más general llamada
               <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
-                "greet"
+                "saludo"
               </span>
               a <span>views.py</span>:
             </p>
@@ -835,7 +835,7 @@ export default function DjangoDocs() {
               <body>
                   <div class="container">
                   <h1>Bienvenidos a éste curso de Django</h1>
-                  <p>En este HTML podemos escribir más cómodo un documento HTML.</p>
+                  <p>En este archivo podemos escribir más cómodo un documento HTML.</p>
                   <ol class="list">
                       <li>
                           Es que también podemos agregar estilos CSS.
@@ -903,12 +903,13 @@ export default function DjangoDocs() {
               })
               `
             }</Pre>
-            <p>
+            <p className="list-css-span">
               Observa que pasamos un tercer argumento a la función render aquí,
               que se conoce como el contexto. En este contexto, podemos
               proporcionar información que nos gustaría tener disponible dentro
               de nuestros archivos HTML. Este contexto toma la forma de un
-              diccionario de Python. Ahora, podemos crear un archivo greet.html:
+              diccionario de Python. Ahora, podemos crear un archivo
+              <span>saludo.html</span>:
             </p>
           </article>
         </div>
