@@ -275,6 +275,15 @@ pre {
   }
 }
 
+.shadow-icon {
+  filter: drop-shadow(0 0 10px rgb(217, 226, 235));
+  transition: 0.3s all;
+}
+
+.shadow-icon:hover {
+  transform: scale(1.15);
+}
+
 .github-icon,
 .neotecs-logo path,
 .html-icon {

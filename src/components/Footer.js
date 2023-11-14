@@ -58,27 +58,27 @@ export const Footer = () => {
 
         <div className="flex items-center justify-center gap-x-6 text-2xl mt-3">
           <FacebookIcon
-            className="cursor-pointer hover:opacity-[.6]"
+            className="cursor-pointer shadow-icon"
             title="Facebook"
             onClick={() => compartirFacebook()}
           />
           <TwitterIcon
-            className="cursor-pointer hover:opacity-[.6]"
+            className="cursor-pointer shadow-icon"
             title="Twitter"
             onClick={() => compartirTwitter()}
           />
           <FaWhatsapp
-            className="cursor-pointer hover:opacity-[.6]"
+            className="cursor-pointer shadow-icon"
             title="Whatsapp"
             onClick={() => compartirWhatsapp()}
           />
           <Linkedin
-            className="bx bxl-linkedin cursor-pointer hover:opacity-[.6]"
+            className="cursor-pointer shadow-icon"
             title="Linked In"
             onClick={() => compartirLinkedIn()}
           />
           <FaTelegramPlane
-            className="bx bxl-telegram cursor-pointer hover:opacity-[.6]"
+            className="cursor-pointer shadow-icon"
             title="Telegram"
             onClick={() => compartiTelegram()}
           />
