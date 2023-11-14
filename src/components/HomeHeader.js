@@ -11,14 +11,9 @@ export const HomeHeader = () => {
           highlight={true}
         >
           <img
-            data-atropos-offset="-6"
-            src="/images/header/different-space-449108.svg"
-            alt="stars"
-          />
-          <img
-            data-atropos-offset="-6.5"
-            src="/images/header/ufo-00.svg"
-            alt="stars"
+            data-atropos-offset="-3"
+            src="/images/header/panal.jpg"
+            alt="object"
           />
           <img
             data-atropos-offset="5"
