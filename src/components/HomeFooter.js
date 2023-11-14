@@ -1,9 +1,9 @@
 import { Atropos } from 'atropos/react';
 import Link from 'next/link';
 
-export const HomeHeader = () => {
+export const HomeFooter = () => {
   return (
-    <div className="-mt-16 border-b-2 border-outline">
+    <div className="-mt-16">
       <div className="max-w-screen-lg mx-auto pt-32 pb-16 px-4 md:px-8 lg:px-16">
         <Atropos
           className="atropos-header w-full"
@@ -11,13 +11,13 @@ export const HomeHeader = () => {
           highlight={true}
         >
           <img
-            data-atropos-offset="-6"
-            src="/images/header/different-space-449108.svg"
-            alt="stars"
+            className="atropos-header-spacer"
+            src="/images/header/"
+            alt="galaxy"
           />
           <img
-            data-atropos-offset="-6.5"
-            src="/images/header/ufo-00.svg"
+            data-atropos-offset="-4.5"
+            src="/images/header/different-space-449108.svg"
             alt="stars"
           />
           <img
