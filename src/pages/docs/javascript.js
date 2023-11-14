@@ -1589,3 +1589,5 @@ export default function JavaScript() {
     </TitlesContextProvider>
   );
 }
+
+JavaScript.title = '🚀 Aprende Javascript en Neotecs';

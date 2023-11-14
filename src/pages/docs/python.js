@@ -1387,3 +1387,5 @@ export default function Python() {
     </main>
   );
 }
+
+Python.title = 'Aprende 🐍 Pyhton en Neotecs';

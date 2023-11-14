@@ -134,3 +134,5 @@ export default function SqlDocs() {
     </TitlesContextProvider>
   );
 }
+
+SqlDocs.title = 'Aprende  SQL en Neotecs';
