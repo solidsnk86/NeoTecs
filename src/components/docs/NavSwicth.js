@@ -14,6 +14,10 @@ export const NavSwitch = ({ inline }) => {
       title: 'Css',
     },
     {
+      href: '/docs/git',
+      title: 'Git',
+    },
+    {
       href: '/docs/python',
       title: 'Python',
     },
