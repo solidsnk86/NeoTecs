@@ -919,4 +919,4 @@ export default function DjangoDocs() {
   );
 }
 
-DjangoDocs.title = 'Aprende Django en Neotecs';
+DjangoDocs.title = 'Aprende Django · Web Dinámicas';

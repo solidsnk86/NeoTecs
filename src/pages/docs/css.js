@@ -1138,4 +1138,4 @@ export default function CssDoc() {
   );
 }
 
-CssDoc.title = 'Aprendiendo CSS y SASS';
+CssDoc.title = '🎨 Aprendiendo CSS y SASS';

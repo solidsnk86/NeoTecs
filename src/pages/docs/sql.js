@@ -135,4 +135,4 @@ export default function SqlDocs() {
   );
 }
 
-SqlDocs.title = 'Aprende  SQL en Neotecs';
+SqlDocs.title = 'Aprende SQL · Base de Datos';

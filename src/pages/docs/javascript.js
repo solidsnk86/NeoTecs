@@ -1590,4 +1590,4 @@ export default function JavaScript() {
   );
 }
 
-JavaScript.title = '🚀 Aprende Javascript en Neotecs';
+JavaScript.title = '🚀 Aprende Javascript · Neotecs';
