@@ -918,3 +918,5 @@ export default function DjangoDocs() {
     </TitlesContextProvider>
   );
 }
+
+DjangoDocs.title = 'Aprende Django en Neotecs';

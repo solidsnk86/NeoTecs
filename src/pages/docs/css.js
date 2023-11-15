@@ -1137,3 +1137,5 @@ export default function CssDoc() {
     </TitlesContextProvider>
   );
 }
+
+CssDoc.title = 'Aprendiendo CSS y SASS';

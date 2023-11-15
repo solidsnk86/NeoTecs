@@ -5,8 +5,9 @@ import { DoNotCopy } from '../components/DoNotCopy';
 import { NeoTecsIcon } from '../components/NeoTecsIcon';
 
 function MyApp({ Component, pageProps }) {
-  const title = Component.title || 'Neotecs - Blog';
-  const description = 'Aprende a configurar tu WiFi fácil y rápido.';
+  const title = Component.title || 'Neotecs - Tutoriales';
+  const description =
+    'Aprende programación en este curso gratuito de NeoTecs, desde básico a avanzado, también hay documentación para que configures tu WiFi fácil y rápido.';
 
   const neoTecsIconString = renderToString(<NeoTecsIcon />);
 
