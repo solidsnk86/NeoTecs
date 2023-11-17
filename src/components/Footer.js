@@ -57,7 +57,7 @@ export const Footer = () => {
       <article className="max-w-screen-xl mx-auto px-4 md:px-8">
         <h3 className="text-center ">Compartir en las redes:</h3>
 
-        <div className="flex items-center justify-center gap-x-6 text-2xl mt-3">
+        <div className="flex items-center justify-center gap-x-6 text-2xl mt-3 mb-9">
           <FacebookIcon
             className="cursor-pointer shadow-icon"
             title="Facebook"
@@ -91,7 +91,10 @@ export const Footer = () => {
           { name: 'Blog', href: 'https://solidsnk86.netlify.app/blog' },
         ].map((link, index) => (
           <div key={index} className="flex justify-center mt-3">
-            <Link href={link.href} className="mx-3 items-center">
+            <Link
+              href={link.href}
+              className="mx-3 items-center hover:underline"
+            >
               {link.name}
             </Link>
           </div>
