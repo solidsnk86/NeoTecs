@@ -6,6 +6,8 @@ import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import { MarqueeLogos } from '../sections/Brands';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { Card } from '../components/Card';
+import { BrandsSwitch } from '../components/BrandsSwitch';
+import { PlayIcon, Wifi } from 'lucide-react';
 
 const HomeBlock = ({ className = '', children }) => {
   return (
@@ -62,6 +64,28 @@ export default function Home() {
           <li className="custom-text-shadow">✅ Práctico</li>
         </ul>
         <YouTubeVideoSection />
+        <section className="xl:flex justify-center mx-auto w-full relative">
+          <header className="flex w-1/2 p-2 xl:mt-[150px]">
+            <Wifi className="inline bg-button-variant mx-4 w-16 h-16 text-text-variant font-bold border p-3 border-zinc-400 rounded-lg xl:mt-10 mt-4" />
+            <div>
+              <h2 className="text-3xl font-semibold my-3">
+                Documentación Wifi
+              </h2>
+              <p className="text-md">
+                Aprende cómo configurar diferentes dispositvos inalámbricos de
+                diferentes marcas con esta guía.
+              </p>
+            </div>
+          </header>
+          <aside className="mt-10 border border-zinc-800 p-6 rounded-lg">
+            <p className="text-3xl font-semibold">
+              <PlayIcon className="inline mx-2 border text-green-500 border-green-900 rounded-lg p-2 w-9 h-9 bg-[#072719]" />
+              Comencemos!
+            </p>
+            <p className="my-3">Descubre cómo configurar estas marcas:</p>
+            <BrandsSwitch />
+          </aside>
+        </section>
       </HomeBlock>
 
       <HomeBlock>
