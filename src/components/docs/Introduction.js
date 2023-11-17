@@ -11,7 +11,7 @@ export const Introduction = () => {
   };
   return (
     <main className="text-text-primary">
-      <IntroTitle>Curso de Programación</IntroTitle>
+      <IntroTitle>Curso de Programación con Python y Javascript</IntroTitle>
       <hr className="border-text-primary" />
       <Header>Índice</Header>
       <ol className="indice">

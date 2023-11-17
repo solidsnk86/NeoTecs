@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { Share2Icon, ArrowUpCircle } from 'lucide-react';
+import { Share2Icon } from 'lucide-react';
 
 export function ShareButton() {
   const shareButton = () => {
