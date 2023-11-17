@@ -2,6 +2,7 @@ import React from 'react';
 import { FaWhatsapp, FaTelegramPlane, FaChevronCircleUp } from 'react-icons/fa';
 import { FacebookIcon, Linkedin } from 'lucide-react';
 import { TwitterIcon } from './TwitterIcon';
+import Link from 'next/link';
 
 export const Footer = () => {
   function compartirFacebook() {
@@ -83,7 +84,18 @@ export const Footer = () => {
             onClick={() => compartiTelegram()}
           />
         </div>
-
+        {[
+          { name: 'Contacto', href: 'mailto:calcagni.gabriel86@gmail.com' },
+          { name: 'YouTube', href: 'https://www.youtube.com/@tutosNeoTecs' },
+          { name: 'GitHub', href: 'https://github.com/solidsnk86' },
+          { name: 'Blog', href: 'https://solidsnk86.netlify.app/blog' },
+        ].map((link, index) => (
+          <div key={index} className="flex justify-center mt-3">
+            <Link href={link.href} className="mx-3 items-center">
+              {link.name}
+            </Link>
+          </div>
+        ))}
         <p className="flex justify-center mt-16">
           {currentYear} © NeoTecs · By
           <a href={myUrl} target="_blank" rel="noopener">

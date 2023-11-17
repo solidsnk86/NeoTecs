@@ -22,10 +22,10 @@ export const HomeHeader = () => {
           />
           <div data-atropos-offset="6" className="atropos-header-button-wrap">
             <Link
-              href="/docs"
+              href="/docs/program"
               className="bg-[#0F0F0F] text-white rounded-full px-4 py-2 md:px-8 md:py-4 font-bold md:text-xl inline-flex hover:bg-opacity-70 duration-200 translate-y-full"
             >
-              WiFi Config
+              Aprende a Programar
             </Link>
           </div>
         </Atropos>
