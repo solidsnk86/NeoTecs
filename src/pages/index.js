@@ -66,7 +66,7 @@ export default function Home() {
         <YouTubeVideoSection />
         <section className="xl:flex justify-center mx-auto w-full relative">
           <header className="xl:flex xl:w-1/2 p-2 xl:mt-[150px]">
-            <Wifi className="inline bg-button-variant mx-4 w-16 h-16 text-text-variant font-bold border p-3 border-zinc-400 rounded-lg xl:mt-10 mt-4" />
+            <Wifi className="inline bg-button-variant mx-4 w-16 h-16 text-green-600 font-bold border p-3 border-green-400 rounded-lg xl:mt-10 mt-4" />
             <div>
               <h2 className="text-3xl font-semibold my-3">
                 Documentación Wifi

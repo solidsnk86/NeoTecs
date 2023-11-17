@@ -23,7 +23,7 @@ export const BrandsSwitch = ({ inline }) => {
   const isActive = (link) => link.href === router.asPath;
   return (
     <div
-      className={`inline-block mb-4 border border-slate-400 border-opacity-20 rounded overflow-hidden mt-16 w-100% ${
+      className={`inline-block mb-4 border border-zinc-800 rounded overflow-hidden mt-16 w-100% ${
         inline ? 'mb-8 lg:hidden w-100% inline-flex justify-center' : ''
       }`}
     >
@@ -34,7 +34,7 @@ export const BrandsSwitch = ({ inline }) => {
           className={`p-2 w-full flex justify-center items-center duration-100 ${
             isActive(link)
               ? 'bg-[#484848]'
-              : 'hover:bg-[#CCCCCC] hover:bg-opacity-10'
+              : 'hover:bg-[#484848] hover:opacity-90'
           }`}
           title={link.title}
         >
