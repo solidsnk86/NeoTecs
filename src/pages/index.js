@@ -72,8 +72,8 @@ export default function Home() {
                 Documentación Wifi
               </h2>
               <p className="text-md">
-                Aprende cómo configurar diferentes dispositvos inalámbricos de
-                diferentes marcas con esta guía.
+                Aprende cómo configurar diferentes modelos de dispositvos
+                inalámbricos de las marcas más conocidas con esta guía.
               </p>
             </div>
           </header>

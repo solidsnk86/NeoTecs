@@ -53,6 +53,7 @@ export default function GitDocs() {
               </ul>
             </li>
           </ol>
+          <span id="introduccion"></span>
           <SectionTitle title="Introducción" />
           <article>
             <p>
@@ -161,7 +162,7 @@ export default function GitDocs() {
                 repositorio remoto recién creado y crearemos una copia, o
                 clonaremos, de él como un repositorio local en nuestra
                 computadora.
-                <ol>
+                <ol className="list-css-span">
                   <li>
                     Asegúrate de tener Git instalado en tu computadora
                     escribiendo git en tu terminal. Si no está instalado, puedes
@@ -187,7 +188,7 @@ export default function GitDocs() {
                       alt="Crear Repositorio"
                     />
                   </div>
-                  <li className="list-css-span">
+                  <li>
                     En tu terminal, ejecuta git clone
                     <span>{'<URL del repositorio>'}</span>. Esto descargará el
                     repositorio a tu computadora. Si no creaste un README, es
@@ -195,6 +196,36 @@ export default function GitDocs() {
                     cloned into an empty repository" (Parece que has clonado en
                     un repositorio vacío). Esto es normal y no hay necesidad de
                     preocuparse por ello.
+                  </li>
+                  <div className="images-client">
+                    <img
+                      src="/images/git-clone.png"
+                      alt="Captura de pantalla de consola git clone."
+                    />
+                  </div>
+                  <li>
+                    Ejecuta el comando "ls", que lista todos los archivos y
+                    carpetas en tu directorio actual. Deberías ver el nombre del
+                    repositorio que acabas de clonar.
+                  </li>
+                  <li className="list-css-span">
+                    Ejecuta<span>{'cd <nombre del repositorio>'}</span>para
+                    cambiar al directorio de esa carpeta.
+                  </li>
+                  <li>
+                    Ejecuta<span>{'touch <nombre del nuevo archivo>'}</span>para
+                    crear un nuevo archivo en esa carpeta. Ahora puedes realizar
+                    ediciones en ese archivo. Alternativamente, puedes abrir la
+                    carpeta en tu editor de texto y agregar nuevos archivos
+                    manualmente.
+                  </li>
+                  <li>
+                    Para informar a Git que debe realizar un seguimiento del
+                    nuevo archivo que has creado, ejecuta
+                    <span>{'git add <nombre del nuevo archivo>'}</span>para
+                    realizar un seguimiento de ese archivo específico, o{' '}
+                    <b>"git add</b>." para realizar un seguimiento de todos los
+                    archivos dentro de ese directorio.
                   </li>
                 </ol>
               </li>

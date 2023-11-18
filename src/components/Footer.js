@@ -93,7 +93,7 @@ export const Footer = () => {
           <div key={index} className="flex justify-center mt-3">
             <Link
               href={link.href}
-              className="mx-3 items-center hover:underline"
+              className="mx-3 items-center hover:underline font-semibold"
             >
               {link.name}
             </Link>
