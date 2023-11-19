@@ -8,6 +8,7 @@ import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { Card } from '../components/Card';
 import { BrandsSwitch } from '../components/BrandsSwitch';
 import { PlayIcon, Wifi } from 'lucide-react';
+import { CpeBrands } from '../components/CpeBrands';
 
 const HomeBlock = ({ className = '', children }) => {
   return (
@@ -83,7 +84,7 @@ export default function Home() {
               Comencemos!
             </p>
             <p className="my-3">Descubre cómo configurar estas marcas:</p>
-            <BrandsSwitch />
+            <CpeBrands />
           </aside>
         </section>
       </HomeBlock>

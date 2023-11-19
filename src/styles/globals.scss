@@ -32,6 +32,9 @@
     --color-surface-5: #dae5f5;
     --button-variant: #0f0f0f;
     --text-shadow: #6f43c0;
+    --tp-link-icon: #4acbd6;
+    --ubiquiti-icon: #0559c9;
+    --mikrotik-icon: #293239;
 
     --color-code: #6f43c0;
     --color-pre-bg: #21242a;
@@ -71,6 +74,9 @@
     --color-surface-5: #2e333e;
     --button-variant: #f1f1f1;
     --text-shadow: #88d456;
+    --tp-link-icon: #4acbd6;
+    --ubiquiti-icon: #0559c9;
+    --mikrotik-icon: #293239;
 
     --color-code: #d3bbff;
     --color-red: #ffb4aa;
@@ -293,6 +299,18 @@ pre {
 .neotecs-logo path,
 .html-icon {
   fill: var(--color-on-surface);
+}
+
+.tplink-icon {
+  fill: var(--tp-link-icon);
+}
+
+.ubiquiti-icon {
+  fill: var(--ubiquiti-icon);
+}
+
+.mikrotik-icon {
+  fill: var(--mikrotik-icon);
 }
 
 .list-css-span span {

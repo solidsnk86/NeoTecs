@@ -7,7 +7,7 @@ export const NeotecsLogo = (props) => {
       viewBox="0 0 370 97"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
-      class="neotecs-logo"
+      className="neotecs-logo"
       {...attrs}
     >
       <path
