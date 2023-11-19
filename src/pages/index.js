@@ -70,7 +70,7 @@ export default function Home() {
             <span className="effect-backround"></span>
             <Wifi className="inline bg-button-variant mx-4 w-16 h-16 text-green-600 font-bold border p-3 border-green-400 rounded-lg xl:mx-8 xl:mt-10 mt-4" />
             <div>
-              <h2 className="text-3xl font-semibold my-3 border-b-4 border-outline w-fit">
+              <h2 className="text-3xl mx-auto font-semibold my-3 border-b-4 border-outline w-fit">
                 Documentación Wifi
               </h2>
               <p className="text-md text-outline">

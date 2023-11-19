@@ -43,7 +43,7 @@ export default function GitDocs() {
               </a>
             </li>
             <li>
-              <a href="#responsive">Branching (Ramificación)</a>
+              <a href="#branch">Branching (Ramificación)</a>
               <ul>
                 <li>
                   <a href="#bootstrap">Más Funcionalidades de GitHub</a>
@@ -338,7 +338,58 @@ export default function GitDocs() {
               </li>
             </ul>
           </article>
+          <span id="branch"></span>
+          <SectionTitle title="Branching (Ramificación)" />
           <ShareButton setTitle={GitDocs.title} />
+          <article>
+            <p>
+              Después de haber estado trabajando en un proyecto durante algún
+              tiempo, es posible que decidas que deseas agregar una función
+              adicional. En este momento, simplemente podríamos confirmar los
+              cambios a esta nueva función, como se muestra en la gráfica a
+              continuación.
+            </p>
+            <div className="images-client">
+              <img src="/images/no_branch.png" />
+            </div>
+            <p>
+              Pero esto podría volverse problemático si luego descubrimos un
+              error en nuestro código original y queremos revertirlo sin afectar
+              la nueva función. Aquí es donde las ramas (branching) pueden
+              resultar realmente útiles.
+            </p>
+            <ul>
+              <li>
+                El branching es un método para avanzar en una nueva dirección al
+                crear una nueva función y solo combinar esta nueva función con
+                la parte principal de tu código, o la rama principal, una vez
+                que hayas terminado. Este flujo de trabajo se verá más como se
+                muestra en la siguiente gráfica:
+              </li>
+            </ul>
+            <div className="images-client">
+              <img src="/images/branch.png" />
+            </div>
+            <ul>
+              <li>
+                La rama que estás viendo actualmente está determinada por el
+                HEAD, que apunta a una de las dos ramas. Por defecto, el HEAD
+                apunta a la rama principal (master), pero también podemos
+                cambiar a otras ramas.
+              </li>
+              <li>
+                Ahora, adentrémonos en cómo implementamos realmente el branching
+                en nuestros repositorios de Git:
+                <ol>
+                  <li>
+                    Ejecuta git branch para ver en qué rama estás trabajando
+                    actualmente, la cual tendrá un asterisco a la izquierda de
+                    su nombre.
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </article>
         </div>
       </div>
       <Footer />
