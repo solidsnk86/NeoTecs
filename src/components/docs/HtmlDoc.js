@@ -257,6 +257,7 @@ export default function HtmlDoc() {
         `
       }</Pre>
       <img src="/images/form.png" />
+      <span id="cheat"></span>
       <SectionTitle title="Cheat Sheet HTML" />
       <ul>
         <li>
