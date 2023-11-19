@@ -828,7 +828,7 @@ export default function Python() {
                 `
               }</Pre>
             </article>
-            <ShareButton />
+            <ShareButton setTitle={Python.title} />
             <span id="Funciones" />
             <SectionTitle title="Funciones" />
             <article>
@@ -1380,6 +1380,7 @@ export default function Python() {
                 módulo Django de Python para construir algunas aplicaciones.
               </p>
             </article>
+            <ShareButton setTitle={Python.title} />
           </div>
         </div>
         <Footer />

@@ -70,17 +70,17 @@ export default function Home() {
             <span className="effect-backround"></span>
             <Wifi className="inline bg-button-variant mx-4 w-16 h-16 text-green-600 font-bold border p-3 border-green-400 rounded-lg xl:mx-8 xl:mt-10 mt-4" />
             <div>
-              <h2 className="text-3xl font-semibold my-3">
+              <h2 className="text-3xl font-semibold my-3 border-b-4 border-outline w-fit">
                 Documentación Wifi
               </h2>
-              <p className="text-md">
+              <p className="text-md text-outline">
                 Aprende cómo configurar diferentes modelos <br />
                 de dispositvos inalámbricos de las marcas
                 <br /> más conocidas con esta guía.
               </p>
             </div>
           </header>
-          <aside className="mt-10 border-zinc-800 p-6 rounded-lg shadow-lg shadow-current">
+          <aside className="mt-10 border-zinc-800 p-6 rounded-lg shadow-sm shadow-[#222]">
             <p className="text-3xl font-semibold">
               <PlayIcon className="inline mx-2 border text-green-500 border-green-900 rounded-lg p-2 w-9 h-9 bg-[#072719]" />
               Comencemos!

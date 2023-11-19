@@ -1,12 +1,12 @@
 import { Share2Icon } from 'lucide-react';
 
-export function ShareButton() {
+export function ShareButton({ setTitle }) {
   const shareButton = () => {
     if (navigator.share) {
       navigator.share({
-        title: 'Neotecs Informática',
-        text: 'Aprende a programar con éste curso gratuito en NeoTecs. Documentación web para aprender diferentes lenguajes de programación y más. También te informo como configurar diferentes equipos inalámbricos WiFi, ¡Echa un vistazo al sitio!',
-        url: 'https://neotecs.netlify.app',
+        title: setTitle,
+        text: 'No te pierdas este curso gratuito dodne te enseño a programar con ejemplos y ejercicios prácticos, también incluye tutorial para que entiendsa como configurar tu antena Wifi 📡!!',
+        url: window.location.href,
       });
     }
   };

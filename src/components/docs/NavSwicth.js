@@ -59,9 +59,9 @@ export const NavSwitch = ({ inline }) => {
         <Link
           href={link.href}
           key={link.href}
-          className={`p-1 xl:p-2 w-full flex duration-100 ${
+          className={`p-1 xl:p-2 w-full flex duration-100 !no-underline ${
             isActive(link)
-              ? 'xl:bg-[cornflowerblue] border-orange-300 border-b-4 xl:border-none'
+              ? 'xl:bg-[cornflowerblue] border-orange-400 border-b-4 xl:border-none'
               : 'hover:bg-[#7a7a7a] hover:opacity-90'
           }`}
         >

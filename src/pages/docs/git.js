@@ -35,9 +35,7 @@ export default function GitDocs() {
               <a href="#selectores">GitHub</a>
             </li>
             <li>
-              <a href="#selectores-descendientes">
-                Commits (Compromisos o Confirmaciones)
-              </a>
+              <a href="#commits">Commits (Compromisos o Confirmaciones)</a>
             </li>
             <li>
               <a href="#selectores-atributos">
@@ -231,7 +229,116 @@ export default function GitDocs() {
               </li>
             </ul>
           </article>
-          <ShareButton />
+          <span id="commits"></span>
+          <SectionTitle title="Commits (Compromisos o Confirmaciones)" />
+          <article>
+            <ul className="list-css-span">
+              <li>
+                Ahora, comenzaremos a explorar para qué puede ser realmente útil
+                Git. Después de realizar algunos cambios en un archivo, podemos
+                confirmar esos cambios, tomando una instantánea del estado
+                actual de nuestro código. Para hacer esto, ejecutamos:
+                <span>git commit -m "algún mensaje"</span>donde el mensaje
+                describe los cambios que acabas de realizar.
+              </li>
+              <li>
+                Después de este cambio, podemos ejecutar<span>git</span>status
+                para ver cómo nuestro código se compara con el código en el
+                repositorio remoto.
+              </li>
+              <li>
+                Cuando estemos listos para publicar nuestras confirmaciones
+                locales en GitHub, podemos ejecutar<span>git push</span>. Ahora,
+                cuando vayamos a GitHub en nuestro navegador web, se reflejarán
+                nuestros cambios.
+              </li>
+              <li>
+                Si solo has modificado archivos existentes y no has creado
+                nuevos, en lugar de usar<span>git add .</span>y luego
+                <span>git commit...</span>, podemos condensar esto en un solo
+                comando:<span>git commit -am "algún mensaje"</span>. Este
+                comando confirmará todos los cambios que hayas realizado.
+              </li>
+              <li>
+                A veces, el repositorio remoto en GitHub estará más actualizado
+                que la versión local. En este caso, quieres confirmar primero
+                cualquier cambio y luego ejecuta<span>git pull</span>para traer
+                cualquier cambio remoto a tu repositorio.
+              </li>
+            </ul>
+          </article>
+          <SectionTitle title="Merge Conflicts (Conflictos de Fusión)" />
+          <article>
+            <ul>
+              <li>
+                Un problema que puede surgir al trabajar con Git, especialmente
+                cuando colaboras con otras personas, es algo llamado conflicto
+                de fusión. Un conflicto de fusión ocurre cuando dos personas
+                intentan cambiar un archivo de maneras que entran en conflicto
+                entre sí.
+              </li>
+              <li>
+                Esto suele ocurrir al realizar git push o git pull. Cuando esto
+                sucede, Git cambiará automáticamente el archivo a un formato que
+                indica claramente cuál es el conflicto. Aquí tienes un ejemplo
+                en el que se agregó la misma línea de dos maneras diferentes:
+              </li>
+            </ul>
+            <Pre lang="javascript">{
+              /*git */ `
+              a = 1
+              <<<<< HEAD
+              b = 2
+              =====
+              b = 3
+              >>>>> 56782736387980937883
+              c = 3
+              d = 4
+              e = 5
+              `
+            }</Pre>
+            <ul>
+              <li>
+                En el ejemplo anterior, agregaste la línea b = 2 y otra persona
+                escribió b = 3, y ahora debemos elegir una de esas para
+                mantener. El número largo es un hash que representa la
+                confirmación que está entrando en conflicto con tus ediciones.
+                Muchos editores de texto también ofrecerán resaltado y opciones
+                simples como "aceptar actual" o "aceptar entrante" que te
+                ahorran el tiempo de eliminar las líneas agregadas
+                anteriormente.
+              </li>
+              <li>
+                Otro comando de Git potencialmente útil es git log, que te
+                proporciona un historial de todas tus confirmaciones en ese
+                repositorio.
+              </li>
+            </ul>
+            <div className="images-client">
+              <img src="/images/" />
+            </div>
+            <ul className="list-css-span">
+              <li>
+                Potencialmente aún más útil, si te das cuenta de que has
+                cometido un error, puedes revertir a una confirmación anterior
+                utilizando el comando<span>git reset</span>de una de dos
+                maneras:
+                <li>
+                  <span>git reset --hard {'<commit>'}</span>revierte tu código
+                  exactamente a cómo estaba después de la confirmación
+                  especificada. Para especificar la confirmación, utiliza el
+                  hash de confirmación asociado con esa confirmación, que puedes
+                  encontrar usando git log como se mostró anteriormente.
+                </li>
+                <li>
+                  <span>git reset --hard origin/master</span>revierte tu código
+                  a la versión actualmente almacenada en línea en GitHub
+                  (origin/master).
+                </li>
+              </li>
+            </ul>
+          </article>
+          <ShareButton setTitle={GitDocs.title} />
         </div>
       </div>
       <Footer />
@@ -239,4 +346,4 @@ export default function GitDocs() {
   );
 }
 
-GitDocs.title = 'Aprendiendo 🐱‍🚀 Git y GitHub';
+GitDocs.title = 'Aprende 🐱‍🚀 Git y GitHub';

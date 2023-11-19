@@ -694,7 +694,7 @@ export default function JavaScript() {
                 });
                 `
             }</Pre>
-            <ShareButton />
+            <ShareButton setTitle={JavaScript.title} />
             <p>
               Tener JavaScript en un archivo separado es útil por varias
               razones:
@@ -1196,7 +1196,7 @@ export default function JavaScript() {
           <div className="images-client">
             <img src="/images/count4.gif" />
           </div>
-          <ShareButton />
+          <ShareButton setTitle={JavaScript.title} />
           <span id="local" />
           <SectionTitle title="Almacenamiento Local" />
           <article>
@@ -1582,6 +1582,7 @@ export default function JavaScript() {
               ! La próxima vez, trabajaré para crear interfaces de usuario aún
               más atractivas.
             </p>
+            <ShareButton setTitle={JavaScript.title} />
           </article>
         </div>
       </div>
@@ -1590,4 +1591,4 @@ export default function JavaScript() {
   );
 }
 
-JavaScript.title = '🚀 Aprende Javascript · Neotecs';
+JavaScript.title = '🚀 Aprende Javascript · Neotecs Programación';

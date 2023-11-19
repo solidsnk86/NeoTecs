@@ -583,7 +583,7 @@ export default function CssDoc() {
           <div className="images-client">
             <img src="/images/buttons.gif" alt="gif-1" />
           </div>
-          <ShareButton />
+          <ShareButton setTitle={CssDoc.title} />
           <span id="responsive" />
           <SectionTitle title="Diseño Responsivo" />
           <ul>
@@ -1130,7 +1130,7 @@ export default function CssDoc() {
           <h4 className="text-text-primary">
             ¡Eso concluye nuestro contenido por hoy! ツ
           </h4>
-          <ShareButton />
+          <ShareButton setTitle={CssDoc.title} />
         </div>
       </div>
       <Footer />
@@ -1138,4 +1138,4 @@ export default function CssDoc() {
   );
 }
 
-CssDoc.title = '🎨 Aprendiendo CSS y SASS';
+CssDoc.title = '🎨 Aprende CSS y SASS en NeoTecs gratis!';
