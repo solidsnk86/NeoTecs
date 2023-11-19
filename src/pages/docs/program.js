@@ -4,7 +4,7 @@ import { Footer } from '../../components/Footer';
 import { NavSwitch } from '../../components/docs/NavSwicth';
 import { Introduction } from '../../components/docs/Introduction';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-import { HtmlDoc } from '../../components/docs/HtmlDoc';
+import HtmlDoc from '../../components/docs/HtmlDoc';
 
 export default function Program() {
   return (

@@ -46,7 +46,7 @@ export default function GitDocs() {
               <a href="#branch">Branching (Ramificación)</a>
               <ul>
                 <li>
-                  <a href="#bootstrap">Más Funcionalidades de GitHub</a>
+                  <a href="#features">Más Funcionalidades de GitHub</a>
                 </li>
               </ul>
             </li>
@@ -315,7 +315,7 @@ export default function GitDocs() {
               </li>
             </ul>
             <div className="images-client">
-              <img src="/images/" />
+              <img src="/images/git_log.png" />
             </div>
             <ul className="list-css-span">
               <li>
@@ -382,14 +382,107 @@ export default function GitDocs() {
                 en nuestros repositorios de Git:
                 <ol>
                   <li>
-                    Ejecuta git branch para ver en qué rama estás trabajando
+                    Ejecuta `git branch` para ver en qué rama estás trabajando
                     actualmente, la cual tendrá un asterisco a la izquierda de
                     su nombre.
+                    <div className="images-client">
+                      <img
+                        src="/images/git_branch.png"
+                        alt="Captura de pantalla de git branch"
+                      />
+                    </div>
+                  </li>
+                  <li className="list-css-span">
+                    Para crear una nueva rama, ejecutaremos el comando
+                    <span>{`git checkout -b <nombre de la nueva rama>`}</span>.
+                    <div className="images-client">
+                      <img
+                        src="/images/new_branch.png"
+                        alt="Captura de pantalla de git checkout -b"
+                      />
+                    </div>
                   </li>
                 </ol>
               </li>
+              <li className="list-css-span">
+                Cambiar entre ramas utilizando el comando git checkout
+                <span>{'<nombre de la rama>'}</span>y realizar confirmaciones de
+                cualquier cambio en cada rama.
+              </li>
+              <li className="list-css-span">
+                Cuando estemos listos para fusionar nuestras dos ramas,
+                cambiaremos a la rama que deseamos conservar (casi siempre la
+                rama principal, generalmente llamada master), y luego
+                ejecutaremos el comando git merge
+                <span>{'<nombre de la otra rama>'}</span>. Esto se tratará de
+                manera similar a un push o pull, y pueden surgir conflictos de
+                fusión.
+              </li>
             </ul>
           </article>
+          <span id="features"></span>
+          <SectionTitle title="Más Características de GitHub" />
+          <article>
+            <p>
+              Hay algunas características útiles específicas de GitHub que
+              pueden ayudarte cuando estás trabajando en un proyecto:
+            </p>
+            <ul>
+              <li>
+                Forking (Bifurcación): Como usuario de GitHub, tienes la
+                capacidad de bifurcar cualquier repositorio al que tengas
+                acceso, lo que crea una copia del repositorio del que eres el
+                propietario. Hacemos esto haciendo clic en el botón "Fork" en la
+                esquina superior derecha.
+              </li>
+              <li>
+                Pull Requests (Solicitudes de extracción): Una vez que hayas
+                bifurcado un repositorio y hayas realizado algunos cambios en tu
+                versión, es posible que desees solicitar que esos cambios se
+                agreguen a la versión principal del repositorio. Por ejemplo, si
+                quisieras agregar una nueva característica a Bootstrap, podrías
+                bifurcar el repositorio, hacer algunos cambios y luego enviar
+                una solicitud de extracción. Esta solicitud de extracción podría
+                ser evaluada y posiblemente aceptada por las personas que
+                gestionan el repositorio de Bootstrap. Este proceso, en el que
+                las personas realizan algunos cambios y luego solicitan que se
+                fusionen en un repositorio principal, es vital para lo que se
+                conoce como software de código abierto, o software creado por
+                contribuciones de varios desarrolladores.
+              </li>
+              <li>
+                GitHub Pages: GitHub Pages es una forma sencilla de publicar un
+                sitio estático en la web. (Aprenderemos más tarde sobre sitios
+                estáticos frente a dinámicos.) Para hacer esto:
+                <ol>
+                  <li>Crea un nuevo repositorio en GitHub.</li>
+                  <li>
+                    Clona el repositorio y realiza cambios localmente,
+                    asegurándote de incluir un archivo index.html que será la
+                    página de inicio de tu sitio web.
+                  </li>
+                  <li>Sube esos cambios a GitHub.</li>
+                  <li>
+                    Ve a la página de Configuración de tu repositorio,
+                    desplázate hacia abajo hasta GitHub Pages y elige la rama
+                    principal en el menú desplegable.
+                  </li>
+                  <li>
+                    Desplázate de nuevo hacia abajo a la sección de GitHub Pages
+                    en la página de configuración, y después de unos minutos,
+                    deberías ver una notificación que dice "Tu sitio se ha
+                    publicado en: ..." que incluirá una URL donde puedes
+                    encontrar tu sitio.
+                  </li>
+                </ol>
+                <p>
+                  ¡Eso es todo para esta clase! ¡La próxima vez, estaremos
+                  viendo Python!
+                </p>
+              </li>
+            </ul>
+          </article>
+          <ShareButton setTitle={GitDocs.title} />
         </div>
       </div>
       <Footer />

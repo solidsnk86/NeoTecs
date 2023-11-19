@@ -4,7 +4,7 @@ import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
 import { OpenInNew } from '@mui/icons-material';
 
-export const HtmlDoc = () => {
+export default function HtmlDoc() {
   return (
     <main className="text-text-primary w-full">
       <span id="html" />
@@ -366,7 +366,7 @@ export const HtmlDoc = () => {
       <h4 className="text-text-primary">
         ¡Eso concluye nuestro contenido por aquí! ツ
       </h4>
-      <ShareButton />
+      <ShareButton setTitle={HtmlDoc.title} />
     </main>
   );
-};
+}
