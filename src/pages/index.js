@@ -66,15 +66,17 @@ export default function Home() {
         </ul>
         <YouTubeVideoSection />
         <section className="xl:flex justify-center mx-auto w-full relative">
-          <header className="xl:flex xl:w-1/2 p-2 xl:mt-[150px]">
-            <Wifi className="inline bg-button-variant mx-4 w-16 h-16 text-green-600 font-bold border p-3 border-green-400 rounded-lg xl:mt-10 mt-4" />
+          <header className="xl:flex xl:w-1/2 p-2 xl:mt-[70px]">
+            <span className="effect-backround"></span>
+            <Wifi className="inline bg-button-variant mx-4 w-16 h-16 text-green-600 font-bold border p-3 border-green-400 rounded-lg xl:mx-8 xl:mt-10 mt-4" />
             <div>
               <h2 className="text-3xl font-semibold my-3">
                 Documentación Wifi
               </h2>
               <p className="text-md">
-                Aprende cómo configurar diferentes modelos de dispositvos
-                inalámbricos de las marcas más conocidas con esta guía.
+                Aprende cómo configurar diferentes modelos <br />
+                de dispositvos inalámbricos de las marcas
+                <br /> más conocidas con esta guía.
               </p>
             </div>
           </header>

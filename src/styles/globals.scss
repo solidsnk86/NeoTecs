@@ -331,6 +331,14 @@ pre {
   }
 }
 
+.effect-background {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #006e24;
+}
+
 @import 'atropos/scss';
 @import './home-header.scss';
 @import './prose.scss';
