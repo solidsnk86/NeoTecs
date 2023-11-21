@@ -84,21 +84,23 @@ export const Footer = () => {
             onClick={() => compartiTelegram()}
           />
         </div>
-        {[
-          { name: 'Contacto', href: 'mailto:calcagni.gabriel86@gmail.com' },
-          { name: 'YouTube', href: 'https://www.youtube.com/@tutosNeoTecs' },
-          { name: 'GitHub', href: 'https://github.com/solidsnk86' },
-          { name: 'Blog', href: 'https://solidsnk86.netlify.app/blog' },
-        ].map((link, index) => (
-          <div key={index} className="flex justify-center mt-3">
-            <Link
-              href={link.href}
-              className="mx-3 items-center hover:underline font-semibold"
-            >
-              {link.name}
-            </Link>
-          </div>
-        ))}
+        <div className="flex items-center justify-center xl:gap-x-10">
+          {[
+            { name: 'Contacto', href: 'mailto:calcagni.gabriel86@gmail.com' },
+            { name: 'YouTube', href: 'https://www.youtube.com/@tutosNeoTecs' },
+            { name: 'GitHub', href: 'https://github.com/solidsnk86' },
+            { name: 'Blog', href: 'https://solidsnk86.netlify.app/blog' },
+          ].map((link, index) => (
+            <aside key={index} className="inline-block mt-3">
+              <Link
+                href={link.href}
+                className="mx-3 items-center hover:underline font-semibold"
+              >
+                {link.name}
+              </Link>
+            </aside>
+          ))}
+        </div>
         <p className="flex justify-center mt-16">
           {currentYear} © NeoTecs · By
           <a href={myUrl} target="_blank" rel="noopener">

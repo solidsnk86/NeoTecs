@@ -28,7 +28,7 @@ export default function DjangoDocs() {
           <NavSwitch inline />
           <DjangoTitle>Django</DjangoTitle>
           <hr className="border-text-primary" />
-          <Header>Indice</Header>
+          <Header>Índice</Header>
           <ol className="indice">
             <li>
               <a href="#introduccion">Introducción</a>

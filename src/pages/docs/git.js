@@ -10,6 +10,10 @@ import { ShareButton } from '../../components/ShareButton';
 import { OpenInNew } from '@mui/icons-material';
 
 export default function GitDocs() {
+  const GitTitle = ({ Tag = 'h1', children }) => {
+    return <Tag className="text-text-primary font-mono">{children}</Tag>;
+  };
+
   const Header = ({ Tag = 'h2', children }) => {
     return <Tag className="text-text-primary">{children}</Tag>;
   };
@@ -21,7 +25,7 @@ export default function GitDocs() {
         <LectureNav />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
-          <Header>Introducción a Git</Header>
+          <GitTitle>Introducción a Git</GitTitle>
           <hr className="border-text-primary" />
           <Header>Índice</Header>
           <ol className="indice">
