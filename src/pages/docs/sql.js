@@ -518,6 +518,27 @@ export default function SqlDocs() {
               SELECT * FROM flights WHERE origin IN ("New York", "Lima");
               `
             }</Pre>
+            <div className="images-client">
+              <img src="/images/in.png" alt="Tabla vuelos." />
+            </div>
+            <p className="list-css-span">
+              Incluso podemos utilizar expresiones regulares para buscar
+              palabras de manera más amplia utilizando la palabra clave
+              <Link
+                href="https://www.w3schools.com/sql/sql_like.asp"
+                className="mx-1 text-[#00BCF2]"
+              >
+                LIKE
+              </Link>
+              . La siguiente consulta encuentra todos los resultados con una
+              <span>"a"</span>en el origen, utilizando<span>%</span>como un
+              carácter comodín.
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              SELECT * FROM flights WHERE origin LIKE "%a%";
+              `
+            }</Pre>
           </article>
           <ShareButton />
         </div>
