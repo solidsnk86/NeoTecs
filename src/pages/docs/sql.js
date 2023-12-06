@@ -146,6 +146,74 @@ export default function SqlDocs() {
             <div>
               <img src="/images/flights1.png" alt="Tabla de vuelos" />
             </div>
+            <p>
+              Existen varios sistemas de gestión de bases de datos relacionales
+              comúnmente utilizados para almacenar información y que pueden
+              interactuar fácilmente con comandos SQL:
+            </p>
+            <ul>
+              <li>
+                <Link href="https://www.mysql.com/" className="text-[#00BCF2]">
+                  MySQL
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.postgresql.org/"
+                  className="text-[#00BCF2]"
+                >
+                  PostgreeSQL
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.sqlite.org/index.html"
+                  className="text-[#00BCF2]"
+                >
+                  SQLite
+                </Link>
+              </li>
+            </ul>
+            <p>
+              Los dos primeros, MySQL y PostgreSQL, son sistemas más robustos
+              que generalmente se ejecutan en servidores distintos de aquellos
+              que ejecutan un sitio web. SQLite, por otro lado, es un sistema
+              más liviano que puede almacenar todos sus datos en un único
+              archivo. Utilizaremos SQLite a lo largo de este curso, ya que es
+              el sistema predeterminado utilizado por Django.
+            </p>
+          </article>
+          <SectionTitle title="Tipos de Columnas" />
+          <article>
+            <p>
+              Así como trabajamos con varios tipos de variables en Python,
+              SQLite tiene tipos que representan diferentes formas de
+              información. Otros sistemas de gestión pueden tener tipos de datos
+              diferentes, pero todos son bastante similares a los de SQLite:
+            </p>
+            <ul className="list-css-span">
+              <li>
+                <span>TEXT</span>: Para cadenas de texto (por ejemplo, el nombre
+                de una persona)
+              </li>
+              <li>
+                <span>NUMERIC</span>: Una forma más general de datos numéricos
+                (por ejemplo, una fecha o un valor booleano)
+              </li>
+              <li>
+                <span>INTEGER</span>: Cualquier número no decimal (por ejemplo,
+                la edad de una persona)
+              </li>
+              <li>
+                <span>REAL</span>: Cualquier número real (por ejemplo, el peso
+                de una persona)
+              </li>
+              <li>
+                <span>BLOB</span>(Objeto Binario Grande): Cualquier otro dato
+                binario que deseemos almacenar en nuestra base de datos (por
+                ejemplo, una imagen)
+              </li>
+            </ul>
           </article>
         </div>
       </div>
