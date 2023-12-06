@@ -82,7 +82,7 @@ export default function Home() {
           </header>
           <aside className="mt-10 border-zinc-800 p-6 rounded-lg shadow-sm shadow-[#222]">
             <p className="text-3xl font-semibold">
-              <PlayIcon className="inline mx-2 border text-green-500 border-green-900 rounded-lg p-2 w-9 h-9 bg-[#072719]" />
+              <PlayIcon className="inline mx-2 border mb-[6px] text-green-500 border-green-900 rounded-lg p-2 w-9 h-9 bg-[#072719]" />
               Comencemos!
             </p>
             <p className="my-3">Descubre cómo configurar estas marcas:</p>
