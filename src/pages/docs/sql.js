@@ -215,6 +215,29 @@ export default function SqlDocs() {
               </li>
             </ul>
           </article>
+          <SectionTitle title="Tablas" />
+          <article>
+            <p>
+              Ahora, para comenzar a utilizar SQL para interactuar con una base
+              de datos, empecemos por crear una nueva tabla. El comando para
+              crear una nueva tabla se parece a algo como esto:
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              CREATE TABLE flights(
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                origin TEXT NOT NULL,
+                destination TEXT NOT NULL,
+                duration INTEGER NOT NULL
+            );
+              `
+            }</Pre>
+            <p>
+              En el comando anterior, estamos creando una nueva tabla que hemos
+              decidido llamar "flights", y hemos añadido cuatro columnas a esta
+              tabla:
+            </p>
+          </article>
         </div>
       </div>
       <Footer />

@@ -43,7 +43,7 @@ export const Pre = ({ children, lang = '' }) => {
 
   return (
     <div className="relative">
-      <ToastContainer />
+      <ToastContainer closeOnClick />
       <Copy
         onClick={handleCopyClick}
         className="w-5 h-5 inline-flex my-auto absolute z-10 right-2 mt-3 cursor-pointer rounded text-slate-100 hover:opacity-[.7] transition-all"
