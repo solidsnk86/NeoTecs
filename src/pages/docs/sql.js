@@ -128,6 +128,25 @@ export default function SqlDocs() {
               className="w-[300px] h-[60px]"
             />
           </figure>
+          <SectionTitle title="Base de Datos" />
+          <article>
+            <p>
+              Antes de adentrarnos en el uso de SQL, es fundamental comprender
+              cómo se almacena la información. En SQL, generalmente trabajamos
+              con bases de datos relacionales, donde la información se organiza
+              en tablas. Cada tabla consta de columnas específicas y un número
+              variable de filas.
+            </p>
+            <p>
+              Para nuestra ilustración en SQL, consideremos un sitio web de
+              aerolínea que gestiona información sobre vuelos y pasajeros. En la
+              siguiente tabla, registramos diversos vuelos, cada uno con un
+              origen, destino y duración asociados.
+            </p>
+            <div>
+              <img src="/images/flights1.png" alt="Tabla de vuelos" />
+            </div>
+          </article>
         </div>
       </div>
       <Footer />

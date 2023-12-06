@@ -875,7 +875,7 @@ export default function JavaScript() {
               exacto puede variar según el navegador). Una herramienta útil para
               la depuración es imprimir en la consola, lo cual puedes hacer
               utilizando la función
-              <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+              <span className="bg-gray-800 border-b-2 text-zinc-100  border-amber-400 px-1 py-[2px] mx-1 rounded">
                 console.log
               </span>
               . Por ejemplo, en la página
@@ -897,7 +897,7 @@ export default function JavaScript() {
               que hemos visto anteriormente, JavaScript ahora nos proporciona la
               capacidad de utilizar Funciones de Flecha, donde tenemos una
               entrada (o paréntesis cuando no hay entrada) seguida de
-              <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+              <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
                 {'=>'}
               </span>
               y luego algún código que se ejecutará. Por ejemplo, podemos
@@ -918,7 +918,7 @@ export default function JavaScript() {
             <p>
               También podemos tener funciones con nombres que utilizan flechas,
               como en esta reescritura de la función
-              <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+              <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
                 count
               </span>
               :
@@ -941,13 +941,13 @@ export default function JavaScript() {
               colores utilizando un menú desplegable en lugar de tres botones
               separados. Podemos detectar cambios en un elemento select
               utilizando el atributo
-              <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+              <span className="bg-gray-800 border-b-2 text-zinc-100  border-amber-400 px-1 py-[2px] mx-1 rounded">
                 onchange
               </span>
               . En JavaScript, esto es una palabra clave que cambia según el
               contexto en el que se utiliza. En el caso de un manejador de
               eventos,
-              <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+              <span className="bg-gray-800 border-b-2 text-zinc-100  border-amber-400 px-1 py-[2px] mx-1 rounded">
                 this
               </span>
               se refiere al objeto que desencadenó el evento.
@@ -988,37 +988,37 @@ export default function JavaScript() {
             </p>
             <ul>
               <li>
-                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 text-zinc-100  border-amber-400 px-1 py-[2px] mx-1 rounded">
                   onclick
                 </span>
               </li>
               <li>
-                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 text-zinc-100  border-amber-400 px-1 py-[2px] mx-1 rounded">
                   onmouseover
                 </span>
               </li>
               <li>
-                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 text-zinc-100  border-amber-400 px-1 py-[2px] mx-1 rounded">
                   onkeydown
                 </span>
               </li>
               <li>
-                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 text-zinc-100  border-amber-400 px-1 py-[2px] mx-1 rounded">
                   onkeyup
                 </span>
               </li>
               <li>
-                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 text-zinc-100  border-amber-400 px-1 py-[2px] mx-1 rounded">
                   onload
                 </span>
               </li>
               <li>
-                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 text-zinc-100  border-amber-400 px-1 py-[2px] mx-1 rounded">
                   onblur
                 </span>
               </li>
               <li>
-                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 text-zinc-100  border-amber-400 px-1 py-[2px] mx-1 rounded">
                   ...
                 </span>
               </li>
@@ -1035,7 +1035,7 @@ export default function JavaScript() {
               página. Observa a continuación cómo dejamos espacio para una lista
               no ordenada, pero aún no agregamos elementos a ella. También
               observa que agregamos un enlace a
-              <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+              <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
                 tasks.js
               </span>
               , donde escribiremos nuestro JavaScript.
@@ -1061,7 +1061,7 @@ export default function JavaScript() {
             }</Pre>
             <p>
               Ahora, aquí está nuestro código que podemos mantener en
-              <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+              <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
                 tasks.js
               </span>
               . Algunas notas sobre lo que verás a continuación:
@@ -1080,7 +1080,7 @@ export default function JavaScript() {
               </li>
               <li>
                 En JavaScript, usamos
-                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
                   .length
                 </span>
                 para encontrar la longitud de objetos como cadenas y arreglos.
@@ -1102,7 +1102,7 @@ export default function JavaScript() {
                 </Link>
                 . Luego, podemos agregar esos elementos al DOM utilizando la
                 función
-                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
                   append
                 </span>
                 .
@@ -1219,14 +1219,14 @@ export default function JavaScript() {
             </p>
             <ul>
               <li>
-                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
                   localStorage.getItem(key)
                 </span>
                 : Esta función busca una entrada en el almacenamiento local con
                 una clave dada y devuelve el valor asociado con esa clave.
               </li>
               <li>
-                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
                   localStorage.setItem(key, value)
                 </span>
                 : Esta función establece una entrada en el almacenamiento local,

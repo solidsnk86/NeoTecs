@@ -49,7 +49,7 @@ export default function CurrencyConverter() {
           value={currency}
           placeholder="Ingrese la Divisa"
           onChange={(e) => setCurrency(e.target.value)}
-          className="text-black uppercase font-semibold my-6 placeholder:text-center placeholder:capitalize rounded outline-4"
+          className="text-black uppercase font-semibold my-6 placeholder:text-center placeholder:capitalize rounded outline-4 border"
         />
         <button
           type="submit"
