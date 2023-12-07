@@ -645,14 +645,14 @@ export default function SqlDocs() {
           </article>
           <SectionTitle title="UPDATE" />
           <article>
-            <p>
+            <p className="list-css-span">
               UPDATE (ACTUALIZAR) Hasta ahora, hemos visto cómo agregar y buscar
               en tablas, pero también es posible que deseemos actualizar filas
               de una tabla que ya existe. Hacemos esto utilizando el comando
-              UPDATE, como se muestra a continuación. Como podrías haber
-              deducido al leer esto en voz alta, el comando encuentra todos los
-              vuelos que van de Nueva York a Londres y luego establece sus
-              duraciones en 430.
+              <span>UPDATE</span>, como se muestra a continuación. Como podrías
+              haber deducido al leer esto en voz alta, el comando encuentra
+              todos los vuelos que van de Nueva York a Londres y luego establece
+              sus duraciones en 430.
             </p>
             <Pre lang="sql">{
               /*sql */ `
