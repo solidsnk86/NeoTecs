@@ -307,7 +307,6 @@ export default function JavaScript() {
                     </script>
                   </body>
                 </html>
-                
                 `
             }</Pre>
             <div className="images-client">

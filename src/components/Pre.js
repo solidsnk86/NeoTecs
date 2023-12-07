@@ -4,6 +4,7 @@ import stripIndent from 'strip-indent';
 import { Copy } from 'lucide-react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { dark, light } from '@mui/material/styles/createPalette';
 
 const removeIndent = (code = '') => {
   return stripIndent(code).trim();
@@ -12,7 +13,7 @@ const removeIndent = (code = '') => {
 export const Pre = ({ children, lang = '' }) => {
   const preRef = useRef(null);
 
-  const handleCopyClick = () => {
+  const handleCopyClick = (e) => {
     if (preRef.current) {
       const range = document.createRange();
       range.selectNode(preRef.current);
@@ -20,32 +21,26 @@ export const Pre = ({ children, lang = '' }) => {
       window.getSelection().addRange(range);
     }
 
-    try {
-      document.execCommand('copy');
+    document.execCommand('copy');
+    e.stopPropagation();
 
-      const isDarkMode = window.matchMedia(
-        '(prefers-color-scheme: dark)',
-      ).matches;
+    const isDarkMode = window.matchMedia(
+      '(prefers-color-scheme: dark)',
+    ).matches;
 
-      toast.success('Contenido copiado al portapapeles', {
-        position: toast.POSITION.BOTTOM_LEFT,
-        theme: isDarkMode ? 'dark' : 'light',
-      });
-    } catch (err) {
-      toast.error('Error al intentar copiar al portapapeles', {
-        position: toast.POSITION.BOTTOM_LEFT,
-        theme: 'dark',
-      });
-    }
+    toast('Contenido copiado al portapapeles', {
+      position: toast.POSITION.BOTTOM_LEFT,
+      type: 'default',
+      theme: isDarkMode ? 'dark' : 'light',
+    });
 
     window.getSelection().removeAllRanges();
   };
 
   return (
     <div className="relative">
-      <ToastContainer closeOnClick />
       <Copy
-        onClick={handleCopyClick}
+        onClick={(e) => handleCopyClick(e)}
         className="w-5 h-5 inline-flex my-auto absolute z-10 right-2 mt-3 cursor-pointer rounded text-slate-100 hover:opacity-[.7] transition-all"
       />
       <Highlight
@@ -65,6 +60,7 @@ export const Pre = ({ children, lang = '' }) => {
           </pre>
         )}
       </Highlight>
+      <ToastContainer closeButton closeOnClick />
     </div>
   );
 };

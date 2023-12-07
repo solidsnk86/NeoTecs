@@ -32,75 +32,77 @@ export default function SqlDocs() {
               <a href="#introduccion">Introducción</a>
             </li>
             <li>
-              <a href="#javascript">SQL</a>
+              <a href="#sql">SQL</a>
               <ul>
                 <li>
-                  <a href="#eventos">Bases de Datos</a>
+                  <a href="#base-de-datos">Bases de Datos</a>
                 </li>
                 <li>
-                  <a href="#variables">Tipos de Columnas</a>
+                  <a href="#tipos-de-columnas">Tipos de Columnas</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#queryselector">Tablas</a>
+              <a href="#tablas">Tablas</a>
             </li>
             <li>
-              <a href="#dom">SELECT</a>
+              <a href="#select">SELECT</a>
               <ul>
                 <li>
-                  <a href="#consola">Trabajando con SQL en la terminal</a>
+                  <a href="#terminal-sql">Trabajando con SQL en la terminal</a>
                 </li>
                 <li>
-                  <a href="#funciones-de-flecha">Funciones</a>
+                  <a href="#funciones">Funciones</a>
                 </li>
                 <li>
-                  <a href="#todo-list">UPDATE</a>
+                  <a href="#update">UPDATE</a>
                 </li>
                 <li>
-                  <a href="#todo-list">DELETE</a>
+                  <a href="#delete">DELETE</a>
                 </li>
                 <li>
-                  <a href="#todo-list">Otras cláusulas</a>
+                  <a href="#otras-clausulas">Otras cláusulas</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#intervalos">Unir Tablas</a>
+              <a href="#unir-tablas">Unir Tablas</a>
               <ul>
                 <li>
-                  <a href="#local">Unir Query</a>
+                  <a href="#unir-query">Unir Query</a>
                 </li>
                 <li>
-                  <a href="#local">Indexando</a>
+                  <a href="#indexado">Indexando</a>
                 </li>
                 <li>
-                  <a href="#local">Vulnerabilidades SQL</a>
+                  <a href="#vulnerabilidades-sql">Vulnerabilidades SQL</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#apis">Módulos Django</a>
+              <a href="#modulos-django">Módulos Django</a>
             </li>
             <li>
-              <a href="#objetos">Migracionest</a>
+              <a href="#migraciones">Migraciones</a>
             </li>
             <li>
-              <a href="#cambio-de-moneda">Shell (Caparazón)</a>
+              <a href="#shell">Shell (Caparazón)</a>
               <ul>
                 <li>
-                  <a href="#cambio-divisas">Comenzando nuestra aplicación</a>
+                  <a href="#comenzando-aplicacion">
+                    Comenzando nuestra aplicación
+                  </a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#cambio-divisas">Administrador Django</a>
+              <a href="#administrador-django">Administrador Django</a>
             </li>
             <li>
-              <a href="#cambio-divisas">Muchas más relaciones</a>
+              <a href="#mas-relaciones">Muchas más relaciones</a>
             </li>
             <li>
-              <a href="#cambio-divisas">Usuarios</a>
+              <a href="#usuarios">Usuarios</a>
             </li>
           </ol>
           <span id="introduccion" />
@@ -128,14 +130,28 @@ export default function SqlDocs() {
               className="w-[300px] h-[60px]"
             />
           </figure>
+          <span id="base-de-datos" />
           <SectionTitle title="Base de Datos" />
           <article>
             <p>
               Antes de adentrarnos en el uso de SQL, es fundamental comprender
               cómo se almacena la información. En SQL, generalmente trabajamos
-              con bases de datos relacionales, donde la información se organiza
-              en tablas. Cada tabla consta de columnas específicas y un número
-              variable de filas.
+              con bases de datos{' '}
+              <Link
+                href="https://www.oracle.com/database/what-is-a-relational-database/#:~:text=A%20relational%20database%20is%20a,of%20representing%20data%20in%20tables."
+                className="text-[#00BCF2]"
+              >
+                relacionales
+              </Link>
+              , donde la información se organiza en{' '}
+              <Link
+                href="https://www.essentialsql.com/what-is-a-database-table/"
+                className="text-[#00BCF2]"
+              >
+                tablas
+              </Link>
+              . Cada tabla consta de columnas específicas y un número variable
+              de filas.
             </p>
             <p>
               Para nuestra ilustración en SQL, consideremos un sitio web de
@@ -143,7 +159,7 @@ export default function SqlDocs() {
               siguiente tabla, registramos diversos vuelos, cada uno con un
               origen, destino y duración asociados.
             </p>
-            <div>
+            <div className="images-client">
               <img src="/images/flights1.png" alt="Tabla de vuelos" />
             </div>
             <p>
@@ -183,13 +199,22 @@ export default function SqlDocs() {
               el sistema predeterminado utilizado por Django.
             </p>
           </article>
+          <span id="tipos-de-columnas" />
           <SectionTitle title="Tipos de Columnas" />
           <article>
             <p>
               Así como trabajamos con varios tipos de variables en Python,
-              SQLite tiene tipos que representan diferentes formas de
-              información. Otros sistemas de gestión pueden tener tipos de datos
-              diferentes, pero todos son bastante similares a los de SQLite:
+              SQLite tiene{' '}
+              <Link
+                href="https://www.sqlite.org/datatype3.html"
+                className="text-[#00BCF2]"
+              >
+                tipos
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>{' '}
+              que representan diferentes formas de información. Otros sistemas
+              de gestión pueden tener tipos de datos diferentes, pero todos son
+              bastante similares a los de SQLite:
             </p>
             <ul className="list-css-span">
               <li>
@@ -215,6 +240,7 @@ export default function SqlDocs() {
               </li>
             </ul>
           </article>
+          <span id="tablas" />
           <SectionTitle title="Tablas" />
           <article>
             <p>
@@ -234,10 +260,90 @@ export default function SqlDocs() {
             }</Pre>
             <p>
               En el comando anterior, estamos creando una nueva tabla que hemos
-              decidido llamar "flights", y hemos añadido cuatro columnas a esta
-              tabla:
+              decidido llamar <b>"flights"</b>, y hemos añadido cuatro columnas
+              a esta tabla:
             </p>
+            <ol className="list-css-span">
+              <li>
+                <span>id</span>: A menudo es útil tener un número que nos
+                permita identificar de manera única cada fila en una tabla. Aquí
+                hemos especificado que "id" es un número entero y también que es
+                nuestra clave primaria{' '}
+                <Link
+                  href="https://www.w3schools.com/sql/sql_primarykey.ASP"
+                  className="text-[#00BCF2]"
+                >
+                  PRIMARY-KEY
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                </Link>
+                , lo que significa que es nuestro identificador único. Además,
+                hemos especificado que será AUTOINCREMENT, lo que significa que
+                no tendremos que proporcionar un id cada vez que agreguemos a la
+                tabla, ya que se hará automáticamente.
+              </li>
+              <li>
+                <span>origin</span>: Hemos especificado que este será un campo
+                de texto, y al escribir NOT NULL hemos requerido que tenga un
+                valor.
+              </li>
+              <li>
+                <span>destination</span>: Nuevamente hemos especificado que este
+                será un campo de texto y hemos evitado que sea nulo.
+              </li>
+              <li>
+                <span>duration</span>: Nuevamente, este valor no puede ser nulo,
+                pero esta vez se representa como un número entero en lugar de
+                texto.
+              </li>
+            </ol>
+            <p>
+              Acabamos de ver las restricciones <b>NOT NULL</b> y{' '}
+              <b>PRIMARY KEY</b> al hacer una columna, pero hay varias otras
+              <Link
+                href="https://www.tutorialspoint.com/sqlite/sqlite_constraints.htm"
+                className="text-[#00BCF2] mx-1"
+              >
+                restrincciones
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              disponibles:
+            </p>
+            <ul className="list-css-span">
+              <li>
+                <span>CHECK</span>: Asegura que se cumplan ciertas restricciones
+                antes de permitir que se agregue/modifique una fila.
+              </li>
+              <li>
+                <span>DEFAULT</span>: Proporciona un valor predeterminado si no
+                se proporciona ningún valor.
+              </li>
+              <li>
+                <span>NOT NULL</span>: Garantiza que se proporcione un valor.
+              </li>
+              <li>
+                <span>PRIMARY KEY</span>: Indica que esta es la principal manera
+                de buscar una fila en la base de datos.
+              </li>
+              <li>
+                <span>UNIQUE</span>: Asegura que no haya dos filas con el mismo
+                valor en esa columna.
+              </li>
+              <li>...</li>
+            </ul>
+            <p>
+              Ahora que hemos visto cómo crear una tabla, veamos cómo podemos
+              agregar filas a ella. En SQL, hacemos esto mediante el comando{' '}
+              <b>INSERT</b>:
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              INSERT INTO flights
+              (origin, destination, duration)
+              VALUES ("New York", "London", 415);
+              `
+            }</Pre>
           </article>
+          <ShareButton setTitle={SqlDocs.title} />
         </div>
       </div>
       <Footer />
@@ -245,4 +351,4 @@ export default function SqlDocs() {
   );
 }
 
-SqlDocs.title = 'Aprende SQL · Base de Datos';
+SqlDocs.title = 'Aprende SQL · 💿 Base de Datos';
