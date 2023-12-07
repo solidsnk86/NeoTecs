@@ -342,6 +342,284 @@ export default function SqlDocs() {
               VALUES ("New York", "London", 415);
               `
             }</Pre>
+            <p>
+              En el comando anterior, hemos especificado el nombre de la tabla
+              en la que deseamos realizar la inserción, luego proporcionamos una
+              lista de los nombres de las columnas para las cuales
+              proporcionaremos información, y luego especificamos los VALORES
+              que deseamos llenar en esa fila de la tabla, asegurándonos de que
+              los VALORES estén en el mismo orden que nuestra lista
+              correspondiente de columnas. Es importante destacar que no es
+              necesario proporcionar un valor para "id" porque se incrementa
+              automáticamente.
+            </p>
+          </article>
+          <span id="select" />
+          <SectionTitle title="SELECT" />
+          <article>
+            <p>
+              Una vez que se ha poblado una tabla con algunas filas, es probable
+              que deseemos una manera de acceder a los datos dentro de esa
+              tabla. Hacemos esto utilizando la consulta SELECT de SQL. La
+              consulta SELECT más simple en nuestra tabla de vuelos podría verse
+              algo así:
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              SELECT * FROM flights;
+              `
+            }</Pre>
+            <p>
+              La instrucción anterior <b>(*)</b> recupera todos los datos de
+              nuestra tabla de vuelos.
+            </p>
+            <div className="images-client">
+              <img src="/images/all.png" alt="Tabla de Vuelos" />
+            </div>
+            <p>
+              Puede ser el caso de que realmente no necesitemos todas las
+              columnas de la base de datos, solo origen y destino. Para acceder
+              solo a estas columnas, podemos reemplazar el * con los nombres de
+              las columnas a las que queremos acceder. La siguiente consulta
+              devuelve todos los orígenes y destinos.
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              SELECT origin, destination FROM flights;
+              `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/flights1.png" alt="Tabla de Vuelos" />
+            </div>
+            <p>
+              A medida que nuestras tablas se vuelven más grandes, también
+              querremos reducir las filas que devuelve nuestra consulta. Hacemos
+              esto agregando un WHERE seguido de alguna condición. Por ejemplo,
+              el siguiente comando selecciona solo la fila con un id de 3:
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              SELECT * FROM flights WHERE id = 3;
+              `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/where0.png" alt="Tabla de Vuelos" />
+            </div>
+            <p>Podemos filtrar por cualquier columna, ¡no solo por id!</p>
+            <Pre lang="sql">{
+              /*sql */ `
+              SELECT * FROM flights WHERE origin = "New York";
+              `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/where1.png" alt="Tabla de Vuelos" />
+            </div>
+          </article>
+          <span id="terminal-sql" />
+          <SectionTitle title="Trabajar con SQL en la terminal" />
+          <article>
+            <p>
+              Ahora que conocemos algunos comandos básicos de SQL, ¡vamos a
+              probarlos en la terminal! Para trabajar con SQLite en tu
+              computadora, primero debes descargar{' '}
+              <Link
+                href="https://www.sqlite.org/download.html"
+                className="text-[#00BCF2]"
+              >
+                SQLLite
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              . (No lo usaremos en la conferencia, pero también puedes descargar
+              <Link
+                href="https://sqlitebrowser.org/dl/"
+                className="text-[#00BCF2] mx-1"
+              >
+                DB Browser
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              para una forma más amigable de ejecutar consultas SQL).
+            </p>
+            <p className="list-css-span">
+              Podemos empezar creando un archivo para nuestra base de datos, ya
+              sea creando manualmente un nuevo archivo o ejecutando
+              <span>touch flights.sql</span>en la terminal. Ahora, si ejecutamos
+              <span>sqlite3 flights.sql</span>en la terminal, nos llevará a un
+              prompt de SQLite donde podemos ejecutar comandos SQL:
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              # Ingresando al prompt de SQLite
+              (base) % sqlite3 flights.sql
+              SQLite version 3.26.0 2018-12-01 12:34:55
+              Ingrese ".help" para obtener sugerencias de uso.
+              
+              # Creando una nueva tabla
+              sqlite> CREATE TABLE flights(
+                 ...>     id INTEGER PRIMARY KEY AUTOINCREMENT,
+                 ...>     origin TEXT NOT NULL,
+                 ...>     destination TEXT NOT NULL,
+                 ...>     duration INTEGER NOT NULL
+                 ...> );
+              
+              # Listando todas las tablas actuales (solo vuelos por ahora)
+              sqlite> .tables
+              flights
+              
+              # Consultando todo dentro de vuelos (que ahora está vacío)
+              sqlite> SELECT * FROM flights;
+              
+              # Agregando un vuelo
+              sqlite> INSERT INTO flights
+                 ...>     (origin, destination, duration)
+                 ...>     VALUES ("Nueva York", "Londres", 415);
+              
+              # Verificando la nueva información, que ahora podemos ver
+              sqlite> SELECT * FROM flights;
+              1|Nueva York|Londres|415
+              
+              # Agregando algunos vuelos más
+              sqlite> INSERT INTO flights (origin, destination, duration) VALUES ("Shanghái", "París", 760);
+              sqlite> INSERT INTO flights (origin, destination, duration) VALUES ("Estambul", "Tokio", 700);
+              sqlite> INSERT INTO flights (origin, destination, duration) VALUES ("Nueva York", "París", 435);
+              sqlite> INSERT INTO flights (origin, destination, duration) VALUES ("Moscú", "París", 245);
+              sqlite> INSERT INTO flights (origin, destination, duration) VALUES ("Lima", "Nueva York", 455);
+              
+              # Consultando esta nueva información
+              sqlite> SELECT * FROM flights;
+              1|Nueva York|Londres|415
+              2|Shanghái|París|760
+              3|Estambul|Tokio|700
+              4|Nueva York|París|435
+              5|Moscú|París|245
+              6|Lima|Nueva York|455
+              
+              # Cambiando la configuración para hacer que la salida sea más legible
+              sqlite> .mode columns
+              sqlite> .headers yes
+              
+              # Consultando toda la información nuevamente
+              sqlite> SELECT * FROM flights;
+              id          origin      destination  duration
+              ----------  ----------  -----------  ----------
+              1           Nueva York  Londres       415
+              2           Shanghái    París         760
+              3           Estambul    Tokio         700
+              4           Nueva York  París         435
+              5           Moscú       París         245
+              6           Lima        Nueva York    455
+              
+              # Buscando solo aquellos vuelos que tienen origen en Nueva York
+              sqlite> SELECT * FROM flights WHERE origin = "Nueva York";
+              id          origin      destination  duration
+              ----------  ----------  -----------  ----------
+              1           Nueva York  Londres       415
+              4           Nueva York  París         435
+              
+              `
+            }</Pre>
+            <p>
+              También podemos utilizar más que solo la igualdad para filtrar
+              nuestros vuelos. Para valores enteros y reales, podemos usar mayor
+              que o menor que:
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              SELECT * FROM flights WHERE duration > 500;
+              `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/500.png" alt="Tabla de Vuelos" />
+            </div>
+            <p>
+              Y también podemos utilizar otras lógicas
+              <Link
+                href="https://sqlitebrowser.org/dl/"
+                className="text-[#00BCF2] mx-1"
+              >
+                (AND, OR)
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              como en Python:
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              SELECT * FROM flights WHERE duration > 500 AND destination = "Paris";
+              `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/500andparis.png" alt="Tabla de Vuelos" />
+            </div>
+            <Pre lang="sql">{
+              /*sql */ `
+              SELECT * FROM flights WHERE duration > 500 OR destination = "Paris";
+              `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/500orparis.png" alt="Tabla de Vuelos" />
+            </div>
+            <p>
+              También podemos usar la palabra clave IN para ver si un dato es
+              una de varias opciones:
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              SELECT * FROM flights WHERE origin IN ("New York", "Lima");
+              `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/in.png" alt="Tabla de Vuelos" />
+            </div>
+            <p>
+              Incluso podemos usar expresiones regulares para buscar palabras de
+              manera más amplia utilizando la palabra clave LIKE. La siguiente
+              consulta encuentra todos los resultados con una "a" en el origen,
+              utilizando % como un carácter comodín.
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              SELECT * FROM flights WHERE origin LIKE "%a%";
+              `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/like.png" alt="Tabla de Vuelos" />
+            </div>
+          </article>
+          <span id="funciones" />
+          <SectionTitle title="Funciones" />
+          <article>
+            <p>
+              También hay varias funciones de SQL que podemos aplicar a los
+              resultados de una consulta. Estas pueden ser útiles si no
+              necesitamos todos los datos devueltos por una consulta, sino solo
+              algunas estadísticas resumidas de los datos.
+            </p>
+            <ul>
+              <Link
+                href="https://sqlitebrowser.org/dl/"
+                className="text-[#00BCF2] mx-1"
+              >
+                (AND, OR)
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              <li>AVERAGE (PROMEDIO)</li>
+              <li>COUNT (CONTAR)</li>
+              <li>MAX (MÁXIMO)</li>
+              <li>MIN (MÍNIMO)</li>
+              <li>SUM (SUMA)</li>
+              <li>...</li>
+            </ul>
+          </article>
+          <SectionTitle title="UPDATE" />
+          <article>
+            <p>
+              UPDATE (ACTUALIZAR) Hasta ahora, hemos visto cómo agregar y buscar
+              en tablas, pero también es posible que deseemos actualizar filas
+              de una tabla que ya existe. Hacemos esto utilizando el comando
+              UPDATE, como se muestra a continuación. Como podrías haber
+              deducido al leer esto en voz alta, el comando encuentra todos los
+              vuelos que van de Nueva York a Londres y luego establece sus
+              duraciones en 430.
+            </p>
           </article>
           <ShareButton setTitle={SqlDocs.title} />
         </div>
