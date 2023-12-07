@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import { OpenInNew } from '@mui/icons-material';
+import { QuoteIcon } from 'lucide-react';
 
 export default function SqlDocs() {
   const SqlTitle = ({ Tag = 'h1', children }) => {
@@ -653,6 +654,55 @@ export default function SqlDocs() {
               vuelos que van de Nueva York a Londres y luego establece sus
               duraciones en 430.
             </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              UPDATE flights
+              SET duration = 430
+              WHERE origin = "New York"
+              AND destination = "London";
+              `
+            }</Pre>
+          </article>
+          <span id="delete" />
+          <SectionTitle title="DELETE" />
+          <article>
+            <p>
+              También es posible que deseemos la capacidad de eliminar filas de
+              nuestra base de datos, y podemos hacer esto utilizando el comando
+              DELETE. El siguiente código eliminará todos los vuelos que
+              aterrizan en Tokio:
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              DELETE FROM flights WHERE destination = "Tokyo";
+              `
+            }</Pre>
+          </article>
+          <span id="otras-clausulas" />
+          <SectionTitle title="Otras Cláusulas" />
+          <article>
+            <p className="flex justify-center mx-auto border bg-[#473741] p-2 rounded-xl border-red-500 text-zinc-100">
+              Hay varias cláusulas adicionales que podemos usar para controlar
+              las consultas que nos devuelven resultados:
+            </p>
+            <ul className="list-css-span">
+              <li>
+                <span>LIMIT</span>: Limita el número de resultados devueltos por
+                una consulta.
+              </li>
+              <li>
+                <span>ORDER BY</span>: Ordena los resultados basándose en una
+                columna especificada.
+              </li>
+              <li>
+                <span>GROUP BY</span>: Agrupa los resultados según una columna
+                especificada.
+              </li>
+              <li>
+                <span>HAVING</span>: Permite aplicar restricciones adicionales
+                basadas en el número de resultados.
+              </li>
+            </ul>
           </article>
           <ShareButton setTitle={SqlDocs.title} />
         </div>
