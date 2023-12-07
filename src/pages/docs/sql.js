@@ -594,18 +594,51 @@ export default function SqlDocs() {
               algunas estadísticas resumidas de los datos.
             </p>
             <ul>
-              <Link
-                href="https://sqlitebrowser.org/dl/"
-                className="text-[#00BCF2] mx-1"
-              >
-                (AND, OR)
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>
-              <li>AVERAGE (PROMEDIO)</li>
-              <li>COUNT (CONTAR)</li>
-              <li>MAX (MÁXIMO)</li>
-              <li>MIN (MÍNIMO)</li>
-              <li>SUM (SUMA)</li>
+              <li>
+                <Link
+                  href="https://sqlitebrowser.org/dl/"
+                  className="text-[#00BCF2] mx-1"
+                >
+                  AVERAGE (PROMEDIO)
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://sqlitebrowser.org/dl/"
+                  className="text-[#00BCF2] mx-1"
+                >
+                  COUNT (CONTAR)
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://sqlitebrowser.org/dl/"
+                  className="text-[#00BCF2] mx-1"
+                >
+                  MAX (MÁXIMO)
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://sqlitebrowser.org/dl/"
+                  className="text-[#00BCF2] mx-1"
+                >
+                  MIN (MÍNIMO)
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://sqlitebrowser.org/dl/"
+                  className="text-[#00BCF2] mx-1"
+                >
+                  SUM (SUMA)
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                </Link>
+              </li>
               <li>...</li>
             </ul>
           </article>
