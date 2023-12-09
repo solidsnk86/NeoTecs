@@ -4,7 +4,7 @@
 
 Explore our comprehensive web documentation designed to guide you through the process of programming and configuring wireless access points from various leading brands. Whether you are a seasoned developer or just getting started, our documentation offers step-by-step instructions, code examples, and valuable insights to streamline your experience. 
 
-[!NOTE] Tools and frames which i use in this project:
+> [!NOTE] Tools and frames which i use in this project:
 
 [![Built with Tailwind CSS](https://img.shields.io/badge/Built_with-Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Powered by Next.js](https://img.shields.io/badge/Powered_by-Next.js-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
