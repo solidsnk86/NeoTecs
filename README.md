@@ -28,7 +28,13 @@ Once you've made your changes, you can submit a pull request for us to review yo
 
 ![GitHub Stars](https://img.shields.io/github/stars/solidsnk86/NeoTecs.svg?style=social)
 
-Neotecs website - to use these docs offline
+Neotecs website - to use these docs offline you must to install all npm modules:
+
+```bash
+npm install @latest
+# or
+yarn install
+```
 
 ## Next.js
 
