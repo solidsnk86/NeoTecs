@@ -4,7 +4,8 @@
 
 Explore our comprehensive web documentation designed to guide you through the process of programming and configuring wireless access points from various leading brands. Whether you are a seasoned developer or just getting started, our documentation offers step-by-step instructions, code examples, and valuable insights to streamline your experience. 
 
-**🔧 Tools and frames which i use in this project:**
+> [!important]
+> Tools and frames which i use in this project:
 
 [![Built with Tailwind CSS](https://img.shields.io/badge/Built_with-Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Powered by Next.js](https://img.shields.io/badge/Powered_by-Next.js-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
@@ -27,7 +28,13 @@ Once you've made your changes, you can submit a pull request for us to review yo
 
 ![GitHub Stars](https://img.shields.io/github/stars/solidsnk86/NeoTecs.svg?style=social)
 
-Neotecs website - to use these docs offline
+Neotecs website - to use these docs offline you must to install all npm modules:
+
+```bash
+npm install @latest
+# or
+yarn install
+```
 
 ## Next.js
 
@@ -47,7 +54,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) I have created this REST API to be used in an example for JavaScript, allowing access to currency exchange functionality, can be accessed on [https://neotecs.netlify.app/api/currency](https://neotecs.netlify.app/api/currency). This endpoint can be edited in `pages/api/currency.js`. If you are intrested how i use this REST API, i leave the example in this link:<br>
+> [!Note]
+> [API_Routes.](https://nextjs.org/docs/api-routes/introduction) I have created this REST API to be used in an example for JavaScript, allowing access to currency exchange functionality, can be accessed on [https://neotecs.netlify.app/api/currency](https://neotecs.netlify.app/api/currency). This endpoint can be edited in `pages/api/currency.js`. If you are intrested how i use this REST API, i leave the example in this link 👇:<br>
+
 
 [![Currency Exchange](https://img.shields.io/badge/Currency-Exchange-gold)](https://neotecs.netlify.app/docs/javascript#convertir-divisas)
 
