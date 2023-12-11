@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import { OpenInNew } from '@mui/icons-material';
-import { Info, InfoIcon } from 'lucide-react';
+import { AlertTriangle, InfoIcon } from 'lucide-react';
 
 export default function SqlDocs() {
   const SqlTitle = ({ Tag = 'h1', children }) => {
@@ -921,7 +921,7 @@ export default function SqlDocs() {
             </p>
             <div className="border-l-4 border-red-500 px-1 bg-opacity-[0.6] p-3 pl-5 text-red-500 font-semibold">
               <p className="font-semibold text-lg">
-                <Info className="w-5 inline mb-1" /> Importante
+                <AlertTriangle className="w-5 inline mb-1" /> Importante
               </p>
               <p>
                 Las inyecciones SQL pueden ocurrir en campos de inicio de sesión
@@ -984,8 +984,75 @@ export default function SqlDocs() {
               proporcionar una contraseña válida. La Inyección SQL es un
               problema de seguridad grave, y es crucial tomar medidas para
               prevenirlo, como validar y sanitizar la entrada del usuario, y
-              utilizar consultas preparadas o procedimientos almacenados.
+              utilizar consultas preparadas o procedimientos almacenados. Debido
+              a que en esta consulta se ha comentado la verificación de la
+              contraseña, el hacker puede iniciar sesión en la cuenta de Neo sin
+              conocer su contraseña. Para resolver este problema, podemos
+              utilizar:
             </p>
+            <ol>
+              <li>
+                Caracteres de escape para asegurarnos de que SQL trate la
+                entrada como texto plano y no como código SQL.
+              </li>
+              <li>
+                Una capa de abstracción sobre SQL que incluya su propio conjunto
+                de caracteres de escape, para que no tengamos que escribir
+                consultas SQL nosotros mismos.
+              </li>
+              <p>
+                La otra vulnerabilidad principal cuando se trata de SQL se
+                conoce como una Condición de Carrera,
+                <Link
+                  href="https://www.w3schools.com/sql/sql_injection.asp"
+                  className="text-[#00BCF2] mx-1"
+                >
+                  Race Condition
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                </Link>
+                .
+              </p>
+              <p>
+                Una condición de carrera es una situación que ocurre cuando
+                múltiples consultas a una base de datos se realizan
+                simultáneamente. Cuando no se manejan adecuadamente, pueden
+                surgir problemas en los momentos precisos en que las bases de
+                datos se actualizan. Por ejemplo, supongamos que tengo $150 en
+                mi cuenta bancaria. Una condición de carrera podría ocurrir si
+                inicio sesión en mi cuenta bancaria tanto en mi teléfono como en
+                mi computadora e intento retirar $100 en cada dispositivo. Si
+                los desarrolladores de software del banco no manejan
+                correctamente las condiciones de carrera, podría ser posible
+                retirar $200 de una cuenta que solo tiene $150.
+              </p>
+              <p>
+                Una solución potencial para este problema sería bloquear la base
+                de datos. No se permitiría ninguna otra interacción con la base
+                de datos hasta que se haya completado una transacción. En el
+                ejemplo del banco, después de hacer clic en la página "Realizar
+                un retiro" en mi computadora, el banco podría no permitirme
+                acceder a esa página en mi teléfono.
+              </p>
+            </ol>
+          </article>
+          <SectionTitle title="Modelos Django" />
+          <article>
+            <p>
+              Los modelos de Django son un nivel de abstracción sobre SQL que
+              nos permite trabajar con bases de datos utilizando clases y
+              objetos de Python en lugar de consultas SQL directas.
+            </p>
+            <p>
+              Comencemos a usar modelos creando un proyecto de Django para
+              nuestra aerolínea y creando una aplicación dentro de ese proyecto.
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              django-admin startproject airline
+              cd airline
+              python manage.py startapp flights
+              `
+            }</Pre>
           </article>
           <ShareButton setTitle={SqlDocs.title} />
         </div>
