@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import { OpenInNew } from '@mui/icons-material';
-import { QuoteIcon } from 'lucide-react';
+import { Info, InfoIcon } from 'lucide-react';
 
 export default function SqlDocs() {
   const SqlTitle = ({ Tag = 'h1', children }) => {
@@ -681,10 +681,15 @@ export default function SqlDocs() {
           <span id="otras-clausulas" />
           <SectionTitle title="Otras Cláusulas" />
           <article>
-            <p className="flex justify-center mx-auto border bg-[#473741] p-2 rounded-xl border-red-500 text-zinc-100">
-              Hay varias cláusulas adicionales que podemos usar para controlar
-              las consultas que nos devuelven resultados:
-            </p>
+            <div className="border-l-4 border-sky-700 px-1 bg-opacity-[0.6] p-3 pl-5 text-sky-700 font-semibold">
+              <p className="font-semibold text-lg">
+                <InfoIcon className="w-5 inline mb-1" /> Nota
+              </p>
+              <p>
+                Hay varias cláusulas adicionales que podemos usar para controlar
+                las consultas que nos devuelven resultados:
+              </p>
+            </div>
             <ul className="list-css-span">
               <li>
                 <span>LIMIT</span>: Limita el número de resultados devueltos por
@@ -703,6 +708,284 @@ export default function SqlDocs() {
                 basadas en el número de resultados.
               </li>
             </ul>
+          </article>
+          <SectionTitle title="Unir tablas" />
+          <article>
+            <p>
+              Hasta ahora, solo hemos estado trabajando con una tabla a la vez,
+              pero en la práctica, muchas bases de datos están pobladas por
+              varias tablas que se relacionan de alguna manera. En nuestro
+              ejemplo de vuelos, imaginemos que también queremos agregar un
+              código de aeropuerto junto con la ciudad. De la manera en que está
+              actualmente configurada nuestra tabla, tendríamos que agregar dos
+              columnas más para cada fila. También estaríamos repitiendo
+              información, ya que tendríamos que escribir en varios lugares que
+              la ciudad X está asociada con el código Y.
+            </p>
+            <p>
+              Una forma de resolver este problema es decidir tener una tabla que
+              lleve un registro de los vuelos y luego otra tabla que lleve un
+              registro de los aeropuertos. La segunda tabla podría tener un
+              aspecto así:
+            </p>
+            <div className="images-client">
+              <img
+                src="/images/airports.png"
+                alt="Imagen Tabla de Aeropuertos."
+              />
+            </div>
+            <p className="list-css-span">
+              Ahora tenemos una tabla que relaciona códigos y ciudades. En lugar
+              de almacenar todo el nombre de la ciudad en nuestra tabla de
+              vuelos, ahorraríamos espacio de almacenamiento si pudiéramos
+              simplemente guardar el<span>id</span>de ese aeropuerto. Por lo
+              tanto, deberíamos reescribir la tabla de vuelos en consecuencia.
+              Dado que estamos utilizando la columna id de la tabla de
+              aeropuertos para poblar<span>origin_id</span>y
+              <span>destination_id</span>, llamamos a esos valores
+              <Link
+                href="https://www.w3schools.com/sql/sql_foreignkey.asp"
+                className="text-[#00BCF2] mx-1"
+              >
+                Claves Foráneas
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              .
+            </p>
+            <div className="images-client">
+              <img
+                src="/images/flights2.png"
+                alt="Imagen Tabla de Aeropuertos."
+              />
+            </div>
+            <p>
+              Además de los vuelos y los aeropuertos, una aerolínea podría
+              querer almacenar datos sobre sus pasajeros, como en qué vuelo
+              estará cada pasajero. Utilizando la potencia de las bases de datos
+              relacionales, podemos agregar otra tabla que almacene nombres y
+              apellidos, y una clave foránea que represente el vuelo en el que
+              se encuentran.
+            </p>
+            <div className="images-client">
+              <img
+                src="/images/simple_pass.png"
+                alt="Imagen Tabla de Aeropuertos."
+              />
+            </div>
+            <p className="list-css-span">
+              Podemos hacerlo aún mejor, ya que una misma persona puede estar en
+              más de un vuelo. Para tener en cuenta esto, podemos crear una
+              tabla de<span>personas</span>que almacene nombres y apellidos, y
+              una tabla de
+              <span>pasajeros</span>que vincule personas con vuelos.
+            </p>
+            <b>Personas:</b>
+            <div className="images-client">
+              <img
+                src="/images/people.png"
+                alt="Imagen Tabla de Aeropuertos."
+              />
+            </div>
+            <b>Pasajeros:</b>
+            <div className="images-client">
+              <img
+                src="/images/passengers.png"
+                alt="Imagen Tabla de Aeropuertos."
+              />
+            </div>
+            <p className="list-css-span">
+              Debido a que en este caso una sola persona puede estar en muchos
+              vuelos y un solo vuelo puede tener muchas personas, llamamos a la
+              relación entre<span>vuelos</span>y<span>personas</span>una
+              relación de Muchos a Muchos. La tabla de<span>pasajeros</span>que
+              conecta ambas se conoce como una tabla de asociación.
+            </p>
+          </article>
+          <SectionTitle title="Unir Query" />
+          <article>
+            <p>
+              Aunque ahora almacenamos nuestros datos de manera más eficiente,
+              parece que puede ser más difícil realizar consultas en nuestros
+              datos. Afortunadamente, SQL cuenta con una consulta
+              <Link
+                href="https://www.w3schools.com/sql/sql_join.asp"
+                className="text-[#00BCF2] mx-1"
+              >
+                JOIN
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              donde podemos combinar dos tablas con el fin de realizar otra
+              consulta.
+            </p>
+            <p className="list-css-span">
+              Por ejemplo, digamos que queremos encontrar el origen, destino y
+              nombre de cada viaje que un pasajero está tomando. También, para
+              simplificar en esta tabla, vamos a estar utilizando la tabla de
+              <span>pasajeros</span>no optimizada que incluye el id del vuelo,
+              el nombre y apellido. La primera parte de esta consulta se ve
+              bastante familiar:
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              SELECT first, origin, destination
+              FROM ...
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Pero nos encontramos con un problema aquí porque el nombre
+              <span>first</span>se almacena en la tabla de pasajeros, mientras
+              que el origen<span>origin</span>y el destino
+              <span>destination</span>se almacenan en la tabla de vuelos.
+              Resolvemos esto uniendo las dos tablas utilizando el hecho de que
+              el<span>flight_id</span>en la tabla de pasajeros corresponde al
+              <span>id</span>en la tabla de vuelos:
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              SELECT first, origin, destination
+              FROM flights JOIN passengers
+              ON passengers.flight_id = flights.id;
+              `
+            }</Pre>
+            <div className="images-client">
+              <img src="/images/join.png" alt="Imagen Tabla de Aeropuertos." />
+            </div>
+            <p>
+              Acabamos de utilizar algo llamado
+              <Link
+                href="https://www.w3schools.com/sql/sql_join_inner.asp"
+                className="text-[#00BCF2] mx-1"
+              >
+                INNER JOIN
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              , lo que significa que estamos ignorando las filas que no tienen
+              coincidencias entre las tablas. Pero existen otros tipos de joins,
+              incluyendo
+              <Link
+                href="https://www.w3schools.com/sql/sql_join_left.asp"
+                className="text-[#00BCF2] mx-1"
+              >
+                LEFT JOINs
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              ,
+              <Link
+                href="https://www.w3schools.com/sql/sql_join_right.asp"
+                className="text-[#00BCF2] mx-1"
+              >
+                RIGHT JOINs
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              y
+              <Link
+                href="https://www.w3schools.com/sql/sql_join_full.asp"
+                className="text-[#00BCF2] mx-1"
+              >
+                FULL OUTER JOINs
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              , que no discutiremos en detalle aquí.
+            </p>
+          </article>
+          <SectionTitle title="Indexado" />
+          <article>
+            <p>
+              Una forma de hacer que nuestras consultas sean más eficientes al
+              trabajar con tablas grandes es crear un índice similar al índice
+              que podrías ver en la parte posterior de un libro de texto. Por
+              ejemplo, si sabemos que a menudo buscaremos pasajeros por su
+              apellido, podríamos crear un índice desde el apellido hasta el id
+              utilizando el comando:
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              CREATE INDEX name_index ON passengers (last);
+              `
+            }</Pre>
+          </article>
+          <SectionTitle title="Vulnerabilidades SQL" />
+          <article>
+            <p>
+              Ahora que conocemos los conceptos básicos de cómo utilizar SQL
+              para trabajar con datos, es importante señalar las principales
+              vulnerabilidades asociadas con el uso de SQL. Comenzaremos con la
+              <Link
+                href="https://www.w3schools.com/sql/sql_injection.asp"
+                className="text-[#00BCF2] mx-1"
+              >
+                Inyección SQL
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              .
+            </p>
+            <div className="border-l-4 border-red-500 px-1 bg-opacity-[0.6] p-3 pl-5 text-red-500 font-semibold">
+              <p className="font-semibold text-lg">
+                <Info className="w-5 inline mb-1" /> Importante
+              </p>
+              <p>
+                Las inyecciones SQL pueden ocurrir en campos de inicio de sesión
+                y en cualquier formulario o entrada de datos que interactúe con
+                una base de datos a través de consultas SQL. Los campos de
+                inicio de sesión son un objetivo común para este tipo de
+                ataques. Es esencial implementar prácticas de seguridad
+                adecuadas, como la validación de la entrada del usuario y el uso
+                de consultas parametrizadas, para prevenir este tipo de ataques.
+                Ejemplo:
+              </p>
+            </div>
+            <pre className="text-green-700 font-mono">
+              Usuario: ' OR '1'='1'; -- Contraseña: (dejar en blanco)
+            </pre>
+            <p>
+              Si el sitio no está protegido contra inyecciones SQL, esta entrada
+              podría manipular la consulta SQL y permitir al atacante eludir la
+              autenticación y acceder a información no autorizada.
+            </p>
+            <p>
+              Cuando un usuario malintencionado ingresa código SQL como entrada
+              en un sitio para eludir las medidas de seguridad del sitio. Por
+              ejemplo, supongamos que tenemos una tabla que almacena nombres de
+              usuario y contraseñas, y luego un formulario de inicio de sesión
+              en la página principal del sitio. Podríamos buscar al usuario
+              utilizando una consulta como:
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              SELECT * FROM users
+              WHERE username = username AND password = password;
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Un usuario llamado <b>Neo</b> podría ir a este sitio y escribir
+              <span>"Neo"</span>como nombre de usuario y<span>"12345"</span>como
+              contraseña, en cuyo caso la consulta se vería así:
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              SELECT * FROM users
+              WHERE username = "neo" AND password = "12345";
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Un hacker, por otro lado, podría escribir "neo"<span>--</span>como
+              nombre de usuario y nada como contraseña. Resulta que
+              <span>--</span>representa un comentario en SQL, lo que significa
+              que la consulta se vería así:
+            </p>
+            <Pre lang="sql">{
+              /*sql */ `
+              SELECT * FROM users
+              WHERE username = "neo"--" AND password = "12345";
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Esto podría permitir al hacker acceder a información sin
+              proporcionar una contraseña válida. La Inyección SQL es un
+              problema de seguridad grave, y es crucial tomar medidas para
+              prevenirlo, como validar y sanitizar la entrada del usuario, y
+              utilizar consultas preparadas o procedimientos almacenados.
+            </p>
           </article>
           <ShareButton setTitle={SqlDocs.title} />
         </div>

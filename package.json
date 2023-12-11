@@ -17,6 +17,7 @@
     "@mui/styled-engine-sc": "^6.0.0-alpha.3",
     "@supabase/auth-helpers-nextjs": "^0.8.1",
     "@supabase/supabase-js": "^2.37.0",
+    "@tabler/icons-react": "^2.43.0",
     "@tailwindcss/typography": "^0.5.9",
     "@types/firebase": "^3.2.1",
     "@types/react": "^18.2.23",
