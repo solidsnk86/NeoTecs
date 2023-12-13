@@ -14,7 +14,7 @@ export default function CurrencyConverter() {
 
       if (response.ok) {
         const data = await response.json();
-        const rate = data.rates[currency.toUpperCase()];
+        const rate = data.rate[currency.toUpperCase()];
 
         if (rate !== undefined) {
           setResult(`1 USD es igual a $ ${rate.toFixed(2)} ${currency}.`);
