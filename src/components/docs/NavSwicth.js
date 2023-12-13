@@ -45,6 +45,10 @@ export const NavSwitch = ({ inline }) => {
       href: '',
       title: 'Escalabilidad',
     },
+    {
+      href: '/docs/scraping',
+      title: 'Web Scraping',
+    },
   ];
   const isActive = (link) => link.href === router.asPath;
   return (
