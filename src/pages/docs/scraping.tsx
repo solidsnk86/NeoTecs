@@ -21,7 +21,7 @@ export default function Scraping() {
     return (
         <main className=" text-text-primary flex flex-col justify-center m-auto p-10 xl:w-1/2">
             <ArrowLeftIcon
-                className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all"
+                className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all left-6 top-6 fixed"
                 onClick={() => window.open('/docs/program')}
             />
             <h1 className="flex justify-center mx-auto text-5xl underline mb-3">
@@ -49,11 +49,11 @@ export default function Scraping() {
                 Raspar!!
             </button>
             {titles.map((title, index) => (
-                <article className="text-zinc-100 space-y-3 border-zinc-300 border-[1px] shadow-md rounded shadow-outline mt-6 p-6 dark:!shadow dark:border-zinc-800">
+                <article className="text-zinc-100 space-y-3 border-zinc-300 border-[1px] shadow-md rounded shadow-outline mt-6 p-6 dark:!shadow dark:border-zinc-800 overflow-x-auto">
                     <h1 key={index} className="text-sky-500 underline text-lg">
                         {title}
                     </h1>
-                    <p className="text-lime-400 p-3 text-sm overflow-x-auto">
+                    <p className="text-lime-400 p-3 text-sm">
                         {paragraphs}
                     </p>
                     <li className=" text-orange-400">{items}</li>
