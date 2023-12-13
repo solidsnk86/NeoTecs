@@ -55,7 +55,7 @@ export const Footer = () => {
         />
       </span>
       <article className="max-w-screen-xl mx-auto px-4 md:px-8">
-        <h3 className="text-center ">Compartir en las redes:</h3>
+        <h3 className="text-center font-semibold">Compartir en las redes:</h3>
 
         <div className="flex items-center justify-center gap-x-6 text-2xl mt-3 mb-9">
           <FacebookIcon

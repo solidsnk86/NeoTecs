@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { ArrowLeftCircleIcon } from 'lucide-react'
+import { ArrowLeftIcon } from 'lucide-react';
 
 export default function Scraping() {
     const [titles, setTitles] = useState([]);
@@ -18,22 +18,26 @@ export default function Scraping() {
 
     return (
         <main className=" text-text-primary flex flex-col justify-center m-auto h-screen p-10 xl:w-1/2">
-            <ArrowLeftCircleIcon className='w-6 hover:opacity-70 cursor-pointer'
+            <ArrowLeftIcon
+                className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all"
                 onClick={() => window.open('/docs/program')}
             />
             <h1 className="flex justify-center mx-auto text-5xl underline mb-3">
                 Web Scraping
             </h1>
             <p className="border-l-4 border-lime-400 pl-4 m-3">
-                En este apartado vamos a obtener el web scraping (Una raspadita!). En
-                este ejemplo estoy raspando mi portfolio web. Recuerda usar
-                con precaución ésta técnica de scraping!
+                En este segmento, exploraremos el fascinante mundo del web scraping, una
+                técnica que nos permite extraer información de páginas web. En este
+                ejemplo, llevaré a cabo el scraping en mi propio portafolio web. Es
+                importante utilizar esta técnica con responsabilidad y respeto a las
+                políticas de uso de los sitios web objetivo.
             </p>
-            <hr className='border-zinc-800 my-6' />
-            <p className='list-css-span'>
-                Aquí se obtendrá el resultado del web-scraping, en este caso hemos
-                llamado a que nuestra aplicación python obtenga todos los elementos de
-                títulos<span>h1</span>, los elementos de párrafo<span>p</span>:
+            <hr className="border-zinc-800 my-6" />
+            <p className="list-css-span">
+                Aquí presentamos los resultados obtenidos mediante web scraping. En este
+                caso, hemos instruido a nuestra aplicación Python para recopilar todos
+                los elementos de tipo<span>h1</span><b>encabezados</b> y los elementos de
+                tipo<span>p</span><b>párrafos</b>:
             </p>
             <button
                 className="justify-center mx-auto text-button-variant border border-zinc-700 rounded p-2 w-fit my-3 hover:bg-zinc-800 hover:text-zinc-100"
