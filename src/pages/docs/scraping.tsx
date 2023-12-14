@@ -36,7 +36,9 @@ export default function Scraping() {
             <Link
                 href="https://github.com/solidsnk86/neo-scraper/blob/master/README.md"
                 className="mx-1 text-text-strong font-bold underline"
-            >neo-scraper</Link>
+            >
+                neo-scraper
+            </Link>
             <p className="border-l-4 border-sky-400/50 pl-4 m-3 font-semibold">
                 En este segmento, exploraremos el fascinante mundo del web scraping, una
                 técnica que nos permite extraer información de páginas web. En este
@@ -74,8 +76,8 @@ export default function Scraping() {
                         </pre>
                     </ul>
                     <li>Una vez instalado todo vamos a escribir el siguiente código:</li>
-                    <Pre lang="python">{
-            /* python*/ `
+                    <pre lang="python" className="bg-[#1E1E1E] text-zinc-100 p-2 overflow-x-auto overflow-hidden">{
+            /*python*/ `
                     from flask import Flask, jsonify
                     from flask_cors import CORS
                     import requests
@@ -102,7 +104,7 @@ export default function Scraping() {
                     if __name__ == '__main__':
                         app.run(debug=True)
                     `
-                    }</Pre>
+                    }</pre>
                 </ol>
                 <hr className="border-zinc-800 my-6" />
                 <p className="list-css-span">
