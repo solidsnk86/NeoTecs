@@ -53,7 +53,7 @@ export default function Scraping() {
                         documentación de algún repositorio en GitHub de MarkDown de algún
                         REAMDE.md con algunas de sus props y plugins para dar estilos, sigan este link:
                     </p>
-                    <Link href="" className="text-red-500 dark:text-lime-500 underline">
+                    <Link href="/docs/markdown-render" className="text-red-500 dark:text-lime-500 underline">
                         React Markdown Render
                         <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
                     </Link>
