@@ -3,7 +3,6 @@ import { Github, MessageCircleIcon } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { useIsomorphicLayoutEffect } from './hooks/useIsomorphicLayoutEffect';
 import { NeotecsLogo } from './NeotecsLogo';
-import { Feedback } from '@mui/icons-material';
 
 function updateColorTheme() {
   if (
@@ -75,11 +74,11 @@ export const Nav = ({ className }) => {
         </div>
         <aside className="flex space-x-3">
           <Link
-            href="/docs/feedback"
+            href="/docs/FeedbackForm"
             className="flex items-center space-x-2 mb-3 hover:opacity-[.6] hover:transition-all"
           >
             <span className=" px-2 py-1 rounded-full bg-button-variant font-semibold text-sm text-text-variant">
-              <MessageCircleIcon className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
+              <Feedback className="cursor-pointer w-4 h-4 mx-1" />
               Feedback
             </span>
           </Link>
