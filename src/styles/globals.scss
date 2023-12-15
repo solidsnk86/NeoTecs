@@ -351,6 +351,17 @@ pre {
   margin-left: 20px;
 }
 
+.label-feedback {
+  display: grid;
+}
+
+.label-feedback input,
+textarea {
+  color: #333;
+  border: solid 1px var(--color-outline);
+  border-radius: 3px;
+}
+
 @import 'atropos/scss';
 @import './home-header.scss';
 @import './prose.scss';

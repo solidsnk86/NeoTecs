@@ -60,6 +60,7 @@ export default function Scraping() {
                 </div>
                 <hr className="border-zinc-800 my-10" />
                 <MarkdownRenderer />
+                <hr className="border-zinc-800 my-10" />
                 <div className="border-l-4 border-red-500 px-1 bg-opacity-[0.6] p-3 pl-5 text-red-500 font-semibold">
                     <p className="font-semibold text-lg">
                         <AlertTriangle className="w-5 inline mb-1" /> Importante

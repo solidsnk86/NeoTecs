@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Github } from 'lucide-react';
+import { Github, MessageCircleIcon } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { useIsomorphicLayoutEffect } from './hooks/useIsomorphicLayoutEffect';
 import { NeotecsLogo } from './NeotecsLogo';
@@ -75,11 +75,11 @@ export const Nav = ({ className }) => {
         </div>
         <aside className="flex space-x-3">
           <Link
-            href="/docs/FeedbackForm"
+            href="/docs/feedback"
             className="flex items-center space-x-2 mb-3 hover:opacity-[.6] hover:transition-all"
           >
             <span className=" px-2 py-1 rounded-full bg-button-variant font-semibold text-sm text-text-variant">
-              <Feedback className="cursor-pointer w-4 h-4 mx-1" />
+              <MessageCircleIcon className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
               Feedback
             </span>
           </Link>
@@ -88,9 +88,9 @@ export const Nav = ({ className }) => {
             className="flex items-center space-x-2 mb-3 hover:opacity-[.6] hover:transition-all"
           >
             <span className=" px-2 py-1 rounded-full bg-button-variant font-semibold text-sm text-text-variant">
+              <Github className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
               Sígueme
             </span>
-            <Github className="cursor-pointer w-7 h-7" />
           </Link>
         </aside>
       </div>
