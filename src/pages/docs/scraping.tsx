@@ -29,10 +29,10 @@ export default function Scraping() {
             <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-30" />
             <main className=" text-text-primary flex flex-col justify-center m-auto p-10 xl:w-10/12">
                 <ArrowLeftIcon
-                    className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-6 xl:top-14 top-10 left-2 fixed"
+                    className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-6 xl:top-14 top-10 left-2 fixed mt-3"
                     onClick={() => window.open('/docs/program')}
                 />
-                <h1 className="flex justify-center mx-auto text-5xl underline mb-3">
+                <h1 className="flex justify-center mx-auto text-5xl underline mb-3 mt-10">
                     Web Scraping
                 </h1>
                 <p className="border-l-4 border-sky-400/50 pl-4 m-3 font-semibold">
