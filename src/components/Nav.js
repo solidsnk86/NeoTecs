@@ -77,8 +77,8 @@ export const Nav = ({ className }) => {
             href="/docs/FeedbackForm"
             className="flex items-center space-x-2 mb-3 hover:opacity-[.6] hover:transition-all"
           >
-            <span className=" px-2 py-1 rounded-full bg-button-variant font-semibold text-sm text-text-variant">
-              <Feedback className="cursor-pointer w-4 h-4 mx-1" />
+            <span className=" px-2 py-1 rounded-full bg-button-variant font-semibold xl:text-sm text-xs text-text-variant">
+              <MessageCircleIcon className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
               Feedback
             </span>
           </Link>
@@ -86,7 +86,7 @@ export const Nav = ({ className }) => {
             href="https://github.com/solidsnk86"
             className="flex items-center space-x-2 mb-3 hover:opacity-[.6] hover:transition-all"
           >
-            <span className=" px-2 py-1 rounded-full bg-button-variant font-semibold text-sm text-text-variant">
+            <span className=" px-2 py-1 rounded-full bg-button-variant font-semibold xl:text-sm text-xs text-text-variant">
               <Github className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
               Sígueme
             </span>
