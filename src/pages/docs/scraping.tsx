@@ -3,7 +3,7 @@ import axios from 'axios';
 import { ArrowLeftIcon } from 'lucide-react';
 import Link from 'next/link';
 import MarkdownRenderer from '../../components/MarkDownRender';
-
+import { AlertTriangle } from 'lucide-react'
 
 export default function Scraping() {
     const [titles, setTitles] = useState([]);
@@ -38,14 +38,25 @@ export default function Scraping() {
                 políticas de uso de los sitios web objetivo.
             </p>
             <p>
-                A continuación hago un fetch de mi MarkDown en mi repositorio de
-                GitHub que está en inglés pero no hay navegador que no lo traduzca...
+                A continuación hago un fetch de mi MarkDown en mi repositorio de GitHub
+                que está en inglés pero no hay navegador que no lo traduzca...
             </p>
-            <Link href="" className='text-text-strong underline'>
-                Si quieres saber cómo se puede lograr hacer un fetch de tu documentación de MarkDown de algún REAMDE.md
+            <Link href="" className="text-text-strong underline">
+                Si quieres saber cómo se puede lograr hacer un fetch de tu documentación
+                de MarkDown de algún REAMDE.md
             </Link>
-            <hr className='border-zinc-800 my-10' />
+            <hr className="border-zinc-800 my-10" />
             <MarkdownRenderer />
+            <div className="border-l-4 border-red-500 px-1 bg-opacity-[0.6] p-3 pl-5 text-red-500 font-semibold">
+                <p className="font-semibold text-lg">
+                    <AlertTriangle className="w-5 inline mb-1" /> Importante
+                </p>
+                <p>
+                    Para tener en cuenta! pueden ver el resultado solamente teniendo
+                    levantado el server por defecto de Flask, que sería algo así:
+                    <span className='bg-zinc-700 rounded p-[2px] mx-1'>http://127.0.0.1:5000/api/scrape</span>
+                </p>
+            </div>
             <button
                 className="justify-center mx-auto bg-button-variant text-text-variant font-semibold rounded p-2 w-fit my-3 hover:scale-105 shadow-gray-700"
                 onClick={handleScrape}
