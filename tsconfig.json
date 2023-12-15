@@ -19,7 +19,8 @@
     "**/*.tsx",
     "src/pages/api/currency.js",
     "src/pages/api/currency.js",
-    "src/pages/api/currency.js"
+    "src/pages/api/currency.js",
+    "src/pages/docs/scraping.js"
   ],
   "exclude": ["node_modules"]
 }

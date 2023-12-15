@@ -339,6 +339,20 @@ pre {
   background-color: #006e24;
 }
 
+.code-block {
+  margin: 20px 0;
+  border-radius: 5px;
+  background-color: #303030;
+  overflow-x: auto;
+  text-rendering: optimizeLegibility;
+}
+
+.custom-li {
+  list-style: disc;
+  margin-left: 20px;
+}
+
 @import 'atropos/scss';
 @import './home-header.scss';
 @import './prose.scss';
+@import 'github-markdown-css/github-markdown.css';
