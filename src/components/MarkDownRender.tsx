@@ -5,7 +5,7 @@ import rehypeRaw from 'rehype-raw';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import 'github-markdown-css/github-markdown.css';
-import 'highlight.js/styles/dark.css';
+import 'highlight.js/styles/github-dark.css';
 
 const MarkdownRenderer = () => {
     const [markdownContent, setMarkdownContent] = useState('');
