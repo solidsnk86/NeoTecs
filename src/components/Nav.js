@@ -74,7 +74,7 @@ export const Nav = ({ className }) => {
         </div>
         <aside className="flex space-x-3">
           <Link
-            href="/docs/FeedbackForm"
+            href="/docs/feedback"
             className="flex items-center space-x-2 mb-3 hover:opacity-[.6] hover:transition-all"
           >
             <span className=" px-2 py-1 rounded-full bg-button-variant font-semibold xl:text-sm text-xs text-text-variant">
