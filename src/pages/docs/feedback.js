@@ -45,7 +45,7 @@ export default function feedBack() {
           todas tus dudas y preocupaciones. Estoy aquí para ayudarte y mejorar
           la experiencia en línea."
         </p>
-        <div className="border border-zinc-200 p-5 rounded space-y-3 shadow-sm shadow-slate-500">
+        <div className="border border-zinc-200 dark:border-zinc-800 p-5 rounded space-y-3 shadow-sm shadow-slate-500">
           <label className="label-feedback">
             Nombre:
             <input
@@ -74,7 +74,7 @@ export default function feedBack() {
           </label>
 
           <button
-            className="flex justify-center mx-auto px-2 py-1 outline-4 outline-offset-2 outline-lime-400 rounded-md feedback-button"
+            className="flex justify-center mx-auto px-2 py-1 outline-4 outline-offset-2 outline-lime-400 rounded-md feedback-button shadow-sm shadow-zinc-400 dark:!shadow"
             type="submit"
           >
             Enviar
