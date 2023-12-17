@@ -36,7 +36,7 @@ export default function Scraping() {
                     Web Scraping
                 </h1>
                 <p className="border-l-4 border-sky-400/50 pl-4 m-3 font-semibold">
-                    En este segmento, exploraremos el fascinante mundo del web scraping,
+                    En este segmento, exploraremos el web scraping,
                     una técnica que nos permite extraer información de páginas web. En
                     este ejemplo, llevaré a cabo el scraping en mi propio portafolio web.
                     Es importante utilizar esta técnica con responsabilidad y respeto a
