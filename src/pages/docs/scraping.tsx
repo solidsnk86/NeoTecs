@@ -46,7 +46,7 @@ export default function Scraping() {
                     <p>
                         A continuación hago un fetch de mi documentación MarkDown en mi
                         repositorio de GitHub que explica el procedimiento y está en inglés
-                        pero no hay navegador que no lo traduzca...🤔
+                        pero no hay navegador que no lo traduzca.
                     </p>
                     <p>
                         Si quieres saber cómo se puede lograr hacer un fetch de tu
