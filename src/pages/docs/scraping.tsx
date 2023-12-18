@@ -36,24 +36,28 @@ export default function Scraping() {
                     Web Scraping
                 </h1>
                 <p className="border-l-4 border-[tomato] pl-4 m-3 font-semibold">
-                    En este segmento, exploraremos el web scraping,
-                    una técnica que nos permite extraer información de páginas web. En
-                    este ejemplo, llevaré a cabo el scraping en mi propio portafolio web.
-                    Es importante utilizar esta técnica con responsabilidad y respeto a
-                    las políticas de uso de los sitios web objetivo.
+                    En este segmento, exploraremos el web scraping, una técnica que nos
+                    permite extraer información de páginas web. En este ejemplo, llevaré a
+                    cabo el scraping en mi propio portafolio web. Es importante utilizar
+                    esta técnica con responsabilidad y respeto a las políticas de uso de
+                    los sitios web objetivo.
                 </p>
-                <div className='bg-[#F7F9F9] dark:bg-[#16181C] text-text-primary p-3 rounded border-zinc-200 dark:border-zinc-800 border'>
+                <div className="bg-[#F7F9F9] dark:bg-[#16181C] text-text-primary p-3 rounded border-zinc-200 dark:border-zinc-800 border">
                     <p>
                         A continuación hago un fetch de mi documentación MarkDown en mi
-                        repositorio de GitHub que explica el procedimiento y está en inglés
-                        pero no hay navegador que no lo traduzca.
+                        repositorio de GitHub que explica el procedimiento y lo explico en
+                        inglés, el cual lo pueden traducir.
                     </p>
                     <p>
                         Si quieres saber cómo se puede lograr hacer un fetch de tu
-                        documentación de algún repositorio en GitHub de MarkDown de algún
-                        REAMDE.md con algunas de sus props y plugins para dar estilos, sigan este link:
+                        documentación MarkDown en GitHub de algún repositorio con un
+                        REAMDE.md con algunas de sus props y plugins para dar estilos, sigan
+                        este link:
                     </p>
-                    <Link href="/docs/markdown-render" className="text-[tomato] underline">
+                    <Link
+                        href="/docs/markdown-render"
+                        className="text-[tomato] underline"
+                    >
                         React Markdown Render
                         <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
                     </Link>
