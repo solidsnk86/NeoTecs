@@ -42,7 +42,7 @@ export default function Scraping() {
                     Es importante utilizar esta técnica con responsabilidad y respeto a
                     las políticas de uso de los sitios web objetivo.
                 </p>
-                <div className='bg-orange-400/70 p-3 rounded border-orange-400 border'>
+                <div className='bg-[#0D1117] text-zinc-100 p-3 rounded border-zinc-400 border'>
                     <p>
                         A continuación hago un fetch de mi documentación MarkDown en mi
                         repositorio de GitHub que explica el procedimiento y está en inglés
@@ -62,8 +62,8 @@ export default function Scraping() {
                 <MarkdownRenderer />
                 <hr className="border-zinc-800 my-10" />
                 <div className="border-l-4 border-red-500 px-1 bg-opacity-[0.6] p-3 pl-5 text-red-500 font-semibold">
-                    <p className="font-semibold text-lg">
-                        <AlertTriangle className="w-5 inline mb-1" /> Importante
+                    <p className="font-bold text-xl">
+                        <AlertTriangle className="w-6 inline mb-1" /> Importante
                     </p>
                     <p>
                         Para tener en cuenta! pueden ver el resultado solamente teniendo

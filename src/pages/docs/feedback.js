@@ -39,13 +39,13 @@ export default function feedBack() {
         <h1 className="flex justify-center mx-auto text-6xl text-transparent relative bottom-[2px] [-webkit-text-stroke-width:4px] [-webkit-text-stroke-color:var(--color-on-surface)]">
           Feedback
         </h1>
-        <p className="bg-orange-400/70 border-orange-400/80 border rounded p-3 text-xs xl:text-sm shadow-sm shadow-orange-400">
+        <p className="bg-[#16181C] border-zinc-400/80 border rounded p-3 text-zinc-100 text-xs xl:text-sm shadow-sm dark:shadow-slate-500">
           "¿Podrías proporcionarme tus comentarios sobre la página web? ¿Hiciste
           alguna observación de errores o inconvenientes? No dudes en compartir
           todas tus dudas y preocupaciones. Estoy aquí para ayudarte y mejorar
           la experiencia en línea."
         </p>
-        <div className="border border-zinc-200 dark:border-zinc-800 p-5 rounded space-y-3 shadow-sm shadow-slate-500">
+        <div className="bg-[#F7F9F9] dark:bg-[#16181C] border border-zinc-200 dark:border-zinc-800 p-5 rounded space-y-3 shadow-sm shadow-slate-500">
           <label className="label-feedback">
             Nombre:
             <input
@@ -74,7 +74,7 @@ export default function feedBack() {
           </label>
 
           <button
-            className="flex justify-center mx-auto px-2 py-1 outline-4 outline-offset-2 outline-lime-400 rounded-md feedback-button shadow-sm shadow-zinc-400 dark:!shadow"
+            className="flex justify-center mx-auto px-2 py-1 outline-4 outline-offset-2 outline-lime-400 rounded-full bg-button-variant shadow-sm shadow-zinc-400 dark:!shadow text-text-variant hover:opacity-90"
             type="submit"
           >
             Enviar
