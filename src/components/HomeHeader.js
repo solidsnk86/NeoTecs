@@ -12,7 +12,7 @@ export const HomeHeader = () => {
         >
           <img
             data-atropos-offset="-3"
-            src="/images/header/panal.jpg"
+            src="/images/header/hexa-header.jpg"
             alt="object"
           />
           <img
