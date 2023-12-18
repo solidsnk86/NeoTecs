@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Github, MessageCircleIcon } from 'lucide-react';
+import { Github, MessageCircleIcon, SunIcon } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { useIsomorphicLayoutEffect } from './hooks/useIsomorphicLayoutEffect';
 import { NeotecsLogo } from './NeotecsLogo';

@@ -107,7 +107,21 @@ export default function Home() {
 
       <HomeBlock className="bg-cover">
         <HomeBlockTitle>Aprende Programación Ahora</HomeBlockTitle>
-        <p>Principios Báscicos de la programación</p>
+        <b className="underline space-y-3">
+          Principios Báscicos de la programación
+        </b>
+        <p>
+          Este curso en NeoTecs va ir adentrándose más profundamente en el
+          diseño e implementación de aplicaciones web con Python, JavaScript y
+          SQL, utilizando frameworks como Django, React y Bootstrap. Los temas
+          abordados incluyen el diseño de bases de datos, escalabilidad,
+          seguridad y experiencia de usuario. A través de proyectos prácticos,
+          los estudiantes aprenden a escribir y utilizar APIs, crear interfaces
+          de usuario interactivas y aprovechar servicios en la nube como GitHub
+          y Heroku. Al finalizar este curso, los estudiantes adquieren
+          conocimientos y experiencia en principios, lenguajes y herramientas
+          que les permiten diseñar e implementar aplicaciones en Internet.
+        </p>
         <p className="mt-4">
           <Link href="/docs/program">
             <ShimmerButton shimmerDuration="1.8s" size="large">

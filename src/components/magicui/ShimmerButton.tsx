@@ -51,10 +51,10 @@ export const ShimmerButton = ({
 			</div>
 
 			{/* backdrop */}
-			<div className='absolute [background:var(--bg)] [border-radius:var(--radius)] [inset:var(--cut)]' />
+			<div className='absolute [background:var(--button-variant)] [border-radius:var(--radius)] [inset:var(--cut)]' />
 			{/* content */}
 
-			<div className='relative z-10 flex text-lg font-semibold text-white pointer-events-none md:text-xl'>
+			<div className='relative z-10 flex text-lg font-semibold text-text-variant pointer-events-none md:text-xl'>
 				{children}
 			</div>
 		</button>
