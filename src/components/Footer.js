@@ -101,7 +101,7 @@ export const Footer = () => {
             </aside>
           ))}
         </div>
-        <p className="flex justify-center mt-16">
+        <p className="flex justify-center mt-16 font-semibold">
           {currentYear} © NeoTecs · By
           <a href={myUrl} target="_blank" rel="noopener">
             <img

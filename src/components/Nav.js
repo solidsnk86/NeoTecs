@@ -88,7 +88,7 @@ export const Nav = ({ className }) => {
           >
             <span className=" px-2 py-1 rounded-full bg-button-variant font-semibold xl:text-sm text-xs text-text-variant">
               <Github className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
-              Sígueme
+              GitHub
             </span>
           </Link>
         </aside>
