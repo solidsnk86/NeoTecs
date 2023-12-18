@@ -36,7 +36,7 @@ export const ShimmerButton = ({
 			}
 			className={cn(
 				'group border border-white/30 relative cursor-pointer overflow-hidden whitespace-nowrap px-6 py-4 [background:var(--bg)] [border-radius:var(--radius)] ',
-				'transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_8px_rgba(62,61,117,0.7)]',
+				'transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_8px_rgba(204,102,102,0.7)]',
 				className
 			)}
 			{...props}
