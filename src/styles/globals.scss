@@ -346,9 +346,21 @@ pre {
   text-rendering: optimizeLegibility;
 }
 
+.image-markdown {
+  margin-block: 15px;
+}
+
 .custom-li {
   list-style: disc;
   margin-left: 20px;
+}
+
+.description-scraper {
+  padding: 6px;
+  margin: 10px;
+  font-weight: 700;
+  background-color: var(--button-variant);
+  color: var(--color-inverse-on-surface);
 }
 
 .label-feedback {

@@ -33,7 +33,7 @@ const MarkdownRenderer = () => {
                 ]}
                 components={{
                     pre: ({ children }) => (
-                        <div className="code-block">
+                        <div className="code-block my-3">
                             <pre>{children}</pre>
                         </div>
                     ),

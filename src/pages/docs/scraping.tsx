@@ -35,14 +35,14 @@ export default function Scraping() {
                 <h1 className="flex justify-center mx-auto text-5xl underline mb-3 mt-10">
                     Web Scraping
                 </h1>
-                <p className="border-l-4 border-sky-400/50 pl-4 m-3 font-semibold">
+                <p className="border-l-4 border-[tomato] pl-4 m-3 font-semibold">
                     En este segmento, exploraremos el web scraping,
                     una técnica que nos permite extraer información de páginas web. En
                     este ejemplo, llevaré a cabo el scraping en mi propio portafolio web.
                     Es importante utilizar esta técnica con responsabilidad y respeto a
                     las políticas de uso de los sitios web objetivo.
                 </p>
-                <div className='bg-[#0D1117] text-zinc-100 p-3 rounded border-zinc-400 border'>
+                <div className='bg-[#F7F9F9] dark:bg-[#16181C] text-text-primary p-3 rounded border-zinc-200 dark:border-zinc-800 border'>
                     <p>
                         A continuación hago un fetch de mi documentación MarkDown en mi
                         repositorio de GitHub que explica el procedimiento y está en inglés
@@ -58,9 +58,9 @@ export default function Scraping() {
                         <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
                     </Link>
                 </div>
-                <hr className="border-zinc-800 my-10" />
+                <hr className="border-zinc-300 dark:border-zinc-800 my-10" />
                 <MarkdownRenderer />
-                <hr className="border-zinc-800 my-10" />
+                <hr className="border-zinc-300 dark:border-zinc-800 my-10" />
                 <div className="border-l-4 border-red-500 px-1 bg-opacity-[0.6] p-3 pl-5 text-red-500 font-semibold">
                     <p className="font-bold text-xl">
                         <AlertTriangle className="w-6 inline mb-1" /> Importante
@@ -68,7 +68,7 @@ export default function Scraping() {
                     <p>
                         Para tener en cuenta! pueden ver el resultado solamente teniendo
                         levantado el server por defecto de Flask, que sería algo así:
-                        <span className="bg-zinc-700 rounded p-[2px] mx-1">
+                        <span className="underline mx-1">
                             http://127.0.0.1:5000/api/scrape
                         </span>
                     </p>
@@ -80,12 +80,12 @@ export default function Scraping() {
                     Raspar!!
                 </button>
                 {titles.map((title, index) => (
-                    <article className="text-zinc-100 space-y-3 border-zinc-300 border-[1px] shadow-md rounded shadow-outline mt-6 p-6 dark:!shadow dark:border-zinc-800 overflow-x-auto">
-                        <h1 key={index} className="text-sky-500 underline text-lg">
+                    <article className="text-zinc-100 space-y-3 border-zinc-200 border-[1px] shadow-md rounded shadow-zinc-200 mt-6 p-6 dark:!shadow dark:border-zinc-800 overflow-x-auto">
+                        <h1 key={index} className="text-[tomato] underline text-lg">
                             {title}
                         </h1>
-                        <p className="text-lime-400 p-3 text-sm">{paragraphs}</p>
-                        <li className="text-orange-400">{items}</li>
+                        <p className="text-text-primary p-3 text-sm">{paragraphs}</p>
+                        <li className="text-zinc-500">{items}</li>
                     </article>
                 ))}
             </main>
