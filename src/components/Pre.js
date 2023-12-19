@@ -38,7 +38,7 @@ export const Pre = ({ children, lang = '' }) => {
 
   return (
     <div className="relative">
-      <p className="bg-[#1E1E1E] translate-y-[23px] text-white uppercase font-bold pl-4 p-1 rounded-md">
+      <p className="bg-[#1E1E1E] translate-y-[23px] text-amber-500 uppercase font-bold pl-4 p-1 rounded-md">
         {lang}
       </p>
       <Copy
