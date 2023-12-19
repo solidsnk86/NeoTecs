@@ -306,7 +306,7 @@ export default function DjangoDocs() {
                 </span>
                 . Nuestro archivo se verá así:
               </li>
-              <Pre lang="javascript">{
+              <Pre lang="pyhton">{
                 /*django */ `
                 from django.shortcuts import render
                 from django.http import HttpResponse
@@ -461,7 +461,7 @@ export default function DjangoDocs() {
                   </li>
                 </ol>
               </li>
-              <Pre lang="javascript">{
+              <Pre lang="pyhton">{
                 /*django */ `
                 from django.urls import path
                 from polls import views
@@ -492,7 +492,7 @@ export default function DjangoDocs() {
                 importando include desde django.urls, como se muestra en el
                 <span>urls.py</span>a continuación:
               </li>
-              <Pre lang="javascript">{
+              <Pre lang="pyhton">{
                 /*django */ `
                 from django.contrib import admin
                 from django.urls import path, include
@@ -590,7 +590,7 @@ export default function DjangoDocs() {
             <p className="list-css-span">
               Dentro de<span>views.py</span>:
             </p>
-            <Pre lang="javascript">{
+            <Pre lang="pyhton">{
               /*django */ `
               from django.shortcuts import render
               from django.http import HttpResponse
@@ -610,7 +610,7 @@ export default function DjangoDocs() {
             <p className="list-css-span">
               Dentro de<span>urls.py</span>(sin nuestra aplicación)
             </p>
-            <Pre lang="javascript">{
+            <Pre lang="pyhton">{
               /*django */ `
               from django.urls import path
               from . import views
@@ -662,7 +662,7 @@ export default function DjangoDocs() {
               </span>
               a <span>views.py</span>:
             </p>
-            <Pre lang="javascript">{
+            <Pre lang="pyhton">{
               /*django */ `
               from django.http import HttpResponse
 
@@ -678,7 +678,7 @@ export default function DjangoDocs() {
               continuación, debemos crear una ruta más flexible en urls.py, que
               podría lucir algo así:
             </p>
-            <Pre lang="javascript">{
+            <Pre lang="pyhton">{
               /*django */ `
               from django.urls import path
 
@@ -714,7 +714,7 @@ export default function DjangoDocs() {
               </span>
               ejemplo:
             </p>
-            <Pre lang="javascript">{
+            <Pre lang="pyhton">{
               /*python */ `
               def saludo(request, name):
               return HttpResponse(f"Hola, {name.capitalize()}!")
@@ -738,7 +738,7 @@ export default function DjangoDocs() {
               podría decidir devolver un encabezado magenta en lugar de solo el
               texto en nuestra función de índice:
             </p>
-            <Pre lang="javascript">{
+            <Pre lang="pyhton">{
               /*python */ `
               def index(request):
               return HttpResponse("<h1 style=\\"color:#8F41D8;\\">Bienvenidos a NeoTecs!</h1>")
@@ -759,7 +759,7 @@ export default function DjangoDocs() {
               renderizar esos archivos usando Django. La sintaxis que
               utilizaremos para renderizar una plantilla se ve así:
             </p>
-            <Pre lang="javascript">{
+            <Pre lang="pyhton">{
               /*python */ `
               from django.shortcuts import render
 
@@ -894,7 +894,7 @@ export default function DjangoDocs() {
               </span>
               de antes:
             </p>
-            <Pre lang="javascript">{
+            <Pre lang="pyhton">{
               /*python */ `
               from django.shortcuts import render
 
