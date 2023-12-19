@@ -96,7 +96,7 @@ export default function Home() {
         <section className="grid md:grid-cols-2 gap-4 md:gap-8">
           {cardContent.map((card) => (
             <Card>
-              <div className="p-4 rounded-lg shadow-md shadow-zinc-200 dark:!shadow">
+              <div className="p-4 rounded-lg">
                 <span className="text-xl font-bold mb-4">{card.feature}</span>
                 <p>{card.children}</p>
               </div>

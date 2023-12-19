@@ -13,7 +13,7 @@ interface ShimmerButtonProps {
 }
 
 export const ShimmerButton = ({
-	shimmerColor = '#ffffff',
+	shimmerColor = '#92FF99',
 	shimmerSize = '0.1em',
 	shimmerDuration = '.9s',
 	borderRadius = '100px',
