@@ -17,7 +17,7 @@ export const ShimmerButton = ({
 	shimmerSize = '0.1em',
 	shimmerDuration = '.9s',
 	borderRadius = '100px',
-	background = 'radial-gradient(ellipse 80% 50% at 50% 120%,#EF4444,#F44336)',
+	background = 'radial-gradient(ellipse 80% 50% at 50% 120%,#0A0C25,#080E1B)',
 	className,
 	children,
 	...props
@@ -36,7 +36,7 @@ export const ShimmerButton = ({
 			}
 			className={cn(
 				'group border border-white/30 relative cursor-pointer overflow-hidden whitespace-nowrap px-6 py-4 [background:var(--bg)] [border-radius:var(--radius)] ',
-				'transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_8px_rgba(204,102,102,0.7)]',
+				'transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_8px_rgba(0,0,0,0.7)]',
 				className
 			)}
 			{...props}
