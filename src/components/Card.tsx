@@ -19,15 +19,15 @@ export const Card: React.FC<PropsWithChildren> = ({ children }) => {
 	const style = { maskImage, WebkitMaskImage: maskImage }
 
 	return (
-		<section className='dark:bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0 rounded-xl'>
+		<section className='dark:bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0 rounded-xl shadow-sm shadow-slate-300 dark:!shadow dark:border border-zinc-800'>
 			<div
 				onMouseMove={onMouseMove}
-				className='overflow-hidden relative duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 dark:border-[#471D90] '
+				className='overflow-hidden relative duration-700 rounded-xl hover:bg-zinc-800/10 group md:gap-8 '
 			>
 				<div className='pointer-events-none'>
 					<div className='absolute inset-0 z-0 transition duration-1000 [mask-image:linear-gradient(black,transparent)]' />
 					<motion.div
-						className='absolute inset-0 z-10 bg-gradient-to-br opacity-100 dark:via-purple-500/50 via-pink-400/10 transition duration-1000 group-hover:opacity-50 '
+						className='absolute inset-0 z-10 bg-gradient-to-br opacity-100 dark:via-purple-500/50 via-sky-200/30 transition duration-1000 group-hover:opacity-50 '
 						style={style}
 					/>
 					<motion.div
