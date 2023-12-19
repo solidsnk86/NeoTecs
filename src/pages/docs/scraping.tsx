@@ -45,7 +45,7 @@ export default function Scraping() {
                 <div className="bg-[#F7F9F9] dark:bg-[#16181C] text-text-primary p-3 rounded border-zinc-200 dark:border-zinc-800 border">
                     <p>
                         A continuación hago un fetch de documentación MarkDown en mi
-                        repositorio de GitHub que explica el procedimiento y lo explico en
+                        repositorio de GitHub que indica el procedimiento y lo explico en
                         inglés, el cual lo pueden traducir.
                     </p>
                     <p>

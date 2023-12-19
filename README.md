@@ -22,7 +22,7 @@ Explore our comprehensive web documentation designed to guide you through the pr
 
 If you find errors or wish to enhance this project, I invite you to contribute! You can do so by forking the repository and then making your modifications. Feel free to add more content, code examples, installation instructions, or any other improvements you deem relevant.
 
-Once you've made your changes, you can submit a pull request for us to review your contributions and consider incorporating them into the main project.
+Once you've made your changes, you can submit a pull request for me to review your contributions and consider incorporating them into the main project.
 
 `I look forward to your contributions!!`
 
@@ -54,8 +54,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-> [!Note]
-> [API_Routes.](https://nextjs.org/docs/api-routes/introduction) I have created this REST API to be used in an example for JavaScript, allowing access to currency exchange functionality, can be accessed on [https://neotecs.netlify.app/api/currency](https://neotecs.netlify.app/api/currency). This endpoint can be edited in `pages/api/currency.js`. If you are intrested how i use this REST API, i leave the example in this link 👇:<br>
+[![API_Routes](https://img.shields.io/badge/API-Routes-lime)](https://nextjs.org/docs/api-routes/introduction) 
+
+I have created this REST API to be used in an example for JavaScript, allowing access to currency exchange functionality, can be accessed on [https://neotecs.netlify.app/api/currency](https://neotecs.netlify.app/api/currency). This endpoint can be edited in `pages/api/currency.js`.
+
+ If you are intrested how i use this REST API, i leave the example in this link below 👇
 
 
 [![Currency Exchange](https://img.shields.io/badge/Currency-Exchange-gold)](https://neotecs.netlify.app/docs/javascript#convertir-divisas)
