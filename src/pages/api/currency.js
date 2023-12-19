@@ -1,9 +1,18 @@
 export default function handlerCurrency(req, res) {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+
+  const currentDate = `${year}-${month < 10 ? '0' : ''}${month}-${
+    day < 10 ? '0' : ''
+  }${day}`;
+
   res.status(200).json({
     success: true,
-    timestamp: 1699228203,
+    timestamp: currentDate,
     base: 'USD',
-    date: '2023-11-05',
+    date: '2023-Nov-05',
     rates: {
       AED: 3.941622,
       AFN: 78.182922,

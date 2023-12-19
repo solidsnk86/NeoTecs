@@ -395,6 +395,10 @@ textarea {
   transition: 0.2s ease-in-out;
 }
 
+#result p {
+  padding-inline: 10px;
+}
+
 @import 'atropos/scss';
 @import './home-header.scss';
 @import './prose.scss';

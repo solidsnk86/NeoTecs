@@ -1,8 +1,11 @@
+import { data } from 'autoprefixer';
 import React, { useState } from 'react';
 
 export default function CurrencyConverter() {
   const [currency, setCurrency] = useState('');
   const [result, setResult] = useState('');
+  const [date, setDate] = useState('');
+  const [update, setUpdate] = useState('');
   const [borderColor, setborderColor] = useState('border-red-400');
 
   const handleSubmit = async (e) => {
@@ -15,9 +18,13 @@ export default function CurrencyConverter() {
       if (response.ok) {
         const data = await response.json();
         const rate = data.rates[currency.toUpperCase()];
+        const date = data.timestamp;
+        const update = data.date;
 
         if (rate !== undefined) {
           setResult(`1 USD es igual a $ ${rate.toFixed(2)} ${currency}.`);
+          setDate(date);
+          setUpdate(update);
         } else {
           setResult('Moneda no válida.');
           setborderColor('border-red-400');
@@ -58,9 +65,13 @@ export default function CurrencyConverter() {
       </form>
       <div
         id="result"
-        className={`rounded font-mono text-slate-100 bg-gray-800 px-1 my-6 w-fit border-l-[5px] ${borderColor}`}
+        className={`rounded font-mono text-slate-100 bg-gray-800 my-6 w-fit border-l-[5px] ${borderColor}`}
       >
-        {result}
+        <p className="bg-zinc-100/30 w-full font-semibold">
+          Última actualización de la API: {update}
+        </p>
+        <p>{result}</p>
+        <p>Al día de la fecha {date}</p>
       </div>
     </div>
   );
