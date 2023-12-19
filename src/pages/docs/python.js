@@ -187,7 +187,7 @@ export default function Python() {
                 vería así:
               </li>
             </ul>
-            <Pre lang="javascript">{
+            <Pre lang="python">{
               /*python */ `
                 print("Hello, world!")
                 `
@@ -253,7 +253,7 @@ export default function Python() {
                 a una variable en Python, la sintaxis se ve así:
               </li>
             </ul>
-            <Pre lang="javascript">{
+            <Pre lang="python">{
               /*python */ `
                 a = 28
                 b = 1.5
@@ -305,7 +305,7 @@ export default function Python() {
               </span>
               :
             </p>
-            <Pre lang="javascript">{
+            <Pre lang="python">{
               /*python */ `
                 name = input("Name: ")
                 print("Hello, " + name)
@@ -354,7 +354,7 @@ export default function Python() {
                 función en esta cadena si lo deseamos, y convertir nuestro
                 programa anterior en una sola línea:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 name = input("Cómo te llamas? ")
                 print(f"Hola, {name}")
@@ -371,7 +371,7 @@ export default function Python() {
                 continuación, cambiaremos nuestra salida dependiendo del número
                 que un usuario escriba:
               </li>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 num = input("Number: ")
                 if num > 0:
@@ -441,7 +441,7 @@ export default function Python() {
                 <b className="text-sky-400 mx-1">"int</b>. Esto significa que
                 nuestra primera línea ahora se vería así:
               </li>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 num = int(input("Number: "))
                 `
@@ -479,7 +479,7 @@ export default function Python() {
                 caracteres. Esto significa que podemos acceder a elementos
                 individuales dentro de la cadena. Por ejemplo:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 name = "Mario"
                 print(name[0])
@@ -524,7 +524,7 @@ export default function Python() {
               </span>
               .
             </p>
-            <Pre lang="javascript">{
+            <Pre lang="python">{
               /*python */ `
               # Esto es un comentario en Python
               nombres = ["Harry", "Ron", "Hermione"]
@@ -555,7 +555,7 @@ export default function Python() {
                 solo dos o tres valores juntos, como los valores x e y para un
                 punto. En el código de Python, utilizamos paréntesis:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 point = (12.5, 10.6)
                 # Otra tupla
@@ -633,7 +633,7 @@ export default function Python() {
                 cuenta que, a pesar de agregar 4 y 3 al conjunto dos veces, cada
                 elemento solo puede aparecer una vez en un conjunto.
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 # Crear un conjunto vacío:
                 s = set()
@@ -691,7 +691,7 @@ export default function Python() {
                 un diccionario y dos puntos para indicar claves y valores. Por
                 ejemplo:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 # Definir un diccionario
                 casas = {"Harry": "Gryffindor", "Draco": "Slytherin"}
@@ -749,7 +749,7 @@ export default function Python() {
                   imprimirá los números del 0 al 5:
                 </li>
               </ul>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 for i in [0, 1, 2, 3, 4, 5]:
                 print(i)
@@ -772,7 +772,7 @@ export default function Python() {
                   nuestro código anterior:
                 </li>
               </ul>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 for i in range(6):
                 print(i)
@@ -792,7 +792,7 @@ export default function Python() {
                 Por ejemplo, si deseamos imprimir cada nombre en una lista,
                 podríamos escribir el siguiente código:
               </li>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 # Crea una lista:
                 names = ["Harry", "Ron", "Hermione"]
@@ -812,7 +812,7 @@ export default function Python() {
                 Podemos ser aún más específicos si lo deseamos y recorrer cada
                 carácter en un solo nombre.
               </li>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 name = "Harry"
                 for char in name:
@@ -845,7 +845,7 @@ export default function Python() {
                 funciones. Para comenzar, escribiremos una función que toma un
                 número y lo eleva al cuadrado:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 def square(x):
                 return x * x
@@ -871,7 +871,7 @@ export default function Python() {
                 <br />
                 utilizando paréntesis:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 for i in range(10):
                 print(f"The square of {i} is {square(i)}")
@@ -903,7 +903,7 @@ export default function Python() {
                 </span>
                 con el código:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 def square(x):
                 return x * x
@@ -916,7 +916,7 @@ export default function Python() {
                 </span>
                 con el código:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 for i in range(10):
                 print(f"The square of {i} is {square(i)}")
@@ -944,7 +944,7 @@ export default function Python() {
                 </span>
                 se ve así:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 from functions import square
 
@@ -958,7 +958,7 @@ export default function Python() {
                 utilizar la notación de punto para acceder a la función
                 <b className="text-sky-400 mx-1">"square"</b>:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 import functions
 
@@ -1000,7 +1000,7 @@ export default function Python() {
                   define un punto bidimensional:
                 </li>
               </ul>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 class Point():
                 # Un método para definir como crear un punto:
@@ -1029,7 +1029,7 @@ export default function Python() {
                   para crear un objeto:
                 </li>
               </ul>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 p = Point(2, 8)
                 print(p.x)
@@ -1046,7 +1046,7 @@ export default function Python() {
                 almacenar solo las coordenadas de un punto, creamos una clase
                 que representa un vuelo de aerolínea:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 class Flight():
                 # Método para crear un vuelo nuevo y su capacidad:
@@ -1065,7 +1065,7 @@ export default function Python() {
                 pasajeros. Vamos a mejorarla para que antes de agregar un
                 pasajero, verifiquemos si hay espacio en el vuelo:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 class Flight():
                 # Método para crear un vuelo nuevo y su capacidad:
@@ -1106,7 +1106,7 @@ export default function Python() {
                 Ahora, probemos la clase que hemos creado instanciando algunos
                 objetos:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 # Crear un nuevo vuelo con capacidad para 3 pasajeros
                 vuelo = Vuelo(3)
@@ -1157,7 +1157,7 @@ export default function Python() {
                 comenzar y cuándo termina. Luego, podemos aplicar este decorador
                 utilizando el símbolo <b className="text-sky-400 mx-1">"@"</b>.
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 def anunciar(f):
                 def envoltorio():
@@ -1188,7 +1188,7 @@ export default function Python() {
                 en Python. Por ejemplo, si queremos definir la misma función
                 cuadrado que hicimos anteriormente, podemos escribir:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*python */ `
                 square = lambda x: x * x
                 `
@@ -1205,7 +1205,7 @@ export default function Python() {
                 personas, pero con nombres y casas en lugar de solo nombres que
                 deseamos ordenar:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*pyhton */ `
                 people = [
                   {"name": "Harry", "house": "Gryffindor"},
@@ -1231,7 +1231,7 @@ export default function Python() {
                 la función de ordenamiento, que especifica qué parte del
                 diccionario deseamos utilizar para ordenar:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*pyhton */ `
                 people = [
                   {"name": "Harry", "house": "Gryffindor"},
@@ -1258,7 +1258,7 @@ export default function Python() {
                 completa que solo estamos utilizando una vez. Podemos hacer que
                 nuestro código sea más legible utilizando una función lambda:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*pyhton */ `
                 people = [
                   {"name": "Harry", "house": "Gryffindor"},
@@ -1289,7 +1289,7 @@ export default function Python() {
                 En el siguiente fragmento de código, tomaremos dos números
                 enteros del usuario e intentaremos dividirlos:
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*pyhton */ `
                 x = int(input("x: "))
                 y = int(input("y: "))
@@ -1325,7 +1325,7 @@ export default function Python() {
                 obtengamos un
                 <span>ZeroDivisionError</span> :
               </p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*pyhton */ `
                 import sys
 
@@ -1354,7 +1354,7 @@ export default function Python() {
                 <img src="/images/valueError.png" />
               </div>
               <p>Podemos resolver este problema de similar manera:</p>
-              <Pre lang="javascript">{
+              <Pre lang="python">{
                 /*pyhton */ `
                 import sys
 
