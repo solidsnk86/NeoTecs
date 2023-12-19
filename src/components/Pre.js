@@ -38,12 +38,12 @@ export const Pre = ({ children, lang = '' }) => {
 
   return (
     <div className="relative">
-      <p className="bg-[#1E1E1E] translate-y-[23px] text-amber-500 text-sm uppercase font-bold pl-4 p-1 rounded-md">
+      <p className="bg-[#1E1E1E] translate-y-[23px] text-amber-500 text-xs uppercase font-bold pl-4 p-1 rounded-md">
         {lang}
       </p>
       <Copy
         onClick={(e) => handleCopyClick(e)}
-        className="w-5 h-5 inline-flex my-auto absolute z-10 top-[28px] right-3 cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all"
+        className="w-4 h-4 inline-flex my-auto absolute z-10 top-[28px] right-3 cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all"
       />
       <Highlight
         theme={themes.vsDark}

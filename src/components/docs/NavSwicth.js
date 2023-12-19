@@ -53,6 +53,10 @@ export const NavSwitch = ({ inline }) => {
       href: '/docs/markdown-render',
       title: 'MarkDown Render',
     },
+    {
+      href: '/docs/google-sheets',
+      title: 'Google Sheets',
+    },
   ];
   const isActive = (link) => link.href === router.asPath;
   return (
