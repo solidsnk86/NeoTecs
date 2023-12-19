@@ -22,7 +22,7 @@ Explore our comprehensive web documentation designed to guide you through the pr
 
 If you find errors or wish to enhance this project, I invite you to contribute! You can do so by forking the repository and then making your modifications. Feel free to add more content, code examples, installation instructions, or any other improvements you deem relevant.
 
-Once you've made your changes, you can submit a pull request for us to review your contributions and consider incorporating them into the main project.
+Once you've made your changes, you can submit a pull request for me to review your contributions and consider incorporating them into the main project.
 
 `I look forward to your contributions!!`
 
