@@ -14,7 +14,7 @@ export default function CurrencyConverter() {
 
       if (response.ok) {
         const data = await response.json();
-        const rate = data.rate[currency.toUpperCase()];
+        const rate = data.rates[currency.toUpperCase()];
 
         if (rate !== undefined) {
           setResult(`1 USD es igual a $ ${rate.toFixed(2)} ${currency}.`);
@@ -22,12 +22,10 @@ export default function CurrencyConverter() {
           setResult('Moneda no válida.');
           setborderColor('border-red-400');
         }
-      } else {
-        setResult('Error al obtener datos de la API.');
-        setborderColor('border-amber-400');
       }
     } catch (error) {
       setResult('Error al obtener datos de la API.');
+      setborderColor('border-amber-400');
     }
   };
 
@@ -53,7 +51,7 @@ export default function CurrencyConverter() {
         />
         <button
           type="submit"
-          className="rounded px-4 mx-3 mb-3 outline-2 dark:outline-amber-400 outline-[cornflowerblue] outline-offset-[3px] outline-double bg-card-bg text-text-primary hover:brightness-110"
+          className="rounded px-4 mx-3 mb-3 outline-2 dark:outline-amber-400 outline-[#0F0F0F] outline-offset-[3px] outline-double bg-button-variant text-text-variant font-semibold hover:brightness-110"
         >
           Convertir
         </button>
