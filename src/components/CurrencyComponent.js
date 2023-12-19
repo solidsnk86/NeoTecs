@@ -46,7 +46,7 @@ export default function CurrencyConverter() {
           htmlFor="currency"
           className="mr-2 mt-4 border border-gray-800 rounded px-1 py-1 font-semibold"
         >
-          Ingresa una divisa (por ejemplo: ARS, BRL, EUR, GBP, etc):
+          Ingresa una divisa (por ejemplo: ARS, BRL, EUR, GBP, BTC, etc):
         </label>
         <input
           type="text"
@@ -67,7 +67,7 @@ export default function CurrencyConverter() {
         id="result"
         className={`rounded font-mono text-slate-100 bg-gray-800 my-6 w-fit border-l-[5px] ${borderColor}`}
       >
-        <p className="bg-zinc-100/30 w-full font-semibold">
+        <p className="bg-zinc-100/30 w-full font-semibold text-green-400">
           Última actualización de la API: {update}
         </p>
         <p>{result}</p>
