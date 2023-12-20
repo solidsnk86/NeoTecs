@@ -6,6 +6,8 @@ import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
+import Link from 'next/link';
+import { OpenInNew } from '@mui/icons-material';
 
 const MarkDownTitle = ({ Tag = 'h1', children }) => {
   return <Tag className="text-text-primary font-mono">{children}</Tag>;
@@ -19,9 +21,36 @@ export default function MarkDownRender() {
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
           <MarkDownTitle>Renderizar MarkDown de GitHub</MarkDownTitle>
-
+          <hr className="border-text-primary" />
           <SectionTitle title="Índice" />
+          <ol className="indice">
+            <li>
+              <a href="#introduccion">Introducción</a>
+            </li>
+            <li>
+              <a href="#estilos-markdown">Estilos MarkDown</a>
+            </li>
+            <li>
+              <a href="#componente-react">Componente React</a>
+            </li>
+          </ol>
           <article>
+            <SectionTitle title="Introducción" />
+            <p>
+              Para renderizar Markdown de GitHub en una aplicación de React,
+              puedes utilizar la biblioteca react-markdown. Esta biblioteca
+              permite analizar y renderizar contenido Markdown en componentes
+              React. Asegúrate de revisar la documentación de react-markdown
+              para obtener información más detallada:
+              <Link
+                href="https://remarkjs.github.io/react-markdown/"
+                className="mx-1 text-amber-600"
+              >
+                react-markdown en GitHub
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              . Aquí hay una guía paso a paso para lograrlo:
+            </p>
             <p>
               Aquí vamos a crear un componente de React para poder hacer un
               fetch de nuestros{' '}
@@ -73,6 +102,7 @@ export default function MarkDownRender() {
                             `
               }</Pre>
             </ol>
+            <SectionTitle title="Estilos MarkDown" />
             <p>
               Para replicar los estilos de GitHub en tu componente
               ReactMarkdown, puedes utilizar una librería de estilos específica
@@ -191,6 +221,7 @@ export default function MarkDownRender() {
                         </ReactMarkdown>
                         `
             }</Pre>
+            <SectionTitle title="Componente React" />
             <p>
               Aquí les dejo un ejemplo más completo de cómo lo pueden
               implementar:
@@ -250,6 +281,17 @@ export default function MarkDownRender() {
                             
                             `
             }</Pre>
+            <p>
+              Eso es todo por aquí, espero les haya gustado y que lo puedan
+              hacer. Ante cualquier duda o consulta está el
+              <Link
+                className="underline mx-1 text-amber-500"
+                href="/docs/feedback"
+              >
+                feedback
+              </Link>
+              de NeoTecs.
+            </p>
           </article>
           <ShareButton setTitle={MarkDownRender.title} />
         </div>
