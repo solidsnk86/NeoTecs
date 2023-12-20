@@ -134,7 +134,7 @@ export default function CsvSheets() {
                     web, en principio he usado<span>useState y useEffect</span>de la
                     siguiente manera:
                 </p>
-                <Pre lang="tsx">{
+                <pre lang="tsx" className=' overflow-hidden overflow-x-auto'>{
                     /*javascript */
                     `
                     import { useState, useEffect } from 'react'
@@ -183,7 +183,7 @@ export default function CsvSheets() {
                         </article>
                     )
                     `
-                }</Pre>
+                }</pre>
                 <p>
                     Explicando un poco el desglose del código, en el fetching de data
                     asíncrono con useEffect creamos una contante<span>response</span>que
