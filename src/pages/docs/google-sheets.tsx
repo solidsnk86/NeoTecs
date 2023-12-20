@@ -132,7 +132,7 @@ export default function CsvSheets() {
                     y Api Routes.
                 </p>
                 <p className="list-css-span">
-                    En nuestro componente podemos poner como lo hago aquí, en principio he
+                    En nuestro componente vamos a escribir como lo hago aquí, en principio he
                     usado<span>useState y useEffect</span>de la siguiente manera:
                 </p>
                 <pre lang="tsx" className='overflow-hidden overflow-x-auto code-block text-white'>{`
