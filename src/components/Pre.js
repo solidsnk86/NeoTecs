@@ -43,7 +43,7 @@ export const Pre = ({ children, lang = '' }) => {
       </p>
       <Copy
         onClick={(e) => handleCopyClick(e)}
-        className="w-4 h-4 inline-flex my-auto absolute z-10 top-[28px] right-3 cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all"
+        className="w-4 h-4 inline-flex my-auto absolute z-10 top-[29px] right-[10px] cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all"
       />
       <Highlight
         theme={themes.vsDark}
