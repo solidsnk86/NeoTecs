@@ -54,7 +54,7 @@ export default function CsvSheets() {
                     <article key={pic.id}>
                         <p className="text-2xl font-mono text-center py-2">{pic.id}</p>
                         <span className="bg-button-variant text-text-variant font-semibold font-mono p-1 w-fit float-right my-3 rounded-md">
-                            Price: u$d {pic.price}
+                            Price: U$D {pic.price}
                         </span>
                         <img className="rounded-md" src={pic.image} alt="Drawing GerArt" />
                         <aside className="text-center font-semibold my-3">
