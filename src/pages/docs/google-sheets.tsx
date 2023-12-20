@@ -58,7 +58,7 @@ export default function CsvSheets() {
                     </article>
                 ))}
             </section>
-            <article className="xl:w-10/12 justify-center mx-auto text-text-primary">
+            <article className="xl:w-10/12 justify-center mx-auto text-text-primary article-sheets">
                 <h1 className="text-center text-2xl my-6 underline">
                     Bien para darle vida a ésto seguiremos los siguientes pasos
                 </h1>
@@ -188,23 +188,34 @@ export default function CsvSheets() {
                     Explicando un poco el desglose del código, en el fetching de data
                     asíncrono con useEffect creamos una contante<span>response</span>que
                     va a esperar la respuesta de nuestro archivo de Google Sheets. Creamos
-                    una constante<span>csv</span>que va esperar el archivo "CSV" y va a
-                    leer el texto.
+                    una constante<span>csv</span>que va esperar el archivo "CSV" y extraer
+                    el texto.
                 </p>
-                <pre lang='javascript' className='code-block text-zinc-100 p-1 my-2'>
+                <pre lang="javascript" className="code-block text-zinc-100 p-1 my-2">
                     const response = await fetch( 'TU_LINK_DE_GOOGLE_SHEETS');
                 </pre>
-                <pre lang='javascript' className='code-block text-zinc-100 p-1 my-2'>
+                <pre lang="javascript" className="code-block text-zinc-100 p-1 my-2">
                     const csv = await response.text()
                 </pre>
                 <p>
-                    Para formatear el archivo y aplicarlo a nuestra app, tenemos que crear una constante:
+                    Para formatear el archivo y aplicarlo a nuestra app, tenemos que crear
+                    una constante:
                 </p>
-                <pre lang='javascript' className='code-block text-zinc-100 p-1 my-2'>
+                <pre lang="javascript" className="code-block text-zinc-100 p-1 my-2">
                     const parsedrawings = csv.slpit('\n').slice(1)
                 </pre>
-                <p className='list-css-span'>El<span>split('\n')</span>nos da el formato respetando el salto de línea.</p>
-                <p className='list-css-span'>El<span>slice(1)</span>sirve para evitar mostrar la columna id de nuestro archivo CSV.</p>
+                <p className="list-css-span">
+                    El<span>split('\n')</span>nos da el formato respetando separando cada
+                    texto por un salto de línea.
+                </p>
+                <p className="list-css-span">
+                    El<span>slice(1)</span>sirve para evitar mostrar la columna id de
+                    nuestro archivo CSV que solamente contiene los nombres de las columnas.
+                </p>
+                <p>Después se itera sobre cada artículo y se crea un objeto con las propiedades que necesitamos.</p>
+                <p className='list-css-span'>Para luego iterar sobre cada artículo con un<span>map</span>y mostrarlo en pantalla.</p>
+
+                <p>Hasta aquí por ahora, luego seguimos con más....👋</p>
             </article>
             <Footer />
         </>
