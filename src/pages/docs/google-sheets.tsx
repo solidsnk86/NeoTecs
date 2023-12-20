@@ -134,8 +134,7 @@ export default function CsvSheets() {
                     web, en principio he usado<span>useState y useEffect</span>de la
                     siguiente manera:
                 </p>
-                <pre lang="tsx" className=' overflow-hidden overflow-x-auto'>{
-                    /*javascript */
+                <pre lang="tsx" className='code-block overflow-hidden overflow-x-auto'>{
                     `
                     import { useState, useEffect } from 'react'
 
