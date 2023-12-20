@@ -32,8 +32,8 @@ export default function CsvSheets() {
     return (
         <>
             <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-30" />
-            <section className="xl:w-1/2 justify-center mx-auto text-text-primary p-10 space-y-5 top-6">
-                <h1 className="flex justify-center mx-auto text-6xl text-transparent relative bottom-[2px] [-webkit-text-stroke-width:4px] [-webkit-text-stroke-color:var(--color-on-surface)]">
+            <section className="xl:w-1/2 justify-center mx-auto text-text-primary p-10 space-y-5">
+                <h1 className="mt-10 flex justify-center mx-auto text-6xl text-transparent relative bottom-[2px] [-webkit-text-stroke-width:4px] [-webkit-text-stroke-color:var(--color-on-surface)]">
                     GerArt
                 </h1>
                 <article className="border border-zinc-200 dark:border-zinc-800 rounded-md text-center p-3">
