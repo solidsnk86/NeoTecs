@@ -2,7 +2,10 @@ import { useState } from 'react';
 import { Footer } from '../../components/Footer';
 import { ArrowLeftIcon } from 'lucide-react';
 import { Nav } from '../../components/Nav';
-export default function feedBack() {
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+export default function FeedBack() {
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
   const [comentario, setComentario] = useState('');
@@ -10,7 +13,7 @@ export default function feedBack() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('/api/submitFeedback', {
+    const response = await fetch('/api/submit-feedback', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -19,9 +22,22 @@ export default function feedBack() {
     });
 
     if (response.ok) {
-      console.log('Feedback enviado correctamente');
+      const isDarkMode = window.matchMedia(
+        '(prefers-color-scheme: dark)',
+      ).matches;
+
+      toast('Feedback enviado correctamente', {
+        position: toast.POSITION.BOTTOM_LEFT,
+        type: 'succes',
+        theme: isDarkMode ? 'dark' : 'light',
+      });
     } else {
-      console.error('Error al enviar feedback');
+      toast('Error al enviar el feedback'),
+        {
+          position: toast.POSITION.BOTTOM_LEFT,
+          type: 'error',
+          theme: isDarkMode ? 'dark' : 'light',
+        };
     }
   };
 
@@ -70,6 +86,7 @@ export default function feedBack() {
               value={comentario}
               onChange={(e) => setComentario(e.target.value)}
               placeholder=" Comentario..."
+              className=" h-32"
             />
           </label>
 
@@ -82,8 +99,9 @@ export default function feedBack() {
         </div>
       </form>
       <Footer />
+      <ToastContainer closeButton closeOnClick />
     </>
   );
 }
 
-feedBack.title = 'NeoTecs FeedBack';
+FeedBack.title = 'NeoTecs FeedBack';

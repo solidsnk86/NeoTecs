@@ -20,7 +20,9 @@
     "src/pages/api/currency.js",
     "src/pages/api/currency.js",
     "src/pages/api/currency.js",
-    "src/pages/docs/scraping.js"
+    "src/pages/docs/scraping.jsx",
+    "src/pages/docs/scraping.jsx",
+    "src/pages/docs/markdown-render.js"
   ],
   "exclude": ["node_modules"]
 }

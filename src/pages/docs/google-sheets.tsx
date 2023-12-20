@@ -64,6 +64,7 @@ export default function CsvSheets() {
                     </article>
                 ))}
             </section>
+            <hr className='border-[1px] dark:border-zinc-800 border-zinc-300' />
             <article className="xl:w-10/12 p-10 justify-center mx-auto text-text-primary article-sheets">
                 <h1 className="text-center text-2xl my-6 underline">
                     Bien para darle vida a ésto seguiremos los siguientes pasos
@@ -72,12 +73,6 @@ export default function CsvSheets() {
                     Vamos a empezar por crear nuestra tabla en Excel con hojas de cálculo
                     de google.
                 </p>
-                <div className="images-client my-3">
-                    <img
-                        src="/images/google-sheets-4.png"
-                        alt="Hojas de cálculo de Google."
-                    />
-                </div>
                 <p className="list-css-span">
                     Creamos una nueva hoja de cálculo y la llenamos con nuestros datos.
                     También vamos a delimitar nuestra tabla con:
