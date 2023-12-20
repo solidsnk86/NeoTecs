@@ -13,6 +13,18 @@ export default function FeedBack() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const isDarkMode = window.matchMedia(
+      '(prefers-color-scheme: dark)',
+    ).matches;
+
+    if (!nombre || !email || !comentario) {
+      toast.error('Por favor, completa todos los campos.', {
+        position: toast.POSITION.BOTTOM_LEFT,
+        theme: isDarkMode ? 'dark' : 'light',
+      });
+      return;
+    }
+
     const response = await fetch('/api/submit-feedback', {
       method: 'POST',
       headers: {
@@ -22,22 +34,17 @@ export default function FeedBack() {
     });
 
     if (response.ok) {
-      const isDarkMode = window.matchMedia(
-        '(prefers-color-scheme: dark)',
-      ).matches;
-
       toast('Feedback enviado correctamente', {
         position: toast.POSITION.BOTTOM_LEFT,
-        type: 'succes',
+        type: 'success',
         theme: isDarkMode ? 'dark' : 'light',
       });
     } else {
-      toast('Error al enviar el feedback'),
-        {
-          position: toast.POSITION.BOTTOM_LEFT,
-          type: 'error',
-          theme: isDarkMode ? 'dark' : 'light',
-        };
+      toast('Error al enviar el feedback', {
+        position: toast.POSITION.BOTTOM_LEFT,
+        type: 'error',
+        theme: isDarkMode ? 'dark' : 'light',
+      });
     }
   };
 
