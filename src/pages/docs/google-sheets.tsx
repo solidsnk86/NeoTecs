@@ -60,7 +60,7 @@ export default function CsvSheets() {
             </section>
             <article className="xl:w-10/12 justify-center mx-auto text-text-primary">
                 <h1 className="text-center text-2xl my-6 underline">
-                    Bien Para darle vida a ésto seguiremos los siguientes pasos
+                    Bien para darle vida a ésto seguiremos los siguientes pasos
                 </h1>
                 <p className="text-center p-3">
                     Vamos a empezar por crear nuestra tabla en Excel con hojas de cálculo
