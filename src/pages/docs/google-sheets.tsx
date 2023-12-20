@@ -65,7 +65,7 @@ export default function CsvSheets() {
                 ))}
             </section>
             <hr className='border-[1px] dark:border-zinc-800 border-zinc-300' />
-            <article className="xl:w-10/12 p-10 justify-center mx-auto text-text-primary article-sheets">
+            <article className="xl:w-10/12 p-8 justify-center mx-auto text-text-primary article-sheets">
                 <h1 className="text-center text-2xl my-6 underline">
                     Bien para darle vida a ésto seguiremos los siguientes pasos
                 </h1>
@@ -135,7 +135,7 @@ export default function CsvSheets() {
                     En nuestro componente podemos poner como lo hago aquí, en principio he
                     usado<span>useState y useEffect</span>de la siguiente manera:
                 </p>
-                <Pre lang="tsx">{`
+                <pre lang="tsx" className='overflow-hidden overflow-x-auto code-block text-white'>{`
                     import { useState, useEffect } from 'react'
 
                     export default function CsvSheets() {
@@ -181,7 +181,7 @@ export default function CsvSheets() {
                         ))}
                         </article>
                     )
-                    `}</Pre>
+                    `}</pre>
                 <p className="list-css-span">
                     Explicando un poco el desglose del código, en la obtención asíncrona
                     de datos mediante el uso de useEffect, creamos una constante
