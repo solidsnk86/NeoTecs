@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Github, MessageCircleIcon, SunIcon } from 'lucide-react';
+import { Github, MessageCircleIcon } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { useIsomorphicLayoutEffect } from './hooks/useIsomorphicLayoutEffect';
 import { NeotecsLogo } from './NeotecsLogo';
@@ -77,18 +77,22 @@ export const Nav = ({ className }) => {
             href="/docs/feedback"
             className="flex items-center space-x-2 mb-3 hover:opacity-[.9] hover:transition-all"
           >
-            <span className=" px-2 py-1 rounded-full bg-button-variant font-semibold xl:text-sm text-xs text-text-variant">
+            <span
+              className={`px-2 py-1 rounded-full bg-button-variant font-semibold xl:text-sm text-xs text-text-variant`}
+            >
               <MessageCircleIcon className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
-              Feedback
+              {'Feedback'}
             </span>
           </Link>
           <Link
             href="https://github.com/solidsnk86"
             className="flex items-center space-x-2 mb-3 hover:opacity-[.9] hover:transition-all"
           >
-            <span className=" px-2 py-1 rounded-full bg-button-variant font-semibold xl:text-sm text-xs text-text-variant">
+            <span
+              className={`px-2 py-1 rounded-full bg-button-variant font-semibold xl:text-sm text-xs text-text-variant`}
+            >
               <Github className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
-              GitHub
+              {'Github'}
             </span>
           </Link>
         </aside>
