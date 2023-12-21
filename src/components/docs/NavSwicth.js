@@ -34,7 +34,7 @@ export const NavSwitch = ({ inline }) => {
       title: 'SQL ',
     },
     {
-      href: 'docs/ui',
+      href: '/docs/ui-ux',
       title: 'UI/UX',
     },
     {
