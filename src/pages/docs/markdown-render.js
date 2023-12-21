@@ -34,51 +34,48 @@ export default function MarkDownRender() {
               <a href="#componente-react">Componente React</a>
             </li>
           </ol>
-          <article>
-            <SectionTitle title="Introducción" />
-            <p>
-              Para renderizar Markdown de GitHub en una aplicación de React,
-              puedes utilizar la biblioteca react-markdown. Esta biblioteca
-              permite analizar y renderizar contenido Markdown en componentes
-              React. Asegúrate de revisar la documentación de react-markdown
-              para obtener información más detallada:
-              <Link
-                href="https://remarkjs.github.io/react-markdown/"
-                className="mx-1 text-amber-600"
-              >
-                react-markdown en GitHub
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>
-              . Aquí hay una guía paso a paso para lograrlo:
-            </p>
-            <p>
-              Aquí vamos a crear un componente de React para poder hacer un
-              fetch de nuestros{' '}
-              <b className="bg-zinc-300 dark:bg-zinc-800 rounded p-[2px] text-button-variant">
-                README.md
-              </b>
-            </p>
-            <ol>
-              <li>
-                Para empezar vamos a instalar las siguientes dependencias:
-              </li>
-              <Pre lang="bash">{
-                /*bash */ `
+          <SectionTitle title="Introducción" />
+          <p>
+            Para renderizar Markdown de GitHub en una aplicación de React,
+            puedes utilizar la biblioteca react-markdown. Esta biblioteca
+            permite analizar y renderizar contenido Markdown en componentes
+            React. Asegúrate de revisar la documentación de react-markdown para
+            obtener información más detallada:
+            <Link
+              href="https://remarkjs.github.io/react-markdown/"
+              className="mx-1 text-amber-600"
+            >
+              react-markdown en GitHub
+              <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+            </Link>
+            . Aquí hay una guía paso a paso para lograrlo:
+          </p>
+          <p>
+            Aquí vamos a crear un componente de React para poder hacer un fetch
+            de nuestros{' '}
+            <b className="bg-zinc-300 dark:bg-zinc-800 rounded p-[2px] text-button-variant">
+              README.md
+            </b>
+          </p>
+          <ol>
+            <li>Para empezar vamos a instalar las siguientes dependencias:</li>
+            <Pre lang="bash">{
+              /*bash */ `
                             npm install react-markdown
                             `
-              }</Pre>
-              <li>
-                Para importar los estilos de GitHub, tienes que importarlo en tu
-                componente:
-              </li>
-              <Pre lang="javascript">{
-                /*javascript */ `
+            }</Pre>
+            <li>
+              Para importar los estilos de GitHub, tienes que importarlo en tu
+              componente:
+            </li>
+            <Pre lang="javascript">{
+              /*javascript */ `
                             @import 'github-markdown-css';
                             `
-              }</Pre>
-              <li>Personaliza los estilos adicionales a tu gusto:</li>
-              <Pre lang="css">{
-                /*css */ `
+            }</Pre>
+            <li>Personaliza los estilos adicionales a tu gusto:</li>
+            <Pre lang="css">{
+              /*css */ `
                             .markdown-body {
                                 box-sizing: border-box;
                                 min-width: 200px;
@@ -87,53 +84,51 @@ export default function MarkDownRender() {
                                 padding: 45px;
                             }
                             `
-              }</Pre>
-              <li>
-                Para agregar estilos aplicamos un className en nuestro
-                componente:
-              </li>
-              <Pre lang="javascript">{
-                /*javascript */ `
+            }</Pre>
+            <li>
+              Para agregar estilos aplicamos un className en nuestro componente:
+            </li>
+            <Pre lang="javascript">{
+              /*javascript */ `
                             return (
                                 <div className="markdown-body">
                                   <ReactMarkdown>{markdownContent}</ReactMarkdown>
                                 </div>
                               );
                             `
-              }</Pre>
-            </ol>
-            <SectionTitle title="Estilos MarkDown" />
-            <p>
-              Para replicar los estilos de GitHub en tu componente
-              ReactMarkdown, puedes utilizar una librería de estilos específica
-              de GitHub llamada "github-markdown-css". Puedes instalarla usando
-              npm o yarn, y luego importarla en tu archivo de estilos y
-              aplicarla al componente ReactMarkdown. Aquí hay una forma de
-              hacerlo:
-            </p>
-            <Pre lang="bash">{
-              /*bash */ `
+            }</Pre>
+          </ol>
+          <SectionTitle title="Estilos MarkDown" />
+          <p>
+            Para replicar los estilos de GitHub en tu componente ReactMarkdown,
+            puedes utilizar una librería de estilos específica de GitHub llamada
+            "github-markdown-css". Puedes instalarla usando npm o yarn, y luego
+            importarla en tu archivo de estilos y aplicarla al componente
+            ReactMarkdown. Aquí hay una forma de hacerlo:
+          </p>
+          <Pre lang="bash">{
+            /*bash */ `
                             npm install github-markdown-css
 
                             `
-            }</Pre>
-            <p>
-              Importa la librería de estilos en tu archivo de estilos (por
-              ejemplo, styles.css):
-            </p>
-            <Pre lang="javascript">{
-              /*javascript */ `
+          }</Pre>
+          <p>
+            Importa la librería de estilos en tu archivo de estilos (por
+            ejemplo, styles.css):
+          </p>
+          <Pre lang="javascript">{
+            /*javascript */ `
                         /* styles.css */
                         @import 'github-markdown-css/github-markdown.css';
 
                         `
-            }</Pre>
-            <p className="list-css-span">
-              Debes usar el componente<span>rehypeRaw</span>proporcionado por
-              ReactMarkdown para habilitar la interpretación de HTML
-            </p>
-            <Pre lang="javascript">{
-              /*javascript */ `
+          }</Pre>
+          <p className="list-css-span">
+            Debes usar el componente<span>rehypeRaw</span>proporcionado por
+            ReactMarkdown para habilitar la interpretación de HTML
+          </p>
+          <Pre lang="javascript">{
+            /*javascript */ `
                         import rehypeRaw from 'rehype-raw'; // Importa rehypeRaw para habilitar la interpretación de HTML
 
                         return (
@@ -146,25 +141,25 @@ export default function MarkDownRender() {
                             </div>
                         );
                         `
-            }</Pre>
-            <p>
-              Para estilos específicos de GitHub y manejo de imágenes, puedes
-              utilizar más plugins de rehype. Aquí hay algunos ejemplos:
-            </p>
-            <ul className="list-css-span">
-              <li>
-                <span>rehype-slug</span>: Agrega IDs únicos a los encabezados,
-                lo cual puede ser útil para anclas en enlaces internos.
-              </li>
-            </ul>
-            <Pre lang="bash">{
-              /*bash */ `
+          }</Pre>
+          <p>
+            Para estilos específicos de GitHub y manejo de imágenes, puedes
+            utilizar más plugins de rehype. Aquí hay algunos ejemplos:
+          </p>
+          <ul className="list-css-span">
+            <li>
+              <span>rehype-slug</span>: Agrega IDs únicos a los encabezados, lo
+              cual puede ser útil para anclas en enlaces internos.
+            </li>
+          </ul>
+          <Pre lang="bash">{
+            /*bash */ `
                         npm install rehype-slug
                         `
-            }</Pre>
-            <p>En tu componente:</p>
-            <Pre lang="javascript">{
-              /*javascript */ `
+          }</Pre>
+          <p>En tu componente:</p>
+          <Pre lang="javascript">{
+            /*javascript */ `
                         import rehypeSlug from 'rehype-slug';
 
                         // ...
@@ -175,21 +170,21 @@ export default function MarkDownRender() {
                         {markdownContent}
                         </ReactMarkdown>
                         `
-            }</Pre>
-            <ul className="list-css-span">
-              <li>
-                <span>rehype-autolink-headings</span>: Agrega enlaces
-                automáticos a los encabezados.
-              </li>
-            </ul>
-            <Pre lang="bash">{
-              /*bash */ `
+          }</Pre>
+          <ul className="list-css-span">
+            <li>
+              <span>rehype-autolink-headings</span>: Agrega enlaces automáticos
+              a los encabezados.
+            </li>
+          </ul>
+          <Pre lang="bash">{
+            /*bash */ `
                         npm install rehype-autolink-headings
                         `
-            }</Pre>
-            <p>En el componente:</p>
-            <Pre lang="javascript">{
-              /*javascript */ `
+          }</Pre>
+          <p>En el componente:</p>
+          <Pre lang="javascript">{
+            /*javascript */ `
                         import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
                         // ...
@@ -200,16 +195,16 @@ export default function MarkDownRender() {
                         {markdownContent}
                         </ReactMarkdown>
                         `
-            }</Pre>
-            <ul className="list-css-span">
-              <li>
-                <span>rehype-highlight</span>: Resalta el código en bloques de
-                código.
-              </li>
-            </ul>
-            <p>En el componente:</p>
-            <Pre lang="javascript">{
-              /*javascript */ `
+          }</Pre>
+          <ul className="list-css-span">
+            <li>
+              <span>rehype-highlight</span>: Resalta el código en bloques de
+              código.
+            </li>
+          </ul>
+          <p>En el componente:</p>
+          <Pre lang="javascript">{
+            /*javascript */ `
                          import rehypeHighlight from 'rehype-highlight';
 
                         // ...
@@ -220,14 +215,13 @@ export default function MarkDownRender() {
                         {markdownContent}
                         </ReactMarkdown>
                         `
-            }</Pre>
-            <SectionTitle title="Componente React" />
-            <p>
-              Aquí les dejo un ejemplo más completo de cómo lo pueden
-              implementar:
-            </p>
-            <Pre lang="javascript">{
-              /*javascript*/ `
+          }</Pre>
+          <SectionTitle title="Componente React" />
+          <p>
+            Aquí les dejo un ejemplo más completo de cómo lo pueden implementar:
+          </p>
+          <Pre lang="javascript">{
+            /*javascript*/ `
                             import React, { useState, useEffect } from 'react';
                             import ReactMarkdown from 'react-markdown';
                             import rehypeHighlight from 'rehype-highlight';
@@ -280,19 +274,18 @@ export default function MarkDownRender() {
                             export default MarkdownRenderer;
                             
                             `
-            }</Pre>
-            <p>
-              Eso es todo por aquí, espero les haya gustado y que lo puedan
-              hacer. Ante cualquier duda o consulta está el
-              <Link
-                className="underline mx-1 text-amber-500"
-                href="/docs/feedback"
-              >
-                feedback
-              </Link>
-              de NeoTecs.
-            </p>
-          </article>
+          }</Pre>
+          <p>
+            Eso es todo por aquí, espero les haya gustado y que lo puedan hacer.
+            Ante cualquier duda o consulta está el
+            <Link
+              className="underline mx-1 text-amber-500"
+              href="/docs/feedback"
+            >
+              feedback
+            </Link>
+            de NeoTecs.
+          </p>
           <ShareButton setTitle={MarkDownRender.title} />
         </div>
       </div>

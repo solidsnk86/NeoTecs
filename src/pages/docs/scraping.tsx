@@ -77,6 +77,12 @@ export default function Scraping() {
                         </span>
                     </p>
                 </div>
+                <p className='text-center justify-center mx-auto my-3 bg-button-variant text-text-variant w-fit p-2'>Si tienen alguna consulta para hacer los escucho en mi
+                    <Link href="/docs/feedback" className='underline text-red-500 mx-1'>
+                        feedback,
+                    </Link>
+                    muchas gracias!
+                </p>
                 <button
                     className="justify-center mx-auto bg-button-variant text-text-variant font-semibold rounded p-2 w-fit my-3 hover:scale-105 shadow-gray-700"
                     onClick={handleScrape}

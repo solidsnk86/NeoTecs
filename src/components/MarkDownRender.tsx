@@ -23,7 +23,7 @@ const MarkdownRenderer = () => {
     }, []);
 
     return (
-        <div>
+        <div className='text-text-primary'>
             <ReactMarkdown
                 rehypePlugins={[
                     rehypeRaw,
@@ -33,13 +33,13 @@ const MarkdownRenderer = () => {
                 ]}
                 components={{
                     pre: ({ children }) => (
-                        <div className="code-block my-3">
+                        <div className="my-3 code-block">
                             <pre>{children}</pre>
                         </div>
                     ),
                     li: ({ children }) => <li className="custom-li">{children}</li>,
                 }}
-                className="space-y-1"
+                className="space-y-2"
             >
                 {markdownContent}
             </ReactMarkdown>
