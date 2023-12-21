@@ -12,7 +12,6 @@ export default function FeedBack() {
   const [comentario, setComentario] = useState('');
   const {
     handleSubmit,
-    register,
     formState: { isSubmitting },
   } = useForm();
 
