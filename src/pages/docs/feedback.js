@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { Footer } from '../../components/Footer';
 import { ArrowLeftIcon } from 'lucide-react';
 import { Nav } from '../../components/Nav';
@@ -9,10 +10,13 @@ export default function FeedBack() {
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
   const [comentario, setComentario] = useState('');
+  const {
+    handleSubmit,
+    register,
+    formState: { isSubmitting },
+  } = useForm();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
+  const onSubmit = async () => {
     const isDarkMode = window.matchMedia(
       '(prefers-color-scheme: dark)',
     ).matches;
@@ -52,7 +56,7 @@ export default function FeedBack() {
     <>
       <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-30" />
       <form
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit(onSubmit)}
         className="xl:w-1/3 p-10 h-screen flex justify-center mx-auto text-text-primary text-left flex-col space-y-4"
       >
         <ArrowLeftIcon
@@ -100,8 +104,9 @@ export default function FeedBack() {
           <button
             className="flex justify-center mx-auto px-2 py-1 font-semibold outline-4 outline-offset-2 outline-lime-400 rounded-full bg-button-variant shadow-sm shadow-zinc-400 dark:!shadow text-text-variant hover:opacity-90"
             type="submit"
+            disabled={isSubmitting}
           >
-            Enviar
+            {isSubmitting ? 'Enviando' : 'Enviar'}
           </button>
         </div>
       </form>

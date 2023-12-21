@@ -1038,9 +1038,24 @@ export default function SqlDocs() {
           <SectionTitle title="Modelos Django" />
           <article>
             <p>
-              Los modelos de Django son un nivel de abstracción sobre SQL que
-              nos permite trabajar con bases de datos utilizando clases y
-              objetos de Python en lugar de consultas SQL directas.
+              Los
+              <Link
+                href="https://docs.djangoproject.com/en/4.0/topics/db/models/"
+                className="text-[#00BCF2] mx-1"
+              >
+                modelos de Django
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              son un nivel de
+              <Link
+                href="https://techterms.com/definition/abstraction"
+                className="text-[#00BCF2] mx-1"
+              >
+                abstracción
+                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              </Link>
+              sobre SQL que nos permite trabajar con bases de datos utilizando
+              clases y objetos de Python en lugar de consultas SQL directas.
             </p>
             <p>
               Comencemos a usar modelos creando un proyecto de Django para
@@ -1053,6 +1068,98 @@ export default function SqlDocs() {
               python manage.py startapp flights
               `
             }</Pre>
+            <p>
+              Ahora tendremos que pasar por el proceso de agregar una aplicación
+              como de costumbre:
+            </p>
+            <ol>
+              <li className="list-css-span">
+                Agrega 'flights' a la lista INSTALLED_APPS en
+                <span>settings.py</span>.
+              </li>
+              <li className="list-css-span">
+                Agrega una ruta para 'flights' en<span>urls.py</span>:
+              </li>
+              <Pre lang="python">{
+                /*python */ `
+                path("flights/", include("flights.urls")),
+                `
+              }</Pre>
+              <li className="list-css-span">
+                Crea un archivo<span>urls.py</span>dentro de la aplicación
+                "flights" y llénalo con las importaciones y listas estándar de
+                <span>urls.py</span>.
+              </li>
+            </ol>
+            <p>
+              Ahora, en lugar de crear rutas reales y empezar con views.py,
+              crearemos algunos modelos en el archivo models.py. En este
+              archivo, delinearemos los datos que queremos almacenar en nuestra
+              aplicación. Luego, Django determinará la sintaxis SQL necesaria
+              para almacenar información sobre cada uno de nuestros modelos.
+              Echemos un vistazo a cómo podría ser el modelo para un vuelo
+              individual:
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+                class Flight(models.Model):
+                origin = models.CharField(max_length=64)
+                destination = models.CharField(max_length=64)
+                duration = models.IntegerField()
+                `
+            }</Pre>
+            <p>
+              Echemos un vistazo a lo que está sucediendo en esta definición de
+              modelo:
+            </p>
+            <ul>
+              <li>
+                En la primera línea, creamos un nuevo modelo que extiende la
+                clase de modelo de Django.
+              </li>
+              <li>
+                A continuación, agregamos campos para origen, destino y
+                duración. Los dos primeros son campos
+                <Link
+                  href="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#charfield"
+                  className="text-[#00BCF2] mx-1"
+                >
+                  Char
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                </Link>
+                , lo que significa que almacenan cadenas, y el tercero es un
+                campo
+                <Link
+                  href="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#integerfield"
+                  className="text-[#00BCF2] mx-1"
+                >
+                  Integer
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                </Link>
+                . Estos son solo dos de las muchas
+                <Link
+                  href="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#built-in-field-classes"
+                  className="text-[#00BCF2] mx-1"
+                >
+                  clases de campos integradas
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                </Link>
+                en Django.
+              </li>
+              <li>
+                Especificamos longitudes máximas de 64 para los dos campos de
+                caracteres. Puedes verificar las especificaciones disponibles
+                para un campo dado consultando la
+                <Link
+                  href="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#built-in-field-classes"
+                  className="text-[#00BCF2] mx-1"
+                >
+                  documentación
+                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                </Link>
+                .
+              </li>
+            </ul>
           </article>
           <ShareButton setTitle={SqlDocs.title} />
         </div>

@@ -48,7 +48,7 @@ export const Pre = ({ children, lang = '' }) => {
       <Highlight
         theme={themes.vsDark}
         code={removeIndent(children)}
-        language={lang}
+        language={lang.toLowerCase()}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre className={className} style={style} ref={preRef}>
