@@ -23,7 +23,7 @@ export default function FeedBack() {
 
     if (!nombre || !email || !comentario) {
       toast.error('Por favor, completa todos los campos.', {
-        position: toast.POSITION.BOTTOM_LEFT,
+        position: toast.POSITION.TOP_RIGHT,
         theme: isDarkMode ? 'dark' : 'light',
       });
       return;
@@ -39,13 +39,13 @@ export default function FeedBack() {
 
     if (response.ok) {
       toast('Feedback enviado correctamente', {
-        position: toast.POSITION.BOTTOM_LEFT,
+        position: toast.POSITION.TOP_RIGHT,
         type: 'success',
         theme: isDarkMode ? 'dark' : 'light',
       });
     } else {
       toast('Error al enviar el feedback', {
-        position: toast.POSITION.BOTTOM_LEFT,
+        position: toast.POSITION.TOP_RIGHT,
         type: 'error',
         theme: isDarkMode ? 'dark' : 'light',
       });
