@@ -14,7 +14,7 @@ export default function CsvSheets() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          'https://docs.google.com/spreadsheets/d/e/2PACX-1vTJzdlPCNykOkJWbmkFcc3Iw0ZNSVwEnUDgrtCGr0pfDRfVNZmp_iTMaGZfU0z4njNWlFoJ3y3LwFPv/pub?output=csv',
+          'https://docs.google.com/spreadsheets/d/e/2PACX-1vTZrR78S4ElPf8QchbHMYPLBrirCqH73WLpT4EKgnAK7sJW54AKII92O_QxE1N6zdXLUXlp9jSkIBy8/pub?output=csv',
         );
         const csv = await response.text();
         const parsedItems = csv
