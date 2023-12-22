@@ -71,7 +71,7 @@ export default function CsvSheets() {
                 <p className="text-2xl font-mono text-center py-2">{pic.id}</p>
                 <span>
                   <CalendarClockIcon className="w-4 mx-1 inline mb-1" />
-                  {pic.posted}
+                  Publicado el {pic.posted}
                 </span>
                 <span className="bg-button-variant text-text-variant font-semibold font-mono p-1 w-fit float-right my-3 rounded-md">
                   Price: U$D {pic.price}

@@ -88,7 +88,7 @@ export const GoogleSheetsExample = () => {
                                 'TU_LINK_DE_GOOGLE_SHEETS',
                             );
                             const csv = await response.text();
-                            const parsedDrawings = csv
+                            const parsedItems = csv
                                 .split('\\n'\)
                                 .slice(1)
                                 .map((row) => {
