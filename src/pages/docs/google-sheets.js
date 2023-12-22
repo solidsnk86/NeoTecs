@@ -75,7 +75,7 @@ export default function CsvSheets() {
                 <img
                   className="rounded-md"
                   src={pic.image}
-                  alt="Drawing GerArt"
+                  alt="Items Google Sheets"
                 />
                 <aside className="font-light my-3">
                   <span>Publicado el {pic.posted}</span>

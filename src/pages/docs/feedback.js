@@ -37,11 +37,14 @@ export default function FeedBack() {
     });
 
     if (response.ok) {
-      toast('Feedback enviado correctamente', {
-        position: toast.POSITION.TOP_RIGHT,
-        type: 'success',
-        theme: isDarkMode ? 'dark' : 'light',
-      });
+      toast(
+        `Muchas gracias por tu feedback ${nombre}. Estaremos en contacto pronto!`,
+        {
+          position: toast.POSITION.TOP_RIGHT,
+          type: 'success',
+          theme: isDarkMode ? 'dark' : 'light',
+        },
+      );
     } else {
       toast('Error al enviar el feedback', {
         position: toast.POSITION.TOP_RIGHT,
