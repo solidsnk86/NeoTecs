@@ -14,7 +14,7 @@ export default function CsvSheets() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          'https://docs.google.com/spreadsheets/d/16cnpqOETeQgx7AtuEumlpAlqb1iCFkx_OtKXVEIH2b0/edit?usp=drivesdk',
+          'https://docs.google.com/spreadsheets/d/e/2PACX-1vTJzdlPCNykOkJWbmkFcc3Iw0ZNSVwEnUDgrtCGr0pfDRfVNZmp_iTMaGZfU0z4njNWlFoJ3y3LwFPv/pub?output=csv',
         );
         const csv = await response.text();
         const parsedItems = csv
@@ -71,7 +71,7 @@ export default function CsvSheets() {
                 <p className="text-2xl font-mono text-center py-2">{pic.id}</p>
                 <span>
                   <CalendarClockIcon className="w-4 mx-1 inline mb-1" />
-                  Publicado • {pic.posted}
+                  {pic.posted}
                 </span>
                 <span className="bg-button-variant text-text-variant font-semibold font-mono p-1 w-fit float-right my-3 rounded-md">
                   Price: U$D {pic.price}
