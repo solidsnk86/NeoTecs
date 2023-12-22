@@ -141,7 +141,7 @@ export const GoogleSheetsExample = () => {
         una constante:
       </p>
       <pre lang="javascript" className="code-block text-zinc-100 p-1 my-2">
-        const parsedrawings = csv.slpit('\n').slice(1)
+        const parseItems = csv.slpit('\n').slice(1)
       </pre>
       <p className="list-css-span">
         El<span>split('\n')</span>nos da el formato respetando separando cada
