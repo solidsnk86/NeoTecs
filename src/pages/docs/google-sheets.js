@@ -67,12 +67,8 @@ export default function CsvSheets() {
               </p>
             </article>
             {items.map((pic) => (
-              <article key={pic.id}>
+              <article key={pic.id} className="mt-3">
                 <p className="text-2xl font-mono text-center py-2">{pic.id}</p>
-                <span>
-                  <CalendarClockIcon className="w-4 mx-1 inline mb-1" />
-                  Publicado el {pic.posted}
-                </span>
                 <span className="bg-button-variant text-text-variant font-semibold font-mono p-1 w-fit float-right my-3 rounded-md">
                   Price: U$D {pic.price}
                 </span>
@@ -81,8 +77,12 @@ export default function CsvSheets() {
                   src={pic.image}
                   alt="Drawing GerArt"
                 />
-                <aside className="text-center font-semibold my-3">
-                  <p>{pic.name}</p>
+                <aside className="font-light my-3">
+                  <span>Publicado el {pic.posted}</span>
+                  <CalendarClockIcon className="w-4 mx-1 inline mb-1" />
+                  <p className="bg-red-500 p-1 w-fit font-semibold rounded-md">
+                    {pic.name}
+                  </p>
                   <p>{pic.description}</p>
                 </aside>
               </article>

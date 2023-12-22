@@ -2,7 +2,7 @@ import { Pre } from './Pre';
 
 export const GoogleSheetsExample = () => {
   return (
-    <article className="p-8 justify-center mx-auto text-text-primary article-sheets">
+    <article className="p-5 justify-center mx-auto text-text-primary article-sheets">
       <h1 className="text-center text-text-primary text-2xl my-6 underline">
         Bien para darle vida a ésto seguiremos los siguientes pasos
       </h1>
