@@ -105,7 +105,7 @@ export default function FeedBack() {
             type="submit"
             disabled={isSubmitting}
           >
-            {isSubmitting ? 'Enviando...' : 'Enviar'}
+            {isSubmitting ? 'Enviando..' : 'Enviar'}
           </button>
         </div>
       </form>
