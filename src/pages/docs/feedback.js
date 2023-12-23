@@ -12,9 +12,16 @@ export default function FeedBack() {
   const [comentario, setComentario] = useState('');
   const {
     handleSubmit,
+    setValue,
     reset,
     formState: { isSubmitting },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      nombre: '',
+      email: '',
+      comentario: '',
+    },
+  });
 
   const onSubmit = async () => {
     const isDarkMode = window.matchMedia(
@@ -46,11 +53,9 @@ export default function FeedBack() {
           theme: isDarkMode ? 'dark' : 'light',
         },
       );
-      reset({
-        nombre: '',
-        email: '',
-        comentario: '',
-      });
+      setValue('nombre', '');
+      setValue('email', '');
+      setValue('comentario', '');
     } else {
       toast('Error al enviar el feedback', {
         position: toast.POSITION.TOP_RIGHT,
@@ -84,7 +89,6 @@ export default function FeedBack() {
           <label className="label-feedback">
             Nombre:
             <input
-              {...reset}
               type="text"
               value={nombre}
               onChange={(e) => setNombre(e.target.value)}
