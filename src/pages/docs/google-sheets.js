@@ -6,10 +6,22 @@ import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import { GoogleSheetsExample } from '../../components/GoogleSheetsExample';
 import { Footer } from '../../components/Footer';
 import { CalendarClockIcon } from 'lucide-react';
-import { Fullscreen } from '@mui/icons-material';
+import CustomModal from '../../components/CustomModal';
 
 export default function CsvSheets() {
   const [items, setItems] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState('');
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedImage('');
+    setModalIsOpen(false);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -75,9 +87,15 @@ export default function CsvSheets() {
                   Price: U$D {pic.price}
                 </span>
                 <img
-                  className="img-csv rounded-xl"
+                  className="img-csv rounded-xl cursor-pointer"
                   src={pic.image}
                   alt="Items Google Sheets"
+                  onClick={() => openModal(pic.image)}
+                />
+                <CustomModal
+                  isOpen={modalIsOpen}
+                  onClose={closeModal}
+                  image={selectedImage}
                 />
                 <aside className="font-light my-3">
                   <span>Publicado el {pic.posted}</span>
