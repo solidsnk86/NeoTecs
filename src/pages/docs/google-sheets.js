@@ -88,7 +88,7 @@ export default function CsvSheets() {
                   Price: U$D {pic.price}
                 </span>
                 <img
-                  className="img-csv rounded-xl cursor-pointer"
+                  className="img-csv rounded-xl"
                   src={pic.image}
                   alt="Items Google Sheets"
                   onClick={() => openModal(pic.image)}

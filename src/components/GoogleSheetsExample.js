@@ -1,28 +1,8 @@
 import { Pre } from './Pre';
-import { useState } from 'react';
-import CustomModal from './CustomModal';
 
 export const GoogleSheetsExample = () => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState('');
-
-  const openModal = (imageURL) => {
-    setModalIsOpen(true);
-    setSelectedImage(imageURL);
-  };
-
-  const closeModal = () => {
-    setModalIsOpen(false);
-    setSelectedImage('');
-  };
-
   return (
     <article className="justify-center mx-auto text-text-primary article-sheets">
-      <CustomModal
-        isOpen={modalIsOpen}
-        onClose={closeModal}
-        imageURL={selectedImage}
-      />
       <h1 className="text-center text-text-primary text-2xl my-6 underline">
         Bien para darle vida a ésto seguiremos los siguientes pasos
       </h1>
@@ -40,11 +20,11 @@ export const GoogleSheetsExample = () => {
         imagen; por ejemplo, en mi caso, he utilizado imágenes de un repositorio
         de GitHub y, para probar, un enlace de Google Fotos.
       </p>
+
       <div className="images-client my-3">
         <img
           src="/images/google-sheets.png"
           alt="Hojas de cálculo de Google."
-          onClick={() => openModal('/images/google-sheets.png')}
         />
       </div>
       <p className=" list-css-span">
@@ -60,7 +40,6 @@ export const GoogleSheetsExample = () => {
         <img
           src="/images/google-sheets-1.png"
           alt="Hojas de cálculo de Google."
-          onClick={() => openModal('/images/google-sheets-1.png')}
         />
       </div>
       <p>A continuación nos aparecerá una ventana como ésta:</p>
@@ -68,7 +47,6 @@ export const GoogleSheetsExample = () => {
         <img
           src="/images/google-sheets-2.png"
           alt="Hojas de cálculo de Google."
-          onClick={() => openModal('/images/google-sheets-2.png')}
         />
       </div>
       <p className=" list-css-span">
@@ -84,7 +62,6 @@ export const GoogleSheetsExample = () => {
         <img
           src="/images/google-sheets-3.png"
           alt="Hojas de cálculo de Google."
-          onClick={() => openModal('/images/google-sheets-3.png')}
         />
       </div>
       <p>
