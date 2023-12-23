@@ -12,8 +12,6 @@ export default function FeedBack() {
   const [comentario, setComentario] = useState('');
   const {
     handleSubmit,
-    setValue,
-    reset,
     formState: { isSubmitting },
   } = useForm({
     defaultValues: {
@@ -53,9 +51,6 @@ export default function FeedBack() {
           theme: isDarkMode ? 'dark' : 'light',
         },
       );
-      setValue('nombre', '');
-      setValue('email', '');
-      setValue('comentario', '');
     } else {
       toast('Error al enviar el feedback', {
         position: toast.POSITION.TOP_RIGHT,
