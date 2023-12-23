@@ -102,8 +102,8 @@ export default function FeedBack() {
             <textarea
               value={comentario}
               onChange={(e) => setComentario(e.target.value)}
-              placeholder=" Comentario..."
-              className=" h-32"
+              placeholder="Comentario..."
+              className=" h-32 resize-y"
             />
           </label>
 
