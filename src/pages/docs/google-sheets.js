@@ -92,13 +92,13 @@ export default function CsvSheets() {
             {items.map((pic) => (
               <article key={pic.id} className="mt-3">
                 <p className="text-2xl font-mono text-center py-2">{pic.id}</p>
-                <p
+                <span
                   className="cursor-pointer hover:underline hover:text-lime-500 font-mono text-sm"
                   onClick={() => sendWhatsapp(pic.id, pic.price)}
                 >
                   Encargar
                   <WhatsApp className=" mx-1 mb-1 w-3" />
-                </p>
+                </span>
                 <span className="bg-button-variant text-text-variant font-semibold font-mono p-1 w-fit float-right my-3 rounded-md">
                   Price: U$D {pic.price}
                 </span>
