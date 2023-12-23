@@ -7,6 +7,7 @@ import { GoogleSheetsExample } from '../../components/GoogleSheetsExample';
 import { Footer } from '../../components/Footer';
 import { CalendarClockIcon } from 'lucide-react';
 import CustomModal from '../../components/CustomModal';
+import { WhatsApp } from '@mui/icons-material';
 
 export default function CsvSheets() {
   const [items, setItems] = useState([]);
@@ -59,6 +60,13 @@ export default function CsvSheets() {
     return <Tag className="text-text-primary font-mono">{children}</Tag>;
   };
 
+  const sendWhatsapp = (id, price) => {
+    const wapNumber = '+5492604586538';
+    const wapMessage = `Buenas estoy interesado en el dibujo de ${id}! Lo quiero en mi colección por ese importe de U$D ${price}. El envío está incluido?`;
+    const wapUrl = `https://wa.me/${wapNumber}?text=${wapMessage}`;
+    window.open(wapUrl);
+  };
+
   return (
     <TitlesContextProvider>
       <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-30" />
@@ -84,6 +92,13 @@ export default function CsvSheets() {
             {items.map((pic) => (
               <article key={pic.id} className="mt-3">
                 <p className="text-2xl font-mono text-center py-2">{pic.id}</p>
+                <p
+                  className="cursor-pointer hover:underline hover:text-lime-500 font-mono text-sm"
+                  onClick={() => sendWhatsapp(pic.id, pic.price)}
+                >
+                  Encargar
+                  <WhatsApp className=" mx-1 mb-1 w-3" />
+                </p>
                 <span className="bg-button-variant text-text-variant font-semibold font-mono p-1 w-fit float-right my-3 rounded-md">
                   Price: U$D {pic.price}
                 </span>
