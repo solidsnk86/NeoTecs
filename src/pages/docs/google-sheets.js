@@ -13,8 +13,8 @@ export default function CsvSheets() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
 
-  const openModal = (image) => {
-    setSelectedImage(image);
+  const openModal = (imageURL) => {
+    setSelectedImage(imageURL);
     setModalIsOpen(true);
   };
 
@@ -34,7 +34,7 @@ export default function CsvSheets() {
           .split('\n')
           .slice(1)
           .map((row) => {
-            const [id, name, description, image, price, posted] =
+            const [id, name, description, image, price, posted, sales] =
               row.split(',');
             return {
               id,
@@ -43,6 +43,7 @@ export default function CsvSheets() {
               image,
               price: Number(price),
               posted,
+              sales,
             };
           });
         setItems(parsedItems);
@@ -95,11 +96,14 @@ export default function CsvSheets() {
                 <CustomModal
                   isOpen={modalIsOpen}
                   onClose={closeModal}
-                  image={selectedImage}
+                  imageURL={selectedImage}
                 />
                 <aside className="font-light my-3">
                   <span>Publicado el {pic.posted}</span>
                   <CalendarClockIcon className="w-4 mx-1 inline mb-1" />
+                  <span className=" uppercase font-mono px-1 bg-button-variant rounded-md float-right text-text-variant font-semibold">
+                    {pic.sales}
+                  </span>
                   <p className="bg-red-500 text-text-variant p-1 w-fit font-semibold rounded-md">
                     {pic.name}
                   </p>

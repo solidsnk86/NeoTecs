@@ -13,7 +13,7 @@ const CustomModal = ({ isOpen, onClose, imageURL }) => {
     >
       <img
         src={imageURL}
-        className="w-full h-full xl:h-[200%] xl:w-[200%]"
+        className="w-full h-full xl:h-[300%] xl:w-[200%]"
         alt="Ampliación de Imagen"
       />
       <button
