@@ -61,7 +61,7 @@ export const NavSwitch = ({ inline }) => {
   const isActive = (link) => link.href === router.asPath;
   return (
     <div
-      className={`inline-block mb-4 border border-slate-400 border-opacity-20 overflow-hidden mt-16 xl:w-[200px] w-100% xl:h-60 xl:overflow-y-auto scroll-style ${
+      className={`inline-block mb-4 border border-slate-400 border-opacity-20 rounded-xl overflow-hidden mt-16 xl:w-[200px] w-100% xl:h-60 xl:overflow-y-auto scroll-style ${
         inline
           ? 'mb-8 lg:hidden w-100% flex overflow-x-scroll border-none text-text-primary text-xs gap-1 z-20 nav-switch'
           : ''
@@ -74,7 +74,7 @@ export const NavSwitch = ({ inline }) => {
           className={`p-1 xl:p-2 w-full flex duration-100 !no-underline ${
             isActive(link)
               ? 'xl:bg-[cornflowerblue] border-orange-400 border-b-4 xl:border-none'
-              : 'hover:bg-[#7a7a7a] hover:opacity-90'
+              : 'dark:hover:bg-[#202327] hover:bg-[#BDC5CC] hover:opacity-90'
           }`}
         >
           <h3

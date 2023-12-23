@@ -6,6 +6,7 @@ import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import { GoogleSheetsExample } from '../../components/GoogleSheetsExample';
 import { Footer } from '../../components/Footer';
 import { CalendarClockIcon } from 'lucide-react';
+import { Fullscreen } from '@mui/icons-material';
 
 export default function CsvSheets() {
   const [items, setItems] = useState([]);
@@ -44,6 +45,7 @@ export default function CsvSheets() {
   const SheetsTitle = ({ Tag = 'h1', children }) => {
     return <Tag className="text-text-primary font-mono">{children}</Tag>;
   };
+
   return (
     <TitlesContextProvider>
       <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-30" />
@@ -57,7 +59,7 @@ export default function CsvSheets() {
             <h1 className="mt-10 flex justify-center mx-auto text-6xl text-transparent relative bottom-[2px] [-webkit-text-stroke-width:4px] [-webkit-text-stroke-color:var(--color-on-surface)]">
               GerArt
             </h1>
-            <article className="border border-zinc-200 dark:border-zinc-800 rounded-md text-center p-3">
+            <article className="bg-[#F7F9F9] dark:bg-[#16181C] border border-zinc-100/80 dark:border-zinc-800 rounded-xl text-center p-3">
               <p>¡Bienvenidos a ésta sección de arte y dibujo!</p>
               <p>
                 En esta ocasión, aprenderemos cómo crear una base de datos
@@ -73,14 +75,14 @@ export default function CsvSheets() {
                   Price: U$D {pic.price}
                 </span>
                 <img
-                  className="rounded-md"
+                  className="img-csv rounded-xl"
                   src={pic.image}
                   alt="Items Google Sheets"
                 />
                 <aside className="font-light my-3">
                   <span>Publicado el {pic.posted}</span>
                   <CalendarClockIcon className="w-4 mx-1 inline mb-1" />
-                  <p className="bg-red-500 p-1 w-fit font-semibold rounded-md">
+                  <p className="bg-red-500 text-text-variant p-1 w-fit font-semibold rounded-md">
                     {pic.name}
                   </p>
                   <p>{pic.description}</p>
