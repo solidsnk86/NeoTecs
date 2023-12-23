@@ -77,7 +77,7 @@ export default function Scraping() {
                         </span>
                     </p>
                 </div>
-                <p className='text-center justify-center mx-auto my-3 bg-button-variant text-text-variant w-fit p-2'>Si tienen alguna consulta para hacer los escucho en mi
+                <p className='text-center justify-center mx-auto my-10 bg-button-variant text-text-variant w-fit p-2'>Si tienen alguna consulta para hacer los escucho en mi
                     <Link href="/docs/feedback" className='underline text-red-500 mx-1'>
                         feedback,
                     </Link>

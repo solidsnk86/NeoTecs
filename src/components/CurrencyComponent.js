@@ -1,5 +1,6 @@
 import { data } from 'autoprefixer';
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 export default function CurrencyConverter() {
   const [currency, setCurrency] = useState('');
@@ -7,9 +8,12 @@ export default function CurrencyConverter() {
   const [date, setDate] = useState('');
   const [update, setUpdate] = useState('');
   const [borderColor, setborderColor] = useState('border-red-400');
+  const {
+    handleSubmit,
+    formState: { isSubmitting },
+  } = useForm();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (e) => {
     setborderColor('border-green-400');
 
     try {
@@ -39,7 +43,7 @@ export default function CurrencyConverter() {
   return (
     <div>
       <form
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col w-fit justify-center mx-auto xl:block xl:justify-normal xl:m-0"
       >
         <label
@@ -54,13 +58,13 @@ export default function CurrencyConverter() {
           value={currency}
           placeholder="Ingrese la Divisa"
           onChange={(e) => setCurrency(e.target.value)}
-          className="text-black uppercase font-semibold my-6 placeholder:text-center placeholder:capitalize rounded outline-4 border"
+          className="text-black uppercase font-semibold my-6 placeholder:text-center placeholder:capitalize rounded outline-4 border border-zinc-300"
         />
         <button
           type="submit"
           className="rounded px-4 mx-3 mb-3 outline-2 dark:outline-amber-400 outline-[#0F0F0F] outline-offset-[3px] outline-double bg-button-variant text-text-variant font-semibold hover:brightness-110"
         >
-          Convertir
+          {isSubmitting ? 'Convirtiendo' : 'Convertir'}
         </button>
       </form>
       <div
