@@ -46,6 +46,11 @@ export default function FeedBack() {
           theme: isDarkMode ? 'dark' : 'light',
         },
       );
+      reset({
+        nombre: '',
+        email: '',
+        comentario: '',
+      });
     } else {
       toast('Error al enviar el feedback', {
         position: toast.POSITION.TOP_RIGHT,
