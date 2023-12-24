@@ -112,7 +112,7 @@ export default function CsvSheets() {
                   <span className=" uppercase font-mono px-1 bg-button-variant rounded-md float-right text-text-variant font-semibold">
                     {pic.sales}
                   </span>
-                  <p className="bg-red-500 text-text-variant p-1 w-fit font-semibold rounded-md">
+                  <p className="bg-red-500 text-text-variant text-sm p-1 w-fit font-semibold rounded-md">
                     {pic.name}
                   </p>
                   <p>{pic.description}</p>
