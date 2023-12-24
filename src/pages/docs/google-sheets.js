@@ -92,13 +92,6 @@ export default function CsvSheets() {
             {items.map((pic) => (
               <article key={pic.id} className="mt-3">
                 <p className="text-2xl font-mono text-center py-2">{pic.id}</p>
-                <span
-                  className="cursor-pointer hover:underline hover:text-lime-500 font-mono text-sm"
-                  onClick={() => sendWhatsapp(pic.id, pic.price)}
-                >
-                  Encargar
-                  <WhatsApp className=" mx-1 mb-1 w-3" />
-                </span>
                 <span className="bg-button-variant text-text-variant font-semibold font-mono p-1 w-fit float-right my-3 rounded-md">
                   Price: U$D {pic.price}
                 </span>
@@ -114,7 +107,7 @@ export default function CsvSheets() {
                   imageURL={selectedImage}
                 />
                 <aside className="font-light my-3">
-                  <span>Publicado el {pic.posted}</span>
+                  <span>Publicado {pic.posted}</span>
                   <CalendarClockIcon className="w-4 mx-1 inline mb-1" />
                   <span className=" uppercase font-mono px-1 bg-button-variant rounded-md float-right text-text-variant font-semibold">
                     {pic.sales}
@@ -123,6 +116,13 @@ export default function CsvSheets() {
                     {pic.name}
                   </p>
                   <p>{pic.description}</p>
+                  <span
+                    className="cursor-pointer hover:underline hover:text-lime-500 font-mono text-sm"
+                    onClick={() => sendWhatsapp(pic.id, pic.price)}
+                  >
+                    Encargar
+                    <WhatsApp className=" mx-1 mb-1 w-3" />
+                  </span>
                 </aside>
               </article>
             ))}
