@@ -20,6 +20,7 @@ module.exports = {
         'text-primary': 'var(--color-on-surface)',
         'card-bg': 'var(--color-surface-variant)',
         'button-variant': 'var(--button-variant)',
+        'bg-card': 'var(--bg-card)',
         outline: 'var(--color-outline)',
         'text-variant': 'var(--color-surface-variant)',
         'text-strong': '#AD2680',

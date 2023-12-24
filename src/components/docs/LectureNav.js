@@ -19,14 +19,14 @@ export function LectureNav() {
           <ArrowLeftIcon className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all" />
         </Link>
         <NavSwitch />
-        <ul className="text-sm overflow-y-auto">
+        <ul className="text-xs overflow-y-auto">
           {titles.map((title) => (
             <li key={title.slug}>
               <a
                 href={`#${title.slug}`}
                 className={`text-[cornflowerblue] px-2 py-1 block rounded hover:underline hover:text-primary font-medium duration-100 ${
                   selectedSlug === title.slug
-                    ? 'bg-[#CCCCCC] bg-opacity-10 text-[#6E51F3]'
+                    ? ' bg-card-bg bg-opacity-10 text-[#6E51F3]'
                     : ''
                 }`}
                 onClick={() => handleTitleClick(title.slug)}

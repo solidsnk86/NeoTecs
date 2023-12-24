@@ -202,12 +202,12 @@ export default function Python() {
                 Para escribir y ejecutar este programa en sus computadoras,
                 primero escribirán esta línea en su editor de texto preferido y
                 luego guardarán el archivo con un nombre, por ejemplo,
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   "algo.py"
                 </span>
                 . Luego, abrirán su terminal, se dirigirán al directorio que
                 contiene el archivo y escribirán
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   "python algo.py"
                 </span>
                 . En el caso del programa anterior, las palabras "¡Hola, mundo!"
@@ -300,7 +300,7 @@ export default function Python() {
               que muestra un mensaje al usuario y devuelve lo que el usuario
               proporciona como entrada. Por ejemplo, podemos escribir lo
               siguiente en un archivo llamado
-              <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+              <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                 "name.py"
               </span>
               :
@@ -347,7 +347,7 @@ export default function Python() {
                 simplemente agregamos una f antes de las comillas. Por ejemplo,
                 en lugar de usar "Hello, " + name como hicimos anteriormente,
                 podríamos escribir
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   {'f"Hello, {name}" '}
                 </span>
                 para obtener el mismo resultado. Incluso podemos insertar una
@@ -421,7 +421,7 @@ export default function Python() {
                 que una variable fuera de un tipo específico, pero encontró que
                 era de otro tipo. En este caso, la excepción nos dice que no
                 podemos usar el símbolo
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   {'>'}
                 </span>
                 para comparar una cadena
@@ -515,11 +515,11 @@ export default function Python() {
               continuación. Al igual que con las cadenas, podemos imprimir una
               lista completa o algunos elementos individuales. También podemos
               agregar elementos a una lista utilizando
-              <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+              <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                 append
               </span>
               y ordenar una lista utilizando
-              <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+              <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                 sort
               </span>
               .
@@ -626,7 +626,7 @@ export default function Python() {
                 quitar elementos de ese conjunto, y la función
                 <b className="text-sky-400 mx-1">"len"</b> para encontrar el
                 tamaño del conjunto. Ten en cuenta que la función
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   "len"
                 </span>
                 funciona en todas las secuencias en Python. También ten en
@@ -728,11 +728,11 @@ export default function Python() {
                 Los son una parte increíblemente importante de cualquier
                 lenguaje de programación, y en Python, existen dos formas
                 principales:
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   bucles for
                 </span>
                 y
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   bucles while
                 </span>
                 . Por ahora, nos centraremos en los bucles for.
@@ -740,7 +740,7 @@ export default function Python() {
               <ul>
                 <li>
                   Los bucles
-                  <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                  <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                     for
                   </span>
                   se utilizan para iterar sobre una secuencia de elementos,
@@ -834,11 +834,11 @@ export default function Python() {
             <article>
               <p>
                 Ya hemos visto algunas funciones de Python, como
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   print
                 </span>
                 e
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   input
                 </span>
                 , pero ahora vamos a adentrarnos en escribir nuestras propias
@@ -853,14 +853,14 @@ export default function Python() {
               }</Pre>
               <p>
                 Observa cómo utilizamos la palabra clave
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   "def"
                 </span>
                 para indicar que estamos definiendo una función, que estamos
                 tomando una única entrada llamada
                 <b className="text-sky-400 mx-1">"x"</b> y que utilizamos la
                 palabra clave
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   "return"
                 </span>
                 para indicar cuál debe ser la salida de la función.
@@ -898,7 +898,7 @@ export default function Python() {
                 A medida que nuestros proyectos se vuelvan más grandes, será
                 útil poder escribir funciones en un archivo y ejecutarlas en
                 otro. En el caso anterior, podríamos crear un archivo llamado
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   "functions.py"
                 </span>
                 con el código:
@@ -911,7 +911,7 @@ export default function Python() {
               }</Pre>
               <p>
                 Y otro archivo llamado
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   "square.py"
                 </span>
                 con el código:
@@ -924,7 +924,7 @@ export default function Python() {
               }</Pre>
               <p>
                 Sin embargo, cuando intentemos ejecutar
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   "square.py"
                 </span>
                 , nos adentraremos en el siguiente error:
@@ -939,7 +939,7 @@ export default function Python() {
                 <b className="text-sky-400 mx-1">"square"</b> desde el módulo
                 <b className="text-sky-400 mx-1">"functions"</b> que acabamos de
                 escribir. Ahora, cuando
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   "square.py"
                 </span>
                 se ve así:
@@ -1012,12 +1012,12 @@ export default function Python() {
               <p>
                 en en cuenta que en el código anterior, utilizamos la palabra
                 clave
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   "self"
                 </span>
                 para representar el objeto con el que estamos trabajando
                 actualmente.
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   "self"
                 </span>
                 debe ser el primer argumento para cualquier método dentro de una
@@ -1087,13 +1087,13 @@ export default function Python() {
               }</Pre>
               <p>
                 Observa que arriba utilizamos la línea
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   "if not self.open_seats()"
                 </span>
                 para determinar si hay o no asientos disponibles. Esto funciona
                 porque en Python, el número 0 puede interpretarse como False, y
                 también podemos usar la palabra clave
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
                   "not"
                 </span>
                 para indicar lo contrario de la declaración siguiente, por lo
