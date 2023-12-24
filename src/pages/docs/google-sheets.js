@@ -62,7 +62,7 @@ export default function CsvSheets() {
 
   const sendWhatsapp = (id, price) => {
     const wapNumber = '+5492604586538';
-    const wapMessage = `Buenas estoy interesado en el dibujo de ${id}! Lo quiero en mi colección por ese importe de U$D ${price}. El envío está incluido?`;
+    const wapMessage = `Buenas estoy interesado en el dibujo de ${id}! El cual tiene un importe de U$D ${price}. ¿El envío está incluido?`;
     const wapUrl = `https://wa.me/${wapNumber}?text=${wapMessage}`;
     window.open(wapUrl);
   };
@@ -121,7 +121,7 @@ export default function CsvSheets() {
                     onClick={() => sendWhatsapp(pic.id, pic.price)}
                   >
                     Encargar
-                    <WhatsApp className=" mx-1 mb-1 w-3" />
+                    <WhatsApp className=" mx-1 mb-1 w-4" />
                   </span>
                 </aside>
               </article>
