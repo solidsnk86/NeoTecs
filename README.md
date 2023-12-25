@@ -1,7 +1,8 @@
-# NeoTecs            ![GitHub Stars](https://img.shields.io/github/stars/solidsnk86/NeoTecs.svg?style=social)
+# NeoTecs ![GitHub Stars](https://img.shields.io/github/stars/solidsnk86/NeoTecs.svg?style=social)
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/206087bc-35c5-4333-a3e1-0c9e688e1953/deploy-status)](https://app.netlify.com/sites/neotecs/deploys)
 
-Explore our comprehensive web documentation designed to guide you through the process of programming and configuring wireless access points from various leading brands. Whether you are a seasoned developer or just getting started, our documentation offers step-by-step instructions, code examples, and valuable insights to streamline your experience. 
+Explore our comprehensive web documentation designed to guide you through the process of programming and configuring wireless access points from various leading brands. Whether you are a seasoned developer or just getting started, our documentation offers step-by-step instructions, code examples, and valuable insights to streamline your experience.
 
 - Tools and frames which i use in this project:
 
@@ -11,18 +12,15 @@ Explore our comprehensive web documentation designed to guide you through the pr
 
 [![Powered by Supabase](https://img.shields.io/badge/Powered_by-Supabase-336791?style=flat&logo=supabase&logoColor=white)](https://supabase.io/)
 
-
-| Language                                                                                            | Description                                 |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white)                | Markup language                             |
-| ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black) | Programming language                        |
+| Language                                                                                             | Description                                  |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white)                | Markup language                              |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black) | Programming language                         |
 | ![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?logo=typescript&logoColor=white) | Superset of JavaScript with static types     |
-| ![Next.js](https://img.shields.io/badge/Next.js-%23E34F26.svg?logo=next.js&logoColor=white)          | React framework                             |
-| ![Sass](https://img.shields.io/badge/Sass-%23CC6699.svg?logo=sass&logoColor=white)                   | Styling language                            |
-| ![Markdown](https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&logoColor=white)       | Lightweight markup language                 |
+| ![Next.js](https://img.shields.io/badge/Next.js-%23E34F26.svg?logo=next.js&logoColor=white)          | React framework                              |
+| ![Sass](https://img.shields.io/badge/Sass-%23CC6699.svg?logo=sass&logoColor=white)                   | Styling language                             |
+| ![Markdown](https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&logoColor=white)       | Lightweight markup language                  |
 | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23336791.svg?logo=postgresql&logoColor=white) | Backend database (e.g., for feedback system) |
-
-
 
 ![Static Badge](https://img.shields.io/badge/CONTRIBUTIONS-F44336)
 
@@ -58,16 +56,13 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[![API_Routes](https://img.shields.io/badge/API-Routes-lime)](https://nextjs.org/docs/api-routes/introduction) 
+[![API_Routes](https://img.shields.io/badge/API-Routes-lime)](https://nextjs.org/docs/api-routes/introduction)
 
 I have created this REST API to be used in an example for JavaScript, allowing access to currency exchange functionality, can be accessed on [https://neotecs.netlify.app/api/currency](https://neotecs.netlify.app/api/currency). This endpoint can be edited in `pages/api/currency.js`.
 
- If you are intrested how i use this REST API, i leave the example in this link below 👇
-
+If you are intrested how i use this REST API, i leave the example in this link below 👇
 
 [![Currency Exchange](https://img.shields.io/badge/Currency-Exchange-gold)](https://neotecs.netlify.app/docs/javascript#convertir-divisas)
-
-
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
