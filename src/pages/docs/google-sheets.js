@@ -35,7 +35,7 @@ export default function CsvSheets() {
           .split('\n')
           .slice(1)
           .map((row) => {
-            const [id, name, description, image, price, posted, sales] =
+            const [id, name, description, image, price, posted, isOnSale] =
               row.split(',');
             return {
               id,
@@ -44,7 +44,7 @@ export default function CsvSheets() {
               image,
               price: Number(price),
               posted,
-              sales,
+              isOnSale,
             };
           });
         setItems(parsedItems);
@@ -110,7 +110,7 @@ export default function CsvSheets() {
                   <span>Publicado {pic.posted}</span>
                   <CalendarClockIcon className="w-4 mx-1 inline mb-1" />
                   <span className=" uppercase font-mono px-1 bg-button-variant rounded-md float-right text-text-variant font-semibold">
-                    {pic.sales}
+                    {pic.isOnSale}
                   </span>
                   <p className="bg-red-500 text-text-variant text-sm p-1 w-fit font-semibold rounded-md">
                     {pic.name}
