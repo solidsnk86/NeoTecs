@@ -9,13 +9,22 @@ Explore our comprehensive web documentation designed to guide you through the pr
 [![Built with Tailwind CSS](https://img.shields.io/badge/Built_with-Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Powered by Next.js](https://img.shields.io/badge/Powered_by-Next.js-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
 
+- Backend
+[![Powered by Supabase](https://img.shields.io/badge/Powered_by-Supabase-336791?style=flat&logo=supabase&logoColor=white)](https://supabase.io/)
 
-| Lenguaje                                                                                             | Descripción         |
-| ---------------------------------------------------------------------------------------------------- | ------------------- |
-| ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white)                | Lenguaje de marcado |
-| ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black) | Programación        |
-| ![Next.js](https://img.shields.io/badge/Next.js-%23E34F26.svg?logo=next.js&logoColor=white)          | Framework de React  |
-| ![Sass](https://img.shields.io/badge/Sass-%23CC6699.svg?logo=sass&logoColor=white)                   | Estilos             |
+
+
+| Language                                                                                            | Description                                 |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white)                | Markup language                             |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black) | Programming language                        |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?logo=typescript&logoColor=white) | Superset of JavaScript with static types     |
+| ![Next.js](https://img.shields.io/badge/Next.js-%23E34F26.svg?logo=next.js&logoColor=white)          | React framework                             |
+| ![Sass](https://img.shields.io/badge/Sass-%23CC6699.svg?logo=sass&logoColor=white)                   | Styling language                            |
+| ![Markdown](https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&logoColor=white)       | Lightweight markup language                 |
+| ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23336791.svg?logo=postgresql&logoColor=white) | Backend database (e.g., for feedback system) |
+
+
 
 ![Static Badge](https://img.shields.io/badge/CONTRIBUTIONS-EC4899)
 
