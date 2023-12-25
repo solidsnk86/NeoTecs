@@ -24,7 +24,7 @@ Explore our comprehensive web documentation designed to guide you through the pr
 
 
 
-![Static Badge](https://img.shields.io/badge/CONTRIBUTIONS-EC4899)
+![Static Badge](https://img.shields.io/badge/CONTRIBUTIONS-F44336)
 
 If you find errors or wish to enhance this project, I invite you to contribute! You can do so by forking the repository and then making your modifications. Feel free to add more content, code examples, installation instructions, or any other improvements you deem relevant.
 
