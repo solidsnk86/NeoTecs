@@ -1,4 +1,5 @@
 # NeoTecs Website
+![GitHub Stars](https://img.shields.io/github/stars/solidsnk86/NeoTecs.svg?style=social)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/206087bc-35c5-4333-a3e1-0c9e688e1953/deploy-status)](https://app.netlify.com/sites/neotecs/deploys)
 
@@ -33,9 +34,7 @@ Once you've made your changes, you can submit a pull request for me to review yo
 
 `I look forward to your contributions!!`
 
-![GitHub Stars](https://img.shields.io/github/stars/solidsnk86/NeoTecs.svg?style=social)
-
-Neotecs website - to use these docs offline you must to install all npm modules:
+# Neotecs website - to use these docs offline you must to install all npm modules:
 
 ```bash
 npm install @latest
