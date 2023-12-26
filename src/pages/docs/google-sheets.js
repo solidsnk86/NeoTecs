@@ -6,37 +6,33 @@ import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import { GoogleSheetsExample } from '../../components/GoogleSheetsExample';
 import { Footer } from '../../components/Footer';
 import { CalendarClockIcon } from 'lucide-react';
-import CustomModal from '../../components/CustomModal';
 import { WhatsApp } from '@mui/icons-material';
+import { PictureBox } from '../../components/PictureBox';
 
 export default function CsvSheets() {
   const [items, setItems] = useState([]);
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState('');
-
-  const openModal = (imageURL) => {
-    setSelectedImage(imageURL);
-    setModalIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setSelectedImage('');
-    setModalIsOpen(false);
-  };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          'https://docs.google.com/spreadsheets/d/e/2PACX-1vTZrR78S4ElPf8QchbHMYPLBrirCqH73WLpT4EKgnAK7sJW54AKII92O_QxE1N6zdXLUXlp9jSkIBy8/pub?output=csv',
+          'https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJ2ICoQMLS-Dfem1ha7yjJQKMgTbZu9PExFjGh2rh6Pj4sgYTl2dBpJw02PQRckCG0SSpaiL6Vwwl/pub?output=csv',
         );
         const csv = await response.text();
         const parsedItems = csv
           .split('\n')
           .slice(1)
           .map((row) => {
-            const [id, name, description, image, price, posted, isOnSale] =
-              row.split(',');
+            const [
+              id,
+              name,
+              description,
+              image,
+              price,
+              posted,
+              isOnSale,
+              logo,
+            ] = row.split(',');
             return {
               id,
               name,
@@ -45,6 +41,7 @@ export default function CsvSheets() {
               price: Number(price),
               posted,
               isOnSale,
+              logo,
             };
           });
         setItems(parsedItems);
@@ -92,24 +89,18 @@ export default function CsvSheets() {
             {items.map((pic) => (
               <article key={pic.id} className="mt-3">
                 <p className="text-2xl font-mono text-center py-2">{pic.id}</p>
-                <span className="bg-button-variant text-text-variant font-semibold font-mono p-1 w-fit float-right my-3 rounded-md">
+                <span className="bg-button-variant text-text-variant font-semibold font-mono p-1 w-fit my-3 rounded-md">
                   Price: U$D {pic.price}
                 </span>
-                <img
-                  className="img-csv rounded-xl"
-                  src={pic.image}
-                  alt="Items Google Sheets"
-                  onClick={() => openModal(pic.image)}
-                />
-                <CustomModal
-                  isOpen={modalIsOpen}
-                  onClose={closeModal}
-                  imageURL={selectedImage}
+                <PictureBox
+                  bg={pic.image}
+                  logo={pic.logo}
+                  studios={pic.studio}
                 />
                 <aside className="font-light my-3">
                   <span>Publicado {pic.posted}</span>
                   <CalendarClockIcon className="w-4 mx-1 inline mb-1" />
-                  <span className=" uppercase font-mono px-1 bg-button-variant rounded-md float-right text-text-variant font-semibold">
+                  <span className=" uppercase font-mono px-1 mt-1 bg-button-variant rounded-md text-text-variant text-sm font-semibold">
                     {pic.isOnSale}
                   </span>
                   <p className="bg-red-500 text-text-variant text-sm p-1 w-fit font-semibold rounded-md">
