@@ -29,12 +29,16 @@ export const PictureBox = ({ bg, logo, studios }) => {
           alt="pic cover"
         />
         <img
-          className="game-box-logo w-5"
+          className="game-box-logo"
           data-atropos-offset="2.5"
           src={`${logo}`}
           alt="pic logo"
         />
-        <img className="game-box-studio" src={`${studios}`} alt="pic studio" />
+        <img
+          className="game-box-studio absolute left-1 top-1"
+          src={`${studios}`}
+          alt="pic studio"
+        />
       </Atropos>
     </div>
   );

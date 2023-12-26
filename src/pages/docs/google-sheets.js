@@ -32,6 +32,7 @@ export default function CsvSheets() {
               posted,
               isOnSale,
               logo,
+              studio,
             ] = row.split(',');
             return {
               id,
@@ -42,6 +43,7 @@ export default function CsvSheets() {
               posted,
               isOnSale,
               logo,
+              studio,
             };
           });
         setItems(parsedItems);
