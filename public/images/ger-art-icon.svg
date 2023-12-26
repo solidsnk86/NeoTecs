@@ -5,7 +5,7 @@
   viewBox="0 0 526 656"
 >
   <g fill="none" fill-rule="evenodd">
-    <rect width="526" height="80" fill="#FFF" />
+    <rect width="526" height="60" fill="#FFF" />
     <g fill="#000" fill-rule="nonzero">
       <path d="M526 0H0V72H526V0Z" fill="white" />
       <path

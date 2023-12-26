@@ -1,6 +1,6 @@
 import { Atropos } from 'atropos/react';
 
-export const PictureBox = ({ bg, logo, studio }) => {
+export const PictureBox = ({ bg, logo }) => {
   return (
     <div className="xl:w-80 my-10">
       <Atropos
@@ -29,7 +29,11 @@ export const PictureBox = ({ bg, logo, studio }) => {
           src={`${logo}`}
           alt="pic logo"
         />
-        <img className="game-box-studio" src={`${studio}`} alt="pic studio" />
+        <img
+          className="game-box-studio"
+          src="/images/ger-art-icon.svg"
+          alt="pic studio"
+        />
       </Atropos>
     </div>
   );
