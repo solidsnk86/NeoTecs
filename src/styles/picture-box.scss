@@ -39,7 +39,7 @@
   left: -5%;
   top: -5%;
   width: 110%;
-  height: 110%;
+  height: 100%;
 }
 .game-box img.game-box-size {
   position: relative;
@@ -48,6 +48,10 @@
   left: 0;
   top: 0;
   visibility: hidden;
+}
+.game-box img.game-box-studio {
+  position: relative;
+  top: -9%;
 }
 .game-box .atropos-rotate::before {
   content: '';
