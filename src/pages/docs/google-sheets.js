@@ -31,7 +31,6 @@ export default function CsvSheets() {
               price,
               posted,
               isOnSale,
-              logo,
               studio,
             ] = row.split(',');
             return {
@@ -42,7 +41,6 @@ export default function CsvSheets() {
               price: Number(price),
               posted,
               isOnSale,
-              logo,
               studio,
             };
           });
@@ -94,11 +92,7 @@ export default function CsvSheets() {
                 <span className="bg-button-variant text-text-variant font-semibold font-mono p-1 w-fit my-3 rounded-md">
                   Price: U$D {pic.price}
                 </span>
-                <PictureBox
-                  bg={pic.image}
-                  logo={pic.logo}
-                  studios={pic.studio}
-                />
+                <PictureBox bg={pic.image} studios={pic.studio} />
                 <aside className="font-light my-3">
                   <span>Publicado {pic.posted}</span>
                   <CalendarClockIcon className="w-4 mx-1 inline mb-1" />

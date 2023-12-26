@@ -24,12 +24,6 @@ export const PictureBox = ({ bg, logo, studios }) => {
           alt="pic cover"
         />
         <img
-          className="game-box-logo"
-          data-atropos-offset="2.5"
-          src={`${logo}`}
-          alt="pic logo"
-        />
-        <img
           className="game-box-studio sticky top-0"
           src={`${studios}`}
           alt="pic studio"
