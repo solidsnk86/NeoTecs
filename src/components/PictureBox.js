@@ -18,11 +18,6 @@ export const PictureBox = ({ bg, logo, studios }) => {
         }
       >
         <img
-          className="game-box-size"
-          src="/images/box-size.svg"
-          alt="pic bg"
-        />
-        <img
           className="game-box-bg"
           data-atropos-offset="-4"
           src={`${bg}`}
@@ -35,7 +30,7 @@ export const PictureBox = ({ bg, logo, studios }) => {
           alt="pic logo"
         />
         <img
-          className="game-box-studio absolute left-1 top-1"
+          className="game-box-studio sticky top-0"
           src={`${studios}`}
           alt="pic studio"
         />
