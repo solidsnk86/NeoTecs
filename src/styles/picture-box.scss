@@ -51,7 +51,8 @@
 }
 .game-box img.game-box-studio {
   position: relative;
-  top: -138px;
+  top: -139px;
+  filter: drop-shadow(1px 2px 3px #c2c2c2);
 }
 .game-box img.game-box-logo {
   position: relative;
@@ -121,6 +122,6 @@
     height: 10.4%;
     background: #a5a5a5;
     left: 0;
-    top: 9px;
+    top: 8px;
   }
 }

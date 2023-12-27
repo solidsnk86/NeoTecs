@@ -171,6 +171,66 @@ export default function UiUx() {
               
                 `
             }</Pre>
+
+            <p className="list-css-span">
+              En muchos casos, sería ineficiente cargar todo el contenido de
+              cada página cuando visitamos un sitio por primera vez, por lo que
+              necesitaremos utilizar un servidor para acceder a nuevos datos.
+              Por ejemplo, al visitar un sitio de noticias, llevaría demasiado
+              tiempo cargar todas las noticias disponibles cuando se visita la
+              página por primera vez. Podemos evitar este problema utilizando
+              una estrategia similar a la que utilizamos al cargar tasas de
+              cambio de divisas en curso de javascript anterior. En esta
+              ocasión, echaremos un vistazo a cómo utilizar Django para enviar y
+              recibir información desde nuestra aplicación de una sola página.
+              Para mostrar cómo funciona esto, echemos un vistazo a una
+              aplicación Django simple. Tiene dos patrones de URL en
+              <span>urls.py</span>:
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              urlpatterns = [
+                path("", views.index, name="index"),
+                path("sections/<int:num>", views.section, name="section")
+            ]
+              `
+            }</Pre>
+            <p>
+              Y dos rutas correspondientes en views.py. Observa que la ruta
+              "section" toma un entero y luego devuelve una cadena de texto
+              basada en ese entero como una respuesta HTTP.
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              from django.http import Http404, HttpResponse
+              from django.shortcuts import render
+              
+              # Create your views here.
+              def index(request):
+                  return render(request, "singlepage/index.html")
+              
+              # The texts are much longer in reality, but have
+              # been shortened here to save space
+              texts = ["Text 1", "Text 2", "Text 3"]
+              
+              def section(request, num):
+                  if 1 <= num <= 3:
+                      return HttpResponse(texts[num - 1])
+                  else:
+                      raise Http404("No such section")
+              `
+            }</Pre>
+            <p>
+              Ahora, dentro de nuestro archivo index.html, aprovecharemos AJAX,
+              que aprendimos en la conferencia anterior, para realizar una
+              solicitud al servidor y obtener el texto de una sección específica
+              para mostrarlo en la pantalla:
+            </p>
+            <Pre lang="jsx">{
+              /*javascript */ `
+                    
+              `
+            }</Pre>
           </article>
           <ShareButton setTitle={UiUx.title} />
         </div>
