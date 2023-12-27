@@ -324,6 +324,66 @@ export default function UiUx() {
               anterior, pero esta vez queremos modificar nuestro script para
               emplear la API de historial:
             </p>
+            <Pre lang="javascript">{
+              /*javascript */ `
+              // cuando hacemos click en el botón atrás, muestra la sección previa
+              window.onpopstate = function(event) {
+                  console.log(event.state.section);
+                  showSection(event.state.section);
+              }
+              
+              function showSection(section) {
+                  fetch(\`/sections/\${section}\`)
+                  .then(response => response.text())
+                  .then(text => {
+                      console.log(text);
+                      document.querySelector('#content').innerHTML = text;
+                  });
+              
+              }
+              
+              document.addEventListener('DOMContentLoaded', function() {
+                  document.querySelectorAll('button').forEach(button => {
+                      button.onclick = function() {
+                          const section = this.dataset.section;
+              
+                          // Add the current state to the history
+                          history.pushState({section: section}, "", \`section\${section}\`);
+                          showSection(section);
+                      };
+                  });
+              });
+              `
+            }</Pre>
+            <p className="list-css-span">
+              En la función<span>showSection</span>anterior, utilizamos la
+              función
+              <span>history.pushState</span>. Esta función agrega un nuevo
+              elemento a nuestro historial de navegación basado en tres
+              argumentos:
+            </p>
+            <ol>
+              <li>Cualquier dato asociado con el estado.</li>
+              <li>
+                Un parámetro de título ignorado por la mayoría de los
+                navegadores web.
+              </li>
+              <li>Lo que debería mostrarse en la URL.</li>
+            </ol>
+            <p>
+              El otro cambio que realizamos en el JavaScript anterior es
+              establecer el parámetro onpopstate, que especifica qué deberíamos
+              hacer cuando el usuario hace clic en la flecha hacia atrás. En
+              este caso, queremos mostrar la sección anterior cuando se presiona
+              el botón de retroceso. Ahora, el sitio parece un poco más amigable
+              para el usuario:
+            </p>
+            <div className="images-client">
+              <img
+                src="https://cs50.harvard.edu/web/2020/notes/6/images/singlepage3.gif"
+                alt="Demostración de código"
+              />
+            </div>
           </article>
           <ShareButton setTitle={UiUx.title} />
         </div>
