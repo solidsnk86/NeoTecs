@@ -4,10 +4,8 @@ import { NavSwitch } from '../../components/docs/NavSwicth';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import { OpenInNew } from '@mui/icons-material';
 
 export default function UiUx() {
   const UiUxTitle = ({ Tag = 'h1', children }) => {
