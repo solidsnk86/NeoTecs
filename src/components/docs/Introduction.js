@@ -55,22 +55,22 @@ export const Introduction = () => {
           href="https://code.visualstudio.com/"
         >
           Visual Studio Code
-          <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+          <OpenInNew className="link-icon" />
         </Link>
         ,
         <Link className="mx-1 text-red-400" href="https://www.sublimetext.com/">
           Sublime Text
-          <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+          <OpenInNew className="link-icon" />
         </Link>
         ,
         <Link className="mx-1 text-red-400" href="https://atom.io/">
           Atom
-          <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+          <OpenInNew className="link-icon" />
         </Link>
         y
         <Link className="mx-1 text-red-400" href="https://www.vim.org/">
           Vim
-          <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+          <OpenInNew className="link-icon" />
         </Link>
         , pero hay muchas opciones más para elegir!
       </p>

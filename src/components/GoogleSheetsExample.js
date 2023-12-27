@@ -1,4 +1,5 @@
 import { Pre } from './Pre';
+import Link from 'next/link';
 
 export const GoogleSheetsExample = () => {
   return (
@@ -160,7 +161,23 @@ export const GoogleSheetsExample = () => {
         en pantalla.
       </p>
 
-      <p>Hasta aquí por ahora, luego seguimos con más....👋</p>
+      <p>Hasta aquí por ahora, luego seguimos con más....</p>
+      <hr className="border-[1px] border-zinc-300 dark:border-zinc-800" />
+      <p>
+        ¡Si les gusta el diseño y efecto de las cajas que contienen los dibujos!
+        Utilizo Atropos js.
+      </p>
+      <p>
+        Aquí les dejo el enlace para que puedan usarlo, es de código abierto y
+        tiene otros asombrosos efectos de cartas 3d las cuales utilizo en ésta
+        web.
+      </p>
+      <Link
+        href="https://atroposjs.com/"
+        className="mx-1 underline text-red-500"
+      >
+        Atropos js
+      </Link>
     </article>
   );
 };

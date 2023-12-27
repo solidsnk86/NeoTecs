@@ -6,6 +6,8 @@ import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
+import Link from 'next/link';
+import { OpenInNew } from '@mui/icons-material';
 
 export default function UiUx() {
   const UiUxTitle = ({ Tag = 'h1', children }) => {
@@ -21,7 +23,7 @@ export default function UiUx() {
         <LectureNav />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
-          <UiUxTitle>Interfaces de Usuario</UiUxTitle>
+          <UiUxTitle>Interfaces de Usuario - UI/UX</UiUxTitle>
           <hr className="border-text-primary" />
           <Header>Índice</Header>
           <ol className="indice">
@@ -132,10 +134,18 @@ export default function UiUx() {
                 </html>
                 `
             }</Pre>
+            <div className="images-client">
+              <video
+                src="/images/aplicacion-de-una-pagina-0.mp4"
+                autoPlay
+                muted
+                loop
+              />
+            </div>
             <p className="list-css-span">
               Observa en el HTML anterior que tenemos tres botones y tres
               divisiones<span>divs</span>. En este momento, las divisiones
-              contienen solo un pequeño fragmento de texto, pero podríamos
+              contienen solo un poco de texto e imágenes, pero podríamos
               imaginar que cada div contiene el contenido de una página en
               nuestro sitio. Ahora, agregaremos algo de JavaScript que nos
               permita utilizar los botones para cambiar entre páginas.
@@ -169,7 +179,6 @@ export default function UiUx() {
               
                 `
             }</Pre>
-
             <p className="list-css-span">
               En muchos casos, sería ineficiente cargar todo el contenido de
               cada página cuando visitamos un sitio por primera vez, por lo que
@@ -220,15 +229,101 @@ export default function UiUx() {
             }</Pre>
             <p>
               Ahora, dentro de nuestro archivo index.html, aprovecharemos AJAX,
-              que aprendimos en la conferencia anterior, para realizar una
-              solicitud al servidor y obtener el texto de una sección específica
-              para mostrarlo en la pantalla:
+              que aprendimos en el curso anterior de
+              <Link
+                href="/docs/django#django"
+                className="mx-1 underline text-lime-500"
+              >
+                Django
+              </Link>
+              , para realizar una solicitud al servidor y obtener el texto de
+              una sección específica para mostrarlo en la pantalla:
             </p>
             <Pre lang="jsx">{
               /*javascript */ `
-                    
+              <!DOCTYPE html>
+              <html lang="en">
+                <head>
+                  <meta charset="UTF-8" />
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                  <title>Página Simple</title>
+                </head>
+                <body>
+                  <button data-page="page1">Página 1</button>
+                  <button data-page="page2">Página 2</button>
+                  <button data-page="page3">Página 3</button>
+                  <div id="page1">
+                    <h1>Esta es la página 1</h1>
+                  </div>
+                  <div id="page2">
+                    <h1>Esta es la página 2</h1>
+                    <p>Y la podemos llenar de contenido como un lorem ipsum dolor...</p>
+                    <p>O archivos multimedia..</p>
+                    <img 
+                    src="https://github.com/solidsnk86/GerArt/blob/master/assets/img/portfolio/Varios-HellBoy.jpg?raw=true" 
+                    alt="Tremendo dibujo!"
+                    width="400"
+                    height="300"
+                    />
+                  </div>
+                  <div id="page3">
+                    <h1>Esta es la página 3</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <ol>
+                      <li>
+                          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+                          ut aliquip ex ea commodo consequat.
+                      </li>
+                      <li>
+                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+                          eu fugiat nulla pariatur.
+                      </li>
+                    </ol>
+                  </div>
+                  <script>
+                    function showPage(page) {
+                      document.querySelectorAll("div").forEach((div) => {
+                        div.style.display = "none";
+                      });
+                      document.querySelector(\`#$\{page}\`).style.display = "block";
+                    }
+                    document.addEventListener("DOMContentLoaded", function () {
+                      document.querySelectorAll("button").forEach((button) => {
+                        button.onclick = function () {
+                          showPage(this.dataset.page)
+                        }
               `
             }</Pre>
+            <div className="images-client">
+              <video
+                src="/images/aplicacion-de-una-pagina.mp4"
+                autoPlay
+                muted
+                loop
+              />
+            </div>
+            <p>
+              Ahora, hemos creado un sitio donde podemos cargar nuevos datos
+              desde un servidor sin recargar toda nuestra página HTML. Sin
+              embargo, una desventaja de nuestro sitio es que la URL es menos
+              informativa. Te darás cuenta en el video anterior que la URL sigue
+              siendo la misma incluso cuando cambiamos de sección a sección.
+              Podemos resolver este problema utilizando la
+              <Link
+                href="https://developer.mozilla.org/en-US/docs/Web/API/History_API"
+                className="mx-1 text-lime-500 underline"
+              >
+                API de Historial de JavaScript
+                <OpenInNew className="link-icon" />
+              </Link>
+              . Esta API nos permite agregar información a nuestro historial de
+              navegación y actualizar manualmente la URL. Veamos cómo podemos
+              usar esta API. Imagina que tenemos un proyecto Django idéntico al
+              anterior, pero esta vez queremos modificar nuestro script para
+              emplear la API de historial:
+            </p>
           </article>
           <ShareButton setTitle={UiUx.title} />
         </div>
@@ -238,4 +333,4 @@ export default function UiUx() {
   );
 }
 
-UiUx.title = 'Interfacez de Usuario';
+UiUx.title = 'Interfaces de Usuario - UI/UX';

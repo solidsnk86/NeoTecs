@@ -130,7 +130,7 @@ export default function GitDocs() {
                   className="ml-1 text-[#1F6FEB]"
                 >
                   aquí
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                  <OpenInNew className="link-icon" />
                 </Link>
                 .
                 <ol>
@@ -174,7 +174,7 @@ export default function GitDocs() {
                       className="ml-1 text-[#1F6FEB]"
                     >
                       aquí
-                      <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                      <OpenInNew className="link-icon" />
                     </Link>
                     .
                   </li>

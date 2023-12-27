@@ -105,7 +105,7 @@ export default function DjangoDocs() {
                 className="mx-1 text-[#0C4B33]"
               >
                 The New York Times
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <OpenInNew className="link-icon" />
               </Link>
               o
               <Link
@@ -113,7 +113,7 @@ export default function DjangoDocs() {
                 className="mx-1 text-[#0C4B33]"
               >
                 Facebook
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <OpenInNew className="link-icon" />
               </Link>
               , por ejemplo, es probable que veas cosas diferentes hoy que
               mañana. Para sitios grandes como esos, sería poco razonable que
@@ -186,7 +186,7 @@ export default function DjangoDocs() {
                 className="mr-1 text-[#0C4B33]"
               >
                 Django
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <OpenInNew className="link-icon" />
               </Link>
               es un marco de trabajo web basado en Python que nos permitirá
               escribir código en Python que genera dinámicamente HTML y CSS. La
@@ -202,7 +202,7 @@ export default function DjangoDocs() {
                   className="mx-[3px] text-[#0C4B33]"
                 >
                   instalar
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                  <OpenInNew className="link-icon" />
                 </Link>
                 <span>pip</span> si aún no lo has hecho.
               </li>
@@ -638,7 +638,7 @@ export default function DjangoDocs() {
                 className="mx-[3px] text-[#0C4B33]"
               >
                 https://twitter.com/CalcagniGabriel
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <OpenInNew className="link-icon" />
               </Link>
               se muestran todos mis tweets, y al dirigirse a
               <Link
@@ -646,7 +646,7 @@ export default function DjangoDocs() {
                 className="mx-[3px] text-[#0C4B33]"
               >
                 https://github.com/solidsnk86
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <OpenInNew className="link-icon" />
               </Link>
               se accede a la página de GitHub de solidSnk86. Incluso puedes
               encontrar tus propios repositorios públicos de GitHub navegando a
@@ -885,7 +885,7 @@ export default function DjangoDocs() {
                 className="mx-[3px] text-[#0C4B33]"
               >
                 plantillas de Django
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <OpenInNew className="link-icon" />
               </Link>
               para cambiar el contenido de nuestros archivos HTML según la URL
               visitada. Vamos a probarlo cambiando nuestra función
