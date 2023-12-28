@@ -71,7 +71,7 @@ export default function UbiquitiDocs() {
               <FaWindows className="inline-flex mx-2 text-xl mb-1 text-[cornflowerblue]" />
               + R y escribimos el siguiente comando:
             </p>
-            <Pre>ncpa.cpl</Pre>
+            <Pre lang="cmd">{`ncpa.cpl`}</Pre>
             <p>
               <FaSignInAlt className="inline-flex mr-2" />
               enter, veremos la siguiente ventana:
@@ -90,9 +90,9 @@ export default function UbiquitiDocs() {
             </p>
             <ol>
               <li>Dirección IP:</li>
-              <Pre>192.168.1.25</Pre>
+              <Pre lang="tcp/ip">192.168.1.25</Pre>
               <li>Máscara de sub red:</li>
-              <Pre>255.255.255.0</Pre>
+              <Pre lang="tcp/ip">255.255.255.0</Pre>
             </ol>
             <div className="images-client flex justify-center m-auto">
               <img
@@ -103,7 +103,7 @@ export default function UbiquitiDocs() {
             </div>
             <SectionTitle title="URL y Login Ubiquiti" />
             <p>Nos dirijimos al navegador y colocamos la url:</p>
-            <Pre>198.168.1.20</Pre>
+            <Pre lang="navegador">htpps://198.168.1.20</Pre>
             <p>
               Nos aparecera una interfaz para el login de la antena algo así:
             </p>
@@ -120,7 +120,7 @@ export default function UbiquitiDocs() {
               <span className="bg-[#CCCCCC] text-black border-[#000] border-[1px] px-3 py-1 cursor-default mx-1">
                 Login
               </span>
-              <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] text-[#FFFFFF] border-[#000]" />
+              <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] dark:text-[#FFFFFF] border-[#000]" />
             </p>
             <p>
               Veremos una interfaz de usuario parecida a ésta. (la imagen de la
@@ -175,7 +175,7 @@ export default function UbiquitiDocs() {
               <span className="bg-[#CCCCCC] text-black border-[#000] border-[1px] px-3 py-1 cursor-default mx-1">
                 Change
               </span>
-              <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] text-[#FFFFFF] border-[#000]" />
+              <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] dark:text-[#FFFFFF] border-[#000]" />
             </p>
             <ShareButton setTitle={UbiquitiDocs.title} />
             <SectionTitle title="Configuración modo estación" />
@@ -193,7 +193,7 @@ export default function UbiquitiDocs() {
                 <span className="bg-[#CCCCCC] ml-1 text-black border-[#000] border-[1px] px-3 py-1 cursor-default">
                   Select
                 </span>
-                <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] text-[#FFFFFF] border-[#000]" />
+                <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] dark:text-[#FFFFFF] border-[#000]" />
               </li>
               <li>
                 Ahora puede la antena escanear y puede seleccionar la antena o
@@ -240,7 +240,7 @@ export default function UbiquitiDocs() {
             <span className="bg-[#CCCCCC] ml-1 text-black border-[#000] border-[1px] px-3 py-1 cursor-default">
               Seleccione
             </span>
-            <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] text-[#FFFFFF] border-[#000]" />
+            <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] dark:text-[#FFFFFF] border-[#000]" />
 
             <div className="images-client flex justify-center m-auto">
               <img
@@ -266,7 +266,7 @@ export default function UbiquitiDocs() {
             >
               Seleccionar
             </span>
-            <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] text-[#FFFFFF] border-[#000]" />
+            <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] dark:text-[#FFFFFF] border-[#000]" />
             <br />
 
             <p>

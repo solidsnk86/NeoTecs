@@ -2,6 +2,7 @@ import { Pre } from '../Pre';
 import { PublishDate } from '../PublishDate';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
+import { OpenInNew } from '@mui/icons-material';
 
 export const ClientMode = () => {
   return (
@@ -60,7 +61,7 @@ export const ClientMode = () => {
         Ir al navegador y escribir la IP que has configurado o el siguiente IP
         predeterminado:
       </p>
-      <Pre>192.168.0.254</Pre>
+      <Pre lang="navegador">192.168.0.254</Pre>
 
       <p>
         Puede iniciar sesión en la página de administración de CPE_Client, vaya
@@ -163,8 +164,12 @@ export const ClientMode = () => {
           firmware a la última versión. Si ha hecho todas las cosas anteriores,
           el Cliente aún no puede ver la señal de AP incluso si están cara a
           cara. Puede ser el problema de CPE; por favor contactar{' '}
-          <a href="mailto:support@tp-link.com." className="text-[lightblue]">
+          <a
+            href="mailto:support@tp-link.com."
+            className="text-[cornflowerblue]"
+          >
             support@tp-link.com.
+            <OpenInNew className="link-icon" />
           </a>
         </li>
         <li>
@@ -196,8 +201,9 @@ export const ClientMode = () => {
         dirección IP estática, y asegúrese de que estén en la misma subred. Si
         el Cliente aún no puede conectar el AP después de hacer esto, puede ser
         el problema de CPE; por favor contactar a{' '}
-        <a href="mailto:support@tp-link.com." className="text-[lightblue]">
+        <a href="mailto:support@tp-link.com." className="text-[cornflowerblue]">
           support@tp-link.com
+          <OpenInNew className="link-icon" />
         </a>
         . Muchas Gracias por llegar hasta aquí.
       </p>

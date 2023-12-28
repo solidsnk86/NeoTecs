@@ -36,7 +36,7 @@ export const RepeaterMode = () => {
         balcón. Enchúfalo a la corriente, verás como empezará a repetir tu señal
         wifi por todo el exterior.
       </p>
-      <h3 className="text-[lightblue]">Pasos</h3>
+      <h3 className="text-[cornflowerblue] font-bold">Pasos:</h3>
       <p>
         <strong className="text-text-strong">Paso 1:</strong> Conecta tu
         computadora al CPE510 Conecta tu computadora al CPE510 a través de un

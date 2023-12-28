@@ -235,6 +235,7 @@ export default function UiUx() {
                 className="mx-1 underline text-lime-500"
               >
                 Django
+                <OpenInNew className="link-icon" />
               </Link>
               , para realizar una solicitud al servidor y obtener el texto de
               una sección específica para mostrarlo en la pantalla:
@@ -723,6 +724,14 @@ export default function UiUx() {
             }</Pre>
             <div className="images-client">
               <video src="/images/animation.mp4" autoPlay muted loop />
+            </div>
+            <p>
+              Podemos hacer más que solo manipular el tamaño: el siguiente
+              ejemplo muestra cómo podemos cambiar la posición de un encabezado
+              simplemente modificando algunas líneas:
+            </p>
+            <div className="images-client">
+              <video src="/images/animation-1.mp4" autoPlay muted loop />
             </div>
           </article>
           <ShareButton setTitle={UiUx.title} />

@@ -1,12 +1,13 @@
-import { FaExternalLinkAlt, FaWindows } from 'react-icons/fa';
+import { FaWindows } from 'react-icons/fa';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
 import { PublishDate } from '../PublishDate';
+import { OpenInNew } from '@mui/icons-material';
 
 export const RouterMode = () => {
   return (
-    <section className="text-text-primary">
+    <section className="text-text-primary router-mode">
       <hr />
       <SectionTitle title="Modo Router" />
       <PublishDate />
@@ -22,11 +23,11 @@ export const RouterMode = () => {
         seguir este
         <a
           href="https://192.168.0.254/"
-          className="text-[lightblue] mx-1"
+          className="text-[cornflowerblue] mx-1"
           target="_blank"
         >
           enlace
-          <FaExternalLinkAlt className="inline-flex mx-1 mb-1" />
+          <OpenInNew className="link-icon" />
         </a>
         a través de esta interfaz web, puedes realizar configuraciones rápidas y
         personalizar la red inalámbrica según tus necesidades:
@@ -137,7 +138,7 @@ export const RouterMode = () => {
       </figure>
 
       <ol>
-        <span className="px-4 py-2 bg-gray-800 border-l-4 border-green-600 rounded">
+        <span className="px-4 py-2 bg-gray-800 border-l-4 border-green-600 rounded text-zinc-100">
           Reubicar el CPE
         </span>
 
@@ -160,14 +161,15 @@ export const RouterMode = () => {
           <FaWindows className="inline-flex text-xl mb-1 mx-1 text-[cornflowerblue]" />
           + R. Ejecutamos el siguiente comando:
         </li>
-        <Pre>ncpa.cpl</Pre>
+        <Pre lang="cmd">ncpa.cpl</Pre>
         <li>
           Si no recuerda el procedimiento, consulte nuevamente las
           <a
             href="https://www.tp-link.com/ar/support/faq/"
-            className="text-[lightblue]"
+            className="text-[cornflowerblue] mx-1"
           >
             (Preguntas frecuentes FAQs)
+            <OpenInNew className="link-icon" />
           </a>
         </li>
         <li>

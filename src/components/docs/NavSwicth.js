@@ -73,7 +73,7 @@ export const NavSwitch = ({ inline }) => {
           key={link.href}
           className={`p-1 xl:p-2 w-full flex duration-100 !no-underline ${
             isActive(link)
-              ? 'xl:bg-[cornflowerblue] border-orange-400 border-b-4 xl:border-none'
+              ? 'xl:bg-[cornflowerblue] xl:bg-opacity-50 border-orange-400 border-b-4 xl:border-none'
               : 'dark:hover:bg-[#202327] hover:bg-[#BDC5CC] hover:opacity-90'
           }`}
         >

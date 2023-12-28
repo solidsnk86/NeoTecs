@@ -23,7 +23,7 @@ export const BrandsSwitch = ({ inline }) => {
   const isActive = (link) => link.href === router.asPath;
   return (
     <div
-      className={`inline-block mb-4 border border-zinc-800 rounded overflow-hidden mt-16 w-100% ${
+      className={`inline-block mb-4 border border-slate-400 border-opacity-20 shadow-md shadow-slate-500 dark:!shadow xl:rounded-xl rounded-b-xl overflow-hidden mt-16 xl:w-[200px] w-100% xl:overflow-y-auto ${
         inline ? 'mb-8 lg:hidden w-100% inline-flex justify-center' : ''
       }`}
     >
@@ -33,12 +33,17 @@ export const BrandsSwitch = ({ inline }) => {
           key={link.href}
           className={`p-2 w-full flex justify-center items-center duration-100 ${
             isActive(link)
-              ? 'bg-[#484848]'
-              : 'hover:bg-[#484848] hover:opacity-90'
+              ? 'xl:bg-[cornflowerblue] xl:bg-opacity-50 border-orange-400 border-b-4 xl:border-none'
+              : 'dark:hover:bg-[#202327] hover:bg-[#BDC5CC] hover:opacity-90'
           }`}
           title={link.title}
         >
-          <img className="w-100% h-10 !m-0" src={link.icon} alt={link.title} />
+          <img
+            className="w-100% h-10 !m-0"
+            src={link.icon}
+            alt={link.title}
+            title={link.title}
+          />
         </Link>
       ))}
     </div>

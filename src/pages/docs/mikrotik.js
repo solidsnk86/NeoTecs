@@ -42,7 +42,7 @@ export default function MikrotikDocs() {
               + R y escribimos:
             </p>
 
-            <Pre>ncpa.cpl</Pre>
+            <Pre lang="cmd">{`ncpa.cpl`}</Pre>
 
             <p>
               <FaSignInAlt className="inline-flex mr-2" />
@@ -65,9 +65,9 @@ export default function MikrotikDocs() {
 
             <ol>
               <li>Dirección IP:</li>
-              <Pre>192.168.88.10</Pre>
+              <Pre lang="tcp/ip">192.168.88.10</Pre>
               <li>Máscara de sub red:</li>
-              <Pre>255.255.255.0</Pre>
+              <Pre lang="tcp/ip">255.255.255.0</Pre>
             </ol>
 
             <div className="images-client flex justify-center m-auto">
@@ -81,7 +81,7 @@ export default function MikrotikDocs() {
             <SectionTitle title="URL Mikrotik" />
             <p>Nos dirijimos al navegador y colocamos la url:</p>
 
-            <Pre>http://198.168.88.1</Pre>
+            <Pre lang="navegador">{`http://198.168.88.1`}</Pre>
 
             <p>
               Nos aparecera una interfaz para el login de la antena algo así:

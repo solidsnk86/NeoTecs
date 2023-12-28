@@ -111,6 +111,10 @@ a {
   text-decoration: none;
 }
 
+.router-mode p {
+  margin: 10px 0 10px;
+}
+
 .images-web {
   width: 100%;
   aspect-ratio: 631 / 383;
@@ -313,6 +317,18 @@ pre {
   margin-bottom: 3px;
 }
 
+.link-icon:hover {
+  transform: translateY(-5px);
+  transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 400px) {
+  .link-icon {
+    width: 10px;
+    height: 10px;
+  }
+}
+
 .effect-background {
   position: relative;
   width: 50px;
@@ -376,6 +392,31 @@ textarea {
 
 #result p {
   padding-inline: 10px;
+}
+
+/* SPINER */
+
+.spinner {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #f05252;
+  z-index: 99;
+  animation: spinn 1s linear infinite;
+}
+
+@keyframes spinn {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @import 'atropos/scss';

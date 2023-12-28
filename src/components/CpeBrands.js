@@ -11,14 +11,17 @@ export const CpeBrands = ({ inline }) => {
     {
       href: '/docs',
       icon: <TpLinkIcon className="tplink-icon w-10 h-10" />,
+      title: 'Tp - Link',
     },
     {
       href: '/docs/ubiquiti',
       icon: <UbiquitiIcon className="ubiquiti-icon w-10 h-10" />,
+      title: 'Ubiquiti',
     },
     {
       href: '/docs/mikrotik',
       icon: <MikrotikIcon className="mikrotik-icon w-10 h-10" />,
+      title: 'Mikrotik',
     },
   ];
   const isActive = (link) => link.href === router.asPath;

@@ -21,7 +21,7 @@ export const APMode = () => {
         control, para acceder a él, presionamos el botón WIN + R y escribimos:
       </p>
 
-      <Pre>ncpa.cpl</Pre>
+      <Pre lang="cmd">ncpa.cpl</Pre>
 
       <p>le damos enter.</p>
       <p>
@@ -33,9 +33,9 @@ export const APMode = () => {
 
       <ol>
         <li>Dirección IP:</li>
-        <Pre>192.168.0.100</Pre>
+        <Pre lang="tcp/ip">192.168.0.100</Pre>
         <li>Máscara de sub red:</li>
-        <Pre>255.255.255.0</Pre>
+        <Pre lang="tcp/ip">255.255.255.0</Pre>
       </ol>
 
       <hr />
