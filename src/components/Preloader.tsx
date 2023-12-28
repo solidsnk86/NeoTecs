@@ -10,5 +10,5 @@ export const Preloader = () => {
 		return () => clearTimeout(preloaderTimeout)
 	}, [])
 
-	return preloaderVisible && <div className='spinner inline mx-1'></div>
+	return preloaderVisible && <div className='spinner'></div>
 }

@@ -398,7 +398,7 @@ textarea {
 
 .spinner {
   position: fixed;
-  left: 50%;
+  left: calc(50% - 20px);
   top: 50%;
   border: 4px solid rgba(0, 0, 0, 0.1);
   width: 36px;
