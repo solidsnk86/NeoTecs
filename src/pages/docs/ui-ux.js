@@ -636,6 +636,94 @@ export default function UiUx() {
               };
               `
             }</Pre>
+            <div className="images-client">
+              <img src="/images/infscroll.gif" alt="Descripción del código." />
+            </div>
+          </article>
+          <SectionTitle title="Animación" />
+          <article>
+            <p>
+              Otra forma de hacer que nuestros sitios sean un poco más
+              interesantes es añadiendo alguna animación a ellos. Resulta que,
+              además de proporcionar estilos, CSS nos facilita la tarea de
+              animar elementos HTML.
+            </p>
+            <p>
+              Para crear una animación en CSS, utilizamos el formato que se
+              muestra a continuación, donde los detalles de la animación pueden
+              incluir estilos de inicio y fin (from y to), o estilos en
+              diferentes etapas durante la duración (desde 0% hasta 100%). Por
+              ejemplo:
+            </p>
+            <Pre lang="css">{
+              /*css */ `
+              @keyframes animation_name {
+                from {
+                    /* Algún estilo del inicio */
+                }
+            
+                to {
+                    /* Algún estilo del final */
+                }
+            }
+              `
+            }</Pre>
+            <p>o también podemos usar un porcentaje:</p>
+            <Pre lang="css">{
+              /*css */ `
+              @keyframes animation_name {
+                0% {
+                    /* Algún estilo del inicio */
+                }
+            
+                75% {
+                    /* Algún estilo de 3/4 de la animación */
+                }
+            
+                100% {
+                    /* Algún estilo del final */
+                }
+            }
+              `
+            }</Pre>
+            <p>
+              Luego, para aplicar una animación a un elemento, incluimos el
+              nombre de la animación (animation-name), la duración de la
+              animación (en segundos) y el modo de llenado de la animación (por
+              lo general, forwards). Por ejemplo, aquí hay una página en la que
+              un título crece cuando entramos por primera vez en la página:
+            </p>
+            <Pre lang="html">{
+              /*html */ `
+              <!DOCTYPE html>
+              <html lang="en">
+                  <head>
+                      <title>Animate</title>
+                      <style>
+                          @keyframes grow {
+                              from {
+                                  font-size: 20px;
+                              }
+                              to {
+                                  font-size: 100px;
+                              }
+                          }
+                          h1 {
+                              animation-name: grow;
+                              animation-duration: 2s;
+                              animation-fill-mode: forwards;
+                          }
+                      </style>
+                  </head>
+                  <body>
+                      <h1>Welcome!</h1>
+                  </body>
+              </html>
+              `
+            }</Pre>
+            <div className="images-client">
+              <video src="/images/animation.mp4" autoPlay muted loop />
+            </div>
           </article>
           <ShareButton setTitle={UiUx.title} />
         </div>
