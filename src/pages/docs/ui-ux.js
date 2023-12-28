@@ -42,7 +42,7 @@ export default function UiUx() {
               <a href="#scroll">Scroll</a>
               <ul>
                 <li>
-                  <a href="#scroll">Scroll infinito</a>
+                  <a href="#scroll-infintio">Scroll infinito</a>
                 </li>
               </ul>
             </li>
@@ -379,11 +379,263 @@ export default function UiUx() {
               para el usuario:
             </p>
             <div className="images-client">
+              <img src="/images/singlepage3.gif" alt="Demostración de código" />
+            </div>
+          </article>
+          <SectionTitle title="Scroll" />
+          <article>
+            <p>
+              Para actualizar y acceder al historial del navegador, utilizamos
+              un objeto JavaScript importante conocido como window. Hay algunas
+              otras propiedades de window que podemos utilizar para mejorar la
+              apariencia de nuestros sitios:
+            </p>
+            <ul className="list-css-span">
+              <li>
+                <span>window.innerWidth</span>: Ancho de la ventana en píxeles.
+              </li>
+              <li>
+                <span>window.innerHeight</span>: Altura de la ventana en
+                píxeles.
+              </li>
+            </ul>
+            <div className="images-client">
               <img
-                src="https://cs50.harvard.edu/web/2020/notes/6/images/singlepage3.gif"
+                src="/images/innerMeasures.png"
                 alt="Demostración de código"
               />
             </div>
+            <p>
+              Mientras que window representa lo que actualmente es visible para
+              el usuario, document se refiere a toda la página web, que a menudo
+              es mucho más grande que la ventana, obligando al usuario a
+              desplazarse hacia arriba y hacia abajo para ver el contenido de la
+              página. Para trabajar con el desplazamiento, tenemos acceso a
+              otras variables:
+            </p>
+            <ul className="list-css-span">
+              <li>
+                <span>window.scrollY</span>: Cuántos píxeles hemos desplazado
+                desde la parte superior de la página.
+              </li>
+              <li>
+                <span>document.body.offsetHeight</span>: La altura en píxeles de
+                todo el documento.
+              </li>
+            </ul>
+            <div className="images-client">
+              <img src="/images/scroll.png" alt="Demostración de código" />
+            </div>
+            <p className="list-css-span">
+              Podemos utilizar estas medidas para determinar si el usuario ha
+              llegado al final de una página mediante la comparación
+              <span>
+                window.scrollY + window.innerHeight {'>='}
+                document.body.offsetHeight
+              </span>
+              . La siguiente página, por ejemplo, cambiará el color de fondo a
+              verde cuando lleguemos al final de la página:
+            </p>
+            <Pre lang="javascript">{
+              /*javascript */ `
+              <!DOCTYPE html>
+              <html lang="en">
+                  <head>
+                      <title>Scroll</title>
+                      <script>
+                          // Evento escuchador para el deslizamiento (scrolling)
+                          window.onscroll = () => {
+              
+                              // Chequeamos si estamos en el fondo
+                              if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+              
+                                  // Cambiar color a verde
+                                  document.querySelector('body').style.background = 'green';
+                              } else {
+              
+                                  // Cambiar color a blanco
+                                  document.querySelector('body').style.background = 'white';
+                              }
+                          };
+                      </script>
+                  </head>
+                  <body>
+                      <p>1</p>
+                      <p>2</p>
+                      <!-- Más párrafos que dejarán guardar el espacio -->
+                      <p>99</p>
+                      <p>100</p>
+                  </body>
+              </html
+              `
+            }</Pre>
+            <div className="images-client">
+              <video src="/images/scroll-1.mp4" autoPlay muted loop />
+            </div>
+          </article>
+          <SectionTitle title="Scroll Infinito" />
+          <article>
+            <p className="list-css-span">
+              Cambiar el color de fondo al final de la página probablemente no
+              sea muy útil, pero puede que queramos detectar que hemos llegado
+              al final de la página si queremos implementar un desplazamiento
+              infinito. Por ejemplo, si estás en un sitio de redes sociales, no
+              querrás cargar todas las publicaciones de una vez; podrías querer
+              cargar las primeras diez y, luego, cuando el usuario llegue al
+              final, cargar las siguientes diez. Echemos un vistazo a una
+              aplicación de Django que podría hacer esto. Esta aplicación tiene
+              dos rutas en<span>urls.py</span>.
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              urlpatterns = [
+                path("", views.index, name="index"),
+                path("posts", views.posts, name="posts")
+            ]
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Y dos vistas correspondientes a<span>views.py</span>:
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              import time
+
+              from django.http import JsonResponse
+              from django.shortcuts import render
+              
+              # Create your views here.
+              def index(request):
+                  return render(request, "posts/index.html")
+              
+              def posts(request):
+              
+                  # Get start and end points
+                  start = int(request.GET.get("start") or 0)
+                  end = int(request.GET.get("end") or (start + 9))
+              
+                  # Generate list of posts
+                  data = []
+                  for i in range(start, end + 1):
+                      data.append(f"Post #{i}")
+              
+                  # Artificially delay speed of response
+                  time.sleep(1)
+              
+                  # Return list of posts
+                  return JsonResponse({
+                      "posts": data
+                  })
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Ten en cuenta que la vista de<span>publicaciones</span>requiere
+              dos argumentos: un punto de<span>inicio</span>y un punto
+              <span>final</span>. En esta vista, hemos creado nuestra propia
+              API, que podemos probar visitando la URL
+              <span>localhost:8000/posts?start=10&end=15</span>, la cual
+              devuelve el siguiente JSON:
+            </p>
+            <Pre lang="json">{
+              /*json */ `
+              {
+                "posts": [
+                    "Post #10",
+                    "Post #11", 
+                    "Post #12", 
+                    "Post #13", 
+                    "Post #14", 
+                    "Post #15"
+                ]
+            }
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Ahora, en la plantilla<span>index.html</span>que carga el sitio,
+              comenzamos con solo un<span>div</span>vacío en el cuerpo y algún
+              estilo. Observa que cargamos nuestros archivos estáticos al
+              principio y luego hacemos referencia a un archivo JavaScript
+              dentro de nuestra carpeta<span>estática</span>.
+            </p>
+            <Pre lang="html">{
+              /*html */ `
+              {% load static %}
+              <!DOCTYPE html>
+              <html>
+                  <head>
+                      <title>My Webpage</title>
+                      <style>
+                          .post {
+                              background-color: #77dd11;
+                              padding: 20px;
+                              margin: 10px;
+                          }
+              
+                          body {
+                              padding-bottom: 50px;
+                          }
+                      </style>
+                      <script scr="{% static 'posts/script.js' %}"></script>
+                  </head>
+                  <body>
+                      <div id="posts">
+                      </div>
+                  </body>
+              </html>
+              `
+            }</Pre>
+            <p>
+              Ahora, con JavaScript, esperaremos hasta que un usuario haga
+              scroll hasta el final de la página y luego cargaremos más
+              publicaciones utilizando nuestra API:
+            </p>
+            <Pre lang="javascript">{
+              /*javascript */ `
+              // Comenzar con la primera publicación
+              let counter = 1;
+              
+              // Cargar 20 publicaciones a la vez
+              const quantity = 20;
+              
+              // Cuando el DOM se carga, renderizar las primeras 20 publicaciones
+              document.addEventListener('DOMContentLoaded', load);
+              
+              // Si se hace scroll hasta el final, cargar las siguientes 20 publicaciones
+              window.onscroll = () => {
+                  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                      load();
+                  }
+              };
+              
+              // Cargar el próximo conjunto de publicaciones
+              function load() {
+              
+                  // Establecer números de inicio y fin de las publicaciones, y actualizar el contador
+                  const start = counter;
+                  const end = start + quantity - 1;
+                  counter = end + 1;
+              
+                  // Obtener nuevas publicaciones y agregarlas
+                  fetch(\`/posts?start=\${start}&end=\${end}\`)
+                  .then(response => response.json())
+                  .then(data => {
+                      data.posts.forEach(add_post);
+                  })
+              };
+              
+              // Agregar una nueva publicación con el contenido dado al DOM
+              function add_post(contents) {
+              
+                  // Crear nueva publicación
+                  const post = document.createElement('div');
+                  post.className = 'post';
+                  post.innerHTML = contents;
+              
+                  // Agregar la publicación al DOM
+                  document.querySelector('#posts').append(post);
+              };
+              `
+            }</Pre>
           </article>
           <ShareButton setTitle={UiUx.title} />
         </div>
