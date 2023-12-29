@@ -8,6 +8,7 @@ import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import Link from 'next/link';
 import { OpenInNew } from '@mui/icons-material';
+import { InfoIcon } from 'lucide-react';
 
 export default function UiUx() {
   const UiUxTitle = ({ Tag = 'h1', children }) => {
@@ -47,7 +48,7 @@ export default function UiUx() {
               </ul>
             </li>
             <li>
-              <a href="#animacion">Animación</a>
+              <a href="#animación">Animación</a>
             </li>
             <li>
               <a href="#react">React</a>
@@ -348,7 +349,7 @@ export default function UiUx() {
                       button.onclick = function() {
                           const section = this.dataset.section;
               
-                          // Add the current state to the history
+                          // Añade el estado actual al historial
                           history.pushState({section: section}, "", \`section\${section}\`);
                           showSection(section);
                       };
@@ -717,7 +718,7 @@ export default function UiUx() {
                       </style>
                   </head>
                   <body>
-                      <h1>Welcome!</h1>
+                      <h1>Bienvenidos a Neotecs!</h1>
                   </body>
               </html>
               `
@@ -730,9 +731,770 @@ export default function UiUx() {
               ejemplo muestra cómo podemos cambiar la posición de un encabezado
               simplemente modificando algunas líneas:
             </p>
+            <Pre lang="css">{
+              /*css */ `
+              @keyframes move {
+                0% {
+                    left: 0%;
+                }
+                50% {
+                    left: 50%;
+                }
+                100% {
+                    left: 0%;
+                }
+            }
+              `
+            }</Pre>
+            <p>
+              Ahora, veamos cómo configurar algunas propiedades intermedias de
+              CSS. Podemos especificar el estilo en cualquier porcentaje del
+              recorrido de una animación. En el siguiente ejemplo, moveremos el
+              título de izquierda a derecha y luego de nuevo a la izquierda,
+              alterando solo la animación mencionada anteriormente.
+            </p>
+            <Pre lang="html">{
+              /*html */ `
+              <!DOCTYPE html>
+              <html lang="en">
+                <head>
+                  <meta charset="UTF-8" />
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                  <title>Document</title>
+                </head>
+                <body>
+                  <style>
+                    @keyframes move {
+                      0% {
+                        left: 0%;
+                      }
+                      50% {
+                        left: 50%;
+                      }
+                      100% {
+                        left: 0%;
+                      }
+                    }
+                    h1 {
+                      position: relative;
+                      animation-name: move;
+                      animation-duration: 2s;
+                      animation-fill-mode: forwards;
+                    }
+                  </style>
+                  <h1>Bienvenidos!</h1>
+                </body>
+              </html>
+              
+              `
+            }</Pre>
             <div className="images-client">
               <video src="/images/animation-1.mp4" autoPlay muted loop />
             </div>
+            <p className="list-css-span">
+              Si queremos repetir una animación varias veces, podemos cambiar la
+              propiedad<span>animation-iteration-count</span>a un número mayor
+              que uno (o incluso<span>infinite</span>para una animación sin
+              fin). Hay muchas propiedades de animación que podemos establecer
+              para cambiar diferentes aspectos de nuestra animación.
+            </p>
+            <p className="list-css-span">
+              Además de CSS, podemos utilizar JavaScript para controlar aún más
+              nuestras animaciones. Utilicemos nuestro ejemplo de encabezado en
+              movimiento<span>(con repetición infinita)</span>para mostrar cómo
+              podemos crear un botón que inicia y detiene la animación.
+              Suponiendo que ya tenemos una animación, un botón y un encabezado,
+              podemos agregar el siguiente script para iniciar y pausar la
+              animación:
+            </p>
+            <Pre lang="javascript">{
+              /*javascript*/ `
+              document.addEventListener("DOMContentLoaded", function () {
+                // Buscar el encabezdo
+                const h1 = document.querySelector("h1");
+        
+                // Pausamos la anomación por defecto
+                h1.style.animationPlayState = "paused";
+        
+                // Seleccionamos el botón para que espere el click
+                document.querySelector("button").onclick = () => {
+                  // Si la animación está pausada, comenzar la animación
+                  if (h1.style.animationPlayState == "paused") {
+                    h1.style.animationPlayState = "running";
+                  }
+        
+                  // De otra manera, pausar la animación
+                  else {
+                    h1.style.animationPlayState = "paused";
+                  }
+                };
+              });
+              `
+            }</Pre>
+            <div className="images-client">
+              <video src="/images/animation-3.mp4" autoPlay muted loop />
+            </div>
+            <p className="list-css-span">
+              Ahora, veamos cómo podemos aplicar nuestro nuevo conocimiento de
+              animaciones a la página de publicaciones que creamos
+              anteriormente. Específicamente, supongamos que queremos la
+              capacidad de ocultar las publicaciones una vez que hayamos
+              terminado de leerlas. Imaginemos un proyecto de Django idéntico al
+              que acabamos de crear, pero con HTML y JavaScript ligeramente
+              diferentes. El primer cambio que haremos será en la función
+              <span>add_post</span>, agregando esta vez también un botón al lado
+              derecho de la publicación:
+            </p>
+            <Pre lang="javascript">{
+              /*javascript */ `
+              // Añadir un nuevo post con los contenidos dados al DOM
+              function add_post(contents) {
+              
+                  // Crear un nuevo post
+                  const post = document.createElement('div');
+                  post.className = 'post';
+                  post.innerHTML = \`\${contents} <button class="hide">Hide</button>\`;
+              
+                  // Añadir post al DOM
+                  document.querySelector('#posts').append(post);
+              };
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Ahora, trabajaremos en ocultar una publicación cuando se hace clic
+              en el botón de ocultar. Para hacer esto, agregaremos un event
+              listener que se activa cada vez que un usuario hace clic en
+              cualquier parte de la página. Luego, escribiremos una función que
+              tome el evento como argumento, lo cual es útil porque podemos usar
+              el atributo<span>event.target</span>para acceder a lo que se hizo
+              clic. También podemos utilizar la clase `parentElement` para
+              encontrar el elemento padre de un elemento dado en el DOM.
+            </p>
+            <Pre lang="javascript">{
+              /*javascript */ `
+              // Al hacer click en el botón esconder, eliminar el post
+              document.addEventListener('click', event => {
+              
+                  // Encontrar donde fue el click
+                  const element = event.target;
+              
+                  // Chequear si el usuario hizo click en el botón hide
+                  if (element.className === 'hide') {
+                      element.parentElement.remove()
+                  }
+                  
+              });
+              `
+            }</Pre>
+            <div className="images-client">
+              <video src="/images/hide-posts.mp4" autoPlay muted loop />
+            </div>
+            <p className="list-css-span">
+              Ahora podemos ver que hemos implementado el botón de ocultar, pero
+              no se ve tan bien como podría. Tal vez queremos que la publicación
+              se desvanezca y se encoja antes de eliminarla. Para hacer esto,
+              primero crearemos una animación CSS. La siguiente animación
+              dedicará el 75% de su tiempo cambiando la<span>opacidad</span>de 1
+              a 0, lo que esencialmente hace que la publicación se desvanezca
+              lentamente. Luego, pasa el resto del tiempo moviendo todos sus
+              atributos relacionados con la<span>altura</span>a 0, reduciendo
+              efectivamente la publicación a nada.
+            </p>
+            <Pre lang="css">{
+              /*css */ `
+              @keyframes hide {
+                0% {
+                    opacity: 1;
+                    height: 100%;
+                    line-height: 100%;
+                    padding: 20px;
+                    margin-bottom: 10px;
+                }
+                75% {
+                    opacity: 0;
+                    height: 100%;
+                    line-height: 100%;
+                    padding: 20px;
+                    margin-bottom: 10px;
+                }
+                100% {
+                    opacity: 0;
+                    height: 0px;
+                    line-height: 0px;
+                    padding: 0px;
+                    margin-bottom: 0px;
+                }
+              }
+              `
+            }</Pre>
+            <p className="list-css-span">
+              A continuación, agregaríamos esta animación al CSS de nuestra
+              publicación. Observa que inicialmente establecemos
+              <span>animation-play-state</span>en<span>paused</span>, lo que
+              significa que la publicación no estará oculta por defecto.
+            </p>
+            <Pre lang="css">{
+              /*css */ `
+              .post {
+                background-color: #77dd11;
+                padding: 20px;
+                margin-bottom: 10px;
+                animation-name: hide;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                animation-play-state: paused;
+              }
+              `
+            }</Pre>
+            <p>
+              Finalmente, queremos poder iniciar la animación una vez que se ha
+              hecho clic en el botón de ocultar y luego eliminar la publicación.
+              Podemos hacer esto editando nuestro JavaScript de arriba:
+            </p>
+            <Pre lang="javascript">{
+              /*javascript */ `
+              // Si el boton escucha el click, borrar el post
+              document.addEventListener('click', event => {
+              
+                  // Encontar que fue clickeado
+                  const element = event.target;
+              
+                  // Chequea si el usuario hizo click en el botón hide
+                  if (element.className === 'hide') {
+                      element.parentElement.style.animationPlayState = 'running';
+                      element.parentElement.addEventListener('animationend', () => {
+                          element.parentElement.remove();
+                      });
+                  }
+                  
+              });
+              `
+            }</Pre>
+            <p>
+              Estos son los códigos javascript que usé para las cartas y los
+              posts de ejemplo:
+            </p>
+            <Pre lang="javascript">{
+              /*javascript */ `
+              // Esta constante sirve para dar formato a la fecha
+              var date = new Date();
+              const formatedDate = date.toLocaleDateString('es-ES', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+              });
+              // Una vez que el DOM está cargado inserta la fecha en todos los posts
+              document.addEventListener('DOMContentLoaded', () => {
+                // Una manera fácil de crear un selector
+                const $ = (selector) => document.querySelectorAll(selector);
+                const posted = $('.posted');
+                posted.forEach((p) => {
+                    p.textContent = formatedDate
+                })
+              });
+              `
+            }</Pre>
+            <p>
+              Para que se guíen tenemos que tener un HTML de la siguiente
+              manera:
+            </p>
+            <Pre lang="html">{
+              /*html */ `
+              <div class="posts" id="posts">
+              <p class="posted"></p>
+              <p>Post #1</p>
+              <p>Welcome!</p>
+              <button class="hide">Hide</button>
+              </div>
+
+              <div class="posts">
+              <p class="posted"></p>
+              <p>Post #2</p>
+              <p>Bienvenidos!</p>
+              <button class="hide">Hide</button>
+              </div>
+
+              <div class="posts">
+              <p class="posted"></p>
+              <p>Post #3</p>
+              <p>Welkome!</p>
+              <button class="hide">Hide</button>
+              </div>
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Como pudimos ver en el video de demostración de los post ahora la
+              función de esconder
+              <span>hide</span>se ve más atractiva. Aca les dejo el CSS:
+            </p>
+            <Pre lang="css">{
+              /*css */ `
+              .posts {
+                position: relative;
+                width: 50%;
+                border: 1px solid #999;
+                padding: 10px;
+                border-radius: 15px;
+                box-shadow: 1px 2px 3px #999;
+                margin-block: 10px;
+                margin-inline: auto;
+                background-color: lawngreen;
+                animation-name: hide;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                animation-play-state: paused;
+              }
+              .posts p {
+                margin-inline: 10px;
+              }
+              button {
+                position: absolute;
+                top: 40%;
+                right: 10px;
+                padding: 4px 8px;
+                border-radius: 5px;
+                border: none;
+                border: 1px solid #999;
+              }
+              button:hover {
+                transform: scale(1.1);
+                transition: 0.2s all;
+              }
+              .posted {
+                color: black;
+                font-weight: 300;
+              }
+              @keyframes hide {
+                0% {
+                  opacity: 1;
+                  height: 100%;
+                  line-height: 100%;
+                  padding: 20px;
+                  margin-bottom: 10px;
+                }
+                75% {
+                  opacity: 0;
+                  height: 100%;
+                  line-height: 100%;
+                  padding: 20px;
+                  margin-bottom: 10px;
+                }
+                100% {
+                  opacity: 0;
+                  height: 0px;
+                  line-height: 0px;
+                  padding: 0px;
+                  margin-bottom: 0px;
+                }
+              }
+              `
+            }</Pre>
+          </article>
+          <SectionTitle title="React" />
+          <article>
+            <p>
+              React es una biblioteca de JavaScript que permite construir
+              interfaces de usuario de manera declarativa y eficiente. A
+              diferencia de los enfoques imperativos tradicionales, en React
+              describes cómo debería ser la interfaz de usuario y React se
+              encarga de actualizar y renderizar eficientemente los componentes
+              en respuesta a los cambios de estado.
+            </p>
+            <p>
+              Hasta este punto, puedes imaginarte cuánto código JavaScript se
+              necesitaría para un sitio web más complicado. Puedes mitigar la
+              cantidad de código que realmente necesitas escribir utilizando un
+              marco de JavaScript, al igual que usamos Bootstrap como un marco
+              de CSS para reducir la cantidad de CSS que realmente teníamos que
+              escribir. Uno de los marcos de JavaScript más populares es una
+              biblioteca llamada
+              <Link
+                href="https://reactjs.org/"
+                className="mx-1 underline text-lime-500"
+              >
+                React
+                <OpenInNew className="link-icon" />
+              </Link>
+              .
+            </p>
+            <p>
+              Hasta ahora, en este curso, hemos estado utilizando métodos de
+              programación imperativa, donde le damos a la computadora un
+              conjunto de declaraciones para ejecutar. Por ejemplo, para
+              actualizar el contador en una página HTML, podríamos tener código
+              que se ve así:
+            </p>
+            <p>Vista</p>
+            <Pre lang="jsx">{`<h1>0</h1>`}</Pre>
+            <p>Lógica</p>
+            <Pre lang="jsx">{
+              /*jsx */ `
+              let num = parseInt(document.querySelector("h1").innerHTML);
+              num += 1;
+              document.querySelector("h1").innerHTML = num;
+              `
+            }</Pre>
+            <p>
+              React nos permite utilizar la programación declarativa, lo que nos
+              permite simplemente escribir código que explica qué deseamos
+              mostrar y no preocuparnos por cómo lo estamos mostrando. En React,
+              un contador podría lucir algo así:
+            </p>
+            <p>Vista:</p>
+            <Pre lang="jsx">{`<h1>{num}</h1>`}</Pre>
+            <p>Lógica</p>
+            <Pre lang="jsx">{
+              /*jsx */ `
+              num += 1
+              `
+            }</Pre>
+            <p>
+              El framework React se basa en la idea de componentes, cada uno de
+              los cuales puede tener un estado subyacente. Un componente podría
+              ser algo que se puede ver en una página web, como una publicación
+              o una barra de navegación, y un estado es un conjunto de variables
+              asociadas con ese componente. La belleza de React radica en que
+              cuando el estado cambia, React cambiará automáticamente el DOM en
+              consecuencia.
+            </p>
+            <p>
+              Hay varias formas de usar React (incluido el popular comando
+              create-react-app publicado por Facebook), pero hoy nos centraremos
+              en comenzar directamente en un archivo HTML. Para hacer esto,
+              tendremos que importar tres paquetes de JavaScript:
+            </p>
+            <ul>
+              <li>React: Define componentes y su comportamiento.</li>
+              <li>
+                ReactDOM: Toma componentes de React e los inserta en el DOM.
+              </li>
+              <li>
+                Babel: Traduce desde JSX, el lenguaje en el que escribiremos en
+                React, a JavaScript plano que nuestros navegadores pueden
+                interpretar. JSX es muy similar a JavaScript, pero con algunas
+                características adicionales, incluida la capacidad de
+                representar HTML dentro de nuestro código.
+              </li>
+            </ul>
+            <p>
+              ¡Vamos a sumergirnos y crear nuestra primera aplicación React!
+            </p>
+            <p>
+              Esta es una manera de crearla, hay otras las cuales les voy a
+              enseñar más adelante..
+            </p>
+            <Pre lang="jsx">{
+              /*jsx */ `
+              <!DOCTYPE html>
+              <html lang="en">
+                  <head>
+                      <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+                      <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+                      <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+                      <title>Hello</title>
+                  </head>
+                  <body>
+                      <div id="app"></div>
+              
+                      <script type="text/babel">
+                          function App() {
+                              return (
+                                  <div>
+                                      Hello!
+                                  </div>
+                              );
+                          }
+              
+                          ReactDOM.render(<App />, document.querySelector("#app"));
+                      </script>
+                  </body>
+              </html>
+              `
+            }</Pre>
+            <div className="border-l-4 border-amber-500 px-1 bg-opacity-[0.6] p-3 pl-5 text-amber-500 font-semibold">
+              <p className="font-semibold text-lg">
+                <InfoIcon className="w-5 inline mb-1" /> Importante
+              </p>
+              <p>
+                En React, la capacidad de crear componentes y reutilizarlos en
+                otros componentes es una parte fundamental del diseño y la
+                organización del código. Esto sigue el principio de la
+                programación modular, donde puedes dividir tu aplicación en
+                piezas más pequeñas y reutilizables, lo que facilita el
+                mantenimiento y la comprensión del código.
+              </p>
+            </div>
+            <p>
+              {' '}
+              Aquí hay algunos conceptos clave relacionados con la creación y el
+              uso de componentes en React:{' '}
+            </p>
+
+            <ol>
+              <li>
+                <p>Componentes Funcionales y de Clase:</p>
+                <ul>
+                  <li>
+                    <em>Funcionales:</em> Son funciones de JavaScript y se
+                    escriben como funciones puras. No tienen estado propio ni
+                    métodos de ciclo de vida.
+                  </li>
+                  <li>
+                    <em>De Clase:</em> Son clases de JavaScript que extienden la
+                    clase React.Component. Pueden tener estado y métodos de
+                    ciclo de vida.
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <p>Props (Propiedades):</p>
+                <p>
+                  Los componentes pueden recibir datos externos llamados "props"
+                  (propiedades). Estos son como parámetros de función que puedes
+                  pasar a un componente cuando lo utilizas.
+                </p>
+              </li>
+
+              <li>
+                <p>Composición de Componentes:</p>
+                <p>
+                  Puedes construir interfaces de usuario complejas combinando y
+                  anidando componentes más pequeños. Esto fomenta la
+                  reutilización del código y facilita el mantenimiento.
+                </p>
+              </li>
+
+              <li>
+                <p>Estado del Componente:</p>
+                <p>
+                  Los componentes de clase pueden tener un estado interno que
+                  afecta su representación y comportamiento. El estado es
+                  mutable y se puede actualizar.
+                </p>
+              </li>
+
+              <li>
+                <p>Ciclo de Vida del Componente:</p>
+                <p>
+                  Los componentes de clase tienen métodos de ciclo de vida, como
+                  componentDidMount y componentDidUpdate, que te permiten
+                  realizar acciones en diferentes puntos durante la vida útil
+                  del componente.
+                </p>
+              </li>
+
+              <li>
+                <p>HOC (Higher-Order Components):</p>
+                <p>
+                  Son funciones que toman un componente y devuelven un nuevo
+                  componente con funcionalidades adicionales. Esto se utiliza
+                  para reutilizar lógica entre componentes.
+                </p>
+              </li>
+
+              <li>
+                <p>Hooks:</p>
+                <p>
+                  Los hooks son funciones especiales que te permiten usar el
+                  estado y otros recursos de React en componentes funcionales.
+                  El hook useState permite agregar estado a los componentes
+                  funcionales.
+                </p>
+              </li>
+
+              <li>
+                <p>Contexto:</p>
+                <p>
+                  El contexto de React permite pasar datos a través del árbol de
+                  componentes sin tener que pasar props manualmente en cada
+                  nivel.
+                </p>
+              </li>
+            </ol>
+
+            <p className="bg-[#F7F9F9] dark:bg-[#16181C] border border-zinc-100/80 dark:border-zinc-800 rounded-xl text-center p-3">
+              La creación y reutilización de componentes en React fomenta un
+              desarrollo más limpio, modular y fácil de mantener. Puedes
+              construir componentes especializados para tareas específicas y
+              combinarlos para construir interfaces complejas de manera
+              estructurada. Esto mejora la legibilidad del código y facilita la
+              colaboración en equipos de desarrollo.
+            </p>
+            <p>
+              Dado que esta es nuestra primera aplicación React, echemos un
+              vistazo detallado a lo que está haciendo cada parte del código:
+            </p>
+            <ol>
+              <li>
+                En las tres líneas anteriores al título, importamos las
+                versiones más recientes de React, ReactDOM y Babel.
+              </li>
+              <li>
+                En el cuerpo, incluimos un solo div con un id de app. Casi
+                siempre queremos dejar esto vacío y completarlo en nuestro
+                código de React a continuación.
+              </li>
+              <li>
+                Incluimos una etiqueta de script donde especificamos que
+                type="text/babel". Esto indica al navegador que el script
+                siguiente debe traducirse utilizando Babe
+              </li>
+              <li>
+                A continuación, creamos un componente llamado App. Los
+                componentes en React pueden representarse mediante funciones de
+                JavaScript.
+              </li>
+              <li className="list-css-span">
+                Nuestro componente devuelve lo que nos gustaría renderizar en el
+                DOM. En este caso, simplemente devolvemos
+                <span>{'<div>Hello!</div>'}</span>.
+              </li>
+              <li>
+                La última línea de nuestro script utiliza la función
+                ReactDOM.render, que toma dos argumentos:
+                <ul>
+                  <li>Un componente para renderizar.</li>
+                  <li>
+                    Un elemento en el DOM dentro del cual se debe renderizar el
+                    componente.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+            <p>
+              Ahora que entendemos qué hace el código, podemos echar un vistazo
+              a la página web resultante:
+            </p>
+            <div className="images-client">
+              <img src="/images/react0.png" alt="Imagen demo React" />
+            </div>
+            <p>
+              Una característica útil de React es la capacidad de renderizar
+              componentes dentro de otros componentes. Para demostrar esto,
+              creemos otro componente llamado Hello:
+            </p>
+            <Pre lang="jsx">{
+              /*jsx */ `
+              function Hello(props) {
+                return (
+                    <h1>Hello</h1>
+                );
+              }
+              `
+            }</Pre>
+            <p>
+              Y ahora, vamos a renderizar tres componentes Hello dentro de
+              nuestro componente App:
+            </p>
+            <Pre lang="jsx">{
+              /*jsx */ `
+              function App() {
+                return (
+                    <div>
+                        <Hello />
+                        <Hello />
+                        <Hello />
+                    </div>
+                );
+              }
+              `
+            }</Pre>
+            <p>Esto nos va a dar algo parecido a esto:</p>
+            <div className="images-client">
+              <img src="/images/react1.png" alt="React demo" />
+            </div>
+            <p>
+              Hasta ahora, los componentes no han sido muy interesantes, ya que
+              son todos exactamente iguales. Podemos hacer que estos componentes
+              sean más flexibles agregándoles propiedades adicionales (props en
+              términos de React). Por ejemplo, digamos que queremos saludar a
+              tres personas diferentes. Podemos proporcionar los nombres de esas
+              personas de una manera similar a los atributos HTML:
+            </p>
+            <Pre lang="jsx">{
+              /*jsx */ `
+              function App() {
+                return (
+                    <div>
+                        <Hello name="Harry" />
+                        <Hello name="Ron" />
+                        <Hello name="Hermione" />
+                    </div>
+                );
+              }
+              `
+            }</Pre>
+            <p>
+              Podemos acceder a esas props usando props.NOMBRE_PROP. Luego,
+              podemos insertar esto en nuestro JSX usando llaves:
+            </p>
+            <Pre lang="jsx">{
+              /*jsx */ `
+              function Hello(props) {
+                return (
+                    <h1>Hello, {props.name}!</h1>
+                );
+              }
+              `
+            }</Pre>
+            <p>Ahora nuestra página mostrará lo siguiente:</p>
+            <div className="images-client">
+              <img src="/images/react2.png" alt="React demo" />
+            </div>
+            <p>
+              Ahora, veamos cómo podemos usar React para volver a implementar la
+              página del contador que construimos al trabajar por primera vez
+              con JavaScript. Nuestra estructura general seguirá siendo la
+              misma, pero dentro de nuestro componente App, usaremos el hook
+              useState de React para agregar estado a nuestro componente. El
+              argumento de useState es el valor inicial del estado, que
+              estableceremos en 0. La función devuelve tanto una variable que
+              representa el estado como una función que nos permite actualizar
+              el estado.
+            </p>
+            <Pre lang="jsx">{
+              /*jsx */ `
+              const [count, setCount] = React.useState(0);
+              `
+            }</Pre>
+            <p>
+              Ahora, podemos trabajar en lo que la función renderizará, donde
+              especificaremos un encabezado y un botón. También agregaremos un
+              event listener para cuando se haga clic en el botón, lo cual React
+              maneja utilizando el atributo onClick:
+            </p>
+            <Pre lang="jsx">{
+              /*jsx */ `
+              return (
+                <div>
+                    <h1>{count}</h1>
+                    <button onClick={updateCount}>Count</button>
+                </div>
+              );
+              `
+            }</Pre>
+            <p>
+              Finalmente, definamos la función updateCount. Para hacer esto,
+              utilizaremos la función setCount, que puede tomar como argumento
+              un nuevo valor para el estado.
+            </p>
+            <Pre lang="jsx">{
+              /*jsx */ `
+              function updateCount() {
+                setCount(count + 1);
+              }
+              `
+            }</Pre>
+            <p>Ahora tenemos una página con función de conteo:</p>
+            <div className="images-client">
+              <img src="/images/react3.gif" alt="React demo" />
+            </div>
+            <p className=" bg-button-variant text-text-variant p-3 w-fit font-semibold">
+              ¡Próximamente voy cargar más contenido de React! 😄
+            </p>
           </article>
           <ShareButton setTitle={UiUx.title} />
         </div>

@@ -317,12 +317,7 @@ pre {
   margin-bottom: 3px;
 }
 
-.link-icon:hover {
-  transform: translateY(-5px);
-  transition: 0.2s ease-in-out;
-}
-
-@media (max-width: 400px) {
+@media (max-width: 762px) {
   .link-icon {
     width: 10px;
     height: 10px;
