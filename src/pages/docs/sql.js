@@ -10,14 +10,14 @@ import { ShareButton } from '../../components/ShareButton';
 import { OpenInNew } from '@mui/icons-material';
 import { AlertTriangle, InfoIcon } from 'lucide-react';
 
-export default function SqlDocs() {
-  const SqlTitle = ({ Tag = 'h1', children }) => {
-    return <Tag className="text-text-primary font-mono">{children}</Tag>;
-  };
+export const SqlTitle = ({ Tag = 'h1', children }) => {
+  return <Tag className="text-text-primary font-mono">{children}</Tag>;
+};
 
-  const Header = ({ Tag = 'h2', children }) => {
-    return <Tag className="text-text-primary">{children}</Tag>;
-  };
+export const Header = ({ Tag = 'h2', children }) => {
+  return <Tag className="text-text-primary">{children}</Tag>;
+};
+export default function SqlDocs() {
   return (
     <TitlesContextProvider>
       <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-30" />

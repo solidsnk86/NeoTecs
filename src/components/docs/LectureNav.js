@@ -19,7 +19,7 @@ export function LectureNav() {
           <ArrowLeftIcon className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all" />
         </span>
         <NavSwitch />
-        <ul className="text-xs h-60 overflow-y-auto">
+        <ul className="text-xs h-60 overflow-y-auto scroll-bar">
           {titles.map((title) => (
             <li key={title.slug}>
               <a

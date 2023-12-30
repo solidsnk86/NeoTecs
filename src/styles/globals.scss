@@ -97,6 +97,18 @@ body {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  width: 11px;
+  background-color: #8e9099;
+  border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #0f0f0f;
+  border-radius: 5px;
+  border: 1px solid #8e9099;
+  height: 80px;
+}
+
 @media (max-width: 388px) {
   .youtube-aside {
     transform: scale(0.8);
@@ -387,6 +399,19 @@ textarea {
 
 #result p {
   padding-inline: 10px;
+}
+
+@media (min-width: 1280px) {
+  .scroll-bar::-webkit-scrollbar {
+    width: 10px;
+    background-color: #8e9099;
+    border-radius: 5px;
+  }
+  .scroll-bar::-webkit-scrollbar-thumb {
+    background-color: #0f0f0f;
+    border-radius: 5px;
+    border: 1px solid #8e9099;
+  }
 }
 
 @import 'atropos/scss';
