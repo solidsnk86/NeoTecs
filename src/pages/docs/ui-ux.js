@@ -110,7 +110,7 @@ export default function UiUx() {
                 <!DOCTYPE html>
                 <html lang="en">
                     <head>
-                        <title>Single Page</title>
+                        <title>Página Simple</title>
                         <style>
                             div {
                                 display: none;
@@ -123,13 +123,13 @@ export default function UiUx() {
                         <button data-page="page2">Page 2</button>
                         <button data-page="page3">Page 3</button>
                         <div id="page1">
-                            <h1>This is page 1</h1>
+                            <h1>Esta es la página 1</h1>
                         </div>
                         <div id="page2">
-                            <h1>This is page 2</h1>
+                            <h1>Esta es la página 2</h1>
                         </div>
                         <div id="page3">
-                            <h1>This is page 3</h1>
+                            <h1>Esta es la página 3</h1>
                         </div>
                     </body>
                 </html>
@@ -213,12 +213,12 @@ export default function UiUx() {
               from django.http import Http404, HttpResponse
               from django.shortcuts import render
               
-              # Create your views here.
+              # Crea tus vistas aquí.
               def index(request):
                   return render(request, "singlepage/index.html")
               
-              # The texts are much longer in reality, but have
-              # been shortened here to save space
+              # El texto en realidad es más largo, pero tiene
+              # que ser corto aquí para ahorrar espacio
               texts = ["Text 1", "Text 2", "Text 3"]
               
               def section(request, num):
@@ -1193,18 +1193,14 @@ export default function UiUx() {
                       <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
                       <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
                       <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-                      <title>Hello</title>
+                      <title>Hola</title>
                   </head>
                   <body>
                       <div id="app"></div>
               
                       <script type="text/babel">
                           function App() {
-                              return (
-                                  <div>
-                                      Hello!
-                                  </div>
-                              );
+                              return <h1>Bienvenidos!</h1>
                           }
               
                           ReactDOM.render(<App />, document.querySelector("#app"));
@@ -1374,13 +1370,14 @@ export default function UiUx() {
             <p>
               Una característica útil de React es la capacidad de renderizar
               componentes dentro de otros componentes. Para demostrar esto,
-              creemos otro componente llamado Hello:
+              creemos otro componente llamado Hola:
             </p>
             <Pre lang="jsx">{
               /*jsx */ `
-              function Hello(props) {
+              function Hola(props) {
                 return (
-                    <h1>Hello</h1>
+                    <h1>Bienvenidos a React</h1>
+                    <p>¡Hola!</p>
                 );
               }
               `
@@ -1394,9 +1391,9 @@ export default function UiUx() {
               function App() {
                 return (
                     <div>
-                        <Hello />
-                        <Hello />
-                        <Hello />
+                        <Hola />
+                        <Hola />
+                        <Hola />
                     </div>
                 );
               }
@@ -1419,9 +1416,9 @@ export default function UiUx() {
               function App() {
                 return (
                     <div>
-                        <Hello name="Harry" />
-                        <Hello name="Ron" />
-                        <Hello name="Hermione" />
+                        <Hola name="Neo" />
+                        <Hola name="Mario" />
+                        <Hola name="Gabriel" />
                     </div>
                 );
               }
@@ -1433,9 +1430,9 @@ export default function UiUx() {
             </p>
             <Pre lang="jsx">{
               /*jsx */ `
-              function Hello(props) {
+              function Hola(props) {
                 return (
-                    <h1>Hello, {props.name}!</h1>
+                    <h1>Hola, {props.name}!</h1>
                 );
               }
               `
@@ -1490,10 +1487,10 @@ export default function UiUx() {
             }</Pre>
             <p>Ahora tenemos una página con función de conteo:</p>
             <div className="images-client">
-              <img src="/images/react3.gif" alt="React demo" />
+              <video src="/images/react3.mp4" autoPlay loop muted />
             </div>
             <p>
-              En esta web tengo claros ejemplos del uso de React con Nextjs para
+              En esta web tengo varios ejemplos del uso de React con Nextjs para
               hacer diferentes solicitudes a API's, con API Routes o hacer un
               fetch usando Reactjs y AJAX con un server Flask y Python para
               hacer web scraping, incluido ahí mismo hay un ejemplo como hacer
@@ -1531,6 +1528,266 @@ export default function UiUx() {
               </li>
             </ol>
           </article>
+          <SectionTitle title="Adición" />
+          <article>
+            <p>
+              Ahora que tenemos una comprensión del marco de trabajo React,
+              trabajemos en utilizar lo aprendido para construir un sitio
+              similar a un juego, donde los usuarios resolverán problemas de
+              suma. Comenzaremos creando un nuevo archivo con la misma
+              configuración que nuestras otras páginas de React. Para comenzar a
+              construir esta aplicación, pensemos en lo que podríamos querer
+              llevar un seguimiento en el estado. Deberíamos incluir cualquier
+              cosa que pensemos que podría cambiar mientras un usuario esté en
+              nuestra página. Nuestro estado podría incluir:
+            </p>
+            <ul className="list-css-span">
+              <li>
+                <span>num1</span>: El primer número a sumar.
+              </li>
+              <li>
+                <span>num2</span>: El segundo número a sumar.
+              </li>
+              <li>
+                <span>response</span>: Lo que el usuario ha escrito.
+              </li>
+              <li>
+                <span>score</span>: Cuántas preguntas ha respondido
+                correctamente el usuario.
+              </li>
+            </ul>
+            <p>
+              Ahora nuestro estado puede ser un objeto de Javascript que incluya
+              toda nuestra informacíón:
+            </p>
+            <Pre lang="jsx">{
+              /*jsx */ `
+              const [state, setState] = React.useState({
+                num1: 1,
+                num2: 1,
+                response: "",
+                score: 0
+              });
+              `
+            }</Pre>
+            <p>
+              Ahora usando los valores del estado podemos renderizar una
+              interfaz básica.
+            </p>
+            <Pre lang="jsx">{
+              /*jsx */ `
+              return (
+                <div>
+                    <div>{state.num1} + {state.num2}</div>
+                    <input value={state.response} />
+                    <div>Score: {state.score}</div>
+                </div>
+              );
+              `
+            }</Pre>
+            <p>Ahora la interfaz sencilla de React se verá así:</p>
+            <div className="images-client">
+              <img src="/images/ui-1.png" alt="Suma con React" />
+            </div>
+          </article>
+          <p className="list-css-span">
+            En este momento, el usuario no puede escribir nada en el cuadro de
+            entrada porque su valor está fijo como<span>state.response</span>,
+            que actualmente es una cadena vacía. Para solucionar esto,
+            agreguemos un atributo<span>onChange</span>al elemento de entrada y
+            asignémoslo a una función llamada<span>updateResponse</span>.
+          </p>
+          <Pre lang="jsx">{
+            /*jsx */ `
+              onChange={updateResponse}
+              `
+          }</Pre>
+          <p>
+            Ahora, tendremos que definir la función `updateResponse`, que toma
+            el evento que desencadenó la función y establece la respuesta en el
+            valor actual del input. Esta función permite al usuario escribir y
+            almacena lo que se ha escrito en el estado.
+          </p>
+          <Pre lang="jsx">{
+            /*jsx */ `
+            function updateResponse(event) {
+              setState({
+                  ...state,
+                  response: event.target.value
+              });
+              }
+              `
+          }</Pre>
+          <p>
+            Para dar algunos toques finales a la aplicación, agreguemos estilo a
+            la página. Centraremos todo en la aplicación y luego haremos que el
+            problema sea más grande agregando un id de problem al div que
+            contiene el problema. Luego, añadiremos el siguiente CSS a una
+            etiqueta de estilo:
+          </p>
+          <Pre lang="css">{
+            /*css */ `
+            #app {
+              text-align: center;
+              font-family: sans-serif;
+              font-size: 53px;
+            }
+
+            #problem {
+              font-size: 72px;
+            }
+            `
+          }</Pre>
+          <p>
+            Finalmente, vamos a realizar un juego de matemáticas en el cual
+            quien obtenga un puntaje de 10 puntos, gana. Aquí les dejo el código
+            que usé para hacer este mini juego, pueden probar editando las
+            funciones y/o agregar estilos:
+          </p>
+          <Pre lang="jsx">{
+            /*jsx */ `
+            <!DOCTYPE html>
+            <html lang="en">
+              <head>
+                <script
+                  src="https://unpkg.com/react@17/umd/react.production.min.js"
+                  crossorigin
+                ></script>
+                <script
+                  src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
+                  crossorigin
+                ></script>
+                <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+                <link rel="stylesheet" href="/style.css" />
+                <title>Suma en React</title>
+              </head>
+              <body>
+                <div id="app"></div>
+            
+                <script type="text/babel">
+                  function App() {
+                    const [gameState, setGameState] = React.useState({
+                      num1: generateRandomNumber(),
+                      num2: generateRandomNumber(),
+                      response: '',
+                      score: 0,
+                    });
+            
+                    function generateRandomNumber() {
+                      return Math.floor(Math.random() * 10) + 1;
+                    }
+            
+                    const handleResponseChange = (event) => {
+                      setGameState({
+                        ...gameState,
+                        response: event.target.value,
+                      });
+                    };
+            
+                    const handleSubmit = (event) => {
+                      event.preventDefault();
+            
+                      const userAnswer = parseInt(gameState.response, 10);
+                      const correctAnswer = gameState.num1 + gameState.num2;
+            
+                      if (userAnswer === correctAnswer) {
+                        const newScore = gameState.score + 1;
+            
+                        if (newScore === 10) {
+                          alert(
+                            \`¡Felicidades! Has ganado el juego. Obtuviste \${gameState.score} puntos.\`,
+                          );
+                          setGameState({
+                            num1: generateRandomNumber(),
+                            num2: generateRandomNumber(),
+                            response: '',
+                            score: 0,
+                          });
+                        } else {
+                          setGameState({
+                            num1: generateRandomNumber(),
+                            num2: generateRandomNumber(),
+                            response: '',
+                            score: newScore,
+                          });
+                        }
+                      } else {
+                        setGameState({
+                          ...gameState,
+                          response: '',
+                        });
+                      }
+                    };
+            
+                    const styleButton = {
+                      border: '1px solid #999',
+                      borderRadius: '4px',
+                      padding: '4px 8px',
+                      marginInline: '10px',
+                      backgroundColor: 'transparent',
+                      cursor: 'pointer',
+                      transition: '.2s',
+                    };
+            
+                    return (
+                      <div>
+                        <h3>Juego de Matemáticas</h3>
+                        <p>Puntuación: {gameState.score}</p>
+                        <div id="problem" style={{ fontSize: '24px', margin: '20px 0' }}>
+                          {gameState.num1} + {gameState.num2} =
+                        </div>
+                        <form onSubmit={handleSubmit}>
+                          <input
+                            type="number"
+                            value={gameState.response}
+                            onChange={handleResponseChange}
+                          />
+                          <button type="submit" style={styleButton}>
+                            Enviar
+                          </button>
+                        </form>
+                      </div>
+                    );
+                  }
+            
+                  ReactDOM.render(<App />, document.querySelector('#app'));
+                </script>
+              </body>
+            </html>
+            `
+          }</Pre>
+          <p>Ahora echemos un vistazo a nuestra aplicación:</p>
+          <div className="images-client">
+            <video src="/images/react-math.mp4" autoPlay loop muted />
+          </div>
+          <p>
+            Muchas gracias por llegar hasta aquí, pueden ir viendo otros
+            ejemplos de desarrollo de aplicaciones con React más complejas.
+          </p>
+          <p>
+            Aquí les dejo otra práctica para aprender a hacer un fetch de tu
+            archivo MarkDown en React con Axios:
+          </p>
+          <ul>
+            <li>
+              <Link
+                href="/docs/mardown-render"
+                className="mx-1 underline text-lime-500"
+              >
+                Renderizar MarkDown con react y Axios
+              </Link>
+            </li>
+          </ul>
+          <p>
+            No olviden dejar sus comentarios en mi
+            <Link
+              href="/docs/feedback"
+              className="mx-1 underline text-lime-500"
+            >
+              feedback
+            </Link>
+            , si ven errores o tienen alguna consulta para hacer, los escucho.
+          </p>
           <ShareButton setTitle={UiUx.title} />
         </div>
       </div>

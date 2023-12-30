@@ -12,7 +12,7 @@ export const MT = ({ number = 33 }: MeteorsProps) => {
 	const ref = useRef(null)
 
 	useEffect(() => {
-		// get height of container using ref
+		// Obtenemos la altura del contenedor con un ref
 		const height = ref.current.clientHeight
 
 		const styles = [...new Array(number)].map(() => ({
@@ -31,7 +31,7 @@ export const MT = ({ number = 33 }: MeteorsProps) => {
 			className='absolute overflow-hidden inset-0 w-full h-full animate-fade animate-once animate-duration-1000 z-[-1]'
 		>
 			{[...meteorStyles].map((style, idx) => (
-				// Meteor Head
+				// Cabeza del Meteoro
 				<span
 					key={idx}
 					className={clsx(
@@ -39,7 +39,7 @@ export const MT = ({ number = 33 }: MeteorsProps) => {
 					)}
 					style={style}
 				>
-					{/* Meteor Tail */}
+					{/* Cola del Meteoro */}
 					<div className='pointer-events-none absolute top-1/2 -z-10 h-[1px] w-[50px] -translate-y-1/2 bg-gradient-to-r from-slate-500 to-transparent' />
 				</span>
 			))}
