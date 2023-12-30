@@ -8,7 +8,7 @@ export default function handlerCurrency(req, res) {
     success: true,
     timestamp: formattedDate,
     base: 'USD',
-    date: '2023-DIC-19',
+    date: '2023-DIC-30',
     rates: {
       AED: 3.671622,
       AFN: 78.182922,
@@ -16,7 +16,7 @@ export default function handlerCurrency(req, res) {
       AMD: 405.091678,
       ANG: 1.808236,
       AOA: 832.508488,
-      ARS: 802.630703,
+      ARS: 806.770703,
       AUD: 1.49709,
       AWG: 1.801631,
       AZN: 1.705974,
