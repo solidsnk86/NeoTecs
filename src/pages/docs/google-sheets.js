@@ -8,7 +8,6 @@ import { Footer } from '../../components/Footer';
 import { CalendarClockIcon } from 'lucide-react';
 import { WhatsApp } from '@mui/icons-material';
 import { PictureBox } from '../../components/PictureBox';
-import { Preloader } from '../../components/Preloader';
 
 export default function CsvSheets() {
   const [items, setItems] = useState([]);
@@ -67,7 +66,6 @@ export default function CsvSheets() {
 
   return (
     <TitlesContextProvider>
-      <Preloader />
       <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-30" />
       <div className="max-w-screen-xl mx-auto flex items-stretch py-16">
         <LectureNav />

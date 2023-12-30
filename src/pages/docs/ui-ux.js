@@ -1213,7 +1213,7 @@ export default function UiUx() {
               </html>
               `
             }</Pre>
-            <div className="border-l-4 border-amber-500 px-1 bg-opacity-[0.6] p-3 pl-5 text-amber-500 font-semibold">
+            <div className="border-l-4 border-amber-500 my-10 px-1 bg-opacity-[0.6] p-3 pl-5 text-amber-500 font-semibold">
               <p className="font-semibold text-lg">
                 <InfoIcon className="w-5 inline mb-1" /> Importante
               </p>
@@ -1492,9 +1492,44 @@ export default function UiUx() {
             <div className="images-client">
               <img src="/images/react3.gif" alt="React demo" />
             </div>
-            <p className=" bg-button-variant text-text-variant p-3 w-fit font-semibold">
-              ¡Próximamente voy cargar más contenido de React! 😄
+            <p>
+              En esta web tengo claros ejemplos del uso de React con Nextjs para
+              hacer diferentes solicitudes a API's, con API Routes o hacer un
+              fetch usando Reactjs y AJAX con un server Flask y Python para
+              hacer web scraping, incluido ahí mismo hay un ejemplo como hacer
+              un fetch de tu
+              <b className="bg-zinc-300 dark:bg-zinc-800 rounded mx-1 p-[2px] text-button-variant">
+                README.md
+              </b>
+              (GitHub MarkDown) a tu aplicación web. Si quieren ver algo más
+              avanzado del uso de React, aquí les dejo algunos ejemplos:
             </p>
+            <ol>
+              <li>
+                <Link
+                  href="/docs/scraping"
+                  className="mx-1 underline text-lime-500"
+                >
+                  Web Scraping con React Js y Python
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/docs/google-sheets"
+                  className="mx-1 underline text-lime-500"
+                >
+                  Base de datos con Google Sheets (Hojas de Cálculos de Excel)
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/docs/javascript#cambio-divisas"
+                  className="mx-1 underline text-lime-500"
+                >
+                  Api Routes con javascript (Cambio de Divisas)
+                </Link>
+              </li>
+            </ol>
           </article>
           <ShareButton setTitle={UiUx.title} />
         </div>

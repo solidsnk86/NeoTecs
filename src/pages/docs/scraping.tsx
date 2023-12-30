@@ -7,7 +7,6 @@ import MarkdownRenderer from '../../components/MarkDownRender';
 import { AlertTriangle } from 'lucide-react';
 import { OpenInNew } from '@mui/icons-material';
 import { Footer } from '../../components/Footer';
-import { Preloader } from '../../components/Preloader';
 
 export default function Scraping() {
     const [titles, setTitles] = useState([]);
@@ -29,7 +28,6 @@ export default function Scraping() {
         <>
             <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-30" />
             <main className=" text-text-primary flex flex-col justify-center m-auto p-10 xl:w-10/12">
-                <Preloader />
                 <ArrowLeftIcon
                     className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-6 xl:top-14 top-12 left-2 fixed mt-3"
                     onClick={() => window.open('/docs/program', '_self')}

@@ -389,31 +389,6 @@ textarea {
   padding-inline: 10px;
 }
 
-/* SPINER */
-
-.spinner {
-  position: fixed;
-  left: calc(50% - 20px);
-  top: 50%;
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border-left-color: #f05252;
-  z-index: 99;
-  animation: spinn 1s linear infinite;
-}
-
-@keyframes spinn {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @import 'atropos/scss';
 @import './home-header.scss';
 @import './picture-box.scss';

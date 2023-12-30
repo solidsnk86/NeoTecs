@@ -1567,9 +1567,10 @@ export default function JavaScript() {
                 
                 `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/exchange-2.gif" />
-            </div>
+            <p>
+              A continuación veremos un ejemplo que lo tengo implementado en el
+              sitio.
+            </p>
             <span id="cambio-divisas" />
             <SectionTitle title="Convertir Divisas" />
             <CurrencyConverter />
