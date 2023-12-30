@@ -99,9 +99,9 @@ export default function CurrencyConverter() {
         <aside>
           <input
             type="text"
-            placeholder="Ingrese el monto a convertir"
+            placeholder="Monto a convertir"
             onChange={(e) => setAmountToConvert(e.target.value)}
-            className="text-black uppercase font-semibold my-6 placeholder:text-center placeholder:p-3 placeholder:capitalize rounded outline-4 border border-zinc-300"
+            className="text-black font-semibold my-6 placeholder:text-center placeholder:p-3 rounded outline-4 border border-zinc-300"
           />
           <button
             onClick={(e) => {
