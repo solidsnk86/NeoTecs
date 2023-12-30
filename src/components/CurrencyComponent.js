@@ -31,7 +31,7 @@ export default function CurrencyConverter() {
           setResult(`1 USD es igual a $ ${rate.toFixed(2)} ${currency}.`);
           setDate(currentDate);
           setUpdate(apiUpdateDate);
-          setCurrencyResult(rate);
+          setCurrencyResult(rate.toFixed(2));
         } else {
           setResult('Moneda no válida.');
           setBorderColor('border-red-400');
@@ -94,25 +94,28 @@ export default function CurrencyConverter() {
       <div>
         <p>
           Podemos hacer la conversión del valor de la divisa para obtener un
-          resultado concreto de acuerdo al monto indicado:
+          resultado concreto de acuerdo al monto indicado (La divisa principal
+          es dólar a la divisa que se elija):
         </p>
         <aside>
           <input
             type="text"
             placeholder="Ingrese el monto a convertir"
             onChange={(e) => setAmountToConvert(e.target.value)}
-            className="text-black uppercase font-semibold my-6 placeholder:text-center placeholder:capitalize rounded outline-4 border border-zinc-300"
+            className="text-black uppercase font-semibold my-6 placeholder:text-center placeholder:p-3 placeholder:capitalize rounded outline-4 border border-zinc-300"
           />
           <button
-            onClick={() => {
-              currencyValue();
+            onClick={(e) => {
+              e.preventDefault(currencyValue());
             }}
             className="rounded px-4 mx-3 mb-3 outline-2 dark:outline-amber-400 outline-[#0F0F0F] outline-offset-[3px] outline-double bg-button-variant text-text-variant font-semibold hover:brightness-110"
           >
             Calcular
           </button>
           <p className="bg-button-variant w-fit p-2 font-semibold text-text-variant rounded">
-            {currencyResult.toFixed(2) + ` ${currency.toUpperCase()}`}
+            {'El resultado de la divisa es ' +
+              currencyResult +
+              ` ${currency.toUpperCase()}`}
           </p>
         </aside>
       </div>
