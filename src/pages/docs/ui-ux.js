@@ -54,7 +54,7 @@ export default function UiUx() {
               <a href="#react">React</a>
               <ul>
                 <li>
-                  <a href="#adicion">Adición</a>
+                  <a href="#adición">Adición</a>
                 </li>
               </ul>
             </li>

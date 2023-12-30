@@ -25,81 +25,115 @@ export default function Testing() {
               <a href="#introduccion">Introducción</a>
             </li>
             <li>
-              <a href="#sql">SQL</a>
+              <a href="#pruebas">Pruebas</a>
+            </li>
+            <li>
+              <a href="#afirmar">Afirmar</a>
               <ul>
                 <li>
-                  <a href="#base-de-datos">Bases de Datos</a>
-                </li>
-                <li>
-                  <a href="#tipos-de-columnas">Tipos de Columnas</a>
+                  <a href="#desarrollo-guiado">Desarrollo Guiado por Pruebas</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#tablas">Tablas</a>
+              <a href="#select">Pruebas Unitarias</a>
             </li>
             <li>
-              <a href="#select">SELECT</a>
+              <a href="#pruebas-django">Pruebas en Django</a>
               <ul>
                 <li>
-                  <a href="#terminal-sql">Trabajando con SQL en la terminal</a>
-                </li>
-                <li>
-                  <a href="#funciones">Funciones</a>
-                </li>
-                <li>
-                  <a href="#update">UPDATE</a>
-                </li>
-                <li>
-                  <a href="#delete">DELETE</a>
-                </li>
-                <li>
-                  <a href="#otras-clausulas">Otras cláusulas</a>
+                  <a href="#pruebas-cliente">Pruebas de Cliente</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#unir-tablas">Unir Tablas</a>
-              <ul>
-                <li>
-                  <a href="#unir-query">Unir Query</a>
-                </li>
-                <li>
-                  <a href="#indexado">Indexando</a>
-                </li>
-                <li>
-                  <a href="#vulnerabilidades-sql">Vulnerabilidades SQL</a>
-                </li>
-              </ul>
+              <a href="#selenium">Selenium</a>
             </li>
             <li>
-              <a href="#modulos-django">Módulos Django</a>
+              <a href="#ci-cd">
+                CI/CD (Integración Continua/Despliegue Continuo)
+              </a>
             </li>
             <li>
-              <a href="#migraciones">Migraciones</a>
+              <a href="#acciones-github">Acciones de GitHub</a>
             </li>
             <li>
-              <a href="#shell">Shell (Caparazón)</a>
-              <ul>
-                <li>
-                  <a href="#comenzando-aplicacion">
-                    Comenzando nuestra aplicación
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#administrador-django">Administrador Django</a>
-            </li>
-            <li>
-              <a href="#mas-relaciones">Muchas más relaciones</a>
-            </li>
-            <li>
-              <a href="#usuarios">Usuarios</a>
+              <a href="#administrador-django">Docker</a>
             </li>
           </ol>
           <span id="introduccion" />
-          <SectionTitle title="Introducción a SQL" />
+          <SectionTitle title="Introducción" />
+          <article>
+            <p>
+              Hasta ahora, hemos discutido cómo construir páginas web simples
+              utilizando HTML y CSS, y cómo utilizar Git y GitHub para realizar
+              un seguimiento de los cambios en nuestro código y colaborar con
+              otros. También nos familiarizamos con el lenguaje de programación
+              Python, comenzamos a utilizar Django para crear aplicaciones web y
+              aprendimos a utilizar los modelos de Django para almacenar
+              información en nuestros sitios. Luego, introdujimos JavaScript y
+              aprendimos a usarlo para hacer que las páginas web sean más
+              interactivas, y hablamos sobre el uso de la animación y React para
+              mejorar aún más nuestras interfaces de usuario. Hoy, aprenderemos
+              sobre las mejores prácticas cuando se trata de trabajar en
+              proyectos más grandes y lanzarlos.
+            </p>
+          </article>
+          <SectionTitle title="Pruebas" />
+          <article>
+            <p>
+              Una parte importante del proceso de desarrollo de software es la
+              acción de probar el código que hemos escrito para asegurarnos de
+              que todo funcione como esperamos. En esta conferencia,
+              discutiremos varias formas en las que podemos mejorar la manera en
+              que probamos nuestro código.
+            </p>
+          </article>
+          <SectionTitle title="Afirmar" />
+          <article>
+            <p className="list-css-span">
+              Una de las formas más simples de ejecutar pruebas en Python es
+              mediante el uso del comando<span>assert</span>. Este comando va
+              seguido de alguna expresión que debería ser verdadera. Si la
+              expresión es verdadera, no sucede nada; sin embargo, si es
+              <span>falsa</span>, se generará una excepción. Veamos cómo
+              podríamos incorporar este comando para probar la función de
+              cuadrado que escribimos al aprender Python por primera vez. Cuando
+              la función está escrita correctamente, no sucede nada, ya que el
+              <span>assert</span>es<span>verdadero</span>.
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+                def square(x):
+                return x * x
+            
+                assert square(10) == 100
+            
+                """ Output:
+            
+                """
+                `
+            }</Pre>
+            <p>
+              Y luego, cuando está escrita incorrectamente, se genera una
+              excepción.
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+                def square(x):
+                return x + x
+          
+                assert square(10) == 100
+          
+                """ Output:
+                Traceback (most recent call last):
+                File "assert.py", line 4, in <module>
+                assert square(10) == 100
+                AssertionError
+                """
+                `
+            }</Pre>
+          </article>
           <ShareButton setTitle={Testing.title} />
         </div>
       </div>
