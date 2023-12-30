@@ -17,7 +17,6 @@ export default function CurrencyConverter() {
 
   const onSubmit = async () => {
     setBorderColor('border-green-400');
-
     try {
       const response = await fetch(`/api/currency`);
 
