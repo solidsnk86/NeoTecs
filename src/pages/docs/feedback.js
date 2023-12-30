@@ -69,7 +69,7 @@ export default function FeedBack() {
       >
         <ArrowLeftIcon
           className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-3 xl:top-10 top-14 left-2 fixed mt-3"
-          onClick={() => window.open('/', '_self')}
+          onClick={(e) => history.back(e)}
         />
         <h1 className="flex justify-center mx-auto text-6xl text-transparent relative bottom-[2px] [-webkit-text-stroke-width:4px] [-webkit-text-stroke-color:var(--color-on-surface)]">
           Feedback

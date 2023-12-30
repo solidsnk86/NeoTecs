@@ -15,9 +15,9 @@ export function LectureNav() {
   return (
     <div className="w-80 px-4 md:px-8 hidden lg:block">
       <div className="sticky top-4">
-        <Link href="/" title="Volver al inicio">
+        <span onClick={(e) => history.back(e)} title="Volver atrás">
           <ArrowLeftIcon className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all" />
-        </Link>
+        </span>
         <NavSwitch />
         <ul className="text-xs h-60 overflow-y-auto">
           {titles.map((title) => (
