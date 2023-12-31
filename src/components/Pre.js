@@ -1,16 +1,13 @@
 import React, { useRef } from 'react';
+import { Highlight, themes } from 'prism-react-renderer';
 import stripIndent from 'strip-indent';
 import { Copy } from 'lucide-react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const removeIndent = (code = '') => {
   return stripIndent(code).trim();
 };
-
-const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 export const Pre = ({ children, lang = '' }) => {
   const preRef = useRef(null);
@@ -26,6 +23,10 @@ export const Pre = ({ children, lang = '' }) => {
     document.execCommand('copy');
     e.stopPropagation();
 
+    const isDarkMode = window.matchMedia(
+      '(prefers-color-scheme: dark)',
+    ).matches;
+
     toast('Contenido copiado al portapapeles', {
       position: toast.POSITION.BOTTOM_LEFT,
       type: 'default',
@@ -37,15 +38,15 @@ export const Pre = ({ children, lang = '' }) => {
 
   return (
     <div className="relative">
-      <p className="bg-[#1E1E1E] translate-y-[13px] text-amber-500 text-xs uppercase font-bold pl-4 p-1 rounded-md">
+      <p className="bg-[#1E1E1E] translate-y-[23px] text-amber-500 text-xs uppercase font-bold pl-4 p-1 rounded-md">
         {lang}
       </p>
       <Copy
         onClick={(e) => handleCopyClick(e)}
-        className="w-4 h-4 inline-flex my-auto absolute z-10 top-[18px] right-[8px] cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all"
+        className="w-4 h-4 inline-flex my-auto absolute z-10 top-[28px] right-[8px] cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all"
       />
-      <SyntaxHighlighter
-        style={vscDarkPlus}
+      <Highlight
+        theme={themes.vsDark}
         code={removeIndent(children)}
         language={lang.toLowerCase()}
       >
@@ -60,7 +61,7 @@ export const Pre = ({ children, lang = '' }) => {
             ))}
           </pre>
         )}
-      </SyntaxHighlighter>
+      </Highlight>
       <ToastContainer closeButton closeOnClick />
     </div>
   );
