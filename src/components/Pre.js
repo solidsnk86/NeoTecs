@@ -51,7 +51,7 @@ export const Pre = ({ children, lang = '' }) => {
         language={lang.toLowerCase()}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className={className} style={style} ref={preRef}>
+          <pre className={className} style={style} lang={lang} ref={preRef}>
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })} key={i}>
                 {line.map((token, key) => (
