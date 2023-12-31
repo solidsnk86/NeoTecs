@@ -9,15 +9,9 @@ import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import { OpenInNew } from '@mui/icons-material';
 import CurrencyConverter from '../../components/CurrencyComponent';
-
+import HeaderTitle from '../../components/HeaderTitlte';
+import IndexTitle from '../../components/IndexTitle';
 export default function JavaScript() {
-  const JavascriptTitle = ({ Tag = 'h1', children }) => {
-    return <Tag className="text-text-primary font-mono">{children}</Tag>;
-  };
-  const Header = ({ Tag = 'h2', children }) => {
-    return <Tag className="text-text-primary">{children}</Tag>;
-  };
-
   return (
     <TitlesContextProvider>
       <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-30" />
@@ -25,9 +19,9 @@ export default function JavaScript() {
         <LectureNav />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
-          <JavascriptTitle>Javascript</JavascriptTitle>
+          <HeaderTitle>Javascript</HeaderTitle>
           <hr className="border-text-primary" />
-          <Header>Índice</Header>
+          <IndexTitle>Índice</IndexTitle>
           <ol className="indice">
             <li>
               <a href="#introduccion">Introducción</a>
@@ -98,7 +92,7 @@ export default function JavaScript() {
               </b>
             </li>
           </ul>
-          <Header>Javascript</Header>
+          <IndexTitle>Javascript</IndexTitle>
           <p>Comencemos por volver a examinar un diagrama:</p>
           <div className="images-client">
             <img
@@ -890,7 +884,7 @@ export default function JavaScript() {
               <img src="/images/consoleList.png" />
             </div>
             <span id="funciones-de-flecha" />
-            <Header>Funciones Flecha</Header>
+            <IndexTitle>Funciones Flecha</IndexTitle>
             <p>
               Funciones de Flecha Además de la notación tradicional de funciones
               que hemos visto anteriormente, JavaScript ahora nos proporciona la
@@ -1024,7 +1018,7 @@ export default function JavaScript() {
             </ul>
           </article>
           <span id="todo-list" />
-          <Header>TODO List</Header>
+          <IndexTitle>TODO List</IndexTitle>
           <article>
             <p>
               Para aplicar algunas de las cosas que hemos aprendido en esta
@@ -1388,7 +1382,7 @@ export default function JavaScript() {
                 `
           }</Pre>
           <span id="cambio-de-moneda" />
-          <Header>Cambio de moneda</Header>
+          <IndexTitle>Cambio de moneda</IndexTitle>
           <article>
             <p>
               Para mostrar cómo podemos usar API en nuestras aplicaciones,

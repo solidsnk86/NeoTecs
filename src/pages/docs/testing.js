@@ -6,8 +6,8 @@ import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import { Header } from './sql';
-import { SqlTitle } from './sql';
+import HeaderTitle from '../../components/HeaderTitlte';
+import Indextitle from '../../components/IndexTitle';
 
 export default function Testing() {
   return (
@@ -17,9 +17,9 @@ export default function Testing() {
         <LectureNav />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
-          <SqlTitle>Pruebas (Testing)</SqlTitle>
+          <HeaderTitle>Pruebas (Testing)</HeaderTitle>
           <hr className="border-text-primary" />
-          <Header>Índice</Header>
+          <Indextitle>Índice</Indextitle>
           <ol className="indice">
             <li>
               <a href="#introduccion">Introducción</a>

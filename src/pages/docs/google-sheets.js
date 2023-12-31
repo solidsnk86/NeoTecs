@@ -8,6 +8,7 @@ import { Footer } from '../../components/Footer';
 import { CalendarClockIcon } from 'lucide-react';
 import { WhatsApp } from '@mui/icons-material';
 import { PictureBox } from '../../components/PictureBox';
+import HeaderTitle from '../../components/HeaderTitlte';
 
 export default function CsvSheets() {
   const [items, setItems] = useState([]);
@@ -53,10 +54,6 @@ export default function CsvSheets() {
     fetchData();
   }, []);
 
-  const SheetsTitle = ({ Tag = 'h1', children }) => {
-    return <Tag className="text-text-primary font-mono">{children}</Tag>;
-  };
-
   const sendWhatsapp = (id, price) => {
     const wapNumber = '+5492604586538';
     const wapMessage = `Buenas estoy interesado en el dibujo de ${id}! El cual tiene un importe de U$D ${price}. ¿El envío está incluido?`;
@@ -71,7 +68,7 @@ export default function CsvSheets() {
         <LectureNav />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
-          <SheetsTitle>Base de Datos con Google Sheets</SheetsTitle>
+          <HeaderTitle>Base de Datos con Google Sheets</HeaderTitle>
           <hr className="border-text-primary" />
           <section className="xl:w-1/2 justify-center mx-auto text-text-primary p-10 space-y-5">
             <h1 className="mt-10 flex justify-center mx-auto text-6xl text-transparent relative bottom-[2px] [-webkit-text-stroke-width:4px] [-webkit-text-stroke-color:var(--color-on-surface)]">

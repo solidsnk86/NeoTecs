@@ -9,16 +9,9 @@ import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import { OpenInNew } from '@mui/icons-material';
 import { DjangoIcon } from '../../components/DjangoIcon';
-
+import HeaderTitle from '../../components/HeaderTitlte';
+import Indextitle from '../../components/IndexTitle';
 export default function DjangoDocs() {
-  const DjangoTitle = ({ Tag = 'h1', children }) => {
-    return <Tag className="text-text-primary font-mono">{children}</Tag>;
-  };
-
-  const Header = ({ Tag = 'h2', children }) => {
-    return <Tag className="text-text-primary">{children}</Tag>;
-  };
-
   return (
     <TitlesContextProvider>
       <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-30" />
@@ -26,9 +19,9 @@ export default function DjangoDocs() {
         <LectureNav />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
-          <DjangoTitle>Django</DjangoTitle>
+          <HeaderTitle>Django</HeaderTitle>
           <hr className="border-text-primary" />
-          <Header>Índice</Header>
+          <Indextitle>Índice</Indextitle>
           <ol className="indice">
             <li>
               <a href="#introduccion">Introducción</a>

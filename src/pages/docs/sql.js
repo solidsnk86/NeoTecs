@@ -9,14 +9,8 @@ import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import { OpenInNew } from '@mui/icons-material';
 import { AlertTriangle, InfoIcon } from 'lucide-react';
-
-export const SqlTitle = ({ Tag = 'h1', children }) => {
-  return <Tag className="text-text-primary font-mono">{children}</Tag>;
-};
-
-export const Header = ({ Tag = 'h2', children }) => {
-  return <Tag className="text-text-primary">{children}</Tag>;
-};
+import HeaderTitle from '../../components/HeaderTitlte';
+import Indextitle from '../../components/IndexTitle';
 export default function SqlDocs() {
   return (
     <TitlesContextProvider>
@@ -25,9 +19,9 @@ export default function SqlDocs() {
         <LectureNav />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
-          <SqlTitle>SQL</SqlTitle>
+          <HeaderTitle>SQL</HeaderTitle>
           <hr className="border-text-primary" />
-          <Header>Índice</Header>
+          <Indextitle>Índice</Indextitle>
           <ol className="indice">
             <li>
               <a href="#introduccion">Introducción</a>

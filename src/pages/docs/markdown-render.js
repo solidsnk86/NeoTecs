@@ -8,10 +8,8 @@ import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import Link from 'next/link';
 import { OpenInNew } from '@mui/icons-material';
-
-const MarkDownTitle = ({ Tag = 'h1', children }) => {
-  return <Tag className="text-text-primary font-mono">{children}</Tag>;
-};
+import HeaderTitle from '../../components/HeaderTitlte';
+import IndexTitle from '../../components/IndexTitle';
 export default function MarkDownRender() {
   return (
     <TitlesContextProvider>
@@ -20,9 +18,9 @@ export default function MarkDownRender() {
         <LectureNav />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
-          <MarkDownTitle>Renderizar MarkDown de GitHub</MarkDownTitle>
+          <HeaderTitle>Renderizar MarkDown de GitHub</HeaderTitle>
           <hr className="border-text-primary" />
-          <SectionTitle title="Índice" />
+          <IndexTitle>Índice</IndexTitle>
           <ol className="indice">
             <li>
               <a href="#introduccion">Introducción</a>

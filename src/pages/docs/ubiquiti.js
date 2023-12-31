@@ -18,7 +18,6 @@ export default function UbiquitiDocs() {
         <div className="w-full max-w-none prose px-4 md:px-8">
           <BrandsSwitch inline />
           <SectionTitle title="Configuración Ubiquiti" />
-
           <section className="text-text-primary">
             <p>
               Este artículo aplica a los siguientes modelos:
@@ -90,9 +89,9 @@ export default function UbiquitiDocs() {
             </p>
             <ol>
               <li>Dirección IP:</li>
-              <Pre lang="tcp/ip">192.168.1.25</Pre>
+              <Pre lang="tcp/ip">{`192.168.1.25`}</Pre>
               <li>Máscara de sub red:</li>
-              <Pre lang="tcp/ip">255.255.255.0</Pre>
+              <Pre lang="tcp/ip">{`255.255.255.0`}</Pre>
             </ol>
             <div className="images-client flex justify-center m-auto">
               <img
@@ -103,7 +102,7 @@ export default function UbiquitiDocs() {
             </div>
             <SectionTitle title="URL y Login Ubiquiti" />
             <p>Nos dirijimos al navegador y colocamos la url:</p>
-            <Pre lang="navegador">htpps://198.168.1.20</Pre>
+            <Pre lang="navegador">{`htpps://198.168.1.20`}</Pre>
             <p>
               Nos aparecera una interfaz para el login de la antena algo así:
             </p>

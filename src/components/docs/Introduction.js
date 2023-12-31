@@ -1,19 +1,15 @@
 import { SectionTitle } from '../SectionTitle';
 import Link from 'next/link';
 import { OpenInNew } from '@mui/icons-material';
+import HeaderTitle from '../HeaderTitlte';
+import IndexTitle from '../IndexTitle';
 
 export const Introduction = () => {
-  const IntroTitle = ({ Tag = 'h1', children }) => {
-    return <Tag className="text-text-primary font-mono">{children}</Tag>;
-  };
-  const Header = ({ Tag = 'h2', children }) => {
-    return <Tag className="text-text-primary">{children}</Tag>;
-  };
   return (
     <main className="text-text-primary">
-      <IntroTitle>Curso de Programación con Python y Javascript</IntroTitle>
+      <HeaderTitle>Curso de Programación con Python y Javascript</HeaderTitle>
       <hr className="border-text-primary" />
-      <Header>Índice</Header>
+      <IndexTitle>Índice</IndexTitle>
       <ol className="indice">
         <li>
           <a href="#introduccion">Introducción</a>

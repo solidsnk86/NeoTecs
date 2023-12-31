@@ -65,9 +65,9 @@ export default function MikrotikDocs() {
 
             <ol>
               <li>Dirección IP:</li>
-              <Pre lang="tcp/ip">192.168.88.10</Pre>
+              <Pre lang="tcp/ip">{`192.168.88.10`}</Pre>
               <li>Máscara de sub red:</li>
-              <Pre lang="tcp/ip">255.255.255.0</Pre>
+              <Pre lang="tcp/ip">{`255.255.255.0`}</Pre>
             </ol>
 
             <div className="images-client flex justify-center m-auto">
