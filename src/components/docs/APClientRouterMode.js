@@ -30,7 +30,7 @@ export const APClientRouterMode = () => {
         <FaWindows className="inline-flex text-xl mb-1 mx-2 text-[cornflowerblue]" />
         + R y escribimos:
       </p>
-      <Pre lang="cmd">{`ncpa.cpl`}</Pre>
+      <Pre lang="bash">{`ncpa.cpl`}</Pre>
       <p>Damos enter para ejecutar el comando, veremos la siguiente ventana:</p>
 
       <figure className="images-web">
@@ -64,9 +64,9 @@ export const APClientRouterMode = () => {
 
       <ol>
         <li>Dirección IP:</li>
-        <Pre lang="tcp/ip">192.168.0.100</Pre>
+        <Pre lang="bash">192.168.0.100</Pre>
         <li>Máscara de sub red:</li>
-        <Pre lang="tcp/ip">255.255.255.0</Pre>
+        <Pre lang="bash">255.255.255.0</Pre>
       </ol>
 
       <figure className="images-client flex m-auto justify-center">
@@ -81,7 +81,7 @@ export const APClientRouterMode = () => {
         escribimos:
       </p>
 
-      <Pre lang="navegador">https://192.168.0.254/</Pre>
+      <Pre lang="bash">https://192.168.0.254/</Pre>
 
       <p>damos enter y avanzamos.</p>
 
