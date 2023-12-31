@@ -6,11 +6,11 @@ Explore our comprehensive web documentation designed to guide you through the pr
 
 - Tools and frames which i use in this project:
 
-[![Built with Tailwind CSS](https://img.shields.io/badge/Built_with-Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-
 [![Powered by Next.js](https://img.shields.io/badge/Powered_by-Next.js-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
 
 [![Powered by Supabase](https://img.shields.io/badge/Powered_by-Supabase-336791?style=flat&logo=supabase&logoColor=white)](https://supabase.io/)
+
+[![Built with Tailwind CSS](https://img.shields.io/badge/Built_with-Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
 | Language                                                                                             | Description                                  |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------------------- |
