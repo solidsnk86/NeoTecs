@@ -38,7 +38,7 @@ export const NavSwitch = ({ inline }) => {
       title: 'UI/UX',
     },
     {
-      href: '/docs/test',
+      href: '/docs/testing',
       title: 'CI/DI',
     },
     {
@@ -56,10 +56,6 @@ export const NavSwitch = ({ inline }) => {
     {
       href: '/docs/google-sheets',
       title: 'Google Sheets',
-    },
-    {
-      href: '/docs/testing',
-      title: 'Pruebas CI/CD',
     },
   ];
   const isActive = (link) => link.href === router.asPath;

@@ -134,6 +134,45 @@ export default function Testing() {
                 `
             }</Pre>
           </article>
+          <SectionTitle title="Desarrollo guiado por pruebas" />
+          <article>
+            <p>
+              Al comenzar a construir proyectos más grandes, es posible que
+              desees considerar el uso del desarrollo guiado por pruebas
+              (Test-Driven Development, TDD), un estilo de desarrollo en el que
+              cada vez que solucionas un error, añades una prueba que verifica
+              ese error a un conjunto creciente de pruebas que se ejecutan cada
+              vez que realizas cambios. Esto te ayudará a asegurarte de que las
+              características adicionales que agregas a un proyecto no
+              interfieran con tus características existentes.
+            </p>
+            <p className="list-css-span">
+              Ahora, veamos una función un poco más compleja y pensemos en cómo
+              escribir pruebas puede ayudarnos a encontrar errores. Ahora
+              escribiremos una función llamada<span>is_prime</span>que devuelve
+              <span>True</span>solo si su entrada es un número primo.
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              import math
+
+              def es_primo(n):
+                  # Sabemos que los números menores que 2 no son primos
+                  if n < 2:
+                      return False
+              
+               # Verificamos factores hasta la raíz cuadrada de n
+                  for i in range(2, int(math.sqrt(n))):
+              
+                      # Si i es un factor, devolvemos False
+                      if n % i == 0:
+                          return False
+              
+              # Si no se encontraron factores, devolvemos True
+              return True
+              `
+            }</Pre>
+          </article>
           <ShareButton setTitle={Testing.title} />
         </div>
       </div>
