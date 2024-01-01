@@ -138,14 +138,14 @@ export const GoogleSheetsExample = () => {
         const csv = await response.text()
       </pre>
       <p>
-        Para formatear el archivo y aplicarlo a nuestra app, tenemos que crear
-        una constante:
+        Para formatear el archivo y aplicarlo a nuestra app, vamos a crear una
+        constante:
       </p>
       <pre lang="javascript" className="code-block text-zinc-100 p-1 my-2">
         const parseItems = csv.slpit('\n').slice(1)
       </pre>
       <p className="list-css-span">
-        El<span>split('\n')</span>nos da el formato respetando separando cada
+        El<span>split('\n')</span>nos da el formato respetando y separando cada
         texto por un salto de línea.
       </p>
       <p className="list-css-span">

@@ -44,22 +44,22 @@ export default function Scraping() {
                 </p>
                 <div className="bg-[#F7F9F9] dark:bg-[#16181C] text-text-primary p-3 rounded border-zinc-200 dark:border-zinc-800 border">
                     <p>
-                        A continuación hago un fetch de documentación MarkDown en mi
+                        A continuación hago un fetch de documentación MarkDown de mi
                         repositorio de GitHub que indica el procedimiento y lo explico en
                         inglés, el cual lo pueden traducir.
                     </p>
                     <p>
-                        Si quieres saber cómo se puede lograr hacer un fetch de tu
-                        documentación MarkDown en GitHub de algún repositorio con un
-                        REAMDE.md con algunas de sus props y plugins para dar estilos, sigan
-                        este link:
+                        Si deseas aprender cómo realizar una recuperación de la
+                        documentación Markdown desde un repositorio en GitHub que contiene
+                        un archivo README.md con información sobre sus propiedades y
+                        complementos, te invito a seguir este enlace:
                     </p>
                     <Link
                         href="/docs/markdown-render"
                         className="text-[tomato] underline"
                     >
                         React Markdown Render
-                        <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                        <OpenInNew className="link-icon" />
                     </Link>
                 </div>
                 <hr className="border-zinc-300 dark:border-zinc-800 my-10" />
@@ -77,8 +77,9 @@ export default function Scraping() {
                         </span>
                     </p>
                 </div>
-                <p className='text-center justify-center mx-auto my-10 bg-button-variant text-text-variant w-fit p-2'>Si tienen alguna consulta para hacer los escucho en mi
-                    <Link href="/docs/feedback" className='underline text-red-500 mx-1'>
+                <p className="text-center justify-center mx-auto my-10 bg-button-variant text-text-variant w-fit p-2">
+                    Si tienen alguna consulta para hacer los escucho en mi
+                    <Link href="/docs/feedback" className="underline text-red-500 mx-1">
                         feedback,
                     </Link>
                     muchas gracias!
