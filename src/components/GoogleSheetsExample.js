@@ -149,8 +149,8 @@ export const GoogleSheetsExample = () => {
         texto por un salto de línea.
       </p>
       <p className="list-css-span">
-        El<span>slice(1)</span>sirve para evitar mostrar la columna id de
-        nuestro archivo CSV que solamente contiene los nombres de las columnas.
+        El<span>slice(1)</span>sirve para evitar mostrar la fila: id, nombre,
+        descripción, etcétera, de nuestro archivo CSV
       </p>
       <p>
         Después se itera sobre cada artículo y se crea un objeto con las
