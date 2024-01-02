@@ -8,6 +8,8 @@ import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
+import Link from 'next/link';
+import { OpenInNew } from '@mui/icons-material';
 
 export default function Testing() {
   return (
@@ -433,6 +435,51 @@ export default function Testing() {
               que realices cambios para mejorar esta función, querrás tener la
               capacidad de ejecutar fácilmente tus pruebas unitarias nuevamente
               para asegurarte de que tu función siga siendo correcta.
+            </p>
+          </article>
+          <SectionTitle title="Pruebas Django" />
+          <article>
+            <p>
+              Ahora, veamos cómo podemos aplicar las ideas de pruebas
+              automatizadas al crear aplicaciones Django. Mientras trabajamos en
+              esto, utilizaremos el proyecto "flights" que creamos cuando
+              aprendimos por primera vez sobre los modelos de Django. Primero
+              vamos a agregar un método a nuestro modelo de Vuelo (Flight) que
+              verifique que un vuelo sea válido al verificar dos condiciones:
+            </p>
+            <ol>
+              <li>El origen no es lo mismo que destino.</li>
+              <li>La duración es mayor a 0 minutos.</li>
+            </ol>
+            <p>Ahora nuestro modelo podría verse de la siguiente manera:</p>
+            <Pre lang="python">{
+              /*python */ `
+              class Flight(models.Model):
+              origin = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name="departures")
+              destination = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name="arrivals")
+              duration = models.IntegerField()
+          
+              def __str__(self):
+                  return f"{self.id}: {self.origin} to {self.destination}"
+          
+              def is_valid_flight(self):
+                  return self.origin != self.destination or self.duration > 0
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Para asegurarnos de que nuestra aplicación funcione según lo
+              esperado, cada vez que creamos una nueva aplicación,
+              automáticamente se nos proporciona un archivo<span>tests.py</span>
+              . Cuando abrimos este archivo por primera vez, vemos que la
+              biblioteca de pruebas de Django
+              <Link
+                href="https://docs.djangoproject.com/en/4.0/topics/testing/overview/"
+                className="mx-1 underline text-purple-400"
+              >
+                TestCase
+                <OpenInNew className="link-icon" />
+              </Link>
+              se importa automáticamente:
             </p>
           </article>
           <ShareButton setTitle={Testing.title} />
