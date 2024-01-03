@@ -199,7 +199,7 @@ export default function HtmlDoc() {
         .
       </p>
       <p>Cuando se renderice esta página, veremos algo como ésto:</p>
-      <div className="image-client">
+      <div className="images-client">
         <img src="/images/html-elements-commit.png" />
       </div>
       <li>
@@ -256,7 +256,9 @@ export default function HtmlDoc() {
         </html>
         `
       }</Pre>
-      <img src="/images/form.png" />
+      <div className="images-client">
+        <img src="/images/form.png" />
+      </div>
       <span id="cheat" />
       <SectionTitle title="Cheat Sheet HTML" />
       <ul>

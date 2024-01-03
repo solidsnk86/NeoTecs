@@ -184,7 +184,8 @@ a {
   animation: shake 1s;
 }
 
-.images-client img {
+.images-client img,
+video {
   border-radius: 10px;
 }
 
@@ -324,6 +325,15 @@ pre {
   .link-icon {
     width: 14px;
     height: 14px;
+    margin-inline: 2px;
+    margin-bottom: 3px;
+  }
+}
+
+@media (max-width: 400px) {
+  .link-icon {
+    width: 10px;
+    height: 10px;
     margin-inline: 2px;
     margin-bottom: 3px;
   }

@@ -60,6 +60,7 @@ export default function GitDocs() {
             </p>
           </article>
           <SectionTitle title="Git" />
+          <figure></figure>
           <article>
             <p>
               Git es una herramienta de línea de comandos que nos ayudará con el
