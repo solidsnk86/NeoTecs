@@ -33,7 +33,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
     };
 
     getVideoDetails();
-  }, [videoId]);
+  }, [videoId, cpe]);
 
   const LikeButton = (props) => {
     const { ...attrs } = props
