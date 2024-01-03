@@ -817,7 +817,6 @@ export default function UiUx() {
                   if (h1.style.animationPlayState == "paused") {
                     h1.style.animationPlayState = "running";
                   }
-        
                   // De otra manera, pausar la animación
                   else {
                     h1.style.animationPlayState = "paused";

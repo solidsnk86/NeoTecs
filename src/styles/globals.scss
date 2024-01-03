@@ -99,7 +99,7 @@ body {
 
 body::-webkit-scrollbar {
   width: 11px;
-  background-color: #0f0f0f;
+  background-color: transparent;
 }
 body::-webkit-scrollbar-thumb {
   background-color: #0f0f0f;
@@ -182,6 +182,10 @@ a {
 
 .shake {
   animation: shake 1s;
+}
+
+.images-client img {
+  border-radius: 10px;
 }
 
 .custom-text-shadow {
@@ -305,17 +309,23 @@ pre {
   color: var(--color-on-surface);
 }
 
+.indice a:hover {
+  color: #ef4444;
+}
+
 .link-icon {
-  height: 14px;
-  width: 14px;
+  height: 12px;
+  width: 12px;
   margin-inline: 2px;
   margin-bottom: 3px;
 }
 
-@media (max-width: 762px) {
+@media (min-width: 1282px) {
   .link-icon {
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
+    margin-inline: 2px;
+    margin-bottom: 3px;
   }
 }
 
@@ -387,10 +397,12 @@ textarea {
 @media (min-width: 1280px) {
   .scroll-bar::-webkit-scrollbar {
     width: 10px;
+    background-color: transparent;
   }
   .scroll-bar::-webkit-scrollbar-thumb {
     background-color: #0f0f0f;
-    border-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     border: 1px solid #8e9099;
   }
 }
