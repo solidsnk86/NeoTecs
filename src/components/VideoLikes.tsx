@@ -78,6 +78,10 @@ export const VideoLikes = ({ videoId, cpe }) => {
     window.open('https://www.youtube.com/@tutosNeoTecs')
   }
 
+  const likeButtons = () => {
+    window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)
+  }
+
   const ShareButton = () => {
     if (navigator.share) {
       navigator.share({
@@ -100,9 +104,9 @@ export const VideoLikes = ({ videoId, cpe }) => {
         </div>
         <span className="flex bg-card-bg relative bottom-[2px] rounded-full my-2 w-fit px-3 py-1 transition-all">
           <span className="flex relative top-[1px] gap-2">
-            <LikeButton onClick={suscribeButton} className='hover:fill-gray-500 cursor-pointer' /> {likes}
+            <LikeButton onClick={likeButtons} className='hover:fill-gray-500 cursor-pointer' /> {likes}
             <hr className="border-l-[1px] h-5 border-[#575757] relative bottom-[1px]" />
-            <DisLikeButton className='hover:fill-gray-500 cursor-pointer' onClick={suscribeButton} />
+            <DisLikeButton className='hover:fill-gray-500 cursor-pointer' onClick={likeButtons} />
           </span>
         </span>
         <div className="text-[#575757] bg-card-bg rounded-full h-[28px] relative top-[6px] px-[6px]" onClick={ShareButton}>
