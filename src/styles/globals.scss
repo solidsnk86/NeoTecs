@@ -99,8 +99,7 @@ body {
 
 body::-webkit-scrollbar {
   width: 11px;
-  background-color: #8e9099;
-  border-radius: 5px;
+  background-color: #0f0f0f;
 }
 body::-webkit-scrollbar-thumb {
   background-color: #0f0f0f;
@@ -125,22 +124,6 @@ a {
 
 .router-mode p {
   margin: 10px 0 10px;
-}
-
-.images-web {
-  width: 100%;
-  aspect-ratio: 631 / 383;
-  object-fit: cover;
-  filter: drop-shadow(3px 6px 9px #333);
-
-  view-timeline-name: --image;
-  view-timeline-axis: block;
-
-  animation-timeline: --image;
-  animation-name: scroll;
-
-  animation-range: entry 25% cover 30%;
-  animation-fill-mode: both;
 }
 
 @keyframes scroll {
@@ -404,8 +387,6 @@ textarea {
 @media (min-width: 1280px) {
   .scroll-bar::-webkit-scrollbar {
     width: 10px;
-    background-color: #8e9099;
-    border-radius: 5px;
   }
   .scroll-bar::-webkit-scrollbar-thumb {
     background-color: #0f0f0f;

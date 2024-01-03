@@ -18,7 +18,7 @@ export const RepeaterMode = () => {
 
       <p>Los pasos para instalar el repetidor wifi son sencillos:</p>
 
-      <figure className="images-web">
+      <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/repetidor1.png?raw=true"
           id="imgAP"
