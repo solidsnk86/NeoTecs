@@ -30,7 +30,7 @@ Once you've made your changes, you can submit a pull request for me to review yo
 
 `I look forward to your contributions!!`
 
-# To use these docs offline you must to install all npm modules:
+## To use these docs offline you must to install all npm modules:
 
 ```bash
 npm install @latest
