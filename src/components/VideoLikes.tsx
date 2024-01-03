@@ -86,7 +86,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
     if (navigator.share) {
       navigator.share({
         title: 'Neotecs Informática',
-        text: `Aprende como realizar una ${cpe}`,
+        text: `Aprende como realizar una configuración Wi-Fi correctamente.`,
         url: `https://www.youtube.com/watch?v=${videoId}=1s`,
       })
     }
