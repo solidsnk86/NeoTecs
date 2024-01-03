@@ -777,7 +777,7 @@ export default function UiUx() {
                       animation-fill-mode: forwards;
                     }
                   </style>
-                  <h1>Bienvenidos!</h1>
+                  <h1>Welcome!</h1>
                 </body>
               </html>
               
