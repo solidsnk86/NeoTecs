@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
 
-export const VideoLikes = ({ videoId }) => {
+export const VideoLikes = ({ videoId, cpe }) => {
   const [likes, setLikes] = useState(0);
   const [suscriptors, setSuscriptors] = useState(0);
 
@@ -82,8 +82,8 @@ export const VideoLikes = ({ videoId }) => {
     if (navigator.share) {
       navigator.share({
         title: 'Neotecs Informática',
-        text: 'Aprende a configurar tu WiFi en tan solo 5 minutos. Documentación web de para CPE inalámbros de diferentes marcas.',
-        url: 'https://www.youtube.com/channel/UCCg2DsKakyYIaGs-YkqEpqg',
+        text: `Aprende como realizar una ${cpe}`,
+        url: `https://www.youtube.com/watch?v=${videoId}=1s`,
       })
     }
   }
