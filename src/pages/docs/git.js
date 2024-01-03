@@ -60,7 +60,14 @@ export default function GitDocs() {
             </p>
           </article>
           <SectionTitle title="Git" />
-          <figure></figure>
+          <figure>
+            <img
+              width={120}
+              height={90}
+              src="https://imgs.search.brave.com/QBtVPyyL0OxsEIQmfKaGPXK3lS2xfK_DXvdWKSvd2Xw/rs:fit:560:320:1/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9lL2UwL0dp/dC1sb2dvLnN2Zy81/MTJweC1HaXQtbG9n/by5zdmcucG5n"
+              alt="Git icon"
+            />
+          </figure>
           <article>
             <p>
               Git es una herramienta de línea de comandos que nos ayudará con el
@@ -109,6 +116,14 @@ export default function GitDocs() {
             </p>
           </article>
           <SectionTitle title="GitHub" />
+          <figure>
+            <img
+              width={120}
+              height={90}
+              src="https://imgs.search.brave.com/pB5jKUX86a31qe_yECwGcQeUJi7u2_yFibSYu7bjJVo/rs:fit:560:320:1/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi8yLzI5L0dp/dEh1Yl9sb2dvXzIw/MTMuc3ZnLzUxMnB4/LUdpdEh1Yl9sb2dv/XzIwMTMuc3ZnLnBu/Zw"
+              alt="Git icon"
+            />
+          </figure>
           <article>
             <ul>
               <li>
