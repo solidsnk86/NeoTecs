@@ -71,11 +71,11 @@ export default function CurrencyConverter() {
           value={currency}
           placeholder="Ingrese la Divisa"
           onChange={(e) => setCurrency(e.target.value)}
-          className="text-black uppercase font-semibold my-6 placeholder:text-center placeholder:capitalize rounded outline-4 border border-zinc-300"
+          className="text-black uppercase font-semibold my-6 p-1 placeholder:text-center placeholder:capitalize rounded outline-4 border border-zinc-300"
         />
         <button
           type="submit"
-          className="rounded px-4 mx-3 mb-3 outline-2 dark:outline-amber-400 outline-[#0F0F0F] outline-offset-[3px] outline-double bg-button-variant text-text-variant font-semibold hover:brightness-110"
+          className="rounded px-4 mx-3 mb-3 outline-2 dark:outline-amber-400 outline-[#0F0F0F] outline-offset-[2px] outline-double bg-button-variant text-text-variant font-semibold hover:brightness-110"
         >
           {isSubmitting ? 'Convirtiendo' : 'Convertir'}
         </button>
@@ -101,7 +101,7 @@ export default function CurrencyConverter() {
             type="text"
             placeholder="Monto a convertir"
             onChange={(e) => setAmountToConvert(e.target.value)}
-            className="text-black font-semibold my-6 placeholder:text-center placeholder:p-3 rounded outline-4 border border-zinc-300"
+            className="text-black font-semibold my-6 placeholder:text-center p-1 rounded outline-4 border border-zinc-300"
           />
           <button
             onClick={(e) => {
@@ -112,7 +112,7 @@ export default function CurrencyConverter() {
             Calcular
           </button>
           <p className="bg-button-variant w-fit p-2 font-semibold text-text-variant rounded">
-            {'El resultado de la divisa es ' +
+            {`U$D ${amountToConvert} es alrededor de  ` +
               currencyResult +
               ` ${currency.toUpperCase()}`}
           </p>
