@@ -21,7 +21,7 @@ export const SectionTitle = ({ level = '2', title = '' }) => {
       <a href={`#${slug}`} className="!font-bold !no-underline">
         {title}
       </a>
-      <Link className="inline mx-2 w-4" />
+      <Link className="inline mx-2 mb-1 w-4" />
     </Component>
   );
 };

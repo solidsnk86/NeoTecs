@@ -42,9 +42,17 @@ export const DescriptionViews = ({ videoId }) => {
     getVideoDetails();
   }, [videoId]);
 
+  const formatView = () => {
+    if (views > 1000) {
+      const formattedViews = (views / 1000).toFixed(1);
+      return `${formattedViews}K`;
+    }
+    return views.toString();
+  };
+
   return (
     <div className="text-left my-1 font-bold">
-      <span>{views} Vistas</span>
+      <span>{formatView()} Vistas</span>
       <span> · Publicado el {datePublished}</span>
     </div>
   );
