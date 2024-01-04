@@ -648,6 +648,115 @@ export default function Testing() {
               `
             }</Pre>
           </article>
+          <SectionTitle title="Pruebas de Cliente" />
+          <article>
+            <p className="list-css-span">
+              Al crear aplicaciones web, es probable que deseemos verificar no
+              solo si funciones específicas funcionan, sino también si las
+              páginas web individuales se cargan según lo previsto. Podemos
+              lograr esto creando un objeto<span>Cliente</span>en nuestra clase
+              de pruebas de Django y luego realizando solicitudes utilizando ese
+              objeto. Para hacer esto, primero tendremos que agregar
+              <span>Client</span>a nuestras importaciones.
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              from django.tests import Client, TestCase
+              `
+            }</Pre>
+            <p>
+              Por ejemplo, ahora agreguemos una prueba que se asegure de que
+              obtengamos un código de respuesta HTTP 200 y que los tres de
+              nuestros vuelos se añadan al contexto de una respuesta:
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              def test_index(self):
+              # Configurar el cliente para realizar solicitudes
+              c = Client()
+          
+              # Enviar solicitud GET a la página de índice y almacenar la respuesta
+              response = c.get("/vuelos/")
+          
+              # Asegurarse de que el código de estado sea 200
+              self.assertEqual(response.status_code, 200)
+          
+              # Asegurarse de que se devuelvan tres vuelos en el contexto
+              self.assertEqual(response.context["vuelos"].count(), 3)
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Podemos realizar una verificación similar para asegurarnos de
+              obtener un código de respuesta válido para una página de vuelo
+              válida y un código de respuesta no válido para una página de vuelo
+              que no existe. (Observa que utilizamos la función<span>Max</span>
+              para encontrar el<sapn>ID</sapn>máximo, al cual tenemos acceso al
+              incluir
+              <span>from django.db.models import Max</span>al principio de
+              nuestro archivo).
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              def test_valid_flight_page(self):
+              a1 = Airport.objects.get(code="AAA")
+              f = Flight.objects.get(origin=a1, destination=a1)
+          
+              c = Client()
+              response = c.get(f"/flights/{f.id}")
+              self.assertEqual(response.status_code, 200)
+          
+              def test_invalid_flight_page(self):
+              max_id = Flight.objects.all().aggregate(Max("id"))["id__max"]
+          
+              c = Client()
+              response = c.get(f"/flights/{max_id + 1}")
+              self.assertEqual(response.status_code, 404)
+              `
+            }</Pre>
+            <p>
+              Finalmente, agreguemos algunas pruebas para asegurarnos de que las
+              listas de pasajeros y no pasajeros se estén generando como se
+              espera:
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              def test_flight_page_passengers(self):
+              f = Flight.objects.get(pk=1)
+              p = Passenger.objects.create(first="Alice", last="Adams")
+              f.passengers.add(p)
+          
+              c = Client()
+              response = c.get(f"/flights/{f.id}")
+              self.assertEqual(response.status_code, 200)
+              self.assertEqual(response.context["passengers"].count(), 1)
+          
+              def test_flight_page_non_passengers(self):
+              f = Flight.objects.get(pk=1)
+              p = Passenger.objects.create(first="Alice", last="Adams")
+          
+              c = Client()
+              response = c.get(f"/flights/{f.id}")
+              self.assertEqual(response.status_code, 200)
+              self.assertEqual(response.context["non_passengers"].count(), 1)
+              `
+            }</Pre>
+            <p>
+              Ahora podemos ejecutar todos nuestros tests juntos, y ver que
+              hasta el momento no hay errores.
+            </p>
+            <Pre lang="output">{
+              /*output */ `
+              Creating test database for alias 'default'...
+              System check identified no issues (0 silenced).
+              ..........
+              ----------------------------------------------------------------------
+              Ran 10 tests in 0.048s
+              
+              OK
+              Destroying test database for alias 'default'...
+              `
+            }</Pre>
+          </article>
           <ShareButton setTitle={Testing.title} />
         </div>
       </div>
