@@ -767,7 +767,7 @@ export default function JavaScript() {
               }
             </Pre>
             <p>
-              Si ustedes lo pruban pueden ver que el nombre que pongas lo va a
+              Si ustedes lo prueban pueden ver que el nombre que pongas lo va a
               mostrar en el alert:
             </p>
             <div className="images-client">
