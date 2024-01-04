@@ -107,7 +107,7 @@ export default function CurrencyConverter() {
             onClick={(e) => {
               e.preventDefault(currencyValue());
             }}
-            className="rounded px-4 mx-3 mb-3 outline-2 dark:outline-amber-400 outline-[#0F0F0F] outline-offset-[3px] outline-double bg-button-variant text-text-variant font-semibold hover:brightness-110"
+            className="rounded px-4 mx-3 mb-3 outline-2 dark:outline-amber-400 outline-[#0F0F0F] outline-offset-[2px] outline-double bg-button-variant text-text-variant font-semibold hover:brightness-110"
           >
             Calcular
           </button>
