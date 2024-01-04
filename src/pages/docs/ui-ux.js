@@ -501,25 +501,25 @@ export default function UiUx() {
               from django.http import JsonResponse
               from django.shortcuts import render
               
-              # Create your views here.
+              # Crea tus vistas aquí.
               def index(request):
                   return render(request, "posts/index.html")
               
               def posts(request):
               
-                  # Get start and end points
+                  # Obtiene un punto de incio y un punto final
                   start = int(request.GET.get("start") or 0)
                   end = int(request.GET.get("end") or (start + 9))
               
-                  # Generate list of posts
+                  # Generar una lista de posts
                   data = []
                   for i in range(start, end + 1):
                       data.append(f"Post #{i}")
               
-                  # Artificially delay speed of response
+                  # Se retrasa artificialmente el tiempo de respuesta del post
                   time.sleep(1)
               
-                  # Return list of posts
+                  # Devuelve una lista de posts
                   return JsonResponse({
                       "posts": data
                   })
@@ -881,7 +881,7 @@ export default function UiUx() {
               `
             }</Pre>
             <div className="images-client">
-              <video src="/images/hide-posts.mp4" autoPlay muted loop />
+              <img src="/images/hide0.gif" alt="Imagen demostrativa" />
             </div>
             <p className="list-css-span">
               Ahora podemos ver que hemos implementado el botón de ocultar, pero
@@ -964,13 +964,16 @@ export default function UiUx() {
               });
               `
             }</Pre>
+            <div>
+              <video src="/images/hide-posts.mp4" autoPlay loop muted />
+            </div>
             <p>
               Estos son los códigos javascript que usé para las cartas y los
               posts de ejemplo:
             </p>
             <Pre lang="javascript">{
               /*javascript */ `
-              // Esta constante sirve para dar formato a la fecha
+              // Vamos a dar formato a la fecha
               var date = new Date();
               const formatedDate = date.toLocaleDateString('es-ES', {
                 year: 'numeric',
@@ -990,8 +993,10 @@ export default function UiUx() {
               });
               `
             }</Pre>
-            <p>
-              Para que se guíen tenemos que tener un HTML de la siguiente
+            <p className="font-semibold bg-button-variant text-text-variant w-fit p-2 rounded">
+              Para hacer esto sin django y python, que sería menos eficiente
+              poque los posts se crean de manera dinámica con la función de
+              python, pero también podrian tener un HTML plano de la siguiente
               manera:
             </p>
             <Pre lang="html">{
@@ -1305,7 +1310,7 @@ export default function UiUx() {
               </li>
             </ol>
 
-            <p className="bg-[#F7F9F9] dark:bg-[#16181C] border border-zinc-100/80 dark:border-zinc-800 rounded-xl text-center p-3">
+            <p className="bg-[#F7F9F9] dark:bg-[#16181C] border border-zinc-100/80 dark:border-zinc-800 rounded-xl text-center p-3 shadow-md shadow-slate-200/80 dark:!shadow">
               La creación y reutilización de componentes en React fomenta un
               desarrollo más limpio, modular y fácil de mantener. Puedes
               construir componentes especializados para tareas específicas y
@@ -1638,8 +1643,8 @@ export default function UiUx() {
             que usé para hacer este mini juego, pueden probar editando las
             funciones y/o agregar estilos:
           </p>
-          <Pre lang="jsx">{
-            /*jsx */ `
+          <Pre lang="javascript">{
+            /*javascript */ `
             <!DOCTYPE html>
             <html lang="en">
               <head>
@@ -1765,7 +1770,7 @@ export default function UiUx() {
           <ul>
             <li>
               <Link
-                href="/docs/mardown-render"
+                href="/docs/markdown-render"
                 className="mx-1 underline text-lime-500"
               >
                 Renderizar MarkDown con react y Axios
@@ -1773,14 +1778,15 @@ export default function UiUx() {
             </li>
           </ul>
           <p>
-            No olviden dejar sus comentarios en mi
+            No olviden dejar sus comentarios, si ven errores o tienen alguna
+            consulta para hacer, los escucho en mi
             <Link
               href="/docs/feedback"
               className="mx-1 underline text-lime-500"
             >
               feedback
             </Link>
-            , si ven errores o tienen alguna consulta para hacer, los escucho.
+            .
           </p>
           <ShareButton setTitle={UiUx.title} />
         </div>

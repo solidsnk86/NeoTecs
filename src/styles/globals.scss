@@ -315,28 +315,10 @@ pre {
 }
 
 .link-icon {
-  height: 12px;
-  width: 12px;
+  height: 10px;
+  width: 10px;
   margin-inline: 2px;
   margin-bottom: 3px;
-}
-
-@media (min-width: 1282px) {
-  .link-icon {
-    width: 14px;
-    height: 14px;
-    margin-inline: 2px;
-    margin-bottom: 3px;
-  }
-}
-
-@media (max-width: 400px) {
-  .link-icon {
-    width: 10px;
-    height: 10px;
-    margin-inline: 2px;
-    margin-bottom: 3px;
-  }
 }
 
 .effect-background {

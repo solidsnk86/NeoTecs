@@ -12,6 +12,30 @@ const removeIndent = (code = '') => {
 export const Pre = ({ children, lang = '' }) => {
   const preRef = useRef(null);
 
+  const handleCopyClick = (e) => {
+    if (preRef.current) {
+      const range = document.createRange();
+      range.selectNode(preRef.current);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+    }
+
+    document.execCommand('copy');
+    e.stopPropagation();
+
+    const isDarkMode = window.matchMedia(
+      '(prefers-color-scheme: dark)',
+    ).matches;
+
+    toast('Contenido copiado al portapapeles', {
+      position: toast.POSITION.BOTTOM_LEFT,
+      type: 'default',
+      theme: isDarkMode ? 'dark' : 'light',
+    });
+
+    window.getSelection().removeAllRanges();
+  };
+
   return (
     <div className="relative">
       <p className="bg-[#1E1E1E] translate-y-[23px] text-amber-500 text-xs uppercase font-bold pl-4 p-1 rounded-md">

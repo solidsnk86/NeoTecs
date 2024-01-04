@@ -19,7 +19,7 @@ export default function Testing() {
         <LectureNav />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
-          <HeaderTitle>Pruebas (Testing)</HeaderTitle>
+          <HeaderTitle>Pruebas CI/CD (Testing)</HeaderTitle>
           <hr className="border-text-primary" />
           <Indextitle>Índice</Indextitle>
           <ol className="indice">
@@ -481,6 +481,172 @@ export default function Testing() {
               </Link>
               se importa automáticamente:
             </p>
+            <Pre lang="python">{
+              /*python */ `
+              from django.test import TestCase
+              `
+            }</Pre>
+            <p>
+              Una ventaja de utilizar la biblioteca TestCase es que, al ejecutar
+              nuestras pruebas, se creará una base de datos completamente nueva
+              solo con fines de prueba. Esto es útil porque evitamos el riesgo
+              de modificar o eliminar accidentalmente entradas existentes en
+              nuestra base de datos y no tenemos que preocuparnos por eliminar
+              entradas ficticias que creamos solo para realizar pruebas.
+            </p>
+            <p>
+              Para comenzar a utilizar esta biblioteca, primero querremos
+              importar todos nuestros modelos:
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              from .models import Flight, Airport, Passenger
+              `
+            }</Pre>
+            <p>
+              Y luego crearemos una nueva clase que extienda la clase TestCase
+              que acabamos de importar. Dentro de esta clase, definiremos una
+              función setUp que se ejecutará al inicio del proceso de prueba. En
+              esta función, probablemente querremos crear. Así es como se verá
+              nuestra clase para comenzar:
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              class FlightTestCase(TestCase):
+
+              def setUp(self):
+          
+                  # Crear aeropuertos.
+                  a1 = Airport.objects.create(code="AAA", city="City A")
+                  a2 = Airport.objects.create(code="BBB", city="City B")
+          
+                  # Crear vuelos.
+                  Flight.objects.create(origin=a1, destination=a2, duration=100)
+                  Flight.objects.create(origin=a1, destination=a1, duration=200)
+                  Flight.objects.create(origin=a1, destination=a2, duration=-100)
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Ahora que tenemos algunas entradas en nuestra base de datos de
+              prueba, agreguemos algunas funciones a esta clase para realizar
+              algunas pruebas. Primero, asegurémonos de que nuestros campos de
+              <span>departures</span>y<span>arrives</span>funcionen
+              correctamente intentando contar el número de salidas (que sabemos
+              deberían ser 3) y llegadas (que deberían ser 1) desde el
+              aeropuerto<span>AAA</span>:
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              def test_departures_count(self):
+              a = Airport.objects.get(code="AAA")
+              self.assertEqual(a.departures.count(), 3)
+          
+              def test_arrivals_count(self):
+              a = Airport.objects.get(code="AAA")
+              self.assertEqual(a.arrivals.count(), 1)
+              `
+            }</Pre>
+            <p className="list-css-span">
+              También podemos probar la función<span>is_valid_flight</span>que
+              agregamos a nuestro modelo de vuelo (`Flight`). Comenzaremos
+              haciendo una afirmación de que la función devuelve verdadero
+              cuando el vuelo es válido:
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              def test_valid_flight(self):
+              a1 = Airport.objects.get(code="AAA")
+              a2 = Airport.objects.get(code="BBB")
+              f = Flight.objects.get(origin=a1, destination=a2, duration=100)
+              self.assertTrue(f.is_valid_flight())
+              `
+            }</Pre>
+            <p>
+              A continuación, asegurémonos de que los vuelos con destinos y
+              duraciones no válidos devuelvan falso:
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              def test_invalid_flight_destination(self):
+              a1 = Airport.objects.get(code="AAA")
+              f = Flight.objects.get(origin=a1, destination=a1)
+              self.assertFalse(f.is_valid_flight())
+          
+              def test_invalid_flight_duration(self):
+              a1 = Airport.objects.get(code="AAA")
+              a2 = Airport.objects.get(code="BBB")
+              f = Flight.objects.get(origin=a1, destination=a2, duration=-100)
+              self.assertFalse(f.is_valid_flight())
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Ahora, para ejecutar nuestras pruebas, ejecutaremos
+              <span>python manage.py test</span>. La salida para esto es casi
+              idéntica a la salida que vimos al utilizar la biblioteca de
+              <span>unittest</span>de Python, aunque también registra que está
+              creando y destruyendo una base de datos de prueba:
+            </p>
+            <Pre lang="output">{
+              /**output */ `
+              Creating test database for alias 'default'...
+              System check identified no issues (0 silenced).
+              ..FF.
+              ======================================================================
+              FAIL: test_invalid_flight_destination (flights.tests.FlightTestCase)
+              ----------------------------------------------------------------------
+              Traceback (most recent call last):
+                File "/Users/Neo/Documents/cs50/web_notes_files/7/django/airline/flights/tests.py", 
+                line 37, in test_invalid_flight_destination
+                  self.assertFalse(f.is_valid_flight())
+              AssertionError: True is not false
+              
+              ======================================================================
+              FAIL: test_invalid_flight_duration (flights.tests.FlightTestCase)
+              ----------------------------------------------------------------------
+              Traceback (most recent call last):
+                File "/Users/Neo/Documents/cs50/web_notes_files/7/django/airline/flights/tests.py", 
+                line 43, in test_invalid_flight_duration
+                  self.assertFalse(f.is_valid_flight())
+              AssertionError: True is not false
+              
+              ----------------------------------------------------------------------
+              Ran 5 tests in 0.018s
+              
+              FAILED (failures=2)
+              Destroying test database for alias 'default'...
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Podemos ver en la salida anterior que hay momentos en los que
+              <span>is_valid_flight</span>devolvió<span>True</span>cuando
+              debería haber devuelto
+              <span>False</span>. Al examinar más a fondo nuestra función, vemos
+              que cometimos el error de usar<span>or</span>en lugar de
+              <span>and</span>, lo que significa que solo uno de los requisitos
+              del vuelo debe cumplirse para que sea válido. Si cambiamos la
+              función a esto:
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              def is_valid_flight(self):
+              return self.origin != self.destination and self.duration > 0
+              `
+            }</Pre>
+            <p>
+              Ahora nosotros podemos correr las pruebas con mejores resultados:
+            </p>
+            <Pre lang="output">{
+              /*output */ `
+              Creating test database for alias 'default'...
+              System check identified no issues (0 silenced).
+              .....
+              ----------------------------------------------------------------------
+              Ran 5 tests in 0.014s
+              
+              OK
+              Destroying test database for alias 'default'...
+              `
+            }</Pre>
           </article>
           <ShareButton setTitle={Testing.title} />
         </div>
