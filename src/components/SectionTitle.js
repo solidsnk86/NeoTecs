@@ -16,7 +16,7 @@ export const SectionTitle = ({ level = '2', title = '' }) => {
   return (
     <Component
       id={slug}
-      className="border-b dark:border-b-zinc-900 text-text-primary pb-2"
+      className="border-b dark:border-b-zinc-800 text-text-primary pb-2"
     >
       <a href={`#${slug}`} className="!font-bold !no-underline">
         {title}
