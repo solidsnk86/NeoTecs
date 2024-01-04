@@ -213,7 +213,7 @@ export default function Python() {
               del archivo, e incluso es posible que deban descargar
               <Link
                 href="https://www.python.org/downloads/"
-                className="mx-1 text-sky-600"
+                className="mx-1 text-sky-600 link"
               >
                 Python
                 <OpenInNew className="link-icon" />
@@ -222,7 +222,7 @@ export default function Python() {
               que también descarguen
               <Link
                 href="https://pip.pypa.io/en/stable/installing/"
-                className="mx-1 text-sky-600"
+                className="mx-1 text-sky-600 link"
               >
                 Pip
                 <OpenInNew className="link-icon" />
@@ -388,7 +388,7 @@ export default function Python() {
               Sin embargo, al ejecutar este programa, nos encontramos con una
               <Link
                 href="https://docs.python.org/3/tutorial/errors.html"
-                className="text-sky-800 mx-1"
+                className="text-sky-800 mx-1 link"
               >
                 excepción
                 <OpenInNew className="link-icon" />
@@ -495,7 +495,7 @@ export default function Python() {
             Una
             <Link
               href="https://www.w3schools.com/python/python_lists.asp"
-              className="text-sky-800 mx-1"
+              className="text-sky-800 mx-1 link"
             >
               lista en Python
               <OpenInNew className="link-icon" />
@@ -556,7 +556,7 @@ export default function Python() {
               Una
               <Link
                 href="https://www.w3schools.com/python/python_lists.asp"
-                className="text-sky-800 mx-1"
+                className="text-sky-800 mx-1 link"
               >
                 tupla
                 <OpenInNew className="link-icon" />
@@ -600,7 +600,7 @@ export default function Python() {
               Los
               <Link
                 href="https://www.w3schools.com/python/python_sets.asp"
-                className="text-sky-800 mx-1"
+                className="text-sky-800 mx-1 link"
               >
                 conjuntos
                 <OpenInNew className="link-icon" />
@@ -664,7 +664,7 @@ export default function Python() {
               Los
               <Link
                 href="https://www.w3schools.com/python/python_sets.asp"
-                className="text-sky-800 mx-1"
+                className="text-sky-800 mx-1 link"
               >
                 diccionarios
                 <OpenInNew className="link-icon" />
@@ -710,7 +710,7 @@ export default function Python() {
               Los
               <Link
                 href="https://www.w3schools.com/python/python_for_loops.asp"
-                className="text-sky-800 mx-1"
+                className="text-sky-800 mx-1 link"
               >
                 bucles
                 <OpenInNew className="link-icon" />
@@ -970,7 +970,7 @@ export default function Python() {
               La
               <Link
                 href="https://en.wikipedia.org/wiki/Object-oriented_programming"
-                className="mx-1 text-sky-600"
+                className="mx-1 text-sky-600 link"
               >
                 Programación Orientada a Objetos
                 <OpenInNew className="link-icon" />
@@ -1127,7 +1127,7 @@ export default function Python() {
               también admite el Paradigma de
               <Link
                 href="https://en.wikipedia.org/wiki/Functional_programming"
-                className="mx-1 text-sky-600"
+                className="mx-1 text-sky-600 link"
               >
                 Programación Funcional
                 <OpenInNew className="link-icon" />
@@ -1303,7 +1303,7 @@ export default function Python() {
               Podemos manejar este error desordenado utilizando el
               <Link
                 href="https://www.w3schools.com/python/python_try_except.asp"
-                className="mx-1 text-sky-600"
+                className="mx-1 text-sky-600 link"
               >
                 manejo de excepciones
                 <OpenInNew className="link-icon" />

@@ -47,24 +47,27 @@ export const Introduction = () => {
         en tu computadora local. Algunos populares incluyen:
         <br />
         <Link
-          className="mx-1 text-red-400"
+          className="mx-1 text-red-400 link"
           href="https://code.visualstudio.com/"
         >
           Visual Studio Code
           <OpenInNew className="link-icon" />
         </Link>
         ,
-        <Link className="mx-1 text-red-400" href="https://www.sublimetext.com/">
+        <Link
+          className="mx-1 text-red-400 link"
+          href="https://www.sublimetext.com/"
+        >
           Sublime Text
           <OpenInNew className="link-icon" />
         </Link>
         ,
-        <Link className="mx-1 text-red-400" href="https://atom.io/">
+        <Link className="mx-1 text-red-400 link" href="https://atom.io/">
           Atom
           <OpenInNew className="link-icon" />
         </Link>
         y
-        <Link className="mx-1 text-red-400" href="https://www.vim.org/">
+        <Link className="mx-1 text-red-400 link" href="https://www.vim.org/">
           Vim
           <OpenInNew className="link-icon" />
         </Link>

@@ -215,7 +215,7 @@ export default function HtmlDoc() {
         extensión de Visual Studio Code llamada,
         <Link
           href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
-          className="mx-1 text-[tomato]"
+          className="mx-1 text-[tomato] link"
         >
           Live Server
           <OpenInNew className="link-icon" />
@@ -233,7 +233,7 @@ export default function HtmlDoc() {
         especialmente útil para aprender sobre estos elementos es
         <Link
           href="https://https://www.w3schools.com/html/default.asp"
-          className="mx-1 text-[tomato]"
+          className="mx-1 text-[tomato] link"
         >
           W3 Schools
           <OpenInNew className="link-icon" />

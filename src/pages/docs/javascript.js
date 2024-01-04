@@ -187,7 +187,7 @@ export default function JavaScript() {
               programación web es que admite la
               <Link
                 href="https://medium.com/@vsvaibhav2016/introduction-to-event-driven-programming-28161b79c223"
-                className="mx-1 text-amber-600"
+                className="mx-1 text-amber-600 link"
               >
                 Programación Orientada a Eventos
                 <OpenInNew className="link-icon" />
@@ -207,7 +207,7 @@ export default function JavaScript() {
               utilizamos
               <Link
                 href="https://www.w3schools.com/js/js_htmldom_eventlistener.asp"
-                className="mx-1 text-amber-600"
+                className="mx-1 text-amber-600 link"
               >
                 Escuchadores de Eventos
                 <OpenInNew className="link-icon" />
@@ -220,7 +220,7 @@ export default function JavaScript() {
               Comencemos por convertir nuestro JavaScript anterior en una
               <Link
                 href="https://www.w3schools.com/js/js_functions.asp"
-                className="mx-1 text-amber-600"
+                className="mx-1 text-amber-600 link"
               >
                 función
                 <OpenInNew className="link-icon" />
@@ -358,7 +358,7 @@ export default function JavaScript() {
               Al igual que en Python, también podemos aprovechar las
               <Link
                 href="https://www.w3schools.com/js/js_if_else.asp"
-                className="text-amber-600 mx-1"
+                className="text-amber-600 mx-1 link"
               >
                 condiciones
                 <OpenInNew className="link-icon" />
@@ -606,7 +606,7 @@ export default function JavaScript() {
               En el ejemplo anterior, hemos utilizado una función
               <Link
                 href="https://www.w3schools.com/js/js_function_definition.asp"
-                className="text-amber-600 mx-1"
+                className="text-amber-600 mx-1 link"
               >
                 anónima
                 <OpenInNew className="link-icon" />
@@ -725,7 +725,7 @@ export default function JavaScript() {
                 JavaScript que otras personas ya han escrito. Por ejemplo,
                 <Link
                   href="https://getbootstrap.com/docs/4.5/getting-started/introduction/#js"
-                  className="text-amber-400 mx-1"
+                  className="text-amber-400 mx-1 link"
                 >
                   Bootstrap
                   <OpenInNew className="link-icon" />
@@ -1105,7 +1105,7 @@ export default function JavaScript() {
                 función
                 <Link
                   href="https://www.w3schools.com/jsref/met_document_createelement.asp"
-                  className="mx-1 text-amber-600"
+                  className="mx-1 text-amber-600 link"
                 >
                   createElement
                   <OpenInNew className="link-icon" />
@@ -1178,7 +1178,7 @@ export default function JavaScript() {
             utilizamos la función
             <Link
               href="https://www.w3schools.com/jsref/met_win_setinterval.asp"
-              className="mx-1 text-amber-600"
+              className="mx-1 text-amber-600 link"
             >
               setIntervals
               <OpenInNew className="link-icon" />
@@ -1286,7 +1286,7 @@ export default function JavaScript() {
             Un
             <Link
               href="https://www.w3schools.com/js/js_objects.asp"
-              className="mx-1 text-amber-600"
+              className="mx-1 text-amber-600 link"
             >
               objeto de JavaScript
               <OpenInNew className="link-icon" />
@@ -1343,7 +1343,7 @@ export default function JavaScript() {
             usar
             <Link
               href="https://www.mulesoft.com/resources/api/what-is-an-api"
-              className="text-amber-600 mx-1"
+              className="text-amber-600 mx-1 link"
             >
               APIs
               <OpenInNew className="link-icon" />
@@ -1363,7 +1363,7 @@ export default function JavaScript() {
             Por ejemplo, un vuelo en formato
             <Link
               href="https://www.w3schools.com/js/js_json_intro.asp"
-              className="text-amber-600 mx-1"
+              className="text-amber-600 mx-1 link"
             >
               JSON
               <OpenInNew className="link-icon" />
@@ -1408,7 +1408,7 @@ export default function JavaScript() {
               ejercicio, utilizaremos la API de tipos de cambio del
               <Link
                 href="https://exchangeratesapi.io/"
-                className="text-amber-600 mx-1"
+                className="text-amber-600 mx-1 link"
               >
                 Banco Central Europeo
                 <OpenInNew className="link-icon" />
@@ -1418,7 +1418,7 @@ export default function JavaScript() {
               una API. Podemos probar esta API visitando la URL:
               <Link
                 href="https://api.exchangeratesapi.io/latest?base=USD"
-                className="text-amber-600 mx-1"
+                className="text-amber-600 mx-1 link"
               >
                 https://api.exchangeratesapi.io/latest?base=USD
                 <OpenInNew className="link-icon" />

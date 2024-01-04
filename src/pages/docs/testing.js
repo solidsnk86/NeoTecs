@@ -474,7 +474,7 @@ export default function Testing() {
               biblioteca de pruebas de Django
               <Link
                 href="https://docs.djangoproject.com/en/4.0/topics/testing/overview/"
-                className="mx-1 underline text-purple-400"
+                className="mx-1 underline text-purple-400 link"
               >
                 TestCase
                 <OpenInNew className="link-icon" />

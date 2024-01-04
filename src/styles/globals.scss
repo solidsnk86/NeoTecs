@@ -315,10 +315,15 @@ pre {
 }
 
 .link-icon {
-  height: 10px;
-  width: 10px;
+  height: 12px;
+  width: 12px;
   margin-inline: 2px;
   margin-bottom: 3px;
+}
+
+.link:hover .link-icon {
+  transform: translateY(-4px);
+  transition: 0.2s all;
 }
 
 .effect-background {

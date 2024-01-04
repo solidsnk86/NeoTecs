@@ -41,7 +41,7 @@ export default function MarkDownRender() {
             obtener información más detallada:
             <Link
               href="https://remarkjs.github.io/react-markdown/"
-              className="mx-1 text-amber-600"
+              className="mx-1 text-amber-600 link"
             >
               react-markdown en GitHub
               <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -277,7 +277,7 @@ export default function MarkDownRender() {
             Eso es todo por aquí, espero les haya gustado y que lo puedan hacer.
             Ante cualquier duda o consulta está el
             <Link
-              className="underline mx-1 text-amber-500"
+              className="underline mx-1 text-amber-500 link"
               href="/docs/feedback"
             >
               feedback

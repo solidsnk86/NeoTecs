@@ -758,7 +758,7 @@ export default function CssDoc() {
             un nuevo atributo CSS conocido como
             <Link
               href="https://www.w3schools.com/css/css3_flexbox.asp"
-              className="text-[#395692] mx-1"
+              className="text-[#395692] mx-1 link"
             >
               flexbox
               <OpenInNew className="link-icon" />
@@ -894,7 +894,7 @@ export default function CssDoc() {
               A continuación, podemos explorar algunas de las características de
               <Link
                 href="https://getbootstrap.com/docs/4.5/components/"
-                className="text-[#395692] mx-1"
+                className="text-[#395692] mx-1 link"
               >
                 Bootstrap
                 <OpenInNew className="link-icon" />
@@ -907,7 +907,7 @@ export default function CssDoc() {
               Una característica popular de Bootstrap es su
               <Link
                 href="https://getbootstrap.com/docs/4.0/layout/grid/"
-                className="text-[#395692] mx-1"
+                className="text-[#395692] mx-1 link"
               >
                 sistema de cuadrícula
                 <OpenInNew className="link-icon" />
@@ -1046,7 +1046,7 @@ export default function CssDoc() {
             <li>
               <Link
                 href="https://sass-lang.com/"
-                className="text-[#395692] mx-1"
+                className="text-[#395692] mx-1 link"
               >
                 Sass
                 <OpenInNew className="link-icon" />
@@ -1106,7 +1106,7 @@ export default function CssDoc() {
               . Para resolver este problema, debemos
               <Link
                 href="https://sass-lang.com/install"
-                className="text-[#395692] mx-1"
+                className="text-[#395692] mx-1 link"
               >
                 descargar un programa llamado Sass
                 <OpenInNew className="link-icon" />
@@ -1169,7 +1169,7 @@ export default function CssDoc() {
             Otra característica que Sass nos brinda se conoce como
             <Link
               href="https://sass-lang.com/guide"
-              className="mx-1 text-[#395692]"
+              className="mx-1 text-[#395692] link"
             >
               herencia
               <OpenInNew className="link-icon" />

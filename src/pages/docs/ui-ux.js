@@ -228,7 +228,7 @@ export default function UiUx() {
               que aprendimos en el curso anterior de
               <Link
                 href="/docs/django#django"
-                className="mx-1 underline text-lime-500"
+                className="mx-1 underline text-lime-500 link"
               >
                 Django
                 <OpenInNew className="link-icon" />
@@ -310,7 +310,7 @@ export default function UiUx() {
               Podemos resolver este problema utilizando la
               <Link
                 href="https://developer.mozilla.org/en-US/docs/Web/API/History_API"
-                className="mx-1 text-lime-500 underline"
+                className="mx-1 text-lime-500 underline link"
               >
                 API de Historial de JavaScript
                 <OpenInNew className="link-icon" />
@@ -1111,7 +1111,7 @@ export default function UiUx() {
               biblioteca llamada
               <Link
                 href="https://reactjs.org/"
-                className="mx-1 underline text-lime-500"
+                className="mx-1 underline text-lime-500 link"
               >
                 React
                 <OpenInNew className="link-icon" />
@@ -1504,7 +1504,7 @@ export default function UiUx() {
               <li>
                 <Link
                   href="/docs/scraping"
-                  className="mx-1 underline text-lime-500"
+                  className="mx-1 underline text-lime-500 link"
                 >
                   Web Scraping con React Js y Python
                 </Link>
@@ -1512,7 +1512,7 @@ export default function UiUx() {
               <li>
                 <Link
                   href="/docs/google-sheets"
-                  className="mx-1 underline text-lime-500"
+                  className="mx-1 underline text-lime-500 link"
                 >
                   Base de datos con Google Sheets (Hojas de Cálculos de Excel)
                 </Link>
@@ -1520,7 +1520,7 @@ export default function UiUx() {
               <li>
                 <Link
                   href="/docs/javascript#cambio-divisas"
-                  className="mx-1 underline text-lime-500"
+                  className="mx-1 underline text-lime-500 link"
                 >
                   Api Routes con javascript (Cambio de Divisas)
                 </Link>
@@ -1771,7 +1771,7 @@ export default function UiUx() {
             <li>
               <Link
                 href="/docs/markdown-render"
-                className="mx-1 underline text-lime-500"
+                className="mx-1 underline text-lime-500 link"
               >
                 Renderizar MarkDown con react y Axios
               </Link>
@@ -1782,7 +1782,7 @@ export default function UiUx() {
             consulta para hacer, los escucho en mi
             <Link
               href="/docs/feedback"
-              className="mx-1 underline text-lime-500"
+              className="mx-1 underline text-lime-500 link"
             >
               feedback
             </Link>

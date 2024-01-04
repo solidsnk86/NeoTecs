@@ -95,7 +95,7 @@ export default function DjangoDocs() {
               los sitios web de
               <Link
                 href="https://www.nytimes.com/"
-                className="mx-1 text-[#0C4B33]"
+                className="mx-1 text-[#0C4B33] link"
               >
                 The New York Times
                 <OpenInNew className="link-icon" />
@@ -103,7 +103,7 @@ export default function DjangoDocs() {
               o
               <Link
                 href="https://www.nytimes.com/"
-                className="mx-1 text-[#0C4B33]"
+                className="mx-1 text-[#0C4B33] link"
               >
                 Facebook
                 <OpenInNew className="link-icon" />
@@ -176,7 +176,7 @@ export default function DjangoDocs() {
             <p>
               <Link
                 href="https://www.djangoproject.com/"
-                className="mr-1 text-[#0C4B33]"
+                className="mr-1 text-[#0C4B33] link"
               >
                 Django
                 <OpenInNew className="link-icon" />
@@ -192,7 +192,7 @@ export default function DjangoDocs() {
                 que también tendrás que
                 <Link
                   href="https://pip.pypa.io/en/stable/installing/"
-                  className="mx-[3px] text-[#0C4B33]"
+                  className="mx-[3px] text-[#0C4B33] link"
                 >
                   instalar
                   <OpenInNew className="link-icon" />
@@ -518,7 +518,7 @@ export default function DjangoDocs() {
             </p>
             <Link
               href="http://localhost:8000/polls/"
-              className="text-[#0C4B33]"
+              className="text-[#0C4B33] link"
             >
               http://localhost:8000/polls/
             </Link>
@@ -628,7 +628,7 @@ export default function DjangoDocs() {
               información específica. Por ejemplo, al ir a
               <Link
                 href="https://twitter.com/CalcagniGabriel"
-                className="mx-[3px] text-[#0C4B33]"
+                className="mx-[3px] text-[#0C4B33] link"
               >
                 https://twitter.com/CalcagniGabriel
                 <OpenInNew className="link-icon" />
@@ -636,7 +636,7 @@ export default function DjangoDocs() {
               se muestran todos mis tweets, y al dirigirse a
               <Link
                 href="https://twitter.com/CalcagniGabriel"
-                className="mx-[3px] text-[#0C4B33]"
+                className="mx-[3px] text-[#0C4B33] link"
               >
                 https://github.com/solidsnk86
                 <OpenInNew className="link-icon" />
@@ -875,7 +875,7 @@ export default function DjangoDocs() {
               utilizar el lenguaje de
               <Link
                 href="https://docs.djangoproject.com/en/4.0/ref/templates/language/"
-                className="mx-[3px] text-[#0C4B33]"
+                className="mx-[3px] text-[#0C4B33] link"
               >
                 plantillas de Django
                 <OpenInNew className="link-icon" />

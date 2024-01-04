@@ -136,7 +136,7 @@ export default function GitDocs() {
                 puedes crear una
                 <Link
                   href="https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"
-                  className="ml-1 text-[#1F6FEB]"
+                  className="ml-1 text-[#1F6FEB] link"
                 >
                   aquí
                   <OpenInNew className="link-icon" />
@@ -180,7 +180,7 @@ export default function GitDocs() {
                     descargarlo
                     <Link
                       href="https://git-scm.com/downloads"
-                      className="ml-1 text-[#1F6FEB]"
+                      className="ml-1 text-[#1F6FEB] link"
                     >
                       aquí
                       <OpenInNew className="link-icon" />

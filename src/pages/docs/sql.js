@@ -134,14 +134,14 @@ export default function SqlDocs() {
               con bases de datos{' '}
               <Link
                 href="https://www.oracle.com/database/what-is-a-relational-database/#:~:text=A%20relational%20database%20is%20a,of%20representing%20data%20in%20tables."
-                className="text-[#00BCF2]"
+                className="text-[#00BCF2] link"
               >
                 relacionales
               </Link>
               , donde la información se organiza en{' '}
               <Link
                 href="https://www.essentialsql.com/what-is-a-database-table/"
-                className="text-[#00BCF2]"
+                className="text-[#00BCF2] link"
               >
                 tablas
               </Link>
@@ -202,7 +202,7 @@ export default function SqlDocs() {
               SQLite tiene{' '}
               <Link
                 href="https://www.sqlite.org/datatype3.html"
-                className="text-[#00BCF2]"
+                className="text-[#00BCF2] link"
               >
                 tipos
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -266,7 +266,7 @@ export default function SqlDocs() {
                 nuestra clave primaria{' '}
                 <Link
                   href="https://www.w3schools.com/sql/sql_primarykey.ASP"
-                  className="text-[#00BCF2]"
+                  className="text-[#00BCF2] link"
                 >
                   PRIMARY-KEY
                   <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -296,7 +296,7 @@ export default function SqlDocs() {
               <b>PRIMARY KEY</b> al hacer una columna, pero hay varias otras
               <Link
                 href="https://www.tutorialspoint.com/sqlite/sqlite_constraints.htm"
-                className="text-[#00BCF2] mx-1"
+                className="text-[#00BCF2] mx-1 link"
               >
                 restrincciones
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -419,7 +419,7 @@ export default function SqlDocs() {
               computadora, primero debes descargar{' '}
               <Link
                 href="https://www.sqlite.org/download.html"
-                className="text-[#00BCF2]"
+                className="text-[#00BCF2] link"
               >
                 SQLLite
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -427,7 +427,7 @@ export default function SqlDocs() {
               . (No lo usaremos en la conferencia, pero también puedes descargar
               <Link
                 href="https://sqlitebrowser.org/dl/"
-                className="text-[#00BCF2] mx-1"
+                className="text-[#00BCF2] mx-1 link"
               >
                 DB Browser
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -529,7 +529,7 @@ export default function SqlDocs() {
               Y también podemos utilizar otras lógicas
               <Link
                 href="https://sqlitebrowser.org/dl/"
-                className="text-[#00BCF2] mx-1"
+                className="text-[#00BCF2] mx-1 link"
               >
                 (AND, OR)
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -592,7 +592,7 @@ export default function SqlDocs() {
               <li>
                 <Link
                   href="https://sqlitebrowser.org/dl/"
-                  className="text-[#00BCF2] mx-1"
+                  className="text-[#00BCF2] mx-1 link"
                 >
                   AVERAGE (PROMEDIO)
                   <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -601,7 +601,7 @@ export default function SqlDocs() {
               <li>
                 <Link
                   href="https://sqlitebrowser.org/dl/"
-                  className="text-[#00BCF2] mx-1"
+                  className="text-[#00BCF2] mx-1 link"
                 >
                   COUNT (CONTAR)
                   <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -610,7 +610,7 @@ export default function SqlDocs() {
               <li>
                 <Link
                   href="https://sqlitebrowser.org/dl/"
-                  className="text-[#00BCF2] mx-1"
+                  className="text-[#00BCF2] mx-1 link"
                 >
                   MAX (MÁXIMO)
                   <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -619,7 +619,7 @@ export default function SqlDocs() {
               <li>
                 <Link
                   href="https://sqlitebrowser.org/dl/"
-                  className="text-[#00BCF2] mx-1"
+                  className="text-[#00BCF2] mx-1 link"
                 >
                   MIN (MÍNIMO)
                   <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -628,7 +628,7 @@ export default function SqlDocs() {
               <li>
                 <Link
                   href="https://sqlitebrowser.org/dl/"
-                  className="text-[#00BCF2] mx-1"
+                  className="text-[#00BCF2] mx-1 link"
                 >
                   SUM (SUMA)
                   <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -739,7 +739,7 @@ export default function SqlDocs() {
               <span>destination_id</span>, llamamos a esos valores
               <Link
                 href="https://www.w3schools.com/sql/sql_foreignkey.asp"
-                className="text-[#00BCF2] mx-1"
+                className="text-[#00BCF2] mx-1 link"
               >
                 Claves Foráneas
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -803,7 +803,7 @@ export default function SqlDocs() {
               datos. Afortunadamente, SQL cuenta con una consulta
               <Link
                 href="https://www.w3schools.com/sql/sql_join.asp"
-                className="text-[#00BCF2] mx-1"
+                className="text-[#00BCF2] mx-1 link"
               >
                 JOIN
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -848,7 +848,7 @@ export default function SqlDocs() {
               Acabamos de utilizar algo llamado
               <Link
                 href="https://www.w3schools.com/sql/sql_join_inner.asp"
-                className="text-[#00BCF2] mx-1"
+                className="text-[#00BCF2] mx-1 link"
               >
                 INNER JOIN
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -858,7 +858,7 @@ export default function SqlDocs() {
               incluyendo
               <Link
                 href="https://www.w3schools.com/sql/sql_join_left.asp"
-                className="text-[#00BCF2] mx-1"
+                className="text-[#00BCF2] mx-1 link"
               >
                 LEFT JOINs
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -866,7 +866,7 @@ export default function SqlDocs() {
               ,
               <Link
                 href="https://www.w3schools.com/sql/sql_join_right.asp"
-                className="text-[#00BCF2] mx-1"
+                className="text-[#00BCF2] mx-1 link"
               >
                 RIGHT JOINs
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -874,7 +874,7 @@ export default function SqlDocs() {
               y
               <Link
                 href="https://www.w3schools.com/sql/sql_join_full.asp"
-                className="text-[#00BCF2] mx-1"
+                className="text-[#00BCF2] mx-1 link"
               >
                 FULL OUTER JOINs
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -906,7 +906,7 @@ export default function SqlDocs() {
               vulnerabilidades asociadas con el uso de SQL. Comenzaremos con la
               <Link
                 href="https://www.w3schools.com/sql/sql_injection.asp"
-                className="text-[#00BCF2] mx-1"
+                className="text-[#00BCF2] mx-1 link"
               >
                 Inyección SQL
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -999,7 +999,7 @@ export default function SqlDocs() {
                 conoce como una Condición de Carrera,
                 <Link
                   href="https://www.w3schools.com/sql/sql_injection.asp"
-                  className="text-[#00BCF2] mx-1"
+                  className="text-[#00BCF2] mx-1 link"
                 >
                   Race Condition
                   <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -1035,7 +1035,7 @@ export default function SqlDocs() {
               Los
               <Link
                 href="https://docs.djangoproject.com/en/4.0/topics/db/models/"
-                className="text-[#00BCF2] mx-1"
+                className="text-[#00BCF2] mx-1 link"
               >
                 modelos de Django
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -1043,7 +1043,7 @@ export default function SqlDocs() {
               son un nivel de
               <Link
                 href="https://techterms.com/definition/abstraction"
-                className="text-[#00BCF2] mx-1"
+                className="text-[#00BCF2] mx-1 link"
               >
                 abstracción
                 <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -1116,7 +1116,7 @@ export default function SqlDocs() {
                 duración. Los dos primeros son campos
                 <Link
                   href="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#charfield"
-                  className="text-[#00BCF2] mx-1"
+                  className="text-[#00BCF2] mx-1 link"
                 >
                   Char
                   <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -1125,7 +1125,7 @@ export default function SqlDocs() {
                 campo
                 <Link
                   href="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#integerfield"
-                  className="text-[#00BCF2] mx-1"
+                  className="text-[#00BCF2] mx-1 link"
                 >
                   Integer
                   <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -1133,7 +1133,7 @@ export default function SqlDocs() {
                 . Estos son solo dos de las muchas
                 <Link
                   href="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#built-in-field-classes"
-                  className="text-[#00BCF2] mx-1"
+                  className="text-[#00BCF2] mx-1 link"
                 >
                   clases de campos integradas
                   <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
@@ -1146,7 +1146,7 @@ export default function SqlDocs() {
                 para un campo dado consultando la
                 <Link
                   href="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#built-in-field-classes"
-                  className="text-[#00BCF2] mx-1"
+                  className="text-[#00BCF2] mx-1 link"
                 >
                   documentación
                   <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
