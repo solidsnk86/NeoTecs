@@ -389,29 +389,29 @@ export default function JavaScript() {
               /*javascript */ `
                 <!DOCTYPE html>
                 <html lang="en">
-                    <head>
-                        <title>Count</title>
-                        <script>
-                            function hello() {
-                                const header = document.querySelector('h1');
-                                if (header.innerHTML === 'Hello!') {
-                                    header.innerHTML = 'Goodbye!';
-                                }
-                                else {
-                                    header.innerHTML = 'Hello!';
-                                }
-                            }
-                        </script>
-                    </head>
-                    <body>
-                        <h1>Hello!</h1>
-                        <button onclick="hello()">Click Here</button>
-                    </body>
+                  <head>
+                      <title>Contador</title>
+                      <script>
+                          function hello() {
+                              const header = document.querySelector('h1');
+                              if (header.innerHTML === 'Bienvenidos!') {
+                                  header.innerHTML = 'Adiós..!';
+                              }
+                              else {
+                                  header.innerHTML = 'Bienvenidos!';
+                              }
+                          }
+                      </script>
+                  </head>
+                  <body>
+                      <h1>Hola!</h1>
+                      <button onclick="hello()">Haz click aquí</button>
+                  </body>
                 </html>
                 `
             }</Pre>
             <div className="images-client">
-              <img src="/images/toggle.gif" alt="javascript-query" />
+              <video src="/images/toggle.mp4" autoPlay loop muted />
             </div>
           </article>
           <span id="dom" />
@@ -443,7 +443,7 @@ export default function JavaScript() {
                 `
             }</Pre>
             <div className="images-client">
-              <img src="/images/count2.gif" alt="javascript-query" />
+              <video src="/images/count2.mp4" autoPlay loop muted />
             </div>
             <p>
               Podemos hacer que esta página sea aún más interesante mostrando
@@ -966,31 +966,31 @@ export default function JavaScript() {
               /*html  */ `
                 <!DOCTYPE html>
                 <html lang="en">
-                    <head>
-                        <title>Colors</title>
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function() {
-                                document.querySelector('select').onchange = function() {
-                                    document.querySelector('#hello').style.color = this.value;
-                                }
-                            });
-                        </script>
-                    </head>
-                    <body>
-                        <h1 id="hello">Hello</h1>
-                        <select>
-                            <option value="black">Black</option>
-                            <option value="red">Red</option>
-                            <option value="blue">Blue</option>
-                            <option value="green">Green</option>
-                        </select>
-                
-                    </body>
+                  <head>
+                      <title>Colores</title>
+                      <script>
+                          document.addEventListener('DOMContentLoaded', function() {
+                              document.querySelector('select').onchange = function() {
+                                  document.querySelector('#hola').style.color = this.value;
+                              }
+                          });
+                      </script>
+                  </head>
+                  <body>
+                      <h1 id="hola">Hola Javascript!</h1>
+                      <select>
+                          <option value="black">Negro</option>
+                          <option value="red">Rojo</option>
+                          <option value="blue">Azul</option>
+                          <option value="green">Verde</option>
+                      </select>
+              
+                  </body>
                 </html>
                 `
             }</Pre>
             <div className="images-client">
-              <img src="/images/colors2.gif" />
+              <video src="/images/colors2.mp4" autoPlay loop muted />
             </div>
             <p>
               Hay muchos otros eventos que podemos detectar en Javascript
