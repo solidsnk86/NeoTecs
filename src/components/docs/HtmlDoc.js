@@ -345,9 +345,9 @@ export default function HtmlDoc() {
 
         <!-- IMAGENES Y VIDEOS -->
 
-        <img /> <!-- Embebe una imágen al documento -->
+        <img /> <!-- Embebe una imágen al documento. -->
 
-        <video /> <!-- Ebebe videos. -->
+        <video /> <!-- Embebe videos. -->
 
         <map>...</map> <!-- Crea un mapa de imágenes con áreas para hacer clicks. -->
 
