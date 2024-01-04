@@ -1,5 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { TitlesContext } from '../shared/TitlesContext';
+import { Anchor, Link } from 'lucide-react';
 
 export const SectionTitle = ({ level = '2', title = '' }) => {
   const Component = `h${level}`;
@@ -15,11 +16,12 @@ export const SectionTitle = ({ level = '2', title = '' }) => {
   return (
     <Component
       id={slug}
-      className="text-[#fafafa] px-2 py-2 bg-gray-800 border-l-4 border-[cornflowerblue] rounded w-fit"
+      className="border-b dark:border-b-zinc-900 text-text-primary pb-2"
     >
       <a href={`#${slug}`} className="!font-bold !no-underline">
         {title}
       </a>
+      <Link className="inline mx-2 w-4" />
     </Component>
   );
 };

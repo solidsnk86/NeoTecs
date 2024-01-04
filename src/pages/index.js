@@ -6,7 +6,6 @@ import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import { MarqueeLogos } from '../sections/Brands';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { Card } from '../components/Card';
-import { BrandsSwitch } from '../components/BrandsSwitch';
 import { PlayIcon, Wifi } from 'lucide-react';
 import { CpeBrands } from '../components/CpeBrands';
 
