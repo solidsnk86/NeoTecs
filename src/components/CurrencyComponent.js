@@ -82,7 +82,7 @@ export default function CurrencyConverter() {
       </form>
       <div
         id="result"
-        className={`rounded font-mono text-slate-100 bg-gray-800 my-6 w-fit border-l-[5px] ${borderColor}`}
+        className={`rounded font-mono text-slate-100 text-sm bg-gray-800 my-6 w-fit border-l-[5px] ${borderColor}`}
       >
         <p className="bg-zinc-100/30 w-full font-semibold text-green-400">
           Última actualización de la API: {update}
