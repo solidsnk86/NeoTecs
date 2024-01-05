@@ -1054,17 +1054,18 @@ export default function JavaScript() {
               /*html */ `
                 <!DOCTYPE html>
                 <html lang="en">
-                    <head>
-                        <title>Tasks</title>
-                        <script src="tasks.js"></script>
-                    </head>
-                    <body>
-                        <h1>Tasks</h1>
-                        <ul id="tasks"></ul>
-                        <form>
-                            <input id="task" placeholder = "New Task" type="text">
-                            <input id="submit" type="submit">
-                        </form>
+                <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                  <title>Tareas</title>
+                </head>
+                <body>
+                    <h1>Lista de Tareas</h1>
+                    <ul id="tareas"></ul>
+                  <form id="taskForm">
+                    <input id="task" placeholder="Nueva Tarea" type="text" />
+                    <button id="submit" type="submit">Agregar Tarea</button>
+                  </form>
                     </body>
                 </html>
                 `
@@ -1120,46 +1121,41 @@ export default function JavaScript() {
             </ul>
             <Pre lang="javascript">{
               /*javascript */ `
-                // Selecciona el botón de envío y el campo de entrada para su uso posterior
-                const submit = document.querySelector('#submit');
-                const newTask = document.querySelector('#task');
-                
-                // Deshabilita el botón de envío de forma predeterminada:
-                submit.disabled = true;
-                
-                // Escucha la entrada en el campo de entrada
-                newTask.onkeyup = () => {
-                    if (newTask.value.length > 0) {
-                        submit.disabled = false;
-                    }
-                    else {
-                        submit.disabled = true;
-                    }
-                }
-                
-                // Escucha la presentación del formulario
-                document.querySelector('form').onsubmit = () => {
-                
-                    // Encuentra la tarea que el usuario acaba de enviar
-                    const task = newTask.value;
-                
-                    // Crea un elemento de lista para la nueva tarea y agrega la tarea a él
+              // Espera a que el DOM esté completamente cargado antes de ejecutar el código
+              document.addEventListener('DOMContentLoaded', function() {
+                // Función auxiliar para seleccionar elementos del DOM
+                const $ = (selector) => document.querySelector(selector);
+              
+                // Obtén referencias a los elementos del DOM que necesitaremos
+                const tasksList = $('#tareas'); // Lista de tareas (ul)
+                const taskForm = $('#taskForm'); // Formulario de tareas
+                const newTaskInput = $('#task'); // Input para la nueva tarea
+              
+                // Agrega un evento de escucha al formulario cuando se envía
+                taskForm.addEventListener('submit', function(event) {
+                  // Previene el comportamiento predeterminado del formulario (evita la recarga de la página)
+                  event.preventDefault();
+              
+                  // Obtiene el texto de la nueva tarea y elimina los espacios en blanco al principio y al final
+                  const taskText = newTaskInput.value.trim();
+              
+                  // Verifica que el texto de la tarea no esté vacío
+                  if (taskText !== '') {
+                    // Crea un nuevo elemento de lista (li) en el DOM
                     const li = document.createElement('li');
-                    li.innerHTML = task;
-                
-                    // Agrega el nuevo elemento a nuestra lista desordenada:
-                    document.querySelector('#tasks').append(li);
-                
-                    // Limpia el campo de entrada:
-                    newTask.value = '';
-                
-                    // Vuelve a deshabilitar el botón de envío:
-                    submit.disabled = true;
-                
-                    // Evita que el formulario se envíe de forma predeterminada
-                    return false;
-                }
-                
+              
+                    // Establece el texto del elemento de lista con el texto de la nueva tarea
+                    li.textContent = taskText;
+              
+                    // Agrega el elemento de lista a la lista de tareas (ul)
+                    tasksList.appendChild(li);
+              
+                    // Limpia el input de la nueva tarea después de agregarla a la lista
+                    newTaskInput.value = '';
+                  }
+                });
+                });
+              
                 `
             }</Pre>
             <div className="images-client">
