@@ -116,14 +116,6 @@ export default function GitDocs() {
             </p>
           </article>
           <SectionTitle title="GitHub" />
-          <figure>
-            <img
-              width={120}
-              height={90}
-              src="https://imgs.search.brave.com/pB5jKUX86a31qe_yECwGcQeUJi7u2_yFibSYu7bjJVo/rs:fit:560:320:1/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi8yLzI5L0dp/dEh1Yl9sb2dvXzIw/MTMuc3ZnLzUxMnB4/LUdpdEh1Yl9sb2dv/XzIwMTMuc3ZnLnBu/Zw"
-              alt="Git icon"
-            />
-          </figure>
           <article>
             <ul>
               <li>
@@ -133,10 +125,11 @@ export default function GitDocs() {
               <li>
                 Comencemos creando un nuevo repositorio en línea. Asegúrate de
                 tener configurada una cuenta de GitHub. Si aún no tienes una,
-                puedes crear una
+                puedes crear una{' '}
                 <Link
                   href="https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"
                   className="ml-1 text-[#1F6FEB] link"
+                  target="_blank"
                 >
                   aquí
                   <OpenInNew className="link-icon" />
@@ -164,9 +157,11 @@ export default function GitDocs() {
                   </li>
                 </ol>
               </li>
-              <div className="images-client">
-                <img src="/images/github-repo.png" alt="Crear Repositorio" />
-              </div>
+              <li>
+                <div className="images-client">
+                  <img src="/images/github-repo.png" alt="Crear Repositorio" />
+                </div>
+              </li>
               <li>
                 Una vez que tenemos un repositorio, probablemente querremos
                 añadir algunos archivos a él. Para hacer esto, tomaremos nuestro
@@ -176,11 +171,12 @@ export default function GitDocs() {
                 <ol className="list-css-span">
                   <li>
                     Asegúrate de tener Git instalado en tu computadora
-                    escribiendo git en tu terminal. Si no está instalado, puedes
-                    descargarlo
+                    escribiendo <code>git</code> en tu terminal. Si no está
+                    instalado, puedes descargarlo{' '}
                     <Link
                       href="https://git-scm.com/downloads"
                       className="ml-1 text-[#1F6FEB] link"
+                      target="_blank" // Abre el enlace en una nueva pestaña
                     >
                       aquí
                       <OpenInNew className="link-icon" />
@@ -192,56 +188,57 @@ export default function GitDocs() {
                     repositorio y copia la URL que aparece. Si no creaste un
                     README, este enlace aparecerá cerca de la parte superior de
                     la página en la sección "Quick Setup".
+                    <div className="images-client">
+                      <img
+                        src="/images/github-repo-1.png"
+                        alt="Crear Repositorio"
+                      />
+                    </div>
                   </li>
-                  <div className="images-client">
-                    <img
-                      src="/images/github-repo-1.png"
-                      alt="Crear Repositorio"
-                    />
-                  </div>
                   <li>
-                    En tu terminal, ejecuta git clone
-                    <span>{'<URL del repositorio>'}</span>. Esto descargará el
-                    repositorio a tu computadora. Si no creaste un README, es
-                    posible que obtengas la advertencia: "You appear to have
-                    cloned into an empty repository" (Parece que has clonado en
-                    un repositorio vacío). Esto es normal y no hay necesidad de
-                    preocuparse por ello.
+                    En tu terminal, ejecuta{' '}
+                    <code>git clone &lt;URL del repositorio&gt;</code>. Esto
+                    descargará el repositorio a tu computadora. Si no creaste un
+                    README, es posible que obtengas la advertencia: "You appear
+                    to have cloned into an empty repository" (Parece que has
+                    clonado en un repositorio vacío). Esto es normal y no hay
+                    necesidad de preocuparse por ello.
+                    <div className="images-client">
+                      <img
+                        src="/images/git-clone.png"
+                        alt="Captura de pantalla de consola git clone."
+                      />
+                    </div>
                   </li>
-                  <div className="images-client">
-                    <img
-                      src="/images/git-clone.png"
-                      alt="Captura de pantalla de consola git clone."
-                    />
-                  </div>
                   <li>
-                    Ejecuta el comando "ls", que lista todos los archivos y
-                    carpetas en tu directorio actual. Deberías ver el nombre del
-                    repositorio que acabas de clonar.
+                    Ejecuta el comando <code>ls</code>, que lista todos los
+                    archivos y carpetas en tu directorio actual. Deberías ver el
+                    nombre del repositorio que acabas de clonar.
                   </li>
                   <li className="list-css-span">
-                    Ejecuta<span>{'cd <nombre del repositorio>'}</span>para
+                    Ejecuta <code>cd &lt;nombre del repositorio&gt;</code> para
                     cambiar al directorio de esa carpeta.
                   </li>
                   <li>
-                    Ejecuta<span>{'touch <nombre del nuevo archivo>'}</span>para
-                    crear un nuevo archivo en esa carpeta. Ahora puedes realizar
-                    ediciones en ese archivo. Alternativamente, puedes abrir la
-                    carpeta en tu editor de texto y agregar nuevos archivos
-                    manualmente.
+                    Ejecuta <code>touch &lt;nombre del nuevo archivo&gt;</code>{' '}
+                    para crear un nuevo archivo en esa carpeta. Ahora puedes
+                    realizar ediciones en ese archivo. Alternativamente, puedes
+                    abrir la carpeta en tu editor de texto y agregar nuevos
+                    archivos manualmente.
                   </li>
                   <li>
                     Para informar a Git que debe realizar un seguimiento del
-                    nuevo archivo que has creado, ejecuta
-                    <span>{'git add <nombre del nuevo archivo>'}</span>para
+                    nuevo archivo que has creado, ejecuta{' '}
+                    <code>git add &lt;nombre del nuevo archivo&gt;</code> para
                     realizar un seguimiento de ese archivo específico, o{' '}
-                    <b>"git add</b>." para realizar un seguimiento de todos los
-                    archivos dentro de ese directorio.
+                    <code>git add .</code> para realizar un seguimiento de todos
+                    los archivos dentro de ese directorio.
                   </li>
                 </ol>
               </li>
             </ul>
           </article>
+
           <span id="commits"></span>
           <SectionTitle title="Commits (Compromisos o Confirmaciones)" />
           <article>
@@ -503,4 +500,4 @@ export default function GitDocs() {
   );
 }
 
-GitDocs.title = 'Aprende 🐱‍🚀 Git y GitHub';
+GitDocs.title = 'Aprende Git y GitHub 🐱‍🚀';
