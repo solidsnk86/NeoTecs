@@ -326,6 +326,15 @@ pre {
   transition: 0.2s all;
 }
 
+@media screen and (max-width: 1280px) {
+  .link-icon {
+    width: 12px;
+    height: 12px;
+    margin-inline: 2px;
+    margin-bottom: 3px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .link-icon {
     width: 10px;
