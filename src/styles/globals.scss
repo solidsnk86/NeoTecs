@@ -315,8 +315,8 @@ pre {
 }
 
 .link-icon {
-  height: 12px;
-  width: 12px;
+  height: 0.75em;
+  width: 0.75em;
   margin-inline: 2px;
   margin-bottom: 3px;
 }
@@ -328,8 +328,8 @@ pre {
 
 @media screen and (max-width: 1280px) {
   .link-icon {
-    width: 12px;
-    height: 12px;
+    width: 0.75em;
+    height: 0.75em;
     margin-inline: 2px;
     margin-bottom: 3px;
   }
@@ -337,8 +337,8 @@ pre {
 
 @media screen and (max-width: 768px) {
   .link-icon {
-    width: 10px;
-    height: 10px;
+    width: 0.5em;
+    height: 0.5em;
     margin-inline: 2px;
     margin-bottom: 3px;
   }
