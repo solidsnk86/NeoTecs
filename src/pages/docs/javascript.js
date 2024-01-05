@@ -1159,7 +1159,7 @@ export default function JavaScript() {
                 `
             }</Pre>
             <div className="images-client">
-              <img src="/images/tasks.gif" />
+              <video src="/images/tasks.mp4" autoPlay loop muted />
             </div>
           </article>
           <span id="intervalos" />
