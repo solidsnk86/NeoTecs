@@ -45,7 +45,7 @@ export const DescriptionViews = ({ videoId }) => {
   const formatView = () => {
     if (views > 1000) {
       const formattedViews = (views / 1000).toFixed(0);
-      return `${formattedViews}K`;
+      return `${formattedViews} K`;
     }
     return views.toString();
   };

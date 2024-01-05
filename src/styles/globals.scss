@@ -97,6 +97,10 @@ body {
   scroll-behavior: smooth;
 }
 
+body.loading * {
+  transition: none !important;
+}
+
 body::-webkit-scrollbar {
   width: 11px;
   background-color: transparent;
