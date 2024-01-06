@@ -59,10 +59,7 @@ export default function CurrencyConverter() {
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col w-fit justify-center mx-auto xl:block xl:justify-normal xl:m-0"
       >
-        <label
-          htmlFor="currency"
-          className="mr-2 mt-4 border border-gray-800 rounded px-1 py-1 font-semibold"
-        >
+        <label htmlFor="currency" className="mr-2 mt-4">
           Ingresa una divisa (por ejemplo: ARS, BRL, EUR, GBP, BTC, etc):
         </label>
         <input
