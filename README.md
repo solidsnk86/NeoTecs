@@ -37,7 +37,6 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 | ![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?logo=typescript&logoColor=white) | Superset of JavaScript with static types     |
 | ![Next.js](https://img.shields.io/badge/Next.js-%23E34F26.svg?logo=next.js&logoColor=white)          | React framework                              |
 | ![Sass](https://img.shields.io/badge/Sass-%23CC6699.svg?logo=sass&logoColor=white)                   | Styling language                             |
-| ![Markdown](https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&logoColor=white)       | Lightweight markup language                  |
 | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23336791.svg?logo=postgresql&logoColor=white) | Backend database (e.g., for feedback system) |
 
 ![Static Badge](https://img.shields.io/badge/CONTRIBUTIONS-F44336)
