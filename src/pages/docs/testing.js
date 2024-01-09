@@ -931,21 +931,24 @@ export default function Testing() {
                       self.assertEqual(driver.title, "Counter")
               
                   def test_aumento(self):
-                      """Asegurarse de que el encabezado se actualice a 1 después de hacer clic en el botón de aumento una vez"""
+                      """Asegurarse de que el encabezado se actualice a 1 después de hacer clic en el botón 
+                      de aumento una vez"""
                       driver.get(file_uri("counter.html"))
                       increase = driver.find_element_by_id("increase")
                       increase.click()
                       self.assertEqual(driver.find_element_by_tag_name("h1").text, "1")
               
                   def test_disminucion(self):
-                      """Asegurarse de que el encabezado se actualice a -1 después de hacer clic en el botón de disminución una vez"""
+                      """Asegurarse de que el encabezado se actualice a -1 después de hacer clic en el botón 
+                      de disminución una vez"""
                       driver.get(file_uri("counter.html"))
                       decrease = driver.find_element_by_id("decrease")
                       decrease.click()
                       self.assertEqual(driver.find_element_by_tag_name("h1").text, "-1")
               
                   def test_aumento_multiple(self):
-                      """Asegurarse de que el encabezado se actualice a 3 después de hacer clic en el botón de aumento tres veces"""
+                      """Asegurarse de que el encabezado se actualice a 3 después de hacer clic en el botón 
+                      de aumento tres veces"""
                       driver.get(file_uri("counter.html"))
                       increase = driver.find_element_by_id("increase")
                       for i in range(3):
