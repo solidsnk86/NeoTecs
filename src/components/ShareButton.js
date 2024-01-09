@@ -13,11 +13,11 @@ export function ShareButton({ setTitle }) {
 
   return (
     <section
-      className="relative text-right space-x-4 text-lg cursor-pointer hover:opacity-[.6] transition-all text-primary"
+      className="relative float-right w-fit space-x-4 cursor-pointer hover:opacity-[.6] transition-all text-primary"
       onClick={shareButton}
     >
       Compartir
-      <Share2Icon className="inline-flex text-xl mx-1" title="Compartir" />
+      <Share2Icon className="inline-flex w-5 h-5 mx-1" title="Compartir" />
     </section>
   );
 }

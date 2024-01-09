@@ -959,6 +959,13 @@ export default function Testing() {
                   unittest.main()
               `
             }</Pre>
+            <p className="list-css-span">
+              Ahora, si ejecutamos<span>python tests.py</span>, nuestras
+              simulaciones se llevarán a cabo en el navegador y luego los
+              resultados de las pruebas se imprimirán en la consola. Aquí tienes
+              un ejemplo de cómo podría verse esto cuando hay un error en el
+              código y una prueba falla:
+            </p>
           </article>
           <ShareButton setTitle={Testing.title} />
         </div>

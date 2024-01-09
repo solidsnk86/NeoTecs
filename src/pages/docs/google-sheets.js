@@ -56,7 +56,9 @@ export default function CsvSheets() {
 
   const sendWhatsapp = (id, price) => {
     const wapNumber = '+5492604586538';
-    const wapMessage = `Buenas estoy interesado en el dibujo de ${id}! El cual tiene un importe de U$D ${price}. ¿El envío está incluido?`;
+    const wapMessage = encodeURIComponent(
+      `Buenas estoy interesado en el dibujo de ${id}! El cual tiene un importe de U$D ${price}. ¿El envío está incluido?`,
+    );
     const wapUrl = `https://wa.me/${wapNumber}?text=${wapMessage}`;
     window.open(wapUrl);
   };
