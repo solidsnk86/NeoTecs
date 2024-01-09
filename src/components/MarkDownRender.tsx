@@ -12,7 +12,7 @@ const MarkdownRenderer = () => {
 
     useEffect(() => {
         const githubMarkdownURL =
-            'https://raw.githack.com/solidsnk86/neo-scraper/master/README.md';
+            'https://raw.githubusercontent.com/solidsnk86/neo-scraper/master/LEEME.md';
 
         fetch(githubMarkdownURL)
             .then((response) => response.text())
