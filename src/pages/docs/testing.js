@@ -44,7 +44,7 @@ export default function Testing() {
               <a href="#pruebas-django">Pruebas en Django</a>
               <ul>
                 <li>
-                  <a href="#pruebas-cliente">Pruebas de Cliente</a>
+                  <a href="#pruebas-de-cliente">Pruebas de Cliente</a>
                 </li>
               </ul>
             </li>
@@ -757,6 +757,57 @@ export default function Testing() {
               `
             }</Pre>
           </article>
+          <SectionTitle title="Selenium" />
+          <article>
+            <p>
+              Hasta ahora, hemos podido probar el código del lado del servidor
+              que hemos escrito utilizando Python y Django, pero a medida que
+              construimos nuestras aplicaciones, también querremos la capacidad
+              de crear pruebas para nuestro código del lado del cliente. Por
+              ejemplo, volvamos a nuestra página counter.html y trabajemos en
+              escribir algunas pruebas para ella.
+            </p>
+            <p>
+              Comenzaremos escribiendo una página de contador ligeramente
+              diferente en la que incluiremos un botón para disminuir el conteo:
+            </p>
+          </article>
+          <Pre lang="javascript">{
+            /*javascript */ `
+            <!DOCTYPE html>
+            <html lang="en">
+                <head>
+                    <title>Counter</title>
+                    <script>
+                        
+                        // Wait for page to load
+                        document.addEventListener('DOMContentLoaded', () => {
+            
+                            // Initialize variable to 0
+                            let counter = 0;
+            
+                            // If increase button clicked, increase counter and change inner html
+                            document.querySelector('#increase').onclick = () => {
+                                counter ++;
+                                document.querySelector('h1').innerHTML = counter;
+                            }
+            
+                            // If decrease button clicked, decrease counter and change inner html
+                            document.querySelector('#decrease').onclick = () => {
+                                counter --;
+                                document.querySelector('h1').innerHTML = counter;
+                            }
+                        })
+                    </script>
+                </head>
+                <body>
+                    <h1>0</h1>
+                    <button id="increase">+</button>
+                    <button id="decrease">-</button>
+                </body>
+            </html>
+            `
+          }</Pre>
           <ShareButton setTitle={Testing.title} />
         </div>
       </div>
