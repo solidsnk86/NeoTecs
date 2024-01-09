@@ -759,40 +759,39 @@ export default function Testing() {
           </article>
           <SectionTitle title="Selenium" />
           <article>
-            <p>
+            <p className="list-css-span">
               Hasta ahora, hemos podido probar el código del lado del servidor
               que hemos escrito utilizando Python y Django, pero a medida que
               construimos nuestras aplicaciones, también querremos la capacidad
               de crear pruebas para nuestro código del lado del cliente. Por
-              ejemplo, volvamos a nuestra página counter.html y trabajemos en
-              escribir algunas pruebas para ella.
+              ejemplo, volvamos a nuestra página<span>counter.html</span>y
+              trabajemos en escribir algunas pruebas para ella.
             </p>
             <p>
               Comenzaremos escribiendo una página de contador ligeramente
               diferente en la que incluiremos un botón para disminuir el conteo:
             </p>
-          </article>
-          <Pre lang="javascript">{
-            /*javascript */ `
+            <Pre lang="javascript">{
+              /*javascript */ `
             <!DOCTYPE html>
             <html lang="en">
                 <head>
                     <title>Counter</title>
                     <script>
                         
-                        // Wait for page to load
+                        // Esperamos que cargue la página
                         document.addEventListener('DOMContentLoaded', () => {
             
-                            // Initialize variable to 0
+                            // Inicializamos la variable en 0
                             let counter = 0;
             
-                            // If increase button clicked, increase counter and change inner html
+                            // Si hacemos click en el botón de incremento, aumeta el valor y lo ingresa al HTML
                             document.querySelector('#increase').onclick = () => {
                                 counter ++;
                                 document.querySelector('h1').innerHTML = counter;
                             }
             
-                            // If decrease button clicked, decrease counter and change inner html
+                            // Si hacemos click en el botón de decremento, disminuye el valor y lo ingresa al HTML
                             document.querySelector('#decrease').onclick = () => {
                                 counter --;
                                 document.querySelector('h1').innerHTML = counter;
@@ -807,7 +806,157 @@ export default function Testing() {
                 </body>
             </html>
             `
-          }</Pre>
+            }</Pre>
+            <p>
+              Ahora, si deseamos probar este código, podríamos simplemente abrir
+              nuestro navegador web, hacer clic en los dos botones y observar
+              qué sucede. Sin embargo, esto se volvería muy tedioso a medida que
+              escribimos aplicaciones de una sola página más grandes, razón por
+              la cual se han creado varios frameworks que ayudan con las pruebas
+              en el navegador, uno de los cuales se llama
+              <Link
+                href="https://www.selenium.dev/"
+                className="mx-1 link underline text-purple-400"
+              >
+                Selenium
+                <OpenInNew className="link-icon" />
+              </Link>
+              .
+            </p>
+            <p className="list-css-span">
+              Utilizando Selenium, podremos definir un archivo de pruebas en
+              Python donde podemos simular que un usuario abre un navegador web,
+              navega hacia nuestra página e interactúa con ella. Nuestra
+              herramienta principal al hacer esto se conoce como un controlador
+              web (Web Driver), que abrirá un navegador web en su computadora.
+              Echemos un vistazo a cómo podríamos empezar a usar esta biblioteca
+              para comenzar a interactuar con las páginas. Ten en cuenta que a
+              continuación utilizamos tanto<span>Selenium</span>como
+              <span>ChromeDriver</span>. Selenium se puede instalar para Python
+              ejecutando
+              <span>pip install selenium</span>, y<span>ChromeDriver</span>se
+              puede instalar ejecutando<span>pip install chromedriver-py</span>.
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              import os
+              import pathlib
+              import unittest
+              
+              from selenium import webdriver
+              
+              # Encuentra el Identificador Uniforme de Recursos (Uniform Resource Identifier) de un archivo.
+              def file_uri(filename):
+                  return pathlib.Path(os.path.abspath(filename)).as_uri()
+              
+              # configura el controlador web utilizando Google Chrome
+              driver = webdriver.Chrome()
+              `
+            }</Pre>
+            <p>
+              El código anterior constituye la configuración básica que
+              necesitamos, por lo que ahora podemos adentrarnos en algunos usos
+              más interesantes empleando el intérprete de Python. Una
+              observación sobre las primeras líneas es que, para apuntar a una
+              página específica, necesitamos el Identificador Uniforme de
+              Recursos (URI) de esa página, que es una cadena única que
+              representa ese recurso.
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              # Encontrar la dirección URI de nuestro archivo creado
+              >>> uri = file_uri("counter.html")
+              
+              # Usamos la URI para abrir la página web
+              >>> driver.get(uri)
+              
+              # Accedemos al título de la página actual
+              >>> driver.title
+              'Counter'
+              
+              # Accedemos al código de la página
+              >>> driver.page_source
+              \'<html lang="en"><head>\\n  <title>Counter</title>\\n
+              <script>\\n'
+              // Esperamos que cargue la página\\n            
+              document.addEventListener(\'DOMContentLoaded\', () => {\\n\\n
+              // Initialize variable to 0\\n                
+              let counter = 0;\\n\\n                
+              // Si hacemos click en el botón de incremento, aumeta el valor y lo ingresa al HTML\\n                
+              document.querySelector(\'#increase\').onclick = () => {\\n                    
+                counter ++;\\n                    
+                document.querySelector(\'h1\').innerHTML = counter;\\n                
+              }\\n\\n                
+              // Si hacemos click en el botón de decremento, disminuye el valor y lo ingresa al HTML\\n                
+              document.querySelector(\'#decrease\').onclick = () => {\\n                    
+                counter --;\\n                    
+                document.querySelector(\'h1\').innerHTML = counter;\\n                
+              }\\n            
+              })\\n        
+              </script>\\n    
+              </head>\\n    
+              <body>\\n        
+              <h1>0</h1>\\n        
+              <button id="increase">+</button>\\n        
+              <button id="decrease">-</button>\\n    
+              \\n
+              </body></html>'
+
+              # Encontrar y almacenar los campos de los botones
+              >>> increase = driver.find_element_by_id("increase")
+              >>> decrease = driver.find_element_by_id("decrease")
+              
+              # Simular el clickeo de los usuarios en los botones
+              >>> increase.click()
+              >>> increase.click()
+              >>> decrease.click()
+              
+              # Incluso podemos incluir clics dentro de otras construcciones de Python:
+              >>> for i in range(25):
+              ...     increase.click()
+              `
+            }</Pre>
+            <p>
+              Ahora demos un vistazo como nosotros podemos utilizar ésta
+              simulación y crear un test automático de nuestra página.
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              # Estructura estándar de una clase de pruebas
+              class PruebasPaginaWeb(unittest.TestCase):
+              
+                  def test_titulo(self):
+                      """Asegurarse de que el título sea correcto"""
+                      driver.get(file_uri("counter.html"))
+                      self.assertEqual(driver.title, "Counter")
+              
+                  def test_aumento(self):
+                      """Asegurarse de que el encabezado se actualice a 1 después de hacer clic en el botón de aumento una vez"""
+                      driver.get(file_uri("counter.html"))
+                      increase = driver.find_element_by_id("increase")
+                      increase.click()
+                      self.assertEqual(driver.find_element_by_tag_name("h1").text, "1")
+              
+                  def test_disminucion(self):
+                      """Asegurarse de que el encabezado se actualice a -1 después de hacer clic en el botón de disminución una vez"""
+                      driver.get(file_uri("counter.html"))
+                      decrease = driver.find_element_by_id("decrease")
+                      decrease.click()
+                      self.assertEqual(driver.find_element_by_tag_name("h1").text, "-1")
+              
+                  def test_aumento_multiple(self):
+                      """Asegurarse de que el encabezado se actualice a 3 después de hacer clic en el botón de aumento tres veces"""
+                      driver.get(file_uri("counter.html"))
+                      increase = driver.find_element_by_id("increase")
+                      for i in range(3):
+                          increase.click()
+                      self.assertEqual(driver.find_element_by_tag_name("h1").text, "3")
+              
+              if __name__ == "__main__":
+                  unittest.main()
+              `
+            }</Pre>
+          </article>
           <ShareButton setTitle={Testing.title} />
         </div>
       </div>
