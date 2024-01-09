@@ -325,6 +325,15 @@ pre {
   margin-bottom: 3px;
 }
 
+@media screen and (min-width: 400px) {
+  .link-icon {
+    height: 0.6em;
+    width: 0.6em;
+    margin-inline: 2px;
+    margin-bottom: 4px;
+  }
+}
+
 .link:hover .link-icon {
   transform: translateY(-4px);
   transition: 0.2s all;
