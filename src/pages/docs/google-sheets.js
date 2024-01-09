@@ -123,3 +123,5 @@ export default function CsvSheets() {
     </TitlesContextProvider>
   );
 }
+
+CsvSheets.title = 'Base de datos - Google Sheets';

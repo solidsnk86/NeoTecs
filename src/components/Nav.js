@@ -75,10 +75,10 @@ export const Nav = ({ className }) => {
         <aside className="flex space-x-3">
           <Link
             href="/docs/feedback"
-            className="flex items-center space-x-2 mb-3 hover:opacity-[.9] hover:transition-all"
+            className="flex items-center space-x-2 mb-3 hover:opacity-[.8] hover:transition-all"
           >
             <span
-              className={`px-2 py-1 rounded-full bg-button-variant font-semibold xl:text-sm text-xs text-text-variant`}
+              className={`px-[3px] py-[1px] rounded-md border dark:border-zinc-700 font-semibold xl:text-sm text-xs`}
             >
               <MessageCircleIcon className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
               {'Feedback'}
@@ -86,10 +86,10 @@ export const Nav = ({ className }) => {
           </Link>
           <Link
             href="https://github.com/solidsnk86"
-            className="flex items-center space-x-2 mb-3 hover:opacity-[.9] hover:transition-all"
+            className="flex items-center space-x-2 mb-3 hover:opacity-[.8] hover:transition-all"
           >
             <span
-              className={`px-2 py-1 rounded-full bg-button-variant font-semibold xl:text-sm text-xs text-text-variant`}
+              className={`px-[3px] py-[1px] rounded-md border dark:border-zinc-700 font-semibold xl:text-sm text-xs`}
             >
               <Github className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
               {'Github'}

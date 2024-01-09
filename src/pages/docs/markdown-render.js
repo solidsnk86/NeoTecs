@@ -220,62 +220,63 @@ export default function MarkDownRender() {
           </p>
           <Pre lang="javascript">{
             /*javascript*/ `
-                            import React, { useState, useEffect } from 'react';
-                            import ReactMarkdown from 'react-markdown';
-                            import rehypeHighlight from 'rehype-highlight';
-                            import rehypeRaw from 'rehype-raw';
-                            import rehypeSlug from 'rehype-slug';
-                            import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-                            import 'github-markdown-css/github-markdown.css'; // Importa la librería de estilos
-                            import 'highlight.js/styles/github-dark.css'; // Se puede elegir el estilo HighLight del <pre> 
-                            
-                            const MarkdownRenderer = () => {
-                                const [markdownContent, setMarkdownContent] = useState('');
-                            
-                                useEffect(() => {
-                                    const githubMarkdownURL =
-                                        'https://raw.githack.com/solidsnk86/neo-scraper/master/README.md';
-                            
-                                    fetch(githubMarkdownURL)
-                                        .then((response) => response.text())
-                                        .then((data) => setMarkdownContent(data))
-                                        .catch((error) =>
-                                            console.error('Error al buscar el documento Markdown:', error),
-                                        );
-                                }, []);
-                            
-                                return (
-                                    <div>
-                                        <ReactMarkdown
-                                            rehypePlugins={[
-                                                rehypeRaw,
-                                                rehypeSlug,
-                                                rehypeAutolinkHeadings,
-                                                [rehypeHighlight, { ignoreMissing: true }],
-                                            ]}
-                                            components={{
-                                                pre: ({ children }) => (
-                                                    <div className="code-block">
-                                                        <pre>{children}</pre>
-                                                    </div>
-                                                ),
-                                                li: ({ children }) => <li className="custom-li">{children}</li>,
-                                            }}
-                                            className="space-y-1"
-                                        >
-                                            {markdownContent}
-                                        </ReactMarkdown>
+            import React, { useState, useEffect } from 'react';
+            import ReactMarkdown from 'react-markdown';
+            import rehypeHighlight from 'rehype-highlight';
+            import rehypeRaw from 'rehype-raw';
+            import rehypeSlug from 'rehype-slug';
+            import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+            import 'github-markdown-css/github-markdown.css'; // Importa la librería de estilos
+            import 'highlight.js/styles/github-dark.css'; // Se puede elegir el estilo HighLight del <pre> 
+            
+            const MarkdownRenderer = () => {
+                const [markdownContent, setMarkdownContent] = useState('');
+            
+                useEffect(() => {
+                    const githubMarkdownURL =
+                        'https://raw.githack.com/solidsnk86/neo-scraper/master/README.md';
+                
+                    fetch(githubMarkdownURL)
+                        .then((response) => response.text())
+                        .then((data) => setMarkdownContent(data))
+                        .catch((error) =>
+                            console.error('Error al buscar el documento Markdown:', error),
+                        );
+                }, []);
+              
+                return (
+                    <div>
+                        <ReactMarkdown
+                            rehypePlugins={[
+                                rehypeRaw,
+                                rehypeSlug,
+                                rehypeAutolinkHeadings,
+                                [rehypeHighlight, { ignoreMissing: true }],
+                            ]}
+                            components={{
+                                pre: ({ children }) => (
+                                    <div className="code-block">
+                                          <pre>{children}</pre>
                                     </div>
-                                );
-                            };
-                            
-                            export default MarkdownRenderer;
-                            
-                            `
+                                ),
+                                li: ({ children }) => <li className="custom-li">{children}</li>,
+                            }}
+                            className="space-y-1"
+                        >
+                            {markdownContent}
+                        </ReactMarkdown>
+                    </div>
+                );
+            };
+
+            export default MarkdownRenderer;
+
+          `
           }</Pre>
           <p>
-            Eso es todo por aquí, espero les haya gustado y que lo puedan hacer.
-            Ante cualquier duda o consulta está el
+            Eso es todo por aquí, espero les haya gustado y lo puedan
+            implementar en algún proyecto. Ante cualquier duda o consulta pueden
+            escribirme en el
             <Link
               className="underline mx-1 text-amber-500 link"
               href="/docs/feedback"
@@ -292,4 +293,4 @@ export default function MarkDownRender() {
   );
 }
 
-MarkDownRender.title = 'MarkDown Github Fetching';
+MarkDownRender.title = 'Fetch de MarkDown en React';

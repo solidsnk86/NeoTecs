@@ -1,5 +1,6 @@
 import { Pre } from './Pre';
 import Link from 'next/link';
+import { OpenInNew } from '@mui/icons-material';
 
 export const GoogleSheetsExample = () => {
   return (
@@ -174,9 +175,10 @@ export const GoogleSheetsExample = () => {
       </p>
       <Link
         href="https://atroposjs.com/"
-        className="mx-1 underline text-red-500"
+        className="mx-1 underline text-red-500 link"
       >
         Atropos js
+        <OpenInNew className="link-icon" />
       </Link>
     </article>
   );
