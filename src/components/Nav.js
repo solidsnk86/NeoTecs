@@ -78,7 +78,7 @@ export const Nav = ({ className }) => {
             className="flex items-center space-x-2 mb-3 hover:opacity-[.8] hover:transition-all"
           >
             <span
-              className={`px-[3px] py-[1px] rounded-md border dark:border-zinc-700 font-semibold xl:text-sm text-xs`}
+              className={`px-[3px] pt-[2px] rounded-md border dark:border-zinc-700 shadow-sm shadow-zinc-100/95 dark:!shadow font-semibold xl:text-sm text-xs`}
             >
               <MessageCircleIcon className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
               {'Feedback'}
@@ -89,7 +89,7 @@ export const Nav = ({ className }) => {
             className="flex items-center space-x-2 mb-3 hover:opacity-[.8] hover:transition-all"
           >
             <span
-              className={`px-[3px] py-[1px] rounded-md border dark:border-zinc-700 font-semibold xl:text-sm text-xs`}
+              className={`px-[3px] pt-[2px] rounded-md border dark:border-zinc-700 shadow-sm shadow-zinc-100/95 dark:!shadow font-semibold xl:text-sm text-xs`}
             >
               <Github className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
               {'Github'}
