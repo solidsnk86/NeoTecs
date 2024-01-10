@@ -99,7 +99,7 @@ export default function CsvSheets() {
                 <aside className="font-light my-3">
                   <span>Publicado {pic.posted}</span>
                   <CalendarClockIcon className="w-4 mx-1 inline mb-1" />
-                  <span className=" uppercase font-mono px-1 mt-1 bg-button-variant rounded-md text-text-variant text-xs font-semibold">
+                  <span className="float-right xl:mr-[68px] uppercase font-mono px-1 mt-[7px] bg-button-variant rounded-md text-text-variant text-xs font-semibold">
                     {pic.isOnSale}
                   </span>
                   <p className="bg-red-500 text-text-variant text-sm p-1 w-fit font-semibold rounded-md">

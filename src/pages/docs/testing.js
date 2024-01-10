@@ -57,7 +57,7 @@ export default function Testing() {
               </a>
             </li>
             <li>
-              <a href="#acciones-github">Acciones de GitHub</a>
+              <a href="#acciones-de-github">Acciones de GitHub</a>
             </li>
             <li>
               <a href="#administrador-django">Docker</a>
@@ -873,34 +873,6 @@ export default function Testing() {
               # Accedemos al título de la página actual
               >>> driver.title
               'Counter'
-              
-              # Accedemos al código de la página
-              >>> driver.page_source
-              \'<html lang="en"><head>\\n  <title>Counter</title>\\n
-              <script>\\n'
-              // Esperamos que cargue la página\\n            
-              document.addEventListener(\'DOMContentLoaded\', () => {\\n\\n
-              // Initialize variable to 0\\n                
-              let counter = 0;\\n\\n                
-              // Si hacemos click en el botón de incremento, aumeta el valor y lo ingresa al HTML\\n                
-              document.querySelector(\'#increase\').onclick = () => {\\n                    
-                counter ++;\\n                    
-                document.querySelector(\'h1\').innerHTML = counter;\\n                
-              }\\n\\n                
-              // Si hacemos click en el botón de decremento, disminuye el valor y lo ingresa al HTML\\n                
-              document.querySelector(\'#decrease\').onclick = () => {\\n                    
-                counter --;\\n                    
-                document.querySelector(\'h1\').innerHTML = counter;\\n                
-              }\\n            
-              })\\n        
-              </script>\\n    
-              </head>\\n    
-              <body>\\n        
-              <h1>0</h1>\\n        
-              <button id="increase">+</button>\\n        
-              <button id="decrease">-</button>\\n    
-              \\n
-              </body></html>'
 
               # Encontrar y almacenar los campos de los botones
               >>> increase = driver.find_element_by_id("increase")
@@ -959,12 +931,486 @@ export default function Testing() {
                   unittest.main()
               `
             }</Pre>
+            <p>El código completo se vería de la siguiente manera:</p>
+            <Pre lang="python">{
+              /*python */ `
+              import os
+              import pathlib
+              import unittest
+              
+              from selenium import webdriver
+              
+              def file_uri(file_name):
+                  return pathlib.Path(os.path.abspath(file_name)).as_uri()
+              
+              driver = webdriver.Chrome()
+              
+              uri = file_uri("counter.html")
+              
+              driver.get(uri)
+              
+              increase = driver.find_element_by_id("increase")
+              decrease = driver.find_element_by_id("decrease")
+              
+              increase.click()
+              increase.click()
+              decrease.click()
+              
+              for i in range(25):
+                  increase.click()
+              
+              class WebpageTests(unittest.TestCase):
+              
+                  def test_title(self):
+                      """Make sure title is correct"""
+                      driver.get(file_uri("counter.html"))
+                      self.assertEqual(driver.title, "Counter")
+              
+                  def test_increase(self):
+                      """Make sure header updated to 1 after 1 click of increase button"""
+                      driver.get(file_uri("counter.html"))
+                      increase = driver.find_element_by_id("increase")
+                      increase.click()
+                      self.assertEqual(driver.find_element_by_tag_name("h1").text, "1")
+              
+                  def test_decrease(self):
+                      """Make sure header updated to -1 after 1 click of decrease button"""
+                      driver.get(file_uri("counter.html"))
+                      decrease = driver.find_element_by_id("decrease")
+                      decrease.click()
+                      self.assertEqual(driver.find_element_by_tag_name("h1").text, "-1")
+              
+                  def test_multiple_increase(self):
+                      """Make sure header updated to 3 after 3 clicks of increase button"""
+                      driver.get(file_uri("counter.html"))
+                      increase = driver.find_element_by_id("increase")
+                      for i in range(3):
+                          increase.click()
+                      self.assertEqual(driver.find_element_by_tag_name("h1").text, "3")
+              
+              if __name__ == "__main__":
+                  unittest.main()              
+              `
+            }</Pre>
             <p className="list-css-span">
               Ahora, si ejecutamos<span>python tests.py</span>, nuestras
               simulaciones se llevarán a cabo en el navegador y luego los
               resultados de las pruebas se imprimirán en la consola. Aquí tienes
               un ejemplo de cómo podría verse esto cuando hay un error en el
               código y una prueba falla:
+            </p>
+            <div className="images-client">
+              <video src="/images/tests_py.mp4" loop autoPlay muted />
+            </div>
+            <p>
+              Para terminar un test y cerrar el navegador, podríamos terminar el
+              código con:
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+              driver.quit()
+              `
+            }</Pre>
+            <p>
+              La impresión de los resultados en consola serán los siguientes:
+            </p>
+            <div className="images-client">
+              <img
+                src="/images/tests_py.png"
+                alt="Resultado test python en consola"
+              />
+            </div>
+          </article>
+          <SectionTitle title="CI/CD" />
+          <article>
+            <p>
+              CI/CD, que significa Integración Continua y Despliegue Continuo,
+              es un conjunto de mejores prácticas de desarrollo de software que
+              dicta cómo se escribe el código por un equipo de personas y cómo
+              ese código se entrega posteriormente a los usuarios de la
+              aplicación. Como su nombre indica, este método consta de dos
+              partes principales:
+            </p>
+            <ul>
+              <li>Integración Continua:</li>
+              <ul>
+                <li>Fusiones presentes con la rama principal.</li>
+                <li>Pruebas unitarias automatizadas con cada fusión.</li>
+              </ul>
+              <li>
+                Despliegue Continuo:
+                <ul>
+                  <li>
+                    Programas cortos de lanzamiento, lo que significa que nuevas
+                    versiones de una aplicación se lanzan con frecuencia.
+                  </li>
+                  <li>
+                    CI/CD se ha vuelto cada vez más popular entre los equipos de
+                    desarrollo de software por varias razones:
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Cuando diferentes miembros del equipo están trabajando en
+                diferentes funciones, pueden surgir muchos problemas de
+                compatibilidad cuando se combinan múltiples funciones al mismo
+                tiempo. La integración continua permite a los equipos abordar
+                pequeños conflictos a medida que surgen.
+              </li>
+              <li>
+                Debido a que las pruebas unitarias se ejecutan con cada fusión,
+                cuando una prueba falla, es más fácil aislar la parte del código
+                que está causando el problema.
+              </li>
+              <li>
+                El lanzamiento frecuente de nuevas versiones de una aplicación
+                permite a los desarrolladores aislar problemas si surgen después
+                del lanzamiento.
+              </li>
+              <li>
+                El lanzamiento de cambios pequeños e incrementales permite a los
+                usuarios acostumbrarse gradualmente a las nuevas funciones de la
+                aplicación en lugar de sentirse abrumados con una versión
+                completamente diferente.
+              </li>
+              <li>
+                No esperar para lanzar nuevas funciones permite a las empresas
+                mantenerse a la vanguardia en un mercado competitivo.
+              </li>
+            </ul>
+          </article>
+          <SectionTitle title="Acciones de GitHub" />
+          <article>
+            <p>
+              Una herramienta popular utilizada para facilitar la integración
+              continua es conocida como
+              <Link
+                href="https://github.com/features/actions"
+                className="mx-1 underline text-purple-400 link"
+              >
+                GitHub Actions
+                <OpenInNew className="link-icon" />
+              </Link>
+              . GitHub Actions nos permite crear flujos de trabajo donde podemos
+              especificar ciertas acciones que se realizarán cada vez que
+              alguien haga un push a un repositorio de Git. Por ejemplo,
+              podríamos querer verificar con cada push que se cumple con una
+              guía de estilo o que se aprueben una serie de pruebas unitarias.
+            </p>
+            <p>
+              Para configurar una GitHub Action, utilizaremos un lenguaje de
+              configuración llamado YAML. YAML estructura sus datos en torno a
+              pares de clave-valor (como un objeto JSON o un diccionario de
+              Python). Aquí tienes un ejemplo de un archivo YAML simple:
+            </p>
+            <Pre lang="yaml">{
+              /*yaml */ `
+              key1: value1
+              key2: value2
+              key3:
+                  - item1
+                  - item2
+                  - item3
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Ahora, veamos un ejemplo de cómo configuraríamos un archivo YAML
+              (que toma la forma de<span>name.yml</span>o<span>name.yaml</span>)
+              que funcione con GitHub Actions. Para hacer esto, crearé un
+              directorio<span>.github</span>en mi repositorio, luego un
+              directorio<span>workflows</span>dentro de ese, y finalmente un
+              archivo
+              <span>ci.yml</span>dentro de ese. En ese archivo, escribiremos:
+            </p>
+            <Pre lang="yaml">{
+              /*yaml */ `
+              name: Testing
+              on: push
+              
+              jobs:
+                test_project:
+                  runs-on: ubuntu-latest
+                  steps:
+                  - uses: actions/checkout@v2
+                  - name: Run Django unit tests
+                    run: |
+                      pip3 install --user django
+                      python3 manage.py test
+              `
+            }</Pre>
+            <p>
+              Dado que es la primera vez que utilizamos GitHub Actions,
+              revisemos qué hace cada parte de este archivo:
+            </p>
+            <ul className="list-css-span">
+              <li>
+                Primero, damos un nombre al flujo de trabajo, que en nuestro
+                caso es<span>Testing</span>. Luego, con la clave<span>on</span>,
+                especificamos cuándo debería ejecutarse el flujo de trabajo.
+              </li>
+              <li>
+                En nuestro caso, queremos realizar las pruebas cada vez que
+                alguien haga un push al repositorio.
+              </li>
+              <li>
+                El resto del archivo está contenido dentro de una clave
+                <span>jobs</span>, que indica qué trabajos se deben ejecutar en
+                cada push.
+                <ul>
+                  <li>
+                    En nuestro caso, el único trabajo es
+                    <span>test_project</span>. Cada trabajo debe definir dos
+                    componentes:
+                    <ul>
+                      <li>
+                        La clave<span>runs-on</span>especifica en qué máquinas
+                        virtuales de GitHub deseamos que se ejecute nuestro
+                        código.
+                      </li>
+                      <li>
+                        La clave<span>steps</span>proporciona las acciones que
+                        deben ocurrir cuando se ejecute este trabajo.
+                        <ul>
+                          <li>
+                            En la clave<span>uses</span>especificamos qué acción
+                            de GitHub deseamos utilizar.
+                            <span>actions/checkout@v2</span>
+                            es una acción escrita por GitHub que podemos
+                            utilizar.
+                          </li>
+                          <li>
+                            La clave<span>name</span>nos permite proporcionar
+                            una descripción de la acción que estamos realizando.
+                          </li>
+                          <li>
+                            Después de la clave<span>run</span>, escribimos los
+                            comandos que deseamos ejecutar en el servidor de
+                            GitHub. En nuestro caso, queremos instalar Django y
+                            luego ejecutar el archivo de pruebas.
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <p>
+              Ahora, abramos nuestro repositorio en GitHub y echemos un vistazo
+              a algunas de las pestañas cerca de la parte superior de la página:
+            </p>
+            <ul className="list-css-span">
+              <li>
+                <span>Code</span>: Esta es la pestaña que hemos estado
+                utilizando con más frecuencia, ya que nos permite ver los
+                archivos y carpetas dentro de nuestro directorio.
+              </li>
+              <li>
+                <span>Issues</span>: Aquí podemos abrir y cerrar problemas, que
+                son solicitudes de corrección de errores o nuevas
+                características. Podemos pensar en esto como una lista de tareas
+                pendientes para nuestra aplicación.
+              </li>
+              <li>
+                <span>Pull Requests</span>: Solicitudes de personas que desean
+                fusionar algún código de una rama en otra. Esta es una
+                herramienta útil, ya que permite a las personas realizar
+                revisiones de código donde comentan y dan sugerencias antes de
+                que el código se integre en la rama principal.
+              </li>
+              <li>
+                <span>GitHub Actions</span>: Esta es la pestaña que usaremos al
+                trabajar en la integración continua, ya que proporciona
+                registros de las acciones que han tenido lugar después de cada
+                push.
+              </li>
+            </ul>
+            <p>
+              Aquí, imaginemos que hicimos un push de nuestros cambios antes de
+              corregir el error que teníamos en la función is_valid_flight en
+              models.py dentro de nuestro proyecto de aeropuerto. Ahora podemos
+              navegar a la pestaña GitHub Actions, hacer clic en nuestro push
+              más reciente, hacer clic en la acción que falló y ver el registro:
+            </p>
+            <div className="images-client">
+              <img src="/images/action.gif" alt="Github actions gif" />
+            </div>
+            <p>
+              Ahora, después de corregir el error, podríamos hacer un push
+              nuevamente y obtener un resultado más satisfactorio:
+            </p>
+            <div className="images-client">
+              <img src="/images/action_success.gif" alt="Github actions gif" />
+            </div>
+          </article>
+          <SectionTitle title="Docker" />
+          <article>
+            <p>
+              Los problemas pueden surgir en el mundo del desarrollo de software
+              cuando la configuración en tu computadora es diferente a la que se
+              está utilizando para ejecutar tu aplicación. Puedes tener una
+              versión diferente de Python o algunos paquetes adicionales
+              instalados que permiten que la aplicación se ejecute sin problemas
+              en tu computadora, mientras que podría fallar en tu servidor. Para
+              evitar estos problemas, necesitamos una forma de asegurarnos de
+              que todos los que trabajan en un proyecto estén utilizando el
+              mismo entorno. Una manera de hacer esto es mediante el uso de una
+              herramienta llamada Docker, que es un software de contenerización,
+              lo que significa que crea un entorno aislado dentro de tu
+              computadora que puede estandarizarse entre muchos colaboradores y
+              el servidor en el que se ejecuta tu sitio. Aunque Docker es un
+              poco similar a una Máquina Virtual, son tecnologías diferentes.
+              Una máquina virtual (como la utilizada en GitHub Actions o al
+              lanzar un servidor
+              <Link
+                href="https://cs50.harvard.edu/web/2020/notes/7/"
+                className="link mx-1 underline text-purple-400"
+              >
+                AWS
+                <OpenInNew className="link-icon" />
+              </Link>
+              ) es efectivamente una computadora virtual completa con su propio
+              sistema operativo, lo que significa que ocupa mucho espacio donde
+              se esté ejecutando. Docker, por otro lado, funciona configurando
+              un contenedor dentro de una computadora existente, ocupando así
+              menos espacio.
+            </p>
+            <p className="list-css-span">
+              Ahora que tenemos una idea de lo que es un contenedor Docker,
+              echemos un vistazo a cómo podemos configurar uno en nuestras
+              computadoras. Nuestro primer paso para hacer esto será crear un
+              archivo Docker que llamaremos<span>Dockerfile</span>. En este
+              archivo, proporcionaremos instrucciones sobre cómo crear una
+              imagen Docker que describa las bibliotecas y binarios que deseamos
+              incluir en nuestro contenedor. Aquí tienes un ejemplo de cómo
+              podría verse nuestro<span>Dockerfile</span>:
+            </p>
+            <Pre lang="dockerfile">{
+              /*dockerfile */ `
+              FROM python:3
+              COPY .  /usr/src/app
+              WORKDIR /usr/src/app
+              RUN pip install -r requirements.txt
+              CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+              `
+            }</Pre>
+            <p>
+              Aquí, examinaremos detenidamente lo que hace el archivo anterior:
+            </p>
+            <ul className="list-css-span">
+              <li>
+                <span>FROM python3</span>: Esto indica que estamos basando esta
+                imagen en una imagen estándar en la que Python 3 está instalado.
+                Esto es bastante común al escribir un archivo Docker, ya que te
+                permite evitar la tarea de volver a definir la misma
+                configuración básica con cada nueva imagen.
+              </li>
+              <li>
+                <span>COPY . /usr/src/app</span>: Esto indica que deseamos
+                copiar todo desde nuestro directorio actual (.) y almacenarlo en
+                el directorio /usr/src/app en nuestro nuevo contenedor.
+              </li>
+              <li>
+                <span>WORKDIR /usr/src/app</span>: Esto configura dónde
+                ejecutaremos comandos dentro del contenedor. (Un poco como cd en
+                la terminal).
+              </li>
+              <li>
+                <span>RUN pip install -r requirements.txt</span>: En esta línea,
+                suponiendo que hayas incluido todos tus requisitos en un archivo
+                llamado requirements.txt, todos se instalarán dentro del
+                contenedor.
+              </li>
+              <li>
+                <span>
+                  CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+                </span>
+                : Finalmente, especificamos el comando que se ejecutará cuando
+                iniciemos el contenedor.
+              </li>
+            </ul>
+            <p className="list-css-span">
+              Hasta ahora en esta clase, solo hemos estado utilizando SQLite, ya
+              que es el sistema de gestión de bases de datos predeterminado para
+              Django. Sin embargo, en aplicaciones en vivo con usuarios reales,
+              SQLite casi nunca se usa, ya que no es tan escalable como otros
+              sistemas. Afortunadamente, si deseamos ejecutar un servidor de
+              base de datos por separado, simplemente podemos agregar otro
+              contenedor Docker y ejecutarlos juntos utilizando una función
+              llamada Docker Compose. Esto permitirá que dos servidores
+              diferentes se ejecuten en contenedores separados, pero también
+              puedan comunicarse entre sí. Para especificar esto, usaremos un
+              archivo YAML llamado<span>docker-compose.yml</span>:
+            </p>
+            <Pre lang="dockerfile">{
+              /*dockerfile */ `
+              version: '3'
+
+              services:
+                  db:
+                      image: postgres
+              
+                  web:
+                      build: .
+                      volumes:
+                          - .:/usr/src/app
+                      ports:
+                          - "8000:8000"
+              `
+            }</Pre>
+            <p>En el archivo anterior:</p>
+            <ol className="list-css-span">
+              <li>
+                Especificamos que estamos utilizando la versión 3 de Docker
+                Compose.
+              </li>
+              <li>
+                Detallamos dos servicios:
+                <ul>
+                  <li>
+                    <span>db</span>configura nuestro contenedor de base de datos
+                    basado en una imagen ya escrita por Postgres.
+                  </li>
+                  <li>
+                    <span>web</span>configura nuestro contenedor de servidor
+                    instruyendo a Docker para:
+                    <ul>
+                      <li>
+                        Utilizar el Dockerfile dentro del directorio actual.
+                      </li>
+                      <li>
+                        Utilizar la ruta especificada dentro del contenedor.
+                      </li>
+                      <li>
+                        Vincular el puerto 8000 dentro del contenedor al puerto
+                        8000 en nuestra computadora.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+            <p className="list-css-span">
+              Ahora estamos listos para iniciar nuestros servicios con el
+              comando<span>docker-compose up</span>. Esto lanzará ambos de
+              nuestros servidores dentro de nuevos contenedores Docker.
+            </p>
+            <p className="list-css-span">
+              En este punto, es posible que deseemos ejecutar comandos dentro de
+              nuestro contenedor Docker para agregar entradas a la base de datos
+              o ejecutar pruebas. Para hacer esto, primero ejecutaremos docker
+              ps para mostrar todos los contenedores de Docker que se están
+              ejecutando. Luego, encontraremos el<span>ID del CONTENEDOR</span>
+              del contenedor que deseamos ingresar y ejecutaremos
+              <span>docker exec -it CONTAINER_ID bash -l</span>. Esto te llevará
+              al directorio<span>usr/src/app</span>que configuramos dentro de
+              nuestro contenedor. Podemos ejecutar cualquier comando que
+              deseemos dentro de ese contenedor y luego salir ejecutando
+              <span>CTRL-D</span>.
+            </p>
+            <p>
+              ¡Eso es todo en este curso! La próxima vez, trabajaremos en
+              escalar nuestros proyectos y asegurarnos de que sean seguros.
             </p>
           </article>
           <ShareButton setTitle={Testing.title} />
