@@ -38,10 +38,6 @@ export const Footer = () => {
     window.open(telegramLink, '_blank');
   };
 
-  const toTop = () => {
-    window.location.href = '#';
-  };
-
   const myUrl = 'https://solidsnk86.netlify.app/';
 
   const currentYear = new Date().getFullYear();
@@ -50,8 +46,8 @@ export const Footer = () => {
     <section className="border-t-2 border-outline text-text-primary mt-14">
       <span className="relative flex justify-center m-auto bg-outline px-[2px] py-[2px] w-fit h-fit rounded-full bottom-[19px]">
         <FaChevronCircleUp
-          className="text-text-variant text-[33px] relative cursor-pointer hover:opacity-[.6] transition-all"
-          onClick={toTop}
+          className="text-text-variant text-[33px] relative cursor-pointer hover:opacity-[.9] transition-all"
+          onClick={() => (window.location.href = '#')}
         />
       </span>
       <article className="max-w-screen-xl mx-auto px-4 md:px-8">
