@@ -3,7 +3,11 @@ import Link from 'next/link';
 import { History } from 'lucide-react';
 
 export const PublishDate = () => {
-  const postedtDate = '01 Octubre, 2023';
+  const postedtDate = new Date('01 Octubre 2023').toLocaleDateString('es-Es', {
+    year: '2-digit',
+    month: 'long',
+    day: '2-digit',
+  });
 
   const BackHome = [{ link: 'Inicio', href: '/' }];
 
