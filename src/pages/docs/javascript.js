@@ -1589,6 +1589,13 @@ export default function JavaScript() {
               ! La próxima vez, trabajaré para crear interfaces de usuario aún
               más atractivas.
             </p>
+            <p className="list-css-span">
+              Más adelante vamos a ver como uso este ejemplo de API routes de
+              Next.js donde actualizo los datos desde Google Sheets (Como base
+              de datos dinámica), haciendo un fetch del link del archivo
+              <span>.csv</span>el cual podemos actualizar los valores de las
+              divisas.
+            </p>
             <ShareButton setTitle={JavaScript.title} />
           </article>
         </div>

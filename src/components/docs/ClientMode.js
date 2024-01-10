@@ -166,7 +166,7 @@ export const ClientMode = () => {
           cara. Puede ser el problema de CPE; por favor contactar{' '}
           <a
             href="mailto:support@tp-link.com."
-            className="text-[cornflowerblue]"
+            className="text-[cornflowerblue] link"
           >
             support@tp-link.com.
             <OpenInNew className="link-icon" />
@@ -201,7 +201,10 @@ export const ClientMode = () => {
         dirección IP estática, y asegúrese de que estén en la misma subred. Si
         el Cliente aún no puede conectar el AP después de hacer esto, puede ser
         el problema de CPE; por favor contactar a{' '}
-        <a href="mailto:support@tp-link.com." className="text-[cornflowerblue]">
+        <a
+          href="mailto:support@tp-link.com."
+          className="text-[cornflowerblue] link"
+        >
           support@tp-link.com
           <OpenInNew className="link-icon" />
         </a>

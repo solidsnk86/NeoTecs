@@ -294,16 +294,6 @@ export default function UbiquitiDocs() {
               explicativo en mi canal
             </p>
             <ShareButton setTitle={UbiquitiDocs.title} />
-
-            <SectionTitle title="Video Explicativo" />
-
-            <iframe
-              src="https://www.youtube.com/embed/Q9bFZgllF7k?si=O4xYo-ZCdiM_9sQ5"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen=""
-              className="rounded-lg w-96 h-64 flex justify-center m-auto max-sm:w-[100%] mb-5"
-            />
           </section>
         </div>
       </div>

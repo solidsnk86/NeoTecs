@@ -101,8 +101,6 @@ export const RepeaterMode = () => {
       </p>
 
       <ShareButton />
-      <hr />
-
       <p>
         Este artículo aplica a los siguientes modelos:
         <span className="color-acento">

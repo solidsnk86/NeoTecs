@@ -13,7 +13,7 @@ export function ShareButton({ setTitle }) {
 
   return (
     <section
-      className="relative float-right w-fit px-[3px] pt-[1px] rounded-md border dark:border-zinc-700 shadow-sm shadow-zinc-100/95 dark:!shadow space-x-4 cursor-pointer hover:opacity-[.6] transition-all text-primary"
+      className="relative float-right w-fit px-[3px] pt-[1px] rounded-md border dark:border-zinc-700 shadow-sm shadow-zinc-100/95 dark:!shadow space-x-4 cursor-pointer hover:opacity-[.8] transition-all text-primary"
       onClick={shareButton}
     >
       <Share2Icon className="inline-flex w-5 h-5 mb-1 mx-1" title="Compartir" />

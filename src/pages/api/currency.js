@@ -1,184 +1,52 @@
-export default function handlerCurrency(req, res) {
-  const date = new Date();
+export default async function handlerCurrency(req, res) {
+  'use-client';
+  try {
+    const fetchData = async () => {
+      const response = await fetch(
+        'https://docs.google.com/spreadsheets/d/e/2PACX-1vQXKUu36nLoEr2X2cXCLAy68aqjUKVavdWplNBUQaGhfYV0WifoyMlCXs3-vfLijDhRDka2jjHsLIsi/pub?output=csv',
+      );
 
-  const options = { year: 'numeric', month: 'short', day: 'numeric' };
-  const formattedDate = new Date(date).toLocaleDateString(undefined, options);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch data. Status: ${response.status}`);
+      }
 
-  res.status(200).json({
-    success: true,
-    timestamp: formattedDate,
-    base: 'USD',
-    date: '2024-ENE-4',
-    rates: {
-      AED: 3.671622,
-      AFN: 78.182922,
-      ALL: 94.793612,
-      AMD: 405.091678,
-      ANG: 1.808236,
-      AOA: 832.508488,
-      ARS: 811.520703,
-      AUD: 1.49709,
-      AWG: 1.801631,
-      AZN: 1.705974,
-      BAM: 1.795123,
-      BBD: 2.148956,
-      BDT: 117.879173,
-      BGN: 1.956887,
-      BHD: 0.401361,
-      BIF: 3022.853058,
-      BMD: 1.073128,
-      BND: 1.448698,
-      BOB: 7.354453,
-      BRL: 4.909082,
-      BSD: 1.064331,
-      BTC: 0.000023,
-      BTN: 83.580121,
-      BWP: 14.402012,
-      BYN: 3.505986,
-      BYR: 21033.315269,
-      BZD: 2.145357,
-      CAD: 1.465861,
-      CDF: 2807.303807,
-      CHF: 0.964984,
-      CLF: 0.034328,
-      CLP: 947.201944,
-      CNY: 7.833298,
-      COP: 4281.217233,
-      CRC: 565.004315,
-      CUC: 1.073128,
-      CUP: 13.997901,
-      CVE: 110.226824,
-      CZK: 22.413851,
-      DJF: 189.504367,
-      DKK: 7.461655,
-      DOP: 60.419074,
-      DZD: 145.36167,
-      EGP: 32.899609,
-      ERN: 16.096925,
-      ETB: 59.13282,
-      EUR: 0.91,
-      FJD: 2.41754,
-      FKP: 0.86699,
-      GBP: 0.797136,
-      GEL: 2.892057,
-      GGP: 0.86699,
-      GHS: 12.697602,
-      GIP: 0.86699,
-      GMD: 69.806915,
-      GNF: 9141.833794,
-      GTQ: 7.82411,
-      GYD: 222.672879,
-      HKD: 7.806596,
-      HNL: 26.284896,
-      HRK: 7.693211,
-      HTG: 141.42102,
-      HUF: 378.98602,
-      IDR: 16729.10485,
-      ILS: 4.211267,
-      IMP: 0.86699,
-      INR: 89.24001,
-      IQD: 1394.317089,
-      IRR: 45328.940973,
-      ISK: 149.122318,
-      JEP: 0.86699,
-      JMD: 164.972863,
-      JOD: 0.761171,
-      JPY: 144.60294,
-      KES: 159.654705,
-      KGS: 95.852134,
-      KHR: 4392.478698,
-      KMF: 497.099875,
-      KPW: 965.815497,
-      KRW: 1404.741111,
-      KWD: 0.331173,
-      KYD: 0.886993,
-      KZT: 494.908592,
-      LAK: 22061.359214,
-      LBP: 15996.859608,
-      LKR: 350.178718,
-      LRD: 201.26469,
-      LSL: 19.724086,
-      LTL: 3.168669,
-      LVL: 0.649125,
-      LYD: 5.203198,
-      MAD: 10.946009,
-      MDL: 19.296317,
-      MGA: 4816.3319,
-      MKD: 61.593667,
-      MMK: 2235.125881,
-      MNT: 3700.457918,
-      MOP: 8.580328,
-      MRO: 383.106629,
-      MUR: 47.258532,
-      MVR: 16.568889,
-      MWK: 1198.384948,
-      MXN: 18.75725,
-      MYR: 5.075363,
-      MZN: 67.875313,
-      NAD: 19.884833,
-      NGN: 789.767637,
-      NIO: 38.956508,
-      NOK: 11.847765,
-      NPR: 141.727914,
-      NZD: 1.789844,
-      OMR: 0.413123,
-      PAB: 1.064331,
-      PEN: 3.755109,
-      PGK: 4.005613,
-      PHP: 56.007951,
-      PKR: 298.757927,
-      PLN: 4.4552,
-      PYG: 7957.244068,
-      QAR: 3.647794,
-      RON: 4.549416,
-      RSD: 107.126396,
-      RUB: 90.039124,
-      RWF: 1306.547487,
-      SAR: 3.755901,
-      SBD: 9.038833,
-      SCR: 14.123808,
-      SDG: 643.341959,
-      SEK: 11.691627,
-      SGD: 1.452463,
-      SHP: 1.305729,
-      SLE: 23.002424,
-      SLL: 21194.284328,
-      SOS: 612.220047,
-      SRD: 40.939309,
-      STD: 22211.589795,
-      SYP: 13952.659087,
-      SZL: 19.598212,
-      THB: 38.119128,
-      TJS: 11.659762,
-      TMT: 3.755949,
-      TND: 3.106984,
-      TOP: 2.57025,
-      TRY: 30.504183,
-      TTD: 7.2195,
-      TWD: 34.452138,
-      TZS: 2658.679186,
-      UAH: 38.48657,
-      UGX: 4025.605762,
-      USD: 1.073128,
-      UYU: 39.635241,
-      UZS: 13042.482834,
-      VEF: 3568130.06942,
-      VES: 37.697348,
-      VND: 26329.203578,
-      VUV: 129.947627,
-      WST: 2.789323,
-      XAF: 655.729893,
-      XAG: 0.046365,
-      XAU: 0.00054,
-      XCD: 2.900183,
-      XDR: 0.812319,
-      XOF: 655.729893,
-      XPF: 121.53166,
-      YER: 268.657506,
-      ZAR: 19.604869,
-      ZMK: 9659.43619,
-      ZMW: 23.654807,
-      ZWL: 345.546884,
-    },
-  });
+      const csvItem = await response.text();
+      const parsedItems = csvItem
+        .split('\n')
+        .slice(1)
+        .map((row) => {
+          const [currency, rates, update] = row
+            .split(',')
+            .map((item) => item.trim());
+          return {
+            currency,
+            rates: parseFloat(rates),
+            update,
+          };
+        });
+      return parsedItems;
+    };
+
+    const currencyData = await fetchData();
+    const lastUpdate = currencyData.length > 0 ? currencyData[0].update : '';
+    const ratesObject = currencyData.reduce((acc, { currency, rates }) => {
+      acc[currency] = rates;
+      return acc;
+    }, {});
+
+    res.status(200).json({
+      success: true,
+      timestamp: new Date().toLocaleDateString('es-Es', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      }),
+      base: 'USD',
+      update: lastUpdate,
+      rates: ratesObject,
+    });
+  } catch (error) {
+    console.error('Error fetching and processing currency data:', error);
+    res.status(500).json({ success: false, error: 'Internal Server Error' });
+  }
 }

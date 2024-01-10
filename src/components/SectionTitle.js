@@ -18,10 +18,10 @@ export const SectionTitle = ({ level = '2', title = '' }) => {
       id={slug}
       className="border-b border-black/20 dark:border-b-zinc-800 text-text-primary pb-2"
     >
-      <a href={`#${slug}`} className="!font-bold !no-underline">
+      <a href={`#${slug}`} className="!font-bold !no-underline link-chain">
         {title}
+        <Link className="inline mx-2 w-4 chain-link" />
       </a>
-      <Link className="inline mx-2 mb-1 w-4" />
     </Component>
   );
 };

@@ -1,12 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { History } from 'lucide-react';
 
 export const PublishDate = () => {
   const postedtDate = new Date('01 Octubre 2023').toLocaleDateString('es-Es', {
-    year: '2-digit',
+    day: 'numeric',
+    year: 'numeric',
     month: 'long',
-    day: '2-digit',
   });
 
   const BackHome = [{ link: 'Inicio', href: '/' }];
@@ -22,9 +21,6 @@ export const PublishDate = () => {
         {
           text: '· Publicado, ',
           date: postedtDate,
-          icon: (
-            <History className="inline-flex w-[13px] h-[13px] mr-2 mb-[2px]" />
-          ),
         },
       ].map((item) => (
         <p className="text-gray-700 text-sm italic antialiased">

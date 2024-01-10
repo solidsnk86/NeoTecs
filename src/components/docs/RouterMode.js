@@ -8,7 +8,6 @@ import { OpenInNew } from '@mui/icons-material';
 export const RouterMode = () => {
   return (
     <section className="text-text-primary router-mode">
-      <hr />
       <SectionTitle title="Modo Router" />
       <PublishDate />
       <p>
@@ -23,7 +22,7 @@ export const RouterMode = () => {
         seguir este
         <a
           href="https://192.168.0.254/"
-          className="text-[cornflowerblue] mx-1"
+          className="text-[cornflowerblue] mx-1 link"
           target="_blank"
         >
           enlace
@@ -166,7 +165,7 @@ export const RouterMode = () => {
           Si no recuerda el procedimiento, consulte nuevamente las
           <a
             href="https://www.tp-link.com/ar/support/faq/"
-            className="text-[cornflowerblue] mx-1"
+            className="text-[cornflowerblue] mx-1 link"
           >
             (Preguntas frecuentes FAQs)
             <OpenInNew className="link-icon" />
@@ -185,7 +184,7 @@ export const RouterMode = () => {
         <li>Haga clic en OK nuevamente para aplicar la configuración.</li>
       </ol>
 
-      <figure className="images-client flex justify-center m-auto">
+      <figure className="images-client flex justify-center m-auto mb-10">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/propiedades-ethernet2.png?raw=true"
           alt=""
@@ -199,21 +198,18 @@ export const RouterMode = () => {
       </p>
       <br />
 
-      <figure className="images-client flex justify-center m-auto">
+      <figure className="images-client flex justify-center m-auto mb-10">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/mac-imag-redes.png?raw=true"
           alt=""
         />
       </figure>
-
-      <hr />
       <p>
         Este artículo aplica a los siguientes modelos:
         <strong className="text-text-strong mx-1">
           CPE510 - CPE610 - CPE220 - CPE210 - CPE520 - CPE605.
         </strong>
       </p>
-
       <ShareButton />
     </section>
   );

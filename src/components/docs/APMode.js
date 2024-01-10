@@ -41,7 +41,7 @@ export const APMode = () => {
       <hr />
       <p>Vista del menú principal Pharos OS:</p>
 
-      <div className="images-web">
+      <div className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/puntoacceso1.png?raw=true"
           alt="imágen menú principal pharos os"
@@ -54,7 +54,7 @@ export const APMode = () => {
         configurar nombre y contraseña del AP:
       </p>
 
-      <div className="images-web">
+      <div className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/puntoacceso2.png?raw=true"
           alt="imágen menú inalámbrico pharos os."
@@ -71,7 +71,7 @@ export const APMode = () => {
         clic en el botón (Aplicar). Guardamos la configuración:
       </p>
 
-      <div className="images-web">
+      <div className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/puntoacceso3.png?raw=true"
           alt="imágen menú inalámbrico pharos os2"
