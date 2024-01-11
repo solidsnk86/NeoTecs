@@ -86,9 +86,9 @@ export default function Testing() {
             <p>
               Una parte importante del proceso de desarrollo de software es la
               acción de probar el código que hemos escrito para asegurarnos de
-              que todo funcione como esperamos. En esta conferencia,
-              discutiremos varias formas en las que podemos mejorar la manera en
-              que probamos nuestro código.
+              que todo funcione como esperamos. En este curso, discutiremos
+              varias formas en las que podemos mejorar la manera en que probamos
+              nuestro código.
             </p>
           </article>
           <SectionTitle title="Afirmar" />

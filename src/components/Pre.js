@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Highlight, themes } from 'prism-react-renderer';
 import stripIndent from 'strip-indent';
-import { Copy } from 'lucide-react';
+import { Copy, Check } from 'lucide-react';
 import 'react-toastify/dist/ReactToastify.css';
 
 const removeIndent = (code = '') => {
@@ -35,8 +35,14 @@ export const Pre = ({ children, lang = '' }) => {
         onClick={(e) => handleCopyClick(e)}
         className="text-xs absolute z-10 top-[26px] right-[8px] cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all"
       >
-        {copied ? 'Copiado' : 'Copiar'}
-        <Copy className="w-[14px] h-[14px] inline mx-1" />
+        {copied ? (
+          <>
+            Copiado
+            <Check className="w-[14px] h-[14px] inline mx-1" />
+          </>
+        ) : (
+          <Copy className="w-[14px] h-[14px] inline mx-1" />
+        )}
       </span>
       <Highlight
         theme={themes.vsDark}
