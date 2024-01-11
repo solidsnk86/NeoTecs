@@ -112,6 +112,10 @@ body::-webkit-scrollbar-thumb {
   height: 80px;
 }
 
+.nav-header {
+  background-color: rgba(255, 252, 252, 0.753);
+}
+
 @media (max-width: 388px) {
   .youtube-aside {
     transform: scale(0.8);
@@ -128,18 +132,6 @@ a {
 
 .router-mode p {
   margin: 10px 0 10px;
-}
-
-@keyframes scroll {
-  from {
-    opacity: 0;
-    scale: 15%;
-  }
-
-  to {
-    opacity: 1;
-    scale: 100%;
-  }
 }
 
 @media (max-width: 768px) {
@@ -163,6 +155,33 @@ a {
 
   animation-range: entry 25% cover 30%;
   animation-fill-mode: both;
+}
+
+@keyframes scroll {
+  from {
+    opacity: 0;
+    scale: 15%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+.nav-switch {
+  position: sticky;
+  top: 48px;
+  animation: add-shadow linear both;
+  animation-timeline: scroll();
+  animation-range: 0 150px;
+}
+
+@keyframes add-shadow {
+  to {
+    box-shadow: 0 5px 5px -3px rgba(255, 255, 255, 0.25);
+    background: var(--bg-card);
+  }
 }
 
 @keyframes shake {
@@ -198,34 +217,6 @@ video {
   font-weight: bold;
 }
 
-/**=================|
-#  SLIDER SECTION   |
-===================*/
-.slider {
-  grid-area: slider;
-  justify-content: center;
-  margin: auto;
-}
-
-.slider .gallery {
-  width: auto;
-  height: 40rem;
-  position: relative;
-  display: flex;
-  overflow: auto;
-  scroll-snap-type: x mandatory;
-}
-
-.gallery img {
-  width: 100%;
-  height: 100%;
-  position: sticky;
-  left: 0;
-  flex-shrink: 0;
-  object-fit: cover;
-  scroll-snap-align: start;
-}
-
 /* ==============> HR <============== */
 
 .hr-container {
@@ -250,21 +241,6 @@ video {
 
 pre {
   position: relative;
-}
-
-.nav-switch {
-  position: sticky;
-  top: 48px;
-  animation: add-shadow linear both;
-  animation-timeline: scroll();
-  animation-range: 0 150px;
-}
-
-@keyframes add-shadow {
-  to {
-    box-shadow: 0 5px 5px -3px rgba(255, 255, 255, 0.25);
-    background: var(--bg-card);
-  }
 }
 
 .shadow-icon {

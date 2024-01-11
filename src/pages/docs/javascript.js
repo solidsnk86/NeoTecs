@@ -1443,18 +1443,19 @@ export default function JavaScript() {
                 </html>
                 `
             }</Pre>
-            <p>
+            <p className="list-css-span">
               Ahora, utilizaremos algo llamado AJAX, o Asynchronous JavaScript
               And XML (JavaScript y XML asincrónicos), que nos permite acceder a
               información de páginas externas incluso después de que nuestra
               página se haya cargado. Para hacerlo, utilizaremos la función
-              fetch, que nos permitirá enviar una solicitud HTTP. La función
-              fetch devuelve una promesa. No entraremos en detalles sobre qué es
-              una promesa aquí, pero podemos pensar en ella como un valor que
-              llegará en algún momento, pero no necesariamente de inmediato.
-              Tratamos con promesas proporcionándoles un atributo .then que
-              describe qué hacer cuando obtenemos una respuesta. El fragmento de
-              código a continuación registrará nuestra respuesta en la consola.
+              fetch, que nos permitirá enviar una solicitud<span>HTTP</span>. La
+              función fetch devuelve una promesa. No entraremos en detalles
+              sobre qué es una promesa aquí, pero podemos pensar en ella como un
+              valor que llegará en algún momento, pero no necesariamente de
+              inmediato. Tratamos con promesas proporcionándoles un atributo
+              <span>.then</span>que describe qué hacer cuando obtenemos una
+              respuesta. El fragmento de código a continuación registrará
+              nuestra respuesta en la consola.
             </p>
             <Pre lang="javascript">{
               /*javascript */ `

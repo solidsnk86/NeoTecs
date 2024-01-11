@@ -15,6 +15,7 @@
     "@mui/icons-material": "^5.14.15",
     "@mui/material": "^5.14.15",
     "@mui/styled-engine-sc": "^6.0.0-alpha.3",
+    "@radix-ui/react-slot": "^1.0.2",
     "@supabase/auth-helpers-nextjs": "^0.8.1",
     "@supabase/supabase-js": "^2.37.0",
     "@tabler/icons-react": "^2.43.0",

@@ -1,8 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Highlight, themes } from 'prism-react-renderer';
 import stripIndent from 'strip-indent';
 import { Copy } from 'lucide-react';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const removeIndent = (code = '') => {
@@ -11,8 +10,9 @@ const removeIndent = (code = '') => {
 
 export const Pre = ({ children, lang = '' }) => {
   const preRef = useRef(null);
+  const [copied, setCopied] = useState(false);
 
-  const handleCopyClick = (e) => {
+  const handleCopyClick = () => {
     if (preRef.current) {
       const range = document.createRange();
       range.selectNode(preRef.current);
@@ -21,17 +21,7 @@ export const Pre = ({ children, lang = '' }) => {
     }
 
     document.execCommand('copy');
-    e.stopPropagation();
-
-    const isDarkMode = window.matchMedia(
-      '(prefers-color-scheme: dark)',
-    ).matches;
-
-    toast('Contenido copiado al portapapeles', {
-      position: toast.POSITION.BOTTOM_LEFT,
-      type: 'default',
-      theme: isDarkMode ? 'dark' : 'light',
-    });
+    setCopied(true);
 
     window.getSelection().removeAllRanges();
   };
@@ -41,10 +31,13 @@ export const Pre = ({ children, lang = '' }) => {
       <p className="bg-[#1E1E1E] translate-y-[23px] text-amber-500 text-xs uppercase font-bold pl-4 p-1 rounded-md">
         {lang}
       </p>
-      <Copy
+      <span
         onClick={(e) => handleCopyClick(e)}
-        className="w-4 h-4 inline-flex my-auto absolute z-10 top-[27px] right-[8px] cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all"
-      />
+        className="text-xs absolute z-10 top-[26px] right-[8px] cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all"
+      >
+        {copied ? 'Copiado' : 'Copiar'}
+        <Copy className="w-[14px] h-[14px] inline mx-1" />
+      </span>
       <Highlight
         theme={themes.vsDark}
         code={removeIndent(children)}
@@ -62,7 +55,6 @@ export const Pre = ({ children, lang = '' }) => {
           </pre>
         )}
       </Highlight>
-      <ToastContainer closeButton closeOnClick />
     </div>
   );
 };

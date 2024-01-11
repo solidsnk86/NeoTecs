@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { OpenInNew } from '@mui/icons-material';
 import HeaderTitle from '../../components/HeaderTitlte';
 import IndexTitle from '../../components/IndexTitle';
+import CopyToClipboard from '../../components/CopyToClipboard';
 export default function MarkDownRender() {
   return (
     <TitlesContextProvider>
@@ -286,6 +287,7 @@ export default function MarkDownRender() {
             de NeoTecs.
           </p>
           <ShareButton setTitle={MarkDownRender.title} />
+          <CopyToClipboard />
         </div>
       </div>
       <Footer />
