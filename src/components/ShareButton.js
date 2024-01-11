@@ -13,10 +13,11 @@ export function ShareButton({ setTitle }) {
 
   return (
     <section
-      className="relative float-right w-fit px-[3px] pt-[1px] rounded-md border dark:border-zinc-700 shadow-sm shadow-zinc-100/95 dark:!shadow space-x-4 cursor-pointer hover:opacity-[.8] transition-all text-primary"
+      title="Compartir"
+      className="relative float-right w-fit py-[1px] px-[2px] rounded-md bg-button-variant text-text-variant shadow-sm shadow-zinc-100/95 dark:!shadow space-x-4 cursor-pointer hover:opacity-[.8] transition-all text-primary"
       onClick={shareButton}
     >
-      <Share2Icon className="inline-flex w-5 h-5 mb-1 mx-1" title="Compartir" />
+      <Share2Icon className="inline-flex w-5 h-5 mb-1 mx-1" />
       Compartir
     </section>
   );
