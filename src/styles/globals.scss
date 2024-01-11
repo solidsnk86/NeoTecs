@@ -301,12 +301,11 @@ pre {
   margin-bottom: 3px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 400px) {
   .link-icon {
-    height: 0.8em;
-    width: 0.8em;
+    height: 0.6em;
+    width: 0.6em;
     margin-inline: 2px;
-    margin-bottom: 4px;
   }
 }
 
