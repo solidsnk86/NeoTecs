@@ -7,7 +7,7 @@ import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import { OpenInNew } from '@mui/icons-material';
+import { ExternalLinkIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 export default function CssDoc() {
@@ -761,7 +761,7 @@ export default function CssDoc() {
               className="text-[#395692] mx-1 link"
             >
               flexbox
-              <OpenInNew className="link-icon" />
+              <ExternalLinkIcon className="link-icon" />
             </Link>
             . Esto nos permite que los elementos se ajusten fácilmente a la
             siguiente línea si no caben horizontalmente. Para lograrlo,
@@ -897,7 +897,7 @@ export default function CssDoc() {
                 className="text-[#395692] mx-1 link"
               >
                 Bootstrap
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               navegando a la sección de documentación de su sitio web. En esta
               página, encontrarás numerosos ejemplos de clases que puedes
@@ -910,7 +910,7 @@ export default function CssDoc() {
                 className="text-[#395692] mx-1 link"
               >
                 sistema de cuadrícula
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               . Bootstrap divide automáticamente una página en 12 columnas, y
               podemos decidir cuántas columnas ocupa un elemento agregando la
@@ -1049,7 +1049,7 @@ export default function CssDoc() {
                 className="text-[#395692] mx-1 link"
               >
                 Sass
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               es un lenguaje que nos permite escribir CSS de manera más
               eficiente de varias maneras, una de las cuales es permitiéndonos
@@ -1109,7 +1109,7 @@ export default function CssDoc() {
                 className="text-[#395692] mx-1 link"
               >
                 descargar un programa llamado Sass
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               en nuestras computadoras. Luego, en la terminal, escribimos
               <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
@@ -1172,7 +1172,7 @@ export default function CssDoc() {
               className="mx-1 text-[#395692] link"
             >
               herencia
-              <OpenInNew className="link-icon" />
+              <ExternalLinkIcon className="link-icon" />
             </Link>
             . Esto nos permite crear un conjunto básico de estilos que pueden
             ser compartidos por varios elementos diferentes. Lo hacemos

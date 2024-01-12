@@ -7,7 +7,7 @@ import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import { OpenInNew } from '@mui/icons-material';
+import { ExternalLinkIcon } from 'lucide-react';
 import { AlertTriangle, InfoIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
@@ -205,7 +205,7 @@ export default function SqlDocs() {
                 className="text-[#00BCF2] link"
               >
                 tipos
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>{' '}
               que representan diferentes formas de información. Otros sistemas
               de gestión pueden tener tipos de datos diferentes, pero todos son
@@ -269,7 +269,7 @@ export default function SqlDocs() {
                   className="text-[#00BCF2] link"
                 >
                   PRIMARY-KEY
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
                 </Link>
                 , lo que significa que es nuestro identificador único. Además,
                 hemos especificado que será AUTOINCREMENT, lo que significa que
@@ -299,7 +299,7 @@ export default function SqlDocs() {
                 className="text-[#00BCF2] mx-1 link"
               >
                 restrincciones
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               disponibles:
             </p>
@@ -422,7 +422,7 @@ export default function SqlDocs() {
                 className="text-[#00BCF2] link"
               >
                 SQLLite
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               . (No lo usaremos en la conferencia, pero también puedes descargar
               <Link
@@ -430,7 +430,7 @@ export default function SqlDocs() {
                 className="text-[#00BCF2] mx-1 link"
               >
                 DB Browser
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               para una forma más amigable de ejecutar consultas SQL).
             </p>
@@ -532,7 +532,7 @@ export default function SqlDocs() {
                 className="text-[#00BCF2] mx-1 link"
               >
                 (AND, OR)
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               como en Python:
             </p>
@@ -595,7 +595,7 @@ export default function SqlDocs() {
                   className="text-[#00BCF2] mx-1 link"
                 >
                   AVERAGE (PROMEDIO)
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
                 </Link>
               </li>
               <li>
@@ -604,7 +604,7 @@ export default function SqlDocs() {
                   className="text-[#00BCF2] mx-1 link"
                 >
                   COUNT (CONTAR)
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
                 </Link>
               </li>
               <li>
@@ -613,7 +613,7 @@ export default function SqlDocs() {
                   className="text-[#00BCF2] mx-1 link"
                 >
                   MAX (MÁXIMO)
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
                 </Link>
               </li>
               <li>
@@ -622,7 +622,7 @@ export default function SqlDocs() {
                   className="text-[#00BCF2] mx-1 link"
                 >
                   MIN (MÍNIMO)
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
                 </Link>
               </li>
               <li>
@@ -631,7 +631,7 @@ export default function SqlDocs() {
                   className="text-[#00BCF2] mx-1 link"
                 >
                   SUM (SUMA)
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
                 </Link>
               </li>
               <li>...</li>
@@ -742,7 +742,7 @@ export default function SqlDocs() {
                 className="text-[#00BCF2] mx-1 link"
               >
                 Claves Foráneas
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               .
             </p>
@@ -806,7 +806,7 @@ export default function SqlDocs() {
                 className="text-[#00BCF2] mx-1 link"
               >
                 JOIN
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               donde podemos combinar dos tablas con el fin de realizar otra
               consulta.
@@ -851,7 +851,7 @@ export default function SqlDocs() {
                 className="text-[#00BCF2] mx-1 link"
               >
                 INNER JOIN
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               , lo que significa que estamos ignorando las filas que no tienen
               coincidencias entre las tablas. Pero existen otros tipos de joins,
@@ -861,7 +861,7 @@ export default function SqlDocs() {
                 className="text-[#00BCF2] mx-1 link"
               >
                 LEFT JOINs
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               ,
               <Link
@@ -869,7 +869,7 @@ export default function SqlDocs() {
                 className="text-[#00BCF2] mx-1 link"
               >
                 RIGHT JOINs
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               y
               <Link
@@ -877,7 +877,7 @@ export default function SqlDocs() {
                 className="text-[#00BCF2] mx-1 link"
               >
                 FULL OUTER JOINs
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               , que no discutiremos en detalle aquí.
             </p>
@@ -909,7 +909,7 @@ export default function SqlDocs() {
                 className="text-[#00BCF2] mx-1 link"
               >
                 Inyección SQL
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               .
             </p>
@@ -1002,7 +1002,7 @@ export default function SqlDocs() {
                   className="text-[#00BCF2] mx-1 link"
                 >
                   Race Condition
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
                 </Link>
                 .
               </p>
@@ -1038,7 +1038,7 @@ export default function SqlDocs() {
                 className="text-[#00BCF2] mx-1 link"
               >
                 modelos de Django
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               son un nivel de
               <Link
@@ -1046,7 +1046,7 @@ export default function SqlDocs() {
                 className="text-[#00BCF2] mx-1 link"
               >
                 abstracción
-                <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
               </Link>
               sobre SQL que nos permite trabajar con bases de datos utilizando
               clases y objetos de Python en lugar de consultas SQL directas.
@@ -1119,7 +1119,7 @@ export default function SqlDocs() {
                   className="text-[#00BCF2] mx-1 link"
                 >
                   Char
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
                 </Link>
                 , lo que significa que almacenan cadenas, y el tercero es un
                 campo
@@ -1128,7 +1128,7 @@ export default function SqlDocs() {
                   className="text-[#00BCF2] mx-1 link"
                 >
                   Integer
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
                 </Link>
                 . Estos son solo dos de las muchas
                 <Link
@@ -1136,7 +1136,7 @@ export default function SqlDocs() {
                   className="text-[#00BCF2] mx-1 link"
                 >
                   clases de campos integradas
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
                 </Link>
                 en Django.
               </li>
@@ -1149,7 +1149,7 @@ export default function SqlDocs() {
                   className="text-[#00BCF2] mx-1 link"
                 >
                   documentación
-                  <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
                 </Link>
                 .
               </li>

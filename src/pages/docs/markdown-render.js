@@ -7,7 +7,7 @@ import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import Link from 'next/link';
-import { OpenInNew } from '@mui/icons-material';
+import { ExternalLinkIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import IndexTitle from '../../components/IndexTitle';
 export default function MarkDownRender() {
@@ -44,7 +44,7 @@ export default function MarkDownRender() {
               className="mx-1 text-amber-600 link"
             >
               react-markdown en GitHub
-              <OpenInNew className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
+              <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
             </Link>
             . Aquí hay una guía paso a paso para lograrlo:
           </p>

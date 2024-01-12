@@ -7,7 +7,7 @@ import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import { OpenInNew } from '@mui/icons-material';
+import { ExternalLinkIcon } from 'lucide-react';
 import { DjangoIcon } from '../../components/DjangoIcon';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
@@ -98,7 +98,7 @@ export default function DjangoDocs() {
                 className="mx-1 text-[#0C4B33] link"
               >
                 The New York Times
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               o
               <Link
@@ -106,7 +106,7 @@ export default function DjangoDocs() {
                 className="mx-1 text-[#0C4B33] link"
               >
                 Facebook
-                <OpenInNew className="link-icon" />
+                <Exter className="link-icon" />
               </Link>
               , por ejemplo, es probable que veas cosas diferentes hoy que
               mañana. Para sitios grandes como esos, sería poco razonable que
@@ -179,7 +179,7 @@ export default function DjangoDocs() {
                 className="mr-1 text-[#0C4B33] link"
               >
                 Django
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               es un marco de trabajo web basado en Python que nos permitirá
               escribir código en Python que genera dinámicamente HTML y CSS. La
@@ -195,7 +195,7 @@ export default function DjangoDocs() {
                   className="mx-[3px] text-[#0C4B33] link"
                 >
                   instalar
-                  <OpenInNew className="link-icon" />
+                  <ExternalLinkIcon className="link-icon" />
                 </Link>
                 <span>pip</span> si aún no lo has hecho.
               </li>
@@ -631,7 +631,7 @@ export default function DjangoDocs() {
                 className="mx-[3px] text-[#0C4B33] link"
               >
                 https://twitter.com/CalcagniGabriel
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               se muestran todos mis tweets, y al dirigirse a
               <Link
@@ -639,7 +639,7 @@ export default function DjangoDocs() {
                 className="mx-[3px] text-[#0C4B33] link"
               >
                 https://github.com/solidsnk86
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               se accede a la página de GitHub de solidSnk86. Incluso puedes
               encontrar tus propios repositorios públicos de GitHub navegando a
@@ -878,7 +878,7 @@ export default function DjangoDocs() {
                 className="mx-[3px] text-[#0C4B33] link"
               >
                 plantillas de Django
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               para cambiar el contenido de nuestros archivos HTML según la URL
               visitada. Vamos a probarlo cambiando nuestra función

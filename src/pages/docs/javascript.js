@@ -7,7 +7,7 @@ import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import { OpenInNew } from '@mui/icons-material';
+import { ExternalLinkIcon } from 'lucide-react';
 import CurrencyConverter from '../../components/CurrencyComponent';
 import HeaderTitle from '../../components/HeaderTitlte';
 import IndexTitle from '../../components/IndexTitle';
@@ -190,7 +190,7 @@ export default function JavaScript() {
                 className="mx-1 text-amber-600 link"
               >
                 Programación Orientada a Eventos
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               .
             </p>
@@ -210,7 +210,7 @@ export default function JavaScript() {
                 className="mx-1 text-amber-600 link"
               >
                 Escuchadores de Eventos
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               que esperan a que ocurran ciertos eventos y luego ejecutan algún
               código.
@@ -223,7 +223,7 @@ export default function JavaScript() {
                 className="mx-1 text-amber-600 link"
               >
                 función
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               llamada "hola":
             </p>
@@ -361,7 +361,7 @@ export default function JavaScript() {
                 className="text-amber-600 mx-1 link"
               >
                 condiciones
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               en JavaScript. Por ejemplo, supongamos que en lugar de cambiar
               siempre nuestro encabezado a "Goodbye!", queremos alternar entre
@@ -609,7 +609,7 @@ export default function JavaScript() {
                 className="text-amber-600 mx-1 link"
               >
                 anónima
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               , que es una función a la que nunca se le da un nombre. Reuniendo
               todo esto, nuestro código JavaScript ahora se ve de la siguiente
@@ -728,7 +728,7 @@ export default function JavaScript() {
                   className="text-amber-400 mx-1 link"
                 >
                   Bootstrap
-                  <OpenInNew className="link-icon" />
+                  <ExternalLinkIcon className="link-icon" />
                 </Link>
                 tiene su propia biblioteca de JavaScript que puedes incluir para
                 hacer tu sitio más interactivo.
@@ -1109,7 +1109,7 @@ export default function JavaScript() {
                   className="mx-1 text-amber-600 link"
                 >
                   createElement
-                  <OpenInNew className="link-icon" />
+                  <ExternalLinkIcon className="link-icon" />
                 </Link>
                 . Luego, podemos agregar esos elementos al DOM utilizando la
                 función
@@ -1177,7 +1177,7 @@ export default function JavaScript() {
               className="mx-1 text-amber-600 link"
             >
               setIntervals
-              <OpenInNew className="link-icon" />
+              <ExternalLinkIcon className="link-icon" />
             </Link>
             , que toma como argumento una función que se ejecutará y un
             intervalo de tiempo (en milisegundos) entre las ejecuciones de la
@@ -1285,7 +1285,7 @@ export default function JavaScript() {
               className="mx-1 text-amber-600 link"
             >
               objeto de JavaScript
-              <OpenInNew className="link-icon" />
+              <ExternalLinkIcon className="link-icon" />
             </Link>
             es muy similar a un diccionario en Python, ya que nos permite
             almacenar pares clave-valor. Por ejemplo, podría crear un objeto de
@@ -1342,7 +1342,7 @@ export default function JavaScript() {
               className="text-amber-600 mx-1 link"
             >
               APIs
-              <OpenInNew className="link-icon" />
+              <ExternalLinkIcon className="link-icon" />
             </Link>
             .
           </p>
@@ -1362,7 +1362,7 @@ export default function JavaScript() {
               className="text-amber-600 mx-1 link"
             >
               JSON
-              <OpenInNew className="link-icon" />
+              <ExternalLinkIcon className="link-icon" />
             </Link>
             podría verse así:
           </p>
@@ -1407,7 +1407,7 @@ export default function JavaScript() {
                 className="text-amber-600 mx-1 link"
               >
                 Banco Central Europeo
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               . Si visitas su sitio web, verás la documentación de la API, que
               generalmente es un buen lugar para comenzar cuando deseas utilizar
@@ -1417,7 +1417,7 @@ export default function JavaScript() {
                 className="text-amber-600 mx-1 link"
               >
                 https://api.exchangeratesapi.io/latest?base=USD
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               . Cuando visites esta página, verás la tasa de cambio entre el
               dólar estadounidense y muchas otras monedas, escrita en formato

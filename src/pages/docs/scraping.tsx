@@ -5,7 +5,7 @@ import { ArrowLeftIcon } from 'lucide-react';
 import Link from 'next/link';
 import MarkdownRenderer from '../../components/MarkDownRender';
 import { AlertTriangle } from 'lucide-react';
-import { OpenInNew } from '@mui/icons-material';
+import { ExternalLinkIcon } from 'lucide-react';
 import { Footer } from '../../components/Footer';
 
 export default function Scraping() {
@@ -75,7 +75,7 @@ export default function Scraping() {
                         className="text-[tomato] underline link"
                     >
                         React Markdown Render
-                        <OpenInNew className="link-icon" />
+                        <ExternalLinkIcon className="link-icon" />
                     </Link>
                 </div>
                 <p className="text-center justify-center mx-auto my-10 bg-button-variant text-text-variant w-fit p-2">

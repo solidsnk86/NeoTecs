@@ -7,7 +7,7 @@ import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import Link from 'next/link';
-import { OpenInNew } from '@mui/icons-material';
+import { ExternalLinkIcon } from 'lucide-react';
 import { InfoIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
@@ -231,7 +231,7 @@ export default function UiUx() {
                 className="mx-1 underline text-lime-500 link"
               >
                 Django
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               , para realizar una solicitud al servidor y obtener el texto de
               una sección específica para mostrarlo en la pantalla:
@@ -313,7 +313,7 @@ export default function UiUx() {
                 className="mx-1 text-lime-500 underline link"
               >
                 API de Historial de JavaScript
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               . Esta API nos permite agregar información a nuestro historial de
               navegación y actualizar manualmente la URL. Veamos cómo podemos
@@ -1114,7 +1114,7 @@ export default function UiUx() {
                 className="mx-1 underline text-lime-500 link"
               >
                 React
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               .
             </p>

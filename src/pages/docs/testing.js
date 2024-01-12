@@ -9,7 +9,7 @@ import { ShareButton } from '../../components/ShareButton';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 import Link from 'next/link';
-import { OpenInNew } from '@mui/icons-material';
+import { ExternalLinkIcon } from 'lucide-react';
 
 export default function Testing() {
   return (
@@ -477,7 +477,7 @@ export default function Testing() {
                 className="mx-1 underline text-purple-400 link"
               >
                 TestCase
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               se importa automáticamente:
             </p>
@@ -819,7 +819,7 @@ export default function Testing() {
                 className="mx-1 link underline text-purple-400"
               >
                 Selenium
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               .
             </p>
@@ -1089,7 +1089,7 @@ export default function Testing() {
                 className="mx-1 underline text-purple-400 link"
               >
                 GitHub Actions
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               . GitHub Actions nos permite crear flujos de trabajo donde podemos
               especificar ciertas acciones que se realizarán cada vez que
@@ -1267,7 +1267,7 @@ export default function Testing() {
                 className="link mx-1 underline text-purple-400"
               >
                 AWS
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               ) es efectivamente una computadora virtual completa con su propio
               sistema operativo, lo que significa que ocupa mucho espacio donde

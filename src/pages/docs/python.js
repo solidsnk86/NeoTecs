@@ -7,7 +7,7 @@ import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import { OpenInNew } from '@mui/icons-material';
+import { ExternalLinkIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 
@@ -216,7 +216,7 @@ export default function Python() {
                 className="mx-1 text-sky-600 link"
               >
                 Python
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               si aún no lo han hecho. Después de instalar Python, recomendamos
               que también descarguen
@@ -225,7 +225,7 @@ export default function Python() {
                 className="mx-1 text-sky-600 link"
               >
                 Pip
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               , ya que lo necesitarán más adelante en el curso.
             </li>
@@ -391,7 +391,7 @@ export default function Python() {
                 className="text-sky-800 mx-1 link"
               >
                 excepción
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               que se ve así:
             </li>
@@ -498,7 +498,7 @@ export default function Python() {
               className="text-sky-800 mx-1 link"
             >
               lista en Python
-              <OpenInNew className="link-icon" />
+              <ExternalLinkIcon className="link-icon" />
             </Link>
             te permite almacenar cualquier tipo de variable. Creamos una lista
             utilizando corchetes cuadrados y comas, como se muestra a
@@ -559,7 +559,7 @@ export default function Python() {
                 className="text-sky-800 mx-1 link"
               >
                 tupla
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               es uno de los 4 tipos de datos incorporados en Python que se
               utilizan para almacenar colecciones de datos. Los otros 3 son
@@ -603,7 +603,7 @@ export default function Python() {
                 className="text-sky-800 mx-1 link"
               >
                 conjuntos
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               son diferentes de las listas y las tuplas en que son desordenados.
               También son diferentes porque, mientras puedes tener dos o más
@@ -667,7 +667,7 @@ export default function Python() {
                 className="text-sky-800 mx-1 link"
               >
                 diccionarios
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               de Python, o dicts, serán especialmente útiles en este curso. Un
               diccionario es un conjunto de pares clave-valor, donde cada clave
@@ -713,7 +713,7 @@ export default function Python() {
                 className="text-sky-800 mx-1 link"
               >
                 bucles
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               Los son una parte increíblemente importante de cualquier lenguaje
               de programación, y en Python, existen dos formas principales:
@@ -973,7 +973,7 @@ export default function Python() {
                 className="mx-1 text-sky-600 link"
               >
                 Programación Orientada a Objetos
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               es un paradigma de programación, o una forma de pensar acerca de
               la programación, que se centra en objetos que pueden almacenar
@@ -1130,7 +1130,7 @@ export default function Python() {
                 className="mx-1 text-sky-600 link"
               >
                 Programación Funcional
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               , en el cual las funciones se tratan como valores, al igual que
               cualquier otra variable.
@@ -1306,7 +1306,7 @@ export default function Python() {
                 className="mx-1 text-sky-600 link"
               >
                 manejo de excepciones
-                <OpenInNew className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               . En el siguiente bloque de código,
               <b className="text-sky-400 mx-1">intentaremos</b> dividir los dos

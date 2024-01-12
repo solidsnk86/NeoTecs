@@ -7,7 +7,7 @@ import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import { OpenInNew } from '@mui/icons-material';
+import { ExternalLinkIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 export default function GitDocs() {
@@ -132,7 +132,7 @@ export default function GitDocs() {
                   target="_blank"
                 >
                   aquí
-                  <OpenInNew className="link-icon" />
+                  <ExternalLinkIcon className="link-icon" />
                 </Link>
                 .
                 <ol>
@@ -179,7 +179,7 @@ export default function GitDocs() {
                       target="_blank" // Abre el enlace en una nueva pestaña
                     >
                       aquí
-                      <OpenInNew className="link-icon" />
+                      <ExternalLinkIcon className="link-icon" />
                     </Link>
                     .
                   </li>
