@@ -106,7 +106,7 @@ export default function DjangoDocs() {
                 className="mx-1 text-[#0C4B33] link"
               >
                 Facebook
-                <Exter className="link-icon" />
+                <ExternalLinkIcon className="link-icon" />
               </Link>
               , por ejemplo, es probable que veas cosas diferentes hoy que
               mañana. Para sitios grandes como esos, sería poco razonable que
