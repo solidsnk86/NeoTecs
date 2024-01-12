@@ -62,7 +62,7 @@ export default function FeedBack() {
 
   return (
     <>
-      <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-30" />
+      <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-50" />
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="xl:w-1/3 p-14 flex justify-center mx-auto text-text-primary text-left flex-col space-y-4"

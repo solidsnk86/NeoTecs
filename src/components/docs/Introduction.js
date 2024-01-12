@@ -1,6 +1,6 @@
 import { SectionTitle } from '../SectionTitle';
 import Link from 'next/link';
-import { OpenInNew } from '@mui/icons-material';
+import { ExternalLinkIcon } from 'lucide-react';
 import HeaderTitle from '../HeaderTitlte';
 import IndexTitle from '../IndexTitle';
 
@@ -51,7 +51,7 @@ export const Introduction = () => {
           href="https://code.visualstudio.com/"
         >
           Visual Studio Code
-          <OpenInNew className="link-icon" />
+          <ExternalLinkIcon className="link-icon" />
         </Link>
         ,
         <Link
@@ -59,17 +59,17 @@ export const Introduction = () => {
           href="https://www.sublimetext.com/"
         >
           Sublime Text
-          <OpenInNew className="link-icon" />
+          <ExternalLinkIcon className="link-icon" />
         </Link>
         ,
         <Link className="mx-1 text-red-400 link" href="https://atom.io/">
           Atom
-          <OpenInNew className="link-icon" />
+          <ExternalLinkIcon className="link-icon" />
         </Link>
         y
         <Link className="mx-1 text-red-400 link" href="https://www.vim.org/">
           Vim
-          <OpenInNew className="link-icon" />
+          <ExternalLinkIcon className="link-icon" />
         </Link>
         , pero hay muchas opciones más para elegir!
       </p>

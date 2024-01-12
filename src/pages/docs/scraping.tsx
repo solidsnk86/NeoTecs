@@ -29,7 +29,7 @@ export default function Scraping() {
 
     return (
         <>
-            <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-30" />
+            <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-50" />
             <main className="text-text-primary flex flex-col justify-center m-auto p-10 xl:w-10/12">
                 <Link href="/">
                     <ArrowLeftIcon
