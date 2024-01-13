@@ -295,18 +295,11 @@ pre {
 }
 
 .link-icon {
-  height: 0.5em;
-  width: 0.5em;
-  margin-inline: 2px;
+  display: inline;
+  height: 1em;
+  width: 1em;
+  margin-inline: 3px;
   margin-bottom: 3px;
-}
-
-@media screen and (min-width: 400px) {
-  .link-icon {
-    height: 0.6em;
-    width: 0.6em;
-    margin-inline: 2px;
-  }
 }
 
 .link:hover .link-icon {
@@ -393,12 +386,27 @@ textarea {
 }
 
 .chain-link {
-  display: none;
+  padding-bottom: 3px;
 }
 
-.link-chain:hover .chain-link {
-  display: inline;
-  transform: translateY(-2px);
+.lupa:hover {
+  animation: lupa forwards;
+  animation-duration: 0.4s;
+}
+
+@keyframes lupa {
+  0% {
+    transform: rotate(-10deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0%);
+  }
 }
 
 @import 'atropos/scss';

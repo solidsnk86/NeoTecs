@@ -119,7 +119,6 @@ export default function HtmlDoc() {
         estructura similar a un árbol. Arriba tienes un ejemplo del diseño del
         DOM para la página que acabamos de escribir.
       </li>
-      <ShareButton />
       <span id="mas-elementos-html" />
       <SectionTitle title="Más Elementos HTML" />
       <ul>
@@ -390,9 +389,9 @@ export default function HtmlDoc() {
 
         `
       }</Pre>
-      <h4 className="text-text-primary">
+      <p className="text-text-primary">
         ¡Eso concluye nuestro contenido por aquí! ツ
-      </h4>
+      </p>
       <ShareButton setTitle={HtmlDoc.title} />
     </main>
   );
