@@ -1,3 +1,4 @@
+import { useGA } from '../shared/use-ga';
 import Head from 'next/head';
 import '../styles/globals.scss';
 import { renderToString } from 'react-dom/server';
@@ -7,10 +8,10 @@ import { NeoTecsIcon } from '../components/NeoTecsIcon';
 function MyApp({ Component, pageProps }) {
   const title = Component.title || 'Neotecs - Tutoriales';
   const description =
-    'Aprende programación en este curso gratuito de NeoTecs, desde básico a avanzado, también hay documentación para que configures tu WiFi fácil y rápido.';
+    'Aprende programación en este curso gratuito de NeoTecs, que abarca desde conceptos básicos hasta niveles avanzados. Además, disponemos de documentación para facilitar la configuración rápida y sencilla de tu WiFi.';
 
   const neoTecsIconString = renderToString(<NeoTecsIcon />);
-
+  useGA(router);
   return (
     <>
       <Head>
