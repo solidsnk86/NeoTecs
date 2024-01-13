@@ -6,7 +6,7 @@ import { DoNotCopy } from '../components/DoNotCopy';
 import { NeoTecsIcon } from '../components/NeoTecsIcon';
 
 function MyApp({ Component, pageProps, router }) {
-  const title = Component.title || 'Neotecs - Tutoriales';
+  const title = Component.title || 'Neotecs - Informática';
   const description =
     'Aprende programación en este curso gratuito de NeoTecs, que abarca desde conceptos básicos hasta niveles avanzados. Además, disponemos de documentación para facilitar la configuración rápida y sencilla de tu WiFi.';
 
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps, router }) {
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content="/images/NeoTecs _Tutorial_logo.png"
+          content="/images/logos/NeoTecs _Tutorial_logo.png"
         />
         <meta property="og:site_name" content="Neotecs" />
         <meta name="twitter:card" content="summary_large_image" />
