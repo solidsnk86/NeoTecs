@@ -6,9 +6,7 @@ export const useGA = (router) => {
     script.src = 'https://www.googletagmanager.com/gtag/js?id=G-HL41YE945C';
     script.onload = () => {
       window.dataLayer = window.dataLayer || [];
-      // eslint-disable-next-line
       window.gtag = function () {
-        // eslint-disable-next-line
         window.dataLayer.push(arguments);
       };
       window.gtag('js', new Date());
