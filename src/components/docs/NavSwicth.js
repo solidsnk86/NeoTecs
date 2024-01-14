@@ -42,7 +42,7 @@ export const NavSwitch = ({ inline }) => {
       title: 'CI/DI',
     },
     {
-      href: '',
+      href: 'scalability',
       title: 'Escalabilidad',
     },
     {
