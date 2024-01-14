@@ -7,7 +7,7 @@ import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import { ExternalLinkIcon } from 'lucide-react';
+import { ExternalLinkIcon, MessageCircleIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 
@@ -106,6 +106,9 @@ export default function Scalability() {
                   </a>
                 </li>
               </ul>
+            </li>
+            <li>
+              <a href="#que-es-lo-que-sigue">¿Qué es lo que sigue?</a>
             </li>
           </ol>
           <span id="introduccion" />
@@ -701,6 +704,323 @@ export default function Scalability() {
               ejemplo, muchos sitios tienen una página para contraseñas
               olvidadas que se ve así:
             </p>
+            <div className="images-client">
+              <img src="/images/password-template.png" alt="Base de datos" />
+            </div>
+            <p>
+              Como desarrollador, es posible que desees incluir un mensaje de
+              éxito o error después de la presentación:
+            </p>
+            <div className="images-client">
+              <img src="/images/password-template1.png" alt="Base de datos" />
+            </div>
+            <p>
+              Pero ten en cuenta que al escribir correos electrónicos,
+              cualquiera podría determinar quién tiene un correo electrónico
+              registrado en ese sitio. Esto podría ser totalmente aceptable en
+              casos en los que si una persona usa o no el sitio es inconsecuente
+              (quizás en Facebook), pero extremadamente imprudente si el hecho
+              de que seas miembro de cierto sitio podría poner en peligro tu
+              seguridad (quizás en un grupo de apoyo en línea para víctimas de
+              abuso).
+            </p>
+            <p>
+              Otra forma en que los datos podrían filtrarse es en el tiempo que
+              tarda en llegar una respuesta. Probablemente tarde menos tiempo en
+              rechazar a alguien con un correo electrónico no válido que a una
+              persona con una dirección de correo electrónico correcta y una
+              contraseña incorrecta.
+            </p>
+            <p>
+              Como discutimos anteriormente en el curso, debemos tener cuidado
+              con los Ataques de Inyección SQL cada vez que usamos consultas SQL
+              directas en nuestro código.
+            </p>
+          </article>
+          <SectionTitle title="APIs" />
+          <article>
+            <p>
+              A menudo, usamos JavaScript en conjunto con APIs para construir
+              aplicaciones de una sola página. En el caso de que construyamos
+              nuestra propia API, hay algunos métodos que podemos utilizar para
+              mantener segura nuestra API:
+            </p>
+            <ul className="list-css-span">
+              <li>
+                <span>Claves de API</span>: Procesa solo las solicitudes de
+                clientes de la API que tengan una clave que les hayas
+                proporcionado.
+              </li>
+              <li>
+                <span>Límite de Tasa</span>: Limita la cantidad de solicitudes
+                que cualquier usuario puede realizar en un período de tiempo
+                dado. Esto ayuda a proteger contra los Ataques de Denegación de
+                Servicio (DOS), en los cuales un usuario malintencionado realiza
+                tantas llamadas a tu API que la hace colapsar.
+              </li>
+              <li>
+                <span>Autenticación de Rutas</span>: Hay muchos casos en los que
+                no queremos dar acceso a todos nuestros datos, por lo que
+                podemos usar la autenticación de rutas para asegurarnos de que
+                solo usuarios específicos puedan ver datos específicos.
+              </li>
+            </ul>
+            <span id="#variable-de-entorno" />
+            <Indextitle>Variable de Entorno</Indextitle>
+            <p>
+              Así como queremos evitar almacenar contraseñas en texto plano,
+              también querremos evitar incluir claves de API en nuestro código
+              fuente. Una forma común de evitar esto es mediante el uso de
+              variables de entorno, o variables que se almacenan en el entorno
+              de su sistema operativo o servidor. Luego, en lugar de incluir una
+              cadena de texto en nuestro código fuente, podemos incluir una
+              referencia a una variable de entorno.
+            </p>
+          </article>
+          <SectionTitle title="Javascript" />
+          <article>
+            <p>
+              Existen algunos tipos de ataques que los usuarios maliciosos
+              pueden intentar mediante el uso de JavaScript. Un ejemplo es
+              conocido como Cross-Site Scripting (XSS), que ocurre cuando un
+              usuario escribe su propio código JavaScript y lo ejecuta en tu
+              sitio web. Por ejemplo, imaginemos que tenemos una aplicación
+              Django con una única URL:
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+                urlpatterns = [
+                    path("<path:path>", views.index, name="index")
+                ]
+                `
+            }</Pre>
+            <p className="list-css-span">
+              Y con una vista simple de<span>views.py</span>
+            </p>
+            <Pre lang="python">{
+              /*python */ `
+                def index(request, path):
+                return HttpResponse(f"Requested Path: {path}")
+                `
+            }</Pre>
+            <p>
+              Este sitio web básicamente le dice al usuario a qué URL han
+              navegado:
+            </p>
+            <div className="images-client">
+              <img src="/images/pathworks.png" alt="Base de datos" />
+            </div>
+            <p>
+              Pero ahora un usuario puede insertar fácilmente algo de JavaScript
+              en la página escribiéndolo en la URL:
+            </p>
+            <div className="images-client">
+              <img src="/images/inject.gif" alt="Base de datos" />
+            </div>
+            <p className="list-css-span">
+              Aunque este ejemplo de alerta es bastante inofensivo, no sería
+              mucho más difícil incluir JavaScript que manipule el DOM o use
+              fetch para enviar una solicitud.
+            </p>
+          </article>
+          <SectionTitle title="Falsificación de solicitudes entre sitios (CSRF)" />
+          <article>
+            <p>
+              Ya discutimos cómo podemos usar Django para prevenir ataques CSRF,
+              pero echemos un vistazo a lo que podría suceder sin esta
+              protección. Como ejemplo, imagina que un banco tiene una URL que
+              podrías visitar para transferir dinero de tu cuenta. Alguien
+              podría crear fácilmente un enlace que realice esta transferencia:
+            </p>
+            <Pre lang="html">{
+              /*html */ `
+                <a href="http://tubanco.com/transferir?a=neo&amt=2800">
+                Click Aquí!
+                </a> 
+                `
+            }</Pre>
+            <p>
+              Este ataque puede ser aún más sutil que un enlace. Si la URL se
+              coloca en una imagen, se accederá a ella cuando tu navegador
+              intente cargar la imagen:
+            </p>
+            <Pre lang="html">{
+              /*html */ `
+                <img src="http://tubanco.com/transferir?a=mario&amt=2800"> 
+                `
+            }</Pre>
+            <p>
+              Debido a esto, siempre que estés construyendo una aplicación que
+              puede aceptar algún cambio de estado, debería hacerse mediante una
+              solicitud POST. Incluso si el banco requiere una solicitud POST,
+              los campos de formulario ocultos aún pueden engañar a los usuarios
+              para que envíen accidentalmente una solicitud. ¡El siguiente
+              formulario ni siquiera espera a que el usuario haga clic; se envía
+              automáticamente!
+            </p>
+            <Pre lang="html">{
+              /*html */ `
+                <body onload="document.forms[0].submit()">
+                <form action="https://tubanco.com/transferir"
+                method="post">
+                    <input type="hidden" name="to" value="mario">
+                    <input type="hidden" name="amt" value="2800">
+                    <input type="submit" value="Click Aquí!">
+                </form>
+                </body>
+                `
+            }</Pre>
+            <p>
+              Lo anterior es un ejemplo de cómo podría verse Cross-Site Request
+              Forgery (CSRF). Podemos detener ataques como estos creando un
+              token CSRF al cargar una página web y luego solo aceptando
+              formularios con un token válido.
+            </p>
+          </article>
+          <SectionTitle title="¿Qué es lo que sigue?" />
+          <article>
+            <p>
+              Hemos discutido y visto muchos marcos web en esta clase, como
+              Django y React, pero hay más marcos de desarrollo que podrían
+              interesarte probar:
+            </p>
+            <p>Lado del Servidor:</p>
+            <ul>
+              <li>
+                <Link
+                  href="https://expressjs.com/"
+                  className="underline text-red-400 mx-1 link"
+                >
+                  Express.js
+                  <ExternalLinkIcon className="link-icon" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://rubyonrails.org/"
+                  className="underline text-red-400 mx-1 link"
+                >
+                  Ruby on Rails
+                  <ExternalLinkIcon className="link-icon" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://flask.palletsprojects.com/en/1.1.x/"
+                  className="underline text-red-400 mx-1 link"
+                >
+                  Flask
+                  <ExternalLinkIcon className="link-icon" />
+                </Link>
+              </li>
+            </ul>
+            <p>Lado del Cliente:</p>
+            <ul>
+              <li>
+                <Link
+                  href="https://angularjs.org/"
+                  className="underline text-red-400 mx-1 link"
+                >
+                  Angular.js
+                  <ExternalLinkIcon className="link-icon" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://reactjs.org/"
+                  className="underline text-red-400 mx-1 link"
+                >
+                  React
+                  <ExternalLinkIcon className="link-icon" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://nextjs.org/"
+                  className="underline text-red-400 mx-1 link"
+                >
+                  Next.js
+                  <ExternalLinkIcon className="link-icon" />
+                </Link>
+              </li>
+            </ul>
+            <p>
+              En el futuro, es posible que también desees poder implementar tu
+              sitio en la web, lo cual puedes hacer a través de varios
+              servicios:
+            </p>
+            <ul>
+              <li>
+                <Link
+                  href="https://aws.amazon.com/getting-started/hands-on/websites/"
+                  className="underline text-red-400 mx-1 link"
+                >
+                  Amazon web Services
+                  <ExternalLinkIcon className="link-icon" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://github.com/"
+                  className="underline text-red-400 mx-1 link"
+                >
+                  GitHub
+                  <ExternalLinkIcon className="link-icon" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://app.netlify.com/"
+                  className="underline text-red-400 mx-1 link"
+                >
+                  Netlify
+                  <ExternalLinkIcon className="link-icon" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.heroku.com/"
+                  className="underline text-red-400 mx-1 link"
+                >
+                  Heroku
+                  <ExternalLinkIcon className="link-icon" />
+                </Link>
+              </li>
+            </ul>
+            <p>
+              Pueden dar un vistazo a la sección de cómo crear una
+              <Link
+                href="/docs/google-sheets"
+                className="mx-1 link text-red-400 hover:opacity-[.8] hover:transition-all"
+              >
+                base de datos con Google Sheets
+                <ExternalLinkIcon className="link-icon" />
+              </Link>
+              , con React y Next.js más API routes.
+            </p>
+            <p>
+              ¡Hemos recorrido un largo camino y cubierto mucho material desde
+              el comienzo de este curso, pero aún hay mucho por aprender en el
+              mundo de la programación web! Aunque a veces puede resultar
+              abrumador, una de las mejores maneras de aprender más es
+              sumergirse en un proyecto y ver hasta dónde puedes llegar con él.
+              Creemos que en este punto tienes una base sólida en los conceptos
+              de diseño web y que tienes lo necesario para convertir una idea en
+              tu propio sitio web funcional. ¡Buena suerte en tus futuros
+              proyectos! Si tienes más preguntas o necesitas ayuda con algo
+              específico, no dudes en preguntar.
+            </p>
+            <Link
+              href="/docs/feedback"
+              className="flex items-center space-x-2 mb-3 hover:opacity-[.8] hover:transition-all no-underline"
+            >
+              <span
+                className={`px-[3px] pt-[2px] rounded-md border no-underline bg-button-variant text-text-variant dark:border-zinc-700 font-semibold xl:text-sm text-xs`}
+              >
+                <MessageCircleIcon className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
+                {'Feedback'}
+              </span>
+            </Link>
           </article>
           <ShareButton setTitle={Scalability.title} />
         </div>

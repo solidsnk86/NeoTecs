@@ -14,7 +14,7 @@ export function ShareButton({ setTitle }) {
   return (
     <section
       title="Compartir"
-      className="relative float-right w-fit py-[1px] px-[2px] my-6 rounded-md bg-button-variant text-text-variant shadow-sm shadow-zinc-100/95 dark:!shadow space-x-4 cursor-pointer hover:opacity-[.8] transition-all text-primary"
+      className="relative float-right w-fit pt-[3px] px-1 my-6 rounded-md bg-button-variant text-text-variant shadow-sm shadow-zinc-100/95 dark:!shadow space-x-4 cursor-pointer hover:opacity-[.8] transition-all text-primary text-sm font-semibold"
       onClick={shareButton}
     >
       <Share2Icon className="inline-flex w-5 h-5 mb-1 mx-1" />
