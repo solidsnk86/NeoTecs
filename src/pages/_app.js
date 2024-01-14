@@ -1,4 +1,5 @@
 import { useGA } from '../shared/use-ga';
+import { useGAds } from '../shared/use-gads';
 import Head from 'next/head';
 import '../styles/globals.scss';
 import { renderToString } from 'react-dom/server';
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps, router }) {
 
   const neoTecsIconString = renderToString(<NeoTecsIcon />);
   useGA(router);
+  useGAds(router);
   return (
     <>
       <Head>
