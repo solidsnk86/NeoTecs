@@ -31,7 +31,7 @@ export const PictureBox = ({ bg, logo }) => {
         />
         <img
           className="game-box-studio"
-          src="/images/ger-art-icon.svg"
+          src="/images/icons/ger-art-icon.svg"
           alt="pic studio"
         />
       </Atropos>

@@ -1,6 +1,6 @@
 import { Pre } from './Pre';
 import Link from 'next/link';
-import { OpenInNew } from '@mui/icons-material';
+import { ExternalLinkIcon } from 'lucide-react';
 
 export const GoogleSheetsExample = () => {
   return (
@@ -169,17 +169,17 @@ export const GoogleSheetsExample = () => {
         Utilizo Atropos js.
       </p>
       <p>
-        Aquí les dejo el enlace para que puedan usarlo, es de código abierto y
-        tiene otros asombrosos efectos de cartas 3d las cuales utilizo en ésta
-        web.
+        Aquí les dejo el enlace para que puedan leer su documentación y
+        utilizarlo, es de código abierto y tiene otros asombrosos efectos de
+        cartas 3d las cuales utilizo en ésta web.
+        <Link
+          href="https://atroposjs.com/"
+          className="mx-1 underline text-red-500 link"
+        >
+          Atropos js
+          <ExternalLinkIcon className="link-icon" />
+        </Link>
       </p>
-      <Link
-        href="https://atroposjs.com/"
-        className="mx-1 underline text-red-500 link"
-      >
-        Atropos js
-        <OpenInNew className="link-icon" />
-      </Link>
     </article>
   );
 };

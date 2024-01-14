@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps, router }) {
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content="/images/logos/NeoTecs _Tutorial_logo.png"
+          content="https:neotecs.netlify.app/images/logos/NeoTecs _Tutorial_logo.png"
         />
         <meta property="og:site_name" content="Neotecs" />
         <meta name="twitter:card" content="summary_large_image" />
