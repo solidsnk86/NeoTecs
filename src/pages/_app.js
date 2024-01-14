@@ -37,7 +37,10 @@ function MyApp({ Component, pageProps, router }) {
         <meta name="twitter:creator" content="@solidSnk86" />
         <meta name="twitter:title" content="Neotecs WiFi Documentation" />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="/images/logo.png" />
+        <meta
+          name="twitter:image"
+          content="/images/logos/NeoTecs _Tutorial_logo.png"
+        />
       </Head>
       <DoNotCopy />
       <Component {...pageProps} />
