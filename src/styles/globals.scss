@@ -4,13 +4,6 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --color-primary-shade: #004892;
-    --color-primary-tint: #0070e4;
-    --color-primary-rgb: 0, 92, 187;
-    --color-primary: #005cbb;
-    --color-on-primary: #ffffff;
-    --color-primary-container: #d7e3ff;
-    --color-on-primary-container: #001b3f;
     --color-secondary: #565e71;
     --color-on-secondary: #ffffff;
     --color-secondary-container: #dae2f9;
@@ -36,6 +29,7 @@
     --ubiquiti-icon: #0559c9;
     --mikrotik-icon: #293239;
     --bg-card: #f7f9f9;
+    --second-color-text: #7e7e86;
 
     --color-code: #6f43c0;
     --color-pre-bg: #21242a;
@@ -47,18 +41,12 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary-shade: #82acff;
-    --color-primary-tint: #d4e2ff;
-    --color-primary-rgb: 171, 199, 255;
-    --color-primary: #abc7ff;
-    --color-on-primary: #002f65;
-    --color-primary-container: #00458f;
     --color-on-primary-container: #d7e3ff;
     --color-secondary: #bec6dc;
     --color-on-secondary: #283041;
     --color-secondary-container: #3e4759;
     --color-on-secondary-container: #dae2f9;
-    --color-surface: #0f0f0f;
+    --color-surface: #09090b;
     --color-on-surface: #e3e2e6;
     --color-surface-variant: #0f1419;
     --color-on-surface-variant: #c4c6d0;
@@ -79,6 +67,7 @@
     --ubiquiti-icon: #0559c9;
     --mikrotik-icon: #293239;
     --bg-card: #16181c;
+    --second-color-text: #7e7e86;
 
     --color-code: #d3bbff;
     --color-red: #ffb4aa;
@@ -419,6 +408,15 @@ textarea {
   }
   100% {
     transform: rotate(0%);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 

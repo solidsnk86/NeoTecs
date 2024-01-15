@@ -7,7 +7,7 @@ import { GoogleSheetsExample } from '../../components/GoogleSheetsExample';
 import { Footer } from '../../components/Footer';
 import { CalendarClockIcon } from 'lucide-react';
 import { WhatsApp } from '@mui/icons-material';
-import { PictureBox } from '../../components/PictureBox';
+import { AtroposBox } from '../../components/AtroposBox';
 import HeaderTitle from '../../components/HeaderTitlte';
 
 export default function CsvSheets() {
@@ -91,7 +91,7 @@ export default function CsvSheets() {
                 <span className="bg-button-variant text-text-variant font-semibold font-mono p-1 w-fit my-3 rounded-md">
                   Price: U$D {pic.price}
                 </span>
-                <PictureBox
+                <AtroposBox
                   bg={pic.image}
                   logo={pic.logo}
                   studios={pic.studio}

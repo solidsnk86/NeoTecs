@@ -84,7 +84,9 @@ export default function Home() {
               <PlayIcon className="inline mx-2 border mb-[6px] text-green-500 border-green-900 rounded-lg p-2 w-9 h-9 bg-[#072719]" />
               Comencemos!
             </p>
-            <p className="my-3">Vamos a ver Tp-Link, Ubiquiti y Mikrotik:</p>
+            <p className="my-3 text-text-second">
+              ¿Cúal necesitas configurar? Tp-Link, Ubiquiti o Mikrotik:
+            </p>
             <CpeBrands />
           </aside>
         </section>

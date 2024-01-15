@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { TpLinkIcon } from './TpLinkIcon';
-import { UbiquitiIcon } from './UbiquitiIcon';
-import { MikrotikIcon } from './MikrotikIcon';
+import { TpLinkIcon } from '../components/Icons/TpLinkIcon';
+import { UbiquitiIcon } from '../components/Icons/UbiquitiIcon';
+import { MikrotikIcon } from '../components/Icons/MikrotikIcon';
 
 export const CpeBrands = ({ inline }) => {
   const router = useRouter();

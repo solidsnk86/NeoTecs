@@ -18,6 +18,7 @@ module.exports = {
       },
       colors: {
         'text-primary': 'var(--color-on-surface)',
+        'text-second': 'var(--second-color-text)',
         'card-bg': 'var(--color-surface-variant)',
         'button-variant': 'var(--button-variant)',
         'bg-card': 'var(--bg-card)',

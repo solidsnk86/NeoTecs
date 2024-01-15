@@ -4,9 +4,9 @@ import Head from 'next/head';
 import '../styles/globals.scss';
 import { renderToString } from 'react-dom/server';
 import { DoNotCopy } from '../components/DoNotCopy';
-import { NeoTecsIcon } from '../components/NeoTecsIcon';
+import { NeoTecsIcon } from '../components/Icons/NeoTecsIcon';
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps, router, children }) {
   const title = Component.title || 'Neotecs - Informática';
   const description =
     'Aprende programación en este curso gratuito de NeoTecs, que abarca desde conceptos básicos hasta niveles avanzados. Además, disponemos de documentación para facilitar la configuración rápida y sencilla de tu WiFi.';

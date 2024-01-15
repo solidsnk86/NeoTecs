@@ -3,6 +3,7 @@ import { Github, MessageCircleIcon } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { useIsomorphicLayoutEffect } from './hooks/useIsomorphicLayoutEffect';
 import { NeotecsLogo } from './NeotecsLogo';
+import { ModeToggle } from './ui-comp/ThemeButton';
 
 function updateColorTheme() {
   if (
@@ -73,6 +74,7 @@ export const Nav = ({ className }) => {
           </Link>
         </div>
         <aside className="flex space-x-3">
+          <ModeToggle />
           <Link
             href="/docs/feedback"
             className="flex items-center space-x-2 mb-3 hover:opacity-[.8] hover:transition-all"

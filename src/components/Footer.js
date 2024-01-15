@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaWhatsapp, FaTelegramPlane, FaChevronCircleUp } from 'react-icons/fa';
 import { FacebookIcon, Linkedin } from 'lucide-react';
-import { TwitterIcon } from './TwitterIcon';
+import { TwitterIcon } from '../components/Icons/TwitterIcon';
 import Link from 'next/link';
 
 export const Footer = () => {

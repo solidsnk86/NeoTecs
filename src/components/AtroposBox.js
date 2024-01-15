@@ -1,6 +1,6 @@
 import { Atropos } from 'atropos/react';
 
-export const PictureBox = ({ bg, logo }) => {
+export const AtroposBox = ({ bg, logo }) => {
   return (
     <div className="xl:w-80 my-10">
       <Atropos
