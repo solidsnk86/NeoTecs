@@ -73,13 +73,13 @@ export default function Home() {
                 Documentación Wifi
               </h2>
               <p className="text-md text-outline">
-                Aprende cómo configurar diferentes modelos <br />
+                Descubre cómo configurar diferentes modelos <br />
                 de dispositvos inalámbricos de las marcas
                 <br /> más conocidas con esta guía.
               </p>
             </div>
           </header>
-          <aside className="mt-10 border-zinc-800 p-6 rounded-lg shadow-sm shadow-zinc-500">
+          <aside className="mt-10 border dark:border-zinc-800 p-6 rounded-lg">
             <p className="text-3xl font-semibold">
               <PlayIcon className="inline mx-2 border mb-[6px] text-green-500 border-green-900 rounded-lg p-2 w-9 h-9 bg-[#072719]" />
               Comencemos!
@@ -96,22 +96,20 @@ export default function Home() {
         <HomeBlockTitle>Características</HomeBlockTitle>
         <section className="grid md:grid-cols-2 gap-4 md:gap-8">
           {cardContent.map((card) => (
-            <Card>
-              <div className="p-4 rounded-lg">
-                <span className="text-xl font-bold mb-4">{card.feature}</span>
-                <p>{card.children}</p>
-              </div>
-            </Card>
+            <div className="p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow">
+              <span className="text-xl font-bold mb-4">{card.feature}</span>
+              <p className="text-text-second">{card.children}</p>
+            </div>
           ))}
         </section>
       </HomeBlock>
 
-      <HomeBlock className="bg-cover">
+      <HomeBlock>
         <HomeBlockTitle>Aprende Programación Ahora</HomeBlockTitle>
         <b className="underline space-y-3">
           Principios Báscicos de la programación
         </b>
-        <p className="mt-4">
+        <p className="mt-4 text-text-second">
           Este curso en NeoTecs va ir adentrándose más profundamente en el
           diseño e implementación de aplicaciones web con Python, JavaScript y
           SQL, utilizando frameworks como Django, React y Bootstrap. Los temas
@@ -123,7 +121,7 @@ export default function Home() {
           conocimientos y experiencia en principios, lenguajes y herramientas
           que les permiten diseñar e implementar aplicaciones en Internet.
         </p>
-        <p className="mt-4">
+        <p className="my-10">
           <Link href="/docs/program">
             <ShimmerButton shimmerDuration="1.8s" size="large">
               Comencemos

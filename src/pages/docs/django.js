@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import { ExternalLinkIcon } from 'lucide-react';
-import { DjangoIcon } from '../../components/DjangoIcon';
+import { DjangoIcon } from '../../components/Icons/DjangoIcon';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 export default function DjangoDocs() {

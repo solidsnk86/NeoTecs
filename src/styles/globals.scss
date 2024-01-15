@@ -29,7 +29,7 @@
     --ubiquiti-icon: #0559c9;
     --mikrotik-icon: #293239;
     --bg-card: #f7f9f9;
-    --second-color-text: #7e7e86;
+    --second-color-text: #9c9ca4;
 
     --color-code: #6f43c0;
     --color-pre-bg: #21242a;
@@ -67,7 +67,7 @@
     --ubiquiti-icon: #0559c9;
     --mikrotik-icon: #293239;
     --bg-card: #16181c;
-    --second-color-text: #7e7e86;
+    --second-color-text: #9c9ca4;
 
     --color-code: #d3bbff;
     --color-red: #ffb4aa;
@@ -377,7 +377,9 @@ textarea {
 @media (min-width: 1280px) {
   .scroll-bar::-webkit-scrollbar {
     width: 10px;
-    background-color: transparent;
+    background-color: #27272a;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
   .scroll-bar::-webkit-scrollbar-thumb {
     background-color: #0f0f0f;
