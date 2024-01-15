@@ -51,9 +51,6 @@ export const FeedbackData = () => {
                 throw error;
             }
 
-            console.log('Comentario eliminado con éxito.');
-
-            // Actualizar la lista de comentarios después de la eliminación
             const { data: newData, error: newError } = await supabase
                 .from('feedback')
                 .select('*')
