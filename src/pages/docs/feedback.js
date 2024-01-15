@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Footer } from '../../components/Footer';
 import { ArrowLeftIcon } from 'lucide-react';
+import Link from 'next/link';
 import { Nav } from '../../components/Nav';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -120,6 +121,12 @@ export default function FeedBack() {
           </button>
         </div>
       </form>
+      <p className="text-center text-text-primary">
+        Ver
+        <Link href="/docs/user-feedback" className="mx-1 text-text-strong">
+          comentarios
+        </Link>
+      </p>
       <Footer />
       <ToastContainer closeButton closeOnClick />
     </>

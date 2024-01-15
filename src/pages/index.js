@@ -5,7 +5,6 @@ import { Footer } from '../components/Footer';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import { MarqueeLogos } from '../sections/Brands';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
-import { Card } from '../components/Card';
 import { PlayIcon, Wifi } from 'lucide-react';
 import { CpeBrands } from '../components/CpeBrands';
 
@@ -129,9 +128,7 @@ export default function Home() {
           </Link>
         </p>
       </HomeBlock>
-
       <MarqueeLogos />
-
       <Footer />
     </div>
   );

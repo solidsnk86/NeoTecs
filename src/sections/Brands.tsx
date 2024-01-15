@@ -231,7 +231,7 @@ const ReviewCard = ({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative min-w-[250px] flex justify-center items-center overflow-hidden rounded-xl bg-slate-800/50 w-full py-4 px-14"
+            className="relative min-w-[250px] flex justify-center items-center overflow-hidden rounded-xl bg-zinc-800/50 w-full py-4 px-14"
         >
             <div className="flex flex-row items-center justify-center w-full h-auto">
                 {logo}

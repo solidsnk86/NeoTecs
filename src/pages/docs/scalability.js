@@ -101,7 +101,7 @@ export default function Scalability() {
               <a href="#javascript">Javascript</a>
               <ul>
                 <li>
-                  <a href="falsificacion-de-solicitudes-entre-sitios-(csrf)">
+                  <a href="#falsificacion-de-solicitudes">
                     Falsificación de solicitudes entre sitios (CSRF)
                   </a>
                 </li>
@@ -823,6 +823,7 @@ export default function Scalability() {
               fetch para enviar una solicitud.
             </p>
           </article>
+          <span id="falsificacion-de-solicitudes" />
           <SectionTitle title="Falsificación de solicitudes entre sitios (CSRF)" />
           <article>
             <p>
@@ -877,6 +878,7 @@ export default function Scalability() {
               formularios con un token válido.
             </p>
           </article>
+          <span id="que-es-lo-que-sigue" />
           <SectionTitle title="¿Qué es lo que sigue?" />
           <article>
             <p>
@@ -1010,6 +1012,7 @@ export default function Scalability() {
               proyectos! Si tienes más preguntas o necesitas ayuda con algo
               específico, no dudes en preguntar.
             </p>
+            <p>Mi feed..</p>
             <Link
               href="/docs/feedback"
               className="flex items-center space-x-2 mb-3 hover:opacity-[.8] hover:transition-all no-underline"
