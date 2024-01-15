@@ -52,8 +52,7 @@ export const Footer = () => {
       </span>
       <article className="max-w-screen-xl mx-auto px-4 md:px-8">
         <h3 className="text-center font-semibold">Compartir en las redes:</h3>
-
-        <div className="flex items-center justify-center gap-x-6 text-2xl mt-3 mb-9">
+        <div className="flex items-center justify-center gap-x-8 text-2xl mt-3 mb-9">
           <FacebookIcon
             className="cursor-pointer shadow-icon"
             title="Facebook"
@@ -109,6 +108,10 @@ export const Footer = () => {
           </a>
         </p>
       </article>
+      <p className="text-center text-xs mb-6">
+        Todos los nombres de productos, logos y marcas son propiedad de sus
+        respectivos creadores.
+      </p>
     </section>
   );
 };

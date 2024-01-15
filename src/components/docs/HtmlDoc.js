@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
-import { OpenInNew } from '@mui/icons-material';
+import { ExternalLink } from 'lucide-react';
 
 export default function HtmlDoc() {
   return (
@@ -217,11 +217,11 @@ export default function HtmlDoc() {
           className="mx-1 text-[tomato] link"
         >
           Live Server
-          <OpenInNew className="link-icon" />
+          <ExternalLink className="link-icon" />
         </Link>
         .
       </p>
-      <p>Cuando se renderice esta página, veremos algo como ésto:</p>
+      <p>Cuando se renderiza esta página, veremos algo como ésto:</p>
       <div className="images-client">
         <img src="/images/html-elements-commit.png" />
       </div>
@@ -231,11 +231,11 @@ export default function HtmlDoc() {
         "imagen en HTML" para encontrar la etiqueta img. Un recurso que es
         especialmente útil para aprender sobre estos elementos es
         <Link
-          href="https://https://www.w3schools.com/html/default.asp"
+          href="https://www.w3schools.com/html/default.asp"
           className="mx-1 text-[tomato] link"
         >
           W3 Schools
-          <OpenInNew className="link-icon" />
+          <ExternalLink className="link-icon" />
         </Link>
         .
       </li>

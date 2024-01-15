@@ -8,12 +8,10 @@ import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { PlayIcon, Wifi } from 'lucide-react';
 import { CpeBrands } from '../components/CpeBrands';
 
-const HomeBlock = ({ className = '', children }) => {
+const HomeBlock = ({ children }) => {
   return (
-    <div className={`${className}`}>
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16">
-        {children}
-      </div>
+    <div className="max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16">
+      {children}
     </div>
   );
 };
@@ -63,7 +61,7 @@ export default function Home() {
           <li className="custom-text-shadow">✅ Práctico</li>
         </ul>
         <YouTubeVideoSection />
-        <section className="xl:flex justify-center mx-auto w-full relative">
+        <div className="xl:flex justify-center mx-auto w-full relative">
           <header className="xl:flex xl:w-1/2 p-2 xl:mt-[70px]">
             <span className="effect-backround"></span>
             <Wifi className="inline bg-button-variant mx-4 w-16 h-16 text-green-600 font-bold border p-3 border-green-400 rounded-lg xl:mx-8 xl:mt-10 mt-4" />
@@ -88,38 +86,39 @@ export default function Home() {
             </p>
             <CpeBrands />
           </aside>
-        </section>
+        </div>
       </HomeBlock>
 
       <HomeBlock>
         <HomeBlockTitle>Características</HomeBlockTitle>
-        <section className="grid md:grid-cols-2 gap-4 md:gap-8">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8 text-center">
           {cardContent.map((card) => (
             <div className="p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow">
               <span className="text-xl font-bold mb-4">{card.feature}</span>
               <p className="text-text-second">{card.children}</p>
             </div>
           ))}
-        </section>
+        </div>
       </HomeBlock>
 
       <HomeBlock>
         <HomeBlockTitle>Aprende Programación Ahora</HomeBlockTitle>
-        <b className="underline space-y-3">
-          Principios Báscicos de la programación
-        </b>
-        <p className="mt-4 text-text-second">
-          Este curso en NeoTecs va ir adentrándose más profundamente en el
-          diseño e implementación de aplicaciones web con Python, JavaScript y
-          SQL, utilizando frameworks como Django, React y Bootstrap. Los temas
-          abordados incluyen el diseño de bases de datos, escalabilidad,
-          seguridad y experiencia de usuario. A través de proyectos prácticos,
-          los estudiantes aprenden a escribir y utilizar APIs, crear interfaces
-          de usuario interactivas y aprovechar servicios en la nube como GitHub
-          y Heroku. Al finalizar este curso, los estudiantes adquieren
-          conocimientos y experiencia en principios, lenguajes y herramientas
-          que les permiten diseñar e implementar aplicaciones en Internet.
-        </p>
+        <div className="border dark:border-zinc-800 p-3 rounded-xl shadow-sm shadow-slate-200 dark:shadow-none">
+          <b className="space-y-3">Principios Báscicos de la programación</b>
+          <p className="mt-4 text-text-second">
+            Este curso en NeoTecs va ir adentrándose más profundamente en el
+            diseño e implementación de aplicaciones web con Python, JavaScript y
+            SQL, utilizando frameworks como Django, React y Bootstrap. Los temas
+            abordados incluyen el diseño de bases de datos, escalabilidad,
+            seguridad y experiencia de usuario. A través de proyectos prácticos,
+            los estudiantes aprenden a escribir y utilizar APIs, crear
+            interfaces de usuario interactivas y aprovechar servicios en la nube
+            como GitHub y Heroku. Al finalizar este curso, los estudiantes
+            adquieren conocimientos y experiencia en principios, lenguajes y
+            herramientas que les permiten diseñar e implementar aplicaciones en
+            Internet.
+          </p>
+        </div>
         <p className="my-10">
           <Link href="/docs/program">
             <ShimmerButton shimmerDuration="1.8s" size="large">
