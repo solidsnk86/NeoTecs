@@ -121,12 +121,6 @@ export default function FeedBack() {
           </button>
         </div>
       </form>
-      <p className="text-center text-text-primary">
-        Ver
-        <Link href="/docs/user-feedback" className="mx-1 text-text-strong">
-          comentarios
-        </Link>
-      </p>
       <Footer />
       <ToastContainer closeButton closeOnClick />
     </>
