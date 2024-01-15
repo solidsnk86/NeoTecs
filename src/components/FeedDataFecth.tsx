@@ -33,14 +33,20 @@ export const FeedbackData = () => {
         return (format)
     }
 
+    const sendMail = (item) => {
+        const handleMail = `mailto:${item.email}`
+        window.open(handleMail)
+    }
+
     return (
-        <div className="border dark:border-zinc-800 p-4 rounded-md flex justify-center my-10 mx-auto w-1/2">
+        <div className="bg-gray-100 dark:bg-zinc-800/40 border dark:border-zinc-800 p-4 rounded-xl flex justify-center my-10 mx-auto xl:w-1/2">
             {items.map((item) => (
-                <div key={item.id} className="text-text-primary">
-                    <span>{formatDate(item.fecha)}</span>
-                    <p>Nombre: {item.nombre}</p>
-                    <p>Email: {item.email}</p>
-                    <p>Comentario: {item.comentario}</p>
+                <div key={item.id} className="text-text-primary text-xs xl:text-sm">
+                    <p className="text-right">{formatDate(item.fecha)}</p>
+                    <h6>Comentario:</h6>
+                    <p>{item.comentario}</p>
+                    <p className="text-right">{item.nombre}</p>
+                    <p className="underline cursor-pointer w-fit" onClick={sendMail}>Responder</p>
                 </div>
             ))}
         </div>
