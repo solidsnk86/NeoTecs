@@ -3,8 +3,6 @@ import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
 import { OpenInNew } from '@mui/icons-material';
-import { Button } from '../ui-comp/Button';
-import { ReloadIcon } from '@radix-ui/react-icons';
 
 export default function HtmlDoc() {
   return (
