@@ -2,6 +2,7 @@ import React from 'react';
 import { Nav } from '../../components/Nav';
 import Link from 'next/link';
 import { ArrowLeftIcon } from 'lucide-react';
+import { Footer } from '../../components/Footer';
 
 export const PrivacyPolicy = () => {
   return (
@@ -11,7 +12,7 @@ export const PrivacyPolicy = () => {
         <span onClick={() => history.back()}>
           <ArrowLeftIcon className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-6 xl:top-14 top-12 left-2 fixed mt-3" />
         </span>
-        <div>
+        <div className="my-10">
           <h1 className="text-2xl font-bold mb-4">Política de Privacidad</h1>
 
           <p className="my-6 text-right">
@@ -119,6 +120,7 @@ export const PrivacyPolicy = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 };
