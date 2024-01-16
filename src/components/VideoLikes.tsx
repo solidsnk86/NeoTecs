@@ -102,14 +102,14 @@ export const VideoLikes = ({ videoId, cpe }) => {
         <div>
           <p className="relative top-[6px] mx-1 font-bold px-2 text-text-variant py-1 rounded-full bg-button-variant cursor-pointer hover:opacity-80" onClick={suscribeButton}>Suscríbete</p>
         </div>
-        <span className="flex bg-card-bg relative bottom-[2px] rounded-full my-2 w-fit px-3 py-1 transition-all">
+        <span className="flex bg-card-bg border border-gray-200 dark:border-zinc-800/50 relative bottom-[2px] rounded-full my-2 w-fit px-3 py-1 transition-all">
           <span className="flex relative top-[1px] gap-2">
             <LikeButton onClick={likeButtons} className='hover:fill-gray-500 cursor-pointer' /> {likes}
             <hr className="border-l-[1px] h-5 border-[#575757] relative bottom-[1px]" />
             <DisLikeButton className='hover:fill-gray-500 cursor-pointer' onClick={likeButtons} />
           </span>
         </span>
-        <div className="text-[#575757] bg-card-bg rounded-full h-[28px] relative top-[6px] px-[6px]" onClick={ShareButton}>
+        <div className="text-[#575757] bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full h-[28px] relative top-[6px] px-[6px]" onClick={ShareButton}>
           <ReplyOutlinedIcon className="w-4 h4 relative top-[1px] right-[1px] text-text-primary cursor-pointer hover:opacity-70" />
         </div>
       </aside>

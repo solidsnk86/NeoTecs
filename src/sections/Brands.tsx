@@ -231,9 +231,9 @@ const ReviewCard = ({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative min-w-[250px] flex justify-center items-center overflow-hidden rounded-xl bg-zinc-800/50 w-full py-4 px-14"
+            className="relative min-w-[250px] flex justify-center items-center overflow-hidden rounded-xl bg-zinc-800/50 w-full py-4 px-14 group"
         >
-            <div className="flex flex-row items-center justify-center w-full h-auto">
+            <div className="flex flex-row items-center justify-center w-full h-auto gap-2">
                 {logo}
             </div>
         </a>
@@ -242,11 +242,11 @@ const ReviewCard = ({
 
 export const MarqueeLogos = () => {
     return (
-        <section className="flex flex-col flex-wrap items-center justify-center my-48">
-            <h1 className=" text-xl font-bold text-center text-text-primary my-4">
+        <div className="flex flex-col flex-wrap items-center justify-center my-48">
+            <p className=" text-xl font-bold text-center text-text-primary">
                 Lenguajes que vas aprender a continuación
-            </h1>
-            <div className="relative flex-col items-center justify-center w-full h-full gap-2 py-20 my-5 overflow-hidden rounded-lg bg-background">
+            </p>
+            <div className="relative flex flex-col items-center justify-center w-full h-full gap-2 py-20 my-8 overflow-hidden rounded-lg bg-background">
                 <Marquee pauseOnHover className="[--duration:40s]">
                     {reviews.map((review) => (
                         <ReviewCard key={review.name} {...review} />
@@ -260,10 +260,10 @@ export const MarqueeLogos = () => {
                             <ReviewCard key={review.name} {...review} />
                         ))}
                 </Marquee>
-                <div className="absolute inset-y-0 left-0 w-40 pointer-events-none from-[#000214] to-transparent bg-gradient-to-r "></div>
-                <div className="absolute inset-y-0 right-0 w-1/3 pointer-events-none bg-gradient-to-l from-[#000214]"></div>
+                <div className='absolute inset-y-0 left-0 w-40 pointer-events-none from-[#444] to-transparent bg-gradient-to-r '></div>
+                <div className='absolute inset-y-0 right-0 w-1/3 pointer-events-none bg-gradient-to-l from-[#444]'></div>
             </div>
-        </section>
+        </div>
     );
 };
 

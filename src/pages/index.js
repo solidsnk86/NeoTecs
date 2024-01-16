@@ -105,7 +105,7 @@ export default function Home() {
         <HomeBlockTitle>Aprende Programación Ahora</HomeBlockTitle>
         <div className="border dark:border-zinc-800 p-3 rounded-xl shadow-sm shadow-slate-200 dark:shadow-none">
           <b className="space-y-3">Principios Báscicos de la programación</b>
-          <p className="mt-4 text-text-second">
+          <p className="mt-4 text-text-second text-sm">
             Este curso en NeoTecs va ir adentrándose más profundamente en el
             diseño e implementación de aplicaciones web con Python, JavaScript y
             SQL, utilizando frameworks como Django, React y Bootstrap. Los temas
