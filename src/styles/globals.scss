@@ -431,8 +431,8 @@ textarea {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: var(--color-on-surface-variant);
-  color: #721c24;
+  background-color: var(--color-surface-variant);
+  color: var(--color-on-surface);
   padding: 10px;
   text-align: center;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);

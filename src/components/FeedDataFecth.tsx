@@ -72,10 +72,10 @@ export const FeedbackData = () => {
                 <div className="bg-gray-100 dark:bg-zinc-800/40 border dark:border-zinc-800 p-4 rounded-xl my-10 mx-auto xl:w-1/2" key={item.id}>
                     <div className="text-text-primary text-xs xl:text-sm mb-4">
                         <p className="text-right">{formatDate(item.fecha)}</p>
+                        <p>{item.nombre}</p>
                         <h6>Comentario:</h6>
                         <p>{item.comentario}</p>
-                        <p className="text-right">{item.nombre}</p>
-                        <p className="underline cursor-pointer w-fit" onClick={() => sendMail(item)}>Responder</p>
+                        <p className="underline cursor-pointer w-fit float-right" onClick={() => sendMail(item)}>Responder</p>
                         <button onClick={() => handleDelete(item.id)} className="text-red-500 underline cursor-pointer w-fit mt-2">
                             Eliminar Comentario
                         </button>
