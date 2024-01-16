@@ -5,6 +5,7 @@ import '../styles/globals.scss';
 import { renderToString } from 'react-dom/server';
 import { DoNotCopy } from '../components/DoNotCopy';
 import { NeoTecsIcon } from '../components/Icons/NeoTecsIcon';
+import { CookieNotice } from '../components/CookiesNotice';
 
 function MyApp({ Component, pageProps, router, children }) {
   const title = Component.title || 'Neotecs - Informática';
@@ -45,6 +46,7 @@ function MyApp({ Component, pageProps, router, children }) {
         />
       </Head>
       <DoNotCopy />
+      <CookieNotice />
       <Component {...pageProps} />
     </>
   );

@@ -85,8 +85,19 @@ export const Footer = () => {
             { name: 'YouTube', href: 'https://www.youtube.com/@tutosNeoTecs' },
             { name: 'GitHub', href: 'https://github.com/solidsnk86' },
             { name: 'Blog', href: 'https://solidsnk86.netlify.app/blog' },
+            {
+              name: (
+                <>
+                  <span className="sm:hidden">Politícas</span>
+                  <span className="hidden sm:block">
+                    Políticas y Privacidad
+                  </span>
+                </>
+              ),
+              href: 'docs/politicas-privacidad',
+            },
           ].map((link, index) => (
-            <aside key={index} className="inline-block mt-3 text-sm">
+            <aside key={index} className="inline-block mt-3 xl:text-sm text-xs">
               <Link
                 href={link.href}
                 className="mx-3 items-center hover:underline font-semibold"
