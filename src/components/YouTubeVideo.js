@@ -1,6 +1,6 @@
 export function YouTubeVideo({ video, cpe, children }) {
   return (
-    <article className="pb-4">
+    <article className="pb-4 overflow-hidden">
       <iframe
         src={`https://www.youtube.com/embed/${video}`}
         title="YouTube video player"

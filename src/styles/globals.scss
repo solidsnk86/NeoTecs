@@ -422,6 +422,10 @@ textarea {
   }
 }
 
+.video-likes::-webkit-scrollbar {
+  background-color: transparent;
+}
+
 @import 'atropos/scss';
 @import './home-header.scss';
 @import './picture-box.scss';
