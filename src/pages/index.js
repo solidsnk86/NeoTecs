@@ -8,8 +8,8 @@ import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import {
   PlayIcon,
   Wifi,
-  Book,
   StepForward,
+  FileText,
   FootprintsIcon,
   Code2,
 } from 'lucide-react';
@@ -35,7 +35,9 @@ const cardContent = [
   {
     feature: (
       <>
-        <Code2 className="inline mx-2 mb-1" />
+        <span className="border border-lime-500/45 mx-2 rounded-lg p-[6px] bg-lime-400/25">
+          <Code2 className="inline text-lime-500 mb-1" />
+        </span>
         Práctico
       </>
     ),
@@ -45,7 +47,9 @@ const cardContent = [
   {
     feature: (
       <>
-        <StepForward className="inline mx-2 mb-1" />
+        <span className="border border-sky-500/45 mx-2 rounded-lg p-[6px] bg-sky-400/25">
+          <StepForward className="inline text-sky-500 mb-1" />
+        </span>
         Tutoriales
       </>
     ),
@@ -55,7 +59,9 @@ const cardContent = [
   {
     feature: (
       <>
-        <Book className="inline mx-2 mb-1" />
+        <span className="border border-amber-500/45 mx-2 rounded-lg p-[6px] bg-amber-400/25">
+          <FileText className="inline text-amber-500 mb-1" />
+        </span>
         Documentación
       </>
     ),
@@ -65,7 +71,9 @@ const cardContent = [
   {
     feature: (
       <>
-        <FootprintsIcon className="inline mx-2 mb-1" />
+        <span className="border border-red-500/45 mx-2 rounded-lg p-[6px] bg-red-400/25">
+          <FootprintsIcon className="inline text-red-500 mb-1" />
+        </span>
         Paso a paso
       </>
     ),
@@ -121,8 +129,8 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 text-center">
           {cardContent.map((card) => (
             <div className="p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow">
-              <span className="text-xl font-bold mb-4">{card.feature}</span>
-              <p className="text-text-second">{card.children}</p>
+              <span className="text-xl font-bold">{card.feature}</span>
+              <p className="text-text-second py-3">{card.children}</p>
             </div>
           ))}
         </div>
