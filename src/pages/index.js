@@ -5,7 +5,14 @@ import { Footer } from '../components/Footer';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import { MarqueeLogos } from '../sections/Brands';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
-import { PlayIcon, Wifi } from 'lucide-react';
+import {
+  PlayIcon,
+  Wifi,
+  Book,
+  StepForward,
+  FootprintsIcon,
+  Code2,
+} from 'lucide-react';
 import { CpeBrands } from '../components/CpeBrands';
 
 const HomeBlock = ({ children }) => {
@@ -26,24 +33,44 @@ export const HomeBlockTitle = ({ Tag = 'h2', children }) => {
 
 const cardContent = [
   {
-    feature: 'Práctico',
+    feature: (
+      <>
+        <Code2 className="inline mx-2 mb-1" />
+        Práctico
+      </>
+    ),
     children:
       'Este curso de programación se enfoca en ejercicios prácticos para que puedas aplicar lo que aprendes en proyectos reales.',
   },
   {
-    feature: 'Tutoriales',
+    feature: (
+      <>
+        <StepForward className="inline mx-2 mb-1" />
+        Tutoriales
+      </>
+    ),
     children:
       'NeoTecs ofrece tutoriales en video y recursos didácticos para que puedas comprender a configurar tu wifi de manera efectiva.',
   },
   {
-    feature: 'Documentación',
+    feature: (
+      <>
+        <Book className="inline mx-2 mb-1" />
+        Documentación
+      </>
+    ),
     children:
       'Sí, el curso incluye documentación detallada y extensa sobre diversos lenguajes de programación y tecnologías relacionadas.',
   },
   {
-    feature: 'Paso a paso',
+    feature: (
+      <>
+        <FootprintsIcon className="inline mx-2 mb-1" />
+        Paso a paso
+      </>
+    ),
     children:
-      'Explicamos los conceptos de programación paso a paso, con ejemplos y ejercicios que te ayudarán a comprenderlos a fondo.',
+      'Explico los conceptos de programación paso a paso, con ejemplos y ejercicios que te ayudarán a comprenderlos a fondo.',
   },
 ];
 

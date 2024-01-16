@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import FormatData from './FormatData';
 
 export const DescriptionViews = ({ videoId }) => {
   const [views, setViews] = useState(0);
@@ -21,14 +22,8 @@ export const DescriptionViews = ({ videoId }) => {
           const views = video.statistics.viewCount;
           const datePublished = video.snippet.publishedAt;
 
-          const options = { year: 'numeric', month: 'short', day: 'numeric' };
-          const formattedDate = new Date(datePublished).toLocaleDateString(
-            undefined,
-            options,
-          );
-
           setViews(views);
-          setDatePublished(formattedDate);
+          setDatePublished(datePublished);
         } else {
           console.error(
             'No se encontraron datos del video en la respuesta de la API de YouTube',
@@ -53,7 +48,7 @@ export const DescriptionViews = ({ videoId }) => {
   return (
     <div className="text-left my-1 font-bold">
       <span>{formatView()} Vistas</span>
-      <span> · Publicado el {datePublished}</span>
+      <span> · Publicado el {FormatData(datePublished)}</span>
     </div>
   );
 };
