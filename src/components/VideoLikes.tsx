@@ -109,8 +109,8 @@ export const VideoLikes = ({ videoId, cpe }) => {
             <DisLikeButton className='hover:fill-gray-500 cursor-pointer' onClick={likeButtons} />
           </span>
         </span>
-        <div className="text-[#575757] bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full h-[28px] relative top-[6px] px-[6px]" onClick={ShareButton}>
-          <ReplyOutlinedIcon className="w-4 h4 relative top-[1px] right-[1px] text-text-primary cursor-pointer hover:opacity-70" />
+        <div className="text-[#575757] bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full h-[28px] relative top-[7px] px-[6px]" onClick={ShareButton}>
+          <ReplyOutlinedIcon fontSize="small" className="relative top-[1px] right-[1px] text-text-primary cursor-pointer hover:opacity-70" />
         </div>
       </aside>
     </div>
