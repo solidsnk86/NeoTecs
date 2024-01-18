@@ -72,7 +72,7 @@ export default function FeedBack() {
           className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-3 xl:top-10 top-14 left-2 fixed mt-3"
           onClick={(e) => history.back(e)}
         />
-        <h1 className="flex justify-center mx-auto text-5xl text-transparent relative bottom-[2px] [-webkit-text-stroke-width:2px] [-webkit-text-stroke-color:var(--color-on-surface)]">
+        <h1 className="flex justify-center pt-6 mx-auto text-5xl text-transparent relative [-webkit-text-stroke-width:2px] [-webkit-text-stroke-color:var(--color-on-surface)]">
           Feedback
         </h1>
         <p className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-100/5 dark:border-zinc-800 border rounded p-3 text-text-primary text-xs xl:text-sm shadow-md shadow-slate-200/80 dark:!shadow">

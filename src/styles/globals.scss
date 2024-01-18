@@ -466,12 +466,6 @@ textarea {
   }
 }
 
-@media screen and (max-width: 762px) {
-  .policy span {
-    display: none;
-  }
-}
-
 @import 'atropos/scss';
 @import './home-header.scss';
 @import './picture-box.scss';
