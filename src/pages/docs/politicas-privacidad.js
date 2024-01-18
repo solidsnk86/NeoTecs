@@ -8,11 +8,11 @@ export const PrivacyPolicy = () => {
   return (
     <>
       <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-50" />
-      <main className="text-text-primary flex flex-col justify-center m-auto p-10 xl:w-10/12 text-sm">
+      <main className="text-text-primary flex flex-col justify-center m-auto p-10 xl:w-[70%] text-sm relative policy">
         <span onClick={() => history.back()}>
           <ArrowLeftIcon className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-6 xl:top-14 top-12 left-2 fixed mt-3" />
         </span>
-        <div className="my-10">
+        <div className="mt-16">
           <h1 className="text-2xl font-bold mb-4">Política de Privacidad</h1>
 
           <p className="my-6 text-right">
@@ -24,10 +24,13 @@ export const PrivacyPolicy = () => {
             "nuestro" o "nos") recopila, utiliza y comparte información personal
             obtenida a través de nuestro sitio web https://neotecs.netlify.app.
           </p>
-
+          <span className=" bg-button-variant text-text-variant rounded-full px-3 py-[6px] absolute translate-x-[-55px] translate-y-4">
+            1
+          </span>
           <h2 className="text-xl font-bold mt-4 mb-2">
             Información que Recopilamos:
           </h2>
+          <span className="border-l-2 border-button-variant xl:h-[625px] h-800px absolute translate-x-[-40px] translate-y-[-5px]" />
           <p>
             Podemos recopilar los siguientes tipos de información personal
             cuando visitas nuestro sitio web:
@@ -44,6 +47,9 @@ export const PrivacyPolicy = () => {
               cuando visitas nuestro sitio web.
             </li>
           </ul>
+          <span className=" bg-button-variant text-text-variant rounded-full px-3 py-[6px] absolute translate-x-[-55px] translate-y-4">
+            2
+          </span>
           <h2 className="text-xl font-bold mt-4 mb-2">
             Uso de la Información:
           </h2>
@@ -65,6 +71,9 @@ export const PrivacyPolicy = () => {
               otras comunicaciones si has optado por recibirlos.
             </li>
           </ul>
+          <span className=" bg-button-variant text-text-variant rounded-full px-3 py-[6px] absolute translate-x-[-55px] translate-y-4">
+            3
+          </span>
           <h2 className="text-xl font-bold mt-4 mb-2">
             Compartir Información:
           </h2>
@@ -74,23 +83,35 @@ export const PrivacyPolicy = () => {
             terceros de confianza que nos ayuden a operar nuestro sitio web,
             llevar a cabo nuestro negocio o brindarte servicios.
           </p>
+          <span className=" bg-button-variant text-text-variant rounded-full px-3 py-[6px] absolute translate-x-[-55px] translate-y-4">
+            4
+          </span>
           <h2 className="text-xl font-bold mt-4 mb-2">Cookies:</h2>
           <p>
             Utilizamos cookies para mejorar tu experiencia en nuestro sitio web.
             Puedes controlar las cookies a través de la configuración de tu
             navegador.
           </p>
+          <span className=" bg-button-variant text-text-variant rounded-full px-3 py-[6px] absolute translate-x-[-55px] translate-y-4">
+            5
+          </span>
           <h2 className="text-xl font-bold mt-4 mb-2">Tus Opciones:</h2>
           <p>
             Puedes optar por no proporcionar cierta información personal, pero
             esto puede limitar tu capacidad para acceder a ciertas funciones de
             nuestro sitio web.
           </p>
+          <span className=" bg-button-variant text-text-variant rounded-full px-3 py-[6px] absolute translate-x-[-55px] translate-y-4">
+            6
+          </span>
           <h2 className="text-xl font-bold mt-4 mb-2">Seguridad:</h2>
           <p>
             Tomamos medidas razonables para proteger la seguridad y
             confidencialidad de tu información personal.
           </p>
+          <span className=" bg-button-variant text-text-variant rounded-full px-3 py-[6px] absolute translate-x-[-55px] translate-y-4">
+            7
+          </span>
           <h2 className="text-xl font-bold mt-4 mb-2">
             Actualizaciones a esta Política de Privacidad:
           </h2>
@@ -106,13 +127,13 @@ export const PrivacyPolicy = () => {
             Privacidad, contáctame a
             <Link
               href="mailto:calcagni.gabriel86@gmail.com"
-              className="underline mx-1 text-blue-950"
+              className="underline mx-1 text-blue-950 dark:text-text-strong"
             >
               calcagni.gabriel86@gmail.com
             </Link>
             .
           </p>
-          <div className="text-xs my-6">
+          <div className="text-xs my-6 border-l-4 border-button-variant pl-3">
             <p>Neotecs Informática</p>
             <p>Dirección: Avenida Fuerza Aérea 551</p>
             <p>Concarán, San Luis, 5770</p>
