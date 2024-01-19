@@ -79,9 +79,11 @@ export const Nav = ({ className }) => {
           >
             <span
               className={`px-[3px] pt-[2px] rounded-md border bg-button-variant text-text-variant dark:border-zinc-700 font-semibold xl:text-sm text-xs`}
+              title="Feedback"
             >
               <MessageCircleIcon className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
-              {'Feedback'}
+              <span className="sm:hidden"></span>
+              <span className="hidden sm:inline">FeedBack</span>
             </span>
           </Link>
           <Link
@@ -90,9 +92,11 @@ export const Nav = ({ className }) => {
           >
             <span
               className={`px-[3px] pt-[2px] rounded-md border bg-button-variant text-text-variant dark:border-zinc-700 font-semibold xl:text-sm text-xs`}
+              title="Github"
             >
               <Github className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
-              {'Github'}
+              <span className="sm:hidden"></span>
+              <span className="hidden sm:inline">Github</span>
             </span>
           </Link>
         </aside>

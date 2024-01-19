@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import FormatData from './FormatData';
+import { apiKey } from './utils/YouTubeApi';
 
 export const DescriptionViews = ({ videoId }) => {
   const [views, setViews] = useState(0);
@@ -8,7 +9,6 @@ export const DescriptionViews = ({ videoId }) => {
   useEffect(() => {
     const getVideoDetails = async () => {
       try {
-        const apiKey = 'AIzaSyCu_A2nFDYi0TWRgASZJz89Zkuk_yIGhLE';
         const response = await fetch(
           `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${videoId}&key=${apiKey}`,
         );

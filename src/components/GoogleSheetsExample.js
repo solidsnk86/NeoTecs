@@ -78,53 +78,53 @@ export const GoogleSheetsExample = () => {
         lang="tsx"
         className="overflow-hidden overflow-x-auto code-block text-white"
       >{`
-                import { useState, useEffect } from 'react'
+        import { useState, useEffect } from 'react'
 
-                export default function CsvSheets() {
-                    const [items, setItems] = useSatate([])
+        export default function CsvSheets() {
+          const [items, setItems] = useSatate([])
 
-                useEffect(() => {
-                    const fetchData = async () => {
-                        try {
-                            const response = await fetch(
-                                'TU_LINK_DE_GOOGLE_SHEETS',
-                            );
-                            const csv = await response.text();
-                            const parsedItems = csv
-                                .split('\\n'\)
-                                .slice(1)
-                                .map((row) => {
-                                    const [id, name, description, image, price] = row.split(',');
-                                    return { id, name, description, image, price: Number(price) };
-                                });
-                            setItems(parsedItems
-                                );
-                        } catch (error) {
-                            console.error('Error fetching data:', error);
-                        }
-                    };
+        useEffect(() => {
+          const fetchData = async () => {
+            try {
+              const response = await fetch(
+                'TU_LINK_DE_GOOGLE_SHEETS',
+              );
+              const csv = await response.text();
+              const parsedItems = csv
+              .split('\\n'\)
+              .slice(1)
+              .map((row) => {
+                  const [id, name, description, image, price] = row.split(',');
+                  return { id, name, description, image, price: Number(price) };
+              });
+              setItems(parsedItems)
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+              }
+            };
             
-                    fetchData();
-                }, []);
+            fetchData();
+            }, []);
 
-                return (
-                    <article>
-                    {drawings.map((pic) => (
-                        <article key={pic.id}>
-                            <p className="text-2xl font-mono text-center py-2">{pic.id}</p>
-                            <span>
-                                Price: U$D {pic.price}
-                            </span>
-                            <img className="rounded-md" src={pic.image} alt="Drawing GerArt" />
-                            <aside className="text-center font-semibold my-3">
-                                <p>{pic.name}</p>
-                                <p>{pic.description}</p>
-                            </aside>
-                        </article>
-                    ))}
-                    </article>
-                )
-                `}</Pre>
+            return (
+              <div>
+                {items.map((pic) => (
+                <article key={pic.id}>
+                  <p className="text-2xl font-mono text-center py-2">{pic.id}</p>
+                  <span>
+                    Price: U$D {pic.price}
+                  </span>
+                    <img className="rounded-md" src={pic.image} alt="Drawing GerArt" />
+                 <aside className="text-center font-semibold my-3">
+                    <p>{pic.name}</p>
+                    <p>{pic.description}</p>
+                 </aside>
+                </article>
+                ))}
+              </div>
+            )
+          }
+      `}</Pre>
       <p className="list-css-span">
         Explicando un poco el desglose del código, en la obtención asíncrona de
         datos mediante el uso de useEffect, creamos una constante

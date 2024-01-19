@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
+import { apiKey } from '../components/utils/YouTubeApi'
 
 export const VideoLikes = ({ videoId, cpe }) => {
   const [likes, setLikes] = useState(0);
@@ -10,7 +11,6 @@ export const VideoLikes = ({ videoId, cpe }) => {
   useEffect(() => {
     const getVideoDetails = async () => {
       try {
-        const apiKey = 'AIzaSyCu_A2nFDYi0TWRgASZJz89Zkuk_yIGhLE';
         const response = await fetch(
           `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${videoId}&key=${apiKey}`,
         );
@@ -109,7 +109,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
         <span className="font-bold">Neo TECs</span>
         <p className="font-light text-[#5D5D5D]">{suscriptors} suscriptores</p>
       </div>
-      <aside className="youtube-aside flex space-x-3 xl:flex xl:space-x-4 xl:left-0 xl:relative xl:scale-[1] lg:flex lg:space-x-1 lg:scale-[0.9] lg:relative lg:left-[-30px] overflow-x-auto video-likes">
+      <aside className="youtube-aside inline-flex space-x-[10px] xl:flex xl:space-x-3 xl:left-0 xl:relative xl:scale-[1] lg:flex lg:space-x-1 lg:scale-[0.9] lg:relative lg:left-[-30px] video-likes">
         <div>
           <p
             className="relative top-[6px] mx-1 font-bold px-2 text-text-variant py-1 rounded-full bg-button-variant cursor-pointer hover:opacity-80"
