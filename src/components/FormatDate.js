@@ -1,4 +1,4 @@
-export default function FormatData(dataString) {
+export default function FormatDate(dataString) {
   const formated = new Date(dataString).toLocaleDateString('es-Es', {
     year: 'numeric',
     month: 'long',

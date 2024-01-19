@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import FormatData from './FormatData';
+import FormatDate from './FormatDate';
 import { apiKey } from './utils/YouTubeApi';
 
 export const DescriptionViews = ({ videoId }) => {
@@ -48,7 +48,7 @@ export const DescriptionViews = ({ videoId }) => {
   return (
     <div className="text-left my-1 font-bold">
       <span>{formatView()} Vistas</span>
-      <span> · Publicado el {FormatData(datePublished)}</span>
+      <span> · Publicado el {FormatDate(datePublished)}</span>
     </div>
   );
 };
