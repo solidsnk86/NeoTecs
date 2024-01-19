@@ -141,17 +141,14 @@ export default function Home() {
         <div className="border dark:border-zinc-800 p-3 rounded-xl shadow-sm shadow-slate-200 dark:shadow-none">
           <b className="space-y-3">Principios Báscicos de la programación</b>
           <p className="mt-4 text-text-second text-sm">
-            Este curso en NeoTecs va ir adentrándose más profundamente en el
-            diseño e implementación de aplicaciones web con Python, JavaScript y
-            SQL, utilizando frameworks como Django, React y Bootstrap. Los temas
-            abordados incluyen el diseño de bases de datos, escalabilidad,
-            seguridad y experiencia de usuario. A través de proyectos prácticos,
-            los estudiantes aprenden a escribir y utilizar APIs, crear
-            interfaces de usuario interactivas y aprovechar servicios en la nube
-            como GitHub y Heroku. Al finalizar este curso, los estudiantes
-            adquieren conocimientos y experiencia en principios, lenguajes y
-            herramientas que les permiten diseñar e implementar aplicaciones en
-            Internet.
+            El curso de NeoTecs se enfoca en el diseño e implementación
+            avanzados de aplicaciones web con Python, JavaScript y SQL,
+            utilizando frameworks como Django, React y Bootstrap. Los temas
+            incluyen diseño de bases de datos, escalabilidad, seguridad y
+            experiencia de usuario. Los estudiantes adquieren habilidades en la
+            escritura de APIs, creación de interfaces interactivas y uso de
+            servicios en la nube como GitHub y Netlify para diseñar e
+            implementar aplicaciones web.
           </p>
         </div>
         <p className="my-10">
