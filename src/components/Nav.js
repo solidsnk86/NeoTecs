@@ -82,8 +82,7 @@ export const Nav = ({ className }) => {
               title="Feedback"
             >
               <MessageCircleIcon className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
-              <span className="sm:hidden"></span>
-              <span className="hidden sm:inline">FeedBack</span>
+              Feedback
             </span>
           </Link>
           <Link
@@ -95,8 +94,7 @@ export const Nav = ({ className }) => {
               title="Github"
             >
               <Github className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
-              <span className="sm:hidden"></span>
-              <span className="hidden sm:inline">Github</span>
+              Github
             </span>
           </Link>
         </aside>

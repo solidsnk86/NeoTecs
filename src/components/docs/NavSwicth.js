@@ -63,7 +63,7 @@ export const NavSwitch = ({ inline }) => {
     <div
       className={`scroll-bar inline-block mb-4 border border-slate-400 border-opacity-20 xl:rounded-xl xl:rounded-b-xl overflow-hidden mt-16 xl:w-[200px] w-100% xl:h-60 xl:overflow-y-auto ${
         inline
-          ? 'mb-8 lg:hidden w-100% flex overflow-x-scroll xl:border border-none text-text-primary text-xs gap-1 z-20 nav-switch'
+          ? 'mb-8 lg:hidden w-100% flex overflow-x-scroll xl:border border-none text-text-primary text-xs z-20 nav-switch'
           : ''
       }`}
     >
@@ -71,9 +71,9 @@ export const NavSwitch = ({ inline }) => {
         <Link
           href={link.href}
           key={link.href}
-          className={` xl:p-2 w-full flex duration-100 !no-underline ${
+          className={`xl:p-2 w-full flex duration-100 !no-underline ${
             isActive(link)
-              ? 'xl:bg-[cornflowerblue] xl:bg-opacity-50 bg-gray-200 dark:bg-[#27272A] xl:border-none'
+              ? 'xl:bg-[cornflowerblue] xl:bg-opacity-50 border-b-[3px] border-amber-600 xl:border-none'
               : 'dark:hover:bg-[#202327] hover:bg-[#BDC5CC] hover:opacity-90'
           }`}
         >
