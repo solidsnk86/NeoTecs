@@ -33,7 +33,7 @@ export const APClientRouterMode = () => {
       <Pre lang="bash">{`ncpa.cpl`}</Pre>
       <p>Damos enter para ejecutar el comando, veremos la siguiente ventana:</p>
 
-      <figure className="images-web">
+      <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-propiedades-red.png?raw=true"
           alt="panel de control-conexiones de red captura de pantalla"
@@ -53,7 +53,7 @@ export const APClientRouterMode = () => {
       />
       <p>Propiedades TCP/IPv4</p>
 
-      <figure className="images-web">
+      <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-TCP-IP.png?raw=true"
           alt="panel de control-conexiones de red captura de pantalla"
@@ -85,7 +85,7 @@ export const APClientRouterMode = () => {
 
       <p>damos enter y avanzamos.</p>
 
-      <figure className="images-web">
+      <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/navegador.png?raw=true"
           alt="imágen navegador 192.168.0.254"
@@ -104,7 +104,7 @@ export const APClientRouterMode = () => {
         de país.
       </p>
 
-      <figure className="images-web">
+      <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente2.png?raw=true"
           alt="captura de pantalla sistema pharos tp-link"
@@ -116,7 +116,7 @@ export const APClientRouterMode = () => {
         accedemos al panel general de TP-LINK.
       </p>
 
-      <figure className="images-web">
+      <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente3.png?raw=true"
           alt="captura de pantalla sistema pharos tp-link"
@@ -130,7 +130,7 @@ export const APClientRouterMode = () => {
         modo, hacemos clic en ( Si ).
       </p>
 
-      <figure className="images-web">
+      <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente4.png?raw=true"
           alt="captura de pantalla sistema pharos tp-link"
@@ -143,7 +143,7 @@ export const APClientRouterMode = () => {
         Inspección.
       </p>
 
-      <figure className="images-web">
+      <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente5.png?raw=true"
           alt="captura de pantalla sistema pharos tp-link"
@@ -158,7 +158,7 @@ export const APClientRouterMode = () => {
         antena, 2 cuadras aproximadamente; ponemos: 0.2. Aplicamos y guardamos.
       </p>
 
-      <figure className="images-web">
+      <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente6.png?raw=true"
           alt="captura de pantalla sistema pharos tp-link"
@@ -171,7 +171,7 @@ export const APClientRouterMode = () => {
         internet.
       </p>
 
-      <figure className="images-web">
+      <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente7.png?raw=true"
           alt="captura de pantalla sistema pharos tp-link"
