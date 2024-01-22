@@ -24,6 +24,10 @@ export const Pre = ({ children, lang = '' }) => {
     setCopied(true);
 
     window.getSelection().removeAllRanges();
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 3600);
   };
 
   return (
@@ -32,12 +36,12 @@ export const Pre = ({ children, lang = '' }) => {
         {lang}
       </p>
       <span
-        onClick={(e) => handleCopyClick(e)}
+        onClick={handleCopyClick}
         className="text-xs absolute z-10 top-[26px] right-[8px] cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all"
       >
         {copied ? (
           <>
-            Copiado
+            Copiado!
             <Check className="w-[14px] h-[14px] inline mx-1 mb-[2px]" />
           </>
         ) : (
