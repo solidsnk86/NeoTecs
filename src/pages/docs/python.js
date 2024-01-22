@@ -817,7 +817,6 @@ export default function Python() {
                 `
             }</Pre>
           </article>
-          <ShareButton setTitle={Python.title} />
           <span id="Funciones" />
           <SectionTitle title="Funciones" />
           <article>
