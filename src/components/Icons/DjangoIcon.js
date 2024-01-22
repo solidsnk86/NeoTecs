@@ -1,5 +1,4 @@
-export const DjangoIcon = (props) => {
-  const { ...atrrs } = props;
+export const DjangoIcon = ({ className = '' }) => {
   return (
     <svg
       width={120}
@@ -8,7 +7,7 @@ export const DjangoIcon = (props) => {
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid"
-      {...atrrs}
+      className={className}
     >
       <g>
         <path

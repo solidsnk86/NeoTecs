@@ -17,7 +17,9 @@ import { CpeBrands } from '../components/CpeBrands';
 
 const HomeBlock = ({ children }) => {
   return (
-    <div className="max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16">
+    <div
+      className={`max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16`}
+    >
       {children}
     </div>
   );
@@ -136,10 +138,13 @@ export default function Home() {
         </div>
       </HomeBlock>
 
-      <HomeBlock>
+      <HomeBlock className="bg-[#09090b] dark:bg-[#ffffff]">
         <HomeBlockTitle>Aprende Programación Ahora</HomeBlockTitle>
         <div className="border dark:border-zinc-800 p-3 rounded-xl shadow-sm shadow-slate-200 dark:shadow-none">
-          <b className="space-y-3">Principios Báscicos de la programación</b>
+          <p className="text-md space-y-3 font-mono">
+            Principios Báscicos de programación
+          </p>
+          <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full" />
           <p className="mt-4 text-text-second text-sm">
             El curso de NeoTecs se enfoca en el diseño e implementación
             avanzados de aplicaciones web con Python, JavaScript y SQL,

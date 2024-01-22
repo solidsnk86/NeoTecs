@@ -11,6 +11,7 @@ export default function FeedBack() {
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
   const [comentario, setComentario] = useState('');
+  const [imagen, setImagen] = useState(null);
   const {
     handleSubmit,
     formState: { isSubmitting },
@@ -27,7 +28,7 @@ export default function FeedBack() {
       '(prefers-color-scheme: dark)',
     ).matches;
 
-    if (!nombre || !email || !comentario) {
+    if (!nombre || !email || !comentario || !imagen) {
       toast.error('Por favor, completa todos los campos.', {
         position: toast.POSITION.TOP_RIGHT,
         theme: isDarkMode ? 'dark' : 'light',
@@ -35,12 +36,15 @@ export default function FeedBack() {
       return;
     }
 
+    const formData = new FormData();
+    formData.append('nombre', nombre);
+    formData.append('email', email);
+    formData.append('comentario', comentario);
+    formData.append('imagen', imagen);
+
     const response = await fetch('/api/submit-feedback', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ nombre, email, comentario }),
+      body: formData,
     });
 
     if (response.ok) {
@@ -61,6 +65,10 @@ export default function FeedBack() {
     }
   };
 
+  const handleImageChange = (e) => {
+    setImagen(e.target.files[0]);
+  };
+
   return (
     <>
       <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-50" />
@@ -75,13 +83,13 @@ export default function FeedBack() {
         <h1 className="flex justify-center pt-6 mx-auto text-5xl text-transparent relative [-webkit-text-stroke-width:2px] [-webkit-text-stroke-color:var(--color-on-surface)]">
           Feedback
         </h1>
-        <p className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-100/5 dark:border-zinc-800 border rounded p-3 text-text-primary text-xs xl:text-sm shadow-md shadow-slate-200/80 dark:!shadow">
+        <p className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-3 text-text-primary text-xs xl:text-sm shadow-md shadow-slate-200/80 dark:!shadow">
           "¿Podrías proporcionarme tus comentarios sobre la página web? ¿Hiciste
           alguna observación de errores o inconvenientes? No dudes en compartir
           todas tus dudas y preocupaciones. Estoy aquí para ayudarte y mejorar
           la experiencia en línea."
         </p>
-        <div className="bg-[#F7F9F9] dark:bg-[#16181C] border border-zinc-100/5 dark:border-zinc-800 p-5 rounded space-y-3 shadow-md shadow-slate-200/80 dark:!shadow text-xs xl:text-sm">
+        <div className="bg-[#F7F9F9] dark:bg-[#16181C] border border-zinc-200/50 dark:border-zinc-800 p-5 rounded space-y-3 shadow-md shadow-slate-200/80 dark:!shadow text-xs xl:text-sm">
           <label className="label-feedback">
             Nombre:
             <input
@@ -110,6 +118,11 @@ export default function FeedBack() {
               placeholder="Comentario..."
               className=" h-28 resize-y"
             />
+          </label>
+
+          <label className="">
+            Screenshot:
+            <input type="file" accept="image/*" onChange={handleImageChange} />
           </label>
 
           <button

@@ -176,7 +176,6 @@ export default function UbiquitiDocs() {
               </span>
               <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] dark:text-[#FFFFFF] border-[#000]" />
             </p>
-            <ShareButton setTitle={UbiquitiDocs.title} />
             <SectionTitle title="Configuración modo estación" />
             <ol>
               <li>

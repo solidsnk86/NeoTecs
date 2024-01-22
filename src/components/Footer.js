@@ -119,7 +119,7 @@ export const Footer = () => {
           </a>
         </p>
       </article>
-      <p className="text-center text-xs mb-6">
+      <p className="text-center text-xs pb-2">
         Todos los nombres de productos, logos y marcas son propiedad de sus
         respectivos creadores.
       </p>

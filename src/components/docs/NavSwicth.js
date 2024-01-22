@@ -77,10 +77,7 @@ export const NavSwitch = ({ inline }) => {
               : 'dark:hover:bg-[#202327] hover:bg-[#BDC5CC] hover:opacity-90'
           }`}
         >
-          <p
-            className="font-semibold line-clamp-1 px-3 xl:w-auto text-text-primary text-center xl:px-0 xl:line-clamp-none tooltip"
-            data-tooltip={link.title}
-          >
+          <p className="font-semibold line-clamp-1 px-3 xl:w-auto text-text-primary text-center xl:px-0 xl:line-clamp-none">
             {link.title}
           </p>
         </Link>

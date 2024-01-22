@@ -38,6 +38,11 @@ module.exports = {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(calc(-50% - var(--gap)/2))' },
         },
+        'text-gradient': {
+          to: {
+            backgroundPosition: '200% center',
+          },
+        },
         meteor: {
           '0%': { transform: 'rotate(215deg) translateX(0)', opacity: 1 },
           '70%': { opacity: 1 },
@@ -82,5 +87,13 @@ module.exports = {
       ],
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  backgroundImage: {
+    'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+    'gradient-conic':
+      'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('tailwindcss-textshadow'),
+  ],
 };
