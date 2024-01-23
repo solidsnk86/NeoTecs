@@ -186,11 +186,12 @@ export default function CssDoc() {
           <div className="images-client">
             <img src="/images/css-heading-color.png" />
           </div>
-          <li>
+          <li className="list-css-span">
             Si aplicamos estilo a un elemento externo, automáticamente todos los
             elementos internos adquieren ese estilo. Podemos ver esto si
             trasladamos el estilo que acabamos de aplicar desde la etiqueta de
-            encabezado (header) a la etiqueta de cuerpo (body):
+            encabezado<span>header</span>a la etiqueta de cuerpo
+            <span>body</span>:
           </li>
           <Pre lang="html">{
             /* html */ `
@@ -216,15 +217,11 @@ export default function CssDoc() {
               de separar nuestro estilo de las líneas individuales
             </li>
             <ol>
-              <li>
+              <li className="list-css-span">
                 Una forma de hacerlo es añadir tu estilo entre etiquetas
-                <span className="border-gray-800 border rounded mx-1">
-                  {'<style>'}
-                </span>
+                <span>{'<style>'}</span>
                 en la sección
-                <span className="border-gray-800 border rounded mx-1">
-                  {'<head>'}
-                </span>
+                <span>{'<head>'}</span>
                 del documento HTML. Dentro de estas etiquetas, escribimos qué
                 tipos de elementos queremos estilizar y el estilo que deseamos
                 aplicar a ellos. Por ejemplo:
@@ -253,15 +250,11 @@ export default function CssDoc() {
               `
             }
           </Pre>
-          <li>
+          <li className="list-css-span">
             Otra forma es incluir un elemento
-            <span className="border-gray-800 border rounded mx-1">
-              {'<link>'}
-            </span>
+            <span>{'<link>'}</span>
             en la sección
-            <span className="border-gray-800 border rounded mx-1">
-              {'<head>'}
-            </span>
+            <span>{'<head>'}</span>
             de tu documento con un enlace a un archivo styles.css que contiene
             algún estilo. Esto significa que el archivo HTML se vería de la
             siguiente manera:
