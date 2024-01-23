@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { supabase } from '../components/utils/supabase';
-import FormatData from './FormatDate'
+import supabase from '../components/utils/supabase';
+import FormatData from './FormatDate';
 import { MessageCircleIcon, Trash2Icon } from 'lucide-react';
 
 export const FeedbackData = () => {
@@ -24,13 +24,29 @@ export const FeedbackData = () => {
             }
         };
 
-        fetchFeedback();
-    }, []);
+        const fetchImage = async (imageName) => {
+            try {
+                await supabase.storage
+                    .from('simbiosis')
+                    .getPublicUrl(imageName)
 
-    const sendMail = (item) => {
-        const emailLink = `mailto:${item.email}`;
-        window.open(emailLink);
-    };
+            } catch (error) {
+                console.error('Error al obtener la imagen:', error.message);
+            }
+        };
+
+        const fetchFeedbackWithImages = async () => {
+            await fetchFeedback();
+
+            items.forEach((item) => {
+                if (item.imagen) {
+                    fetchImage(item.imagen);
+                }
+            });
+        };
+
+        fetchFeedbackWithImages();
+    }, []);
 
     const handleDelete = async (id) => {
         try {
@@ -58,6 +74,11 @@ export const FeedbackData = () => {
         }
     };
 
+    const sendMail = (item) => {
+        const emailLink = `mailto:${item.email}`;
+        window.open(emailLink);
+    };
+
     return (
         <>
             {items.map((item) => (
@@ -66,6 +87,9 @@ export const FeedbackData = () => {
                         <p className="text-right">{FormatData(item.fecha)}</p>
                         <p className='my-6'>{item.comentario}</p>
                         <p className='text-right'>{item.nombre}</p>
+                        {item.imagen && (
+                            <img src={`https://yyqjcfzddjozcwahhugs.supabase.co/storage/v1/object/public/simbiosis/imagen/${item.imagen}`} alt="Imagen" />
+                        )}
                         <button className="underline cursor-pointer w-fit mt-1 float-right" title='Responder' onClick={() => sendMail(item)}><MessageCircleIcon className='mx-1 hover:text-blue-400' /></button>
                         <button onClick={() => handleDelete(item.id)} className="underline cursor-pointer w-fit mt-1 hover:text-red-500" title='Borrar comentario'>
                             <Trash2Icon className='mx-1 ' />

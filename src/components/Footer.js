@@ -94,7 +94,7 @@ export const Footer = () => {
                   </span>
                 </>
               ),
-              href: 'docs/politicas-privacidad',
+              href: '/docs/politicas-privacidad',
             },
           ].map((link, index) => (
             <aside key={index} className="inline-block mt-3 xl:text-sm text-xs">

@@ -8,26 +8,12 @@ export default async function handler(req, res) {
       .from('feedback')
       .insert([{ nombre, email, comentario }]);
 
-    const file = req.files && req.files.imagen;
-
-    if (file) {
-      const { data: storageData, error: storageError } = await supabase.storage
-        .from('neotecs-feed')
-        .upload(file.tempFilePath, {
-          destination: `feedback/${file.name}`,
-        });
-
-      if (storageError) {
-        return res.status(500).json({ error: 'Error al subir la imagen' });
-      }
-
-      if (error) {
-        return res.status(500).json({ error: 'Error al enviar feedback' });
-      }
+    if (error) {
+      console.log('Error al insertar datos en la base de datos', error);
+      return res
+        .status(500)
+        .json({ error: 'Error al insertar datos en la base de datos', data });
     }
-
-    return res.status(200).json({ success: true, data });
-  } else {
     return res.status(405).json({ error: 'Método no permitido' });
   }
 }

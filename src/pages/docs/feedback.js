@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Footer } from '../../components/Footer';
 import { ArrowLeftIcon } from 'lucide-react';
-import Link from 'next/link';
 import { Nav } from '../../components/Nav';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,7 +10,6 @@ export default function FeedBack() {
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
   const [comentario, setComentario] = useState('');
-  const [imagen, setImagen] = useState(null);
   const {
     handleSubmit,
     formState: { isSubmitting },
@@ -28,7 +26,7 @@ export default function FeedBack() {
       '(prefers-color-scheme: dark)',
     ).matches;
 
-    if (!nombre || !email || !comentario || !imagen) {
+    if (!nombre || !email || !comentario) {
       toast.error('Por favor, completa todos los campos.', {
         position: toast.POSITION.TOP_RIGHT,
         theme: isDarkMode ? 'dark' : 'light',
@@ -36,15 +34,12 @@ export default function FeedBack() {
       return;
     }
 
-    const formData = new FormData();
-    formData.append('nombre', nombre);
-    formData.append('email', email);
-    formData.append('comentario', comentario);
-    formData.append('imagen', imagen);
-
     const response = await fetch('/api/submit-feedback', {
       method: 'POST',
-      body: formData,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ nombre, email, comentario }),
     });
 
     if (response.ok) {
@@ -63,10 +58,6 @@ export default function FeedBack() {
         theme: isDarkMode ? 'dark' : 'light',
       });
     }
-  };
-
-  const handleImageChange = (e) => {
-    setImagen(e.target.files[0]);
   };
 
   return (
@@ -118,11 +109,6 @@ export default function FeedBack() {
               placeholder="Comentario..."
               className=" h-28 resize-y"
             />
-          </label>
-
-          <label className="">
-            Screenshot:
-            <input type="file" accept="image/*" onChange={handleImageChange} />
           </label>
 
           <button
