@@ -7,6 +7,7 @@ import MarkdownRenderer from '../../components/MarkDownRender';
 import { AlertTriangle } from 'lucide-react';
 import { ExternalLinkIcon } from 'lucide-react';
 import { Footer } from '../../components/Footer';
+import { ShareButton } from '../../components/ShareButton';
 
 export default function Scraping() {
     const [scrape, setScraping] = useState({
@@ -78,19 +79,14 @@ export default function Scraping() {
                         <ExternalLinkIcon className="link-icon" />
                     </Link>
                 </div>
-                <p className="text-center justify-center mx-auto my-10 bg-button-variant text-text-variant w-fit p-2">
+                <p className="text-center my-10 bg-button-variant text-text-variant w-fit p-2">
                     Si tienen alguna consulta para hacer, los escucho en mi
                     <Link href="/docs/feedback" className="underline text-red-500 mx-1">
                         feedback,
                     </Link>
                     muchas gracias!
                 </p>
-                <button
-                    className="justify-center mx-auto bg-button-variant text-text-variant font-semibold rounded p-2 w-fit my-3 hover:scale-105 shadow-gray-700"
-                    onClick={handleScrape}
-                >
-                    Raspar!!
-                </button>
+                <ShareButton setTitle={Scraping.title} />
                 {Object.keys(scrape.titles).map((index) => (
                     <article
                         key={index}
@@ -128,3 +124,5 @@ export default function Scraping() {
         </>
     );
 }
+
+Scraping.title = 'Aprende a crear tu propia app de Web Scraping con Python'

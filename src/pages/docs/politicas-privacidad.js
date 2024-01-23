@@ -127,3 +127,5 @@ export const PrivacyPolicy = () => {
 };
 
 export default PrivacyPolicy;
+
+PrivacyPolicy.title = 'Póliticas y Privacidad de Neotecs';

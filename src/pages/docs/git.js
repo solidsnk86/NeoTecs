@@ -500,4 +500,4 @@ export default function GitDocs() {
   );
 }
 
-GitDocs.title = 'Aprende Git y GitHub 🐱‍🚀';
+GitDocs.title = 'Aprende Git y GitHub 🐱‍🚀 en Neotecs gratis!';

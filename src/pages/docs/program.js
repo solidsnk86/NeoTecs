@@ -23,4 +23,4 @@ export default function Program() {
   );
 }
 
-Program.title = '👨‍💻 Curso de programación gratis · NeoTecs';
+Program.title = '👨‍💻 Curso de programación gratis en NeoTecs';

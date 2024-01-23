@@ -293,4 +293,4 @@ export default function MarkDownRender() {
   );
 }
 
-MarkDownRender.title = 'Fetch de MarkDown en React';
+MarkDownRender.title = 'Aprende como hacer un Fetch de MarkDown en React';

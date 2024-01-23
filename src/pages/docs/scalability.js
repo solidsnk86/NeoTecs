@@ -1033,4 +1033,4 @@ export default function Scalability() {
   );
 }
 
-Scalability.title = 'Escalabilidad y Seguridad';
+Scalability.title = 'Aprende sobre Escalabilidad y Seguridad en Neotecs!';
