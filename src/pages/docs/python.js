@@ -24,7 +24,7 @@ export default function Python() {
           <Indextitle>Índice</Indextitle>
           <ol className="indice">
             <li>
-              <a href="#introduccion">Introducción</a>
+              <a href="#introducción">Introducción</a>
             </li>
             <li>
               <a href="#python">Python</a>

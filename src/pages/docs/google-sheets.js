@@ -9,6 +9,8 @@ import { CalendarClockIcon } from 'lucide-react';
 import { WhatsApp } from '@mui/icons-material';
 import { AtroposBox } from '../../components/AtroposBox';
 import HeaderTitle from '../../components/HeaderTitlte';
+import Indextitle from '../../components/IndexTitle';
+import { SectionTitle } from '../../components/SectionTitle';
 
 export default function CsvSheets() {
   const [items, setItems] = useState([]);
@@ -72,6 +74,29 @@ export default function CsvSheets() {
           <NavSwitch inline />
           <HeaderTitle>Base de Datos con Google Sheets</HeaderTitle>
           <hr className="border-text-primary" />
+          <Indextitle>Índice</Indextitle>
+          <ol className="indice">
+            <li>
+              <a href="#introducción">Introducción</a>
+            </li>
+            <li>
+              <a href="#google-sheets">Google Sheets</a>
+            </li>
+            <li>
+              <a href="#publicar-en-la-web">Publicar en la web</a>
+            </li>
+            <li>
+              <a href="#api-routes">API Routes</a>
+            </li>
+          </ol>
+          <SectionTitle title="Introducción" />
+          <p>
+            En este tutorial, exploraremos cómo crear una base de datos
+            utilizando Google Sheets en formato Excel (.csv) y cómo realizar
+            solicitudes de datos (fetch) en nuestra aplicación de ReactJS con
+            Next.js y API Routes. Este enfoque no solo es práctico y accesible,
+            sino que también es ideal para proyectos más simples o prototipos.
+          </p>
           <section className="xl:w-1/2 justify-center mx-auto text-text-primary p-10 space-y-5">
             <h1 className="mt-10 flex justify-center mx-auto text-6xl text-transparent relative bottom-[2px] [-webkit-text-stroke-width:4px] [-webkit-text-stroke-color:var(--color-on-surface)]">
               GerArt
@@ -79,10 +104,12 @@ export default function CsvSheets() {
             <article className="bg-[#F7F9F9] dark:bg-[#16181C] border border-zinc-100/80 dark:border-zinc-800 rounded-xl text-center p-3">
               <p>¡Bienvenidos a ésta sección de arte y dibujo!</p>
               <p>
-                En esta ocasión, aprenderemos cómo crear una base de datos
-                utilizando Google Sheets en un formato de Excel (.csv) y cómo
-                realizar una solicitud de datos (fetch) en nuestra aplicación de
-                ReactJS con Next.js y Api Routes.
+                Es importante tener en cuenta que los dibujos presentados aquí
+                son solo para fines de ejemplo y están protegidos por derechos
+                de autor. Apreciamos y respetamos el trabajo artístico de mi
+                hermano el creador. Ahora, sumerjámonos juntos en el fascinante
+                mundo del arte, la creatividad y la tecnología. ¡Sigamos
+                explorando!
               </p>
             </article>
             {items.map((pic) => (
@@ -117,7 +144,6 @@ export default function CsvSheets() {
               </article>
             ))}
           </section>
-          <hr className="border-[1px] dark:border-zinc-800 border-zinc-300" />
           <GoogleSheetsExample />
         </div>
       </div>

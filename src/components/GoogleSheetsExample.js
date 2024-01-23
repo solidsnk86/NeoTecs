@@ -1,17 +1,19 @@
 import { Pre } from './Pre';
 import Link from 'next/link';
 import { ExternalLinkIcon } from 'lucide-react';
+import { SectionTitle } from './SectionTitle';
 
 export const GoogleSheetsExample = () => {
   return (
     <article className="justify-center mx-auto text-text-primary article-sheets">
-      <h1 className="text-center text-text-primary text-2xl my-6 underline">
+      <h1 className="text-center text-text-primary text-2xl my-14">
         Bien para darle vida a ésto seguiremos los siguientes pasos
       </h1>
-      <p className="text-center p-3">
+      <p>
         Vamos a empezar por crear nuestra tabla en Excel con hojas de cálculo de
         google.
       </p>
+      <SectionTitle title="Google Sheets" />
       <p className="list-css-span">
         Creamos una nueva hoja de cálculo y la llenamos con nuestros datos.
         También vamos a delimitar nuestra tabla con:
@@ -29,6 +31,7 @@ export const GoogleSheetsExample = () => {
           alt="Hojas de cálculo de Google."
         />
       </div>
+      <SectionTitle title="Publicar en la web" />
       <p className=" list-css-span">
         Una vez creada nuestra tabla, podemos acceder a ella mediante la opción
         de Google para compartir y publicar en la web. Vamos a la opción de
@@ -66,6 +69,7 @@ export const GoogleSheetsExample = () => {
           alt="Hojas de cálculo de Google."
         />
       </div>
+      <SectionTitle title="API Routes" />
       <p>
         Copiamos y pegamos el link en nuestro componente de Reactjs con Nextjs y
         Api Routes.
@@ -154,15 +158,18 @@ export const GoogleSheetsExample = () => {
         descripción, etcétera, de nuestro archivo CSV
       </p>
       <p>
-        Después se itera sobre cada artículo y se crea un objeto con las
-        propiedades que necesitamos.
+        Se realiza una iteración sobre cada artículo para crear un objeto con
+        las propiedades necesarias.
       </p>
       <p className="list-css-span">
-        Para luego iterar sobre cada artículo con un<span>map</span>y mostrarlo
-        en pantalla.
+        Posteriormente, se utiliza un <span>.map</span> para recorrer cada
+        artículo y mostrarlo en pantalla.
       </p>
-
-      <p>Hasta aquí por ahora, luego seguimos con más....</p>
+      <p>
+        ¡Gracias por acompañarnos hasta el final de este artículo! Hemos
+        concluido, y espero que puedan aplicar lo aprendido según sus
+        necesidades.
+      </p>
       <hr className="border-[1px] border-zinc-300 dark:border-zinc-800" />
       <p>
         ¡Si les gusta el diseño y efecto de las cajas que contienen los dibujos!

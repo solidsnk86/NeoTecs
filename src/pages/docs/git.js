@@ -23,7 +23,7 @@ export default function GitDocs() {
           <Indextitle>Índice</Indextitle>
           <ol className="indice">
             <li>
-              <a href="#introduccion">Introducción</a>
+              <a href="#introducción">Introducción</a>
             </li>
             <li>
               <a href="#git">Git</a>

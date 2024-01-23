@@ -23,7 +23,7 @@ export default function CssDoc() {
           <Indextitle>Índice</Indextitle>
           <ol className="indice">
             <li>
-              <a href="#introduccion">Introducción</a>
+              <a href="#introducción">Introducción</a>
             </li>
             <li>
               <a href="#propiedades">Propiedades CSS</a>

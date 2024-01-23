@@ -24,7 +24,7 @@ export default function SqlDocs() {
           <Indextitle>Índice</Indextitle>
           <ol className="indice">
             <li>
-              <a href="#introduccion">Introducción</a>
+              <a href="#introducción">Introducción</a>
             </li>
             <li>
               <a href="#sql">SQL</a>

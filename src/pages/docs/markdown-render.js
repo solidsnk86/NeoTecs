@@ -23,7 +23,7 @@ export default function MarkDownRender() {
           <IndexTitle>Índice</IndexTitle>
           <ol className="indice">
             <li>
-              <a href="#introduccion">Introducción</a>
+              <a href="#introducción">Introducción</a>
             </li>
             <li>
               <a href="#estilos-markdown">Estilos MarkDown</a>
