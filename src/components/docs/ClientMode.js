@@ -1,8 +1,8 @@
 import { Pre } from '../Pre';
 import { PublishDate } from '../PublishDate';
 import { SectionTitle } from '../SectionTitle';
-import { ShareButton } from '../ShareButton';
-import { OpenInNew } from '@mui/icons-material';
+import Link from 'next/link';
+import { ExternalLinkIcon } from 'lucide-react';
 
 export const ClientMode = () => {
   return (
@@ -169,7 +169,7 @@ export const ClientMode = () => {
             className="text-[cornflowerblue] link"
           >
             support@tp-link.com.
-            <OpenInNew className="link-icon" />
+            <ExternalLinkIcon className="link-icon" />
           </a>
         </li>
         <li>
@@ -206,11 +206,25 @@ export const ClientMode = () => {
           className="text-[cornflowerblue] link"
         >
           support@tp-link.com
-          <OpenInNew className="link-icon" />
+          <ExternalLinkIcon className="link-icon" />
         </a>
-        . Muchas Gracias por llegar hasta aquí.
       </p>
-      <ShareButton />
+      <p>
+        Muchas gracias por llegar hasta aquí, si quieren visitar el
+        <Link
+          href={'https://www.youtube.com/@tutosNeoTecs'}
+          className="mx-1 underline text-[cornflowerblue]"
+        >
+          canal de YouTube.
+        </Link>
+        Ante cualquier duda no dudes en escribir al
+        <Link
+          href={'/docs/feedback'}
+          className="mx-1 underline text-text-strong"
+        >
+          feedback.
+        </Link>
+      </p>
     </section>
   );
 };

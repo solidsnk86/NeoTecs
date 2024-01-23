@@ -20,9 +20,7 @@ export const APMode = () => {
         Desde una PC con Sistema Operativo de Windows, nos dirigimos a panel de
         control, para acceder a él, presionamos el botón WIN + R y escribimos:
       </p>
-
       <Pre lang="cmd">ncpa.cpl</Pre>
-
       <p>le damos enter.</p>
       <p>
         En Red o (Ethernet) hacemos clic derecho sobre el ícono, nos dirijimos a
@@ -30,17 +28,13 @@ export const APMode = () => {
         versión 4 (TCP/IPv4)), hacemos doble-clic. Seleccionamos en (Usar la
         siguiente dirección IP). Ponemos lo siguiente:
       </p>
-
       <ol>
         <li>Dirección IP:</li>
         <Pre lang="tcp/ip">192.168.0.100</Pre>
         <li>Máscara de sub red:</li>
         <Pre lang="tcp/ip">255.255.255.0</Pre>
       </ol>
-
-      <hr />
       <p>Vista del menú principal Pharos OS:</p>
-
       <div className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/puntoacceso1.png?raw=true"
@@ -48,12 +42,10 @@ export const APMode = () => {
           id="imgAP"
         />
       </div>
-
       <p>
         En la pestaña de opciones vamos a la pestaña (inalámbrico), para
         configurar nombre y contraseña del AP:
       </p>
-
       <div className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/puntoacceso2.png?raw=true"
@@ -61,7 +53,6 @@ export const APMode = () => {
           id="imgAP"
         />
       </div>
-
       <p>
         A continuación, en el apartado de (configuración del AP inalámbrico),
         ponemos el nombre del AP, vamos a modo de seguridad y seleccionamos
@@ -70,7 +61,6 @@ export const APMode = () => {
         Ponemos una contraseña que obtenga 8 caractéres, alfanumérica y hacemos
         clic en el botón (Aplicar). Guardamos la configuración:
       </p>
-
       <div className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/puntoacceso3.png?raw=true"
@@ -78,15 +68,12 @@ export const APMode = () => {
           id="imgAP"
         />
       </div>
-
       <p>
         Una vez hayamos guardado la configuración el equipo está listo para
         funcionar como Punto de Acceso, ya sea de 2.4 Ghz. o de 5 Ghz. Podemos
         ingresar al AP mediante samrtphones, notebooks, otra antena en modo
         Cliente, etc. Escaneamos y buscamos el AP para conectarnos.
       </p>
-
-      <ShareButton />
     </section>
   );
 };

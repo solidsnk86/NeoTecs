@@ -99,8 +99,6 @@ export const RepeaterMode = () => {
         lugar adecuado para obtener una buena calidad de señal y asegurarte de
         que esté dentro del rango de la red Wi-Fi original.
       </p>
-
-      <ShareButton />
       <p>
         Este artículo aplica a los siguientes modelos:
         <span className="color-acento">

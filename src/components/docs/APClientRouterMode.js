@@ -3,6 +3,7 @@ import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
 import { PublishDate } from '../PublishDate';
+import Link from 'next/link';
 
 export const APClientRouterMode = () => {
   return (
@@ -177,16 +178,22 @@ export const APClientRouterMode = () => {
           alt="captura de pantalla sistema pharos tp-link"
         />
       </figure>
-
       <p>
-        Si has llegado hasta este punto, espero que este tutorial haya sido de
-        ayuda para ti. No dudes en visitar nuestro canal en YouTube, donde
-        encontrarás un breve tutorial que te guiará para realizar estos mismos
-        pasos desde tu smartphone.
+        Muchas gracias por llegar hasta aquí, si quieren visitar el
+        <Link
+          href={'https://www.youtube.com/@tutosNeoTecs'}
+          className="mx-1 underline text-[cornflowerblue]"
+        >
+          canal de YouTube.
+        </Link>
+        Ante cualquier duda no dudes en escribir al
+        <Link
+          href={'/docs/feedback'}
+          className="mx-1 underline text-text-strong"
+        >
+          feedback.
+        </Link>
       </p>
-
-      <ShareButton />
-      <SectionTitle title="Video Explicativo" />
       <p>
         Este video les puede explicar de manera rápida y efectiva la
         configuración en modo AP Router Cliente de Tp-Link.

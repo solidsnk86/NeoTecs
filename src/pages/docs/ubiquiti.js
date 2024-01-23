@@ -8,6 +8,7 @@ import { Pre } from '../../components/Pre';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import { PublishDate } from '../../components/PublishDate';
+import Link from 'next/link';
 
 export default function UbiquitiDocs() {
   return (
@@ -290,7 +291,20 @@ export default function UbiquitiDocs() {
             <p>Damos por hecho la conexíon viendo éste último panel.</p>
             <p>
               Muchas gracias por llegar hasta aquí, pueden ver el vídeo
-              explicativo en mi canal
+              explicativo en mi
+              <Link
+                href={'https://www.youtube.com/@tutosNeoTecs'}
+                className="mx-1 underline text-text-strong"
+              >
+                canal
+              </Link>
+              . Ante cualquier duda no dudes en escribir al
+              <Link
+                href={'/docs/feedback'}
+                className="mx-1 underline text-text-strong"
+              >
+                feedback.
+              </Link>
             </p>
             <ShareButton setTitle={UbiquitiDocs.title} />
           </section>

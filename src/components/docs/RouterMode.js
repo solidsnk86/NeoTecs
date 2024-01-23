@@ -3,7 +3,8 @@ import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
 import { PublishDate } from '../PublishDate';
-import { OpenInNew } from '@mui/icons-material';
+import { ExternalLinkIcon } from 'lucide-react';
+import Link from 'next/link';
 
 export const RouterMode = () => {
   return (
@@ -26,7 +27,7 @@ export const RouterMode = () => {
           target="_blank"
         >
           enlace
-          <OpenInNew className="link-icon" />
+          <ExternalLinkIcon className="link-icon" />
         </a>
         a través de esta interfaz web, puedes realizar configuraciones rápidas y
         personalizar la red inalámbrica según tus necesidades:
@@ -168,7 +169,7 @@ export const RouterMode = () => {
             className="text-[cornflowerblue] mx-1 link"
           >
             (Preguntas frecuentes FAQs)
-            <OpenInNew className="link-icon" />
+            <ExternalLinkIcon className="link-icon" />
           </a>
         </li>
         <li>
@@ -209,6 +210,15 @@ export const RouterMode = () => {
         <strong className="text-text-strong mx-1">
           CPE510 - CPE610 - CPE220 - CPE210 - CPE520 - CPE605.
         </strong>
+      </p>
+      <p>
+        Si surgen dudas en la configuración con gusto los escucho en mi
+        <Link
+          href={'/docs/feedback'}
+          className="mx-1 underline text-text-strong"
+        >
+          feedback.
+        </Link>
       </p>
       <ShareButton />
     </section>

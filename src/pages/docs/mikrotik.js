@@ -8,6 +8,7 @@ import { Pre } from '../../components/Pre';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import { PublishDate } from '../../components/PublishDate';
+import Link from 'next/link';
 
 export default function MikrotikDocs() {
   return (
@@ -35,7 +36,7 @@ export default function MikrotikDocs() {
             <p>
               Desde una PC con Sistema Operativo de Windows, nos dirigimos a
               panel de control, para acceder a él, presionamos el botón
-              <FaWindows className="inline-flex mx-1 text-xl text-[cornflowerblue]" />
+              <FaWindows className="inline-flex mx-1 mb-1 text-xl text-[cornflowerblue]" />
               + R y escribimos:
             </p>
             <Pre lang="bash">{`ncpa.cpl`}</Pre>
@@ -151,7 +152,7 @@ export default function MikrotikDocs() {
               <li>Wireless Protocol: 802.11</li>
             </ul>
             <ol>
-              <p className="bg-gray-800 w-fit px-2 text-[aliceblue] rounded border-l-4 border-green-400">
+              <p className="bg-gray-800 w-fit px-2 text-[aliceblue] rounded border-l-4 border-text-strong">
                 Modelo: Mikrotik Lhg Xl 5 Ac 802.11a/n/ac
               </p>
               <li>
@@ -160,9 +161,23 @@ export default function MikrotikDocs() {
                 seleccionar país Japon.
               </li>
             </ol>
-            <h4 className="text-text-primary">
-              Pronto subiré más contenido de Mikrotik..
-            </h4>
+            <p>
+              Muchas gracias por llegar hasta aquí, pueden ver el vídeo
+              explicativo en mi
+              <Link
+                href={'https://www.youtube.com/@tutosNeoTecs'}
+                className="mx-1 underline text-[cornflowerblue]"
+              >
+                canal
+              </Link>
+              . Ante cualquier duda no dudes en escribir al
+              <Link
+                href={'/docs/feedback'}
+                className="mx-1 underline text-text-strong"
+              >
+                feedback.
+              </Link>
+            </p>
             <ShareButton setTitle={MikrotikDocs.title} />
           </section>
         </div>
