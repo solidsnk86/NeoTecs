@@ -138,7 +138,7 @@ export default function CsvSheets() {
                     onClick={() => sendWhatsapp(pic.id, pic.price)}
                   >
                     Encargar
-                    <WhatsApp className=" mx-1 mb-1 w-4" />
+                    <WhatsApp fontSize="small" className=" mx-1 mb-1" />
                   </span>
                 </aside>
               </article>
