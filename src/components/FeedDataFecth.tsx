@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import supabase from '../components/utils/supabase';
 import FormatData from './FormatDate';
-import { MessageCircleIcon, Trash2Icon } from 'lucide-react';
 
 export const FeedbackData = () => {
     const [items, setItems] = useState([]);
