@@ -86,12 +86,6 @@ export default function Scraping() {
                     </Link>
                     muchas gracias!
                 </p>
-                <button
-                    className="border rounded-md p-2 w-fit justify-center mx-auto"
-                    onClick={handleScrape}
-                >
-                    Hacer Scraping
-                </button>
                 <ShareButton setTitle={Scraping.title} />
                 {Object.keys(scrape.titles).map((index) => (
                     <article
