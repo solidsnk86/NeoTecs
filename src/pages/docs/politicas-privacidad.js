@@ -13,11 +13,11 @@ export const PrivacyPolicy = () => {
           <ArrowLeftIcon className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-6 xl:top-14 top-12 left-2 fixed mt-3" />
         </span>
         <div className="mt-16">
-          <h1 className="text-3xl font-bold mb-4 font-mono">
+          <h1 className="text-3xl font-bold my-4 font-mono">
             Política de Privacidad
           </h1>
-
-          <p className="my-6 text-right">
+          <hr className="h-[1px] w-full dark:border-zinc-800" />
+          <p className="my-10 text-right">
             <strong>Fecha Efectiva:</strong> 15 de Enero 2024
           </p>
 

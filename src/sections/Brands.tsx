@@ -93,7 +93,7 @@ const reviews = [
     },
     {
         name: 'Django',
-        link: 'https://sqlbolt.com/',
+        link: 'https://www.djangoproject.com/',
         logo: (
             <svg
                 width={120}
@@ -310,7 +310,7 @@ export const MarqueeLogos = () => {
             <p className=" text-xl font-bold text-center text-text-primary">
                 Lenguajes que vas aprender a continuación
             </p>
-            <div className="relative flex flex-col items-center justify-center w-full h-full gap-2 py-20 my-8 overflow-hidden rounded-lg bg-background">
+            <div className="relative flex flex-col items-center justify-center w-full h-full gap-2 py-20 my-8 rounded-lg">
                 <Marquee pauseOnHover className="[--duration:40s]">
                     {reviews.map((review) => (
                         <ReviewCard key={review.name} {...review} />
@@ -324,8 +324,6 @@ export const MarqueeLogos = () => {
                             <ReviewCard key={review.name} {...review} />
                         ))}
                 </Marquee>
-                <div className="absolute inset-y-0 left-0 w-40 pointer-events-none from-[#444] to-transparent bg-gradient-to-r "></div>
-                <div className="absolute inset-y-0 right-0 w-1/3 pointer-events-none bg-gradient-to-l from-[#444]"></div>
             </div>
         </section>
     );
