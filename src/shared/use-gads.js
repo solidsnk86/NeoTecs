@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export const useGAds = (router) => {
+export const useGAds = async (router) => {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-371792458';

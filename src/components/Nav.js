@@ -68,7 +68,7 @@ export const Nav = ({ className }) => {
     <div className={className || 'z-50'}>
       <div className="h-16 flex justify-between max-w-screen-xl mx-auto px-4 md:px-8 relative text-text-primary">
         <div className="flex relative bottom-[17px]">
-          <Link href="/">
+          <Link href="/" title="Inicio">
             <NeotecsLogo className="cursor-pointer" />
           </Link>
         </div>
