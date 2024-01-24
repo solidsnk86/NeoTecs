@@ -23,29 +23,7 @@ export const FeedbackData = () => {
                 console.error('Error fetching feedback:', error.message);
             }
         };
-
-        const fetchImage = async (imageName) => {
-            try {
-                await supabase.storage
-                    .from('simbiosis')
-                    .getPublicUrl(imageName)
-
-            } catch (error) {
-                console.error('Error al obtener la imagen:', error.message);
-            }
-        };
-
-        const fetchFeedbackWithImages = async () => {
-            await fetchFeedback();
-
-            items.forEach((item) => {
-                if (item.imagen) {
-                    fetchImage(item.imagen);
-                }
-            });
-        };
-
-        fetchFeedbackWithImages();
+        fetchFeedback()
     }, []);
 
     const handleDelete = async (id) => {
@@ -82,17 +60,29 @@ export const FeedbackData = () => {
     return (
         <>
             {items.map((item) => (
-                <div className="bg-gray-100 dark:bg-zinc-800/40 border dark:border-zinc-800 p-4 rounded-xl my-10 mx-auto xl:w-1/2" key={item.id}>
+                <div
+                    className="bg-gray-100 dark:bg-zinc-800/40 border dark:border-zinc-800 p-4 rounded-xl my-10 mx-auto xl:w-1/2"
+                    key={item.id}
+                >
                     <div className="text-text-primary text-xs xl:text-sm mb-4">
                         <p className="text-right">{FormatData(item.fecha)}</p>
-                        <p className='my-6'>{item.comentario}</p>
-                        <p className='text-right'>{item.nombre}</p>
-                        {item.imagen && (
-                            <img src={`https://yyqjcfzddjozcwahhugs.supabase.co/storage/v1/object/public/simbiosis/imagen/${item.imagen}`} alt="Imagen" />
-                        )}
-                        <button className="underline cursor-pointer w-fit mt-1 float-right" title='Responder' onClick={() => sendMail(item)}><MessageCircleIcon className='mx-1 hover:text-blue-400' /></button>
-                        <button onClick={() => handleDelete(item.id)} className="underline cursor-pointer w-fit mt-1 hover:text-red-500" title='Borrar comentario'>
-                            <Trash2Icon className='mx-1 ' />
+                        <p className="my-6">{item.comentario}</p>
+                        <p className="text-right">{item.nombre}</p>
+                        <button
+                            className="underline cursor-pointer w-fit mt-1 float-right hover:text-blue-400"
+                            title="Responder"
+                            onClick={() => sendMail(item)}
+                        >
+                            <MessageCircleIcon className="inline mx-1 w-4" />
+                            Responder
+                        </button>
+                        <button
+                            onClick={() => handleDelete(item.id)}
+                            className="inline underline cursor-pointer w-fit mt-1 hover:text-red-500"
+                            title="Borrar comentario"
+                        >
+                            <Trash2Icon className="inline mx-1 w-4" />
+                            Eliminar
                         </button>
                     </div>
                 </div>
