@@ -500,7 +500,7 @@ export default function DjangoDocs() {
                 nuestro sitio y luego agregue /polls a la URL en la barra de
                 búsqueda, serán redirigidos a las rutas dentro de nuestra nueva
                 aplicación. En otras palabras, al acceder a
-                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
+                <span className="mx-1 font-mono text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
                   http://127.0.0.1:8000/polls/
                 </span>
                 , se activará la lógica de rutas definida en el archivo
@@ -514,13 +514,10 @@ export default function DjangoDocs() {
             <p>
               Cuando inicias tu aplicación usando python manage.py runserver y
               visitas la URL proporcionada:
+              <span className="mx-1 font-mono text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
+                http://127.0.0.1:8000/polls/
+              </span>
             </p>
-            <Link
-              href="http://localhost:8000/polls/"
-              className="text-[#0C4B33] link"
-            >
-              http://localhost:8000/polls/
-            </Link>
             <div className="images-client">
               <img src="/images/polls.png" />
             </div>
@@ -528,8 +525,8 @@ export default function DjangoDocs() {
               Ahora que hemos tenido cierto éxito, repasemos lo que acaba de
               suceder para llegar a ese punto:
             </p>
-            <ol>
-              <li className="list-css-span">
+            <ol className="list-css-span">
+              <li>
                 Cuando accedimos a la URL
                 <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
                   localhost:8000/polls
@@ -542,28 +539,30 @@ export default function DjangoDocs() {
                 de nuestro proyecto, buscando un patrón que coincidiera con
                 "polls".
               </li>
-              <li className="list-css-span">
+              <li>
                 Encontró esa extensión porque la definimos, y vio que cuando se
                 encontrara con esa extensión, debía incluir nuestro archivo
                 <span>urls.py</span>desde dentro de nuestra aplicación.
               </li>
               <li>
                 Luego, Django ignoró las partes de la URL que ya había utilizado
-                en la redirección (localhost:8000/polls/ o todo el URL) y buscó
-                dentro de nuestro otro archivo urls.py un patrón que coincidiera
-                con la parte restante de la URL.
+                en la redirección
+                <span>localhost:8000/polls/ o todo el URL</span>y buscó dentro
+                de nuestro otro archivo<span>urls.py</span>un patrón que
+                coincidiera con la parte restante de la URL.
               </li>
               <li>
-                Descubrió que nuestra única ruta hasta el momento <b>("") </b>
+                Descubrió que nuestra única ruta hasta el momento
+                <span>("")</span>
                 coincidía con lo que quedaba de la URL, y nos dirigió a la
                 función de views.py asociada con esa ruta.
               </li>
               <li>
                 Finalmente, Django ejecutó esa función dentro de views.py y
                 devolvió el resultado
-                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
+                <i className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">
                   (HttpResponse("Hola Neo!"))
-                </span>
+                </i>
                 a nuestro navegador web.
               </li>
             </ol>
