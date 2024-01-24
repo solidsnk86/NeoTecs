@@ -113,7 +113,7 @@ export default function Home() {
               </p>
             </div>
           </header>
-          <aside className="mt-10 border dark:border-zinc-800 p-6 rounded-lg">
+          <aside className="mt-10 border border-zinc-200/85 dark:border-zinc-800/40 dark:shadow-none p-6 rounded-lg">
             <p className="text-3xl font-semibold">
               <PlayIcon className="inline mx-2 border mb-[6px] text-green-500 border-green-900 rounded-lg p-2 w-9 h-9 bg-[#072719]" />
               Comencemos!

@@ -471,6 +471,12 @@ textarea {
   }
 }
 
+.policy > p,
+li {
+  color: var(--color-secondary);
+  margin-left: 10px;
+}
+
 @import 'atropos/scss';
 @import './home-header.scss';
 @import './picture-box.scss';

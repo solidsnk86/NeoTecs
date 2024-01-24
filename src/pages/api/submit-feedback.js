@@ -8,12 +8,12 @@ export default async function handler(req, res) {
       .from('feedback')
       .insert([{ nombre, email, comentario }]);
 
-    if (error) {
-      console.log('Error al insertar datos en la base de datos', error);
-      return res
-        .status(500)
-        .json({ error: 'Error al insertar datos en la base de datos', data });
+    if (!data) {
+      console.error('No se pueden enviar los datos', error);
     }
+
+    return res.status(200).json({ success: true, data });
+  } else {
     return res.status(405).json({ error: 'Método no permitido' });
   }
 }

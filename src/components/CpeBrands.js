@@ -27,7 +27,7 @@ export const CpeBrands = ({ inline }) => {
   const isActive = (link) => link.href === router.asPath;
   return (
     <div
-      className={`flex mb-4 border-zinc-800 rounded overflow-hidden w-100% shadow-md shadow-black ${
+      className={`flex mb-4 border-zinc-800 rounded overflow-hidden w-100% shadow-md shadow-[#dad9d9] dark:shadow-[#000] ${
         inline ? 'mb-8 lg:hidden w-100% inline-flex justify-center' : ''
       }`}
     >

@@ -12,7 +12,7 @@ export const PrivacyPolicy = () => {
         <span onClick={() => history.back()}>
           <ArrowLeftIcon className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-6 xl:top-14 top-12 left-2 fixed mt-3" />
         </span>
-        <div className="mt-16">
+        <div className="mt-16 space-y-8 policy">
           <h1 className="text-3xl font-bold my-4 font-mono">
             Política de Privacidad
           </h1>

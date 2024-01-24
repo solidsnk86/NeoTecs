@@ -102,7 +102,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
     <div className="flex gap-[12px] xl:gap-[14px] lg:gap-[14px] md:gap-[12px] my-2 sm:mx-2">
       <img
         className="rounded-full w-10 h-10"
-        src="/images/logos/NeoTecs _Tutorial_logo.png"
+        src="/images/logos/NeoTecs_Tutorial_logo.png"
         alt="logo"
       />
       <div className="flex-col">

@@ -114,7 +114,7 @@ export const Footer = () => {
               className="w-16 h-16 relative bottom-6 ml-2 drop-shadow-xl text-[#111] hover:scale-[1.1] transition-all"
               src="/images/neo_pixelart-removebg-preview.png"
               alt="Neo-pixel-art"
-              title="Neo"
+              title="SolidSnk86"
             />
           </a>
         </p>
