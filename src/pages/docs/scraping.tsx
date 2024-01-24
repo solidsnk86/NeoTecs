@@ -21,7 +21,9 @@ export default function Scraping() {
 
     const handleScrape = async () => {
         try {
-            const response = await axios.get('http://127.0.0.1:5000/api/scrape');
+            const response = await axios.post(
+                'https://SolidSnk86.pythonanywhere.com/scrape/flask_app.py',
+            );
             setScraping(response.data);
         } catch (error) {
             console.error('Error al realizar el raspado:', error);
@@ -33,9 +35,7 @@ export default function Scraping() {
             <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-50" />
             <main className="text-text-primary flex flex-col justify-center m-auto p-10 xl:w-10/12">
                 <span onClick={() => history.back()}>
-                    <ArrowLeftIcon
-                        className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-6 xl:top-14 top-12 left-2 fixed mt-3"
-                    />
+                    <ArrowLeftIcon className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-6 xl:top-14 top-12 left-2 fixed mt-3" />
                 </span>
                 <h1 className="flex justify-center mx-auto text-5xl underline mb-3 mt-10">
                     Web Scraping
@@ -86,6 +86,12 @@ export default function Scraping() {
                     </Link>
                     muchas gracias!
                 </p>
+                <button
+                    className="border rounded-md p-2 w-fit justify-center mx-auto"
+                    onClick={handleScrape}
+                >
+                    Hacer Scraping
+                </button>
                 <ShareButton setTitle={Scraping.title} />
                 {Object.keys(scrape.titles).map((index) => (
                     <article
@@ -99,22 +105,24 @@ export default function Scraping() {
                             {scrape.paragraphs[index]}
                         </p>
                         <ul className="text-zinc-500">
-                            {Array.isArray(scrape.images[index]) && scrape.images[index].map((image, i) => (
-                                <li key={i}>
-                                    <p>Alt: {image.alt}</p>
-                                    <p>Src: {image.src}</p>
-                                </li>
-                            ))}
+                            {Array.isArray(scrape.images[index]) &&
+                                scrape.images[index].map((image, i) => (
+                                    <li key={i}>
+                                        <p>Alt: {image.alt}</p>
+                                        <p>Src: {image.src}</p>
+                                    </li>
+                                ))}
                         </ul>
                         <div>
                             <p>Links:</p>
                             <ul>
-                                {Array.isArray(scrape.links[index]) && scrape.links[index].map((link, i) => (
-                                    <li key={i}>
-                                        <p>Alt: {link.alt}</p>
-                                        <p>Src: {link.src}</p>
-                                    </li>
-                                ))}
+                                {Array.isArray(scrape.links[index]) &&
+                                    scrape.links[index].map((link, i) => (
+                                        <li key={i}>
+                                            <p>Alt: {link.alt}</p>
+                                            <p>Src: {link.src}</p>
+                                        </li>
+                                    ))}
                             </ul>
                         </div>
                     </article>
@@ -125,4 +133,4 @@ export default function Scraping() {
     );
 }
 
-Scraping.title = 'Aprende a crear tu propia app de Web Scraping con Python'
+Scraping.title = 'Aprende a crear tu propia app de Web Scraping con Python';
