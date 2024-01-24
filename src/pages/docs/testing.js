@@ -236,12 +236,10 @@ export default function Testing() {
               <span>./tests0.sh</span>en nuestra terminal, lo que nos dará este
               resultado:
             </p>
-            <Pre lang="python">{
-              /*python */ `
-              ERROR on is_prime(8), expected False
-              ERROR on is_prime(25), expected False
-              `
-            }</Pre>
+            <pre lang="console">
+              ERROR on is_prime(8), expected False ERROR on is_prime(25),
+              expected False
+            </pre>
           </article>
           <SectionTitle title="Pruebas Unitarias" />
           <article>
