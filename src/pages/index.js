@@ -86,7 +86,7 @@ const cardContent = [
 
 export default function Home() {
   return (
-    <div className="text-text-primary">
+    <main className="text-text-primary">
       <Nav />
       <HomeHeader />
       <HomeBlock>
@@ -166,6 +166,6 @@ export default function Home() {
       </HomeBlock>
       <MarqueeLogos />
       <Footer />
-    </div>
+    </main>
   );
 }
