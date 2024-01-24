@@ -61,33 +61,35 @@ export const FeedbackData = () => {
         <>
             {items.map((item) => (
                 <div
-                    className="bg-gray-100 dark:bg-zinc-800/40 border dark:border-zinc-800 p-4 rounded-xl my-10 mx-auto xl:w-1/2"
+                    className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 p-6 rounded-md shadow-md my-10 mx-auto xl:w-1/2"
                     key={item.id}
                 >
-                    <div className="text-text-primary text-xs xl:text-sm mb-4">
-                        <p className="text-right">{FormatData(item.fecha)}</p>
-                        <p className="my-6">{item.comentario}</p>
-                        <p className="text-right">{item.nombre}</p>
-                        <button
-                            className="underline cursor-pointer w-fit mt-1 float-right hover:text-blue-400"
-                            title="Responder"
-                            onClick={() => sendMail(item)}
-                        >
-                            <MessageCircleIcon className="inline mx-1 w-4" />
-                            Responder
-                        </button>
-                        <button
-                            onClick={() => handleDelete(item.id)}
-                            className="inline underline cursor-pointer w-fit mt-1 hover:text-red-500"
-                            title="Borrar comentario"
-                        >
-                            <Trash2Icon className="inline mx-1 w-4" />
-                            Eliminar
-                        </button>
+                    <div className="text-gray-600 dark:text-gray-300 text-sm xl:text-base mb-4">
+                        <p>Este feedback se ha creado el {FormatData(item.fecha)}</p>
+                        <label className="block font-bold mt-4">Mensaje:</label>
+                        <p className="my-2">{item.comentario}</p>
+                        <p className="text-right text-gray-700 dark:text-gray-400">{item.nombre}</p>
+                        <div className="flex items-center space-x-4 mt-4">
+                            <button
+                                className="text-blue-500 dark:text-blue-400 hover:underline focus:outline-none"
+                                title="Responder"
+                                onClick={() => sendMail(item)}
+                            >
+                                Responder
+                            </button>
+                            <button
+                                onClick={() => handleDelete(item.id)}
+                                className="text-red-500 dark:text-red-400 hover:underline focus:outline-none"
+                                title="Borrar comentario"
+                            >
+                                Eliminar
+                            </button>
+                        </div>
                     </div>
                 </div>
             ))}
         </>
+
     );
 };
 
