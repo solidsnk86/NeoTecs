@@ -22,7 +22,7 @@ export default function Scraping() {
     const handleScrape = async () => {
         try {
             const response = await axios.post(
-                'https://SolidSnk86.pythonanywhere.com/scrape/flask_app.py',
+                'https://www.pythonanywhere.com/user/SolidSnk86/files/home/SolidSnk86/scrape/flask_app.py',
             );
             setScraping(response.data);
         } catch (error) {

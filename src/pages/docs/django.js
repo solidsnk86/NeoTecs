@@ -170,7 +170,6 @@ export default function DjangoDocs() {
               <img src="/images/codes.png" />
             </div>
           </article>
-          <ShareButton setTitle={DjangoDocs.title} />
           <SectionTitle title="Django" />
           <article>
             <p>
@@ -722,7 +721,6 @@ export default function DjangoDocs() {
               devuelta.
             </p>
           </article>
-          <ShareButton setTitle={DjangoDocs.title} />
           <SectionTitle title="Plantillas" />
           <article>
             <p>
