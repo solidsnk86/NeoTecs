@@ -366,11 +366,11 @@ export default function GitDocs() {
             </p>
             <ul>
               <li>
-                El branching es un método para avanzar en una nueva dirección al
-                crear una nueva función y solo combinar esta nueva función con
-                la parte principal de tu código, o la rama principal, una vez
-                que hayas terminado. Este flujo de trabajo se verá más como se
-                muestra en la siguiente gráfica:
+                El branching (ramificación), es un método para avanzar en una
+                nueva dirección al crear una nueva función y solo combinar esta
+                nueva función con la parte principal de tu código, o la rama
+                principal, una vez que hayas terminado. Este flujo de trabajo se
+                verá más como se muestra en la siguiente gráfica:
               </li>
             </ul>
             <div className="images-client">
