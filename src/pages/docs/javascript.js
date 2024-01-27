@@ -704,7 +704,6 @@ export default function JavaScript() {
                 });
                 `
             }</Pre>
-            <ShareButton setTitle={JavaScript.title} />
             <p>
               Tener JavaScript en un archivo separado es útil por varias
               razones:

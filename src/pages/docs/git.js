@@ -52,8 +52,8 @@ export default function GitDocs() {
           <SectionTitle title="Introducción" />
           <article>
             <p>
-              ¡Bienvenidos de nuevo a la clase 1! En la clase 0, presentamos
-              HTML, CSS y Sass como herramientas que podemos utilizar para crear
+              ¡Bienvenidos de nuevo a la clase! Anteriormente, presentamos HTML,
+              CSS y Sass como herramientas que podemos utilizar para crear
               algunas páginas web básicas. Hoy, aprenderemos sobre el uso de Git
               y GitHub para ayudarnos en el desarrollo de aplicaciones de
               programación web.
@@ -131,10 +131,9 @@ export default function GitDocs() {
                   className="ml-1 text-[#1F6FEB] link"
                   target="_blank"
                 >
-                  aquí
+                  aquí.
                   <ExternalLinkIcon className="link-icon" />
                 </Link>
-                .
                 <ol>
                   <li>
                     Haz clic en el símbolo + en la esquina superior derecha y
@@ -178,10 +177,9 @@ export default function GitDocs() {
                       className="ml-1 text-[#1F6FEB] link"
                       target="_blank" // Abre el enlace en una nueva pestaña
                     >
-                      aquí
+                      aquí.
                       <ExternalLinkIcon className="link-icon" />
                     </Link>
-                    .
                   </li>
                   <li>
                     Haz clic en el botón verde "Code" en la página de tu
@@ -350,7 +348,6 @@ export default function GitDocs() {
           </article>
           <span id="branch"></span>
           <SectionTitle title="Branching (Ramificación)" />
-          <ShareButton setTitle={GitDocs.title} />
           <article>
             <p>
               Después de haber estado trabajando en un proyecto durante algún
@@ -391,10 +388,10 @@ export default function GitDocs() {
                 Ahora, adentrémonos en cómo implementamos realmente el branching
                 en nuestros repositorios de Git:
                 <ol>
-                  <li>
-                    Ejecuta `git branch` para ver en qué rama estás trabajando
-                    actualmente, la cual tendrá un asterisco a la izquierda de
-                    su nombre.
+                  <li className="list-css-span">
+                    Ejecuta<span>git branch</span>para ver en qué rama estás
+                    trabajando actualmente, la cual tendrá un asterisco a la
+                    izquierda de su nombre.
                     <div className="images-client">
                       <img
                         src="/images/git_branch.png"
@@ -437,28 +434,29 @@ export default function GitDocs() {
               Hay algunas características útiles específicas de GitHub que
               pueden ayudarte cuando estás trabajando en un proyecto:
             </p>
-            <ul>
+            <ul className="list-css-span">
               <li>
-                Forking (Bifurcación): Como usuario de GitHub, tienes la
-                capacidad de bifurcar cualquier repositorio al que tengas
+                <span>Forking Bifurcación</span>: Como usuario de GitHub, tienes
+                la capacidad de bifurcar cualquier repositorio al que tengas
                 acceso, lo que crea una copia del repositorio del que eres el
                 propietario. Hacemos esto haciendo clic en el botón "Fork" en la
                 esquina superior derecha.
               </li>
               <li>
-                Pull Requests (Solicitudes de extracción): Una vez que hayas
-                bifurcado un repositorio y hayas realizado algunos cambios en tu
-                versión, es posible que desees solicitar que esos cambios se
-                agreguen a la versión principal del repositorio. Por ejemplo, si
-                quisieras agregar una nueva característica a Bootstrap, podrías
-                bifurcar el repositorio, hacer algunos cambios y luego enviar
-                una solicitud de extracción. Esta solicitud de extracción podría
-                ser evaluada y posiblemente aceptada por las personas que
-                gestionan el repositorio de Bootstrap. Este proceso, en el que
-                las personas realizan algunos cambios y luego solicitan que se
-                fusionen en un repositorio principal, es vital para lo que se
-                conoce como software de código abierto, o software creado por
-                contribuciones de varios desarrolladores.
+                <span>Pull Requests Solicitudes de extracción</span>: Una vez
+                que hayas bifurcado un repositorio y hayas realizado algunos
+                cambios en tu versión, es posible que desees solicitar que esos
+                cambios se agreguen a la versión principal del repositorio. Por
+                ejemplo, si quisieras agregar una nueva característica a
+                Bootstrap, podrías bifurcar el repositorio, hacer algunos
+                cambios y luego enviar una solicitud de extracción. Esta
+                solicitud de extracción podría ser evaluada y posiblemente
+                aceptada por las personas que gestionan el repositorio de
+                Bootstrap. Este proceso, en el que las personas realizan algunos
+                cambios y luego solicitan que se fusionen en un repositorio
+                principal, es vital para lo que se conoce como software de
+                código abierto, o software creado por contribuciones de varios
+                desarrolladores.
               </li>
               <li>
                 GitHub Pages: GitHub Pages es una forma sencilla de publicar un
