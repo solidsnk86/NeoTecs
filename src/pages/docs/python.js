@@ -255,9 +255,10 @@ export default function Python() {
                 e = None
                 `
           }</Pre>
-          <p>
+          <p className="list-css-span">
             Cada una de estas líneas toma el valor a la derecha del signo igual
-            (=) y lo almacena en la variable que se encuentra a la izquierda.
+            <span>=</span>y lo almacena en la variable que se encuentra a la
+            izquierda.
           </p>
           <p>
             A diferencia de algunos otros lenguajes de programación, los tipos

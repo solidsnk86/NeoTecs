@@ -35,15 +35,17 @@ export default function GitDocs() {
               <a href="#commits">Commits (Compromisos o Confirmaciones)</a>
             </li>
             <li>
-              <a href="#selectores-atributos">
+              <a href="#merge-conflicts">
                 Merge Conflicts (Conflictos de Fusión)
               </a>
             </li>
             <li>
-              <a href="#branching">Branching</a>
+              <a href="#branching">Branching (Ramificación)</a>
               <ul>
                 <li>
-                  <a href="#features">Más Funcionalidades de GitHub</a>
+                  <a href="#más-características-de-github">
+                    Más Funcionalidades de GitHub
+                  </a>
                 </li>
               </ul>
             </li>
@@ -236,9 +238,7 @@ export default function GitDocs() {
               </li>
             </ul>
           </article>
-
-          <span id="commits"></span>
-          <SectionTitle title="Commits (Compromisos o Confirmaciones)" />
+          <SectionTitle title="Commits" />
           <article>
             <ul className="list-css-span">
               <li>
@@ -275,7 +275,7 @@ export default function GitDocs() {
               </li>
             </ul>
           </article>
-          <SectionTitle title="Merge Conflicts (Conflictos de Fusión)" />
+          <SectionTitle title="Merge Conflicts" />
           <article>
             <ul>
               <li>
@@ -305,16 +305,16 @@ export default function GitDocs() {
               e = 5
               `
             }</Pre>
-            <ul>
+            <ul className="list-css-span">
               <li>
-                En el ejemplo anterior, agregaste la línea b = 2 y otra persona
-                escribió b = 3, y ahora debemos elegir una de esas para
-                mantener. El número largo es un hash que representa la
-                confirmación que está entrando en conflicto con tus ediciones.
-                Muchos editores de texto también ofrecerán resaltado y opciones
-                simples como "aceptar actual" o "aceptar entrante" que te
-                ahorran el tiempo de eliminar las líneas agregadas
-                anteriormente.
+                En el ejemplo anterior, agregaste la línea<span>b = 2</span>y
+                otra persona escribió<span>b = 3</span>, y ahora debemos elegir
+                una de esas para mantener. El número largo es un hash que
+                representa la confirmación que está entrando en conflicto con
+                tus ediciones. Muchos editores de texto también ofrecerán
+                resaltado y opciones simples como "aceptar actual" o "aceptar
+                entrante" que te ahorran el tiempo de eliminar las líneas
+                agregadas anteriormente.
               </li>
               <li>
                 Otro comando de Git potencialmente útil es git log, que te
@@ -426,7 +426,6 @@ export default function GitDocs() {
               </li>
             </ul>
           </article>
-          <span id="features"></span>
           <SectionTitle title="Más Características de GitHub" />
           <article>
             <p>
