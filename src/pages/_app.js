@@ -7,7 +7,7 @@ import { DoNotCopy } from '../components/DoNotCopy';
 import { NeoTecsIcon } from '../components/Icons/NeoTecsIcon';
 import { CookieNotice } from '../components/CookiesNotice';
 
-function MyApp({ Component, pageProps, router, children }) {
+function MyApp({ Component, pageProps, router }) {
   const title = Component.title || 'Neotecs - Informática';
   const description =
     'Aprende programación en este curso gratuito de NeoTecs, que abarca desde conceptos básicos hasta niveles avanzados. Además, disponemos de documentación para facilitar la configuración rápida y sencilla de tu WiFi.';
