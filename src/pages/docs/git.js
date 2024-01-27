@@ -40,7 +40,7 @@ export default function GitDocs() {
               </a>
             </li>
             <li>
-              <a href="#branch">Branching (Ramificación)</a>
+              <a href="#branching">Branching</a>
               <ul>
                 <li>
                   <a href="#features">Más Funcionalidades de GitHub</a>
@@ -48,7 +48,6 @@ export default function GitDocs() {
               </ul>
             </li>
           </ol>
-          <span id="introduccion"></span>
           <SectionTitle title="Introducción" />
           <article>
             <p>
@@ -347,8 +346,7 @@ export default function GitDocs() {
               </li>
             </ul>
           </article>
-          <span id="branch"></span>
-          <SectionTitle title="Branching (Ramificación)" />
+          <SectionTitle title="Branching" />
           <article>
             <p>
               Después de haber estado trabajando en un proyecto durante algún
