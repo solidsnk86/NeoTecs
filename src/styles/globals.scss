@@ -168,7 +168,6 @@ a {
 
 @keyframes add-shadow {
   to {
-    box-shadow: 0 5px 5px -3px rgba(255, 255, 255, 0.25);
     background: var(--bg-card);
   }
 }
@@ -381,14 +380,14 @@ textarea {
   .scroll-bar::-webkit-scrollbar {
     width: 10px;
     background-color: transparent;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px;
   }
   .scroll-bar::-webkit-scrollbar-thumb {
     background-color: #0f0f0f;
     border: 1px solid #8e9099;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 }
 
