@@ -125,14 +125,14 @@ export default function GitDocs() {
               <li>
                 Comencemos creando un nuevo repositorio en línea. Asegúrate de
                 tener configurada una cuenta de GitHub. Si aún no tienes una,
-                puedes crear una{' '}
+                puedes crear una
                 <Link
                   href="https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"
-                  className="ml-1 text-[#1F6FEB] link"
+                  className="mx-1 text-[#1F6FEB] link"
                   target="_blank"
                 >
-                  aquí.
-                  <ExternalLinkIcon className="link-icon" />
+                  aquí
+                  <ExternalLinkIcon className="link-icon" />.
                 </Link>
                 <ol>
                   <li>
@@ -170,15 +170,15 @@ export default function GitDocs() {
                 <ol className="list-css-span">
                   <li>
                     Asegúrate de tener Git instalado en tu computadora
-                    escribiendo <code>git</code> en tu terminal. Si no está
-                    instalado, puedes descargarlo{' '}
+                    escribiendo<span>git</span>en tu terminal. Si no está
+                    instalado, puedes descargarlo
                     <Link
                       href="https://git-scm.com/downloads"
-                      className="ml-1 text-[#1F6FEB] link"
-                      target="_blank" // Abre el enlace en una nueva pestaña
+                      className="mx-1 text-[#1F6FEB] link"
+                      target="_blank"
                     >
-                      aquí.
-                      <ExternalLinkIcon className="link-icon" />
+                      aquí
+                      <ExternalLinkIcon className="link-icon" />.
                     </Link>
                   </li>
                   <li>
@@ -193,9 +193,9 @@ export default function GitDocs() {
                       />
                     </div>
                   </li>
-                  <li>
-                    En tu terminal, ejecuta{' '}
-                    <code>git clone &lt;URL del repositorio&gt;</code>. Esto
+                  <li className="list-css-span">
+                    En tu terminal, ejecuta
+                    <span>git clone &lt;URL del repositorio&gt;</span>. Esto
                     descargará el repositorio a tu computadora. Si no creaste un
                     README, es posible que obtengas la advertencia: "You appear
                     to have cloned into an empty repository" (Parece que has
@@ -483,12 +483,12 @@ export default function GitDocs() {
                     encontrar tu sitio.
                   </li>
                 </ol>
-                <p>
-                  ¡Eso es todo para esta clase! ¡La próxima vez, estaremos
-                  viendo Python!
-                </p>
               </li>
             </ul>
+            <p>
+              ¡Eso es todo para esta clase! ¡La próxima vez, estaremos viendo
+              Python!
+            </p>
           </article>
           <ShareButton setTitle={GitDocs.title} />
         </div>
