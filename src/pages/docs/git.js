@@ -85,11 +85,12 @@ export default function GitDocs() {
                   alt="Cambio de archivos Git."
                 />
               </div>
-              <li>
+              <li className="list-css-span">
                 Permitiéndonos sincronizar fácilmente el código entre diferentes
                 personas que trabajan en el mismo proyecto, al permitir que
-                varias personas obtengan información (pull) y envíen información
-                (push) a un repositorio almacenado en la web.
+                varias personas obtengan información<span>pull</span>y envíen
+                información
+                <span>push</span>a un repositorio almacenado en la web.
               </li>
               <div className="images-client">
                 <img
@@ -134,16 +135,16 @@ export default function GitDocs() {
                   aquí
                   <ExternalLinkIcon className="link-icon" />.
                 </Link>
-                <ol>
+                <ol className="list-css-span">
                   <li>
-                    Haz clic en el símbolo + en la esquina superior derecha y
-                    luego selecciona "Nuevo repositorio".
+                    Haz clic en el símbolo<span>+</span>en la esquina superior
+                    derecha y luego selecciona<span>"Nuevo repositorio"</span>.
                   </li>
                   <li>
                     Crea un nombre para el repositorio que describa tu proyecto.
                   </li>
                   <li>
-                    (Opcional) Proporciona una descripción para tu repositorio.
+                    Proporciona una descripción para tu repositorio. (Opcional).
                   </li>
                   <li>
                     Elige si el repositorio debe ser público (visible para
@@ -151,8 +152,8 @@ export default function GitDocs() {
                     y otros a quienes concedas acceso específicamente).
                   </li>
                   <li>
-                    (Opcional) Decide si deseas agregar un README, que es un
-                    archivo que describe tu nuevo repositorio.
+                    Decide si deseas agregar un README, que es un archivo que
+                    describe tu nuevo repositorio. (Opcional)
                   </li>
                 </ol>
               </li>
@@ -209,16 +210,16 @@ export default function GitDocs() {
                     </div>
                   </li>
                   <li>
-                    Ejecuta el comando <code>ls</code>, que lista todos los
+                    Ejecuta el comando<span>ls</span>, que lista todos los
                     archivos y carpetas en tu directorio actual. Deberías ver el
                     nombre del repositorio que acabas de clonar.
                   </li>
                   <li className="list-css-span">
-                    Ejecuta <code>cd &lt;nombre del repositorio&gt;</code> para
+                    Ejecuta<span>cd &lt;nombre del repositorio&gt;</span>para
                     cambiar al directorio de esa carpeta.
                   </li>
                   <li>
-                    Ejecuta <code>touch &lt;nombre del nuevo archivo&gt;</code>{' '}
+                    Ejecuta<span>touch &lt;nombre del nuevo archivo&gt;</span>
                     para crear un nuevo archivo en esa carpeta. Ahora puedes
                     realizar ediciones en ese archivo. Alternativamente, puedes
                     abrir la carpeta en tu editor de texto y agregar nuevos
@@ -226,10 +227,10 @@ export default function GitDocs() {
                   </li>
                   <li>
                     Para informar a Git que debe realizar un seguimiento del
-                    nuevo archivo que has creado, ejecuta{' '}
-                    <code>git add &lt;nombre del nuevo archivo&gt;</code> para
-                    realizar un seguimiento de ese archivo específico, o{' '}
-                    <code>git add .</code> para realizar un seguimiento de todos
+                    nuevo archivo que has creado, ejecuta
+                    <span>git add &lt;nombre del nuevo archivo&gt;</span>para
+                    realizar un seguimiento de ese archivo específico, o
+                    <span>git add .</span>para realizar un seguimiento de todos
                     los archivos dentro de ese directorio.
                   </li>
                 </ol>
