@@ -40,7 +40,7 @@ export default function Scraping() {
                 <h1 className="flex justify-center mx-auto text-5xl underline mb-3 mt-10">
                     Web Scraping
                 </h1>
-                <p className="my-10">
+                <p className="my-10 text-share">
                     En este segmento, exploraremos el web scraping, una técnica que nos
                     permite extraer información de páginas web. En este ejemplo, llevaré a
                     cabo el scraping en mi propio portafolio web. Es importante utilizar
