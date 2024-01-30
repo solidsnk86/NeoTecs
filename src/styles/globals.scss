@@ -452,7 +452,6 @@ textarea {
 
 .accept-button {
   cursor: pointer;
-  margin-left: 10px;
   background-color: var(--button-variant);
   color: var(--color-surface-variant);
   border: none;
@@ -460,6 +459,10 @@ textarea {
   border-radius: 5px;
   outline: 1px solid var(--color-outline);
   outline-offset: 2px;
+}
+
+.accept-button:hover {
+  outline: 2px solid var(--color-green);
 }
 
 @keyframes down-to-top {

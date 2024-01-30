@@ -22,7 +22,12 @@ export const CookieNotice = () => {
   }
 
   return (
-    <div className="cookie-notice">
+    <div className="cookie-notice xl:flex">
+      <img
+        src="/images/cookie_3d_1-removebg.png"
+        alt="Imagen de una galleta deliciosa (cookies)"
+        className="inline w-10 h-10"
+      />
       <p className="text-xs my-1">
         Este sitio web almacena cookies en tu computadora. Estas cookies se
         utilizan para recopilar información sobre cómo interactúas con nuestro
@@ -31,17 +36,22 @@ export const CookieNotice = () => {
         análisis y métricas sobre nuestros visitantes, tanto en este sitio web
         como en otros medios. Para obtener más información sobre las cookies que
         utilizamos, consulta nuestra
-        <Link href="docs/politicas-privacidad" className="mx-1 underline">
+        <Link
+          href="docs/politicas-privacidad"
+          className="mx-1 underline hover:text-sky-500"
+        >
           Política de Privacidad.
           <ExternalLink className="link-icon" />
         </Link>
       </p>
-      <button
-        onClick={handleAcceptCookies}
-        className="accept-button font-semibold text-xs float-right"
-      >
-        Aceptar
-      </button>
+      <div className="xl:inline mt-[10px]">
+        <button
+          onClick={handleAcceptCookies}
+          className="accept-button font-semibold text-xs float-right"
+        >
+          Aceptar
+        </button>
+      </div>
     </div>
   );
 };
