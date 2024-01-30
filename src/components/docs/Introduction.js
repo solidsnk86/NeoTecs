@@ -37,7 +37,7 @@ export const Introduction = () => {
       </ol>
       <span id="introduccion" />
       <SectionTitle title="Introducción" />
-      <p>
+      <p className="text-share">
         En este curso, voy a enseñar algo de lo que aprendí en Harvard Edx y
         adentrándonos en el diseño y creación de aplicaciones web.
         Desarrollaremos nuestras habilidades de diseño web trabajando en varios

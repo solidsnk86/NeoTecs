@@ -392,7 +392,9 @@ export default function HtmlDoc() {
       <p className="text-text-primary">
         ¡Eso concluye nuestro contenido por aquí! ツ
       </p>
-      <ShareButton setTitle={HtmlDoc.title} />
+      <ShareButton setTitle={HtmlDoc.title} setText={textDescription} />
     </main>
   );
 }
+
+const textDescription = document.querySelector('.text-share').textContent;

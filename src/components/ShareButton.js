@@ -1,11 +1,11 @@
 import { ShareIcon } from 'lucide-react';
 
-export function ShareButton({ setTitle }) {
+export function ShareButton({ setTitle, setText }) {
   const shareButton = () => {
     if (navigator.share) {
       navigator.share({
         title: setTitle,
-        text: 'No te pierdas este curso gratuito donde te enseño a programar con ejemplos y ejercicios prácticos, también incluye tutorial para que entiendsa como configurar tu antena Wifi 📡!!',
+        text: setText,
         url: window.location.href,
       });
     }
