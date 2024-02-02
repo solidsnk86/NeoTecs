@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Nav } from '../../components/Nav';
 import { ArrowLeftIcon } from 'lucide-react';
@@ -8,8 +8,9 @@ import { AlertTriangle } from 'lucide-react';
 import { ExternalLinkIcon } from 'lucide-react';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-
+import HeaderTitle from '../../components/HeaderTitlte';
 export default function Scraping() {
+    const [disabled, setDisabled] = useState(false);
     const [scrape, setScraping] = useState({
         titles: [],
         paragraphs: [],
@@ -28,6 +29,7 @@ export default function Scraping() {
         } catch (error) {
             console.error('Error al realizar el raspado:', error);
         }
+        setDisabled(true);
     };
 
     return (
@@ -37,9 +39,8 @@ export default function Scraping() {
                 <span onClick={() => history.back()}>
                     <ArrowLeftIcon className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-6 xl:top-14 top-12 left-2 fixed mt-3" />
                 </span>
-                <h1 className="flex justify-center mx-auto text-5xl underline mb-3 mt-10">
-                    Web Scraping
-                </h1>
+                <HeaderTitle className="text-5xl">Web Scraping</HeaderTitle>
+                <hr className="border-text-primary" />
                 <p className="my-10 text-share">
                     En este segmento, exploraremos el web scraping, una técnica que nos
                     permite extraer información de páginas web. En este ejemplo, llevaré a
@@ -59,6 +60,15 @@ export default function Scraping() {
                         levantado el servidor por defecto de Flask, que sería algo así:
                         <span className="mx-1">http://127.0.0.1:5000/api/scrape</span>
                     </p>
+                </div>
+                <div className="justify-center mx-auto my-6">
+                    <button
+                        onClick={handleScrape}
+                        disabled={disabled}
+                        className="border p-3 bg-zinc-800/95 dark:border-zinc-600/75 cursor-not-allowed rounded dark:border-zinc-800 border-zinc-200 hover:brightness-200 transition-all"
+                    >
+                        Hacer Scraping
+                    </button>
                 </div>
                 <div className="my-10">
                     <p>

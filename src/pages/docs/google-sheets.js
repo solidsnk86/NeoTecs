@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Nav } from '../../components/Nav';
 import { LectureNav } from '../../components/docs/LectureNav';
 import { NavSwitch } from '../../components/docs/NavSwicth';
@@ -8,53 +7,13 @@ import { Footer } from '../../components/Footer';
 import { CalendarClockIcon } from 'lucide-react';
 import { WhatsApp } from '@mui/icons-material';
 import { AtroposBox } from '../../components/AtroposBox';
+import { SectionTitle } from '../../components/SectionTitle';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
-import { SectionTitle } from '../../components/SectionTitle';
+import DATA_FETCH from '../../components/CsvDataFetch';
 
 export default function CsvSheets() {
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          'https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJ2ICoQMLS-Dfem1ha7yjJQKMgTbZu9PExFjGh2rh6Pj4sgYTl2dBpJw02PQRckCG0SSpaiL6Vwwl/pub?output=csv',
-        );
-        const csv = await response.text();
-        const parsedItems = csv
-          .split('\n')
-          .slice(1)
-          .map((row) => {
-            const [
-              id,
-              name,
-              description,
-              image,
-              price,
-              posted,
-              isOnSale,
-              logo,
-            ] = row.split(',');
-            return {
-              id,
-              name,
-              description,
-              image,
-              price: Number(price),
-              posted,
-              isOnSale,
-              logo,
-            };
-          });
-        setItems(parsedItems);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const items = DATA_FETCH();
 
   const sendWhatsapp = (id, price) => {
     const wapNumber = '+5492604586538';
