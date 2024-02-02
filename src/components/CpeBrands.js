@@ -38,7 +38,7 @@ export const CpeBrands = ({ inline }) => {
           className={`p-2 w-full flex justify-center items-center duration-100 ${
             isActive(link)
               ? 'bg-[#484848]'
-              : 'hover:bg-[#7a7a7a] hover:opacity-90'
+              : 'hover:bg-[#474747] hover:opacity-90'
           }`}
           title={link.title}
         >
