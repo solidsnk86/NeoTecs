@@ -65,7 +65,7 @@ export default function Scraping() {
                     <button
                         onClick={handleScrape}
                         disabled={disabled}
-                        className="border p-3 bg-zinc-800/95 dark:border-zinc-600/75 cursor-not-allowed rounded dark:border-zinc-800 border-zinc-200 hover:brightness-200 transition-all"
+                        className="border p-3 bg-zinc-300 dark:bg-zinc-800/95 dark:border-zinc-600/75 cursor-not-allowed rounded dark:border-zinc-800 border-zinc-00/10 hover:opacity-[.6] transition-all"
                     >
                         Hacer Scraping
                     </button>
