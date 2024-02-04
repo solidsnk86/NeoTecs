@@ -3,15 +3,6 @@ import { StepForward, FileText, FootprintsIcon, Code2 } from 'lucide-react';
 export const githubMarkdownURL =
   'https://raw.githubusercontent.com/solidsnk86/neo-scraper/master/LEEME.md';
 
-export const currencyGoogleSheetsURL =
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQXKUu36nLoEr2X2cXCLAy68aqjUKVavdWplNBUQaGhfYV0WifoyMlCXs3-vfLijDhRDka2jjHsLIsi/pub?output=csv';
-
-export const googleSheetURL =
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJ2ICoQMLS-Dfem1ha7yjJQKMgTbZu9PExFjGh2rh6Pj4sgYTl2dBpJw02PQRckCG0SSpaiL6Vwwl/pub?output=csv';
-
-const user = 'AIzaSyCu_A2nFDYi0TWRgASZJz89Zkuk_yIGhLE';
-export const youTube = user;
-
 export default function sendWhatsapp(id, price) {
   const wapNumber = '+5492604586538';
   const wapMessage = encodeURIComponent(
@@ -20,6 +11,15 @@ export default function sendWhatsapp(id, price) {
   const wapUrl = `https://wa.me/${wapNumber}?text=${wapMessage}`;
   window.open(wapUrl);
 }
+
+export const currencyGoogleSheetsURL =
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQXKUu36nLoEr2X2cXCLAy68aqjUKVavdWplNBUQaGhfYV0WifoyMlCXs3-vfLijDhRDka2jjHsLIsi/pub?output=csv';
+
+export const googleSheetURL =
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJ2ICoQMLS-Dfem1ha7yjJQKMgTbZu9PExFjGh2rh6Pj4sgYTl2dBpJw02PQRckCG0SSpaiL6Vwwl/pub?output=csv';
+
+const user = 'AIzaSyCu_A2nFDYi0TWRgASZJz89Zkuk_yIGhLE';
+export const youTube = user;
 
 export const cardContent = [
   {

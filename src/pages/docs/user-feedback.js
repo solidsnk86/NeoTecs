@@ -1,13 +1,9 @@
 import { Nav } from '../../components/Nav';
-import { LectureNav } from '../../components/docs/LectureNav';
-import { NavSwitch } from '../../components/docs/NavSwicth';
-import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import { Footer } from '../../components/Footer';
-
+import { FeedbackData } from '../../components/FeedDataFecth';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
-import { FeedbackData } from '../../components/FeedDataFecth';
 
 export default function UserFeedback() {
   return (

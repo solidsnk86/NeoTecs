@@ -60,7 +60,7 @@ export const FeedbackData = () => {
         <>
             {items.map((item) => (
                 <div
-                    className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 p-6 rounded-md shadow-md my-10 mx-auto xl:w-1/2"
+                    className="bg-white dark:bg-zinc-800/50 border border-gray-300 dark:border-zinc-700 p-6 rounded-md shadow-md my-10 mx-auto xl:w-1/2"
                     key={item.id}
                 >
                     <div className="text-gray-600 dark:text-gray-300 text-sm xl:text-base mb-4">

@@ -13,11 +13,6 @@ Please read through the following guidelines.
 There’s several ways to contribute, not just by writing code.
 If you have questions, see [support][].
 
-### Financial support
-
-It’s possible to support us financially by becoming a backer or sponsor through
-[Open Collective][collective].
-
 ### Improve docs
 
 As a user you’re perfect for helping us improve our docs.
