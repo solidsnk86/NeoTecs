@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { googleSheetURL } from './Constants';
 
 export default function DataFetch() {
   const [data, setData] = useState([]);
@@ -6,9 +7,7 @@ export default function DataFetch() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          'https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJ2ICoQMLS-Dfem1ha7yjJQKMgTbZu9PExFjGh2rh6Pj4sgYTl2dBpJw02PQRckCG0SSpaiL6Vwwl/pub?output=csv',
-        );
+        const response = await fetch(googleSheetURL);
         const csv = await response.text();
         const parsedData = csv
           .split('\n')

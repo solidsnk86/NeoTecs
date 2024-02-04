@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { githubMarkdownURL } from '../components/Constants'
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
@@ -11,9 +12,6 @@ const MarkdownRenderer = () => {
     const [markdownContent, setMarkdownContent] = useState('');
 
     useEffect(() => {
-        const githubMarkdownURL =
-            'https://raw.githubusercontent.com/solidsnk86/neo-scraper/master/LEEME.md';
-
         fetch(githubMarkdownURL)
             .then((response) => response.text())
             .then((data) => setMarkdownContent(data))

@@ -1,10 +1,10 @@
+import { currencyGoogleSheetsURL } from '../../components/Constants';
+
 export default async function handlerCurrency(req, res) {
   'use-client';
   try {
     const fetchData = async () => {
-      const response = await fetch(
-        'https://docs.google.com/spreadsheets/d/e/2PACX-1vQXKUu36nLoEr2X2cXCLAy68aqjUKVavdWplNBUQaGhfYV0WifoyMlCXs3-vfLijDhRDka2jjHsLIsi/pub?output=csv',
-      );
+      const response = await fetch(currencyGoogleSheetsURL);
 
       if (!response.ok) {
         throw new Error(`Failed to fetch data. Status: ${response.status}`);

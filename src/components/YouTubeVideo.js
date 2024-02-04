@@ -5,7 +5,7 @@ export function YouTubeVideo({ video, cpe, children }) {
         src={`https://www.youtube.com/embed/${video}`}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen=""
+        allowFullScreen={true}
         className="rounded-xl flex m-auto w-[100%] md-:w-[100%]"
         height={200}
       />

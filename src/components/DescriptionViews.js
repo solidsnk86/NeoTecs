@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import FormatDate from './FormatDate';
-import { apiKey } from './utils/YouTubeApi';
+import { youTube } from '../components/Constants';
 
 export const DescriptionViews = ({ videoId }) => {
   const [views, setViews] = useState(0);
@@ -10,7 +10,7 @@ export const DescriptionViews = ({ videoId }) => {
     const getVideoDetails = async () => {
       try {
         const response = await fetch(
-          `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${videoId}&key=${apiKey}`,
+          `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${videoId}&key=${youTube}`,
         );
         if (!response.ok) {
           throw new Error('Error al obtener datos');

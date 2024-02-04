@@ -30,6 +30,7 @@
     --mikrotik-icon: #293239;
     --bg-card: #f7f9f9;
     --second-color-text: #9c9ca4;
+    --image-shadow: #bbbbc0;
 
     --color-code: #6f43c0;
     --color-pre-bg: #21242a;
@@ -68,6 +69,7 @@
     --mikrotik-icon: #293239;
     --bg-card: #16181c;
     --second-color-text: #9c9ca4;
+    --image-shadow: #16181c;
 
     --color-code: #d3bbff;
     --color-red: #ffb4aa;
@@ -139,7 +141,7 @@ a {
   height: auto;
   object-fit: cover;
   z-index: -99;
-  filter: drop-shadow(3px 6px 9px #333);
+  filter: drop-shadow(3px 6px 9px var(--image-shadow));
 
   view-timeline-name: --image;
   view-timeline-axis: block;

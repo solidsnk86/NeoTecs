@@ -8,21 +8,13 @@ import { CalendarClockIcon } from 'lucide-react';
 import { WhatsApp } from '@mui/icons-material';
 import { AtroposBox } from '../../components/AtroposBox';
 import { SectionTitle } from '../../components/SectionTitle';
+import sendWhatsapp from '../../components/Constants';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 import DATA_FETCH from '../../components/CsvDataFetch';
 
 export default function CsvSheets() {
   const items = DATA_FETCH();
-
-  const sendWhatsapp = (id, price) => {
-    const wapNumber = '+5492604586538';
-    const wapMessage = encodeURIComponent(
-      `Buenas estoy interesado en el dibujo de ${id}! El cual tiene un importe de U$D ${price}. ¿El envío está incluido?`,
-    );
-    const wapUrl = `https://wa.me/${wapNumber}?text=${wapMessage}`;
-    window.open(wapUrl);
-  };
 
   return (
     <TitlesContextProvider>
@@ -63,9 +55,10 @@ export default function CsvSheets() {
             <article className="bg-[#F7F9F9] dark:bg-[#16181C] border border-zinc-100/80 dark:border-zinc-800 rounded-xl text-center p-3">
               <p>¡Bienvenidos a ésta sección de arte y dibujo!</p>
               <p>
-                Es importante tener en cuenta que los dibujos presentados aquí
-                son solo para fines de ejemplo y están protegidos por derechos
-                de autor. Apreciamos y respetamos el trabajo artístico de mi
+                Es importante tener en cuenta que los dibujos presentados aquí y
+                los precios son subjetivos y es una desmostración, son solo para
+                fines de ejemplo y los dibujos están protegidos por derechos de
+                autor. Apreciamos y respetamos el trabajo artístico de mi
                 hermano el creador. Ahora, sumerjámonos juntos en el fascinante
                 mundo del arte, la creatividad y la tecnología. ¡Sigamos
                 explorando!
