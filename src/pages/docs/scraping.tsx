@@ -39,7 +39,7 @@ export default function Scraping() {
                 <span onClick={() => history.back()}>
                     <ArrowLeftIcon className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-6 xl:top-14 top-12 left-2 fixed mt-3" />
                 </span>
-                <HeaderTitle className="text-5xl">Web Scraping</HeaderTitle>
+                <HeaderTitle className="text-5xl my-10">Web Scraping</HeaderTitle>
                 <hr className="border-text-primary" />
                 <p className="my-10 text-share">
                     En este segmento, exploraremos el web scraping, una técnica que nos
