@@ -307,9 +307,11 @@ const ReviewCard = ({
 export const MarqueeLogos = () => {
     return (
         <section className="flex flex-col flex-wrap items-center justify-center my-48">
-            <p className=" text-xl font-bold text-center text-text-primary">
-                Lenguajes que vas aprender a continuación
-            </p>
+            <div className=' mb-10'>
+                <p className=" text-xl font-bold text-center text-text-primary">
+                    Lenguajes que vas aprender a continuación
+                </p>
+            </div>
             <div className='relative flex flex-col items-center justify-center w-full h-full gap-4 py-20 overflow-hidden rounded-lg bg-background'>
                 <Marquee pauseOnHover className='[--duration:40s]'>
                     {reviews.map((review) => (

@@ -139,7 +139,7 @@ export default function Home() {
       </HomeBlock>
 
       <HomeBlock className="bg-[#09090b] dark:bg-[#ffffff]">
-        <HomeBlockTitle>Aprende Programación Ahora</HomeBlockTitle>
+        <HomeBlockTitle>Aprende Programación</HomeBlockTitle>
         <div className="border dark:border-zinc-800 p-3 rounded-xl shadow-sm shadow-slate-200 dark:shadow-none">
           <p className="text-md space-y-3 font-mono">
             Principios Báscicos de programación
