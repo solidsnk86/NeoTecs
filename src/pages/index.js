@@ -5,15 +5,9 @@ import { Footer } from '../components/Footer';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import { MarqueeLogos } from '../sections/Brands';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
-import {
-  PlayIcon,
-  Wifi,
-  StepForward,
-  FileText,
-  FootprintsIcon,
-  Code2,
-} from 'lucide-react';
+import { PlayIcon, Wifi } from 'lucide-react';
 import { CpeBrands } from '../components/CpeBrands';
+import { cardContent } from '../components/Constants';
 
 const HomeBlock = ({ children }) => {
   return (
