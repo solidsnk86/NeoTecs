@@ -7,7 +7,7 @@ import { MarqueeLogos } from '../sections/Brands';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { PlayIcon, Wifi } from 'lucide-react';
 import { CpeBrands } from '../components/CpeBrands';
-import { cardContent } from '../components/Constants';
+import { cardContent, aboutNeo } from '../components/Constants';
 
 const HomeBlock = ({ children }) => {
   return (
@@ -88,26 +88,17 @@ export default function Home() {
             Principios Báscicos de programación
           </p>
           <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full" />
-          <p className="mt-4 text-text-second text-sm">
-            El curso de NeoTecs se enfoca en el diseño e implementación
-            avanzados de aplicaciones web con Python, JavaScript y SQL,
-            utilizando frameworks como Django, React y Bootstrap. Los temas
-            incluyen diseño de bases de datos, escalabilidad, seguridad y
-            experiencia de usuario. Los estudiantes adquieren habilidades en la
-            escritura de APIs, creación de interfaces interactivas y uso de
-            servicios en la nube como GitHub y Netlify para diseñar e
-            implementar aplicaciones web.
-          </p>
+          <p className="mt-4 text-text-second ">{aboutNeo}</p>
         </div>
-        <p className="my-10">
-          <Link href="/docs/program">
-            <ShimmerButton shimmerDuration="1.8s" size="large">
-              Comencemos
-            </ShimmerButton>
-          </Link>
-        </p>
       </HomeBlock>
       <MarqueeLogos />
+      <div className="my-20 justify-center mx-auto flex">
+        <Link href="/docs/program">
+          <ShimmerButton shimmerDuration="1.8s" size="large">
+            Comencemos
+          </ShimmerButton>
+        </Link>
+      </div>
       <Footer />
     </main>
   );

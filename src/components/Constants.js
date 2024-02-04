@@ -71,3 +71,6 @@ export const cardContent = [
       'Explico los conceptos de programación paso a paso, con ejemplos y ejercicios que te ayudarán a comprenderlos a fondo.',
   },
 ];
+
+export const aboutNeo =
+  'El curso de NeoTecs se enfoca en el diseño e implementación avanzados de aplicaciones web con Python, JavaScript y SQL, utilizando frameworks como Django, React y Bootstrap. Los temas incluyen diseño de bases de datos, escalabilidad, seguridad y experiencia de usuario. Los estudiantes adquieren habilidades en la escritura de APIs, creación de interfaces interactivas y uso de servicios en la nube como GitHub y Netlify para diseñar eimplementar aplicaciones web.';
