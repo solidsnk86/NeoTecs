@@ -32,7 +32,10 @@ export const Introduction = () => {
           </ul>
         </li>
         <li>
-          <a href="#cheat">Cheat Sheet HTML</a>
+          <a href="#meta-tags">Meta Tags</a>
+        </li>
+        <li>
+          <a href="#cheat-sheet-html">Cheat Sheet HTML</a>
         </li>
       </ol>
       <span id="introduccion" />

@@ -282,7 +282,61 @@ export default function HtmlDoc() {
       <div className="images-client">
         <img src="/images/form.png" />
       </div>
-      <span id="cheat" />
+      <SectionTitle title="Meta Tags" />
+      <article className="list-css-span">
+        <p>
+          Las etiquetas<span>{'<meta>'}</span>en HTML se utilizan para
+          proporcionar información adicional sobre la página web. Estas
+          etiquetas no tienen contenido visible directo en la página, pero son
+          interpretadas por los navegadores web y otros servicios en línea para
+          diversos propósitos. Algunas de las funciones más comunes de las
+          etiquetas<span>{'<meta>'}</span>incluyen:
+        </p>
+        <ol>
+          <li>
+            Descripción de la Página
+            <span>{'<meta name="description" content="..." />'}</span>:
+            Proporciona una breve descripción del contenido de la página. Los
+            motores de búsqueda a menudo utilizan esta descripción en sus
+            resultados.
+          </li>
+          <li>
+            Autor<span>{'<meta name="author" content="..." />'}</span>: Indica
+            el autor de la página.
+          </li>
+          <li>
+            Etiquetas Open Graph
+            <span>{'<meta property="og:..." content="..." />'}</span>: Se
+            utilizan para controlar cómo se muestra el contenido de una página
+            cuando se comparte en redes sociales. Esto incluye la imagen, el
+            título, la descripción, etc.
+          </li>
+          <li>
+            Íconos
+            <span>
+              {
+                '<link rel="shortcut icon" href="..." /> y <link rel="apple-touch-icon" href="..." />'
+              }
+            </span>
+            : Establecen los íconos que se mostrarán en la pestaña del navegador
+            y en dispositivos Apple, respectivamente.
+          </li>
+          <li>
+            Color de Tema
+            <span>{'<meta name="theme-color" content="..." />'}</span>: Define
+            el color de tema principal de la página web, que puede influir en la
+            apariencia de la interfaz del navegador en dispositivos móviles. En
+            definitiva esto cambia el color de la pestaña del navegador en la
+            cual se está visualizando la página.
+          </li>
+          <li>
+            Tarjeta de Twitter
+            <span>{'<meta name="twitter:..." content="..." />'}</span>: Similar
+            a Open Graph, pero específico para Twitter. Permite personalizar
+            cómo se muestra el contenido cuando se comparte en esta plataforma.
+          </li>
+        </ol>
+      </article>
       <SectionTitle title="Cheat Sheet HTML" />
       <ul>
         <li>
