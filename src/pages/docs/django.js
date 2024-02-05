@@ -368,7 +368,15 @@ export default function DjangoDocs() {
                   <span>mysite/init.py</span>: Un archivo vacío que le dice a
                   Python que este directorio debe considerarse un paquete
                   Python. Si eres un principiante en Python, lee más sobre
-                  paquetes en la documentación oficial de Python.
+                  paquetes en la documentación oficial de
+                  <Link
+                    href="https://python.org/"
+                    className="mx-[3px] text-[#0C4B33] link"
+                  >
+                    Python
+                    <ExternalLinkIcon className="link-icon" />
+                  </Link>
+                  .
                 </li>
                 <li>
                   <span>mysite/settings.py</span>: Configuración para este
@@ -901,6 +909,25 @@ export default function DjangoDocs() {
               de nuestros archivos HTML. Este contexto toma la forma de un
               diccionario de Python. Ahora, podemos crear un archivo
               <span>saludo.html</span>:
+            </p>
+            <Pre lang="html">{
+              /*html */ `
+              <!DOCTYPE html>
+              <html lang="en">
+                  <head>
+                      <title>Hello</title>
+                  </head>
+                  <body>
+                      <h1>Hello, {{ name }}!</h1>
+                  </body>
+              </html>
+              `
+            }</Pre>
+            <p>
+              Te habrás dado cuenta de que hemos utilizado una sintaxis nueva:
+              doble llaves. Esta sintaxis nos permite acceder a las variables
+              que hemos proporcionado en el argumento de contexto. Ahora, cuando
+              lo probamos:
             </p>
           </article>
           <ShareButton setTitle={DjangoDocs.title} />
