@@ -112,7 +112,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
       <aside className="youtube-aside inline-flex space-x-[10px] xl:flex xl:space-x-3 xl:left-0 xl:relative xl:scale-[1] lg:flex lg:space-x-1 lg:scale-[0.9] lg:relative lg:left-[-30px] video-likes">
         <div>
           <p
-            className="relative top-[6px] mx-1 font-bold px-2 text-text-variant py-1 rounded-full bg-button-variant cursor-pointer hover:opacity-80"
+            className="relative top-[7px] mx-1 font-bold px-2 text-text-variant py-1 rounded-full bg-button-variant cursor-pointer hover:opacity-80"
             onClick={suscribeButton}
           >
             Suscríbete
