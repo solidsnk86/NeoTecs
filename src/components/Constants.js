@@ -74,3 +74,5 @@ export const cardContent = [
 
 export const aboutNeo =
   'El curso de NeoTecs se enfoca en el diseño e implementación de aplicaciones web con Python, JavaScript y SQL, utilizando frameworks como Django, React y Bootstrap. Los temas incluyen diseño de bases de datos, escalabilidad, seguridad y experiencia de usuario. Los estudiantes adquieren habilidades en la escritura de APIs, creación de interfaces interactivas y uso de servicios en la nube como GitHub y Netlify para diseñar e implementar aplicaciones web.';
+
+export const microlink = 'https://geolocation.microlink.io';
