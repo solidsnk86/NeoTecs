@@ -15,7 +15,7 @@ export default function Scraper() {
   const handleScrape = async () => {
     try {
       const response = await axios.post(
-        'https://www.pythonanywhere.com/user/SolidSnk86/files/home/SolidSnk86/scrape/flask_app.py',
+        'https://www.pythonanywhere.com/user/SolidSnk86/files/home/SolidSnk86/scrape/',
       );
       setScraping(response.data);
       setDisabled(true);
