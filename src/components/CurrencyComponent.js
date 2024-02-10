@@ -60,7 +60,8 @@ export default function CurrencyConverter() {
         className="flex flex-col w-fit justify-center mx-auto xl:block xl:justify-normal xl:m-0"
       >
         <label htmlFor="currency" className="mr-2 mt-4">
-          Ingresa una divisa (por ejemplo: ARS, BRL, EUR, GBP, BTC, etc):
+          Ingresa una divisa (divisas disponibles: ARS - BRL - EUR - GBP - BTC -
+          COP - JPY - CHP - UYP - BBP - PGP):
         </label>
         <input
           type="text"
