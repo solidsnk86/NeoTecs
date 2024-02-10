@@ -455,7 +455,7 @@ export default function JavaScript() {
               <span className="text-[#95D1F1] mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
                 (backticks, `` ) en windows: alt + 96
               </span>
-              ; alrededor de toda la expresión y un signo de dólar
+              ; alrededor de toda la expresión y un signo peso
               <span className="text-[#95D1F1] mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
                 ($)
               </span>
