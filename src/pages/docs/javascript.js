@@ -1274,7 +1274,115 @@ export default function JavaScript() {
           </article>
           <span id="apis" />
           <SectionTitle title="APIs" />
-          <hr />
+          <article>
+            <p>
+              las APIs (Interfaz de Programación de Aplicaciones) pueden
+              referirse a diversas interfaces que permiten a los desarrolladores
+              interactuar con funciones específicas de plataformas, navegadores
+              web u otros servicios. A continuación, se mencionan algunos tipos
+              comunes de APIs en el contexto de JavaScript:
+            </p>
+            <ol className="list-css-span">
+              <li>
+                <span>APIs del Navegador (Web APIs):</span>
+                Los navegadores web proporcionan una serie de APIs que permiten
+                a los desarrolladores interactuar con funciones específicas del
+                navegador. Algunas de las APIs del navegador más comunes
+                incluyen:
+                <ul>
+                  <li>
+                    DOM API: Para manipular la estructura del documento HTML y
+                    XML.
+                  </li>
+                  <li>
+                    XMLHttpRequest / Fetch API: Para realizar solicitudes HTTP
+                    desde el navegador.
+                  </li>
+                  <li>
+                    Geolocation API: Para acceder a la ubicación del usuario.
+                  </li>
+                  <li>Canvas API: Para dibujar gráficos en el navegador.</li>
+                  <li>
+                    Web Storage API: Para almacenar datos localmente en el
+                    navegador.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span>APIs de terceros:</span>
+                Muchos servicios externos ofrecen APIs que permiten a los
+                desarrolladores interactuar con sus plataformas y acceder a sus
+                datos. Ejemplos incluyen:
+                <ul>
+                  <li>API de Twitter: Para acceder a datos de Twitter.</li>
+                  <li>
+                    API de Google Maps: Para integrar mapas en una aplicación.
+                  </li>
+                  <li>
+                    API de OpenWeatherMap: Para obtener datos meteorológicos.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span>Node.js APIs:</span>
+                En el entorno del servidor con Node.js, existen APIs
+                incorporadas para realizar operaciones de entrada/salida,
+                manejar eventos y más.
+                <ul>
+                  <li>
+                    File System API: Para interactuar con el sistema de
+                    archivos.
+                  </li>
+                  <li>
+                    HTTP / HTTPS API: Para crear servidores y realizar
+                    solicitudes HTTP.
+                  </li>
+                  <li>EventEmitter API: Para trabajar con eventos.</li>
+                </ul>
+              </li>
+              <li>
+                <span>APIs de Base de Datos</span>
+                Al trabajar con bases de datos, se utilizan APIs específicas
+                para interactuar con la base de datos. Por ejemplo:
+                <ul>
+                  <li>
+                    MongoDB tiene su propia API para interactuar con bases de
+                    datos NoSQL.
+                  </li>
+                  <li>
+                    MySQL proporciona una API para trabajar con bases de datos
+                    relacionales.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span>APIs de Servicios en la Nube</span>
+                Muchos servicios en la nube ofrecen APIs para interactuar con
+                sus servicios. Ejemplos incluyen:
+                <ul>
+                  <li>
+                    AWS SDK: Para interactuar con los servicios de Amazon Web
+                    Services.
+                  </li>
+                  <li>
+                    Google Cloud Client Libraries: Para acceder a servicios en
+                    la nube de Google.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span>RESTful APIs y GraphQL:</span>
+                Muchas aplicaciones web modernas utilizan APIs RESTful o GraphQL
+                para la comunicación entre el cliente y el servidor.
+              </li>
+            </ol>
+            <p>
+              Estas son solo algunas categorías de APIs en el contexto de
+              JavaScript. La elección de una API específica dependerá del tipo
+              de desarrollo que estés realizando y de los servicios con los que
+              necesitas interactuar.
+            </p>
+          </article>
           <span id="objetos" />
           <SectionTitle title="Objetos en Javascript" />
           <p>
