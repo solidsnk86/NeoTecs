@@ -13,7 +13,7 @@ import Link from 'next/link';
 export default function UbiquitiDocs() {
   return (
     <TitlesContextProvider>
-      <Nav className="backdrop-blur-md bg-transparent fixed w-full h-12 z-50" />
+      <Nav className="fixed w-full h-12 z-50" />
       <div className="max-w-screen-xl mx-auto flex items-stretch py-16">
         <DocsNav />
         <div className="w-full max-w-none prose px-4 md:px-8">

@@ -1,7 +1,6 @@
 import { Pre } from '../Pre';
 import { PublishDate } from '../PublishDate';
 import { SectionTitle } from '../SectionTitle';
-import { ShareButton } from '../ShareButton';
 
 export const APMode = () => {
   return (

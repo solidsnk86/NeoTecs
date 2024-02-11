@@ -7,13 +7,13 @@ import { Footer } from '../../components/Footer';
 export const PrivacyPolicy = () => {
   return (
     <>
-      <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-50" />
+      <Nav className="fixed xl:relative w-full h-12 z-50" />
       <main className="text-text-primary flex flex-col justify-center m-auto p-10 xl:w-[70%] w-full text-sm relative policy">
         <span onClick={() => history.back()}>
           <ArrowLeftIcon className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-6 xl:top-14 top-12 left-2 fixed mt-3" />
         </span>
         <div className="mt-16 space-y-8 policy">
-          <h1 className="text-3xl font-bold my-4 font-mono">
+          <h1 className="text-4xl font-bold my-4 font-mono">
             Política de Privacidad
           </h1>
           <hr className="h-[1px] w-full dark:border-zinc-800" />

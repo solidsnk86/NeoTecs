@@ -8,7 +8,7 @@ import Indextitle from '../../components/IndexTitle';
 export default function UserFeedback() {
   return (
     <TitlesContextProvider>
-      <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-50" />
+      <Nav className="fixed xl:relative w-full h-12 z-50" />
       <div className="max-w-screen-xl mx-auto flex items-stretch py-16">
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <HeaderTitle>Feedback de los usuarios</HeaderTitle>

@@ -1,6 +1,5 @@
 import { PublishDate } from '../PublishDate';
 import { SectionTitle } from '../SectionTitle';
-import { ShareButton } from '../ShareButton';
 
 export const RepeaterMode = () => {
   return (

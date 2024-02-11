@@ -26,6 +26,7 @@ module.exports = {
         'text-variant': 'var(--color-surface-variant)',
         'text-strong': '#AD2680',
         'footer-bg': '#0F0F0F',
+        'background-color': 'var(--color-surface)',
       },
       animation: {
         marquee: 'marquee var(--duration) linear infinite',
