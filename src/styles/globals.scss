@@ -202,6 +202,10 @@ a {
   animation: shake 1s;
 }
 
+.search-bar input:focus {
+  outline: none;
+}
+
 .images-client img,
 video {
   border-radius: 10px;
