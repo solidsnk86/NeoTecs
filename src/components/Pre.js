@@ -42,7 +42,7 @@ export const Pre = ({ children, lang = '' }) => {
         {copied ? (
           <>
             Copiado!
-            <Check className="w-[14px] h-[14px] inline mx-1 mb-[2px]" />
+            <Check className="w-[14px] text-lime-400 h-[14px] inline mx-1 mb-[2px]" />
           </>
         ) : (
           <Copy className="w-[14px] h-[14px] inline mx-1" />
