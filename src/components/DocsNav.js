@@ -14,7 +14,7 @@ export function DocsNav() {
 
   return (
     <div className="w-80 px-4 md:px-8 hidden lg:block">
-      <div className=" sticky top-16">
+      <div className="sticky top-20">
         <span onClick={(e) => history.back(e)} title="Volver al inicio">
           <ArrowLeftIcon className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all" />
         </span>

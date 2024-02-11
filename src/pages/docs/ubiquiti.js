@@ -1,14 +1,16 @@
-import { FaMousePointer, FaSignInAlt, FaWindows } from 'react-icons/fa';
-import { Nav } from '../../components/Nav';
-import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-import { SectionTitle } from '../../components/SectionTitle';
-import { DocsNav } from '../../components/DocsNav';
-import { BrandsSwitch } from '../../components/BrandsSwitch';
-import { Pre } from '../../components/Pre';
-import { Footer } from '../../components/Footer';
-import { ShareButton } from '../../components/ShareButton';
-import { PublishDate } from '../../components/PublishDate';
 import Link from 'next/link';
+import { BrandsSwitch } from '../../components/BrandsSwitch';
+import { DocsNav } from '../../components/DocsNav';
+import HeaderTitle from '../../components/HeaderTitlte';
+import IndexTitle from '../../components/IndexTitle';
+import { FaMousePointer, FaSignInAlt, FaWindows } from 'react-icons/fa';
+import { Footer } from '../../components/Footer';
+import { Nav } from '../../components/Nav';
+import { Pre } from '../../components/Pre';
+import { PublishDate } from '../../components/PublishDate';
+import { SectionTitle } from '../../components/SectionTitle';
+import { ShareButton } from '../../components/ShareButton';
+import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 
 export default function UbiquitiDocs() {
   return (
@@ -18,7 +20,23 @@ export default function UbiquitiDocs() {
         <DocsNav />
         <div className="w-full max-w-none prose px-4 md:px-8">
           <BrandsSwitch inline />
-          <SectionTitle title="Configuración Ubiquiti" />
+          <HeaderTitle className=" my-6">Configuración Ubiquiti</HeaderTitle>
+          <hr className="border-text-primary" />
+          <IndexTitle>Índice</IndexTitle>
+          <ol className="indice">
+            <li>
+              <a href="#url-y-login-ubiquiti">URL y Login Ubiquiti</a>
+            </li>
+            <li>
+              <a href="#cambio-de-contraseña">Cambio de Contraseña</a>
+            </li>
+            <li>
+              <a href="#configuración-modo-estación">
+                Configuración Modo Estación
+              </a>
+            </li>
+          </ol>
+          <IndexTitle>Introducción</IndexTitle>
           <section className="text-text-primary">
             <p>
               Este artículo aplica a los siguientes modelos:
@@ -120,7 +138,7 @@ export default function UbiquitiDocs() {
               <span className="bg-[#CCCCCC] text-black border-[#000] border-[1px] px-3 py-1 cursor-default mx-1">
                 Login
               </span>
-              <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] dark:text-[#FFFFFF] border-[#000]" />
+              <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] dark:text-[#FFFFFF] text-black border-[#000]" />
             </p>
             <p>
               Veremos una interfaz de usuario parecida a ésta. (la imagen de la
@@ -175,7 +193,7 @@ export default function UbiquitiDocs() {
               <span className="bg-[#CCCCCC] text-black border-[#000] border-[1px] px-3 py-1 cursor-default mx-1">
                 Change
               </span>
-              <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] dark:text-[#FFFFFF] border-[#000]" />
+              <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] dark:text-[#FFFFFF] text-black border-[#000]" />
             </p>
             <SectionTitle title="Configuración modo estación" />
             <ol>
@@ -192,7 +210,7 @@ export default function UbiquitiDocs() {
                 <span className="bg-[#CCCCCC] ml-1 text-black border-[#000] border-[1px] px-3 py-1 cursor-default">
                   Select
                 </span>
-                <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] dark:text-[#FFFFFF] border-[#000]" />
+                <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] dark:text-[#FFFFFF] text-black border-[#000]" />
               </li>
               <li>
                 Ahora puede la antena escanear y puede seleccionar la antena o

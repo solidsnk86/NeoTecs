@@ -1,14 +1,16 @@
-import { FaSignInAlt, FaWindows } from 'react-icons/fa';
-import { Nav } from '../../components/Nav';
-import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-import { SectionTitle } from '../../components/SectionTitle';
-import { DocsNav } from '../../components/DocsNav';
 import { BrandsSwitch } from '../../components/BrandsSwitch';
-import { Pre } from '../../components/Pre';
+import { DocsNav } from '../../components/DocsNav';
+import HeaderTitle from '../../components/HeaderTitlte';
+import IndexTitle from '../../components/IndexTitle';
+import { FaSignInAlt, FaWindows } from 'react-icons/fa';
 import { Footer } from '../../components/Footer';
-import { ShareButton } from '../../components/ShareButton';
-import { PublishDate } from '../../components/PublishDate';
 import Link from 'next/link';
+import { Nav } from '../../components/Nav';
+import { Pre } from '../../components/Pre';
+import { PublishDate } from '../../components/PublishDate';
+import { SectionTitle } from '../../components/SectionTitle';
+import { ShareButton } from '../../components/ShareButton';
+import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 
 export default function MikrotikDocs() {
   return (
@@ -18,7 +20,21 @@ export default function MikrotikDocs() {
         <DocsNav />
         <div className="w-full max-w-none prose px-4 md:px-8">
           <BrandsSwitch inline />
-          <SectionTitle title="Configuración Mikrotik" />
+          <HeaderTitle className=" my-6">Configuración MikroTik</HeaderTitle>
+          <hr className="border-text-primary" />
+          <IndexTitle>Índice</IndexTitle>
+          <ol className="indice">
+            <li>
+              <a href="#url-mikrotik">URL Mikrotik</a>
+            </li>
+            <li>
+              <a href="#sección-quick-set">Sección Quick Set</a>
+            </li>
+            <li>
+              <a href="#sección-webfig">Sección WebFig</a>
+            </li>
+          </ol>
+          <IndexTitle>Introducción</IndexTitle>
           <section className="text-text-primary">
             <p>
               Este artículo aplica a los siguientes modelos:

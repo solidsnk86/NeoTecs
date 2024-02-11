@@ -9,7 +9,7 @@ import Link from 'next/link';
 export const APClientRouterMode = () => {
   return (
     <section className="max-w-800 text-text-primary">
-      <HeaderTitle>Configuración Tp Link</HeaderTitle>
+      <HeaderTitle className=" my-6">Configuración Tp Link</HeaderTitle>
       <hr className="border-text-primary" />
       <IndexTitle>Índice</IndexTitle>
       <ol className="indice">
