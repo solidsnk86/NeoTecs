@@ -66,13 +66,13 @@ export const Nav = ({ className }) => {
 
   return (
     <div className={className || 'z-50'}>
-      <div className="h-16 bg-background-color flex justify-between max-w-screen-xl mx-auto px-4 md:px-8 relative text-text-primary">
+      <div className="h-12 bg-background-color flex justify-between max-w-screen-xl mx-auto px-4 md:px-8 relative text-text-primary">
         <div className="flex relative bottom-[17px]">
           <Link href="/" title="Inicio">
             <NeotecsLogo className="cursor-pointer" />
           </Link>
         </div>
-        <aside className="flex space-x-3">
+        <aside className="flex space-x-3 mt-3">
           <Link
             href="/docs/feedback"
             className="flex items-center space-x-2 mb-3 hover:opacity-[.8] hover:transition-all"

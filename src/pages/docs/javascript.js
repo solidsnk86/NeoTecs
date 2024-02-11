@@ -1201,7 +1201,6 @@ export default function JavaScript() {
           <div className="images-client">
             <img src="/images/count4.gif" />
           </div>
-          <ShareButton setTitle={JavaScript.title} />
           <span id="local" />
           <SectionTitle title="Almacenamiento Local" />
           <article>

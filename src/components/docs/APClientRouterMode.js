@@ -1,17 +1,36 @@
 import { FaWindows } from 'react-icons/fa';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
-import { ShareButton } from '../ShareButton';
+import HeaderTitle from '../HeaderTitlte';
+import IndexTitle from '../IndexTitle';
 import { PublishDate } from '../PublishDate';
 import Link from 'next/link';
 
 export const APClientRouterMode = () => {
   return (
     <section className="max-w-800 text-text-primary">
-      <SectionTitle title="Modo Ap Router Cliente" />
-
+      <HeaderTitle>Configuración Tp Link</HeaderTitle>
+      <hr className="border-text-primary" />
+      <IndexTitle>Índice</IndexTitle>
+      <ol className="indice">
+        <li>
+          <a href="#modo-ap-router-cliente">Modo Ap Router Cliente</a>
+        </li>
+        <li>
+          <a href="#modo-punto-de-acceso">Modo Punto de Acceso</a>
+        </li>
+        <li>
+          <a href="#modo-cliente">Modo Cliente</a>
+        </li>
+        <li>
+          <a href="#modo-repetidor">Modo Repetidor</a>
+        </li>
+        <li>
+          <a href="#modo-router">Modo Router</a>
+        </li>
+      </ol>
+      <IndexTitle>Introducción</IndexTitle>
       <p>Guía de Configuración:</p>
-
       <p>
         Este artículo aplica a los siguientes modelos:
         <strong className="text-text-strong mx-1">
@@ -105,6 +124,8 @@ export const APClientRouterMode = () => {
         de país.
       </p>
 
+      <SectionTitle title="Modo AP Router Cliente" />
+      <p>Ingresando al panel de configuración de Tp Link</p>
       <figure className="images-client">
         <img
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente2.png?raw=true"
