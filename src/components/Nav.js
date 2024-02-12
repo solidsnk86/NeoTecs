@@ -65,7 +65,12 @@ export const Nav = ({ className }) => {
   }, []);
 
   return (
-    <div className={className || 'z-50 relative'}>
+    <div
+      className={
+        className ||
+        'z-50 relative border-b border-zinc-200 dark:border-zinc-800'
+      }
+    >
       <div className="h-12 bg-background-color flex justify-between max-w-screen-xl mx-auto px-4 md:px-8 relative text-text-primary">
         <div className="flex relative bottom-[17px]">
           <Link href="/" title="Inicio">
