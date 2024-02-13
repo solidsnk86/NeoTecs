@@ -1,13 +1,6 @@
-import { Nav } from '../../components/Nav';
-import { LectureNav } from '../../components/docs/LectureNav';
-import { Footer } from '../../components/Footer';
-import { NavSwitch } from '../../components/docs/NavSwicth';
-import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import { FaWindows, FaMousePointer } from 'react-icons/fa';
 import { SectionTitle } from '../SectionTitle';
-import HeaderTitle from '../HeaderTitlte';
 import IndexTitle from '../IndexTitle';
-import { PublishDate } from '../PublishDate';
 import Link from 'next/link';
 
 export const TlWn722n = () => {
