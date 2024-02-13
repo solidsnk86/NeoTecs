@@ -220,7 +220,6 @@ export const RouterMode = () => {
           feedback.
         </Link>
       </p>
-      <ShareButton />
     </section>
   );
 };
