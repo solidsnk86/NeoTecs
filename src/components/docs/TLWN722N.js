@@ -164,8 +164,6 @@ export const TlWn722n = () => {
       </p>
       <div className="flex items-center justify-center">
         <iframe
-          width="560"
-          height="315"
           src="https://www.youtube.com/embed/Rbfx0pzzRgA?si=gIMn9ahz-s-Hh1JT"
           title="YouTube video player"
           frameborder="0"
