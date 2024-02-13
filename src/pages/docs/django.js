@@ -129,7 +129,11 @@ export default function DjangoDocs() {
               en línea se intercambia entre un cliente (usuario) y un servidor.
             </p>
             <div className="images-client">
-              <img src="/images/client-removebg-preview.png" />
+              <img
+                src="/images/client-removebg-preview.png"
+                alt="Django example"
+                loading="lazy"
+              />
             </div>
             <p>
               En este protocolo, el cliente enviará una solicitud al servidor,
@@ -147,7 +151,11 @@ export default function DjangoDocs() {
               indican que podríamos estar pasando más información también.
             </p>
             <div className="images-client">
-              <img src="/images/request.png" />
+              <img
+                src="/images/request.png"
+                alt="Django example"
+                loading="lazy"
+              />
             </div>
             <p>
               Después de recibir una solicitud, un servidor enviará una
@@ -160,14 +168,22 @@ export default function DjangoDocs() {
               adicional.
             </p>
             <div className="images-client">
-              <img src="/images/response.png" />
+              <img
+                src="/images/response.png"
+                alt="Django example"
+                loading="lazy"
+              />
             </div>
             <p>
               El 200 es solo uno de los muchos códigos de estado, algunos de los
               cuales podrías haber visto en el pasado:
             </p>
             <div className="images-client">
-              <img src="/images/codes.png" />
+              <img
+                src="/images/codes.png"
+                alt="Django example"
+                loading="lazy"
+              />
             </div>
           </article>
           <SectionTitle title="Django" />
@@ -262,7 +278,11 @@ export default function DjangoDocs() {
                 página de inicio predeterminada.
               </li>
               <div className="images-client">
-                <img src="/images/landing.png" />
+                <img
+                  src="/images/landing.png"
+                  alt="Django example"
+                  loading="lazy"
+                />
               </div>
               <li className="list-css-span">
                 A continuación, tendremos que crear una aplicación. Los
@@ -330,6 +350,7 @@ export default function DjangoDocs() {
                   className="images-client"
                   src="/images/root_.png"
                   alt="root image"
+                  loading="lazy"
                 />
               </div>
               <p className="list-css-span">
@@ -527,7 +548,11 @@ export default function DjangoDocs() {
               </span>
             </p>
             <div className="images-client">
-              <img src="/images/polls.png" />
+              <img
+                src="/images/polls.png"
+                alt="Django example"
+                loading="lazy"
+              />
             </div>
             <p>
               Ahora que hemos tenido cierto éxito, repasemos lo que acaba de
@@ -626,8 +651,8 @@ export default function DjangoDocs() {
               muestra a continuación:
             </p>
             <div className="images-client">
-              <img src="/images/dev.png" alt="dev_polls" />
-              <img src="/images/neotecs.png" alt="neo_polls" />
+              <img src="/images/dev.png" alt="dev_polls" loading="lazy" />
+              <img src="/images/neotecs.png" alt="neo_polls" loading="lazy" />
             </div>
             <p>
               Muchos sitios web utilizan parámetros en la URL para mostrar
@@ -695,7 +720,7 @@ export default function DjangoDocs() {
               ingresar. Ahora, podemos probar el sitio con algunas otras URL:
             </p>
             <div className="images-client">
-              <img src="/images/mario.png" alt="usuarios" />
+              <img src="/images/mario.png" alt="usuarios" loading="lazy" />
             </div>
             <p className="list-css-span">
               En este ejemplo he puesto un nombre con espacio y automáticamente
@@ -703,7 +728,7 @@ export default function DjangoDocs() {
               blanco.
             </p>
             <div className="images-client">
-              <img src="/images/solidsnk.png" alt="usuarios" />
+              <img src="/images/solidsnk.png" alt="usuarios" loading="lazy" />
             </div>
             <p>
               Otra cosa que también podemos hacer es darle mayúscula a la cadena
@@ -720,7 +745,7 @@ export default function DjangoDocs() {
               `
             }</Pre>
             <div className="images-client">
-              <img src="/images/capitalize.png" alt="usuarios" />
+              <img src="/images/capitalize.png" alt="usuarios" loading="lazy" />
             </div>
             <p>
               Esta es una excelente ilustración de cómo cualquier funcionalidad
@@ -743,7 +768,11 @@ export default function DjangoDocs() {
               `
             }</Pre>
             <div className="images-client">
-              <img src="/images/color-header.png" alt="Style header" />
+              <img
+                src="/images/color-header.png"
+                alt="Style header"
+                loading="lazy"
+              />
             </div>
             <p className="list-css-span">
               Sería muy tedioso escribir una página HTML completa dentro de
@@ -774,7 +803,11 @@ export default function DjangoDocs() {
               <span>index.html</span>.
             </p>
             <div className="images-client">
-              <img src="/images/templates.png" alt="Style header" />
+              <img
+                src="/images/templates.png"
+                alt="Style header"
+                loading="lazy"
+              />
             </div>
             <p className="list-css-span">
               Podemos agregar lo siguiente a nuestro archivo
@@ -870,10 +903,18 @@ export default function DjangoDocs() {
               <span>CSS</span>y<span>Javascript</span>.
             </p>
             <div className="images-client">
-              <img src="/images/template1.png" alt="Template 1" />
+              <img
+                src="/images/template1.png"
+                alt="Template 1"
+                loading="lazy"
+              />
             </div>
             <div className="images-client">
-              <img src="/images/template2.png" alt="Template 1" />
+              <img
+                src="/images/template2.png"
+                alt="Template 1"
+                loading="lazy"
+              />
             </div>
             <p>
               Además de escribir algunas páginas HTML estáticas, también podemos
