@@ -78,11 +78,13 @@ export const aboutNeo =
 export const microlink = 'https://geolocation.microlink.io';
 
 export function applyLazyLoading() {
-  if (typeof document !== 'undefined') {
+  if (typeof window !== 'undefined') {
     var images = document.querySelectorAll('.images-client img');
 
     images.forEach(function (img) {
-      img.setAttribute('loading', 'lazy');
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
     });
   }
 }

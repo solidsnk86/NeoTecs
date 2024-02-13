@@ -688,7 +688,7 @@ export default function Testing() {
               obtener un código de respuesta válido para una página de vuelo
               válida y un código de respuesta no válido para una página de vuelo
               que no existe. (Observa que utilizamos la función<span>Max</span>
-              para encontrar el<sapn>ID</sapn>máximo, al cual tenemos acceso al
+              para encontrar el<span>ID</span>máximo, al cual tenemos acceso al
               incluir
               <span>from django.db.models import Max</span>al principio de
               nuestro archivo).
