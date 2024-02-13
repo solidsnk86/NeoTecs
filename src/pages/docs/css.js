@@ -208,7 +208,7 @@ export default function CssDoc() {
               `
           }</Pre>
           <div className="images-client">
-            <img src="/images/css-2.png" alt="Css ejemplo" loading="lazy" />
+            <img src="/images/css-2.png" alt="Css ejemplo" />
           </div>
           <ul>
             <li>
@@ -379,11 +379,7 @@ export default function CssDoc() {
             }
           </Pre>
           <div className="images-client">
-            <img
-              src="/images/table-style.png"
-              alt="Css example"
-              loading="lazy"
-            />
+            <img src="/images/table-style.png" alt="Css example" />
           </div>
           <li>
             Lo anterior se parece mucho a lo que teníamos antes, pero ahora, ya
@@ -418,11 +414,7 @@ export default function CssDoc() {
           }</Pre>
           <p>Lo que nos deja una hermosa tabla estilada como ésta:</p>
           <div className="images-client">
-            <img
-              src="/images/table-styled.png"
-              alt="Css example"
-              loading="lazy"
-            />
+            <img src="/images/table-styled.png" alt="Css example" />
           </div>
           <li>
             Es posible que ya estés pensando que hay cierta repetición
@@ -591,11 +583,7 @@ export default function CssDoc() {
               `
           }</Pre>
           <div className="images-client">
-            <img
-              src="/images/descendent-css.png"
-              alt="Css example"
-              loading="lazy"
-            />
+            <img src="/images/descendent-css.png" alt="Css example" />
           </div>
           <SectionTitle title="Selectores de atributos" />
           <p>
@@ -627,7 +615,7 @@ export default function CssDoc() {
               `
           }</Pre>
           <div className="images-client">
-            <img src="/images/links-css.png" alt="Css example" loading="lazy" />
+            <img src="/images/links-css.png" alt="Css example" />
           </div>
           <ul>
             <li>
@@ -677,7 +665,7 @@ export default function CssDoc() {
               `
           }</Pre>
           <div className="images-client">
-            <img src="/images/buttons.gif" alt="gif-1" loading="lazy" />
+            <img src="/images/buttons.gif" alt="gif-1" />
           </div>
           <ShareButton setTitle={CssDoc.title} />
           <span id="responsive" />
@@ -756,7 +744,7 @@ export default function CssDoc() {
               `
           }</Pre>
           <div className="images-client">
-            <img src="/images/responsive0.gif" alt="gif" loading="lazy" />
+            <img src="/images/responsive0.gif" alt="gif" />
           </div>
           <li>
             Otra forma de manejar diferentes tamaños de pantalla es utilizando
@@ -817,7 +805,7 @@ export default function CssDoc() {
               `
           }</Pre>
           <div className="images-client">
-            <img src="/images/flexbox.gif" alt="gif-3" loading="lazy" />
+            <img src="/images/flexbox.gif" alt="gif-3" />
           </div>
           <li>
             Otra forma popular de estilizar una página es utilizando una
@@ -872,7 +860,7 @@ export default function CssDoc() {
               `
           }</Pre>
           <div className="images-client">
-            <img src="/images/grid.gif" alt="gif-3" loading="lazy" />
+            <img src="/images/grid.gif" alt="gif-3" />
           </div>
           <span id="bootstrap" />
           <SectionTitle title="Bootstrap" />
@@ -1221,7 +1209,7 @@ export default function CssDoc() {
               `
           }</Pre>
           <div className="images-client">
-            <img src="/images/inherit.png" alt="Css example" loading="lazy" />
+            <img src="/images/inherit.png" alt="Css example" />
           </div>
           <h4 className="text-text-primary">
             ¡Eso concluye nuestro contenido por hoy! ツ
