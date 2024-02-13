@@ -29,7 +29,7 @@
     --ubiquiti-icon: #0559c9;
     --mikrotik-icon: #293239;
     --bg-card: #f7f9f9;
-    --second-color-text: #9c9ca4;
+    --second-color-text: #6f6f70;
     --image-shadow: #bbbbc0;
 
     --color-code: #6f43c0;
@@ -501,3 +501,4 @@ li {
 @import './picture-box.scss';
 @import './prose.scss';
 @import 'github-markdown-css/github-markdown.css';
+@import './docs.scss';
