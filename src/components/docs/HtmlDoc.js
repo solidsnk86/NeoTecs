@@ -72,10 +72,11 @@ export default function HtmlDoc() {
             estamos escribiendo el documento en la última versión de HTML:
             HTML5.
           </li>
-          <li>
+          <li className="list-css-span">
             Después de eso, la página consta de elementos HTML anidados (como
             html y body), cada uno con una etiqueta de apertura y cierre marcada
-            con <element> para una apertura y </element> para un cierre.
+            con<span>{'<element>'}</span>para una apertura y
+            <span>{'</element>'}</span>para un cierre.
           </li>
           <li>
             Observa cómo cada uno de los elementos internos está indentado un
