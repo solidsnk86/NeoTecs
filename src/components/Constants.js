@@ -79,7 +79,7 @@ export const microlink = 'https://geolocation.microlink.io';
 
 export function applyLazyLoading() {
   if (typeof window !== 'undefined') {
-    var images = document.querySelectorAll('img');
+    var images = document.querySelectorAll('.images-client img');
 
     images.forEach(function (img) {
       if (!img.hasAttribute('loading')) {
