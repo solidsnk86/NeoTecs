@@ -65,6 +65,7 @@ export default function MikrotikDocs() {
                 src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-propiedades-red.png?raw=true"
                 alt="imágen menú principal pharos os"
                 id="imgAP"
+                loading="lazy"
               />
             </div>
             <p>Vamos a "Propiedades"</p>
@@ -83,6 +84,7 @@ export default function MikrotikDocs() {
                 src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/propiedades-ethernet-mikrotik.png?raw=true"
                 alt="imágen menú principal pharos os"
                 id="imgAP"
+                loading="lazy"
               />
             </div>
             <SectionTitle title="URL Mikrotik" />
@@ -96,6 +98,7 @@ export default function MikrotikDocs() {
                 src="https://www.hardreset.info/es/lpb/mikrotik-login-page/mikrotik-routerboard-hex-s-rb760igs.jpeg"
                 alt="imágen menú inalámbrico pharos os."
                 id="imgAP"
+                loading="lazy"
               />
             </div>
             <p>
@@ -108,6 +111,7 @@ export default function MikrotikDocs() {
                 src="https://www.technotrade.com.ua/userfiles/images/mikrotik_quickset_2012-10-12/quickset-menu.jpg"
                 alt="imágen menú inalámbrico pharos os2"
                 id="imgAP"
+                loading="lazy"
               />
             </div>
             <SectionTitle title="Sección Quick Set" />
@@ -122,6 +126,7 @@ export default function MikrotikDocs() {
                 src="https://wiki.mikrotik.com/images/thumb/2/24/Quickset639.png/717px-Quickset639.png?20170728075938"
                 alt="imágen menú inalámbrico pharos os2"
                 id="imgAP"
+                loading="lazy"
               />
             </div>
             <p>
@@ -153,6 +158,7 @@ export default function MikrotikDocs() {
                 src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/Web-Fig-Mikrotik.png?raw=true"
                 alt="imágen menú inalámbrico pharos os2"
                 id="imgAP"
+                loading="lazy"
               />
             </div>
             <p>

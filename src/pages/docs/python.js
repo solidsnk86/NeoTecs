@@ -305,7 +305,11 @@ export default function Python() {
                 `
           }</Pre>
           <div className="images-client">
-            <img src="/images/python-terminal-1.png" />
+            <img
+              src="/images/python-terminal-1.png"
+              alt="Python terminal"
+              loading="lazy"
+            />
           </div>
           <p>Un par de cosas para señalar aquí:</p>
           <ul>
@@ -397,7 +401,11 @@ export default function Python() {
               que se ve así:
             </li>
             <div className="images-client">
-              <img src="/images/python-terminal-error.png" />
+              <img
+                src="/images/python-terminal-error.png"
+                alt="Python terminal error"
+                loading="lazy"
+              />
             </div>
             <li>
               Una excepción es lo que sucede cuando ocurre un error mientras
@@ -532,7 +540,11 @@ export default function Python() {
                 `
           }</Pre>
           <div className="images-client">
-            <img src="/images/python-console-2.png" />
+            <img
+              src="/images/python-console-2.png"
+              alt="Python console"
+              loading="lazy"
+            />
           </div>
           <span id="tuplas" />
           <Indextitle>Tuplas</Indextitle>
@@ -919,7 +931,11 @@ export default function Python() {
               , nos adentraremos en el siguiente error:
             </p>
             <div className="images-client">
-              <img src="/images/NameError.png" />
+              <img
+                src="/images/NameError.png"
+                alt="Name error"
+                loading="lazy"
+              />
             </div>
             <p>
               Nos encontramos con este problema porque, de forma predeterminada,
@@ -1209,7 +1225,11 @@ export default function Python() {
             }</Pre>
             <p>Esto, sin embargo nos deja este error:</p>
             <div className="images-client">
-              <img src="/images/TypeError.png" />
+              <img
+                src="/images/TypeError.png"
+                alt="Type error"
+                loading="lazy"
+              />
             </div>
             <p>
               Esto sucede porque Python no sabe cómo comparar dos diccionarios
@@ -1290,14 +1310,22 @@ export default function Python() {
             }</Pre>
             <p>En muchos casos, el programa funciona bien:</p>
             <div className="images-client">
-              <img src="/images/dividegood.png" />
+              <img
+                src="/images/dividegood.png"
+                alt="División buena"
+                loading="lazy"
+              />
             </div>
             <p>
               Sin embargo, nos encontraremos con problemas cuando intentemos
               dividir por 0:
             </p>
             <div className="images-client">
-              <img src="/images/dividebad.png" />
+              <img
+                src="/images/dividebad.png"
+                alt="División mala"
+                loading="lazy"
+              />
             </div>
             <p className="list-css-span">
               Podemos manejar este error desordenado utilizando el
@@ -1333,14 +1361,18 @@ export default function Python() {
             }</Pre>
             <p>En este caso cuando intentemos esto de nuevo:</p>
             <div className="image-client">
-              <img src="/images/divide0.png" />
+              <img src="/images/divide0.png" alt="División 0" loading="lazy" />
             </div>
             <p>
               Sin embargo, aún nos encontramos con un error cuando el usuario
               ingresa valores que no son números para x e y:
             </p>
             <div className="image-client">
-              <img src="/images/valueError.png" />
+              <img
+                src="/images/valueError.png"
+                alt="Value error"
+                loading="lazy"
+              />
             </div>
             <p>Podemos resolver este problema de similar manera:</p>
             <Pre lang="python">{

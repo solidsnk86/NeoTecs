@@ -186,7 +186,11 @@ export default function Scalability() {
               solicitud a la vez, como se muestra a continuación:
             </p>
             <div className="images-client">
-              <img src="/images/server0.png" alt="Diagrama servidor" />
+              <img
+                src="/images/server0.png"
+                alt="Diagrama servidor"
+                loading="lazy"
+              />
             </div>
             <p>
               Aquí es donde nos encontramos con el problema de la escalabilidad.
@@ -404,6 +408,7 @@ export default function Scalability() {
               <img
                 src="/images/single_primary.png"
                 alt="Diagrama actualización base de datos"
+                loading="lazy"
               />
             </div>
             <ul className="list-css-span">
@@ -443,6 +448,7 @@ export default function Scalability() {
               <img
                 src="/images/multi_primary.png"
                 alt="Diagrama actualización base de datos"
+                loading="lazy"
               />
             </div>
           </article>
@@ -498,6 +504,7 @@ export default function Scalability() {
               <img
                 src="/images/server_cache.png"
                 alt="Diagrama actualización base de datos"
+                loading="lazy"
               />
             </div>
             <p>
@@ -618,7 +625,7 @@ export default function Scalability() {
               una serie de servidores, como se muestra a continuación.
             </p>
             <div className="images-client">
-              <img src="/images/servers.png" alt="Servidores" />
+              <img src="/images/servers.png" alt="Servidores" loading="lazy" />
             </div>
             <p>
               A menudo, no hay forma de asegurar que todas estas transferencias
@@ -670,7 +677,11 @@ export default function Scalability() {
               tabla a continuación:
             </p>
             <div className="images-client">
-              <img src="/images/passwords.png" alt="Base de datos" />
+              <img
+                src="/images/passwords.png"
+                alt="Base de datos"
+                loading="lazy"
+              />
             </div>
             <p>
               Sin embargo, nunca quieres almacenar contraseñas en texto plano en
@@ -681,7 +692,11 @@ export default function Scalability() {
               contraseña, como se muestra en la tabla a continuación:
             </p>
             <div className="images-client">
-              <img src="/images/hashes.png" alt="Base de datos" />
+              <img
+                src="/images/hashes.png"
+                alt="Base de datos"
+                loading="lazy"
+              />
             </div>
             <p>
               Es importante tener en cuenta que una función hash es
@@ -705,14 +720,22 @@ export default function Scalability() {
               olvidadas que se ve así:
             </p>
             <div className="images-client">
-              <img src="/images/password-template.png" alt="Base de datos" />
+              <img
+                src="/images/password-template.png"
+                alt="Base de datos"
+                loading="lazy"
+              />
             </div>
             <p>
               Como desarrollador, es posible que desees incluir un mensaje de
               éxito o error después de la presentación:
             </p>
             <div className="images-client">
-              <img src="/images/password-template1.png" alt="Base de datos" />
+              <img
+                src="/images/password-template1.png"
+                alt="Base de datos"
+                loading="lazy"
+              />
             </div>
             <p>
               Pero ten en cuenta que al escribir correos electrónicos,
@@ -808,14 +831,22 @@ export default function Scalability() {
               navegado:
             </p>
             <div className="images-client">
-              <img src="/images/pathworks.png" alt="Base de datos" />
+              <img
+                src="/images/pathworks.png"
+                alt="Base de datos"
+                loading="lazy"
+              />
             </div>
             <p>
               Pero ahora un usuario puede insertar fácilmente algo de JavaScript
               en la página escribiéndolo en la URL:
             </p>
             <div className="images-client">
-              <img src="/images/inject.gif" alt="Base de datos" />
+              <img
+                src="/images/inject.gif"
+                alt="Base de datos"
+                loading="lazy"
+              />
             </div>
             <p className="list-css-span">
               Aunque este ejemplo de alerta es bastante inofensivo, no sería

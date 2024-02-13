@@ -67,6 +67,7 @@ export default function GitDocs() {
               height={90}
               src="https://imgs.search.brave.com/QBtVPyyL0OxsEIQmfKaGPXK3lS2xfK_DXvdWKSvd2Xw/rs:fit:560:320:1/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9lL2UwL0dp/dC1sb2dvLnN2Zy81/MTJweC1HaXQtbG9n/by5zdmcucG5n"
               alt="Git icon"
+              loading="lazy"
             />
           </figure>
           <article>
@@ -84,6 +85,7 @@ export default function GitDocs() {
                 <img
                   src="/images/change_file.png"
                   alt="Cambio de archivos Git."
+                  loading="lazy"
                 />
               </div>
               <li className="list-css-span">
@@ -97,6 +99,7 @@ export default function GitDocs() {
                 <img
                   src="/images/mult_users.png"
                   alt="Cambio de archivos Git."
+                  loading="lazy"
                 />
               </div>
               <li>
@@ -160,7 +163,11 @@ export default function GitDocs() {
               </li>
               <li>
                 <div className="images-client">
-                  <img src="/images/github-repo.png" alt="Crear Repositorio" />
+                  <img
+                    src="/images/github-repo.png"
+                    alt="Crear Repositorio"
+                    loading="lazy"
+                  />
                 </div>
               </li>
               <li>
@@ -192,6 +199,7 @@ export default function GitDocs() {
                       <img
                         src="/images/github-repo-1.png"
                         alt="Crear Repositorio"
+                        loading="lazy"
                       />
                     </div>
                   </li>
@@ -207,6 +215,7 @@ export default function GitDocs() {
                       <img
                         src="/images/git-clone.png"
                         alt="Captura de pantalla de consola git clone."
+                        loading="lazy"
                       />
                     </div>
                   </li>
@@ -323,7 +332,7 @@ export default function GitDocs() {
               </li>
             </ul>
             <div className="images-client">
-              <img src="/images/git_log.png" />
+              <img src="/images/git_log.png" loading="lazy" />
             </div>
             <ul className="list-css-span">
               <li>
@@ -356,7 +365,7 @@ export default function GitDocs() {
               continuación.
             </p>
             <div className="images-client">
-              <img src="/images/no_branch.png" />
+              <img src="/images/no_branch.png" loading="lazy" />
             </div>
             <p>
               Pero esto podría volverse problemático si luego descubrimos un
@@ -374,7 +383,7 @@ export default function GitDocs() {
               </li>
             </ul>
             <div className="images-client">
-              <img src="/images/branch.png" />
+              <img src="/images/branch.png" loading="lazy" />
             </div>
             <ul>
               <li>
@@ -395,6 +404,7 @@ export default function GitDocs() {
                       <img
                         src="/images/git_branch.png"
                         alt="Captura de pantalla de git branch"
+                        loading="lazy"
                       />
                     </div>
                   </li>
@@ -405,6 +415,7 @@ export default function GitDocs() {
                       <img
                         src="/images/new_branch.png"
                         alt="Captura de pantalla de git checkout -b"
+                        loading="lazy"
                       />
                     </div>
                   </li>

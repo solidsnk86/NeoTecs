@@ -123,6 +123,8 @@ export default function SqlDocs() {
             <img
               src="/images/icons/sql-database-generic-svgrepo-com.svg"
               className="w-[300px] h-[60px]"
+              alt="Tabla de datos"
+              loading="lazy"
             />
           </figure>
           <span id="base-de-datos" />
