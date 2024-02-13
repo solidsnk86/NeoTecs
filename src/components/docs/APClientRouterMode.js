@@ -28,6 +28,11 @@ export const APClientRouterMode = () => {
         <li>
           <a href="#modo-router">Modo Router</a>
         </li>
+        <li>
+          <a href="#configuración-adaptador-inalámbrico-usb-tl-wn722n">
+            Configuración Adaptador inalámbrico USB TL-WN722n
+          </a>
+        </li>
       </ol>
       <IndexTitle>Introducción</IndexTitle>
       <p>Guía de Configuración:</p>

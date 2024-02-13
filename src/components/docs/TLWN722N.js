@@ -1,7 +1,9 @@
 import { FaWindows, FaMousePointer } from 'react-icons/fa';
-import { SectionTitle } from '../SectionTitle';
 import IndexTitle from '../IndexTitle';
 import Link from 'next/link';
+import { SectionTitle } from '../SectionTitle';
+import { ShareButton } from '../ShareButton';
+import { title } from 'process';
 
 export const TlWn722n = () => {
   return (
@@ -169,6 +171,7 @@ export const TlWn722n = () => {
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
+          className="rounded-lg w-96 h-64"
         ></iframe>
       </div>
       <p>
@@ -189,6 +192,9 @@ export const TlWn722n = () => {
           feedback.
         </Link>
       </p>
+      <ShareButton setTitle={TlWn722n.title} />
     </section>
   );
 };
+
+TlWn722n.title = 'Configura dispositivos Tp - Link';
