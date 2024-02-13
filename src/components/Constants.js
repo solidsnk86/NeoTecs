@@ -78,9 +78,11 @@ export const aboutNeo =
 export const microlink = 'https://geolocation.microlink.io';
 
 export function applyLazyLoading() {
-  var imgages = document.querySelectorAll('.images-client img');
+  if (typeof document !== 'undefined') {
+    var images = document.querySelectorAll('.images-client img');
 
-  imgages.forEach(function (img) {
-    img.setAttribute('loading', 'lazy');
-  });
+    images.forEach(function (img) {
+      img.setAttribute('loading', 'lazy');
+    });
+  }
 }

@@ -1,10 +1,12 @@
-import { useGA } from '../shared/use-ga';
+import { CookieNotice } from '../components/CookiesNotice';
+import { DoNotCopy } from '../components/DoNotCopy';
 import Head from 'next/head';
 import '../styles/globals.scss';
 import { renderToString } from 'react-dom/server';
-import { DoNotCopy } from '../components/DoNotCopy';
+import { applyLazyLoading } from '../components/Constants';
+
 import { NeoTecsIcon } from '../components/Icons/NeoTecsIcon';
-import { CookieNotice } from '../components/CookiesNotice';
+import { useGA } from '../shared/use-ga';
 
 function MyApp({ Component, pageProps, router }) {
   const title = Component.title || 'Neotecs - Informática';
@@ -14,6 +16,7 @@ function MyApp({ Component, pageProps, router }) {
   const neoTecsIconString = renderToString(<NeoTecsIcon />);
 
   useGA(router);
+  applyLazyLoading();
 
   return (
     <>
