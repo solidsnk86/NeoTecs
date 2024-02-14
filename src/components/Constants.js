@@ -13,12 +13,11 @@ export default function sendWhatsapp(id, price) {
 }
 
 export const currencyGoogleSheetsURL =
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQXKUu36nLoEr2X2cXCLAy68aqjUKVavdWplNBUQaGhfYV0WifoyMlCXs3-vfLijDhRDka2jjHsLIsi/pub?output=csv';
+  process.env.NEXT_PUBLIC_CURRENCY_GOOGLE_SHEETS_URL;
 
-export const googleSheetURL =
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJ2ICoQMLS-Dfem1ha7yjJQKMgTbZu9PExFjGh2rh6Pj4sgYTl2dBpJw02PQRckCG0SSpaiL6Vwwl/pub?output=csv';
+export const googleSheetURL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_UR;
 
-const user = 'AIzaSyCu_A2nFDYi0TWRgASZJz89Zkuk_yIGhLE';
+const user = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
 export const youTube = user;
 
 export const cardContent = [
