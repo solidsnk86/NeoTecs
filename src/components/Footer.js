@@ -38,7 +38,7 @@ export const Footer = () => {
     window.open(telegramLink, '_blank');
   };
 
-  const myUrl = 'https://solidsnk86.netlify.app/';
+  const myUrl = 'https://portfolio-mgc.vercel.app/';
 
   const currentYear = new Date().getFullYear();
 
@@ -84,7 +84,7 @@ export const Footer = () => {
             { name: 'Contacto', href: 'mailto:calcagni.gabriel86@gmail.com' },
             { name: 'YouTube', href: 'https://www.youtube.com/@tutosNeoTecs' },
             { name: 'GitHub', href: 'https://github.com/solidsnk86' },
-            { name: 'Blog', href: 'https://solidsnk86.netlify.app/blog' },
+            { name: 'Blog', href: 'https://portfolio-mgc.vercel.app/blog' },
             {
               name: (
                 <>
