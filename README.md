@@ -1,6 +1,6 @@
 # NeoTecs ![GitHub Stars](https://img.shields.io/github/stars/solidsnk86/NeoTecs.svg?style=social)
 
-[![Vercel Status](https://vercel.com/api/project_badges/solidsnk86/CpDbFtXwnbPiaHwNFDZF8Pdcnck5/deploy-status)](https://neotecs.vercel.app/)
+[![Vercel Status](https://vercel.com/api/project_badges/neotecs-4nzdiy546-solidsnk86/deploy-status)](https://neotecs.vercel.app/)
 
 Explore this comprehensive web documentation designed to guide you through the process of programming and configuring wireless access points from various leading brands. Whether you are a seasoned developer or just getting started, our documentation offers step-by-step instructions, code examples, and valuable insights to streamline your experience.
 
