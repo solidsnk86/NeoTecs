@@ -15,7 +15,7 @@ export default function sendWhatsapp(id, price) {
 export const currencyGoogleSheetsURL =
   process.env.NEXT_PUBLIC_CURRENCY_GOOGLE_SHEETS_URL;
 
-export const googleSheetURL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_UR;
+export const googleSheetURL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
 
 const user = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
 export const youTube = user;
