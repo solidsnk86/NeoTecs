@@ -30,7 +30,6 @@ module.exports = {
       },
       animation: {
         marquee: 'marquee var(--duration) linear infinite',
-        meteor: 'meteor 5s linear infinite',
         spin: 'spin calc(var(--speed) * 2) infinite linear',
         slide: 'slide var(--speed) ease-in-out infinite alternate',
       },
@@ -42,15 +41,6 @@ module.exports = {
         'text-gradient': {
           to: {
             backgroundPosition: '200% center',
-          },
-        },
-        meteor: {
-          '0%': { transform: 'rotate(215deg) translateX(0)', opacity: 1 },
-          '70%': { opacity: 1 },
-          '100%': {
-            transform: 'rotate(215deg) translateX(-500px)',
-            opacity: 0,
-            overflow: 'hidden',
           },
         },
         spin: {
