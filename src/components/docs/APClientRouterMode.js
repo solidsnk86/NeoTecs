@@ -39,7 +39,7 @@ export const APClientRouterMode = () => {
       <p>
         Este artículo aplica a los siguientes modelos:
         <strong className="text-text-strong mx-1">
-          CPE510 - CPE610 - CPE220 - CPE210 - CPE520 - CPE605
+          CPE210 - CPE220 - CPE510 - CPE520 - CPE605 - CPE610 - CPE710
         </strong>
       </p>
       <PublishDate />
@@ -212,7 +212,7 @@ export const APClientRouterMode = () => {
         >
           canal de YouTube.
         </Link>
-        Ante cualquier duda no dudes en escribir al
+        Ante cualquier duda me puedes escribir al
         <Link
           href={'/docs/feedback'}
           className="mx-1 underline text-text-strong"
@@ -222,17 +222,20 @@ export const APClientRouterMode = () => {
       </p>
       <p>
         Este video les puede explicar de manera rápida y efectiva la
-        configuración en modo AP Router Cliente de Tp-Link.
+        configuración en modo AP Router Cliente de Tp-Link desde una PC.
       </p>
 
       <div className="flex items-center justify-center">
         <iframe
-          src="https://www.youtube.com/embed/brN50pXmZR8"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/BRCsYxWUvpU?si=p0vAeUdmXufbX0Tk"
           title="YouTube video player"
+          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen=""
-          className="rounded-lg w-96 h-64"
-        />
+          allowfullscreen
+          className="rounded-md w-96 h-64"
+        ></iframe>
       </div>
     </section>
   );
