@@ -1,19 +1,20 @@
-import Link from 'next/link';
-import { Nav } from '../components/Nav';
-import { HomeHeader } from '../components/HomeHeader';
-import { Footer } from '../components/Footer';
-import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
-import { MarqueeLogos } from '../sections/Brands';
-import { ShimmerButton } from '../components/magicui/ShimmerButton';
-import { PlayIcon, Wifi } from 'lucide-react';
 import { CpeBrands } from '../components/CpeBrands';
 import { cardContent, aboutNeo } from '../components/Constants';
-import Tracker from '../components/utils/tracker';
+import Link from 'next/link';
+import { Footer } from '../components/Footer';
+import { HomeHeader } from '../components/HomeHeader';
+import { MarqueeLogos } from '../sections/Brands';
+import { Nav } from '../components/Nav';
+import { ShimmerButton } from '../components/magicui/ShimmerButton';
+import { PlayIcon, Wifi } from 'lucide-react';
 
-const HomeBlock = ({ children }) => {
+import Tracker from '../components/utils/tracker';
+import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
+
+const HomeBlock = ({ children, className = '' }) => {
   return (
     <div
-      className={`max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16`}
+      className={`max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16 ${className}`}
     >
       {children}
     </div>
@@ -34,7 +35,9 @@ export default function Home() {
   return (
     <main className="text-text-primary">
       <Nav />
+
       <HomeHeader />
+
       <HomeBlock>
         <HomeBlockTitle className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200">
           ¿Sabés Configurar tu CPE inalámbrico?
@@ -88,7 +91,7 @@ export default function Home() {
         </div>
       </HomeBlock>
 
-      <HomeBlock className="bg-[#09090b] dark:bg-[#ffffff]">
+      <HomeBlock>
         <HomeBlockTitle className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200">
           Acerca de NeoTecs
         </HomeBlockTitle>
