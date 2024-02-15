@@ -100,7 +100,7 @@ export default function Home() {
             Si te interesa aprender...
           </p>
           <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full" />
-          <p className="mt-4 text-text-second ">{aboutNeo}</p>
+          <p className="mt-4 text-text-second font-mono text-sm">{aboutNeo}</p>
         </div>
       </HomeBlock>
       <MarqueeLogos />
