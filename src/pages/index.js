@@ -36,7 +36,7 @@ export default function Home() {
       <Nav />
       <HomeHeader />
       <HomeBlock>
-        <HomeBlockTitle className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200 lead">
+        <HomeBlockTitle className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200">
           ¿Sabés Configurar tu CPE inalámbrico?
         </HomeBlockTitle>
         <p>Te dejo estos videos para que aprendas cómo configurarlos.</p>
@@ -75,8 +75,10 @@ export default function Home() {
       </HomeBlock>
 
       <HomeBlock>
-        <HomeBlockTitle>Características</HomeBlockTitle>
-        <div className="grid md:grid-cols-2 gap-4 md:gap-8 text-center">
+        <HomeBlockTitle className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200">
+          Características
+        </HomeBlockTitle>
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8 space-y-7 xl:space-y-0 text-center">
           {cardContent.map((card) => (
             <div className="p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow">
               <span className="text-xl font-bold">{card.feature}</span>
@@ -87,7 +89,9 @@ export default function Home() {
       </HomeBlock>
 
       <HomeBlock className="bg-[#09090b] dark:bg-[#ffffff]">
-        <HomeBlockTitle>Acerca de NeoTecs</HomeBlockTitle>
+        <HomeBlockTitle className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200">
+          Acerca de NeoTecs
+        </HomeBlockTitle>
         <div className="border dark:border-zinc-800 p-3 rounded-xl shadow-sm shadow-slate-200 dark:shadow-none">
           <p className="text-md space-y-3 font-mono">
             Si te interesa aprender...
