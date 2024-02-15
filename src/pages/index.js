@@ -20,9 +20,11 @@ const HomeBlock = ({ children }) => {
   );
 };
 
-export const HomeBlockTitle = ({ Tag = 'h2', children }) => {
+export const HomeBlockTitle = ({ Tag = 'h2', children, className = '' }) => {
   return (
-    <Tag className="text-4xl font-bold sm:text-5xl mb-10 text-text-primary">
+    <Tag
+      className={`text-4xl font-bold sm:text-5xl leading-relaxed pb-2 mb-10 ${className}`}
+    >
       {children}
     </Tag>
   );
@@ -34,7 +36,9 @@ export default function Home() {
       <Nav />
       <HomeHeader />
       <HomeBlock>
-        <HomeBlockTitle>¿Sabés Configurar tu CPE inalámbrico?</HomeBlockTitle>
+        <HomeBlockTitle className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200 lead">
+          ¿Sabés Configurar tu CPE inalámbrico?
+        </HomeBlockTitle>
         <p>Te dejo estos videos para que aprendas cómo configurarlos.</p>
         <ul className="inline-flex text-left m-auto mt-2 mb-4 gap-6">
           <li className="custom-text-shadow">✅ Rápido</li>
