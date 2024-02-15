@@ -1,15 +1,16 @@
-import { Nav } from '../../components/Nav';
+import { Footer } from '../../components/Footer';
+import HeaderTitle from '../../components/HeaderTitlte';
+import Indextitle from '../../components/IndexTitle';
+import Link from 'next/link';
 import { LectureNav } from '../../components/docs/LectureNav';
+import { Nav } from '../../components/Nav';
 import { NavSwitch } from '../../components/docs/NavSwicth';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-import Link from 'next/link';
-import { Footer } from '../../components/Footer';
+
 import { ShareButton } from '../../components/ShareButton';
 import { ExternalLinkIcon } from 'lucide-react';
-import HeaderTitle from '../../components/HeaderTitlte';
-import Indextitle from '../../components/IndexTitle';
 export default function CssDoc() {
   return (
     <TitlesContextProvider>
