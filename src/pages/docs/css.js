@@ -497,10 +497,14 @@ export default function CssDoc() {
               debería ser rojo según su clase pero azul según su id? CSS tiene
               un orden de especificidad que va así:
             </li>
-            <ol>
+            <ol className="list-css-span">
               <li>Estilo en línea (in-line styling).</li>
-              <li>Id (id="")</li>
-              <li>Clase (class="")</li>
+              <li>
+                Id<span>id=""</span>
+              </li>
+              <li>
+                Clase<span>class=""</span>
+              </li>
               <li>Tipo de Elemento</li>
             </ol>
             <li>
