@@ -87,3 +87,40 @@ export function applyLazyLoading() {
     });
   }
 }
+
+export const compartirWhatsapp = () => {
+  const winLoc = window.location.href;
+  const mensaje = `¡Echa un vistazo a esta web para aprender programación y a configurar tu Wi-Fi!: ${winLoc}`;
+  const encodeM = encodeURIComponent(mensaje);
+  window.open(`https://wa.me/?text=${encodeM}`);
+};
+
+export const compartirTwitter = () => {
+  const encodeUr = encodeURIComponent(window.location.href);
+  window.open(`https://twitter.com/share?url=${encodeUr}`);
+};
+
+export const compartirLinkedIn = () => {
+  const url = encodeURIComponent(window.location.href);
+  const title = encodeURIComponent(document.title);
+  const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}`;
+  window.open(shareUrl, '_blank');
+};
+
+export const compartiTelegram = () => {
+  const text = '¡Aprende a configurar tu Wifi en minutos!';
+  const url = encodeURIComponent(window.location.href);
+  const encodeT = encodeURIComponent(text) + url;
+  const telegramLink = `https://t.me/share/url?text=${encodeT}`;
+
+  window.open(telegramLink, '_blank');
+};
+
+export function compartirFacebook() {
+  const encodeU = encodeURIComponent(window.location.href);
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeU}`);
+}
+
+export const myUrl = 'https://portfolio-mgc.vercel.app/';
+
+export const currentYear = new Date().getFullYear();

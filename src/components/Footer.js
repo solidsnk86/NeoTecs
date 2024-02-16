@@ -1,47 +1,19 @@
 import React from 'react';
+import {
+  compartirFacebook,
+  compartiTelegram,
+  compartirLinkedIn,
+  compartirTwitter,
+  compartirWhatsapp,
+  myUrl,
+  currentYear,
+} from '../components/Constants';
 import { FaWhatsapp, FaTelegramPlane, FaChevronCircleUp } from 'react-icons/fa';
 import { FacebookIcon, Linkedin } from 'lucide-react';
 import { TwitterIcon } from '../components/Icons/TwitterIcon';
 import Link from 'next/link';
 
 export const Footer = () => {
-  function compartirFacebook() {
-    const encodeU = encodeURIComponent(window.location.href);
-    window.open(`https://www.facebook.com/sharer/sharer.php?u= ${encodeU}`);
-  }
-
-  const compartirWhatsapp = () => {
-    const winLoc = window.location.href;
-    const mensaje = `¡Echa un vistazo a esta web para aprender programación y a configurar tu Wi-Fi!: ${winLoc}`;
-    const encodeM = encodeURIComponent(mensaje);
-    window.open(`https://wa.me/?text=${encodeM}`);
-  };
-
-  const compartirTwitter = () => {
-    const encodeUr = encodeURIComponent(window.location.href);
-    window.open(`https://twitter.com/share?url=${encodeUr}`);
-  };
-
-  const compartirLinkedIn = () => {
-    const url = encodeURIComponent(window.location.href);
-    const title = encodeURIComponent(document.title);
-    const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}`;
-    window.open(shareUrl, '_blank');
-  };
-
-  const compartiTelegram = () => {
-    const text = '¡Aprende a configurar tu Wifi en minutos!';
-    const url = encodeURIComponent(window.location.href);
-    const encodeT = encodeURIComponent(text) + url;
-    const telegramLink = `https://t.me/share/url?text=${encodeT}`;
-
-    window.open(telegramLink, '_blank');
-  };
-
-  const myUrl = 'https://portfolio-mgc.vercel.app/';
-
-  const currentYear = new Date().getFullYear();
-
   return (
     <section className="border-t-2 border-outline text-text-primary mt-14">
       <span className="relative flex justify-center m-auto bg-outline px-[2px] py-[2px] w-fit h-fit rounded-full bottom-[19px]">
