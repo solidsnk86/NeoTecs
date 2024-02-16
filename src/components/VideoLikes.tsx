@@ -1,5 +1,7 @@
 'use client';
 
+import { LikeButton } from '../components/Icons/LikeButton'
+import { UnlikeButton } from '../components/Icons/UnlikeButton'
 import React, { useState, useEffect } from 'react';
 import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
 import { youTube } from '../components/Constants'
@@ -38,48 +40,6 @@ export const VideoLikes = ({ videoId, cpe }) => {
 
     getVideoDetails();
   }, [videoId, cpe]);
-
-  const LikeButton = (props) => {
-    const { ...attrs } = props;
-    return (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="feather feather-thumbs-up"
-        {...attrs}
-      >
-        <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
-      </svg>
-    );
-  };
-
-  const DisLikeButton = (props) => {
-    const { ...attrs } = props;
-    return (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="feather feather-thumbs-down"
-        {...attrs}
-      >
-        <path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"></path>
-      </svg>
-    );
-  };
 
   const suscribeButton = () => {
     window.open('https://www.youtube.com/@tutosNeoTecs');
@@ -126,8 +86,8 @@ export const VideoLikes = ({ videoId, cpe }) => {
             />{' '}
             {likes}
             <hr className="border-l-[1px] h-5 border-[#575757] relative bottom-[1px]" />
-            <DisLikeButton
-              className="hover:fill-gray-500 cursor-pointer"
+            <UnlikeButton
+              className="hover:fill-gray-500/80 cursor-pointer"
               onClick={likeButtons}
             />
           </span>
