@@ -173,7 +173,11 @@ export const GoogleSheetsExample = () => {
       <hr className="border-[1px] border-zinc-300 dark:border-zinc-800" />
       <p>
         ¡Si les gusta el diseño y efecto de las cajas que contienen los dibujos!
-        Utilizo Atropos js.
+        Utilizo{' '}
+        <b className=" decoration-wavy underline underline-offset-2 decoration-red-400">
+          Atropos js
+        </b>{' '}
+        la cuál he modificado a mi gusto el estilo de las mismas.
       </p>
       <p>
         Aquí les dejo el enlace para que puedan leer su documentación y

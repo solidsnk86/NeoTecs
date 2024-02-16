@@ -102,7 +102,7 @@ export const RepeaterMode = () => {
         Este artículo aplica a los siguientes modelos:
         <span className="color-acento">
           <strong className="text-text-strong mx-1">
-            CPE510 , CPE610 , CPE220 , CPE210 , CPE520 , CPE605.
+            CPE210 - CPE220 - CPE510 - CPE520 - CPE605 - CPE610 - CPE710
           </strong>
         </span>
       </p>

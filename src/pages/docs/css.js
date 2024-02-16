@@ -1,16 +1,15 @@
-import { Footer } from '../../components/Footer';
-import HeaderTitle from '../../components/HeaderTitlte';
-import Indextitle from '../../components/IndexTitle';
-import Link from 'next/link';
-import { LectureNav } from '../../components/docs/LectureNav';
 import { Nav } from '../../components/Nav';
+import { LectureNav } from '../../components/docs/LectureNav';
 import { NavSwitch } from '../../components/docs/NavSwicth';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-
+import Link from 'next/link';
+import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import { ExternalLinkIcon } from 'lucide-react';
+import HeaderTitle from '../../components/HeaderTitlte';
+import Indextitle from '../../components/IndexTitle';
 export default function CssDoc() {
   return (
     <TitlesContextProvider>
@@ -498,14 +497,10 @@ export default function CssDoc() {
               debería ser rojo según su clase pero azul según su id? CSS tiene
               un orden de especificidad que va así:
             </li>
-            <ol className="list-css-span">
+            <ol>
               <li>Estilo en línea (in-line styling).</li>
-              <li>
-                Id<span>id=""</span>
-              </li>
-              <li>
-                Clase<span>class=""</span>
-              </li>
+              <li>Id (id="")</li>
+              <li>Clase (class="")</li>
               <li>Tipo de Elemento</li>
             </ol>
             <li>

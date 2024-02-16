@@ -208,7 +208,7 @@ export const RouterMode = () => {
       <p>
         Este artículo aplica a los siguientes modelos:
         <strong className="text-text-strong mx-1">
-          CPE510 - CPE610 - CPE220 - CPE210 - CPE520 - CPE605.
+          CPE210 - CPE220 - CPE510 - CPE520 - CPE605 - CPE610 - CPE710
         </strong>
       </p>
       <p>

@@ -212,7 +212,7 @@ export const APClientRouterMode = () => {
         >
           canal de YouTube.
         </Link>
-        Ante cualquier duda me puedes escribir al
+        Ante cualquier duda no dudes en escribir al
         <Link
           href={'/docs/feedback'}
           className="mx-1 underline text-text-strong"
@@ -222,20 +222,17 @@ export const APClientRouterMode = () => {
       </p>
       <p>
         Este video les puede explicar de manera rápida y efectiva la
-        configuración en modo AP Router Cliente de Tp-Link desde una PC.
+        configuración en modo AP Router Cliente de Tp-Link.
       </p>
 
       <div className="flex items-center justify-center">
         <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/BRCsYxWUvpU?si=p0vAeUdmXufbX0Tk"
+          src="https://www.youtube.com/embed/brN50pXmZR8"
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          className="rounded-md w-96 h-64"
-        ></iframe>
+          allowFullScreen=""
+          className="rounded-lg w-96 h-64"
+        />
       </div>
     </section>
   );

@@ -1,31 +1,28 @@
-import { CpeBrands } from '../components/CpeBrands';
-import { cardContent, aboutNeo } from '../components/Constants';
 import Link from 'next/link';
-import { Footer } from '../components/Footer';
-import { HomeHeader } from '../components/HomeHeader';
-import { MarqueeLogos } from '../sections/Brands';
 import { Nav } from '../components/Nav';
+import { HomeHeader } from '../components/HomeHeader';
+import { Footer } from '../components/Footer';
+import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
+import { MarqueeLogos } from '../sections/Brands';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { PlayIcon, Wifi } from 'lucide-react';
-
+import { CpeBrands } from '../components/CpeBrands';
+import { cardContent, aboutNeo } from '../components/Constants';
 import Tracker from '../components/utils/tracker';
-import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 
-const HomeBlock = ({ children, className = '' }) => {
+const HomeBlock = ({ children }) => {
   return (
     <div
-      className={`max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16 ${className}`}
+      className={`max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16`}
     >
       {children}
     </div>
   );
 };
 
-export const HomeBlockTitle = ({ Tag = 'h2', children, className = '' }) => {
+export const HomeBlockTitle = ({ Tag = 'h2', children }) => {
   return (
-    <Tag
-      className={`text-4xl font-bold sm:text-5xl leading-relaxed pb-2 mb-10 ${className}`}
-    >
+    <Tag className="text-4xl font-bold sm:text-5xl mb-10 text-text-primary">
       {children}
     </Tag>
   );
@@ -35,13 +32,9 @@ export default function Home() {
   return (
     <main className="text-text-primary">
       <Nav />
-
       <HomeHeader />
-
       <HomeBlock>
-        <HomeBlockTitle className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200">
-          ¿Sabés Configurar tu CPE inalámbrico?
-        </HomeBlockTitle>
+        <HomeBlockTitle>¿Sabés Configurar tu CPE inalámbrico?</HomeBlockTitle>
         <p>Te dejo estos videos para que aprendas cómo configurarlos.</p>
         <ul className="inline-flex text-left m-auto mt-2 mb-4 gap-6">
           <li className="custom-text-shadow">✅ Rápido</li>
@@ -78,10 +71,8 @@ export default function Home() {
       </HomeBlock>
 
       <HomeBlock>
-        <HomeBlockTitle className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200">
-          Características
-        </HomeBlockTitle>
-        <div className="grid md:grid-cols-2 gap-4 md:gap-8 space-y-7 xl:space-y-0 text-center">
+        <HomeBlockTitle>Características</HomeBlockTitle>
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8 text-center">
           {cardContent.map((card) => (
             <div className="p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow">
               <span className="text-xl font-bold">{card.feature}</span>
@@ -91,16 +82,14 @@ export default function Home() {
         </div>
       </HomeBlock>
 
-      <HomeBlock>
-        <HomeBlockTitle className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200">
-          Acerca de NeoTecs
-        </HomeBlockTitle>
+      <HomeBlock className="bg-[#09090b] dark:bg-[#ffffff]">
+        <HomeBlockTitle>Acerca de NeoTecs</HomeBlockTitle>
         <div className="border dark:border-zinc-800 p-3 rounded-xl shadow-sm shadow-slate-200 dark:shadow-none">
           <p className="text-md space-y-3 font-mono">
             Si te interesa aprender...
           </p>
           <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full" />
-          <p className="mt-4 text-text-second font-mono text-sm">{aboutNeo}</p>
+          <p className="mt-4 text-text-second ">{aboutNeo}</p>
         </div>
       </HomeBlock>
       <MarqueeLogos />
