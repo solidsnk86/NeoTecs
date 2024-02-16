@@ -41,14 +41,6 @@ export const VideoLikes = ({ videoId, cpe }) => {
     getVideoDetails();
   }, [videoId, cpe]);
 
-  const suscribeButton = () => {
-    window.open('https://www.youtube.com/@tutosNeoTecs');
-  };
-
-  const likeButtons = () => {
-    window.open(`https://www.youtube.com/watch?v=${videoId}=1s`);
-  };
-
   const ShareButton = () => {
     if (navigator.share) {
       navigator.share({
@@ -58,6 +50,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
       });
     }
   };
+
   return (
     <div className="flex gap-[12px] xl:gap-[14px] lg:gap-[14px] md:gap-[12px] my-2 sm:mx-2">
       <img
@@ -73,7 +66,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
         <div>
           <p
             className="relative top-[7px] mx-1 font-bold px-2 text-text-variant py-1 rounded-full bg-button-variant cursor-pointer hover:opacity-80"
-            onClick={suscribeButton}
+            onClick={() => window.open('https://www.youtube.com/@tutosNeoTecs')}
           >
             Suscríbete
           </p>
@@ -81,14 +74,14 @@ export const VideoLikes = ({ videoId, cpe }) => {
         <span className="flex bg-card-bg border border-gray-200 dark:border-zinc-800/50 relative bottom-[2px] rounded-full my-2 w-fit px-3 py-1 transition-all">
           <span className="flex relative top-[1px] gap-2">
             <LikeButton
-              onClick={likeButtons}
+              onClick={() => window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)}
               className="hover:fill-gray-500 cursor-pointer"
             />{' '}
             {likes}
             <hr className="border-l-[1px] h-5 border-[#575757] relative bottom-[1px]" />
             <UnlikeButton
               className="hover:fill-gray-500/80 cursor-pointer"
-              onClick={likeButtons}
+              onClick={() => window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)}
             />
           </span>
         </span>

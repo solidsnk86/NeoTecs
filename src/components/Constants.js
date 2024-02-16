@@ -3,15 +3,6 @@ import { StepForward, FileText, FootprintsIcon, Code2 } from 'lucide-react';
 export const githubMarkdownURL =
   'https://raw.githubusercontent.com/solidsnk86/neo-scraper/master/LEEME.md';
 
-export default function sendWhatsapp(id, price) {
-  const wapNumber = '+5492604586538';
-  const wapMessage = encodeURIComponent(
-    `Buenas estoy interesado en el dibujo de ${id}! El cual tiene un importe de U$D ${price}. ¿El envío está incluido?`,
-  );
-  const wapUrl = `https://wa.me/${wapNumber}?text=${wapMessage}`;
-  window.open(wapUrl);
-}
-
 export const currencyGoogleSheetsURL =
   process.env.NEXT_PUBLIC_CURRENCY_GOOGLE_SHEETS_URL;
 
@@ -119,6 +110,15 @@ export const compartiTelegram = () => {
 export function compartirFacebook() {
   const encodeU = encodeURIComponent(window.location.href);
   window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeU}`);
+}
+
+export default function sendWhatsapp(id, price) {
+  const wapNumber = '+5492604586538';
+  const wapMessage = encodeURIComponent(
+    `Buenas estoy interesado en el dibujo de ${id}! El cual tiene un importe de U$D ${price}. ¿El envío está incluido?`,
+  );
+  const wapUrl = `https://wa.me/${wapNumber}?text=${wapMessage}`;
+  window.open(wapUrl);
 }
 
 export const myUrl = 'https://portfolio-mgc.vercel.app/';
