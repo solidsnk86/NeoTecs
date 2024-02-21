@@ -1,5 +1,6 @@
-import { InfoIcon } from 'lucide-react';
+import { InfoIcon, ExternalLinkIcon } from 'lucide-react';
 import { Pre } from './Pre';
+import Link from 'next/link';
 
 export const GoogleSheetsExample2 = () => {
   return (
@@ -24,7 +25,7 @@ export const GoogleSheetsExample2 = () => {
         biblioteca facilita el trabajo con datos en formato CSV, proporcionando
         funciones para convertir cadenas CSV en objetos JavaScript y viceversa.
       </p>
-      <p>
+      <p className="list-css-span">
         Algunas características clave de<span>PapaParse</span>incluyen:
       </p>
       <ol>
@@ -51,7 +52,24 @@ export const GoogleSheetsExample2 = () => {
           específicas de análisis.
         </li>
       </ol>
-      <p>Bien, vamos con el componente:</p>
+      <p>Lo primero que tenemos que hacer es instalar la dependencia:</p>
+      <Pre lang="bash">{
+        /*bash */ `
+        npm install papaparse
+        `
+      }</Pre>
+      <p>
+        Pueden estudiar la documentación para entender que opciones de
+        configuración y manipulación del CSV tiene
+        <Link
+          href="https://www.papaparse.com/docs"
+          className="mx-1 underline text-blue-500 link"
+        >
+          Papaparse
+          <ExternalLinkIcon className="link-icon" />
+        </Link>
+      </p>
+      <p>Bien, ahora vamos con el componente:</p>
       <Pre lang="javascript">{
         /*javascript */ `
         import { useState, useEffect } from "react";
