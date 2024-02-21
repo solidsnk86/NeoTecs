@@ -43,7 +43,7 @@ I have created this REST API to be used in an example for JavaScript, allowing a
 
 If you are intrested how i use this REST API, i leave the example in this link below 👇
 
-[![Currency Exchange](https://img.shields.io/badge/Currency-Exchange-gold)](https://neotecs.netlify.app/docs/javascript#convertir-divisas)
+[![Currency Exchange](https://img.shields.io/badge/Currency-Exchange-gold)](https://neotecs.vercel.app/docs/javascript#convertir-divisas)
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
