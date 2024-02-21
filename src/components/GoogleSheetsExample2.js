@@ -1,10 +1,12 @@
 import { InfoIcon, ExternalLinkIcon } from 'lucide-react';
-import { Pre } from './Pre';
 import Link from 'next/link';
+import { Pre } from './Pre';
+import { SectionTitle } from './SectionTitle';
 
 export const GoogleSheetsExample2 = () => {
   return (
     <>
+      <SectionTitle title="Papa Parse" />
       <div className="border-l-4 border-blue-500 text-sm px-1 bg-opacity-[0.6] p-3 pl-5 text-blue-500 font-semibold">
         <p className="font-bold text-xl">
           <InfoIcon className="w-6 inline mb-1" /> Tip
@@ -13,7 +15,7 @@ export const GoogleSheetsExample2 = () => {
           Cuando trabajas con múltiples arrays de listas obtenidas de un archivo
           CSV, es posible que desees optimizar el rendimiento del renderizado.
           Una técnica efectiva es utilizar el método<span>reduce</span>en
-          JavaScript. reduce te permite acumular un valor único al iterar sobre
+          JavaScript, reduce te permite acumular un valor único al iterar sobre
           un array, en este caso, un objeto que contiene varias listas. Aquí hay
           una explicación más detallada en la cual utilizo<span>papaparse</span>{' '}
           para manejar el CSV:
@@ -69,7 +71,11 @@ export const GoogleSheetsExample2 = () => {
           <ExternalLinkIcon className="link-icon" />
         </Link>
       </p>
-      <p>Bien, ahora vamos con el componente:</p>
+      <SectionTitle title="Reduce" />
+      <p>
+        Bien, ahora vamos con el componente utilizando{' '}
+        <i className="underline decoration-dotted">reduce</i>:
+      </p>
       <Pre lang="javascript">{
         /*javascript */ `
         import { useState, useEffect } from "react";

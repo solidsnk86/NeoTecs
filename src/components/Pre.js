@@ -37,6 +37,7 @@ export const Pre = ({ children, lang = '' }) => {
       </p>
       <span
         onClick={handleCopyClick}
+        title="Copiar"
         className="text-xs absolute z-10 top-[26px] right-[8px] cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all"
       >
         {copied ? (

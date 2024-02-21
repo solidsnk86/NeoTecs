@@ -176,7 +176,7 @@ export const GoogleSheetsExample = () => {
       <p>
         ¡Si les gusta el diseño y efecto de las cajas que contienen los dibujos!
         Utilizo{' '}
-        <b className=" decoration-wavy underline underline-offset-2 decoration-red-400">
+        <b className="decoration-wavy underline underline-offset-2 decoration-red-400">
           Atropos js
         </b>{' '}
         la cuál he modificado a mi gusto el estilo de las mismas.
@@ -186,7 +186,7 @@ export const GoogleSheetsExample = () => {
         utilizarlo, es de código abierto y tiene otros asombrosos efectos de
         cartas 3d las cuales utilizo en ésta web.
         <Link
-          href="https://atroposjs.com/"
+          href="https://atroposjs.com/docs"
           className="mx-1 underline text-red-500 link"
         >
           Atropos js

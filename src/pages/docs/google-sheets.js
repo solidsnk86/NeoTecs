@@ -39,6 +39,12 @@ export default function CsvSheets() {
             <li>
               <a href="#api-routes">API Routes</a>
             </li>
+            <li>
+              <a href="#papa-parse">Papa Parse</a>
+            </li>
+            <li>
+              <a href="#reduce">Reduce</a>
+            </li>
           </ol>
           <SectionTitle title="Introducción" />
           <p>
