@@ -4,7 +4,7 @@ import { Pre } from './Pre';
 export const GoogleSheetsExample2 = () => {
   return (
     <>
-      <div className="border-l-4 border-blue-500 px-1 bg-opacity-[0.6] p-3 pl-5 text-blue-500 font-semibold">
+      <div className="border-l-4 border-blue-500 text-sm px-1 bg-opacity-[0.6] p-3 pl-5 text-blue-500 font-semibold">
         <p className="font-bold text-xl">
           <InfoIcon className="w-6 inline mb-1" /> Tip
         </p>
@@ -18,6 +18,40 @@ export const GoogleSheetsExample2 = () => {
           para manejar el CSV:
         </p>
       </div>
+      <p className="list-css-span">
+        📝<span>PapaParse</span>es una biblioteca de JavaScript que se utiliza
+        para analizar archivos CSV en el navegador o en entornos Node.js. La
+        biblioteca facilita el trabajo con datos en formato CSV, proporcionando
+        funciones para convertir cadenas CSV en objetos JavaScript y viceversa.
+      </p>
+      <p>
+        Algunas características clave de<span>PapaParse</span>incluyen:
+      </p>
+      <ol>
+        <li>
+          Facilidad de uso: PapaParse simplifica el proceso de análisis de
+          archivos CSV en comparación con implementaciones manuales. Proporciona
+          una interfaz fácil de usar para trabajar con datos CSV.
+        </li>
+        <li>
+          Soporte para diferentes formatos: Puede manejar una variedad de
+          formatos CSV, incluso aquellos con delimitadores personalizados,
+          saltos de línea y otros ajustes específicos.
+        </li>
+        <li>
+          Procesamiento en segundo plano: PapaParse puede ejecutarse en segundo
+          plano (usando Web Workers) para no bloquear el hilo principal del
+          navegador, permitiendo la carga y procesamiento eficiente de grandes
+          conjuntos de datos CSV.
+        </li>
+        <li>
+          Configuración de opciones: Ofrece diversas opciones de configuración,
+          como la especificación del delimitador, la fila de encabezado, el
+          manejo de comillas, entre otras, para adaptarse a las necesidades
+          específicas de análisis.
+        </li>
+      </ol>
+      <p>Bien, vamos con el componente:</p>
       <Pre lang="javascript">{
         /*javascript */ `
         import { useState, useEffect } from "react";
