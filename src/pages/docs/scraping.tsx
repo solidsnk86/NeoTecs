@@ -1,10 +1,9 @@
+import { AlertTriangle, ExternalLinkIcon } from 'lucide-react';
 import { Nav } from '../../components/Nav';
 import { ArrowLeftIcon } from 'lucide-react';
 import Link from 'next/link';
 import MarkdownRenderer from '../../components/MarkDownRender';
 import { githubMarkdownURL } from '../../components/Constants'
-import { AlertTriangle } from 'lucide-react';
-import { ExternalLinkIcon } from 'lucide-react';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import HeaderTitle from '../../components/HeaderTitlte';
@@ -29,14 +28,19 @@ export default function Scraping() {
                 <hr className="border-zinc-300 dark:border-zinc-800 my-10" />
                 <MarkdownRenderer url={githubMarkdownURL} />
                 <hr className="border-zinc-300 dark:border-zinc-800 my-10" />
-                <div className="border-l-4 border-blue-500 px-1 bg-opacity-[0.6] p-3 pl-5 text-blue-500 font-semibold">
-                    <p className="font-bold text-xl">
+                <div className="border-l-4 border-red-500 px-1 bg-opacity-[0.6] p-3 pl-5 font-semibold">
+                    <p className="font-bold text-xl text-red-500">
                         <AlertTriangle className="w-6 inline mb-1" /> Importante
                     </p>
                     <p>
                         Para tener en cuenta, pueden ver el resultado solamente teniendo
                         levantado el servidor por defecto de Flask, que sería algo así:
-                        <span className="mx-1">http://127.0.0.1:5000/api/scrape</span>
+                        <span className="mx-1 text-red-500">http://127.0.0.1:5000/api/scrape</span>
+                        o en su caso podrían levantar esta aplicación en un entorno virtual como
+                        <Link href="https://www.pythonanywhere.com/" className='text-red-500 mx-1 link'>
+                            Python Anywhere
+                            <ExternalLinkIcon className="link-icon" />
+                        </Link>
                     </p>
                 </div>
                 <div className="my-10">

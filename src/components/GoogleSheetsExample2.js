@@ -1,4 +1,4 @@
-import { InfoIcon, ExternalLinkIcon } from 'lucide-react';
+import { InfoIcon, ExternalLinkIcon, Sheet } from 'lucide-react';
 import Link from 'next/link';
 import { Pre } from './Pre';
 import { SectionTitle } from './SectionTitle';
@@ -7,8 +7,8 @@ export const GoogleSheetsExample2 = () => {
   return (
     <>
       <SectionTitle title="Papa Parse" />
-      <div className="border-l-4 border-blue-500 text-sm px-1 bg-opacity-[0.6] p-3 pl-5 text-blue-500 font-semibold">
-        <p className="font-bold text-xl">
+      <div className="border-l-4 border-green-600 px-1 bg-opacity-[0.6] pl-5 font-semibold">
+        <p className="font-bold text-xl text-green-600">
           <InfoIcon className="w-6 inline mb-1" /> Tip
         </p>
         <p className="list-css-span">
@@ -22,7 +22,8 @@ export const GoogleSheetsExample2 = () => {
         </p>
       </div>
       <p className="list-css-span">
-        📝<span>PapaParse</span>es una biblioteca de JavaScript que se utiliza
+        <Sheet className="w-5 inline text-green-600" />
+        <span>PapaParse</span>es una biblioteca de JavaScript que se utiliza
         para analizar archivos CSV en el navegador o en entornos Node.js. La
         biblioteca facilita el trabajo con datos en formato CSV, proporcionando
         funciones para convertir cadenas CSV en objetos JavaScript y viceversa.
