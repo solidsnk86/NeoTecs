@@ -5,7 +5,7 @@ import {
   compartirLinkedIn,
   compartirTwitter,
   compartirWhatsapp,
-  myUrl,
+  portfolioUrl,
   currentYear,
 } from '../components/Constants';
 import { FaWhatsapp, FaTelegramPlane, FaChevronCircleUp } from 'react-icons/fa';
@@ -81,7 +81,7 @@ export const Footer = () => {
         </div>
         <p className="flex justify-center text-sm mt-16 font-semibold">
           {currentYear} © NeoTecs · By
-          <a href={myUrl} target="_blank" rel="noopener">
+          <a href={portfolioUrl} target="_blank" rel="noopener">
             <img
               className="w-16 h-16 relative bottom-6 ml-2 drop-shadow-xl text-[#111] hover:scale-[1.1] transition-all"
               src="/images/neo_pixelart-removebg-preview.png"

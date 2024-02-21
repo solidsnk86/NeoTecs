@@ -80,15 +80,15 @@ export function applyLazyLoading() {
 }
 
 export const compartirWhatsapp = () => {
-  const winLoc = window.location.href;
-  const mensaje = `¡Echa un vistazo a esta web para aprender programación y a configurar tu Wi-Fi!: ${winLoc}`;
-  const encodeM = encodeURIComponent(mensaje);
-  window.open(`https://wa.me/?text=${encodeM}`);
+  const url = window.location.href;
+  const message = `¡Echa un vistazo a esta web para aprender programación y a configurar tu Wi-Fi!: ${url}`;
+  const encodeMessage = encodeURIComponent(message);
+  window.open(`https://wa.me/?text=${encodeMessage}`);
 };
 
 export const compartirTwitter = () => {
-  const encodeUr = encodeURIComponent(window.location.href);
-  window.open(`https://twitter.com/share?url=${encodeUr}`);
+  const encodeUrl = encodeURIComponent(window.location.href);
+  window.open(`https://twitter.com/share?url=${encodeUrl}`);
 };
 
 export const compartirLinkedIn = () => {
@@ -108,8 +108,8 @@ export const compartiTelegram = () => {
 };
 
 export function compartirFacebook() {
-  const encodeU = encodeURIComponent(window.location.href);
-  window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeU}`);
+  const encodeUrl = encodeURIComponent(window.location.href);
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeUrl}`);
 }
 
 export default function sendWhatsapp(id, price) {
@@ -121,6 +121,6 @@ export default function sendWhatsapp(id, price) {
   window.open(wapUrl);
 }
 
-export const myUrl = 'https://portfolio-mgc.vercel.app/';
+export const portfolioUrl = 'https://portfolio-mgc.vercel.app/';
 
 export const currentYear = new Date().getFullYear();
