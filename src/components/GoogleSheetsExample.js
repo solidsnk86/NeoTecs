@@ -1,6 +1,7 @@
 import { Pre } from './Pre';
 import Link from 'next/link';
 import { ExternalLinkIcon } from 'lucide-react';
+import { GoogleSheetsExample2 } from './GoogleSheetsExample2';
 import { SectionTitle } from './SectionTitle';
 
 export const GoogleSheetsExample = () => {
@@ -165,6 +166,7 @@ export const GoogleSheetsExample = () => {
         Posteriormente, se utiliza un <span>.map</span> para recorrer cada
         artículo y mostrarlo en pantalla.
       </p>
+      <GoogleSheetsExample2 />
       <p>
         ¡Gracias por acompañarnos hasta el final de este artículo! Hemos
         concluido, y espero que puedan aplicar lo aprendido según sus
