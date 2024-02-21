@@ -45,7 +45,7 @@ export default function Scraping() {
                 </div>
                 <div className="my-10">
                     <p>
-                        Esto es un fetch de documentación MarkDown de mi repositorio de
+                        Esto que acabamos de leer es un fetch de documentación MarkDown de mi repositorio de
                         GitHub que indica el procedimiento.
                     </p>
                     <p>
