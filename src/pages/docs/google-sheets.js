@@ -4,7 +4,7 @@ import { NavSwitch } from '../../components/docs/NavSwicth';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import { GoogleSheetsExample } from '../../components/GoogleSheetsExample';
 import { Footer } from '../../components/Footer';
-import { CalendarClockIcon } from 'lucide-react';
+import { CalendarClockIcon, Receipt } from 'lucide-react';
 import { WhatsApp } from '@mui/icons-material';
 import { AtroposBox } from '../../components/AtroposBox';
 import { SectionTitle } from '../../components/SectionTitle';
@@ -74,7 +74,9 @@ export default function CsvSheets() {
               <article key={pic.id} className="mt-3">
                 <p className="text-2xl font-mono text-center py-2">{pic.id}</p>
                 <span className="bg-button-variant text-text-variant font-semibold font-mono p-1 w-fit my-3 rounded-md">
-                  Price: U$D {pic.price}
+                  Price:
+                  <Receipt className="w-6 mb-[2px] text-red-500 inline" />
+                  {pic.price}
                 </span>
                 <AtroposBox
                   bg={pic.image}
