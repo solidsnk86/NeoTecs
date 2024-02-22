@@ -74,7 +74,7 @@ export const Nav = ({ className }) => {
       <div className="h-12 bg-background-color flex justify-between max-w-screen-xl mx-auto px-4 md:px-8 relative text-text-primary">
         <div className="flex relative bottom-[17px]">
           <Link href="/" title="Inicio">
-            <NeotecsLogo className="cursor-pointer" />
+            <NeotecsLogo className="cursor-pointer hover:scale-110 transition-all duration-300" />
           </Link>
         </div>
         <aside className="flex space-x-3 mt-3">
