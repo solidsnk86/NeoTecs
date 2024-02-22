@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 @media (prefers-color-scheme: light) {
   :root {
     --color-secondary: #565e71;
@@ -286,7 +288,7 @@ pre {
 
 .list-css-span span {
   font-family: monospace;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.9rem;
   border: 1px solid var(--color-outline-variant);
   padding: 1px 4px;
@@ -426,6 +428,10 @@ textarea {
 
 .link-chain:hover .chain-link {
   display: inline;
+}
+
+.p2p {
+  font-family: 'Press Start 2P';
 }
 
 .lupa:hover {

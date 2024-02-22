@@ -1,16 +1,17 @@
-import { Nav } from '../../components/Nav';
-import { LectureNav } from '../../components/LectureNav';
-import { NavSwitch } from '../../components/NavSwicth';
-import { Pre } from '../../components/Pre';
-import { SectionTitle } from '../../components/SectionTitle';
-import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-import Link from 'next/link';
-import { Footer } from '../../components/Footer';
-import { ShareButton } from '../../components/ShareButton';
-import { ExternalLinkIcon } from 'lucide-react';
 import CurrencyConverter from '../../components/CurrencyComponent';
+import { ExternalLinkIcon } from 'lucide-react';
+import { Footer } from '../../components/Footer';
+import JavascriptExample from '../../components/JavascriptExample';
 import HeaderTitle from '../../components/HeaderTitlte';
 import IndexTitle from '../../components/IndexTitle';
+import { LectureNav } from '../../components/LectureNav';
+import Link from 'next/link';
+import { Pre } from '../../components/Pre';
+import { Nav } from '../../components/Nav';
+import { NavSwitch } from '../../components/NavSwicth';
+import { ShareButton } from '../../components/ShareButton';
+import { SectionTitle } from '../../components/SectionTitle';
+import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 export default function JavaScript() {
   return (
     <TitlesContextProvider>
@@ -1705,6 +1706,7 @@ export default function JavaScript() {
             </p>
             <ShareButton setTitle={JavaScript.title} />
           </article>
+          <JavascriptExample />
         </div>
       </div>
       <Footer />

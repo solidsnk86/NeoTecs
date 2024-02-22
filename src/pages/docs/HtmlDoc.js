@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { Pre } from '../Pre';
-import { SectionTitle } from '../SectionTitle';
-import { ShareButton } from '../ShareButton';
+import { Pre } from '../../components/Pre';
+import { SectionTitle } from '../../components/SectionTitle';
+import { ShareButton } from '../../components/ShareButton';
 import { ExternalLink } from 'lucide-react';
 
 export default function HtmlDoc() {

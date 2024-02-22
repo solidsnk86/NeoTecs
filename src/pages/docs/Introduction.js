@@ -1,8 +1,8 @@
-import { SectionTitle } from '../SectionTitle';
+import { SectionTitle } from '../../components/SectionTitle';
 import Link from 'next/link';
 import { ExternalLinkIcon } from 'lucide-react';
-import HeaderTitle from '../HeaderTitlte';
-import IndexTitle from '../IndexTitle';
+import HeaderTitle from '../../components/HeaderTitlte';
+import IndexTitle from '../../components/IndexTitle';
 
 export const Introduction = () => {
   return (

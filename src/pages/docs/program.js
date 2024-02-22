@@ -2,9 +2,9 @@ import { Nav } from '../../components/Nav';
 import { LectureNav } from '../../components/LectureNav';
 import { Footer } from '../../components/Footer';
 import { NavSwitch } from '../../components/NavSwicth';
-import { Introduction } from '../../components/docs/Introduction';
+import { Introduction } from './Introduction';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-import HtmlDoc from '../../components/docs/HtmlDoc';
+import HtmlDoc from './HtmlDoc';
 
 export default function Program() {
   return (

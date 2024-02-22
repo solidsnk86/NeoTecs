@@ -26,6 +26,6 @@
     "src/pages/docs/scraping.js",
     "src/pages/docs/scraping.js",
     "src/pages/docs/google-sheets.js"
-  ],
+, "src/components/JavascriptExample.js"  ],
   "exclude": ["node_modules"]
 }
