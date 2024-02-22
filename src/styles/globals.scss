@@ -419,6 +419,13 @@ textarea {
 
 .chain-link {
   padding-bottom: 3px;
+  color: cornflowerblue;
+  display: none;
+  transition: display 3s ease-out;
+}
+
+.link-chain:hover .chain-link {
+  display: inline;
 }
 
 .lupa:hover {
