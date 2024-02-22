@@ -60,7 +60,6 @@ export const NavSwitch = ({ inline }) => {
   ];
 
   const isActive = (link) => link.href === router.asPath;
-  const isClient = typeof windows !== 'undefined';
 
   return (
     <div
@@ -70,24 +69,21 @@ export const NavSwitch = ({ inline }) => {
           : ''
       }`}
     >
-      {links.map(
-        (link) =>
-          isClient && (
-            <Link
-              href={link.href}
-              key={link.href}
-              className={`xl:p-2 w-full flex duration-100 !no-underline ${
-                isActive(link)
-                  ? 'xl:bg-[cornflowerblue] xl:bg-opacity-50 border-b-[3px] border-amber-600 xl:border-none'
-                  : 'dark:hover:bg-[#202327] hover:bg-[#BDC5CC] hover:opacity-90'
-              }`}
-            >
-              <p className="font-semibold line-clamp-1 px-3 xl:w-auto text-text-primary text-center xl:px-0 xl:line-clamp-none">
-                {link.title}
-              </p>
-            </Link>
-          ),
-      )}
+      {links.map((link) => (
+        <Link
+          href={link.href}
+          key={link.href}
+          className={`xl:p-2 w-full flex duration-100 !no-underline ${
+            isActive(link)
+              ? 'xl:bg-[cornflowerblue] xl:bg-opacity-50 border-b-[3px] border-amber-600 xl:border-none'
+              : 'dark:hover:bg-[#202327] hover:bg-[#BDC5CC] hover:opacity-90'
+          }`}
+        >
+          <p className="font-semibold line-clamp-1 px-3 xl:w-auto text-text-primary text-center xl:px-0 xl:line-clamp-none">
+            {link.title}
+          </p>
+        </Link>
+      ))}
     </div>
   );
 };
