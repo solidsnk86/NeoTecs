@@ -85,7 +85,7 @@ export default function Home() {
       <HomeBlock className="bg-[#09090b] dark:bg-[#ffffff]">
         <HomeBlockTitle>Acerca de NeoTecs</HomeBlockTitle>
         <div className="border dark:border-zinc-800 p-3 rounded-xl shadow-sm shadow-slate-200 dark:shadow-none">
-          <p className="text-md space-y-3 font-mono">
+          <p className="text-md space-y-3 font-bold">
             Si te interesa aprender...
           </p>
           <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full" />
