@@ -1,8 +1,8 @@
-import { SectionTitle } from '../../components/SectionTitle';
 import Link from 'next/link';
 import { ExternalLinkIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import IndexTitle from '../../components/IndexTitle';
+import { SectionTitle } from '../../components/SectionTitle';
 
 export const Introduction = () => {
   return (
@@ -127,3 +127,5 @@ export const Introduction = () => {
     </main>
   );
 };
+
+export default Introduction;

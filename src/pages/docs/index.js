@@ -1,7 +1,6 @@
 import { Nav } from '../../components/Nav';
 import { Footer } from '../../components/Footer';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-
 import { DocsNav } from '../../components/DocsNav';
 import { BrandsSwitch } from '../../components/BrandsSwitch';
 
