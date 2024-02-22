@@ -1,6 +1,6 @@
 import { Nav } from '../../components/Nav';
-import { LectureNav } from '../../components/docs/LectureNav';
-import { NavSwitch } from '../../components/docs/NavSwicth';
+import { LectureNav } from '../../components/LectureNav';
+import { NavSwitch } from '../../components/NavSwicth';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';

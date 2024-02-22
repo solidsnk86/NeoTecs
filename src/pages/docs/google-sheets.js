@@ -1,6 +1,6 @@
 import { Nav } from '../../components/Nav';
-import { LectureNav } from '../../components/docs/LectureNav';
-import { NavSwitch } from '../../components/docs/NavSwicth';
+import { LectureNav } from '../../components/LectureNav';
+import { NavSwitch } from '../../components/NavSwicth';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import { GoogleSheetsExample } from '../../components/GoogleSheetsExample';
 import { Footer } from '../../components/Footer';

@@ -2,6 +2,7 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "files.autoSave": "afterDelay",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.guides.bracketPairs": true,

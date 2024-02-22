@@ -1,8 +1,7 @@
-import Link from 'next/link';
 import React, { useContext, useState } from 'react';
 import { ArrowLeftIcon } from 'lucide-react';
 import { NavSwitch } from './NavSwicth';
-import { TitlesContext } from '../../shared/TitlesContext';
+import { TitlesContext } from '../shared/TitlesContext';
 
 export function LectureNav() {
   const { titles } = useContext(TitlesContext);

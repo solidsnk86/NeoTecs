@@ -1,7 +1,7 @@
 import { Nav } from '../../components/Nav';
-import { LectureNav } from '../../components/docs/LectureNav';
+import { LectureNav } from '../../components/LectureNav';
 import { Footer } from '../../components/Footer';
-import { NavSwitch } from '../../components/docs/NavSwicth';
+import { NavSwitch } from '../../components/NavSwicth';
 import { Introduction } from '../../components/docs/Introduction';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import HtmlDoc from '../../components/docs/HtmlDoc';

@@ -7,7 +7,7 @@ export const GoogleSheetsExample2 = () => {
   return (
     <>
       <SectionTitle title="Papa Parse" />
-      <div className="border-l-4 border-green-600 px-1 bg-opacity-[0.6] pl-5 font-semibold">
+      <div className="border-l-4 border-green-600 px-1 bg-opacity-[0.6] p-3 pl-5 font-semibold">
         <p className="font-bold text-xl text-green-600">
           <InfoIcon className="w-6 inline mb-1" /> Tip
         </p>
