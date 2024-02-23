@@ -368,9 +368,17 @@ export const JavascriptExample = () => {
         `
       }</Pre>
       <p>Desglosamos:</p>
-      <ol className='list-css-span'>
+      <ol className="list-css-span">
         <li>
-          la constante<span>currencyData</span>:
+          la constante<span>currencyData</span>:Aquí se utiliza la palabra clave
+          await para esperar a que la función fetchData() se resuelva antes de
+          continuar con la ejecución del código.
+        </li>
+        <li>
+          La constante<span>lastUpdate</span>: Se verifica si currencyData tiene
+          elementos. Si es así, se asigna el valor de la propiedad update del
+          primer elemento de currencyData a la variable lastUpdate. Si no hay
+          elementos, se asigna una cadena vacía a lastUpdate.
         </li>
       </ol>
     </article>
