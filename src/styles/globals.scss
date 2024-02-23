@@ -430,6 +430,23 @@ textarea {
   display: inline;
 }
 
+@keyframes insideOut {
+  from {
+    transform: translateZ(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateZ(100%);
+    opacity: 1;
+  }
+}
+
+.check-effect {
+  animation-name: insideOut;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
 .p2p {
   font-family: 'Press Start 2P';
 }

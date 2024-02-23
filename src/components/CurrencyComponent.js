@@ -80,6 +80,11 @@ export default function CurrencyConverter() {
         >
           {isSubmitting ? 'Convirtiendo' : 'Convertir'}
         </button>
+        <p>
+          Podemos hacer la conversión del valor de la divisa para obtener un
+          resultado concreto de acuerdo al monto indicado (La divisa principal
+          es dólar a la divisa que se elija):
+        </p>
       </form>
       <div
         id="result"
@@ -90,14 +95,7 @@ export default function CurrencyConverter() {
         </p>
         <p>{result}</p>
         <p>Al día de la fecha {date}</p>
-      </div>
-      <div>
-        <p>
-          Podemos hacer la conversión del valor de la divisa para obtener un
-          resultado concreto de acuerdo al monto indicado (La divisa principal
-          es dólar a la divisa que se elija):
-        </p>
-        <aside>
+        <aside className="ml-2 block">
           <input
             type="text"
             placeholder="Monto a convertir"
@@ -112,7 +110,7 @@ export default function CurrencyConverter() {
           >
             Calcular
           </button>
-          <p className="bg-button-variant w-fit p-2 font-semibold text-text-variant rounded">
+          <p className="text-zinc-100 pb-2">
             {`U$D ${amountToConvert} es alrededor de  ` +
               currencyResult +
               ` ${currency.toUpperCase()}`}

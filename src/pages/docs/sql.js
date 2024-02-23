@@ -915,8 +915,8 @@ export default function SqlDocs() {
               </Link>
               .
             </p>
-            <div className="border-l-4 border-red-500 px-1 bg-opacity-[0.6] p-3 pl-5 text-red-500 font-semibold">
-              <p className="font-semibold text-lg">
+            <div className="border-l-4 border-red-500 px-1 bg-opacity-[0.6] p-3 pl-5 font-semibold">
+              <p className="font-semibold text-red-500 text-lg">
                 <AlertTriangle className="w-5 inline mb-1" /> Importante
               </p>
               <p>

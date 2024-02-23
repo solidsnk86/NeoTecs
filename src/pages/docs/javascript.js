@@ -1689,14 +1689,6 @@ export default function JavaScript() {
             <span id="cambio-divisas" />
             <SectionTitle title="Convertir Divisas" />
             <CurrencyConverter />
-            <p>
-              ¡Eso es todo para este curso de
-              <b className="px-1 py-[2px] bg-[#F7DF1E] mx-1 text-md text-black">
-                Js
-              </b>
-              ! La próxima vez, trabajaré para crear interfaces de usuario aún
-              más atractivas.
-            </p>
             <p className="list-css-span">
               Más adelante vamos a ver como uso este ejemplo de API routes de
               Next.js donde actualizo los datos desde Google Sheets (Como base
@@ -1704,9 +1696,17 @@ export default function JavaScript() {
               <span>.csv</span>el cual podemos actualizar los valores de las
               divisas.
             </p>
-            <ShareButton setTitle={JavaScript.title} />
           </article>
           <JavascriptExample />
+          <p>
+            ¡Eso es todo para este curso de
+            <b className="px-1 py-[2px] bg-[#F7DF1E] mx-1 text-md text-black">
+              Js
+            </b>
+            ! La próxima vez, trabajaré para crear interfaces de usuario aún más
+            atractivas.
+          </p>
+          <ShareButton setTitle={JavaScript.title} />
         </div>
       </div>
       <Footer />
