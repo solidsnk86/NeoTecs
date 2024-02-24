@@ -14,7 +14,7 @@ const DataCurrency = () => {
   }, []);
 
   return (
-    <div className="w-1/2 justify-center mx-auto">
+    <div className="xl:w-1/2 justify-center mx-auto p-2 overflow-hidden overflow-x-auto">
       <table className="table border-collapse border p-2 flex-wrap text-balance">
         <thead className=" bg-bg-card">
           <tr className="border">
