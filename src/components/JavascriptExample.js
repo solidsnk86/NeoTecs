@@ -168,7 +168,7 @@ export const JavascriptExample = () => {
         .map((row) => {
           const items = [currency, rates, update] = row.split(',')
           .map((items) => items.trim()) 
-          return {
+      
           return {
             currency, 
             rates: parsedFloat(rates), 
