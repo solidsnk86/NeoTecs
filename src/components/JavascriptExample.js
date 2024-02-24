@@ -3,44 +3,25 @@ import IndexTitle from './IndexTitle';
 import Link from 'next/link';
 import { SectionTitle } from './SectionTitle';
 import { Pre } from './Pre';
+import DataCurrency from '../components/CurrencyExample';
 
 export const JavascriptExample = () => {
   return (
     <article>
       <SectionTitle title="End-Point API" />
       <p>
-        En esta sección, nos enfocaremos en la creación de nuestro endpoint API,
-        y daremos un paso adicional para dotar a nuestra API de una
-        funcionalidad extra: la capacidad de actualizarse dinámicamente desde
-        Google Sheets. Esto significa que podremos realizar cambios en la
-        información directamente desde una hoja de cálculo en Google Sheets, y
-        estos cambios se reflejarán automáticamente en nuestra API.
-      </p>
-      <p>
-        Así, al finalizar esta sección, tendremos un endpoint API robusto y
-        flexible que se puede mantener al día de manera fácil y eficiente
-        mediante la actualización desde Google Sheets. Esto mejorará la
-        usabilidad y la accesibilidad de nuestra API, proporcionando una
-        solución más completa y adaptada a las necesidades cambiantes del
-        usuario.
-      </p>
-      <p>
-        En el contexto de nuestro ejemplo, resulta altamente beneficioso que la
-        actualización de las variaciones en los cambios de moneda a nivel
-        mundial sea gestionada de esta manera. La utilidad radica en la
-        capacidad de mantener nuestra información monetaria siempre actualizada
-        y precisa. Imagina que las tasas de cambio fluctúan constantemente
-        debido a eventos económicos o políticos. Gracias a la conexión dinámica
-        con Google Sheets, podemos reflejar estas variaciones en tiempo real en
-        nuestra API sin necesidad de intervenciones manuales. Esto no solo
-        mejora la precisión de los datos proporcionados por nuestra API, sino
-        que también brinda a los usuarios una experiencia más confiable y
-        actualizada al consultar información sobre las tasas de cambio. Además,
-        al delegar la gestión de las variaciones de las monedas a una
-        herramienta como Google Sheets, facilitamos la tarea de aquellos
-        encargados de mantener actualizada la información, permitiéndoles
-        realizar ajustes de manera eficiente y sin la necesidad de conocimientos
-        técnicos especializados.
+        En esta sección, nos centraremos en la creación de un endpoint API con
+        la capacidad única de actualizarse dinámicamente desde Google Sheets.
+        Esto significa que los cambios realizados en la hoja de cálculo se
+        reflejarán automáticamente en la API. Al finalizar, tendremos una API
+        robusta y flexible que se mantiene actualizada mediante Google Sheets,
+        mejorando la usabilidad y proporcionando información precisa de las
+        tasas de cambio. La conexión dinámica asegura la actualización en tiempo
+        real, mejorando la confiabilidad de los datos y brindando a los usuarios
+        una experiencia más actualizada. La gestión eficiente de las variaciones
+        monetarias en Google Sheets simplifica la tarea de mantener la
+        información actualizada sin necesidad de conocimientos técnicos
+        especializados.
       </p>
       <IndexTitle>Empezamos</IndexTitle>
       <article className="list-css-span">
@@ -65,7 +46,7 @@ export const JavascriptExample = () => {
         </p>
         <p>
           Seleccionamos hoja de cálculo en blanco, y podemos visualizar de la
-          siuiente manera el documento
+          siuiente manera el documento:
         </p>
         <figure>
           <div className="images-client">
@@ -353,7 +334,7 @@ export const JavascriptExample = () => {
       <p className="list-css-span">
         Bien, vamos a hacer nuestro archivo<span>currency.js</span> más
         completo, manejando los arrays de manera eficiente. ¿Cómo lo hacemos?
-        Para ello, utilizaremos nuestro acumulador favorito que es la función
+        Para ello, utilizaremos nuestro acumulador que es la función
         <span>.reduce</span>, que nos permite acumular los elementos de un array
         y convertirlo en un objeto:
       </p>
@@ -380,7 +361,195 @@ export const JavascriptExample = () => {
           primer elemento de currencyData a la variable lastUpdate. Si no hay
           elementos, se asigna una cadena vacía a lastUpdate.
         </li>
+        <li>
+          En la constante<span>ratesObject</span>: Se utiliza el método
+          <span>reduce</span>
+          para convertir el array<span>currencyData</span>en un objeto llamado
+          <span>ratesObject</span>. La función<span>.reduce</span>toma una
+          función de retorno de llamada y un valor inicial, en este caso, un
+          objeto vacío<span>{'{}'}</span>y realiza una operación acumulativa
+          sobre cada elemento del array. La función de retorno de llamada recibe
+          dos parámetros:<span>acc</span>(el acumulador) y un elemento
+          desestructurado
+          <span>{'{(currency, rates)}'}</span>del array. En cada iteración, se
+          agrega una nueva propiedad al objeto<span>acc</span>, donde la clave
+          es<span>currency</span>y el valor es<span>rates</span>. Al final,
+          reduce devuelve el objeto acc, que ahora contiene todas las tasas de
+          cambio organizadas por su moneda.
+        </li>
       </ol>
+      <p className="list-css-span">
+        Luego nos queda crear el<span>JSON</span>con los datos obtenidos de
+        Google Sheets.
+      </p>
+      <Pre lang="javascript">{
+        /*javascript */ `
+        res.status(200).json({
+          success: true,
+          timestamp: new Date().toLocaleDateString('es-Es, {
+            year: "numeric",
+            month: "2 digits",
+            day: "2 digits",
+          })
+          base 'USD',
+          update: lastUpdate,
+          rates: ratesObjetc // Nuestro objeto de arrays
+        })
+        `
+      }</Pre>
+      <p>
+        Bien con esto ya seremos capaces de tener nuestra API que se podrá
+        actualizar desde una hoja de cálculos en Google Sheets, no olviden de
+        hacer un<span>try</span>y un <span>catch</span>para manejar errores en
+        bloques de código. Nos quedaría de la siguiente forma:
+      </p>
+      <Pre lang="javascript">{
+        /*javascript */ `
+        import { currencyGoogleSheetsURL } from '../../components/Constants';
+
+        export default async function handlerCurrency(req, res) {
+          'use-client';
+          try {
+            const fetchData = async () => {
+              const response = await fetch(currencyGoogleSheetsURL);
+        
+              if (!response.ok) {
+                throw new Error(\`Failed to fetch data. Status: \${response.status}\`);
+              }
+        
+              const csvItem = await response.text();
+              const parsedItems = csvItem
+                .split(\'\\n')
+                .slice(1)
+                .map((row) => {
+                  const [currency, rates, update] = row
+                    .split(',')
+                    .map((item) => item.trim());
+                  return {
+                    currency,
+                    rates: parseFloat(rates),
+                    update,
+                  };
+                });
+              return parsedItems;
+            };
+        
+            const currencyData = await fetchData();
+            const lastUpdate = currencyData.length > 0 ? currencyData[0].update : '';
+            const ratesObject = currencyData.reduce((acc, { currency, rates }) => {
+              acc[currency] = rates;
+              return acc;
+            }, {});
+        
+            res.status(200).json({
+              success: true,
+              timestamp: new Date().toLocaleDateString('es-Es', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              }),
+              base: 'USD',
+              update: lastUpdate,
+              rates: ratesObject,
+            });
+          } catch (error) {
+            console.error('Error fetching and processing currency data:', error);
+            res.status(500).json({ success: false, error: 'Internal Server Error' });
+          }
+        }        
+        `
+      }</Pre>
+      <p className="list-css-span">
+        Por último nos queda poder recibir estos datos en nuestro componente,
+        creamos en nuestra carpeta<span>📁components</span>un archivo llamado
+        por ejemplo
+        <span>CurrencyComponent.js</span>
+      </p>
+      <Pre lang="javascript">{
+        /*javascript */ `
+        //CurrencyComponent.js
+
+        import { useState, useEffect } from 'react';
+
+        const DataCurrency = () => {
+          const [currency, setCurrency] = useState('');
+        
+          useEffect(() => {
+            const dataFetch = async () => {
+              const response = await fetch('/api/currency');
+              const data = await response.json();
+              setCurrency(data);
+            };
+        
+            dataFetch();
+          }, []);
+
+          return (
+            <>
+            {/* HTML... */}
+            </>
+          )
+        };        
+        `
+      }</Pre>
+      <p className="list-css-span">
+        Con esta información ya podremos recibir nuestro<span>JSON</span>pero
+        tendremos que devolver en un<span>HTML</span>lo siguiente:
+      </p>
+      <Pre lang="html">{
+        /*html */ `
+          <div className="w-1/2 justify-center mx-auto">
+            <table className="table border-collapse border p-2 flex-wrap text-balance">
+              <thead className=" bg-bg-card">
+                <tr className="border">
+                  <th>Divisas hoy {currency.timestamp}</th>
+                  <th>Tipo de Cambio</th>
+                  <th>Actualización: {currency.update}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {currency && (
+                  <>
+                    <tr>
+                      <td>{\`1 \${currency.base}\`}</td>
+                      <td>{currency.rates.EUR}</td>
+                      <td>Euros</td>
+                    </tr>
+                    <tr>
+                      <td>{\`1 \${currency.base}\`}</td>
+                      <td>{currency.rates.ARS}</td>
+                      <td>Peso Argentino</td>
+                    </tr>
+                    <tr>
+                      <td>{\`1 \${currency.base}\`}</td>
+                      <td>{currency.rates.BRL}</td>
+                      <td>Real Brasilero</td>
+                    </tr>
+                    <tr>
+                      <td>{\`1 \${currency.base}\`}</td>
+                      <td>{currency.rates.CHP}</td>
+                      <td>Peso Chileno</td>
+                    </tr>
+                    <tr>
+                      <td>{\`1 \${currency.base}\`}</td>
+                      <td>{currency.rates.GBP}</td>
+                      <td>Libra Esterlina</td>
+                    </tr>
+                  </>
+                )}
+              </tbody>
+            </table>
+          </div>
+        `
+      }</Pre>
+      <p className="list-css-span">
+        Este ejemplo muestra cómo recibir y procesar datos en un componente
+        React utilizando la información obtenida de una API. Dependiendo de
+        nuestras necesidades específicas, podemos adaptar la visualización de
+        estos datos. En este caso, los datos provienen de la API
+        <span>/api/currency</span>y lo veremos así:
+      </p>
+      <DataCurrency />
     </article>
   );
 };

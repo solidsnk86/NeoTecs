@@ -423,7 +423,7 @@ textarea {
   padding-bottom: 3px;
   color: cornflowerblue;
   display: none;
-  transition: display 3s ease-out;
+  transition: display 3s ease-in-out;
 }
 
 .link-chain:hover .chain-link {
@@ -431,14 +431,29 @@ textarea {
 }
 
 @keyframes insideOut {
-  from {
-    transform: translateZ(0);
+  0% {
+    transform: translateZ(-600px);
     opacity: 0;
   }
-  to {
-    transform: translateZ(100%);
+  50% {
+    transform: translateZ(-300px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateZ(0);
     opacity: 1;
   }
+}
+
+.table th {
+  color: var(--color-on-surface);
+  border: 1px solid var(--color-outline);
+  padding: 8px;
+}
+
+.table td {
+  border: 1px solid var(--color-outline);
+  padding: 8px;
 }
 
 .check-effect {

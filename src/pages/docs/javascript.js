@@ -73,6 +73,9 @@ export default function JavaScript() {
             <li>
               <a href="#cambio-divisas">Cambio de divisas (ejemplo)</a>
             </li>
+            <li>
+              <a href="#end-point-api">End-Point API</a>
+            </li>
           </ol>
           <span id="introduccion" />
           <SectionTitle title="Introducción" />

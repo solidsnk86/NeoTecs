@@ -1,7 +1,6 @@
 import { FaWindows } from 'react-icons/fa';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
-import { ShareButton } from '../ShareButton';
 import { PublishDate } from '../PublishDate';
 import { ExternalLinkIcon } from 'lucide-react';
 import Link from 'next/link';

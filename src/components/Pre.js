@@ -41,10 +41,10 @@ export const Pre = ({ children, lang = '' }) => {
         className="text-xs absolute z-10 top-[26px] right-[8px] cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all"
       >
         {copied ? (
-          <>
+          <div className="check-effect">
             Copiado!
-            <Check className="w-[14px] text-lime-400 h-[14px] inline mx-1 mb-[2px] chek-effect" />
-          </>
+            <Check className="w-[14px] text-lime-400 h-[14px] inline mx-1 mb-[2px]" />
+          </div>
         ) : (
           <Copy className="w-[14px] h-[14px] inline mx-1" />
         )}
