@@ -351,7 +351,7 @@ export const JavascriptExample = () => {
       <p>Desglosamos:</p>
       <ol className="list-css-span">
         <li>
-          la constante<span>currencyData</span>:Aquí se utiliza la palabra clave
+          La constante<span>currencyData</span>:Aquí se utiliza la palabra clave
           await para esperar a que la función fetchData() se resuelva antes de
           continuar con la ejecución del código.
         </li>
