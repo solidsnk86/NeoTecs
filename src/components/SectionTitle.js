@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { TitlesContext } from '../shared/TitlesContext';
-import { Anchor, Link } from 'lucide-react';
+import { Link } from 'lucide-react';
 
 export const SectionTitle = ({ level = '2', title = '' }) => {
   const Component = `h${level}`;

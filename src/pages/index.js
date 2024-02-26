@@ -92,7 +92,9 @@ export default function Home() {
           <p className="mt-4 text-text-second ">{aboutNeo}</p>
         </div>
       </HomeBlock>
+
       <MarqueeLogos />
+
       <div className="my-20 justify-center mx-auto flex">
         <Link href="/docs/program">
           <ShimmerButton shimmerDuration="1.8s" size="large">
@@ -100,6 +102,7 @@ export default function Home() {
           </ShimmerButton>
         </Link>
       </div>
+      
       <Tracker />
       <Footer />
     </main>
