@@ -75,7 +75,7 @@ export default function CsvSheets() {
                 <p className="text-2xl font-mono text-center py-2">{pic.id}</p>
                 <span className="bg-button-variant text-text-variant font-semibold font-mono p-1 w-fit my-3 rounded-md">
                   Price:
-                  <Receipt className="w-6 mb-[2px] text-red-500 inline" />
+                  <Receipt className="w-6 mb-[4px] text-red-500 inline" />
                   {pic.price}
                 </span>
                 <AtroposBox

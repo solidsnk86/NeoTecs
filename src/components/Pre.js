@@ -27,7 +27,7 @@ export const Pre = ({ children, lang = '' }) => {
 
     setTimeout(() => {
       setCopied(false);
-    }, 2000);
+    }, 1600);
   };
 
   return (

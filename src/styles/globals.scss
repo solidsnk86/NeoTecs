@@ -511,15 +511,15 @@ textarea {
 
 @keyframes insideOut {
   0% {
-    transform: translateZ(-600px);
+    transform: rotateY(90deg);
     opacity: 0;
   }
   50% {
-    transform: translateZ(-300px);
+    transform: rotateY(30deg);
     opacity: 0.5;
   }
   100% {
-    transform: translateZ(0);
+    transform: rotateY(0);
     opacity: 1;
   }
 }
@@ -527,7 +527,7 @@ textarea {
 .check-effect {
   animation-name: insideOut;
   animation-duration: 0.5s;
-  animation-timing-function: ease-out;
+  animation-timing-function: ease-in;
 }
 
 .p2p {
