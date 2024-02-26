@@ -11,6 +11,7 @@ import { ExternalLinkIcon } from 'lucide-react';
 import { AlertTriangle, InfoIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
+import { SqlExamples } from '../../components/SqlExamples';
 export default function SqlDocs() {
   return (
     <TitlesContextProvider>
@@ -1057,7 +1058,7 @@ export default function SqlDocs() {
               Comencemos a usar modelos creando un proyecto de Django para
               nuestra aerolínea y creando una aplicación dentro de ese proyecto.
             </p>
-            <Pre lang="python">{
+            <Pre lang="bash">{
               /*python */ `
               django-admin startproject airline
               cd airline
@@ -1157,6 +1158,7 @@ export default function SqlDocs() {
               </li>
             </ul>
           </article>
+          <SqlExamples />
           <ShareButton setTitle={SqlDocs.title} />
         </div>
       </div>

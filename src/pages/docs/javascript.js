@@ -1717,4 +1717,4 @@ export default function JavaScript() {
   );
 }
 
-JavaScript.title = '🚀 Aprende Javascript en Neotecs gratis!';
+JavaScript.title = '🚀 Aprende Javascript en Neotecs!';
