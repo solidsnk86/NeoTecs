@@ -430,6 +430,46 @@ textarea {
   display: inline;
 }
 
+.table th {
+  color: var(--color-on-surface);
+  border: 1px solid var(--color-outline);
+  padding: 8px;
+}
+
+.table td {
+  border: 1px solid var(--color-outline);
+  padding: 8px;
+}
+
+@keyframes translateRight {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(5px);
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(-5px);
+    opacity: 1;
+  }
+  85% {
+    transform: translateX(3px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.copy-effect {
+  animation-name: translateRight;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
+
 @keyframes insideOut {
   0% {
     transform: translateZ(-600px);
@@ -443,17 +483,6 @@ textarea {
     transform: translateZ(0);
     opacity: 1;
   }
-}
-
-.table th {
-  color: var(--color-on-surface);
-  border: 1px solid var(--color-outline);
-  padding: 8px;
-}
-
-.table td {
-  border: 1px solid var(--color-outline);
-  padding: 8px;
 }
 
 .check-effect {

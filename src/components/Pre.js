@@ -46,7 +46,7 @@ export const Pre = ({ children, lang = '' }) => {
             <Check className="w-[14px] text-lime-400 h-[14px] inline mx-1 mb-[2px]" />
           </div>
         ) : (
-          <Copy className="w-[14px] h-[14px] inline mx-1" />
+          <Copy className="w-[14px] h-[14px] inline mx-1 copy-effect" />
         )}
       </span>
       <Highlight
