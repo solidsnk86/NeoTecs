@@ -68,7 +68,7 @@ export default function FeedBack() {
         className="xl:w-1/3 p-14 flex justify-center mx-auto text-text-primary text-left flex-col space-y-4"
       >
         <ArrowLeftIcon
-          className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-3 xl:top-10 top-14 left-2 fixed mt-3"
+          className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-3 xl:top-14 top-14 left-2 fixed mt-3"
           onClick={(e) => history.back(e)}
         />
         <h1 className="flex justify-center pt-6 mx-auto text-5xl text-transparent relative [-webkit-text-stroke-width:2px] [-webkit-text-stroke-color:var(--color-on-surface)]">

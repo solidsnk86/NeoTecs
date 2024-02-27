@@ -5,7 +5,7 @@ export function ShareButton({ setTitle }) {
     if (navigator.share) {
       navigator.share({
         title: setTitle,
-        text: 'No te pierdas este curso gratuito donde te enseño a programar con ejemplos y ejercicios prácticos, también incluye tutorial para que entiendas como configurar tu antena Wifi 📡!!',
+        text: 'No te pierdas este curso gratuito para aprender a programar con ejemplos y ejercicios prácticos, también incluye tutorial para que entiendas como configurar tu antena Wifi 📡!!',
         url: window.location.href,
       });
     }
