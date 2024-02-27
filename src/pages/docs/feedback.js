@@ -13,13 +13,7 @@ export default function FeedBack() {
   const {
     handleSubmit,
     formState: { isSubmitting },
-  } = useForm({
-    defaultValues: {
-      nombre: '',
-      email: '',
-      comentario: '',
-    },
-  });
+  } = useForm();
 
   const onSubmit = async () => {
     const isDarkMode = window.matchMedia(
@@ -50,6 +44,9 @@ export default function FeedBack() {
           type: 'success',
           theme: isDarkMode ? 'dark' : 'light',
         },
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000),
       );
     } else {
       toast('Error al enviar el feedback', {
