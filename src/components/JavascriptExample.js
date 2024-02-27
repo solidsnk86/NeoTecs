@@ -149,7 +149,6 @@ export const JavascriptExample = () => {
       <Pre lang="javascript">{
         /*javascript */ `
         // 1. En primer lugar la función que obtiene la información asincrónica
-        
         import { currencyGoogleSheetsURL } from '@/components/Constants'
 
         const dataFetch = async () => {
