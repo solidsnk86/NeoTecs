@@ -92,7 +92,7 @@ export default function SqlDocs() {
               </ul>
             </li>
             <li>
-              <a href="#administrador-django">Administrador Django</a>
+              <a href="#django-admin">Django Admin</a>
             </li>
             <li>
               <a href="#mas-relaciones">Muchas más relaciones</a>

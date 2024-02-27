@@ -495,6 +495,71 @@ export const SqlExamples = () => {
           </div>
         </figure>
       </article>
+      <SectionTitle title="Muchas más relaciones" />
+      <article>
+        <p>
+          Ahora, trabajemos en integrar a los pasajeros en nuestros modelos.
+          Crearemos un modelo de pasajero para empezar:
+        </p>
+        <Pre lang="python">{
+          /*python */ `
+          class Passenger(models.Model):
+          first = models.CharField(max_length=64)
+          last = models.CharField(max_length=64)
+          flights = models.ManyToManyField(Flight, blank=True, related_name="passengers")
+      
+          def __str__(self):
+              return f"{self.first} {self.last}"
+          `
+        }</Pre>
+        <p className="list-css-span">
+          Como discutimos, los pasajeros tienen una relación de muchos a muchos
+          con los vuelos, que describimos en Django utilizando el campo
+          ManyToManyField. El primer argumento en este campo es la clase de
+          objetos a la que está relacionado. Hemos proporcionado el argumento
+          <span>blank=True</span>, lo que significa que un pasajero puede no
+          tener vuelos. También hemos agregado un<span>related_name</span>que
+          cumple el mismo propósito que antes: nos permitirá encontrar a todos
+          los pasajeros en un vuelo dado.
+        </p>
+        <p className="list-css-span">
+          Para realizar estos cambios, debemos realizar migraciones y migrar.
+          Luego podemos registrar el modelo de Pasajero en<span>admin.py</span>y
+          visitar la página de administración para crear algunos pasajeros.
+        </p>
+        <p className="list-css-span">
+          Ahora que hemos agregado algunos pasajeros, actualicemos nuestra
+          página de vuelos para que muestre todos los pasajeros en un vuelo.
+          Primero visitaremos<span>views.py</span>y actualizaremos nuestra vista
+          de vuelo para proporcionar una lista de pasajeros como contexto.
+          Accedemos a la lista utilizando el<span>related_name</span>que
+          definimos anteriormente.
+        </p>
+        <Pre lang="python">{
+          /*python */ `
+          def flight(request, flight_id):
+          flight = Flight.objects.get(id=flight_id)
+          passengers = flight.passengers.all()
+          return render(request, "flights/flight.html", {
+              "flight": flight,
+              "passengers": passengers
+          })
+          `
+        }</Pre>
+        <p className="list-css-span">Ahora agregamos una lista de pasajeros a<span>flight.html</span>:</p>
+        <Pre lang="html">{
+          /*html */ `
+          <h2>Passengers:</h2>
+          <ul>
+              {% for passenger in passengers %}
+                  <li>{{ passenger }}</li>
+              {% empty %}
+                  <li>No Passengers.</li>
+              {% endfor %}
+          </ul>
+          `
+        }</Pre>
+      </article>
     </>
   );
 };
