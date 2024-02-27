@@ -1,9 +1,10 @@
+import { ArrowLeftIcon } from 'lucide-react';
+import { Footer } from '../../components/Footer';
+import { Nav } from '../../components/Nav';
+import { Preloader } from '../../components/Preloader';
+import { ToastContainer, toast } from 'react-toastify';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Footer } from '../../components/Footer';
-import { ArrowLeftIcon } from 'lucide-react';
-import { Nav } from '../../components/Nav';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function FeedBack() {
@@ -46,7 +47,7 @@ export default function FeedBack() {
         },
         setTimeout(() => {
           window.location.reload();
-        }, 3000),
+        }, 3600),
       );
     } else {
       toast('Error al enviar el feedback', {
@@ -113,7 +114,7 @@ export default function FeedBack() {
             type="submit"
             disabled={isSubmitting}
           >
-            {isSubmitting ? 'Enviando..' : 'Enviar'}
+            {isSubmitting ? 'Enviando...' : 'Enviar'}
           </button>
         </div>
       </form>
