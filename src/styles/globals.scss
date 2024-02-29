@@ -629,6 +629,10 @@ li {
   margin-left: 10px;
 }
 
+.solidSnk86 {
+  filter: drop-shadow(0px 0px 10px var(--color-inverse-surface));
+}
+
 @import 'atropos/scss';
 @import './home-header.scss';
 @import './picture-box.scss';

@@ -83,7 +83,7 @@ export const Footer = () => {
           {currentYear} © NeoTecs · By
           <a href={portfolioUrl} target="_blank" rel="noopener">
             <img
-              className="w-16 h-16 relative bottom-6 ml-2 drop-shadow-xl text-[#111] hover:scale-[1.1] transition-all"
+              className="w-16 h-16 relative bottom-6 ml-2 text-[#111] hover:scale-[1.2] transition-all solidSnk86"
               src="https://raw.githubusercontent.com/solidsnk86/CV_GEC/master/solidsnk86.png"
               alt="Neo-pixel-art"
               title="SolidSnk86"
