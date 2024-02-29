@@ -15,10 +15,13 @@ const LoginForm = ({ onClose }) => {
     ).matches;
 
     if (!password || !email) {
-      toast.warning('Esta sección es solo para el administrador de NeoTecs.', {
-        position: toast.POSITION.TOP_CENTER,
-        theme: isDarkMode ? 'dark' : 'light',
-      });
+      toast.warning(
+        'Esta sección es solo para el administrador de NeoTecs. Juiira perro 🐕💨...!!',
+        {
+          position: toast.POSITION.TOP_CENTER,
+          theme: isDarkMode ? 'dark' : 'light',
+        },
+      );
       return;
     }
 
