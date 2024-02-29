@@ -3,6 +3,7 @@ import { User, KeyRound } from 'lucide-react';
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import supabase from '../../components/utils/supabase';
+import Link from 'next/link';
 
 const LoginForm = ({ onClose }) => {
   const [email, setEmail] = useState('');
@@ -93,6 +94,11 @@ const LoginForm = ({ onClose }) => {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter') {
+                  handleLogin();
+                }
+              }}
             />
           </div>
         </header>
@@ -103,6 +109,12 @@ const LoginForm = ({ onClose }) => {
           >
             Iniciar sesión
           </button>
+          <div className="hr-container">
+            <hr />o<hr />
+          </div>
+          <p className="text-center font-thin text-sky-400">
+            <Link href="/docs/reset">¿Te han peinado la contraseña?</Link>
+          </p>
         </aside>
       </div>
       <ToastContainer closeButton closeOnClick />

@@ -230,8 +230,8 @@ video {
 
 .hr-container hr {
   flex-grow: 1;
-  height: 2px;
-  background-color: #666;
+  height: 1px;
+  background-color: var(--color-outline-variant);
   border: none;
   margin: 0 10px;
 }
