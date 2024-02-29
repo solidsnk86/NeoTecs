@@ -240,6 +240,16 @@ video {
   box-sizing: border-box;
 }
 
+.login-form input {
+  margin-top: 3px;
+  color: #222;
+}
+
+.login-form input:focus {
+  border-radius: 6px;
+  outline: none;
+}
+
 pre {
   position: relative;
   background-color: #181818;
