@@ -84,7 +84,7 @@ export const Footer = () => {
           <a href={portfolioUrl} target="_blank" rel="noopener">
             <img
               className="w-16 h-16 relative bottom-6 ml-2 drop-shadow-xl text-[#111] hover:scale-[1.1] transition-all"
-              src="/images/neo_pixelart-removebg-preview.png"
+              src="https://raw.githubusercontent.com/solidsnk86/CV_GEC/master/solidsnk86.png"
               alt="Neo-pixel-art"
               title="SolidSnk86"
             />
