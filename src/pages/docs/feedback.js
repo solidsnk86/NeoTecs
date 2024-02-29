@@ -1,7 +1,6 @@
 import { ArrowLeftIcon } from 'lucide-react';
 import { Footer } from '../../components/Footer';
 import { Nav } from '../../components/Nav';
-import { Preloader } from '../../components/Preloader';
 import { ToastContainer, toast } from 'react-toastify';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -22,7 +21,7 @@ export default function FeedBack() {
     ).matches;
 
     if (!nombre || !email || !comentario) {
-      toast.error('Por favor, completa todos los campos.', {
+      toast.warning('Por favor, completa todos los campos.', {
         position: toast.POSITION.TOP_CENTER,
         theme: isDarkMode ? 'dark' : 'light',
       });

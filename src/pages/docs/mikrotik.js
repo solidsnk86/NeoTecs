@@ -7,7 +7,6 @@ import { Footer } from '../../components/Footer';
 import Link from 'next/link';
 import { Nav } from '../../components/Nav';
 import { Pre } from '../../components/Pre';
-import { PublishDate } from '../../components/PublishDate';
 import { SectionTitle } from '../../components/SectionTitle';
 import { ShareButton } from '../../components/ShareButton';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
@@ -42,7 +41,6 @@ export default function MikrotikDocs() {
                 AC5 5Ghz - LHG HP5 5Ghz - STX 2.4Ghz y 5Ghz - OmniTik Series
               </strong>
             </p>
-            <PublishDate />
             <p>
               Para poder configurar el modo AP Router Cliente desde 0, vamos a
               ingresar desde una pc, o desde un smartphone, a continuación voy a

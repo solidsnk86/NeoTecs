@@ -7,7 +7,6 @@ import { FaMousePointer, FaSignInAlt, FaWindows } from 'react-icons/fa';
 import { Footer } from '../../components/Footer';
 import { Nav } from '../../components/Nav';
 import { Pre } from '../../components/Pre';
-import { PublishDate } from '../../components/PublishDate';
 import { SectionTitle } from '../../components/SectionTitle';
 import { ShareButton } from '../../components/ShareButton';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
@@ -44,7 +43,6 @@ export default function UbiquitiDocs() {
                 Lite Beam M5 - Grid M5 - M2 - airMAX - NanoStation M5 - M2
               </strong>
             </p>
-            <PublishDate />
             <h3 className="text-[cornflowerblue]">
               Configuración del Lite Beam M5 en Modo Estación
             </h3>

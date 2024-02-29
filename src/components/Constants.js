@@ -63,7 +63,7 @@ export const cardContent = [
 ];
 
 export const aboutNeo =
-  'El curso de NeoTecs se enfoca en el diseño e implementación de aplicaciones web con Python, JavaScript y SQL, utilizando frameworks como Django, React y Bootstrap. Los temas incluyen diseño de bases de datos, escalabilidad, seguridad y experiencia de usuario. Los estudiantes adquieren habilidades en la escritura de APIs, creación de interfaces interactivas y uso de servicios en la nube como GitHub, Vercel y Netlify para diseñar e implementar aplicaciones web. Entre otros ejemplos...';
+  'El curso de NeoTecs se enfoca en el diseño e implementación de aplicaciones web con Python, JavaScript y SQL, utilizando frameworks como React, Django y Bootstrap. Los temas incluyen diseño de bases de datos, escalabilidad, seguridad y experiencia de usuario. Los estudiantes adquieren habilidades en la escritura de APIs, creación de interfaces interactivas y uso de servicios en la nube como GitHub, Vercel y Netlify para diseñar e implementar aplicaciones web. Entre otros ejemplos...';
 
 export const microlink = 'https://geolocation.microlink.io';
 
@@ -81,7 +81,7 @@ export function applyLazyLoading() {
 
 export const compartirWhatsapp = () => {
   const url = window.location.href;
-  const message = `¡Echa un vistazo a esta web para aprender programación y a configurar tu Wi-Fi!: ${url}`;
+  const message = `Explora ésta página web dónde aprenderás a configurar tus dispositivos Wifi 📡 y Programación 👨‍💻: ${url}`;
   const encodeMessage = encodeURIComponent(message);
   window.open(`https://wa.me/?text=${encodeMessage}`);
 };

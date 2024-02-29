@@ -3,7 +3,6 @@ import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import HeaderTitle from '../HeaderTitlte';
 import IndexTitle from '../IndexTitle';
-import { PublishDate } from '../PublishDate';
 import Link from 'next/link';
 
 export const APClientRouterMode = () => {
@@ -42,7 +41,6 @@ export const APClientRouterMode = () => {
           CPE210 - CPE220 - CPE510 - CPE520 - CPE605 - CPE610 - CPE710
         </strong>
       </p>
-      <PublishDate />
       <p>
         Para poder configurar el modo AP Router Cliente desde 0, vamos a
         ingresar desde una pc, o desde un smartphone, a continuación voy a

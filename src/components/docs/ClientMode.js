@@ -1,5 +1,4 @@
 import { Pre } from '../Pre';
-import { PublishDate } from '../PublishDate';
 import { SectionTitle } from '../SectionTitle';
 import Link from 'next/link';
 import { ExternalLinkIcon } from 'lucide-react';
@@ -19,7 +18,6 @@ export const ClientMode = () => {
           CPE210 - CPE220 - CPE510 - CPE520 - CPE605 - CPE610 - CPE710
         </strong>
       </p>
-      <PublishDate />
       <p>
         Por lo general, usaremos dos CPE para establecer la cobertura de la red
         en las áreas exteriores sin cableado de larga distancia. Por ejemplo, en

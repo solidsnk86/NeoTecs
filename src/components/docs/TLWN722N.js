@@ -34,7 +34,6 @@ export const TlWn722n = () => {
             <img
               src="/images/descarga-driver.png"
               alt="Descarga driver tp Link"
-              loading="lazy"
             />
           </div>
         </figure>
@@ -44,11 +43,7 @@ export const TlWn722n = () => {
         </p>
         <figure>
           <div className="images-client">
-            <img
-              src="/images/driver-files.png"
-              alt="Descarga driver tp Link"
-              loading="lazy"
-            />
+            <img src="/images/driver-files.png" alt="Descarga driver tp Link" />
           </div>
         </figure>
         <p>
@@ -70,7 +65,6 @@ export const TlWn722n = () => {
             <img
               src="/images/administrador-d.png"
               alt="Descarga driver tp Link"
-              loading="lazy"
             />
           </div>
         </figure>
@@ -89,7 +83,6 @@ export const TlWn722n = () => {
             <img
               src="/images/actualizar-controlador.png"
               alt="Descarga driver tp Link"
-              loading="lazy"
             />
           </div>
         </figure>
@@ -99,7 +92,6 @@ export const TlWn722n = () => {
             <img
               src="/images/actualizar-controlador.png"
               alt="Descarga driver tp Link"
-              loading="lazy"
             />
           </div>
         </figure>
@@ -112,11 +104,7 @@ export const TlWn722n = () => {
         </p>
         <figure>
           <div className="images-client">
-            <img
-              src="/images/elegir-lista.png"
-              alt="Descarga driver tp Link"
-              loading="lazy"
-            />
+            <img src="/images/elegir-lista.png" alt="Descarga driver tp Link" />
           </div>
         </figure>
         <p>Elegimos la lista de controladores disponobles en el equipo:</p>
@@ -125,7 +113,6 @@ export const TlWn722n = () => {
             <img
               src="/images/utilizar-disco.png"
               alt="Descarga driver tp Link"
-              loading="lazy"
             />
           </div>
         </figure>
@@ -143,11 +130,7 @@ export const TlWn722n = () => {
         </p>
         <figure>
           <div className="images-client">
-            <img
-              src="/images/driver.png"
-              alt="Descarga driver tp Link"
-              loading="lazy"
-            />
+            <img src="/images/driver.png" alt="Descarga driver tp Link" />
           </div>
         </figure>
         <p>
@@ -170,7 +153,7 @@ export const TlWn722n = () => {
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullscreen
           className="rounded-lg w-96 h-64"
         ></iframe>
       </div>

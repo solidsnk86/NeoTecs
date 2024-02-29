@@ -1,11 +1,9 @@
-import { PublishDate } from '../PublishDate';
 import { SectionTitle } from '../SectionTitle';
 
 export const RepeaterMode = () => {
   return (
     <section className="text-text-primary">
       <SectionTitle title="Modo Repetidor" />
-      <PublishDate />
 
       <figure className="images-client">
         <img

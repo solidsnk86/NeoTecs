@@ -1,7 +1,6 @@
 import { FaWindows } from 'react-icons/fa';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
-import { PublishDate } from '../PublishDate';
 import { ExternalLinkIcon } from 'lucide-react';
 import Link from 'next/link';
 
@@ -9,7 +8,6 @@ export const RouterMode = () => {
   return (
     <section className="text-text-primary router-mode">
       <SectionTitle title="Modo Router" />
-      <PublishDate />
       <p>
         <strong className="text-text-strong">Definición:</strong> Es similar al
         Router inalámbrico doméstico, el dispositivo en modo Router AP se
