@@ -41,7 +41,7 @@ const LoginForm = ({ onClose }) => {
 
         if (failedAttempts + 1 >= 2) {
           toast.error(
-            '¡Quieto ahí 🛑! Para mí que no eres el verdadero Administrador.',
+            'Alto ahí 🛑! Para mí que no eres el verdadero Administrador.',
             {
               position: toast.POSITION.TOP_CENTER,
               theme: isDarkMode ? 'dark' : 'light',
