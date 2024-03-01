@@ -1,0 +1,15 @@
+effect-button:hover span:after {
+  animation: flip 0.2s calc(var(--i) * 0.05s);
+}
+
+@keyframes flip {
+  20% {
+    content: '_';
+  }
+  40% {
+    content: var(--c1);
+  }
+  60% {
+    content: var(--c2);
+  }
+}

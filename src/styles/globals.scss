@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Geist Mono';
+  src: url(https://assets.codepen.io/605876/GeistMonoVariableVF.ttf);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --color-secondary: #565e71;

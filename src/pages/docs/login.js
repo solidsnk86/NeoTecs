@@ -112,7 +112,7 @@ const LoginForm = ({ onClose }) => {
           <div className="hr-container">
             <hr />o<hr />
           </div>
-          <p className="text-center font-thin text-sky-400">
+          <p className="text-center font-thin dark:text-sky-300 text-text-strong">
             <Link href="/docs/reset">¿Te han peinado la contraseña?</Link>
           </p>
         </aside>
