@@ -1,6 +1,6 @@
 import React from 'react';
 import { Nav } from '../../components/Nav';
-import Link from 'next/link';
+import LinkButton from '../../components/LinkButton';
 import { ArrowLeftIcon } from 'lucide-react';
 import { Footer } from '../../components/Footer';
 
@@ -105,19 +105,20 @@ export const PrivacyPolicy = () => {
           <p>
             Si tienes alguna pregunta o inquietud sobre esta Política de
             Privacidad, contáctame a
-            <Link
-              href="mailto:calcagni.gabriel86@gmail.com"
-              className="underline mx-1 text-blue-950 dark:text-text-strong"
+            <LinkButton
+              url="mailto:calcagni.gabriel86@gmail.com"
+              color="[cornflowerblue] dark:text-text-strong"
+              iconName={'Mail'}
             >
               calcagni.gabriel86@gmail.com
-            </Link>
+            </LinkButton>
             .
           </p>
           <div className="text-xs my-6 border-l-4 border-button-variant pl-3">
             <p>Neotecs Informática</p>
             <p>Dirección: Avenida Fuerza Aérea 551</p>
             <p>Concarán, San Luis, 5770</p>
-            <p>www.neotecs.netlify.app</p>
+            <p>www.neotecs.vercel.app</p>
           </div>
         </div>
       </main>

@@ -6,8 +6,7 @@ import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import Link from 'next/link';
-import { ExternalLinkIcon } from 'lucide-react';
+import LinkButton from '../../components/LinkButton';
 import HeaderTitle from '../../components/HeaderTitlte';
 import IndexTitle from '../../components/IndexTitle';
 export default function MarkDownRender() {
@@ -39,13 +38,13 @@ export default function MarkDownRender() {
             permite analizar y renderizar contenido Markdown en componentes
             React. Asegúrate de revisar la documentación de react-markdown para
             obtener información más detallada:
-            <Link
-              href="https://remarkjs.github.io/react-markdown/"
-              className="mx-1 text-amber-600 link"
+            <LinkButton
+              url="https://remarkjs.github.io/react-markdown/"
+              color="amber-600"
+              iconName={'ArrowUpRight'}
             >
               react-markdown en GitHub
-              <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-            </Link>
+            </LinkButton>
             . Aquí hay una guía paso a paso para lograrlo:
           </p>
           <p>
@@ -277,12 +276,13 @@ export default function MarkDownRender() {
             Eso es todo por aquí, espero les haya gustado y lo puedan
             implementar en algún proyecto. Ante cualquier duda o consulta pueden
             escribirme en el
-            <Link
-              className="underline mx-1 text-amber-500 link"
-              href="/docs/feedback"
+            <LinkButton
+              color="amber-600"
+              iconName={'MessageSquareWarning'}
+              url="/docs/feedback"
             >
               feedback
-            </Link>
+            </LinkButton>
             de NeoTecs.
           </p>
           <ShareButton setTitle={MarkDownRender.title} />

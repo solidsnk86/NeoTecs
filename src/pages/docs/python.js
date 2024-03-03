@@ -4,10 +4,9 @@ import { NavSwitch } from '../../components/NavSwicth';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-import Link from 'next/link';
+import LinkButton from '../../components/LinkButton';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import { ExternalLinkIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 
@@ -211,22 +210,22 @@ export default function Python() {
               que deban escribir <b className="text-sky-400">"Python3"</b> en
               lugar de <b className="text-sky-400">"Python"</b> antes del nombre
               del archivo, e incluso es posible que deban descargar
-              <Link
-                href="https://www.python.org/downloads/"
-                className="mx-1 text-sky-600 link"
+              <LinkButton
+                url="https://www.python.org/downloads/"
+                color="sky-600"
+                iconName={'HardDriveDownload'}
               >
                 Python
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               si aún no lo han hecho. Después de instalar Python, recomendamos
               que también descarguen
-              <Link
-                href="https://pip.pypa.io/en/stable/installing/"
-                className="mx-1 text-sky-600 link"
+              <LinkButton
+                url="https://pip.pypa.io/en/stable/installing/"
+                color="sky-600"
+                iconName={'HardDriveDownload'}
               >
                 Pip
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               , ya que lo necesitarán más adelante en el curso.
             </li>
             <li>
@@ -391,13 +390,13 @@ export default function Python() {
             </li>
             <li>
               Sin embargo, al ejecutar este programa, nos encontramos con una
-              <Link
-                href="https://docs.python.org/3/tutorial/errors.html"
-                className="text-sky-800 mx-1 link"
+              <LinkButton
+                url="https://docs.python.org/3/tutorial/errors.html"
+                color="sky-600"
+                iconName={'ArrowUpRight'}
               >
                 excepción
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               que se ve así:
             </li>
             <div className="images-client">
@@ -502,13 +501,13 @@ export default function Python() {
           </ol>
           <p>
             Una
-            <Link
-              href="https://www.w3schools.com/python/python_lists.asp"
-              className="text-sky-800 mx-1 link"
+            <LinkButton
+              url="https://www.w3schools.com/python/python_lists.asp"
+              color="sky-600"
+              iconName={'ArrowUpRight'}
             >
               lista en Python
-              <ExternalLinkIcon className="link-icon" />
-            </Link>
+            </LinkButton>
             te permite almacenar cualquier tipo de variable. Creamos una lista
             utilizando corchetes cuadrados y comas, como se muestra a
             continuación. Al igual que con las cadenas, podemos imprimir una
@@ -567,13 +566,13 @@ export default function Python() {
             }</Pre>
             <p>
               Una
-              <Link
-                href="https://www.w3schools.com/python/python_lists.asp"
-                className="text-sky-800 mx-1 link"
+              <LinkButton
+                url="https://www.w3schools.com/python/python_lists.asp"
+                color="sky-600"
+                iconName={'ArrowUpRight'}
               >
                 tupla
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               es uno de los 4 tipos de datos incorporados en Python que se
               utilizan para almacenar colecciones de datos. Los otros 3 son
               List, Set y Dictionary, todos con diferentes características y
@@ -611,13 +610,13 @@ export default function Python() {
             </ol>
             <p>
               Los
-              <Link
-                href="https://www.w3schools.com/python/python_sets.asp"
-                className="text-sky-800 mx-1 link"
+              <LinkButton
+                url="https://www.w3schools.com/python/python_sets.asp"
+                color="sky-600"
+                iconName={'ArrowUpRight'}
               >
                 conjuntos
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               son diferentes de las listas y las tuplas en que son desordenados.
               También son diferentes porque, mientras puedes tener dos o más
               elementos iguales dentro de una lista/tupla, un conjunto solo
@@ -675,13 +674,13 @@ export default function Python() {
             </ol>
             <p>
               Los
-              <Link
-                href="https://www.w3schools.com/python/python_sets.asp"
-                className="text-sky-800 mx-1 link"
+              <LinkButton
+                url="https://www.w3schools.com/python/python_sets.asp"
+                color="sky-600"
+                iconName={'ArrowUpRight'}
               >
                 diccionarios
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               de Python, o dicts, serán especialmente útiles en este curso. Un
               diccionario es un conjunto de pares clave-valor, donde cada clave
               tiene un valor correspondiente, al igual que en un diccionario,
@@ -721,13 +720,13 @@ export default function Python() {
             </ol>
             <p>
               Los
-              <Link
-                href="https://www.w3schools.com/python/python_for_loops.asp"
-                className="text-sky-800 mx-1 link"
+              <LinkButton
+                url="https://www.w3schools.com/python/python_for_loops.asp"
+                color="sky-600"
+                iconName={'ArrowUpRight'}
               >
                 bucles
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               Los son una parte increíblemente importante de cualquier lenguaje
               de programación, y en Python, existen dos formas principales:
               <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
@@ -984,13 +983,13 @@ export default function Python() {
           <article>
             <p>
               La
-              <Link
-                href="https://en.wikipedia.org/wiki/Object-oriented_programming"
-                className="mx-1 text-sky-600 link"
+              <LinkButton
+                url="https://en.wikipedia.org/wiki/Object-oriented_programming"
+                color="sky-600"
+                iconName={'ArrowUpRight'}
               >
                 Programación Orientada a Objetos
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               es un paradigma de programación, o una forma de pensar acerca de
               la programación, que se centra en objetos que pueden almacenar
               información y realizar acciones.
@@ -1141,13 +1140,13 @@ export default function Python() {
             <p>
               Además de admitir la Programación Orientada a Objetos, Python
               también admite el Paradigma de
-              <Link
-                href="https://en.wikipedia.org/wiki/Functional_programming"
-                className="mx-1 text-sky-600 link"
+              <LinkButton
+                url="https://en.wikipedia.org/wiki/Functional_programming"
+                color="sky-600"
+                iconName={'ArrowUpRight'}
               >
                 Programación Funcional
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               , en el cual las funciones se tratan como valores, al igual que
               cualquier otra variable.
             </p>
@@ -1329,13 +1328,13 @@ export default function Python() {
             </div>
             <p className="list-css-span">
               Podemos manejar este error desordenado utilizando el
-              <Link
-                href="https://www.w3schools.com/python/python_try_except.asp"
-                className="mx-1 text-sky-600 link"
+              <LinkButton
+                url="https://www.w3schools.com/python/python_try_except.asp"
+                color="sky-600"
+                iconName={'ArrowUpRight'}
               >
                 manejo de excepciones
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               . En el siguiente bloque de código,
               <b className="text-sky-400 mx-1">intentaremos</b> dividir los dos
               números,<b className="text-sky-400 mx-1">excepto</b>cuando

@@ -1,11 +1,10 @@
 import CurrencyConverter from '../../components/CurrencyComponent';
-import { ExternalLinkIcon } from 'lucide-react';
 import { Footer } from '../../components/Footer';
 import JavascriptExample from '../../components/JavascriptExample';
 import HeaderTitle from '../../components/HeaderTitlte';
 import IndexTitle from '../../components/IndexTitle';
 import { LectureNav } from '../../components/LectureNav';
-import Link from 'next/link';
+import LinkButton from '../../components/LinkButton';
 import { Pre } from '../../components/Pre';
 import { Nav } from '../../components/Nav';
 import { NavSwitch } from '../../components/NavSwicth';
@@ -189,13 +188,13 @@ export default function JavaScript() {
             <p>
               Una característica de JavaScript que lo hace útil para la
               programación web es que admite la
-              <Link
-                href="https://medium.com/@vsvaibhav2016/introduction-to-event-driven-programming-28161b79c223"
-                className="mx-1 text-amber-600 link"
+              <LinkButton
+                url="https://medium.com/@vsvaibhav2016/introduction-to-event-driven-programming-28161b79c223"
+                color="amber-600"
+                iconName={'ArrowUpRight'}
               >
                 Programación Orientada a Eventos
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               .
             </p>
             <p>
@@ -209,26 +208,26 @@ export default function JavaScript() {
               página. Casi todo lo que un usuario hace para interactuar con una
               página web se puede considerar como un evento. En JavaScript,
               utilizamos
-              <Link
-                href="https://www.w3schools.com/js/js_htmldom_eventlistener.asp"
-                className="mx-1 text-amber-600 link"
+              <LinkButton
+                url="https://www.w3schools.com/js/js_htmldom_eventlistener.asp"
+                color="amber-600"
+                iconName={'ArrowUpRight'}
               >
                 Escuchadores de Eventos
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               que esperan a que ocurran ciertos eventos y luego ejecutan algún
               código.
             </p>
 
             <p>
               Comencemos por convertir nuestro JavaScript anterior en una
-              <Link
-                href="https://www.w3schools.com/js/js_functions.asp"
-                className="mx-1 text-amber-600 link"
+              <LinkButton
+                url="https://www.w3schools.com/js/js_functions.asp"
+                color="amber-600"
+                iconName={'ArrowUpRight'}
               >
                 función
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               llamada "hola":
             </p>
           </article>
@@ -360,13 +359,13 @@ export default function JavaScript() {
             }</Pre>
             <p>
               Al igual que en Python, también podemos aprovechar las
-              <Link
-                href="https://www.w3schools.com/js/js_if_else.asp"
-                className="text-amber-600 mx-1 link"
+              <LinkButton
+                url="https://www.w3schools.com/js/js_if_else.asp"
+                color="amber-600"
+                iconName={'ArrowUpRight'}
               >
                 condiciones
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               en JavaScript. Por ejemplo, supongamos que en lugar de cambiar
               siempre nuestro encabezado a "Goodbye!", queremos alternar entre
               <span className="text-[#43A18E] mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
@@ -608,13 +607,13 @@ export default function JavaScript() {
             }</Pre>
             <p>
               En el ejemplo anterior, hemos utilizado una función
-              <Link
-                href="https://www.w3schools.com/js/js_function_definition.asp"
-                className="text-amber-600 mx-1 link"
+              <LinkButton
+                url="https://www.w3schools.com/js/js_function_definition.asp"
+                color="amber-600"
+                iconName={'ArrowUpRight'}
               >
                 anónima
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               , que es una función a la que nunca se le da un nombre. Reuniendo
               todo esto, nuestro código JavaScript ahora se ve de la siguiente
               manera:
@@ -726,13 +725,13 @@ export default function JavaScript() {
               <li>
                 Importación: Tenemos la capacidad de importar bibliotecas de
                 JavaScript que otras personas ya han escrito. Por ejemplo,
-                <Link
-                  href="https://getbootstrap.com/docs/4.5/getting-started/introduction/#js"
-                  className="text-amber-400 mx-1 link"
+                <LinkButton
+                  url="https://getbootstrap.com/docs/4.5/getting-started/introduction/#js"
+                  color="amber-400"
+                  iconName={'ArrowUpRight'}
                 >
                   Bootstrap
-                  <ExternalLinkIcon className="link-icon" />
-                </Link>
+                </LinkButton>
                 tiene su propia biblioteca de JavaScript que puedes incluir para
                 hacer tu sitio más interactivo.
               </li>
@@ -1107,13 +1106,13 @@ export default function JavaScript() {
               <li>
                 En JavaScript, podemos crear elementos HTML utilizando la
                 función
-                <Link
-                  href="https://www.w3schools.com/jsref/met_document_createelement.asp"
-                  className="mx-1 text-amber-600 link"
+                <LinkButton
+                  url="https://www.w3schools.com/jsref/met_document_createelement.asp"
+                  color="amber-600"
+                  iconName={'ArrowUpRight'}
                 >
                   createElement
-                  <ExternalLinkIcon className="link-icon" />
-                </Link>
+                </LinkButton>
                 . Luego, podemos agregar esos elementos al DOM utilizando la
                 función
                 <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
@@ -1175,13 +1174,13 @@ export default function JavaScript() {
             agreguemos un intervalo para que, incluso si el usuario no hace clic
             en nada, el contador se incremente cada segundo. Para hacer esto,
             utilizamos la función
-            <Link
-              href="https://www.w3schools.com/jsref/met_win_setinterval.asp"
-              className="mx-1 text-amber-600 link"
+            <LinkButton
+              url="https://www.w3schools.com/jsref/met_win_setinterval.asp"
+              color="amber-600"
+              iconName={'ArrowUpRight'}
             >
               setIntervals
-              <ExternalLinkIcon className="link-icon" />
-            </Link>
+            </LinkButton>
             , que toma como argumento una función que se ejecutará y un
             intervalo de tiempo (en milisegundos) entre las ejecuciones de la
             función.
@@ -1390,13 +1389,13 @@ export default function JavaScript() {
           <SectionTitle title="Objetos en Javascript" />
           <p>
             Un
-            <Link
-              href="https://www.w3schools.com/js/js_objects.asp"
-              className="mx-1 text-amber-600 link"
+            <LinkButton
+              url="https://www.w3schools.com/js/js_objects.asp"
+              color="amber-600"
+              iconName={'ArrowUpRight'}
             >
               objeto de JavaScript
-              <ExternalLinkIcon className="link-icon" />
-            </Link>
+            </LinkButton>
             es muy similar a un diccionario en Python, ya que nos permite
             almacenar pares clave-valor. Por ejemplo, podría crear un objeto de
             JavaScript que represente a Harry Potter:
@@ -1447,13 +1446,13 @@ export default function JavaScript() {
             Una forma en la que los objetos de JavaScript son realmente útiles
             es en la transferencia de datos de un sitio a otro, especialmente al
             usar
-            <Link
-              href="https://www.mulesoft.com/resources/api/what-is-an-api"
-              className="text-amber-600 mx-1 link"
+            <LinkButton
+              url="https://www.mulesoft.com/resources/api/what-is-an-api"
+              color="amber-600"
+              iconName={'ArrowUpRight'}
             >
               APIs
-              <ExternalLinkIcon className="link-icon" />
-            </Link>
+            </LinkButton>
             .
           </p>
           <p>
@@ -1467,13 +1466,13 @@ export default function JavaScript() {
             cual nos devolverá datos estructurados, a menudo en formato JSON
             <b className="text-amber-400">(Notación de Objetos JavaScript)</b>.
             Por ejemplo, un vuelo en formato
-            <Link
-              href="https://www.w3schools.com/js/js_json_intro.asp"
-              className="text-amber-600 mx-1 link"
+            <LinkButton
+              url="https://www.w3schools.com/js/js_json_intro.asp"
+              color="amber-600"
+              iconName={'ArrowUpRight'}
             >
               JSON
-              <ExternalLinkIcon className="link-icon" />
-            </Link>
+            </LinkButton>
             podría verse así:
           </p>
           <Pre lang="javascript">{
@@ -1512,23 +1511,23 @@ export default function JavaScript() {
               trabajemos en la construcción de una aplicación donde podemos
               encontrar tasas de cambio entre dos monedas. A lo largo del
               ejercicio, utilizaremos la API de tipos de cambio del
-              <Link
-                href="https://exchangeratesapi.io/"
-                className="text-amber-600 mx-1 link"
+              <LinkButton
+                url="https://exchangeratesapi.io/"
+                color="amber-600"
+                iconName={'ArrowUpRight'}
               >
                 Banco Central Europeo
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               . Si visitas su sitio web, verás la documentación de la API, que
               generalmente es un buen lugar para comenzar cuando deseas utilizar
               una API. Podemos probar esta API visitando la URL:
-              <Link
-                href="https://api.exchangeratesapi.io/latest?base=USD"
-                className="text-amber-600 mx-1 link"
+              <LinkButton
+                u="https://api.exchangeratesapi.io/latest?base=USD"
+                color="amber-600"
+                iconName={'ArrowUpRight'}
               >
                 https://api.exchangeratesapi.io/latest?base=USD
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               . Cuando visites esta página, verás la tasa de cambio entre el
               dólar estadounidense y muchas otras monedas, escrita en formato
               JSON. También puedes cambiar el parámetro GET en la URL de USD a

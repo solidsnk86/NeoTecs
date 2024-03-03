@@ -12,7 +12,7 @@ export const LinkButton = ({ url, children, className, color, iconName }) => {
                 rel='noopener'
             >
                 {children}
-                {Icon && <Icon className={`w-[10px] h-[10px] xl:w-[14px] xl:h-[14px] font-thin inline text-${color} link-icon`} />}
+                {Icon && <Icon className={`w-[10px] h-[10px] xl:w-[14px] xl:h-[14px] inline text-${color} link-icon`} />}
             </Link>
         </div>
     );
