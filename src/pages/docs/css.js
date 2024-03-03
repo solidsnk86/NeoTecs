@@ -4,10 +4,9 @@ import { NavSwitch } from '../../components/NavSwicth';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-import Link from 'next/link';
+import LinkButton from '../../components/LinkButton';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import { ExternalLinkIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 export default function CssDoc() {
@@ -749,13 +748,13 @@ export default function CssDoc() {
           <li>
             Otra forma de manejar diferentes tamaños de pantalla es utilizando
             un nuevo atributo CSS conocido como
-            <Link
-              href="https://www.w3schools.com/css/css3_flexbox.asp"
-              className="text-[#395692] mx-1 link"
+            <LinkButton
+              url="https://www.w3schools.com/css/css3_flexbox.asp"
+              color="[#395692]"
+              iconName={'ArrowUpright'}
             >
               flexbox
-              <ExternalLinkIcon className="link-icon" />
-            </Link>
+            </LinkButton>
             . Esto nos permite que los elementos se ajusten fácilmente a la
             siguiente línea si no caben horizontalmente. Para lograrlo,
             colocamos todos nuestros elementos en un contenedor que llamaremos
@@ -885,26 +884,26 @@ export default function CssDoc() {
           <ul>
             <li>
               A continuación, podemos explorar algunas de las características de
-              <Link
-                href="https://getbootstrap.com/docs/4.5/components/"
-                className="text-[#395692] mx-1 link"
+              <LinkButton
+                url="https://getbootstrap.com/docs/4.5/components/"
+                color="[#395692]"
+                iconName={'ArrowUpRight'}
               >
                 Bootstrap
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               navegando a la sección de documentación de su sitio web. En esta
               página, encontrarás numerosos ejemplos de clases que puedes
               agregar a elementos para estilizarlos con Bootstrap.
             </li>
             <li>
               Una característica popular de Bootstrap es su
-              <Link
-                href="https://getbootstrap.com/docs/4.0/layout/grid/"
-                className="text-[#395692] mx-1 link"
+              <LinkButton
+                url="https://getbootstrap.com/docs/4.0/layout/grid/"
+                color="[#395692]"
+                iconName={'ArrowUpRight'}
               >
                 sistema de cuadrícula
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               . Bootstrap divide automáticamente una página en 12 columnas, y
               podemos decidir cuántas columnas ocupa un elemento agregando la
               clase
@@ -1037,13 +1036,13 @@ export default function CssDoc() {
               hacerlo en varios elementos diferentes.
             </li>
             <li>
-              <Link
-                href="https://sass-lang.com/"
-                className="text-[#395692] mx-1 link"
+              <LinkButton
+                url="https://sass-lang.com/"
+                color="[#395692]"
+                iconName={'ArrowupRight'}
               >
                 Sass
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               es un lenguaje que nos permite escribir CSS de manera más
               eficiente de varias maneras, una de las cuales es permitiéndonos
               utilizar variables, como se muestra en el siguiente ejemplo.
@@ -1097,13 +1096,13 @@ export default function CssDoc() {
                 .css
               </span>
               . Para resolver este problema, debemos
-              <Link
-                href="https://sass-lang.com/install"
-                className="text-[#395692] mx-1 link"
+              <LinkButton
+                url="https://sass-lang.com/install"
+                color="[#395692]"
+                iconName={'ArrowUpRight'}
               >
                 descargar un programa llamado Sass
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               en nuestras computadoras. Luego, en la terminal, escribimos
               <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
                 sass variables.scss:variables.css
@@ -1160,13 +1159,13 @@ export default function CssDoc() {
           }</Pre>
           <li>
             Otra característica que Sass nos brinda se conoce como
-            <Link
-              href="https://sass-lang.com/guide"
-              className="mx-1 text-[#395692] link"
+            <LinkButton
+              url="https://sass-lang.com/guide"
+              color="[#395692]"
+              iconName={'ArrowUpRight'}
             >
               herencia
-              <ExternalLinkIcon className="link-icon" />
-            </Link>
+            </LinkButton>
             . Esto nos permite crear un conjunto básico de estilos que pueden
             ser compartidos por varios elementos diferentes. Lo hacemos
             agregando un <b className="text-[#395692] mx-1">'%'</b> antes del

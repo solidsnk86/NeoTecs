@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { ExternalLinkIcon } from 'lucide-react';
+import LinkButton from '../../components/LinkButton';
 import HeaderTitle from '../../components/HeaderTitlte';
 import IndexTitle from '../../components/IndexTitle';
 import { SectionTitle } from '../../components/SectionTitle';
@@ -48,34 +47,39 @@ export const Introduction = () => {
         abierto donde tendrás la oportunidad de crear tu propio sitio web. En
         este curso, necesitarás un editor de texto donde puedas escribir código
         en tu computadora local. Algunos populares incluyen:
-        <br />
-        <Link
-          className="mx-1 text-red-400 link"
-          href="https://code.visualstudio.com/"
-        >
-          Visual Studio Code
-          <ExternalLinkIcon className="link-icon" />
-        </Link>
-        ,
-        <Link
-          className="mx-1 text-red-400 link"
-          href="https://www.sublimetext.com/"
-        >
-          Sublime Text
-          <ExternalLinkIcon className="link-icon" />
-        </Link>
-        ,
-        <Link className="mx-1 text-red-400 link" href="https://atom.io/">
-          Atom
-          <ExternalLinkIcon className="link-icon" />
-        </Link>
-        y
-        <Link className="mx-1 text-red-400 link" href="https://www.vim.org/">
-          Vim
-          <ExternalLinkIcon className="link-icon" />
-        </Link>
-        , pero hay muchas opciones más para elegir!
       </p>
+      <LinkButton
+        color="red-400"
+        url="https://code.visualstudio.com/"
+        iconName={'ArrowUpRight'}
+      >
+        Visual Studio Code
+      </LinkButton>
+      ,
+      <LinkButton
+        color="red-400"
+        url="https://www.sublimetext.com/"
+        iconName={'ArrowUpRight'}
+      >
+        Sublime Tex
+      </LinkButton>
+      ,
+      <LinkButton
+        color="red-400"
+        url="https://atom.io/"
+        iconName={'ArrowUpRight'}
+      >
+        Atom
+      </LinkButton>
+      y
+      <LinkButton
+        color="red-400"
+        url="https://www.vim.org/"
+        iconName={'ArrowUpRight'}
+      >
+        Vim
+      </LinkButton>
+      <p>Pero hay muchas opciones más para elegir!</p>
       <span id="programacion-web" />
       <SectionTitle title="Programación Web" />
       <section>

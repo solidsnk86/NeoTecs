@@ -1,8 +1,7 @@
-import Link from 'next/link';
+import LinkButton from '../../components/LinkButton';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { ShareButton } from '../../components/ShareButton';
-import { ExternalLink } from 'lucide-react';
 
 export default function HtmlDoc() {
   return (
@@ -213,13 +212,13 @@ export default function HtmlDoc() {
       <p>
         Para poder renderizar ésto en el navegador, vamos a instalar un
         extensión de Visual Studio Code llamada,
-        <Link
-          href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
-          className="mx-1 text-[tomato] link"
+        <LinkButton
+          url="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
+          color="[tomato]"
+          iconName={'Puzzle'}
         >
           Live Server
-          <ExternalLink className="link-icon" />
-        </Link>
+        </LinkButton>
         .
       </p>
       <p>Cuando se renderiza esta página, veremos algo como ésto:</p>
@@ -231,13 +230,13 @@ export default function HtmlDoc() {
         memorizar estos elementos. Es muy fácil simplemente buscar algo como
         "imagen en HTML" para encontrar la etiqueta img. Un recurso que es
         especialmente útil para aprender sobre estos elementos es
-        <Link
-          href="https://www.w3schools.com/html/default.asp"
-          className="mx-1 text-[tomato] link"
+        <LinkButton
+          url="https://www.w3schools.com/html/default.asp"
+          color="[tomato]"
+          iconName={'ArrowUpRight'}
         >
           W3 Schools
-          <ExternalLink className="link-icon" />
-        </Link>
+        </LinkButton>
         .
       </li>
       <SectionTitle title="Formularios" />
