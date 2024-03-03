@@ -4,10 +4,9 @@ import { NavSwitch } from '../../components/NavSwicth';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-import Link from 'next/link';
+import LinkButton from '../../components/LinkButton';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import { ExternalLinkIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 export default function GitDocs() {
@@ -131,14 +130,14 @@ export default function GitDocs() {
                 Comencemos creando un nuevo repositorio en línea. Asegúrate de
                 tener configurada una cuenta de GitHub. Si aún no tienes una,
                 puedes crear una
-                <Link
-                  href="https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"
-                  className="mx-1 text-[#1F6FEB] link"
-                  target="_blank"
+                <LinkButton
+                  url="https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"
+                  color="[#1F6FEB]"
+                  iconName={'Github'}
                 >
                   aquí
-                  <ExternalLinkIcon className="link-icon" />.
-                </Link>
+                </LinkButton>
+                .
                 <ol className="list-css-span">
                   <li>
                     Haz clic en el símbolo<span>+</span>en la esquina superior
@@ -181,14 +180,14 @@ export default function GitDocs() {
                     Asegúrate de tener Git instalado en tu computadora
                     escribiendo<span>git</span>en tu terminal. Si no está
                     instalado, puedes descargarlo
-                    <Link
-                      href="https://git-scm.com/downloads"
-                      className="mx-1 text-[#1F6FEB] link"
-                      target="_blank"
+                    <LinkButton
+                      url="https://git-scm.com/downloads"
+                      color="[#1F6FEB]"
+                      iconName={'FolderGit2'}
                     >
                       aquí
-                      <ExternalLinkIcon className="link-icon" />.
-                    </Link>
+                    </LinkButton>
+                    .
                   </li>
                   <li>
                     Haz clic en el botón verde "Code" en la página de tu

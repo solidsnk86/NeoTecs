@@ -666,7 +666,6 @@ export default function CssDoc() {
           <div className="images-client">
             <img src="/images/buttons.gif" alt="gif-1" />
           </div>
-          <ShareButton setTitle={CssDoc.title} />
           <span id="responsive" />
           <SectionTitle title="Diseño Responsivo" />
           <ul>
@@ -751,7 +750,7 @@ export default function CssDoc() {
             <LinkButton
               url="https://www.w3schools.com/css/css3_flexbox.asp"
               color="[#395692]"
-              iconName={'ArrowUpright'}
+              iconName={'ArrowUpRight'}
             >
               flexbox
             </LinkButton>
