@@ -132,7 +132,7 @@ export default function GitDocs() {
                 puedes crear una
                 <LinkButton
                   url="https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"
-                  color="[#1F6FEB]"
+                  color={'sky-400'}
                   iconName={'Github'}
                 >
                   aquí
@@ -182,7 +182,7 @@ export default function GitDocs() {
                     instalado, puedes descargarlo
                     <LinkButton
                       url="https://git-scm.com/downloads"
-                      color="[#1F6FEB]"
+                      color="sky-400"
                       iconName={'FolderGit2'}
                     >
                       aquí
