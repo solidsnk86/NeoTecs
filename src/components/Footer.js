@@ -53,7 +53,7 @@ export const Footer = () => {
         </div>
         <div className="flex items-center justify-center xl:gap-x-10">
           {[
-            { name: 'Contacto', href: 'mailto:calcagni.gabriel86@gmail.com' },
+            { name: 'Contacto', href: 'mailto:tutosneotecs@gmail.com' },
             { name: 'YouTube', href: 'https://www.youtube.com/@tutosNeoTecs' },
             { name: 'GitHub', href: 'https://github.com/solidsnk86' },
             { name: 'Blog', href: 'https://portfolio-mgc.vercel.app/blog' },

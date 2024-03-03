@@ -15,9 +15,12 @@ export function DocsNav() {
   return (
     <div className="w-80 px-4 md:px-8 hidden lg:block">
       <div className="sticky top-20">
-        <span onClick={(e) => history.back(e)} title="Volver al inicio">
-          <ArrowLeftIcon className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all" />
-        </span>
+        <div className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 w-fit mt-3">
+          <ArrowLeftIcon
+            className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all"
+            onClick={(e) => history.back(e)}
+          />
+        </div>
         <div className="sticky top-4">
           <BrandsSwitch />
           <ul className="text-xs h-60 overflow-y-auto">

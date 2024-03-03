@@ -1,6 +1,5 @@
 import { Pre } from './Pre';
-import Link from 'next/link';
-import { ExternalLinkIcon } from 'lucide-react';
+import LinkButton from './LinkButton';
 import { GoogleSheetsExample2 } from './GoogleSheetsExample2';
 import { SectionTitle } from './SectionTitle';
 
@@ -181,18 +180,18 @@ export const GoogleSheetsExample = () => {
         </b>{' '}
         la cuál he modificado a mi gusto el estilo de las mismas.
       </p>
-      <p>
+      <p className="inline">
         Aquí les dejo el enlace para que puedan leer su documentación y
         utilizarlo, es de código abierto y tiene otros asombrosos efectos de
-        cartas 3d las cuales utilizo en ésta web.
-        <Link
-          href="https://atroposjs.com/docs"
-          className="mx-1 underline text-red-500 link"
-        >
-          Atropos js
-          <ExternalLinkIcon className="link-icon" />
-        </Link>
+        cartas 3d las cuales utilizo en ésta web;
       </p>
+      <LinkButton
+        url="https://atroposjs.com/docs"
+        color="red-500"
+        iconName={'ArrowUpRight'}
+      >
+        Atropos js
+      </LinkButton>
     </article>
   );
 };

@@ -1,5 +1,5 @@
-import { InfoIcon, ExternalLinkIcon, Sheet } from 'lucide-react';
-import Link from 'next/link';
+import { InfoIcon, Sheet } from 'lucide-react';
+import LinkButton from './LinkButton';
 import { Pre } from './Pre';
 import { SectionTitle } from './SectionTitle';
 
@@ -61,17 +61,17 @@ export const GoogleSheetsExample2 = () => {
         npm install papaparse
         `
       }</Pre>
-      <p>
+      <p className="inline">
         Pueden estudiar la documentación para entender que opciones de
         configuración y manipulación del CSV tiene
-        <Link
-          href="https://www.papaparse.com/docs"
-          className="mx-1 underline text-blue-500 link"
-        >
-          Papaparse
-          <ExternalLinkIcon className="link-icon" />
-        </Link>
       </p>
+      <LinkButton
+        url="https://www.papaparse.com/docs"
+        color="blue-500"
+        iconName={'ArrowUpRight'}
+      >
+        Papaparse
+      </LinkButton>
       <SectionTitle title="Reduce" />
       <p>
         Bien, ahora vamos con el componente utilizando{' '}

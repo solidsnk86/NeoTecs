@@ -18,14 +18,11 @@
     "**/*.ts",
     "**/*.tsx",
     "src/pages/api/currency.js",
-    "src/pages/api/currency.js",
-    "src/pages/api/currency.js",
-    "src/pages/docs/scraping.jsx",
-    "src/pages/docs/scraping.jsx",
     "src/pages/docs/markdown-render.js",
-    "src/pages/docs/scraping.js",
-    "src/pages/docs/scraping.js",
-    "src/pages/docs/google-sheets.js"
-, "src/components/JavascriptExample.js"  ],
+    "src/pages/docs/scraping.tsx",
+    "src/pages/docs/google-sheets.js",
+    "src/components/JavascriptExample.js",
+    "src/components/Scraping.js"
+  ],
   "exclude": ["node_modules"]
 }

@@ -64,10 +64,12 @@ export default function FeedBack() {
         onSubmit={handleSubmit(onSubmit)}
         className="xl:w-1/3 p-14 flex justify-center mx-auto text-text-primary text-left flex-col space-y-4"
       >
-        <ArrowLeftIcon
-          className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-6 xl:top-14 top-14 left-2 fixed mt-3"
-          onClick={(e) => history.back(e)}
-        />
+        <div className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 xl:left-6 xl:top-14 top-14 left-2 fixed mt-3">
+          <ArrowLeftIcon
+            className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all"
+            onClick={(e) => history.back(e)}
+          />
+        </div>
         <h1 className="flex justify-center pt-6 mx-auto text-5xl text-transparent relative [-webkit-text-stroke-width:2px] [-webkit-text-stroke-color:var(--color-on-surface)]">
           Feedback
         </h1>
