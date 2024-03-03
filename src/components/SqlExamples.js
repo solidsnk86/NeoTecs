@@ -1,8 +1,7 @@
-import { ExternalLinkIcon } from 'lucide-react';
 import IndexTitle from './IndexTitle';
-import Link from 'next/link';
 import { Pre } from './Pre';
 import { SectionTitle } from './SectionTitle';
+import { LinkButton } from './LinkButton';
 
 export const SqlExamples = () => {
   return (
@@ -173,13 +172,15 @@ export const SqlExamples = () => {
         <ul className="list-css-span">
           <li>
             Especificamos que los campos origen y destino son
-            <Link
-              href="https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/"
-              className="text-[#00BCF2] mx-1 link"
+            <LinkButton
+              url={
+                'https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/'
+              }
+              color={'[#00BCF2]'}
+              iconName="ArrowUpRight"
             >
-              Foreign Keys
-              <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-            </Link>
+              ForeignKey
+            </LinkButton>
             , lo que significa que se refieren a otro objeto.
           </li>
           <li>
@@ -193,13 +194,15 @@ export const SqlExamples = () => {
             aeropuerto. En este caso, especificamos que cuando se elimine un
             aeropuerto, todos los vuelos asociados a él también deben ser
             eliminados. Hay
-            <Link
-              href="https://docs.djangoproject.com/en/4.0/ref/models/fields/#django.db.models.ForeignKey.on_delete/"
-              className="text-[#00BCF2] mx-1 link"
+            <LinkButton
+              url={
+                'https://docs.djangoproject.com/en/4.0/ref/models/fields/#django.db.models.ForeignKey.on_delete/'
+              }
+              color={'[#00BCF2]'}
+              iconName="ArrowUpRight"
             >
               otras varias opciones
-              <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-            </Link>
+            </LinkButton>
             además de<span>CASCADE</span>.
           </li>
           <li>
@@ -546,7 +549,9 @@ export const SqlExamples = () => {
           })
           `
         }</Pre>
-        <p className="list-css-span">Ahora agregamos una lista de pasajeros a<span>flight.html</span>:</p>
+        <p className="list-css-span">
+          Ahora agregamos una lista de pasajeros a<span>flight.html</span>:
+        </p>
         <Pre lang="html">{
           /*html */ `
           <h2>Passengers:</h2>

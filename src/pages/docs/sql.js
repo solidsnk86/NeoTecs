@@ -4,10 +4,9 @@ import { NavSwitch } from '../../components/NavSwicth';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-import Link from 'next/link';
+import { LinkButton } from '../../components/LinkButton';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import { ExternalLinkIcon } from 'lucide-react';
 import { AlertTriangle, InfoIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
@@ -76,7 +75,7 @@ export default function SqlDocs() {
               </ul>
             </li>
             <li>
-              <a href="#modulos-django">Módulos Django</a>
+              <a href="#modelos-django">Modelos Django</a>
             </li>
             <li>
               <a href="#migraciones">Migraciones</a>
@@ -134,19 +133,21 @@ export default function SqlDocs() {
               Antes de adentrarnos en el uso de SQL, es fundamental comprender
               cómo se almacena la información. En SQL, generalmente trabajamos
               con bases de datos{' '}
-              <Link
-                href="https://www.oracle.com/database/what-is-a-relational-database/#:~:text=A%20relational%20database%20is%20a,of%20representing%20data%20in%20tables."
-                className="text-[#00BCF2] link"
+              <LinkButton
+                url="https://www.oracle.com/database/what-is-a-relational-database/#:~:text=A%20relational%20database%20is%20a,of%20representing%20data%20in%20tables."
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 relacionales
-              </Link>
+              </LinkButton>
               , donde la información se organiza en{' '}
-              <Link
-                href="https://www.essentialsql.com/what-is-a-database-table/"
-                className="text-[#00BCF2] link"
+              <LinkButton
+                url="https://www.essentialsql.com/what-is-a-database-table/"
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 tablas
-              </Link>
+              </LinkButton>
               . Cada tabla consta de columnas específicas y un número variable
               de filas.
             </p>
@@ -166,25 +167,31 @@ export default function SqlDocs() {
             </p>
             <ul>
               <li>
-                <Link href="https://www.mysql.com/" className="text-[#00BCF2]">
+                <LinkButton
+                  url="https://www.mysql.com/"
+                  color={'[#00BCF2]'}
+                  iconName="ArrowUpRight"
+                >
                   MySQL
-                </Link>
+                </LinkButton>
               </li>
               <li>
-                <Link
-                  href="https://www.postgresql.org/"
-                  className="text-[#00BCF2]"
+                <LinkButton
+                  url="https://www.postgresql.org/"
+                  color={'[#00BCF2]'}
+                  iconName="ArrowUpRight"
                 >
                   PostgreeSQL
-                </Link>
+                </LinkButton>
               </li>
               <li>
-                <Link
-                  href="https://www.sqlite.org/index.html"
-                  className="text-[#00BCF2]"
+                <LinkButton
+                  url="https://www.sqlite.org/index.html"
+                  color={'[#00BCF2]'}
+                  iconName="ArrowUpRight"
                 >
                   SQLite
-                </Link>
+                </LinkButton>
               </li>
             </ul>
             <p>
@@ -202,13 +209,13 @@ export default function SqlDocs() {
             <p>
               Así como trabajamos con varios tipos de variables en Python,
               SQLite tiene{' '}
-              <Link
-                href="https://www.sqlite.org/datatype3.html"
-                className="text-[#00BCF2] link"
+              <LinkButton
+                url="https://www.sqlite.org/datatype3.html"
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 tipos
-                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>{' '}
+              </LinkButton>{' '}
               que representan diferentes formas de información. Otros sistemas
               de gestión pueden tener tipos de datos diferentes, pero todos son
               bastante similares a los de SQLite:
@@ -266,13 +273,13 @@ export default function SqlDocs() {
                 permita identificar de manera única cada fila en una tabla. Aquí
                 hemos especificado que "id" es un número entero y también que es
                 nuestra clave primaria{' '}
-                <Link
-                  href="https://www.w3schools.com/sql/sql_primarykey.ASP"
-                  className="text-[#00BCF2] link"
+                <LinkButton
+                  url="https://www.w3schools.com/sql/sql_primarykey.ASP"
+                  color={'[#00BCF2]'}
+                  iconName="ArrowUpRight"
                 >
                   PRIMARY-KEY
-                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-                </Link>
+                </LinkButton>
                 , lo que significa que es nuestro identificador único. Además,
                 hemos especificado que será AUTOINCREMENT, lo que significa que
                 no tendremos que proporcionar un id cada vez que agreguemos a la
@@ -296,13 +303,13 @@ export default function SqlDocs() {
             <p>
               Acabamos de ver las restricciones <b>NOT NULL</b> y{' '}
               <b>PRIMARY KEY</b> al hacer una columna, pero hay varias otras
-              <Link
-                href="https://www.tutorialspoint.com/sqlite/sqlite_constraints.htm"
-                className="text-[#00BCF2] mx-1 link"
+              <LinkButton
+                url="https://www.tutorialspoint.com/sqlite/sqlite_constraints.htm"
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 restrincciones
-                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>
+              </LinkButton>
               disponibles:
             </p>
             <ul className="list-css-span">
@@ -419,21 +426,21 @@ export default function SqlDocs() {
               Ahora que conocemos algunos comandos básicos de SQL, ¡vamos a
               probarlos en la terminal! Para trabajar con SQLite en tu
               computadora, primero debes descargar{' '}
-              <Link
-                href="https://www.sqlite.org/download.html"
-                className="text-[#00BCF2] link"
+              <LinkButton
+                url="https://www.sqlite.org/download.html"
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 SQLLite
-                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>
+              </LinkButton>
               . (No lo usaremos en la conferencia, pero también puedes descargar
-              <Link
-                href="https://sqlitebrowser.org/dl/"
-                className="text-[#00BCF2] mx-1 link"
+              <LinkButton
+                url="https://sqlitebrowser.org/dl/"
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 DB Browser
-                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>
+              </LinkButton>
               para una forma más amigable de ejecutar consultas SQL).
             </p>
             <p className="list-css-span">
@@ -529,13 +536,13 @@ export default function SqlDocs() {
             </div>
             <p>
               Y también podemos utilizar otras lógicas
-              <Link
-                href="https://sqlitebrowser.org/dl/"
-                className="text-[#00BCF2] mx-1 link"
+              <LinkButton
+                url="https://sqlitebrowser.org/dl/"
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 (AND, OR)
-                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>
+              </LinkButton>
               como en Python:
             </p>
             <Pre lang="sql">{
@@ -592,49 +599,49 @@ export default function SqlDocs() {
             </p>
             <ul>
               <li>
-                <Link
-                  href="https://sqlitebrowser.org/dl/"
-                  className="text-[#00BCF2] mx-1 link"
+                <LinkButton
+                  url="https://sqlitebrowser.org/dl/"
+                  color={'[#00BCF2]'}
+                  iconName="ArrowUpRight"
                 >
                   AVERAGE (PROMEDIO)
-                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-                </Link>
+                </LinkButton>
               </li>
               <li>
-                <Link
-                  href="https://sqlitebrowser.org/dl/"
-                  className="text-[#00BCF2] mx-1 link"
+                <LinkButton
+                  url="https://sqlitebrowser.org/dl/"
+                  color={'[#00BCF2]'}
+                  iconName="ArrowUpRight"
                 >
                   COUNT (CONTAR)
-                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-                </Link>
+                </LinkButton>
               </li>
               <li>
-                <Link
-                  href="https://sqlitebrowser.org/dl/"
-                  className="text-[#00BCF2] mx-1 link"
+                <LinkButton
+                  url="https://sqlitebrowser.org/dl/"
+                  color={'[#00BCF2]'}
+                  iconName="ArrowUpRight"
                 >
                   MAX (MÁXIMO)
-                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-                </Link>
+                </LinkButton>
               </li>
               <li>
-                <Link
-                  href="https://sqlitebrowser.org/dl/"
-                  className="text-[#00BCF2] mx-1 link"
+                <LinkButton
+                  url="https://sqlitebrowser.org/dl/"
+                  color={'[#00BCF2]'}
+                  iconName="ArrowUpRight"
                 >
                   MIN (MÍNIMO)
-                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-                </Link>
+                </LinkButton>
               </li>
               <li>
-                <Link
-                  href="https://sqlitebrowser.org/dl/"
-                  className="text-[#00BCF2] mx-1 link"
+                <LinkButton
+                  url="https://sqlitebrowser.org/dl/"
+                  color={'[#00BCF2]'}
+                  iconName="ArrowUpRight"
                 >
                   SUM (SUMA)
-                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-                </Link>
+                </LinkButton>
               </li>
               <li>...</li>
             </ul>
@@ -739,13 +746,13 @@ export default function SqlDocs() {
               Dado que estamos utilizando la columna id de la tabla de
               aeropuertos para poblar<span>origin_id</span>y
               <span>destination_id</span>, llamamos a esos valores
-              <Link
-                href="https://www.w3schools.com/sql/sql_foreignkey.asp"
-                className="text-[#00BCF2] mx-1 link"
+              <LinkButton
+                url="https://www.w3schools.com/sql/sql_foreignkey.asp"
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 Claves Foráneas
-                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>
+              </LinkButton>
               .
             </p>
             <div className="images-client">
@@ -803,13 +810,13 @@ export default function SqlDocs() {
               Aunque ahora almacenamos nuestros datos de manera más eficiente,
               parece que puede ser más difícil realizar consultas en nuestros
               datos. Afortunadamente, SQL cuenta con una consulta
-              <Link
-                href="https://www.w3schools.com/sql/sql_join.asp"
-                className="text-[#00BCF2] mx-1 link"
+              <LinkButton
+                url="https://www.w3schools.com/sql/sql_join.asp"
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 JOIN
-                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>
+              </LinkButton>
               donde podemos combinar dos tablas con el fin de realizar otra
               consulta.
             </p>
@@ -848,39 +855,39 @@ export default function SqlDocs() {
             </div>
             <p>
               Acabamos de utilizar algo llamado
-              <Link
-                href="https://www.w3schools.com/sql/sql_join_inner.asp"
-                className="text-[#00BCF2] mx-1 link"
+              <LinkButton
+                url="https://www.w3schools.com/sql/sql_join_inner.asp"
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 INNER JOIN
-                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>
+              </LinkButton>
               , lo que significa que estamos ignorando las filas que no tienen
               coincidencias entre las tablas. Pero existen otros tipos de joins,
               incluyendo
-              <Link
-                href="https://www.w3schools.com/sql/sql_join_left.asp"
-                className="text-[#00BCF2] mx-1 link"
+              <LinkButton
+                url="https://www.w3schools.com/sql/sql_join_left.asp"
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 LEFT JOINs
-                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>
+              </LinkButton>
               ,
-              <Link
-                href="https://www.w3schools.com/sql/sql_join_right.asp"
-                className="text-[#00BCF2] mx-1 link"
+              <LinkButton
+                url="https://www.w3schools.com/sql/sql_join_right.asp"
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 RIGHT JOINs
-                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>
+              </LinkButton>
               y
-              <Link
-                href="https://www.w3schools.com/sql/sql_join_full.asp"
-                className="text-[#00BCF2] mx-1 link"
+              <LinkButton
+                url="https://www.w3schools.com/sql/sql_join_full.asp"
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 FULL OUTER JOINs
-                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>
+              </LinkButton>
               , que no discutiremos en detalle aquí.
             </p>
           </article>
@@ -906,13 +913,13 @@ export default function SqlDocs() {
               Ahora que conocemos los conceptos básicos de cómo utilizar SQL
               para trabajar con datos, es importante señalar las principales
               vulnerabilidades asociadas con el uso de SQL. Comenzaremos con la
-              <Link
-                href="https://www.w3schools.com/sql/sql_injection.asp"
-                className="text-[#00BCF2] mx-1 link"
+              <LinkButton
+                url="https://www.w3schools.com/sql/sql_injection.asp"
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 Inyección SQL
-                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>
+              </LinkButton>
               .
             </p>
             <div className="border-l-4 border-red-500 px-1 bg-opacity-[0.6] p-3 pl-5 font-semibold">
@@ -999,13 +1006,13 @@ export default function SqlDocs() {
               <p>
                 La otra vulnerabilidad principal cuando se trata de SQL se
                 conoce como una Condición de Carrera,
-                <Link
-                  href="https://www.w3schools.com/sql/sql_injection.asp"
-                  className="text-[#00BCF2] mx-1 link"
+                <LinkButton
+                  url="https://www.w3schools.com/sql/sql_injection.asp"
+                  color={'[#00BCF2]'}
+                  iconName="ArrowUpRight"
                 >
                   Race Condition
-                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-                </Link>
+                </LinkButton>
                 .
               </p>
               <p>
@@ -1035,21 +1042,21 @@ export default function SqlDocs() {
           <article>
             <p>
               Los
-              <Link
-                href="https://docs.djangoproject.com/en/4.0/topics/db/models/"
-                className="text-[#00BCF2] mx-1 link"
+              <LinkButton
+                url="https://docs.djangoproject.com/en/4.0/topics/db/models/"
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 modelos de Django
-                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>
+              </LinkButton>
               son un nivel de
-              <Link
-                href="https://techterms.com/definition/abstraction"
-                className="text-[#00BCF2] mx-1 link"
+              <LinkButton
+                url="https://techterms.com/definition/abstraction"
+                color={'[#00BCF2]'}
+                iconName="ArrowUpRight"
               >
                 abstracción
-                <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-              </Link>
+              </LinkButton>
               sobre SQL que nos permite trabajar con bases de datos utilizando
               clases y objetos de Python en lugar de consultas SQL directas.
             </p>
@@ -1116,43 +1123,43 @@ export default function SqlDocs() {
               <li>
                 A continuación, agregamos campos para origen, destino y
                 duración. Los dos primeros son campos
-                <Link
-                  href="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#charfield"
-                  className="text-[#00BCF2] mx-1 link"
+                <LinkButton
+                  url="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#charfield"
+                  color={'[#00BCF2]'}
+                  iconName="ArrowUpRight"
                 >
                   Char
-                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-                </Link>
+                </LinkButton>
                 , lo que significa que almacenan cadenas, y el tercero es un
                 campo
-                <Link
-                  href="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#integerfield"
-                  className="text-[#00BCF2] mx-1 link"
+                <LinkButton
+                  url="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#integerfield"
+                  color={'[#00BCF2]'}
+                  iconName="ArrowUpRight"
                 >
                   Integer
-                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-                </Link>
+                </LinkButton>
                 . Estos son solo dos de las muchas
-                <Link
-                  href="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#built-in-field-classes"
-                  className="text-[#00BCF2] mx-1 link"
+                <LinkButton
+                  url="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#built-in-field-classes"
+                  color={'[#00BCF2]'}
+                  iconName="ArrowUpRight"
                 >
                   clases de campos integradas
-                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-                </Link>
+                </LinkButton>
                 en Django.
               </li>
               <li>
                 Especificamos longitudes máximas de 64 para los dos campos de
                 caracteres. Puedes verificar las especificaciones disponibles
                 para un campo dado consultando la
-                <Link
-                  href="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#built-in-field-classes"
-                  className="text-[#00BCF2] mx-1 link"
+                <LinkButton
+                  url="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#built-in-field-classes"
+                  color={'[#00BCF2]'}
+                  iconName="ArrowUpRight"
                 >
                   documentación
-                  <ExternalLinkIcon className="inline xl:w-4 xl:h-4 w-3 h-3 font-thin bottom-[1px] relative mx-[2px] link-icon" />
-                </Link>
+                </LinkButton>
                 .
               </li>
             </ul>
@@ -1166,4 +1173,4 @@ export default function SqlDocs() {
   );
 }
 
-SqlDocs.title = 'Aprende SQL · 💿 Base de Datos';
+SqlDocs.title = 'SQL · 💿 Base de Datos';
