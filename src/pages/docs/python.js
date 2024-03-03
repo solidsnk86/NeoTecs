@@ -212,7 +212,7 @@ export default function Python() {
               del archivo, e incluso es posible que deban descargar
               <LinkButton
                 url="https://www.python.org/downloads/"
-                color="sky-600"
+                color="sky-400"
                 iconName={'HardDriveDownload'}
               >
                 Python
@@ -221,7 +221,7 @@ export default function Python() {
               que también descarguen
               <LinkButton
                 url="https://pip.pypa.io/en/stable/installing/"
-                color="sky-600"
+                color="sky-400"
                 iconName={'HardDriveDownload'}
               >
                 Pip
@@ -392,7 +392,7 @@ export default function Python() {
               Sin embargo, al ejecutar este programa, nos encontramos con una
               <LinkButton
                 url="https://docs.python.org/3/tutorial/errors.html"
-                color="sky-600"
+                color="sky-400"
                 iconName={'ArrowUpRight'}
               >
                 excepción
@@ -503,7 +503,7 @@ export default function Python() {
             Una
             <LinkButton
               url="https://www.w3schools.com/python/python_lists.asp"
-              color="sky-600"
+              color="sky-400"
               iconName={'ArrowUpRight'}
             >
               lista en Python
@@ -568,7 +568,7 @@ export default function Python() {
               Una
               <LinkButton
                 url="https://www.w3schools.com/python/python_lists.asp"
-                color="sky-600"
+                color="sky-400"
                 iconName={'ArrowUpRight'}
               >
                 tupla
@@ -612,7 +612,7 @@ export default function Python() {
               Los
               <LinkButton
                 url="https://www.w3schools.com/python/python_sets.asp"
-                color="sky-600"
+                color="sky-400"
                 iconName={'ArrowUpRight'}
               >
                 conjuntos
@@ -676,7 +676,7 @@ export default function Python() {
               Los
               <LinkButton
                 url="https://www.w3schools.com/python/python_sets.asp"
-                color="sky-600"
+                color="sky-400"
                 iconName={'ArrowUpRight'}
               >
                 diccionarios
@@ -722,7 +722,7 @@ export default function Python() {
               Los
               <LinkButton
                 url="https://www.w3schools.com/python/python_for_loops.asp"
-                color="sky-600"
+                color="sky-400"
                 iconName={'ArrowUpRight'}
               >
                 bucles
@@ -985,7 +985,7 @@ export default function Python() {
               La
               <LinkButton
                 url="https://en.wikipedia.org/wiki/Object-oriented_programming"
-                color="sky-600"
+                color="sky-400"
                 iconName={'ArrowUpRight'}
               >
                 Programación Orientada a Objetos
@@ -1142,7 +1142,7 @@ export default function Python() {
               también admite el Paradigma de
               <LinkButton
                 url="https://en.wikipedia.org/wiki/Functional_programming"
-                color="sky-600"
+                color="sky-400"
                 iconName={'ArrowUpRight'}
               >
                 Programación Funcional
@@ -1330,7 +1330,7 @@ export default function Python() {
               Podemos manejar este error desordenado utilizando el
               <LinkButton
                 url="https://www.w3schools.com/python/python_try_except.asp"
-                color="sky-600"
+                color="sky-400"
                 iconName={'ArrowUpRight'}
               >
                 manejo de excepciones
