@@ -9,9 +9,12 @@ export const PrivacyPolicy = () => {
     <>
       <Nav className="fixed xl:relative w-full h-12 z-50" />
       <main className="text-text-primary flex flex-col justify-center m-auto p-10 xl:w-[70%] w-full text-sm relative policy">
-        <span onClick={() => history.back()}>
-          <ArrowLeftIcon className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all xl:left-6 xl:top-14 top-12 left-2 fixed mt-3" />
-        </span>
+        <div className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 xl:left-6 xl:top-14 top-14 left-2 fixed mt-3">
+          <ArrowLeftIcon
+            className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all"
+            onClick={(e) => history.back(e)}
+          />
+        </div>
         <div className="mt-16 space-y-8 policy">
           <h1 className="text-4xl font-bold my-4 font-mono">
             Política de Privacidad
@@ -24,7 +27,7 @@ export const PrivacyPolicy = () => {
           <p>
             Esta Política de Privacidad describe cómo NeoTecs ("nosotros,"
             "nuestro" o "nos") recopila, utiliza y comparte información personal
-            obtenida a través de nuestro sitio web https://neotecs.netlify.app.
+            obtenida a través de nuestro sitio web https://neotecs.vercel.app.
           </p>
           <h2 className="text-xl font-bold mt-4 mb-2">
             Información que Recopilamos:
