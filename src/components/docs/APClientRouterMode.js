@@ -3,7 +3,7 @@ import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import HeaderTitle from '../HeaderTitlte';
 import IndexTitle from '../IndexTitle';
-import Link from 'next/link';
+import { LinkButton } from '../LinkButton';
 
 export const APClientRouterMode = () => {
   return (
@@ -204,19 +204,21 @@ export const APClientRouterMode = () => {
       </figure>
       <p>
         Muchas gracias por llegar hasta aquí, si quieren visitar el
-        <Link
-          href={'https://www.youtube.com/@tutosNeoTecs'}
-          className="mx-1 underline text-[cornflowerblue]"
+        <LinkButton
+          url={'https://www.youtube.com/@tutosNeoTecs'}
+          color={'[cornflowerblue]'}
+          iconName="Youtube"
         >
           canal de YouTube.
-        </Link>
+        </LinkButton>
         Ante cualquier duda no dudes en escribir al
-        <Link
-          href={'/docs/feedback'}
-          className="mx-1 underline text-text-strong"
+        <LinkButton
+          url={'/docs/feedback'}
+          color={'text-strong'}
+          iconName="MessageSquareWarning"
         >
           feedback.
-        </Link>
+        </LinkButton>
       </p>
       <p>
         Este video les puede explicar de manera rápida y efectiva la

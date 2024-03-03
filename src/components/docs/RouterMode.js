@@ -1,8 +1,7 @@
 import { FaWindows } from 'react-icons/fa';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
-import { ExternalLinkIcon } from 'lucide-react';
-import Link from 'next/link';
+import LinkButton from '../LinkButton';
 
 export const RouterMode = () => {
   return (
@@ -18,14 +17,13 @@ export const RouterMode = () => {
         inalámbrica que proporciona este dispositivo. Tomemos el CPE como
         ejemplo: para acceder a su página de gestión web y configurarlo, puedes
         seguir este
-        <a
-          href="https://192.168.0.254/"
-          className="text-[cornflowerblue] mx-1 link"
-          target="_blank"
+        <LinkButton
+          url="https://192.168.0.254/"
+          color="[cornflowerblue]"
+          iconName={'ArrowUpRight'}
         >
           enlace
-          <ExternalLinkIcon className="link-icon" />
-        </a>
+        </LinkButton>
         a través de esta interfaz web, puedes realizar configuraciones rápidas y
         personalizar la red inalámbrica según tus necesidades:
       </p>
@@ -161,13 +159,13 @@ export const RouterMode = () => {
         <Pre lang="cmd">ncpa.cpl</Pre>
         <li>
           Si no recuerda el procedimiento, consulte nuevamente las
-          <a
-            href="https://www.tp-link.com/ar/support/faq/"
-            className="text-[cornflowerblue] mx-1 link"
+          <LinkButton
+            url="https://www.tp-link.com/ar/support/faq/"
+            color="[cornflowerblue]"
+            iconName={'HelpCircle'}
           >
             (Preguntas frecuentes FAQs)
-            <ExternalLinkIcon className="link-icon" />
-          </a>
+          </LinkButton>
         </li>
         <li>
           ¿Cómo iniciar sesión en la página de administración web de CPE210 /
@@ -210,12 +208,13 @@ export const RouterMode = () => {
       </p>
       <p>
         Si surgen dudas en la configuración con gusto los escucho en mi
-        <Link
-          href={'/docs/feedback'}
-          className="mx-1 underline text-text-strong"
+        <LinkButton
+          url={'/docs/feedback'}
+          color="text-strong"
+          iconName={'MessageSquareWarning'}
         >
           feedback.
-        </Link>
+        </LinkButton>
       </p>
     </section>
   );

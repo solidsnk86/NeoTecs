@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import LinkButton from '../../components/LinkButton';
 import { BrandsSwitch } from '../../components/BrandsSwitch';
 import { DocsNav } from '../../components/DocsNav';
 import HeaderTitle from '../../components/HeaderTitlte';
@@ -308,19 +308,21 @@ export default function UbiquitiDocs() {
             <p>
               Muchas gracias por llegar hasta aquí, pueden ver el vídeo
               explicativo en mi
-              <Link
-                href={'https://www.youtube.com/@tutosNeoTecs'}
-                className="mx-1 underline text-text-strong"
+              <LinkButton
+                url={'https://www.youtube.com/@tutosNeoTecs'}
+                color="red-500"
+                iconName={'Youtube'}
               >
                 canal
-              </Link>
+              </LinkButton>
               . Ante cualquier duda no dudes en escribir al
-              <Link
+              <LinkButton
                 href={'/docs/feedback'}
-                className="mx-1 underline text-text-strong"
+                color="text-strong"
+                iconName={'MessageSquareWarning'}
               >
                 feedback.
-              </Link>
+              </LinkButton>
             </p>
             <ShareButton setTitle={UbiquitiDocs.title} />
           </section>

@@ -6,7 +6,7 @@ export const LinkButton = ({ url, children, className, color, iconName }) => {
     const Icon = icons[iconName];
 
     return (
-        <div className={`${className} inline ml-[3px]`}>
+        <div className={`${className} inline ml-1`}>
             <Link href={`${url}`} className={`text-${color} underline link`}
                 target='_blank'
                 rel='noopener'

@@ -4,7 +4,7 @@ import HeaderTitle from '../../components/HeaderTitlte';
 import IndexTitle from '../../components/IndexTitle';
 import { FaSignInAlt, FaWindows } from 'react-icons/fa';
 import { Footer } from '../../components/Footer';
-import Link from 'next/link';
+import LinkButton from '../../components/LinkButton';
 import { Nav } from '../../components/Nav';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
@@ -184,19 +184,21 @@ export default function MikrotikDocs() {
             <p>
               Muchas gracias por llegar hasta aquí, pueden ver el vídeo
               explicativo en mi
-              <Link
-                href={'https://www.youtube.com/@tutosNeoTecs'}
-                className="mx-1 underline text-[cornflowerblue]"
+              <LinkButton
+                u={'https://www.youtube.com/@tutosNeoTecs'}
+                color="red-500"
+                iconName={'Youtube'}
               >
                 canal
-              </Link>
+              </LinkButton>
               . Ante cualquier duda no dudes en escribir al
-              <Link
-                href={'/docs/feedback'}
-                className="mx-1 underline text-text-strong"
+              <LinkButton
+                url={'/docs/feedback'}
+                color="text-strong"
+                iconName={'MessageSquareWarning'}
               >
                 feedback.
-              </Link>
+              </LinkButton>
             </p>
             <ShareButton setTitle={MikrotikDocs.title} />
           </section>

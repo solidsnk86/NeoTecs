@@ -21,13 +21,13 @@ function updateColorTheme() {
 
 function toggleTheme() {
   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.documentElement.classList.add('dark', 'changing-theme')
+    document.documentElement.classList.add('dark', 'changing-theme');
   } else {
-    document.documentElement.classList.remove('dark', 'changing-theme')
+    document.documentElement.classList.remove('dark', 'changing-theme');
   }
   window.setTimeout(() => {
-    document.documentElement.classList.remove('changing-theme')
-  })
+    document.documentElement.classList.remove('changing-theme');
+  });
 }
 
 export const Nav = ({ className }) => {
@@ -51,6 +51,7 @@ export const Nav = ({ className }) => {
       initial.current = false;
     } else {
       updateColorTheme();
+      toggleTheme();
     }
   }, [setting]);
 

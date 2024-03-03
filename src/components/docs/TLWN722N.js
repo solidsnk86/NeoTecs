@@ -1,9 +1,8 @@
 import { FaWindows, FaMousePointer } from 'react-icons/fa';
 import IndexTitle from '../IndexTitle';
-import Link from 'next/link';
+import LinkButton from '../LinkButton';
 import { SectionTitle } from '../SectionTitle';
 import { ShareButton } from '../ShareButton';
-import { title } from 'process';
 
 export const TlWn722n = () => {
   return (
@@ -22,12 +21,13 @@ export const TlWn722n = () => {
       <ol>
         <li>
           Primer paso: Descargamos el driver desde la web de TP-Link
-          <Link
-            href="https://www.tp-link.com/ar/support/download/tl-wn722n/v1/#Driver"
-            className="mx-1 text-text-strong"
+          <LinkButton
+            url="https://www.tp-link.com/ar/support/download/tl-wn722n/v1/#Driver"
+            color={'text-strong'}
+            iconName="HardDriveDownload"
           >
             aquí.
-          </Link>
+          </LinkButton>
         </li>
         <figure>
           <div className="images-client">
@@ -159,21 +159,23 @@ export const TlWn722n = () => {
       </div>
       <p>
         Muchas gracias por llegar hasta aquí, si quieren visitar el
-        <Link
-          href={'https://www.youtube.com/@tutosNeoTecs'}
-          className="mx-1 underline text-[cornflowerblue]"
+        <LinkButton
+          url={'https://www.youtube.com/@tutosNeoTecs'}
+          color={'[cornflowerblue]'}
+          iconName="Youtube"
         >
           canal de YouTube.
-        </Link>
+        </LinkButton>
       </p>
       <p>
         ¿Dudas? escribir al
-        <Link
+        <LinkButton
           href={'/docs/feedback'}
-          className="mx-1 underline text-text-strong"
+          color={'text-strong'}
+          iconName="MessageSquareWarning"
         >
           feedback.
-        </Link>
+        </LinkButton>
       </p>
       <ShareButton setTitle={TlWn722n.title} />
     </section>

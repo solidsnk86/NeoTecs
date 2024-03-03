@@ -1,6 +1,6 @@
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
-import Link from 'next/link';
+import { LinkButton } from '../LinkButton';
 import { ExternalLinkIcon } from 'lucide-react';
 
 export const ClientMode = () => {
@@ -162,13 +162,13 @@ export const ClientMode = () => {
           firmware a la última versión. Si ha hecho todas las cosas anteriores,
           el Cliente aún no puede ver la señal de AP incluso si están cara a
           cara. Puede ser el problema de CPE; por favor contactar{' '}
-          <a
-            href="mailto:support@tp-link.com."
-            className="text-[cornflowerblue] link"
+          <LinkButton
+            url="mailto:support@tp-link.com."
+            color="[cornflowerblue]"
+            iconName={'Mail'}
           >
             support@tp-link.com.
-            <ExternalLinkIcon className="link-icon" />
-          </a>
+          </LinkButton>
         </li>
         <li>
           A continuación, verifique si el cliente puede conectarse al SSID del
@@ -199,29 +199,31 @@ export const ClientMode = () => {
         dirección IP estática, y asegúrese de que estén en la misma subred. Si
         el Cliente aún no puede conectar el AP después de hacer esto, puede ser
         el problema de CPE; por favor contactar a{' '}
-        <a
-          href="mailto:support@tp-link.com."
-          className="text-[cornflowerblue] link"
+        <LinkButton
+          url="mailto:support@tp-link.com."
+          color="[cornflowerblue]"
+          iconName={'Mail'}
         >
           support@tp-link.com
-          <ExternalLinkIcon className="link-icon" />
-        </a>
+        </LinkButton>
       </p>
       <p>
         Muchas gracias por llegar hasta aquí, si quieren visitar el
-        <Link
-          href={'https://www.youtube.com/@tutosNeoTecs'}
-          className="mx-1 underline text-[cornflowerblue]"
+        <LinkButton
+          url={'https://www.youtube.com/@tutosNeoTecs'}
+          color={'[cornflowerblue]'}
+          iconName="Youtube"
         >
           canal de YouTube.
-        </Link>
+        </LinkButton>
         Ante cualquier duda no dudes en escribir al
-        <Link
-          href={'/docs/feedback'}
-          className="mx-1 underline text-text-strong"
+        <LinkButton
+          url={'/docs/feedback'}
+          color={'text-strong'}
+          iconName="MessageSquareWarning"
         >
           feedback.
-        </Link>
+        </LinkButton>
       </p>
     </section>
   );
