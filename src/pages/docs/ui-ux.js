@@ -6,11 +6,11 @@ import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import Link from 'next/link';
-import { ExternalLinkIcon } from 'lucide-react';
+import LinkButton from '../../components/LinkButton';
 import { InfoIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
+import ImageComponent from '../../components/ImageComponent';
 export default function UiUx() {
   return (
     <TitlesContextProvider>
@@ -226,13 +226,13 @@ export default function UiUx() {
             <p>
               Ahora, dentro de nuestro archivo index.html, aprovecharemos AJAX,
               que aprendimos en el curso anterior de
-              <Link
-                href="/docs/django#django"
-                className="mx-1 underline text-lime-500 link"
+              <LinkButton
+                url="/docs/django#django"
+                color="lime-500"
+                iconName="ArrowUpRight"
               >
                 Django
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               , para realizar una solicitud al servidor y obtener el texto de
               una sección específica para mostrarlo en la pantalla:
             </p>
@@ -308,13 +308,13 @@ export default function UiUx() {
               informativa. Te darás cuenta en el video anterior que la URL sigue
               siendo la misma incluso cuando cambiamos de sección a sección.
               Podemos resolver este problema utilizando la
-              <Link
-                href="https://developer.mozilla.org/en-US/docs/Web/API/History_API"
-                className="mx-1 text-lime-500 underline link"
+              <LinkButton
+                url="https://developer.mozilla.org/en-US/docs/Web/API/History_API"
+                color="lime-500"
+                iconName="ArrowUpRight"
               >
                 API de Historial de JavaScript
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               . Esta API nos permite agregar información a nuestro historial de
               navegación y actualizar manualmente la URL. Veamos cómo podemos
               usar esta API. Imagina que tenemos un proyecto Django idéntico al
@@ -375,9 +375,10 @@ export default function UiUx() {
               el botón de retroceso. Ahora, el sitio parece un poco más amigable
               para el usuario:
             </p>
-            <div className="images-client">
-              <img src="/images/singlepage3.gif" alt="Demostración de código" />
-            </div>
+            <ImageComponent
+              src="/images/singlepage3.gif"
+              altImage="Demostración del código"
+            />
           </article>
           <SectionTitle title="Scroll" />
           <article>
@@ -396,12 +397,10 @@ export default function UiUx() {
                 píxeles.
               </li>
             </ul>
-            <div className="images-client">
-              <img
-                src="/images/innerMeasures.png"
-                alt="Demostración de código"
-              />
-            </div>
+            <ImageComponent
+              src="/images/innerMeasures.png"
+              altImage="Demostración del código"
+            />
             <p>
               Mientras que window representa lo que actualmente es visible para
               el usuario, document se refiere a toda la página web, que a menudo
@@ -420,9 +419,10 @@ export default function UiUx() {
                 todo el documento.
               </li>
             </ul>
-            <div className="images-client">
-              <img src="/images/scroll.png" alt="Demostración de código" />
-            </div>
+            <ImageComponent
+              src="/images/scroll.png"
+              altImage="Dscripción del código para scroll"
+            />
             <p className="list-css-span">
               Podemos utilizar estas medidas para determinar si el usuario ha
               llegado al final de una página mediante la comparación
@@ -633,9 +633,10 @@ export default function UiUx() {
               };
               `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/infscroll.gif" alt="Descripción del código." />
-            </div>
+            <ImageComponent
+              src="/images/infscroll.gif"
+              altImage="Descripción del código"
+            />
           </article>
           <SectionTitle title="Animación" />
           <article>
@@ -880,9 +881,10 @@ export default function UiUx() {
               });
               `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/hide0.gif" alt="Imagen demostrativa" />
-            </div>
+            <ImageComponent
+              src="/images/hide0.gif"
+              altImage="Imagen demostrativa"
+            />
             <p className="list-css-span">
               Ahora podemos ver que hemos implementado el botón de ocultar, pero
               no se ve tan bien como podría. Tal vez queremos que la publicación
@@ -1109,13 +1111,13 @@ export default function UiUx() {
               de CSS para reducir la cantidad de CSS que realmente teníamos que
               escribir. Uno de los marcos de JavaScript más populares es una
               biblioteca llamada
-              <Link
-                href="https://reactjs.org/"
-                className="mx-1 underline text-lime-500 link"
+              <LinkButton
+                url="https://reactjs.org/"
+                color="lime-500"
+                iconName="ArrowUpRight"
               >
                 React
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               .
             </p>
             <p>
@@ -1363,9 +1365,10 @@ export default function UiUx() {
               Ahora que entendemos qué hace el código, podemos echar un vistazo
               a la página web resultante:
             </p>
-            <div className="images-client">
-              <img src="/images/react0.png" alt="Imagen demo React" />
-            </div>
+            <ImageComponent
+              src="/images/react0.png"
+              altImage="Imagen demo de react"
+            />
             <p>
               Una característica útil de React es la capacidad de renderizar
               componentes dentro de otros componentes. Para demostrar esto,
@@ -1399,9 +1402,7 @@ export default function UiUx() {
               `
             }</Pre>
             <p>Esto nos va a dar algo parecido a esto:</p>
-            <div className="images-client">
-              <img src="/images/react1.png" alt="React demo" />
-            </div>
+            <ImageComponent src="/images/react1.png" altImage="React demo" />
             <p>
               Hasta ahora, los componentes no han sido muy interesantes, ya que
               son todos exactamente iguales. Podemos hacer que estos componentes
@@ -1437,9 +1438,7 @@ export default function UiUx() {
               `
             }</Pre>
             <p>Ahora nuestra página mostrará lo siguiente:</p>
-            <div className="images-client">
-              <img src="/images/react2.png" alt="React demo" />
-            </div>
+            <ImageComponent src="/images/react2.png" altImage="React demo" />
             <p>
               Ahora, veamos cómo podemos usar React para volver a implementar la
               página del contador que construimos al trabajar por primera vez
@@ -1502,28 +1501,31 @@ export default function UiUx() {
             </p>
             <ol>
               <li>
-                <Link
-                  href="/docs/scraping"
-                  className="mx-1 underline text-lime-500 link"
+                <LinkButton
+                  url="/docs/scraping"
+                  color="lime-500"
+                  iconName="ArrowUpRight"
                 >
                   Web Scraping con React Js y Python
-                </Link>
+                </LinkButton>
               </li>
               <li>
-                <Link
-                  href="/docs/google-sheets"
-                  className="mx-1 underline text-lime-500 link"
+                <LinkButton
+                  url="/docs/google-sheets"
+                  color="lime-500"
+                  iconName="Table"
                 >
                   Base de datos con Google Sheets (Hojas de Cálculos de Excel)
-                </Link>
+                </LinkButton>
               </li>
               <li>
-                <Link
-                  href="/docs/javascript#cambio-divisas"
-                  className="mx-1 underline text-lime-500 link"
+                <LinkButton
+                  url="/docs/javascript#cambio-divisas"
+                  color="lime-500"
+                  iconName="ArrowUpRight"
                 >
                   Api Routes con javascript (Cambio de Divisas)
-                </Link>
+                </LinkButton>
               </li>
             </ol>
           </article>
@@ -1585,9 +1587,7 @@ export default function UiUx() {
               `
             }</Pre>
             <p>Ahora la interfaz sencilla de React se verá así:</p>
-            <div className="images-client">
-              <img src="/images/ui-1.png" alt="Suma con React" />
-            </div>
+            <ImageComponent src="/images/ui-1.png" altImage="Suma con React" />
           </article>
           <p className="list-css-span">
             En este momento, el usuario no puede escribir nada en el cuadro de
@@ -1769,23 +1769,25 @@ export default function UiUx() {
           </p>
           <ul>
             <li>
-              <Link
-                href="/docs/markdown-render"
-                className="mx-1 underline text-lime-500 link"
+              <LinkButton
+                url="/docs/markdown-render"
+                color="lime-500"
+                iconName="ArrowUpRight"
               >
                 Renderizar MarkDown con react y Axios
-              </Link>
+              </LinkButton>
             </li>
           </ul>
           <p>
             No olviden dejar sus comentarios, si ven errores o tienen alguna
             consulta para hacer, los escucho en mi
-            <Link
-              href="/docs/feedback"
-              className="mx-1 underline text-lime-500 link"
+            <LinkButton
+              url="/docs/feedback"
+              color="lime-500"
+              iconName="MessageSquareWarning"
             >
               feedback
-            </Link>
+            </LinkButton>
             .
           </p>
           <ShareButton setTitle={UiUx.title} />
