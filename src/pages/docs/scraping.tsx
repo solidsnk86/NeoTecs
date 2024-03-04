@@ -65,7 +65,7 @@ export default function Scraping() {
                     <LinkButton
                         className={''}
                         url="/docs/markdown-render"
-                        color="[tomato]"
+                        color="red-500"
                         iconName={'ArrowUpRight'}
                     >
                         React Markdown Render
@@ -73,7 +73,7 @@ export default function Scraping() {
                 </div>
                 <p className="text-center my-10 bg-button-variant text-text-variant w-fit p-2">
                     Si tienen alguna consulta para hacer, los escucho en mi
-                    <LinkButton className={''} url="/docs/feedback" color="red-500" iconName={'MessageSquareWarning'}>
+                    <LinkButton className={''} url="/docs/feedback" color="text-strong" iconName={'MessageSquareWarning'}>
                         feedback
                     </LinkButton>
                     muchas gracias!

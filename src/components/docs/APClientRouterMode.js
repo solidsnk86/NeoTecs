@@ -4,6 +4,7 @@ import { SectionTitle } from '../SectionTitle';
 import HeaderTitle from '../HeaderTitlte';
 import IndexTitle from '../IndexTitle';
 import { LinkButton } from '../LinkButton';
+import ImageComponent from '../ImageComponent';
 
 export const APClientRouterMode = () => {
   return (
@@ -55,14 +56,10 @@ export const APClientRouterMode = () => {
       </p>
       <Pre lang="bash">{`ncpa.cpl`}</Pre>
       <p>Damos enter para ejecutar el comando, veremos la siguiente ventana:</p>
-
-      <figure className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-propiedades-red.png?raw=true"
-          alt="panel de control-conexiones de red captura de pantalla"
-        />
-      </figure>
-
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-propiedades-red.png?raw=true"
+        altImage="Imagen del panel de comtrol (Conexiones de red)"
+      />
       <p className="paragraph">
         En Red o (Ethernet) hacemos clic derecho sobre el ícono, nos dirijimos a
         propiedades. Dónde está la opción Habilitar el protocolo de Internet
@@ -75,14 +72,10 @@ export const APClientRouterMode = () => {
         className="text-text-strong"
       />
       <p>Propiedades TCP/IPv4</p>
-
-      <figure className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-TCP-IP.png?raw=true"
-          alt="panel de control-conexiones de red captura de pantalla"
-        />
-      </figure>
-
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-TCP-IP.png?raw=true"
+        altImage="Imagen de Conxiones de Red del panel de control de windows 10"
+      />
       <p>Escribimos los siguientes parámetros:</p>
 
       <ol>
@@ -91,14 +84,10 @@ export const APClientRouterMode = () => {
         <li>Máscara de sub red:</li>
         <Pre lang="bash">255.255.255.0</Pre>
       </ol>
-
-      <figure className="images-client flex m-auto justify-center">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/propiedades-ethernet.png?raw=true"
-          alt="propiedades ethernet"
-        />
-      </figure>
-
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/propiedades-ethernet.png?raw=true"
+        altImage="Propiedades Ethernet"
+      />
       <p>
         Aceptamos los cambios. E ingresamos en el navegador web, en la url
         escribimos:
@@ -107,14 +96,10 @@ export const APClientRouterMode = () => {
       <Pre lang="bash">https://192.168.0.254/</Pre>
 
       <p>damos enter y avanzamos.</p>
-
-      <figure className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/navegador.png?raw=true"
-          alt="imágen navegador 192.168.0.254"
-        />
-      </figure>
-
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/navegador.png?raw=true"
+        altImage="Imagen Navegador"
+      />
       <p className="px-2 py-2 bg-gray-800 rounded w-fit text-text-strong font-mono font-semibold">
         Continuamos a 192.168.0.254 de todas formas.
       </p>
@@ -129,52 +114,38 @@ export const APClientRouterMode = () => {
 
       <SectionTitle title="Modo AP Router Cliente" />
       <p>Ingresando al panel de configuración de Tp Link</p>
-      <figure className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente2.png?raw=true"
-          alt="captura de pantalla sistema pharos tp-link"
-        />
-      </figure>
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente2.png?raw=true"
+        altImage="Panel de inico de sesión usuario"
+      />
 
       <p>
         En la siguiente parte creamos un usuario y contraseña que recordemos y
         accedemos al panel general de TP-LINK.
       </p>
-
-      <figure className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente3.png?raw=true"
-          alt="captura de pantalla sistema pharos tp-link"
-        />
-      </figure>
-
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente3.png?raw=true"
+        altImage="Panel de cambio de credenciales, usuario y contraseña nuevos"
+      />
       <p>
         Una vez dentro del menú principal de la interfaz de Pharos OS de
         TP-Link, seleccionamos en la pestaña Modo de Operación, y seleccionamos
         AP Router Cliente. Nos va a aparecer si deseamos aceptar el cambio de
         modo, hacemos clic en ( Si ).
       </p>
-
-      <figure className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente4.png?raw=true"
-          alt="captura de pantalla sistema pharos tp-link"
-        />
-      </figure>
-
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente4.png?raw=true"
+        altImage="Menú desplegable, selector de modos CPE"
+      />
       <p>
         En el modo Ap Router Cliente nos vamos a la pestaña (Inalámbrico), vamos
         al apartado de configuración de cliente inalámbrico. Hacemos clic en
         Inspección.
       </p>
-
-      <figure className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente5.png?raw=true"
-          alt="captura de pantalla sistema pharos tp-link"
-        />
-      </figure>
-
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente5.png?raw=true"
+        altImage="Panle Inalámbrico de Tp Link"
+      />
       <p>
         Esperamos que termine de escanear y seleccionamos el nodo del Gobierno,
         en éste caso la red WiFi gratis del gobierno de San Luis. Tildamos la
@@ -182,31 +153,25 @@ export const APClientRouterMode = () => {
         Configuramos la distancia, en éste caso estamos a 200 metros de la
         antena, 2 cuadras aproximadamente; ponemos: 0.2. Aplicamos y guardamos.
       </p>
-
-      <figure className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente6.png?raw=true"
-          alt="captura de pantalla sistema pharos tp-link"
-        />
-      </figure>
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente6.png?raw=true"
+        altImage="Panel de inspección de las antenas"
+      />
       <p>
         Una vez hemos terminado los pasos, volvemos a la pestaña (Estado) y
         observamos los indicadores de señal, ruido, SNR y transmisión de antena
         a antena (CCQ). Con ésto hemos terminado la configuración y conectado a
         internet.
       </p>
-
-      <figure className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente7.png?raw=true"
-          alt="captura de pantalla sistema pharos tp-link"
-        />
-      </figure>
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente7.png?raw=true"
+        altImage="Panel de estado CPE"
+      />
       <p>
         Muchas gracias por llegar hasta aquí, si quieren visitar el
         <LinkButton
           url={'https://www.youtube.com/@tutosNeoTecs'}
-          color={'[cornflowerblue]'}
+          color="youtube-link"
           iconName="Youtube"
         >
           canal de YouTube.

@@ -9,6 +9,7 @@ import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
+import ImageComponent from '../../components/ImageComponent';
 export default function CssDoc() {
   return (
     <TitlesContextProvider>
@@ -182,9 +183,10 @@ export default function CssDoc() {
             }
           </Pre>
           <p>Ejemplo:</p>
-          <div className="images-client">
-            <img src="/images/css-heading-color.png" />
-          </div>
+          <ImageComponent
+            src="/images/css-heading-color.png"
+            altImage="Ejemplo de CSS"
+          />
           <li className="list-css-span">
             Si aplicamos estilo a un elemento externo, automáticamente todos los
             elementos internos adquieren ese estilo. Podemos ver esto si
@@ -206,9 +208,7 @@ export default function CssDoc() {
               <html>
               `
           }</Pre>
-          <div className="images-client">
-            <img src="/images/css-2.png" alt="Css ejemplo" />
-          </div>
+          <ImageComponent src="/images/css-2.png" altImage="Ejemplo de CSS" />
           <ul>
             <li>
               Aunque podemos dar estilo a nuestra página web como lo hemos hecho
@@ -377,9 +377,10 @@ export default function CssDoc() {
               `
             }
           </Pre>
-          <div className="images-client">
-            <img src="/images/table-style.png" alt="Css example" />
-          </div>
+          <ImageComponent
+            src="/images/table-style.png"
+            altImage="Ejemplo para tabla en CSS"
+          />
           <li>
             Lo anterior se parece mucho a lo que teníamos antes, pero ahora, ya
             sea incluyendo una etiqueta de estilo
@@ -412,9 +413,10 @@ export default function CssDoc() {
               `
           }</Pre>
           <p>Lo que nos deja una hermosa tabla estilada como ésta:</p>
-          <div className="images-client">
-            <img src="/images/table-styled.png" alt="Css example" />
-          </div>
+          <ImageComponent
+            src="/images/table-styled.png"
+            altImage="Ejemplo de CSS"
+          />
           <li>
             Es posible que ya estés pensando que hay cierta repetición
             innecesaria en nuestro CSS en este momento, ya que tanto
@@ -581,9 +583,10 @@ export default function CssDoc() {
               <html>
               `
           }</Pre>
-          <div className="images-client">
-            <img src="/images/descendent-css.png" alt="Css example" />
-          </div>
+          <ImageComponent
+            src="/images/descendent-css.png"
+            altImage="Ejemplo CSS"
+          />
           <SectionTitle title="Selectores de atributos" />
           <p>
             También podemos afinar nuestra selección basándonos en los atributos
@@ -613,9 +616,10 @@ export default function CssDoc() {
               <html>
               `
           }</Pre>
-          <div className="images-client">
-            <img src="/images/links-css.png" alt="Css example" />
-          </div>
+          <ImageComponent
+            src="/images/links-css.png"
+            altImage="Ejemplo de CSS"
+          />
           <ul>
             <li>
               No solo podemos usar CSS para cambiar permanentemente la
@@ -663,9 +667,10 @@ export default function CssDoc() {
               <html>
               `
           }</Pre>
-          <div className="images-client">
-            <img src="/images/buttons.gif" alt="gif-1" />
-          </div>
+          <ImageComponent
+            src="/images/buttons.gif"
+            altImage="Ejemplo de CSS (botones)"
+          />
           <span id="responsive" />
           <SectionTitle title="Diseño Responsivo" />
           <ul>
@@ -741,9 +746,10 @@ export default function CssDoc() {
               </html>
               `
           }</Pre>
-          <div className="images-client">
-            <img src="/images/responsive0.gif" alt="gif" />
-          </div>
+          <ImageComponent
+            src="/images/responsive0.gif"
+            altImage="Ejemplo responsive en CSS"
+          />
           <li>
             Otra forma de manejar diferentes tamaños de pantalla es utilizando
             un nuevo atributo CSS conocido como
@@ -802,9 +808,10 @@ export default function CssDoc() {
               </html>
               `
           }</Pre>
-          <div className="images-client">
-            <img src="/images/flexbox.gif" alt="gif-3" />
-          </div>
+          <ImageComponent
+            src="/images/flexbox.gif"
+            altImage="Ejemplo CSS (flexbox)"
+          />
           <li>
             Otra forma popular de estilizar una página es utilizando una
             cuadrícula HTML. En esta cuadrícula, podemos especificar atributos
@@ -857,9 +864,10 @@ export default function CssDoc() {
               </html>
               `
           }</Pre>
-          <div className="images-client">
-            <img src="/images/grid.gif" alt="gif-3" />
-          </div>
+          <ImageComponent
+            src="/images/grid.gif"
+            altImage="Ejemplo de grilla en CSS"
+          />
           <span id="bootstrap" />
           <SectionTitle title="Bootstrap" />
           <ul>
@@ -1206,9 +1214,7 @@ export default function CssDoc() {
             }
               `
           }</Pre>
-          <div className="images-client">
-            <img src="/images/inherit.png" alt="Css example" />
-          </div>
+          <ImageComponent src="/images/inherit.png" altImage="Ejemplo CSS" />
           <h4 className="text-text-primary">
             ¡Eso concluye nuestro contenido por hoy! ツ
           </h4>

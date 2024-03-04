@@ -27,6 +27,7 @@ module.exports = {
         'text-strong': '#AD2680',
         'footer-bg': '#0F0F0F',
         'background-color': 'var(--color-surface)',
+        'youtube-link': 'var(--youtube-link)',
       },
       animation: {
         marquee: 'marquee var(--duration) linear infinite',

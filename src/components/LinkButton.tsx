@@ -2,12 +2,20 @@ import React from 'react';
 import Link from 'next/link';
 import { icons } from 'lucide-react';
 
-export const LinkButton = ({ url, children, className, color, iconName }) => {
+interface LinkInterfaceProps {
+    url: string,
+    children?: string,
+    className?: string,
+    color: string,
+    iconName?: string
+}
+
+export const LinkButton: React.FC<LinkInterfaceProps> = ({ url, children, className, color, iconName }) => {
     const Icon = icons[iconName];
 
     return (
         <span className={`${className} inline ml-1` || ''}>
-            <Link href={`${url}`} className={`text-${color} underline link`}
+            <Link href={`${url}`} className={`text-${color} underline link hover:brightness-200 transition-colors duration-300`}
                 target='_blank'
                 rel='noopener'
             >

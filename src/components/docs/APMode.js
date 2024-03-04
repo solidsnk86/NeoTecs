@@ -1,3 +1,4 @@
+import ImageComponent from '../ImageComponent';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 
@@ -32,24 +33,18 @@ export const APMode = () => {
         <Pre lang="tcp/ip">255.255.255.0</Pre>
       </ol>
       <p>Vista del menú principal Pharos OS:</p>
-      <div className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/puntoacceso1.png?raw=true"
-          alt="imágen menú principal pharos os"
-          id="imgAP"
-        />
-      </div>
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/puntoacceso1.png?raw=true"
+        altImage="Imagen del menu principal de Pharos OS"
+      />
       <p>
         En la pestaña de opciones vamos a la pestaña (inalámbrico), para
         configurar nombre y contraseña del AP:
       </p>
-      <div className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/puntoacceso2.png?raw=true"
-          alt="imágen menú inalámbrico pharos os."
-          id="imgAP"
-        />
-      </div>
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/puntoacceso2.png?raw=true"
+        altImage="Imagen del menú inlámbrico seccipon (Estado) de Pharos"
+      />
       <p>
         A continuación, en el apartado de (configuración del AP inalámbrico),
         ponemos el nombre del AP, vamos a modo de seguridad y seleccionamos
@@ -58,13 +53,10 @@ export const APMode = () => {
         Ponemos una contraseña que obtenga 8 caractéres, alfanumérica y hacemos
         clic en el botón (Aplicar). Guardamos la configuración:
       </p>
-      <div className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/puntoacceso3.png?raw=true"
-          alt="imágen menú inalámbrico pharos os2"
-          id="imgAP"
-        />
-      </div>
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/puntoacceso3.png?raw=true"
+        altImage="Imagen del menú inlámbrico seccipon (Estado) de Pharos"
+      />
       <p>
         Una vez hayamos guardado la configuración el equipo está listo para
         funcionar como Punto de Acceso, ya sea de 2.4 Ghz. o de 5 Ghz. Podemos

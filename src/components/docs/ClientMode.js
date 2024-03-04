@@ -1,7 +1,7 @@
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import { LinkButton } from '../LinkButton';
-import { ExternalLinkIcon } from 'lucide-react';
+import ImageComponent from '../ImageComponent';
 
 export const ClientMode = () => {
   return (
@@ -31,14 +31,10 @@ export const ClientMode = () => {
         configuración.
       </p>
       <p>Escenario de red:</p>
-
-      <figure className="images-client flex justify-center m-auto">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/antena-dinamica-removebg-preview.png?raw=true"
-          alt="esceneraio-diagrama-ap-cliente"
-        />
-      </figure>
-
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/antena-dinamica-removebg-preview.png?raw=true"
+        altImage="Antena Dinámica"
+      />
       <p>
         El problema puede estar relacionado con dos razones como a continuación:
       </p>
@@ -75,14 +71,10 @@ export const ClientMode = () => {
         a Internet.
       </p>
       <p>CPE_Client’s Radio Status/Estado de la radio:</p>
-
-      <figure className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/estado-radio.png?raw=true"
-          alt=""
-        />
-      </figure>
-
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/estado-radio.png?raw=true"
+        altImage="Estado de la radio del CPE"
+      />
       <p>
         Si no puede ver ninguna información sobre el CPE_AP en esta página,
         significa que el CPE_Client no se conecta al CPE_AP; consulte los pasos
@@ -99,14 +91,10 @@ export const ClientMode = () => {
         (o superior) con cable de tierra) Sobre las instrucciones de instalación
         de CPE, consulte FAQ_2080 en el manual de TP-Link. Conexión eléctrica:
       </p>
-
-      <figure className="images-client flex justify-center m-auto">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/diagrama-poe-cpe-lan-removebg-preview.png?raw=true"
-          alt=""
-        />
-      </figure>
-
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/diagrama-poe-cpe-lan-removebg-preview.png?raw=true"
+        altImage="Diagrama de conxión del POE con la antena y el router"
+      />
       <p>
         Paso 2: asegúrese de que el AP y el cliente estén en la misma frecuencia
         y ancho de canal Nota: El CPE510 solo tiene una banda de frecuencia 5G,
@@ -121,23 +109,15 @@ export const ClientMode = () => {
         De lo contrario, es posible que el Cliente no pueda conectar el AP.
         Configuración inalámbrica de AP:
       </p>
-
-      <figure className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/config-canal-cpe.png?raw=true"
-          alt=""
-        />
-      </figure>
-
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/config-canal-cpe.png?raw=true"
+        altImage="Imagen ilustrativa de dos CPE como puntos de acceso"
+      />
       <p>Escaneo de la página SSID:</p>
-
-      <figure className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/escaner-ssid.png?raw=true"
-          alt=""
-        />
-      </figure>
-
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/escaner-ssid.png?raw=true"
+        altImage="Imagen de escaneo de los CPE disponibles"
+      />
       <ol>
         <p>
           Si aún no se puede encontrar el SSID del AP, aquí hay algunas
@@ -179,14 +159,10 @@ export const ClientMode = () => {
           siguiente figura:
         </li>
       </ol>
-
-      <figure className="images-client">
-        <img
-          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/monitor.png?raw=true"
-          alt=""
-        />
-      </figure>
-
+      <ImageComponent
+        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/monitor.png?raw=true"
+        altImage="Estado de Pharos OS"
+      />
       <p>
         Si el Cliente puede ver el SSID del AP, pero no puede conectarse al AP,
         puede realizar la siguiente operación: 1. Si el SSID del AP está

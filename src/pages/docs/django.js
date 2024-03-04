@@ -4,13 +4,13 @@ import { NavSwitch } from '../../components/NavSwicth';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-import Link from 'next/link';
+import LinkButton from '../../components/LinkButton';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import { ExternalLinkIcon } from 'lucide-react';
 import { DjangoIcon } from '../../components/Icons/DjangoIcon';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
+import ImageComponent from '../../components/ImageComponent';
 export default function DjangoDocs() {
   return (
     <TitlesContextProvider>
@@ -93,21 +93,21 @@ export default function DjangoDocs() {
               web, se ve exactamente igual. Sin embargo, muchos sitios web que
               visitamos a diario cambian cada vez que los visitamos. Si visitas
               los sitios web de
-              <Link
-                href="https://www.nytimes.com/"
-                className="mx-1 text-[#0C4B33] link"
+              <LinkButton
+                url="https://www.nytimes.com/"
+                color="[#0C4B33]"
+                iconName="ArrowUpRight"
               >
                 The New York Times
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               o
-              <Link
-                href="https://www.nytimes.com/"
-                className="mx-1 text-[#0C4B33] link"
+              <LinkButton
+                url="https://www.nytimes.com/"
+                color="[#0C4B33]"
+                iconName="ArrowUpRight"
               >
                 Facebook
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               , por ejemplo, es probable que veas cosas diferentes hoy que
               mañana. Para sitios grandes como esos, sería poco razonable que
               los empleados tengan que editar manualmente un archivo HTML grande
@@ -128,12 +128,10 @@ export default function DjangoDocs() {
               de ida y vuelta a través de Internet. Normalmente, la información
               en línea se intercambia entre un cliente (usuario) y un servidor.
             </p>
-            <div className="images-client">
-              <img
-                src="/images/client-removebg-preview.png"
-                alt="Django example"
-              />
-            </div>
+            <ImageComponent
+              src="/images/client-removebg-preview.png"
+              altImage="Ejemplo deDjango"
+            />
             <p>
               En este protocolo, el cliente enviará una solicitud al servidor,
               que podría lucir algo como el siguiente ejemplo. En el ejemplo a
@@ -149,9 +147,10 @@ export default function DjangoDocs() {
               </span>
               indican que podríamos estar pasando más información también.
             </p>
-            <div className="images-client">
-              <img src="/images/request.png" alt="Django example" />
-            </div>
+            <ImageComponent
+              src="/images/request.png"
+              altImage="Ejemplo de Django"
+            />
             <p>
               Después de recibir una solicitud, un servidor enviará una
               respuesta HTTP, que podría verse algo así como la siguiente. Tal
@@ -162,50 +161,50 @@ export default function DjangoDocs() {
               , una descripción del contenido y luego alguna información
               adicional.
             </p>
-            <div className="images-client">
-              <img src="/images/response.png" alt="Django example" />
-            </div>
+            <ImageComponent
+              src="/images/response.png"
+              altImage="Ejemplo de Django"
+            />
             <p>
               El 200 es solo uno de los muchos códigos de estado, algunos de los
               cuales podrías haber visto en el pasado:
             </p>
-            <div className="images-client">
-              <img src="/images/codes.png" alt="Django example" />
-            </div>
+            <ImageComponent
+              src="/images/codes.png"
+              altImage="Ejemplo de Django"
+            />
           </article>
           <SectionTitle title="Django" />
           <article>
             <p>
-              <Link
-                href="https://www.djangoproject.com/"
-                className="mr-1 text-[#0C4B33] link"
+              <LinkButton
+                url="https://www.djangoproject.com/"
+                color="[#0C4B33]"
+                iconName="ArrowUpRight"
               >
                 Django
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               es un marco de trabajo web basado en Python que nos permitirá
               escribir código en Python que genera dinámicamente HTML y CSS. La
               ventaja de utilizar un marco de trabajo como Django es que ya hay
               mucho código escrito para nosotros que podemos aprovechar.
             </p>
-            <ul>
-              <li className="list-css-span">
+            <ul className="list-css-span">
+              <li>
                 Para comenzar, tendremos que instalar Django, lo que significa
                 que también tendrás que
-                <Link
+                <LinkButton
                   href="https://pip.pypa.io/en/stable/installing/"
-                  className="mx-[3px] text-[#0C4B33] link"
+                  color="[#0C4B33]"
+                  iconName="ArrowUpRight"
                 >
                   instalar
-                  <ExternalLinkIcon className="link-icon" />
-                </Link>
+                </LinkButton>
                 <span>pip</span> si aún no lo has hecho.
               </li>
               <li>
                 Una vez que tengas Pip instalado, puedes ejecutar
-                <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded border-[#0C4B33] border-b-2">
-                  pip3 install Django
-                </span>
+                <span>pip3 install Django</span>
                 en tu terminal para instalar Django.
               </li>
             </ul>
@@ -213,7 +212,7 @@ export default function DjangoDocs() {
               Después de instalar Django, podemos seguir los pasos para crear un
               nuevo proyecto de Django:
             </p>
-            <ol>
+            <ol className="list-css-span">
               <li>
                 <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded border-[#0C4B33] border-b-2">
                   django-admin startproject NOMBRE_DEL_PROYECTO
@@ -264,9 +263,10 @@ export default function DjangoDocs() {
                 personas no pueden acceder a tu sitio web. Esto te llevará a una
                 página de inicio predeterminada.
               </li>
-              <div className="images-client">
-                <img src="/images/landing.png" alt="Django example" />
-              </div>
+              <ImageComponent
+                src="/images/landing.png"
+                altImage="Ejemplo de Django"
+              />
               <li className="list-css-span">
                 A continuación, tendremos que crear una aplicación. Los
                 proyectos de Django se dividen en una o más aplicaciones. La
@@ -328,13 +328,10 @@ export default function DjangoDocs() {
                 </span>
                 ; en el cual mi raíz de carpetas se verá así:
               </p>
-              <div>
-                <img
-                  className="images-client"
-                  src="/images/root_.png"
-                  alt="root image"
-                />
-              </div>
+              <ImageComponent
+                src="/images/root_.png"
+                altImage="Ejemplo de imagen root"
+              />
               <p className="list-css-span">
                 La carpeta principal<span>mysite</span> y sus archivos:
               </p>
@@ -372,13 +369,13 @@ export default function DjangoDocs() {
                   Python que este directorio debe considerarse un paquete
                   Python. Si eres un principiante en Python, lee más sobre
                   paquetes en la documentación oficial de
-                  <Link
-                    href="https://python.org/"
-                    className="mx-[3px] text-[#0C4B33] link"
+                  <LinkButton
+                    url="https://python.org/"
+                    color="[#0C4B33]"
+                    iconName="ArrowUpRight"
                   >
                     Python
-                    <ExternalLinkIcon className="link-icon" />
-                  </Link>
+                  </LinkButton>
                   .
                 </li>
                 <li>
@@ -403,7 +400,7 @@ export default function DjangoDocs() {
                   Consulta Cómo implementar con WSGI para obtener más detalles.
                 </li>
               </ul>
-              <p>
+              <p className="list-css-span">
                 Para crear tu aplicación, asegúrate de crearla dentro del mismo
                 directorio que <b>manage.py</b>, en mi caso la voy a llamar
                 <b> polls</b>:<br />
@@ -529,9 +526,7 @@ export default function DjangoDocs() {
                 http://127.0.0.1:8000/polls/
               </span>
             </p>
-            <div className="images-client">
-              <img src="/images/polls.png" alt="Django example" />
-            </div>
+            <ImageComponent src="/images/polls.png" altImage="Más ejemplos" />
             <p>
               Ahora que hemos tenido cierto éxito, repasemos lo que acaba de
               suceder para llegar a ese punto:
@@ -628,28 +623,30 @@ export default function DjangoDocs() {
               Cuando ejecutemos el servidor, en la url si cambiamos como se
               muestra a continuación:
             </p>
-            <div className="images-client">
-              <img src="/images/dev.png" alt="dev_polls" />
-              <img src="/images/neotecs.png" alt="neo_polls" />
-            </div>
+            <ImageComponent
+              src="/images/dev.png"
+              altImage="Ejemplo de Django Desarrollador"
+            />
+            <ImageComponent
+              src="/images/neotecs.png"
+              altImage="Ejemplo de Django Neotecs"
+            />
             <p>
               Muchos sitios web utilizan parámetros en la URL para mostrar
               información específica. Por ejemplo, al ir a
-              <Link
-                href="https://twitter.com/CalcagniGabriel"
-                className="mx-[3px] text-[#0C4B33] link"
+              <LinkButton
+                url="https://twitter.com/CalcagniGabriel"
+                color="[#0C4B33]"
               >
                 https://twitter.com/CalcagniGabriel
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               se muestran todos mis tweets, y al dirigirse a
-              <Link
-                href="https://twitter.com/CalcagniGabriel"
-                className="mx-[3px] text-[#0C4B33] link"
+              <LinkButton
+                url="https://twitter.com/CalcagniGabriel"
+                color="[#0C4B33]"
               >
                 https://github.com/solidsnk86
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               se accede a la página de GitHub de solidSnk86. Incluso puedes
               encontrar tus propios repositorios públicos de GitHub navegando a
               www.github.com/TU_NOMBRE_DE_USUARIO.
@@ -697,17 +694,16 @@ export default function DjangoDocs() {
               específico en la URL, sino cualquier cadena que un usuario pueda
               ingresar. Ahora, podemos probar el sitio con algunas otras URL:
             </p>
-            <div className="images-client">
-              <img src="/images/mario.png" alt="usuarios" />
-            </div>
+            <ImageComponent src="/images/mario.png" altImage="Usuario Mario" />
             <p className="list-css-span">
               En este ejemplo he puesto un nombre con espacio y automáticamente
               se genera la url con<span>%20</span>lo que significa un espacio en
               blanco.
             </p>
-            <div className="images-client">
-              <img src="/images/solidsnk.png" alt="usuarios" />
-            </div>
+            <ImageComponent
+              src="/images/solidsnk.png"
+              altImage="Imagen ejemplo de usuarios"
+            />
             <p>
               Otra cosa que también podemos hacer es darle mayúscula a la cadena
               de texto, con la función de python
@@ -722,9 +718,10 @@ export default function DjangoDocs() {
               return HttpResponse(f"Hola, {name.capitalize()}!")
               `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/capitalize.png" alt="usuarios" />
-            </div>
+            <ImageComponent
+              src="/images/capitalize.png"
+              altImage="Ejemplo en Django"
+            />
             <p>
               Esta es una excelente ilustración de cómo cualquier funcionalidad
               que tengamos en Python puede ser utilizada en Django antes de ser
@@ -745,9 +742,10 @@ export default function DjangoDocs() {
               return HttpResponse("<h1 style=\\"color:#8F41D8;\\">Bienvenidos a NeoTecs!</h1>")
               `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/color-header.png" alt="Style header" />
-            </div>
+            <ImageComponent
+              src="/images/color-header.png"
+              altImage="Style Header"
+            />
             <p className="list-css-span">
               Sería muy tedioso escribir una página HTML completa dentro de
               <span>views.py</span>. También constituiría un mal diseño, ya que
@@ -776,9 +774,10 @@ export default function DjangoDocs() {
               carpeta, y luego agregaremos un archivo llamado
               <span>index.html</span>.
             </p>
-            <div className="images-client">
-              <img src="/images/templates.png" alt="Style header" />
-            </div>
+            <ImageComponent
+              src="/images/templates.png"
+              altImage="Style Header en Django template"
+            />
             <p className="list-css-span">
               Podemos agregar lo siguiente a nuestro archivo
               <span>index.html</span>:
@@ -872,22 +871,24 @@ export default function DjangoDocs() {
               Ya tenemos algo mucho más estético e interactivo con
               <span>CSS</span>y<span>Javascript</span>.
             </p>
-            <div className="images-client">
-              <img src="/images/template1.png" alt="Template 1" />
-            </div>
-            <div className="images-client">
-              <img src="/images/template2.png" alt="Template 1" />
-            </div>
+            <ImageComponent
+              src="/images/template1.png"
+              altImage="Imagen plantilla de ejemplo"
+            />
+            <ImageComponent
+              src="/images/template2.png"
+              altImage="Imagen plantilla de ejemplo Django"
+            />
             <p>
               Además de escribir algunas páginas HTML estáticas, también podemos
               utilizar el lenguaje de
-              <Link
-                href="https://docs.djangoproject.com/en/4.0/ref/templates/language/"
-                className="mx-[3px] text-[#0C4B33] link"
+              <LinkButton
+                url="https://docs.djangoproject.com/en/4.0/ref/templates/language/"
+                color="[#0C4B33]"
+                iconName="ArrowUpRight"
               >
                 plantillas de Django
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               para cambiar el contenido de nuestros archivos HTML según la URL
               visitada. Vamos a probarlo cambiando nuestra función
               <span className="mx-1 text-[#23AD8B] bg-gray-800 px-1 py-[2px] rounded">

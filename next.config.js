@@ -15,6 +15,14 @@ module.exports = {
       },
     ];
   },
+  images: {
+    domains: [
+      'github.com',
+      'www.hardreset.info',
+      'www.technotrade.com.ua',
+      'wiki.mikrotik.com',
+    ],
+  },
   reactStrictMode: true,
   experimental: { esmExternals: true },
   env: {

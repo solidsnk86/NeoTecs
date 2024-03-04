@@ -10,6 +10,7 @@ import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { ShareButton } from '../../components/ShareButton';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
+import ImageComponent from '../../components/ImageComponent';
 
 export default function MikrotikDocs() {
   return (
@@ -58,14 +59,10 @@ export default function MikrotikDocs() {
               <FaSignInAlt className="inline-flex mr-2" />
               enter, veremos la siguiente ventana:
             </p>
-            <div className="images-client">
-              <img
-                src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-propiedades-red.png?raw=true"
-                alt="imágen menú principal pharos os"
-                id="imgAP"
-                loading="lazy"
-              />
-            </div>
+            <ImageComponent
+              src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-propiedades-red.png?raw=true"
+              altImage="Menú principal del CPE"
+            />
             <p>Vamos a "Propiedades"</p>
             <p>
               Luego seleccionamos protocolo TCP /IP y entramos en las
@@ -77,41 +74,29 @@ export default function MikrotikDocs() {
               <li>Máscara de sub red:</li>
               <Pre lang="bash">{`255.255.255.0`}</Pre>
             </ol>
-            <div className="images-client flex justify-center m-auto">
-              <img
-                src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/propiedades-ethernet-mikrotik.png?raw=true"
-                alt="imágen menú principal pharos os"
-                id="imgAP"
-                loading="lazy"
-              />
-            </div>
+            <ImageComponent
+              src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/propiedades-ethernet-mikrotik.png?raw=true"
+              altImage="Url del navegador"
+            />
             <SectionTitle title="URL Mikrotik" />
             <p>Nos dirijimos al navegador y colocamos la url:</p>
             <Pre lang="bash">{`http://198.168.88.1`}</Pre>
             <p>
               Nos aparecera una interfaz para el login de la antena algo así:
             </p>
-            <div className="images-client flex justify-center m-auto">
-              <img
-                src="https://www.hardreset.info/es/lpb/mikrotik-login-page/mikrotik-routerboard-hex-s-rb760igs.jpeg"
-                alt="imágen menú inalámbrico pharos os."
-                id="imgAP"
-                loading="lazy"
-              />
-            </div>
+            <ImageComponent
+              src="https://www.hardreset.info/es/lpb/mikrotik-login-page/mikrotik-routerboard-hex-s-rb760igs.jpeg"
+              altImage="Imagen del menú inalámbrico del CPE"
+            />
             <p>
               A continuación, en usuario, ponemos (admin) y dejamos en blanco la
               contraseña. hacemos click en Login y veremos una interfaz
               principal así:
             </p>
-            <div className="images-client flex justify-center m-auto">
-              <img
-                src="https://www.technotrade.com.ua/userfiles/images/mikrotik_quickset_2012-10-12/quickset-menu.jpg"
-                alt="imágen menú inalámbrico pharos os2"
-                id="imgAP"
-                loading="lazy"
-              />
-            </div>
+            <ImageComponent
+              src="https://www.technotrade.com.ua/userfiles/images/mikrotik_quickset_2012-10-12/quickset-menu.jpg"
+              altImage="Imagen Menú inalambrico del CPE"
+            />
             <SectionTitle title="Sección Quick Set" />
             <p>
               Seleccionamos el botón
@@ -119,14 +104,10 @@ export default function MikrotikDocs() {
                 Quick Set
               </span>
             </p>
-            <div className="images-client flex justify-center m-auto">
-              <img
-                src="https://wiki.mikrotik.com/images/thumb/2/24/Quickset639.png/717px-Quickset639.png?20170728075938"
-                alt="imágen menú inalámbrico pharos os2"
-                id="imgAP"
-                loading="lazy"
-              />
-            </div>
+            <ImageComponent
+              src="https://wiki.mikrotik.com/images/thumb/2/24/Quickset639.png/717px-Quickset639.png?20170728075938"
+              altImage="Imagen del menú inlámbrico"
+            />
             <p>
               Seleccionamos Modo (Router), Address Aquisition: (Automatic),
               tildamos las casillas DHCP server y NAT. Aplicamos la y guardamos
@@ -151,14 +132,10 @@ export default function MikrotikDocs() {
               red.- Una vez identificado el modelo ingresaremos a la placa,
               haciendo clik en el nombre de la misma en este caso es la Wan 2.-
             </p>
-            <div className="images-client flex justify-center m-auto">
-              <img
-                src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/Web-Fig-Mikrotik.png?raw=true"
-                alt="imágen menú inalámbrico pharos os2"
-                id="imgAP"
-                loading="lazy"
-              />
-            </div>
+            <ImageComponent
+              src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/Web-Fig-Mikrotik.png?raw=true"
+              altImage="Imagen de administración del CPE"
+            />
             <p>
               Una vez dentro de la placa de red de la antena veremos el
               siguiente solapa, es importante que vean los títulos siempre a la
@@ -186,7 +163,7 @@ export default function MikrotikDocs() {
               explicativo en mi
               <LinkButton
                 u={'https://www.youtube.com/@tutosNeoTecs'}
-                color="red-500"
+                color="youtube-link"
                 iconName={'Youtube'}
               >
                 canal

@@ -70,18 +70,6 @@ export const shareText =
 
 export const microlink = 'https://geolocation.microlink.io';
 
-export function applyLazyLoading() {
-  if (typeof window !== 'undefined') {
-    var images = document.querySelectorAll('.images-client img');
-
-    images.forEach(function (img) {
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
-      }
-    });
-  }
-}
-
 export const compartirWhatsapp = () => {
   const url = window.location.href;
   const message = `Explora ésta página web dónde aprenderás a configurar tus dispositivos Wifi 📡 y Programación 👨‍💻: ${url}`;
