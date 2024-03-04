@@ -304,11 +304,7 @@ export default function Python() {
                 `
           }</Pre>
           <div className="images-client">
-            <img
-              src="/images/python-terminal-1.png"
-              alt="Python terminal"
-              loading="lazy"
-            />
+            <img src="/images/python-terminal-1.png" alt="Python terminal" />
           </div>
           <p>Un par de cosas para señalar aquí:</p>
           <ul>
@@ -403,7 +399,6 @@ export default function Python() {
               <img
                 src="/images/python-terminal-error.png"
                 alt="Python terminal error"
-                loading="lazy"
               />
             </div>
             <li>
@@ -539,11 +534,7 @@ export default function Python() {
                 `
           }</Pre>
           <div className="images-client">
-            <img
-              src="/images/python-console-2.png"
-              alt="Python console"
-              loading="lazy"
-            />
+            <img src="/images/python-console-2.png" alt="Python console" />
           </div>
           <span id="tuplas" />
           <Indextitle>Tuplas</Indextitle>
@@ -930,11 +921,7 @@ export default function Python() {
               , nos adentraremos en el siguiente error:
             </p>
             <div className="images-client">
-              <img
-                src="/images/NameError.png"
-                alt="Name error"
-                loading="lazy"
-              />
+              <img src="/images/NameError.png" alt="Name error" />
             </div>
             <p>
               Nos encontramos con este problema porque, de forma predeterminada,
@@ -1224,11 +1211,7 @@ export default function Python() {
             }</Pre>
             <p>Esto, sin embargo nos deja este error:</p>
             <div className="images-client">
-              <img
-                src="/images/TypeError.png"
-                alt="Type error"
-                loading="lazy"
-              />
+              <img src="/images/TypeError.png" alt="Type error" />
             </div>
             <p>
               Esto sucede porque Python no sabe cómo comparar dos diccionarios
@@ -1309,22 +1292,14 @@ export default function Python() {
             }</Pre>
             <p>En muchos casos, el programa funciona bien:</p>
             <div className="images-client">
-              <img
-                src="/images/dividegood.png"
-                alt="División buena"
-                loading="lazy"
-              />
+              <img src="/images/dividegood.png" alt="División buena" />
             </div>
             <p>
               Sin embargo, nos encontraremos con problemas cuando intentemos
               dividir por 0:
             </p>
             <div className="images-client">
-              <img
-                src="/images/dividebad.png"
-                alt="División mala"
-                loading="lazy"
-              />
+              <img src="/images/dividebad.png" alt="División mala" />
             </div>
             <p className="list-css-span">
               Podemos manejar este error desordenado utilizando el
@@ -1360,18 +1335,14 @@ export default function Python() {
             }</Pre>
             <p>En este caso cuando intentemos esto de nuevo:</p>
             <div className="image-client">
-              <img src="/images/divide0.png" alt="División 0" loading="lazy" />
+              <img src="/images/divide0.png" alt="División 0" />
             </div>
             <p>
               Sin embargo, aún nos encontramos con un error cuando el usuario
               ingresa valores que no son números para x e y:
             </p>
             <div className="image-client">
-              <img
-                src="/images/valueError.png"
-                alt="Value error"
-                loading="lazy"
-              />
+              <img src="/images/valueError.png" alt="Value error" />
             </div>
             <p>Podemos resolver este problema de similar manera:</p>
             <Pre lang="python">{
