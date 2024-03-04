@@ -1,4 +1,4 @@
-import { AlertTriangle, ExternalLinkIcon } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 import { Nav } from '../../components/Nav';
 import { ArrowLeftIcon } from 'lucide-react';
 import LinkButton from '../../components/LinkButton';

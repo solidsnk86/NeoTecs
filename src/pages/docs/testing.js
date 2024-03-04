@@ -1,3 +1,4 @@
+import ImageComponent from '../../components/ImageComponent';
 import { Nav } from '../../components/Nav';
 import { LectureNav } from '../../components/LectureNav';
 import { NavSwitch } from '../../components/NavSwicth';
@@ -8,8 +9,7 @@ import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
-import Link from 'next/link';
-import { ExternalLinkIcon } from 'lucide-react';
+import LinkButton from '../../components/LinkButton';
 
 export default function Testing() {
   return (
@@ -470,13 +470,13 @@ export default function Testing() {
               automáticamente se nos proporciona un archivo<span>tests.py</span>
               . Cuando abrimos este archivo por primera vez, vemos que la
               biblioteca de pruebas de Django
-              <Link
-                href="https://docs.djangoproject.com/en/4.0/topics/testing/overview/"
-                className="mx-1 underline text-purple-400 link"
+              <LinkButton
+                url="https://docs.djangoproject.com/en/4.0/topics/testing/overview/"
+                color="purple-400"
+                iconName="ArrowUpRight"
               >
                 TestCase
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               se importa automáticamente:
             </p>
             <Pre lang="python">{
@@ -812,13 +812,13 @@ export default function Testing() {
               escribimos aplicaciones de una sola página más grandes, razón por
               la cual se han creado varios frameworks que ayudan con las pruebas
               en el navegador, uno de los cuales se llama
-              <Link
-                href="https://www.selenium.dev/"
-                className="mx-1 link underline text-purple-400"
+              <LinkButton
+                url="https://www.selenium.dev/"
+                color="purple-400"
+                iconName="ArrowUpRight"
               >
                 Selenium
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               .
             </p>
             <p className="list-css-span">
@@ -1012,12 +1012,10 @@ export default function Testing() {
             <p>
               La impresión de los resultados en consola serán los siguientes:
             </p>
-            <div className="images-client">
-              <img
-                src="/images/tests_py.png"
-                alt="Resultado test python en consola"
-              />
-            </div>
+            <ImageComponent
+              src="/images/tests_py.png"
+              altImage="Resulatado test de python en consola"
+            />
           </article>
           <SectionTitle title="CI/CD" />
           <article>
@@ -1082,13 +1080,13 @@ export default function Testing() {
             <p>
               Una herramienta popular utilizada para facilitar la integración
               continua es conocida como
-              <Link
-                href="https://github.com/features/actions"
-                className="mx-1 underline text-purple-400 link"
+              <LinkButton
+                url="https://github.com/features/actions"
+                color="purple-400"
+                iconName="ArrowUpRight"
               >
                 GitHub Actions
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               . GitHub Actions nos permite crear flujos de trabajo donde podemos
               especificar ciertas acciones que se realizarán cada vez que
               alguien haga un push a un repositorio de Git. Por ejemplo,
@@ -1230,16 +1228,18 @@ export default function Testing() {
               navegar a la pestaña GitHub Actions, hacer clic en nuestro push
               más reciente, hacer clic en la acción que falló y ver el registro:
             </p>
-            <div className="images-client">
-              <img src="/images/action.gif" alt="Github actions gif" />
-            </div>
+            <ImageComponent
+              src="/images/action.gif"
+              altImage="Github actions ejemplo"
+            />
             <p>
               Ahora, después de corregir el error, podríamos hacer un push
               nuevamente y obtener un resultado más satisfactorio:
             </p>
-            <div className="images-client">
-              <img src="/images/action_success.gif" alt="Github actions gif" />
-            </div>
+            <ImageComponent
+              src="/images/action_success.gif"
+              altImage="Github actions ejemplo"
+            />
           </article>
           <SectionTitle title="Docker" />
           <article>
@@ -1260,13 +1260,13 @@ export default function Testing() {
               poco similar a una Máquina Virtual, son tecnologías diferentes.
               Una máquina virtual (como la utilizada en GitHub Actions o al
               lanzar un servidor
-              <Link
-                href="https://cs50.harvard.edu/web/2020/notes/7/"
-                className="link mx-1 underline text-purple-400"
+              <LinkButton
+                url="https://cs50.harvard.edu/web/2020/notes/7/"
+                color="purple-400"
+                iconName="ArrowUpRight"
               >
                 AWS
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               ) es efectivamente una computadora virtual completa con su propio
               sistema operativo, lo que significa que ocupa mucho espacio donde
               se esté ejecutando. Docker, por otro lado, funciona configurando

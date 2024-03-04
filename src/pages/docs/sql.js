@@ -11,6 +11,7 @@ import { AlertTriangle, InfoIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 import { SqlExamples } from '../../components/SqlExamples';
+import ImageComponent from '../../components/ImageComponent';
 export default function SqlDocs() {
   return (
     <TitlesContextProvider>
@@ -56,7 +57,7 @@ export default function SqlDocs() {
                   <a href="#delete">DELETE</a>
                 </li>
                 <li>
-                  <a href="#otras-clausulas">Otras cláusulas</a>
+                  <a href="#otras-cláusulas">Otras cláusulas</a>
                 </li>
               </ul>
             </li>
@@ -135,7 +136,7 @@ export default function SqlDocs() {
               con bases de datos{' '}
               <LinkButton
                 url="https://www.oracle.com/database/what-is-a-relational-database/#:~:text=A%20relational%20database%20is%20a,of%20representing%20data%20in%20tables."
-                color={'[#00BCF2]'}
+                color="sky-700"
                 iconName="ArrowUpRight"
               >
                 relacionales
@@ -143,7 +144,7 @@ export default function SqlDocs() {
               , donde la información se organiza en{' '}
               <LinkButton
                 url="https://www.essentialsql.com/what-is-a-database-table/"
-                color={'[#00BCF2]'}
+                color="sky-700"
                 iconName="ArrowUpRight"
               >
                 tablas
@@ -157,9 +158,10 @@ export default function SqlDocs() {
               siguiente tabla, registramos diversos vuelos, cada uno con un
               origen, destino y duración asociados.
             </p>
-            <div className="images-client">
-              <img src="/images/flights1.png" alt="Tabla de vuelos" />
-            </div>
+            <ImageComponent
+              src="/images/flights1.png"
+              altImage="Tabla de vuelos"
+            />
             <p>
               Existen varios sistemas de gestión de bases de datos relacionales
               comúnmente utilizados para almacenar información y que pueden
@@ -169,7 +171,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://www.mysql.com/"
-                  color={'[#00BCF2]'}
+                  color="sky-700"
                   iconName="ArrowUpRight"
                 >
                   MySQL
@@ -178,7 +180,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://www.postgresql.org/"
-                  color={'[#00BCF2]'}
+                  color="sky-700"
                   iconName="ArrowUpRight"
                 >
                   PostgreeSQL
@@ -187,7 +189,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://www.sqlite.org/index.html"
-                  color={'[#00BCF2]'}
+                  color="sky-700"
                   iconName="ArrowUpRight"
                 >
                   SQLite
@@ -211,7 +213,7 @@ export default function SqlDocs() {
               SQLite tiene{' '}
               <LinkButton
                 url="https://www.sqlite.org/datatype3.html"
-                color={'[#00BCF2]'}
+                color="sky-700"
                 iconName="ArrowUpRight"
               >
                 tipos
@@ -272,10 +274,10 @@ export default function SqlDocs() {
                 <span>id</span>: A menudo es útil tener un número que nos
                 permita identificar de manera única cada fila en una tabla. Aquí
                 hemos especificado que "id" es un número entero y también que es
-                nuestra clave primaria{' '}
+                nuestra clave primaria
                 <LinkButton
                   url="https://www.w3schools.com/sql/sql_primarykey.ASP"
-                  color={'[#00BCF2]'}
+                  color="sky-700"
                   iconName="ArrowUpRight"
                 >
                   PRIMARY-KEY
@@ -305,7 +307,7 @@ export default function SqlDocs() {
               <b>PRIMARY KEY</b> al hacer una columna, pero hay varias otras
               <LinkButton
                 url="https://www.tutorialspoint.com/sqlite/sqlite_constraints.htm"
-                color={'[#00BCF2]'}
+                color="sky-700"
                 iconName="ArrowUpRight"
               >
                 restrincciones
@@ -377,9 +379,7 @@ export default function SqlDocs() {
               La instrucción anterior <b>(*)</b> recupera todos los datos de
               nuestra tabla de vuelos.
             </p>
-            <div className="images-client">
-              <img src="/images/all.png" alt="Tabla de Vuelos" />
-            </div>
+            <ImageComponent src="/images/all.png" altImage="tabla de vuelos" />
             <p>
               Puede ser el caso de que realmente no necesitemos todas las
               columnas de la base de datos, solo origen y destino. Para acceder
@@ -392,9 +392,10 @@ export default function SqlDocs() {
               SELECT origin, destination FROM flights;
               `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/flights1.png" alt="Tabla de Vuelos" />
-            </div>
+            <ImageComponent
+              src="/images/flights1.png"
+              altImage="Tabla de vuelos"
+            />
             <p>
               A medida que nuestras tablas se vuelven más grandes, también
               querremos reducir las filas que devuelve nuestra consulta. Hacemos
@@ -406,18 +407,20 @@ export default function SqlDocs() {
               SELECT * FROM flights WHERE id = 3;
               `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/where0.png" alt="Tabla de Vuelos" />
-            </div>
+            <ImageComponent
+              src="/images/where0.png"
+              altImage="Tabalasde vuelos"
+            />
             <p>Podemos filtrar por cualquier columna, ¡no solo por id!</p>
             <Pre lang="sql">{
               /*sql */ `
               SELECT * FROM flights WHERE origin = "New York";
               `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/where1.png" alt="Tabla de Vuelos" />
-            </div>
+            <ImageComponent
+              src="/images/where1.png"
+              altImage="Tabalas de vuelos"
+            />
           </article>
           <span id="terminal-sql" />
           <SectionTitle title="Trabajar con SQL en la terminal" />
@@ -428,15 +431,15 @@ export default function SqlDocs() {
               computadora, primero debes descargar{' '}
               <LinkButton
                 url="https://www.sqlite.org/download.html"
-                color={'[#00BCF2]'}
+                color="sky-700"
                 iconName="ArrowUpRight"
               >
-                SQLLite
+                SQLite
               </LinkButton>
               . (No lo usaremos en la conferencia, pero también puedes descargar
               <LinkButton
                 url="https://sqlitebrowser.org/dl/"
-                color={'[#00BCF2]'}
+                color="sky-700"
                 iconName="ArrowUpRight"
               >
                 DB Browser
@@ -531,14 +534,12 @@ export default function SqlDocs() {
               SELECT * FROM flights WHERE duration > 500;
               `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/500.png" alt="Tabla de Vuelos" />
-            </div>
+            <ImageComponent src="/images/500.png" altImage="Tablas de vuelos" />
             <p>
               Y también podemos utilizar otras lógicas
               <LinkButton
                 url="https://sqlitebrowser.org/dl/"
-                color={'[#00BCF2]'}
+                color="sky-700"
                 iconName="ArrowUpRight"
               >
                 (AND, OR)
@@ -550,17 +551,19 @@ export default function SqlDocs() {
               SELECT * FROM flights WHERE duration > 500 AND destination = "Paris";
               `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/500andparis.png" alt="Tabla de Vuelos" />
-            </div>
+            <ImageComponent
+              src="/images/500andparis.png"
+              altImage="Tablas de vuelos"
+            />
             <Pre lang="sql">{
               /*sql */ `
               SELECT * FROM flights WHERE duration > 500 OR destination = "Paris";
               `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/500orparis.png" alt="Tabla de Vuelos" />
-            </div>
+            <ImageComponent
+              src="/images/500orparis.png"
+              altImage="Tabla de vuelos"
+            />
             <p>
               También podemos usar la palabra clave IN para ver si un dato es
               una de varias opciones:
@@ -570,23 +573,20 @@ export default function SqlDocs() {
               SELECT * FROM flights WHERE origin IN ("New York", "Lima");
               `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/in.png" alt="Tabla de Vuelos" />
-            </div>
-            <p>
+            <ImageComponent src="/images/in.png" altImage="Tabla de vuelos" />
+            <p className="list-css-span">
               Incluso podemos usar expresiones regulares para buscar palabras de
-              manera más amplia utilizando la palabra clave LIKE. La siguiente
-              consulta encuentra todos los resultados con una "a" en el origen,
-              utilizando % como un carácter comodín.
+              manera más amplia utilizando la palabra clave<span>LIKE</span>. La
+              siguiente consulta encuentra todos los resultados con una
+              <span>"a"</span>en el origen, utilizando<span>"%"</span>como un
+              carácter comodín.
             </p>
             <Pre lang="sql">{
               /*sql */ `
               SELECT * FROM flights WHERE origin LIKE "%a%";
               `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/like.png" alt="Tabla de Vuelos" />
-            </div>
+            <ImageComponent src="/images/like.png" altImage="Tabla de vuelos" />
           </article>
           <span id="funciones" />
           <SectionTitle title="Funciones" />
@@ -601,7 +601,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://sqlitebrowser.org/dl/"
-                  color={'[#00BCF2]'}
+                  color="sky-700"
                   iconName="ArrowUpRight"
                 >
                   AVERAGE (PROMEDIO)
@@ -610,7 +610,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://sqlitebrowser.org/dl/"
-                  color={'[#00BCF2]'}
+                  color="sky-700"
                   iconName="ArrowUpRight"
                 >
                   COUNT (CONTAR)
@@ -619,7 +619,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://sqlitebrowser.org/dl/"
-                  color={'[#00BCF2]'}
+                  color="sky-700"
                   iconName="ArrowUpRight"
                 >
                   MAX (MÁXIMO)
@@ -628,7 +628,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://sqlitebrowser.org/dl/"
-                  color={'[#00BCF2]'}
+                  color="sky-700"
                   iconName="ArrowUpRight"
                 >
                   MIN (MÍNIMO)
@@ -637,7 +637,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://sqlitebrowser.org/dl/"
-                  color={'[#00BCF2]'}
+                  color="sky-700"
                   iconName="ArrowUpRight"
                 >
                   SUM (SUMA)
@@ -684,8 +684,8 @@ export default function SqlDocs() {
           <span id="otras-clausulas" />
           <SectionTitle title="Otras Cláusulas" />
           <article>
-            <div className="border-l-4 border-sky-700 px-1 bg-opacity-[0.6] p-3 pl-5 text-sky-700 font-semibold">
-              <p className="font-semibold text-lg">
+            <div className="border-l-4 border-sky-700 px-1 bg-opacity-[0.6] p-3 pl-5 font-semibold">
+              <p className="font-semibold text-lg text-sky-700">
                 <InfoIcon className="w-5 inline mb-1" /> Nota
               </p>
               <p>
@@ -731,12 +731,10 @@ export default function SqlDocs() {
               registro de los aeropuertos. La segunda tabla podría tener un
               aspecto así:
             </p>
-            <div className="images-client">
-              <img
-                src="/images/airports.png"
-                alt="Imagen Tabla de Aeropuertos."
-              />
-            </div>
+            <ImageComponent
+              src="/images/airports.png"
+              altImage="Tabla de aeropuertos"
+            />
             <p className="list-css-span">
               Ahora tenemos una tabla que relaciona códigos y ciudades. En lugar
               de almacenar todo el nombre de la ciudad en nuestra tabla de
@@ -748,19 +746,17 @@ export default function SqlDocs() {
               <span>destination_id</span>, llamamos a esos valores
               <LinkButton
                 url="https://www.w3schools.com/sql/sql_foreignkey.asp"
-                color={'[#00BCF2]'}
+                color="sky-700"
                 iconName="ArrowUpRight"
               >
                 Claves Foráneas
               </LinkButton>
               .
             </p>
-            <div className="images-client">
-              <img
-                src="/images/flights2.png"
-                alt="Imagen Tabla de Aeropuertos."
-              />
-            </div>
+            <ImageComponent
+              src="/images/flights2.png"
+              altImage="Tabla de aeropuertos"
+            />
             <p>
               Además de los vuelos y los aeropuertos, una aerolínea podría
               querer almacenar datos sobre sus pasajeros, como en qué vuelo
@@ -769,12 +765,10 @@ export default function SqlDocs() {
               apellidos, y una clave foránea que represente el vuelo en el que
               se encuentran.
             </p>
-            <div className="images-client">
-              <img
-                src="/images/simple_pass.png"
-                alt="Imagen Tabla de Aeropuertos."
-              />
-            </div>
+            <ImageComponent
+              src="/images/simple_pass.png"
+              altImage="Tabla de aeropuertos"
+            />
             <p className="list-css-span">
               Podemos hacerlo aún mejor, ya que una misma persona puede estar en
               más de un vuelo. Para tener en cuenta esto, podemos crear una
@@ -783,19 +777,15 @@ export default function SqlDocs() {
               <span>pasajeros</span>que vincule personas con vuelos.
             </p>
             <b>Personas:</b>
-            <div className="images-client">
-              <img
-                src="/images/people.png"
-                alt="Imagen Tabla de Aeropuertos."
-              />
-            </div>
+            <ImageComponent
+              src="/images/people.png"
+              altImage="Tabla de aeropuertos"
+            />
             <b>Pasajeros:</b>
-            <div className="images-client">
-              <img
-                src="/images/passengers.png"
-                alt="Imagen Tabla de Aeropuertos."
-              />
-            </div>
+            <ImageComponent
+              src="/images/passengers.png"
+              altImage="Tabla de aeropuertos"
+            />
             <p className="list-css-span">
               Debido a que en este caso una sola persona puede estar en muchos
               vuelos y un solo vuelo puede tener muchas personas, llamamos a la
@@ -812,7 +802,7 @@ export default function SqlDocs() {
               datos. Afortunadamente, SQL cuenta con una consulta
               <LinkButton
                 url="https://www.w3schools.com/sql/sql_join.asp"
-                color={'[#00BCF2]'}
+                color="sky-700"
                 iconName="ArrowUpRight"
               >
                 JOIN
@@ -850,14 +840,15 @@ export default function SqlDocs() {
               ON passengers.flight_id = flights.id;
               `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/join.png" alt="Imagen Tabla de Aeropuertos." />
-            </div>
+            <ImageComponent
+              src="/images/join.png"
+              altImage="Tabla de aeropuertos"
+            />
             <p>
               Acabamos de utilizar algo llamado
               <LinkButton
                 url="https://www.w3schools.com/sql/sql_join_inner.asp"
-                color={'[#00BCF2]'}
+                color="sky-700"
                 iconName="ArrowUpRight"
               >
                 INNER JOIN
@@ -867,7 +858,7 @@ export default function SqlDocs() {
               incluyendo
               <LinkButton
                 url="https://www.w3schools.com/sql/sql_join_left.asp"
-                color={'[#00BCF2]'}
+                color="sky-700"
                 iconName="ArrowUpRight"
               >
                 LEFT JOINs
@@ -875,7 +866,7 @@ export default function SqlDocs() {
               ,
               <LinkButton
                 url="https://www.w3schools.com/sql/sql_join_right.asp"
-                color={'[#00BCF2]'}
+                ccolor="sky-700"
                 iconName="ArrowUpRight"
               >
                 RIGHT JOINs
@@ -883,7 +874,7 @@ export default function SqlDocs() {
               y
               <LinkButton
                 url="https://www.w3schools.com/sql/sql_join_full.asp"
-                color={'[#00BCF2]'}
+                color="sky-700"
                 iconName="ArrowUpRight"
               >
                 FULL OUTER JOINs
@@ -915,7 +906,7 @@ export default function SqlDocs() {
               vulnerabilidades asociadas con el uso de SQL. Comenzaremos con la
               <LinkButton
                 url="https://www.w3schools.com/sql/sql_injection.asp"
-                color={'[#00BCF2]'}
+                color="sky-700"
                 iconName="ArrowUpRight"
               >
                 Inyección SQL
@@ -1008,7 +999,7 @@ export default function SqlDocs() {
                 conoce como una Condición de Carrera,
                 <LinkButton
                   url="https://www.w3schools.com/sql/sql_injection.asp"
-                  color={'[#00BCF2]'}
+                  color="sky-700"
                   iconName="ArrowUpRight"
                 >
                   Race Condition
@@ -1044,7 +1035,7 @@ export default function SqlDocs() {
               Los
               <LinkButton
                 url="https://docs.djangoproject.com/en/4.0/topics/db/models/"
-                color={'[#00BCF2]'}
+                color="sky-700"
                 iconName="ArrowUpRight"
               >
                 modelos de Django
@@ -1052,7 +1043,7 @@ export default function SqlDocs() {
               son un nivel de
               <LinkButton
                 url="https://techterms.com/definition/abstraction"
-                color={'[#00BCF2]'}
+                color="sky-700"
                 iconName="ArrowUpRight"
               >
                 abstracción
@@ -1125,7 +1116,7 @@ export default function SqlDocs() {
                 duración. Los dos primeros son campos
                 <LinkButton
                   url="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#charfield"
-                  color={'[#00BCF2]'}
+                  color="sky-700"
                   iconName="ArrowUpRight"
                 >
                   Char
@@ -1134,7 +1125,7 @@ export default function SqlDocs() {
                 campo
                 <LinkButton
                   url="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#integerfield"
-                  color={'[#00BCF2]'}
+                  color="sky-700"
                   iconName="ArrowUpRight"
                 >
                   Integer
@@ -1142,7 +1133,7 @@ export default function SqlDocs() {
                 . Estos son solo dos de las muchas
                 <LinkButton
                   url="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#built-in-field-classes"
-                  color={'[#00BCF2]'}
+                  color="sky-700"
                   iconName="ArrowUpRight"
                 >
                   clases de campos integradas
@@ -1155,7 +1146,7 @@ export default function SqlDocs() {
                 para un campo dado consultando la
                 <LinkButton
                   url="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#built-in-field-classes"
-                  color={'[#00BCF2]'}
+                  color="sky-700"
                   iconName="ArrowUpRight"
                 >
                   documentación
