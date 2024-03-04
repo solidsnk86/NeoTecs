@@ -11,6 +11,7 @@ import { NavSwitch } from '../../components/NavSwicth';
 import { ShareButton } from '../../components/ShareButton';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
+import ImageComponent from '../../components/ImageComponent';
 export default function JavaScript() {
   return (
     <TitlesContextProvider>
@@ -114,12 +115,10 @@ export default function JavaScript() {
             </svg>
           </figure>
           <p>Comencemos por volver a examinar un diagrama:</p>
-          <div className="images-client">
-            <img
-              src="/images/client-server-1-removebg-preview.png"
-              alt="Diagrama"
-            />
-          </div>
+          <ImageComponent
+            src="/images/client-server-1-removebg-preview.png"
+            altImage="Server"
+          />
           <p>
             Recuerda que en la mayoría de las interacciones en línea, tenemos un
             cliente/usuario que envía una solicitud HTTP a un servidor, que
@@ -179,9 +178,10 @@ export default function JavaScript() {
               </html>
                 `
           }</Pre>
-          <div className="images-client">
-            <img src="/images/javascript-alert.png" alt="alert" />
-          </div>
+          <ImageComponent
+            src="/images/javascript-alert.png"
+            altImage="Alerta de Javascript"
+          />
           <span id="eventos" />
           <SectionTitle title="Eventos" />
           <article>
@@ -219,7 +219,7 @@ export default function JavaScript() {
               código.
             </p>
 
-            <p>
+            <p className="list-css-span">
               Comencemos por convertir nuestro JavaScript anterior en una
               <LinkButton
                 url="https://www.w3schools.com/js/js_functions.asp"
@@ -228,7 +228,7 @@ export default function JavaScript() {
               >
                 función
               </LinkButton>
-              llamada "hola":
+              llamada<span className="bg-amber-400/30">hola</span>:
             </p>
           </article>
           <Pre lang="javascript">{
@@ -323,9 +323,10 @@ export default function JavaScript() {
                 </html>
                 `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/javascript-alert-count.png" alt="alert-count" />
-            </div>
+            <ImageComponent
+              src="/images/javascript-alert-count.png"
+              altImage="Contador de javascript con alerta"
+            />
           </article>
           <span id="queryselector" />
           <SectionTitle title="querySelector" />
@@ -357,7 +358,7 @@ export default function JavaScript() {
                 headingElement.innerHTML = 'Nuevo texto para el encabezado'; 
                 `
             }</Pre>
-            <p>
+            <p className="list-css-span">
               Al igual que en Python, también podemos aprovechar las
               <LinkButton
                 url="https://www.w3schools.com/js/js_if_else.asp"
@@ -368,15 +369,9 @@ export default function JavaScript() {
               </LinkButton>
               en JavaScript. Por ejemplo, supongamos que en lugar de cambiar
               siempre nuestro encabezado a "Goodbye!", queremos alternar entre
-              <span className="text-[#43A18E] mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
-                "Hola!"
-              </span>
-              y
-              <span className="text-[#43A18E] mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
-                "Adios!"
-              </span>
-              . Nuestra página podría verse algo así. Ten en cuenta que en
-              JavaScript utilizamos
+              <span className="bg-amber-400/30">"Hola!"</span>y
+              <span className="bg-amber-400/30">"Adios!"</span>. Nuestra página
+              podría verse algo así. Ten en cuenta que en JavaScript utilizamos
               <span className="text-[#95D1F1] mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
                 ===
               </span>
@@ -481,9 +476,10 @@ export default function JavaScript() {
                 }
                 `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/count3.gif" alt="javascript-query" />
-            </div>
+            <ImageComponent
+              src="/images/count3.gif"
+              altImage="Javascript query"
+            />
             <p>
               Ahora, veamos algunas formas en las que podemos mejorar el diseño
               de esta página. En primer lugar, al igual que tratamos de evitar
@@ -563,9 +559,10 @@ export default function JavaScript() {
                 document.querySelector('button').onclick = count;
                 `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/error0.png" alt="javascript-query" />
-            </div>
+            <ImageComponent
+              src="/images/error0.png"
+              altImage="Javascipt query"
+            />
             <p>
               Este error surgió porque cuando JavaScript buscó un elemento
               utilizando document.querySelector('button'), no encontró nada.
@@ -682,11 +679,9 @@ export default function JavaScript() {
                 </html>
                 `
             }</Pre>
-            <p>
+            <p className="list-css-span">
               Y un archivo llamado
-              <span className="text-amber-400 mx-1 bg-[#1E1E1E] px-1 py-[2px] rounded">
-                counter.js
-              </span>
+              <span className="bg-amber-400/30">counter.js</span>
               que se vería de la siguiente manera:
             </p>
             <Pre lang="javascript">{
@@ -772,15 +767,17 @@ export default function JavaScript() {
               Si ustedes lo prueban pueden ver que el nombre que pongas lo va a
               mostrar en el alert:
             </p>
-            <div className="images-client">
-              <img src="/images/javascript-alert-name.png" />
-            </div>
+            <ImageComponent
+              src="/images/javascript-alert-name.png"
+              altImage="Alerta de javascript"
+            />
             <p>Otro nombre:</p>
-            <div className="images-client">
-              <img src="/images/javascript-alert-name2.png" />
-            </div>
+            <ImageComponent
+              src="/images/javascript-alert-name2.png"
+              altImage="Alerta de javascript"
+            />
             <p>Algunas notas sobre la página anterior:</p>
-            <ul>
+            <ul className="list-css-span">
               <li>
                 Usamos el campo de enfoque automático (autofocus) en la entrada
                 de nombre para indicar que el cursor debe situarse dentro de ese
@@ -835,41 +832,33 @@ export default function JavaScript() {
                 </html>
                 `
             }</Pre>
-            <div className="images-client">
-              <img src="/videos/colors.gif" />
-            </div>
+            <ImageComponent
+              src="/videos/colors.gif"
+              altImage="Muestra de cambio de colores en javascript"
+            />
             <p>Algunas notas en la página anterior:</p>
-            <ul>
+            <ul className="list-css-span">
               <li>
                 Cambiamos el estilo de un elemento utilizando el atributo
-                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
-                  style.ALGO
-                </span>
-                .
+                <span className="bg-gray-800">style.ALGO</span>.
               </li>
               <li>
                 Utilizamos el atributo
-                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
-                  data-ALGO
-                </span>
+                <span className="bg-gray-800">data-ALGO</span>
                 para asignar datos a un elemento HTML. Posteriormente, podemos
                 acceder a esos datos en JavaScript utilizando la propiedad
                 dataset del elemento.
               </li>
               <li>
                 Usamos la función
-                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
-                  querySelectorAll
-                </span>
+                <span className="bg-gray-800">querySelectorAll</span>
                 para obtener una lista de nodos (similar a una lista en Python o
                 a un arreglo en JavaScript) con todos los elementos que
                 coinciden con la consulta.
               </li>
               <li>
                 La función
-                <span className="bg-gray-800 border-b-2 border-amber-400 px-1 py-[2px] mx-1 rounded">
-                  forEach
-                </span>
+                <span className="bg-gray-800">forEach</span>
                 en JavaScript toma como argumento otra función y aplica esa
                 función a cada elemento en una lista o arreglo.
               </li>
@@ -878,20 +867,18 @@ export default function JavaScript() {
           <span id="consola" />
           <SectionTitle title="Consola Javascript" />
           <article>
-            <p>
+            <p className="list-css-span">
               La consola es una herramienta útil para probar pequeños fragmentos
               de código y depurar. Puedes escribir y ejecutar código JavaScript
               en la consola, la cual se encuentra al inspeccionar un elemento en
               tu navegador web y luego haciendo clic en{' '}
-              <b className="text-amber-400 mx-[2px]">"consola"</b> (el proceso
-              exacto puede variar según el navegador). Una herramienta útil para
-              la depuración es imprimir en la consola, lo cual puedes hacer
-              utilizando la función
-              <span className="bg-gray-800 border-b-2 text-zinc-100  border-amber-400 px-1 py-[2px] mx-1 rounded">
-                console.log
-              </span>
-              . Por ejemplo, en la página
-              <b className="text-amber-400 mx-1">"colors.html"</b>
+              <span className="text-amber-400 mx-[2px]">"consola"</span> (el
+              proceso exacto puede variar según el navegador). Una herramienta
+              útil para la depuración es imprimir en la consola, lo cual puedes
+              hacer utilizando la función
+              <span className="bg-gray-800">console.log</span>. Por ejemplo, en
+              la página
+              <span className="text-amber-400 mx-1">"colors.html"</span>
               mencionada arriba, puedo agregar la siguiente línea:
             </p>
             <Pre lang="javascript">{
@@ -899,22 +886,20 @@ export default function JavaScript() {
                 console.log(document.querySelectorAll('button'));
                 `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/consoleList.png" />
-            </div>
+            <ImageComponent
+              src="/images/consoleList.png"
+              altImage="Lista  de consola"
+            />
             <span id="funciones-de-flecha" />
             <IndexTitle>Funciones Flecha</IndexTitle>
-            <p>
+            <p className="list-css-span">
               Funciones de Flecha Además de la notación tradicional de funciones
               que hemos visto anteriormente, JavaScript ahora nos proporciona la
               capacidad de utilizar Funciones de Flecha, donde tenemos una
               entrada (o paréntesis cuando no hay entrada) seguida de
-              <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
-                {'=>'}
-              </span>
-              y luego algún código que se ejecutará. Por ejemplo, podemos
-              modificar nuestro script anterior para utilizar una función de
-              flecha anónima:
+              <span className="bg-gray-800">{'=>'}</span>y luego algún código
+              que se ejecutará. Por ejemplo, podemos modificar nuestro script
+              anterior para utilizar una función de flecha anónima:
             </p>
             <Pre lang="javascript">{
               /*javascript */ `
@@ -927,13 +912,10 @@ export default function JavaScript() {
                 });
                 `
             }</Pre>
-            <p>
+            <p className="list-css-span">
               También podemos tener funciones con nombres que utilizan flechas,
               como en esta reescritura de la función
-              <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
-                count
-              </span>
-              :
+              <span className="bg-gray-800">count</span>:
             </p>
             <Pre lang="javascript">{
               /*javascript */ `
@@ -947,21 +929,16 @@ export default function JavaScript() {
                 }
                 `
             }</Pre>
-            <p>
+            <p className="list-css-span">
               Para obtener una idea sobre algunos otros eventos que podemos
               utilizar, veamos cómo podemos implementar nuestro cambiador de
               colores utilizando un menú desplegable en lugar de tres botones
               separados. Podemos detectar cambios en un elemento select
               utilizando el atributo
-              <span className="bg-gray-800 border-b-2 text-zinc-100  border-amber-400 px-1 py-[2px] mx-1 rounded">
-                onchange
-              </span>
-              . En JavaScript, esto es una palabra clave que cambia según el
-              contexto en el que se utiliza. En el caso de un manejador de
-              eventos,
-              <span className="bg-gray-800 border-b-2 text-zinc-100  border-amber-400 px-1 py-[2px] mx-1 rounded">
-                this
-              </span>
+              <span className="bg-gray-800">onchange</span>. En JavaScript, esto
+              es una palabra clave que cambia según el contexto en el que se
+              utiliza. En el caso de un manejador de eventos,
+              <span className="bg-gray-800">this</span>
               se refiere al objeto que desencadenó el evento.
             </p>
             <Pre lang="javascript">{
@@ -1039,18 +1016,18 @@ export default function JavaScript() {
           <span id="todo-list" />
           <IndexTitle>TODO List</IndexTitle>
           <article>
-            <p>
+            <p className="list-css-span">
               Para aplicar algunas de las cosas que hemos aprendido en esta
               conferencia, trabajemos en la creación de una lista de tareas
-              <b className="text-amber-400 mx-1">(TODO List)</b> completamente
-              en JavaScript. Comenzaremos escribiendo la estructura HTML de la
-              página. Observa a continuación cómo dejamos espacio para una lista
-              no ordenada, pero aún no agregamos elementos a ella. También
-              observa que agregamos un enlace a
-              <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
-                tasks.js
-              </span>
-              , donde escribiremos nuestro JavaScript.
+              <span className="text-amber-400 bg-gray-800">
+                (TODO List)
+              </span>{' '}
+              completamente en JavaScript. Comenzaremos escribiendo la
+              estructura HTML de la página. Observa a continuación cómo dejamos
+              espacio para una lista no ordenada, pero aún no agregamos
+              elementos a ella. También observa que agregamos un enlace a
+              <span className="bg-gray-800">tasks.js</span>, donde escribiremos
+              nuestro JavaScript.
             </p>
             <Pre lang="html">{
               /*html */ `
@@ -1072,14 +1049,14 @@ export default function JavaScript() {
                 </html>
                 `
             }</Pre>
-            <p>
+            <p className="list-css-span">
               Ahora, aquí está nuestro código que podemos mantener en
               <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
                 tasks.js
               </span>
               . Algunas notas sobre lo que verás a continuación:
             </p>
-            <ul>
+            <ul className="list-css-span">
               <li>
                 Este código es ligeramente diferente al código de la
                 conferencia. Aquí, solo consultamos nuestro botón de envío y el
@@ -1201,9 +1178,10 @@ export default function JavaScript() {
                 });
                 `
           }</Pre>
-          <div className="images-client">
-            <img src="/images/count4.gif" />
-          </div>
+          <ImageComponent
+            src="/images/count4.gif"
+            altImage="Contador de javascript"
+          />
           <span id="local" />
           <SectionTitle title="Almacenamiento Local" />
           <article>
@@ -1224,16 +1202,14 @@ export default function JavaScript() {
               diccionario en Python. Para utilizar el almacenamiento local,
               utilizaremos dos funciones clave:
             </p>
-            <ul>
+            <ul className="list-css-span">
               <li>
-                <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
-                  localStorage.getItem(key)
-                </span>
-                : Esta función busca una entrada en el almacenamiento local con
+                <span className="bg-gray-800 ">localStorage.getItem(key)</span>:
+                Esta función busca una entrada en el almacenamiento local con
                 una clave dada y devuelve el valor asociado con esa clave.
               </li>
               <li>
-                <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                <span className="bg-gray-800 ">
                   localStorage.setItem(key, value)
                 </span>
                 : Esta función establece una entrada en el almacenamiento local,
@@ -1439,9 +1415,7 @@ export default function JavaScript() {
             };              
                 `
           }</Pre>
-          <div className="images-client">
-            <img src="/images/console.png" />
-          </div>
+          <ImageComponent src="/images/console.png" altImage="Consola" />
           <p>
             Una forma en la que los objetos de JavaScript son realmente útiles
             es en la transferencia de datos de un sitio a otro, especialmente al
@@ -1581,9 +1555,7 @@ export default function JavaScript() {
             
                 `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/curr_log.png" />
-            </div>
+            <ImageComponent src="/images/curr_log.png" altImage="Log" />
             <p>
               Un punto importante sobre el código anterior es que el argumento
               de .then siempre es una función. Aunque parece que estamos creando
@@ -1613,9 +1585,10 @@ export default function JavaScript() {
             
                 `
             }</Pre>
-            <div className="images-client">
-              <img src="/images/exchange.png" />
-            </div>
+            <ImageComponent
+              src="/images/exchange.png"
+              altImage="Intercambio de divisas"
+            />
             <p>
               Ahora, vamos a hacer que el sitio sea un poco más interactivo al
               permitir que el usuario elija la moneda que le gustaría ver.

@@ -15,7 +15,7 @@ export const LinkButton: React.FC<LinkInterfaceProps> = ({ url, children, classN
 
     return (
         <span className={`${className} inline ml-1` || ''}>
-            <Link href={`${url}`} className={`text-${color} underline link hover:brightness-200 transition-colors duration-300`}
+            <Link href={`${url}`} className={`text-${color} underline link dark:hover:brightness-200 hover:brightness-150 transition-colors duration-300`}
                 target='_blank'
                 rel='noopener'
             >

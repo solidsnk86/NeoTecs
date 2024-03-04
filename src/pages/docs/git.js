@@ -9,6 +9,7 @@ import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
+import ImageComponent from '../../components/ImageComponent';
 export default function GitDocs() {
   return (
     <TitlesContextProvider>
@@ -79,12 +80,10 @@ export default function GitDocs() {
                 realizamos en nuestro código al guardar instantáneas (snapshots)
                 de nuestro código en un momento dado.
               </li>
-              <div className="images-client">
-                <img
-                  src="/images/change_file.png"
-                  alt="Cambio de archivos Git."
-                />
-              </div>
+              <ImageComponent
+                src="/images/change_file.png"
+                altImage="Cambio de archivos Git"
+              />
               <li className="list-css-span">
                 Permitiéndonos sincronizar fácilmente el código entre diferentes
                 personas que trabajan en el mismo proyecto, al permitir que
@@ -92,12 +91,10 @@ export default function GitDocs() {
                 información
                 <span>push</span>a un repositorio almacenado en la web.
               </li>
-              <div className="images-client">
-                <img
-                  src="/images/mult_users.png"
-                  alt="Cambio de archivos Git."
-                />
-              </div>
+              <ImageComponent
+                src="/images/mult_users.png"
+                altImage="Cambio de archivos Git"
+              />
               <li>
                 Permitiéndonos realizar cambios y probar el código en una rama
                 diferente sin alterar nuestra base de código principal, y luego
@@ -158,9 +155,10 @@ export default function GitDocs() {
                 </ol>
               </li>
               <li>
-                <div className="images-client">
-                  <img src="/images/github-repo.png" alt="Crear Repositorio" />
-                </div>
+                <ImageComponent
+                  src="/images/github-repo.png"
+                  altImage="Crear repositorio de GitHub"
+                />
               </li>
               <li>
                 Una vez que tenemos un repositorio, probablemente querremos
@@ -187,12 +185,10 @@ export default function GitDocs() {
                     repositorio y copia la URL que aparece. Si no creaste un
                     README, este enlace aparecerá cerca de la parte superior de
                     la página en la sección "Quick Setup".
-                    <div className="images-client">
-                      <img
-                        src="/images/github-repo-1.png"
-                        alt="Crear Repositorio"
-                      />
-                    </div>
+                    <ImageComponent
+                      src="/images/github-repo-1.png"
+                      altImage="Crear repositorio de Github"
+                    />
                   </li>
                   <li className="list-css-span">
                     En tu terminal, ejecuta
@@ -202,12 +198,10 @@ export default function GitDocs() {
                     to have cloned into an empty repository" (Parece que has
                     clonado en un repositorio vacío). Esto es normal y no hay
                     necesidad de preocuparse por ello.
-                    <div className="images-client">
-                      <img
-                        src="/images/git-clone.png"
-                        alt="Captura de pantalla de consola git clone."
-                      />
-                    </div>
+                    <ImageComponent
+                      src="/images/git-clone.png"
+                      altImage="Captura de pantalla de consola (git clone [url])"
+                    />
                   </li>
                   <li>
                     Ejecuta el comando<span>ls</span>, que lista todos los
@@ -321,9 +315,10 @@ export default function GitDocs() {
                 repositorio.
               </li>
             </ul>
-            <div className="images-client">
-              <img src="/images/git_log.png" />
-            </div>
+            <ImageComponent
+              src="/images/git_log.png"
+              altImage="Historial de commits de git"
+            />
             <ul className="list-css-span">
               <li>
                 Potencialmente aún más útil, si te das cuenta de que has
@@ -354,9 +349,10 @@ export default function GitDocs() {
               cambios a esta nueva función, como se muestra en la gráfica a
               continuación.
             </p>
-            <div className="images-client">
-              <img src="/images/no_branch.png" />
-            </div>
+            <ImageComponent
+              src="/images/no_branch.png"
+              altImage="Captura de imagen de sin rama git"
+            />
             <p>
               Pero esto podría volverse problemático si luego descubrimos un
               error en nuestro código original y queremos revertirlo sin afectar
@@ -372,9 +368,7 @@ export default function GitDocs() {
                 verá más como se muestra en la siguiente gráfica:
               </li>
             </ul>
-            <div className="images-client">
-              <img src="/images/branch.png" />
-            </div>
+            <ImageComponent src="/images/branch.png" altImage="Rama de git" />
             <ul>
               <li>
                 La rama que estás viendo actualmente está determinada por el
@@ -390,22 +384,18 @@ export default function GitDocs() {
                     Ejecuta<span>git branch</span>para ver en qué rama estás
                     trabajando actualmente, la cual tendrá un asterisco a la
                     izquierda de su nombre.
-                    <div className="images-client">
-                      <img
-                        src="/images/git_branch.png"
-                        alt="Captura de pantalla de git branch"
-                      />
-                    </div>
+                    <ImageComponent
+                      src="/images/git_branch.png"
+                      altImage="Captura de pantalla de la rama de Git"
+                    />
                   </li>
                   <li className="list-css-span">
                     Para crear una nueva rama, ejecutaremos el comando
                     <span>{`git checkout -b <nombre de la nueva rama>`}</span>.
-                    <div className="images-client">
-                      <img
-                        src="/images/new_branch.png"
-                        alt="Captura de pantalla de git checkout -b"
-                      />
-                    </div>
+                    <ImageComponent
+                      src="/images/new_branch.png"
+                      altImage="Captura de imagen  de git checkot -b"
+                    />
                   </li>
                 </ol>
               </li>

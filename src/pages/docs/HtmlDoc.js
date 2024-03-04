@@ -1,3 +1,4 @@
+import ImageComponent from '../../components/ImageComponent';
 import LinkButton from '../../components/LinkButton';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
@@ -56,9 +57,10 @@ export default function HtmlDoc() {
         }
       </Pre>
       <li>Cuando abramos el archivo en el navegador vamos a obtener ésto:</li>
-      <div className="images-client">
-        <img src="/images/html-title-preview.png" />
-      </div>
+      <ImageComponent
+        src="/images/html-title-preview.png"
+        altImage="Imagen previa de nuestro HTML"
+      />
       <ol>
         <li>
           Ahora, tomemos un momento para hablar sobre el archivo que acabamos de
@@ -110,9 +112,7 @@ export default function HtmlDoc() {
       </ol>
       <span id="dom" />
       <SectionTitle title="DOM (Document Object Model)" />
-      <div className="images-client">
-        <img src="/images/dom.png" />
-      </div>
+      <ImageComponent src="/images/dom.png" altImage="Ejemplo DOM" />
       <li>
         El DOM (Document Object Model) es una forma conveniente de visualizar la
         manera en que los elementos HTML se relacionan entre sí utilizando una
@@ -222,9 +222,10 @@ export default function HtmlDoc() {
         .
       </p>
       <p>Cuando se renderiza esta página, veremos algo como ésto:</p>
-      <div className="images-client">
-        <img src="/images/html-elements-commit.png" />
-      </div>
+      <ImageComponent
+        src="/images/html-elements-commit.png"
+        altImage="Elementos HTML"
+      />
       <li>
         En caso de que te preocupe, ten en cuenta que nunca tendrás que
         memorizar estos elementos. Es muy fácil simplemente buscar algo como
@@ -279,9 +280,7 @@ export default function HtmlDoc() {
         </html>
         `
       }</Pre>
-      <div className="images-client">
-        <img src="/images/form.png" />
-      </div>
+      <ImageComponent src="/images/form.png" altImage="Formulario en HTML" />
       <SectionTitle title="Meta Tags" />
       <article className="list-css-span">
         <p>
