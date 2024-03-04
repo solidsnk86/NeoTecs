@@ -1210,8 +1210,8 @@ export default function UiUx() {
               </html>
               `
             }</Pre>
-            <div className="border-l-4 border-amber-500 my-10 px-1 bg-opacity-[0.6] p-3 pl-5 text-amber-500 font-semibold">
-              <p className="font-semibold text-lg">
+            <div className="border-l-4 border-amber-500 my-10 px-1 bg-opacity-[0.6] p-3 pl-5 font-semibold">
+              <p className="font-semibold text-lg text-amber-500">
                 <InfoIcon className="w-5 inline mb-1" /> Importante
               </p>
               <p>
