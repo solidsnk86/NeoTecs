@@ -1224,30 +1224,27 @@ export default function UiUx() {
               </p>
             </div>
             <p>
-              {' '}
               Aquí hay algunos conceptos clave relacionados con la creación y el
-              uso de componentes en React:{' '}
+              uso de componentes en React:
             </p>
-
-            <ol>
+            <ol className="list-css-span">
               <li>
-                <p>Componentes Funcionales y de Clase:</p>
+                <span>Componentes Funcionales y de Clase:</span>
                 <ul>
                   <li>
-                    <em>Funcionales:</em> Son funciones de JavaScript y se
+                    <span>Funcionales:</span> Son funciones de JavaScript y se
                     escriben como funciones puras. No tienen estado propio ni
                     métodos de ciclo de vida.
                   </li>
                   <li>
-                    <em>De Clase:</em> Son clases de JavaScript que extienden la
-                    clase React.Component. Pueden tener estado y métodos de
-                    ciclo de vida.
+                    <span>De Clase:</span> Son clases de JavaScript que
+                    extienden la clase React.Component. Pueden tener estado y
+                    métodos de ciclo de vida.
                   </li>
                 </ul>
               </li>
-
               <li>
-                <p>Props (Propiedades):</p>
+                <span>Props (Propiedades):</span>
                 <p>
                   Los componentes pueden recibir datos externos llamados "props"
                   (propiedades). Estos son como parámetros de función que puedes
@@ -1256,7 +1253,7 @@ export default function UiUx() {
               </li>
 
               <li>
-                <p>Composición de Componentes:</p>
+                <span>Composición de Componentes:</span>
                 <p>
                   Puedes construir interfaces de usuario complejas combinando y
                   anidando componentes más pequeños. Esto fomenta la
@@ -1265,7 +1262,7 @@ export default function UiUx() {
               </li>
 
               <li>
-                <p>Estado del Componente:</p>
+                <span>Estado del Componente:</span>
                 <p>
                   Los componentes de clase pueden tener un estado interno que
                   afecta su representación y comportamiento. El estado es
@@ -1274,7 +1271,7 @@ export default function UiUx() {
               </li>
 
               <li>
-                <p>Ciclo de Vida del Componente:</p>
+                <span>Ciclo de Vida del Componente:</span>
                 <p>
                   Los componentes de clase tienen métodos de ciclo de vida, como
                   componentDidMount y componentDidUpdate, que te permiten
@@ -1284,7 +1281,7 @@ export default function UiUx() {
               </li>
 
               <li>
-                <p>HOC (Higher-Order Components):</p>
+                <span>HOC (Higher-Order Components):</span>
                 <p>
                   Son funciones que toman un componente y devuelven un nuevo
                   componente con funcionalidades adicionales. Esto se utiliza
@@ -1293,7 +1290,7 @@ export default function UiUx() {
               </li>
 
               <li>
-                <p>Hooks:</p>
+                <span>Hooks:</span>
                 <p>
                   Los hooks son funciones especiales que te permiten usar el
                   estado y otros recursos de React en componentes funcionales.
@@ -1303,7 +1300,7 @@ export default function UiUx() {
               </li>
 
               <li>
-                <p>Contexto:</p>
+                <span>Contexto:</span>
                 <p>
                   El contexto de React permite pasar datos a través del árbol de
                   componentes sin tener que pasar props manualmente en cada
