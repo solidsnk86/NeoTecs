@@ -1166,17 +1166,20 @@ export default function UiUx() {
               en comenzar directamente en un archivo HTML. Para hacer esto,
               tendremos que importar tres paquetes de JavaScript:
             </p>
-            <ul>
-              <li>React: Define componentes y su comportamiento.</li>
+            <ul className="list-css-span">
               <li>
-                ReactDOM: Toma componentes de React e los inserta en el DOM.
+                <span>React</span>: Define componentes y su comportamiento.
               </li>
               <li>
-                Babel: Traduce desde JSX, el lenguaje en el que escribiremos en
-                React, a JavaScript plano que nuestros navegadores pueden
-                interpretar. JSX es muy similar a JavaScript, pero con algunas
-                características adicionales, incluida la capacidad de
-                representar HTML dentro de nuestro código.
+                <span>ReactDOM</span>: Toma componentes de React e los inserta
+                en el DOM.
+              </li>
+              <li>
+                <span>Babel</span>: Traduce desde JSX, el lenguaje en el que
+                escribiremos en React, a JavaScript plano que nuestros
+                navegadores pueden interpretar. JSX es muy similar a JavaScript,
+                pero con algunas características adicionales, incluida la
+                capacidad de representar HTML dentro de nuestro código.
               </li>
             </ul>
             <p>
