@@ -133,7 +133,7 @@ export default function SqlDocs() {
             <p>
               Antes de adentrarnos en el uso de SQL, es fundamental comprender
               cómo se almacena la información. En SQL, generalmente trabajamos
-              con bases de datos{' '}
+              con bases de datos
               <LinkButton
                 url="https://www.oracle.com/database/what-is-a-relational-database/#:~:text=A%20relational%20database%20is%20a,of%20representing%20data%20in%20tables."
                 color="sky-700"
@@ -141,7 +141,7 @@ export default function SqlDocs() {
               >
                 relacionales
               </LinkButton>
-              , donde la información se organiza en{' '}
+              , donde la información se organiza en
               <LinkButton
                 url="https://www.essentialsql.com/what-is-a-database-table/"
                 color="sky-700"
