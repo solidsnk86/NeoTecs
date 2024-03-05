@@ -85,7 +85,7 @@ export const Footer = () => {
             <img
               className="w-16 h-16 relative bottom-6 ml-2 text-[#111] hover:scale-[1.2] transition-all solidSnk86"
               src="https://raw.githubusercontent.com/solidsnk86/CV_GEC/master/solidsnk86.png"
-              alt="Neo-pixel-art"
+              alt="Solid Snake en pixelart"
               title="SolidSnk86"
             />
           </a>
