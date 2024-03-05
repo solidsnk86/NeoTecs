@@ -184,7 +184,7 @@ export default function Python() {
                 print("Hello, world!")
                 `
           }</Pre>
-          <ul>
+          <ul className="list-css-span">
             <li>
               Para desglosar lo que sucede en esa línea, hay una función print
               incorporada en el lenguaje Python, que toma un argumento entre
@@ -194,12 +194,12 @@ export default function Python() {
               Para escribir y ejecutar este programa en sus computadoras,
               primero escribirán esta línea en su editor de texto preferido y
               luego guardarán el archivo con un nombre, por ejemplo,
-              <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
+              <span className="bg-gray-800 border-b-2 text-zinc-50">
                 "algo.py"
               </span>
               . Luego, abrirán su terminal, se dirigirán al directorio que
               contiene el archivo y escribirán
-              <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
+              <span className="bg-gray-800 border-b-2 text-zinc-50">
                 "python algo.py"
               </span>
               . En el caso del programa anterior, las palabras "¡Hola, mundo!"
@@ -285,7 +285,7 @@ export default function Python() {
               ausencia de un valor.
             </li>
           </ul>
-          <p>
+          <p className='list-css-span'>
             Ahora trabajaremos en escribir un programa más interesante que pueda
             tomar la entrada del usuario y saludar al usuario. Para hacer esto,
             utilizaremos otra función incorporada llamada input, que muestra un
@@ -334,7 +334,7 @@ export default function Python() {
               <b className="text-sky-400 mx-1">"cadenas formateadas"</b> o
               <b className="text-sky-400 mx-1">"f-strings"</b> en resumen.
             </p>
-            <p>
+            <p className="list-css-span">
               Para indicar que estamos utilizando cadenas formateadas,
               simplemente agregamos una f antes de las comillas. Por ejemplo, en
               lugar de usar "Hello, " + name como hicimos anteriormente,

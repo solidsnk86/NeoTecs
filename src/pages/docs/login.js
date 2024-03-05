@@ -72,7 +72,7 @@ const LoginForm = ({ onClose }) => {
   };
 
   return (
-    <section className="p-4">
+    <section className="p-4 pt-14 xl:pt-2">
       <div className="dark:border-zinc-800 border-zinc-200 border bg-[#F7F9F9] dark:bg-[#16181C] p-4 rounded-lg xl:w-[25%] login-form justify-center mx-auto mt-16 text-text-primary">
         <header className="grid space-y-2">
           <h2 className="text-center font-semibold text-lg">

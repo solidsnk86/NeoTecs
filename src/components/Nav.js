@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Github, MessageCircleIcon } from 'lucide-react';
+import { Bug, Github, MessageCircleIcon } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { useIsomorphicLayoutEffect } from './hooks/useIsomorphicLayoutEffect';
 import { NeotecsLogo } from './NeotecsLogo';
@@ -90,6 +90,19 @@ export const Nav = ({ className }) => {
           </Link>
         </div>
         <aside className="flex space-x-3 mt-3">
+          <Link
+            href="https://github.com/solidsnk86/NeoTecs/issues/new"
+            className="flex items-center space-x-2 mb-3 hover:opacity-[.8] hover:transition-all"
+            target='_blank'
+          >
+            <span
+              className={`px-[3px] pt-[2px] rounded-md border bg-button-variant text-text-variant dark:border-zinc-700 font-semibold xl:text-sm text-xs`}
+              title="Reporte de bugs"
+            >
+              <Bug className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
+              Bugs?
+            </span>
+          </Link>
           <Link
             href="/docs/feedback"
             className="flex items-center space-x-2 mb-3 hover:opacity-[.8] hover:transition-all"
