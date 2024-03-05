@@ -12,15 +12,15 @@ export const HomeHeader = () => {
         >
           <img
             data-atropos-offset="-3"
-            src="/images/header/panal.jpg"
+            src="/images/header/panal.webp"
             alt="object"
-            loading="lazy"
+            loading="eager"
           />
           <img
             data-atropos-offset="5"
             src="/images/header/logo-card-space-letter.png"
             alt="neotecs logo"
-            loading="lazy"
+            loading="eager"
           />
           <div data-atropos-offset="6" className="atropos-header-button-wrap">
             <Link
