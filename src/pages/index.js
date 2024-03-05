@@ -74,7 +74,10 @@ export default function Home() {
         <HomeBlockTitle>Características</HomeBlockTitle>
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 text-center">
           {cardContent.map((card) => (
-            <div className="p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow">
+            <div
+              key={card.id}
+              className="p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow"
+            >
               <span className="text-xl font-bold">{card.feature}</span>
               <p className="text-text-second py-3">{card.children}</p>
             </div>
@@ -102,7 +105,7 @@ export default function Home() {
           </ShimmerButton>
         </Link>
       </div>
-      
+
       <Tracker />
       <Footer />
     </main>

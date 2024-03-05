@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 interface ImageComponentProps {
     src: string;
@@ -12,19 +11,17 @@ const ImageComponent: React.FC<ImageComponentProps> = ({
     src,
     className,
     altImage,
-    priority,
 }) => {
     const imageAlt = `${altImage}` + `,url de la imagen: ${src}`;
     return (
         <figure className="images-client">
-            <Image
+            <img
                 src={src}
                 className={className}
-                width={100}
-                height={100}
+                width={'100%'}
+                height={'auto'}
                 alt={imageAlt}
-                layout="responsive"
-                priority={priority}
+                loading='lazy'
             />
         </figure>
     );
