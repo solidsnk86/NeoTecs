@@ -12,6 +12,8 @@
     "@emotion/react": "^11.11.1",
     "@mui/icons-material": "^5.14.15",
     "@mui/material": "^5.14.15",
+    "@nextui-org/button": "^2.0.27",
+    "@nextui-org/system": "^2.0.15",
     "@supabase/auth-helpers-nextjs": "^0.8.1",
     "@supabase/supabase-js": "^2.37.0",
     "@tailwindcss/typography": "^0.5.9",
