@@ -31,7 +31,7 @@ export const HomeBlockTitle = ({ Tag = 'h2', children }) => {
 export default function Home() {
   return (
     <main className="text-text-primary">
-      <Nav />
+      <Nav className={'bg-transparent'} />
       <HomeHeader />
       <HomeBlock>
         <HomeBlockTitle>¿Sabés Configurar tu CPE inalámbrico?</HomeBlockTitle>
