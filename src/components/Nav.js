@@ -101,7 +101,7 @@ export const Nav = ({ className }) => {
               title="Reporte de bichos"
             >
               <Bug className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
-              Algún Bug?
+              Reporta Bugs
             </span>
             <span
               className={`px-[3px] pt-[2px] sm:hidden rounded-md border bg-card text-text-primary dark:border-zinc-700 font-semibold xl:text-sm text-xs`}

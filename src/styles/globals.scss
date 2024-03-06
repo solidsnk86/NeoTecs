@@ -516,6 +516,29 @@ li {
   filter: drop-shadow(0px 0px 10px var(--color-inverse-surface));
 }
 
+.elemento-con-sombra {
+  position: relative;
+  background: linear-gradient(to right, #3b82f6, #a855f7, #ff6699);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.elemento-con-sombra::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: black;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+/*--------|
+# IMPORTS |
+---------*/
+
 @import 'atropos/scss';
 @import './home-header.scss';
 @import './picture-box.scss';
