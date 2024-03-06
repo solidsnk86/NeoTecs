@@ -16,13 +16,10 @@ const LoginForm = ({ onClose }) => {
     ).matches;
 
     if (!password || !email) {
-      toast.warning(
-        'Esta sección es solo para el administrador de NeoTecs. Juiira perro 🐕💨...!!',
-        {
-          position: toast.POSITION.TOP_CENTER,
-          theme: isDarkMode ? 'dark' : 'light',
-        },
-      );
+      toast.warning('Esta sección es solo para el administrador de NeoTecs.', {
+        position: toast.POSITION.TOP_CENTER,
+        theme: isDarkMode ? 'dark' : 'light',
+      });
       return;
     }
 
@@ -113,7 +110,7 @@ const LoginForm = ({ onClose }) => {
             <hr />o<hr />
           </div>
           <p className="text-center font-thin dark:text-sky-300 text-text-strong">
-            <Link href="/docs/reset">¿Te han peinado la contraseña?</Link>
+            <Link href="/docs/reset">¿Te has olvidado la contraseña?</Link>
           </p>
         </aside>
       </div>
