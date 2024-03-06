@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react';
 
 const ColorChangingComponent = () => {
   const [currentColor, setCurrentColor] = useState('#C084FC');
-  const daysInAWeek = 7;
+  const intervalInDays = 1;
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       const newColor = getRandomColor();
       setCurrentColor(newColor);
-    }, (daysInAWeek / 2) * 24 * 60 * 60 * 1000);
+    }, intervalInDays * 24 * 60 * 60 * 1000);
 
     return () => {
       clearInterval(intervalId);
