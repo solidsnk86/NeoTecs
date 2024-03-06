@@ -1,4 +1,5 @@
 import { CookieNotice } from '../components/CookiesNotice';
+import ColorChangingComponent from '../components/RamdomColor';
 import { DoNotCopy } from '../components/DoNotCopy';
 import Head from 'next/head';
 import { renderToString } from 'react-dom/server';
@@ -12,6 +13,8 @@ function MyApp({ Component, pageProps, router }) {
     'Aprende programación en este curso gratuito de NeoTecs, que abarca desde conceptos básicos hasta niveles avanzados. Además, disponemos de documentación para facilitar la configuración rápida y sencilla de tu WiFi.';
 
   const neoTecsIconString = renderToString(<NeoTecsIcon />);
+
+  const themeColor = ColorChangingComponent();
 
   useGA(router);
 
@@ -44,6 +47,7 @@ function MyApp({ Component, pageProps, router }) {
           name="twitter:image"
           content="/images/logos/NeoTecs_Tutorial_logo.png"
         />
+        <meta name="theme-color" content={themeColor} />
       </Head>
       <DoNotCopy />
       <CookieNotice />
