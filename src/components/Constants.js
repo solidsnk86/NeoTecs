@@ -73,6 +73,7 @@ export const wanPort = (
       url="/docs#soluci%C3%B3n-aver%C3%ADa-del-wan-port"
       iconName="HandHelping"
       color="lime-400"
+      target="_self"
     >
       Aquí la Solución
     </LinkButton>

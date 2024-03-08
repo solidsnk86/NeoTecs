@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { Nav } from '../components/Nav';
 import { HomeHeader } from '../components/HomeHeader';
 import { Footer } from '../components/Footer';
-import IndexTitle from '../components/IndexTitle';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import { MarqueeLogos } from '../sections/Brands';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
@@ -110,7 +109,7 @@ export default function Home() {
       <HomeBlock className="bg-[#09090b] dark:bg-[#ffffff]">
         <div className="border dark:border-zinc-800 p-3 rounded-xl shadow-sm shadow-slate-200 dark:shadow-none">
           <p className="text-md space-y-3 font-bold">
-            ¿Se ha quemado o dañado tu puerto WAN?
+            ¿Se ha quemado o dañado el puerto WAN de tu Router?
           </p>
           <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full" />
           {wanPort}
