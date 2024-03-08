@@ -2,12 +2,13 @@ import Link from 'next/link';
 import { Nav } from '../components/Nav';
 import { HomeHeader } from '../components/HomeHeader';
 import { Footer } from '../components/Footer';
+import IndexTitle from '../components/IndexTitle';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import { MarqueeLogos } from '../sections/Brands';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { PlayIcon, Wifi } from 'lucide-react';
 import { CpeBrands } from '../components/CpeBrands';
-import { cardContent, aboutNeo } from '../components/Constants';
+import { cardContent, aboutNeo, wanPort } from '../components/Constants';
 import Tracker from '../components/utils/tracker';
 
 const HomeBlock = ({ children }) => {
@@ -105,6 +106,16 @@ export default function Home() {
           </ShimmerButton>
         </Link>
       </div>
+
+      <HomeBlock className="bg-[#09090b] dark:bg-[#ffffff]">
+        <div className="border dark:border-zinc-800 p-3 rounded-xl shadow-sm shadow-slate-200 dark:shadow-none">
+          <p className="text-md space-y-3 font-bold">
+            ¿Se ha quemado o dañado tu puerto WAN?
+          </p>
+          <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full" />
+          {wanPort}
+        </div>
+      </HomeBlock>
 
       <Tracker />
       <Footer />

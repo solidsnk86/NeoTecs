@@ -60,7 +60,7 @@ export const Footer = () => {
             {
               name: (
                 <>
-                  <span className="sm:hidden">Politícas</span>
+                  <span className="sm:hidden">Políticas</span>
                   <span className="hidden sm:block">
                     Políticas y Privacidad
                   </span>

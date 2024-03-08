@@ -33,6 +33,11 @@ export const APClientRouterMode = () => {
             Configuración Adaptador inalámbrico USB TL-WN722n
           </a>
         </li>
+        <li>
+          <a href="#soluci%C3%B3n-aver%C3%ADa-del-wan-port">
+            Solución avería del WAN port
+          </a>
+        </li>
       </ol>
       <IndexTitle>Introducción</IndexTitle>
       <p>Guía de Configuración:</p>

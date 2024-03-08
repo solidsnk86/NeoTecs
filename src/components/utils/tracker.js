@@ -7,6 +7,7 @@ function dateFormated(string) {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    timeZoneName: 'longOffset',
     hour: '2-digit',
     minute: '2-digit',
   });
@@ -94,7 +95,7 @@ export default function Tracker() {
       <div id="visit" className="px-3 text-center text-xs">
         {visitData.city && (
           <div className="flex mx-auto justify-center">
-            <p className="xl:text-sm font-mono text-xs">
+            <p className="xl:text-sm font-mono text-xs visits">
               La última visita a NeoTecs fué el{' '}
               {dateFormated(lastVisit.created_at)}, desde {lastVisit.city_name},{' '}
               {lastVisit.country_name} {lastVisit.country_flag}

@@ -4,6 +4,7 @@ import { ClientMode } from './ClientMode';
 import { RepeaterMode } from './RepeaterMode';
 import { RouterMode } from './RouterMode';
 import { TlWn722n } from './TLWN722N';
+import { WanPort } from './WanPort';
 
 export const TpLinkDocs = () => {
   return (
@@ -14,6 +15,7 @@ export const TpLinkDocs = () => {
       <RepeaterMode />
       <RouterMode />
       <TlWn722n />
+      <WanPort />
     </>
   );
 };

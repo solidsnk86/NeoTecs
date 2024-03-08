@@ -310,8 +310,8 @@ const ReviewCard = ({
 export const MarqueeLogos = () => {
     return (
         <section className="flex flex-col flex-wrap items-center justify-center my-48">
-            <div className=' mb-10'>
-                <p className=" text-xl font-bold text-center text-text-primary">
+            <div className="mb-10">
+                <p className="text-xl font-bold text-center text-text-primary languages">
                     Lenguajes que vas aprender a continuación
                 </p>
             </div>
