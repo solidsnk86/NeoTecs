@@ -3,6 +3,17 @@ import FormatDate from '../FormatDate';
 import { microlink } from '../../components/Constants';
 import supabase from './supabase';
 
+function dateFormated(string) {
+  const date = new Date(string).toLocaleDateString('es-Es', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+  return date;
+}
+
 export default function Tracker() {
   const [visitData, setVisitData] = useState({});
   const [lastVisit, setLastVisit] = useState({});
@@ -86,7 +97,7 @@ export default function Tracker() {
           <div className="flex mx-auto justify-center">
             <p className="xl:text-sm font-mono text-xs">
               La última visita a NeoTecs fué el{' '}
-              {FormatDate(lastVisit.created_at)} desde {lastVisit.city_name},{' '}
+              {dateFormated(lastVisit.created_at)} desde {lastVisit.city_name},{' '}
               {lastVisit.country_name} {lastVisit.country_flag}
             </p>
           </div>
