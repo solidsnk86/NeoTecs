@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import FormatDate from '../FormatDate';
 import { microlink } from '../../components/Constants';
 import supabase from './supabase';
 
@@ -97,7 +96,7 @@ export default function Tracker() {
           <div className="flex mx-auto justify-center">
             <p className="xl:text-sm font-mono text-xs">
               La última visita a NeoTecs fué el{' '}
-              {dateFormated(lastVisit.created_at)} desde {lastVisit.city_name},{' '}
+              {dateFormated(lastVisit.created_at)}, desde {lastVisit.city_name},{' '}
               {lastVisit.country_name} {lastVisit.country_flag}
             </p>
           </div>
