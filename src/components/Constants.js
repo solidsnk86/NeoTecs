@@ -70,7 +70,7 @@ export const wanPort = (
       <LinkButton
         url="/docs#soluci%C3%B3n-aver%C3%ADa-del-wan-port"
         className=""
-        iconName="Wifi"
+        iconName="Router"
         color="lime-400"
         target="_self"
       >
