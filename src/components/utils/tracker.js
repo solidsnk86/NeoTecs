@@ -91,7 +91,7 @@ export default function Tracker() {
   }, []);
 
   return (
-    <div className="text-text-primary mt-5 w-fit justify-center mx-auto p-4 space-y-2">
+    <div className="text-text-primary mt-5 w-fit justify-center mx-auto p-4 space-y-2 visits">
       <div id="visit" className="px-3 text-center text-xs">
         {visitData.city && (
           <div className="flex mx-auto justify-center">

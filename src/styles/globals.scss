@@ -97,6 +97,28 @@ body {
   scroll-behavior: smooth;
 }
 
+body::before {
+  --line: hsla(150, 77%, 45%, 0.15);
+  --size: 60px;
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: linear-gradient(
+        90deg,
+        var(--line) 1px,
+        transparent 1px var(--size)
+      )
+      50% 50% / var(--size) var(--size),
+    linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% /
+      var(--size) var(--size);
+  mask: linear-gradient(-15deg, transparent 30%, white);
+  top: 0;
+  transform-style: flat;
+  pointer-events: none;
+  z-index: -1;
+}
+
 body.loading * {
   transition: none !important;
 }
@@ -543,8 +565,9 @@ li {
 .visits {
   padding-inline: 6px;
   padding-block: 2px;
-  border-radius: 6px;
-  background: linear-gradient(to right, #3b82f6, #a855f7, #ff6699);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background: var(--bg-card);
   border: 1px solid var(--color-outline-variant);
   text-wrap: balance;
 }
