@@ -84,7 +84,7 @@ export default function Home() {
         </div>
       </HomeBlock>
 
-      <HomeBlock className="bg-[#09090b] dark:bg-[#ffffff]">
+      <HomeBlock>
         <HomeBlockTitle>Acerca de NeoTecs</HomeBlockTitle>
         <div className="border dark:border-zinc-800 p-3 rounded-xl shadow-sm shadow-slate-200 dark:shadow-none">
           <p className="text-md space-y-3 font-bold">Para aprender...</p>
@@ -103,13 +103,15 @@ export default function Home() {
         </Link>
       </div>
 
-      <HomeBlock className="bg-[#09090b] dark:bg-[#ffffff]">
-        <div className="border dark:border-zinc-800 p-3 rounded-xl shadow-sm shadow-slate-200 dark:shadow-none">
-          <p className="text-md space-y-3 font-bold">
-            ¿Se ha quemado o dañado el puerto WAN de tu Router?
-          </p>
-          <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full" />
-          <p className='text-text-second'>{wanPort}</p>
+      <HomeBlock className=" py-4">
+        <div className="cards text-text-primary rounded-lg p-4 hover:bg-opacity-70 duration-200 z-40">
+          <article className=" z-50">
+            <p className="text-md space-y-3 font-bold z-50">
+              ¿Se ha quemado o dañado el puerto WAN de tu Router?
+            </p>
+            <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full z-50" />
+            <p>{wanPort}</p>
+          </article>
         </div>
       </HomeBlock>
 

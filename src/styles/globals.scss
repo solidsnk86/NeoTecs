@@ -557,6 +557,26 @@ li {
   z-index: -1;
 }
 
+.cards {
+  position: relative;
+  background: linear-gradient(to right, #3b82f6, #a855f7, #ff6699);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cards::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: var(--bg-card);
+  border-radius: 6px;
+  z-index: -1;
+}
+
 .languages {
   text-wrap: balance;
   padding-inline: 4px;
