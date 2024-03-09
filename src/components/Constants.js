@@ -64,21 +64,20 @@ export const cardContent = [
 ];
 
 export const wanPort = (
-  <>
-    <p className="">
+    <p >
       ¡No te preocupes! No necesitas comprar un nuevo router. Con esta solución
-      sencilla, podrás recuperar tu conexión a Internet en pocos minutos.
+      sencilla, podrás recuperar tu conexión a Internet en pocos minutos,
+      <LinkButton
+        url="/docs#soluci%C3%B3n-aver%C3%ADa-del-wan-port"
+        className=""
+        iconName="HandHelping"
+        color="lime-400"
+        target="_self"
+      >
+        he aquí la solución
+      </LinkButton>
+      .
     </p>
-    <LinkButton
-      url="/docs#soluci%C3%B3n-aver%C3%ADa-del-wan-port"
-      iconName="HandHelping"
-      color="lime-400"
-      target="_self"
-    >
-      Aquí la Solución
-    </LinkButton>
-    .
-  </>
 );
 
 export const aboutNeo =
