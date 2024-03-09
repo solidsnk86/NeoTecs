@@ -104,7 +104,7 @@ export default function Home() {
       </div>
 
       <HomeBlock className=" py-4">
-        <div className="cards text-zinc-200 rounded-lg p-4 hover:bg-opacity-70 duration-200 z-40">
+        <div className="cards text-zinc-200 rounded-[13px] p-4 hover:bg-opacity-70 duration-200 z-40">
           <article className=" z-50">
             <p className="text-md space-y-3 font-bold z-50">
               ¿Se ha quemado o dañado el puerto WAN de tu Router?
