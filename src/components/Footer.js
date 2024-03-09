@@ -12,6 +12,7 @@ import { FaWhatsapp, FaTelegramPlane, FaChevronCircleUp } from 'react-icons/fa';
 import { FacebookIcon, Linkedin } from 'lucide-react';
 import { TwitterIcon } from '../components/Icons/TwitterIcon';
 import Link from 'next/link';
+import Tracker from '../components/utils/tracker';
 
 export const Footer = () => {
   return (
@@ -95,6 +96,7 @@ export const Footer = () => {
         Todos los nombres de productos, logos y marcas son propiedad de sus
         respectivos creadores.
       </p>
+      <Tracker />
     </section>
   );
 };

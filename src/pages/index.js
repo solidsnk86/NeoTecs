@@ -8,7 +8,6 @@ import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { PlayIcon, Wifi } from 'lucide-react';
 import { CpeBrands } from '../components/CpeBrands';
 import { cardContent, aboutNeo, wanPort } from '../components/Constants';
-import Tracker from '../components/utils/tracker';
 
 const HomeBlock = ({ children }) => {
   return (
@@ -116,7 +115,6 @@ export default function Home() {
         </div>
       </HomeBlock>
 
-      <Tracker />
       <Footer />
     </main>
   );
