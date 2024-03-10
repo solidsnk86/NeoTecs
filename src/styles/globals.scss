@@ -95,10 +95,11 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--color-surface);
   scroll-behavior: smooth;
+  z-index: 1;
 }
 
 body::before {
-  --line: hsla(150, 77%, 45%, 0.15);
+  --line: hsla(0, 0%, 39%, 0.15);
   --size: 60px;
   content: '';
   height: 100%;
@@ -116,11 +117,7 @@ body::before {
   top: 0;
   transform-style: flat;
   pointer-events: none;
-  z-index: -1;
-}
-
-body.loading * {
-  transition: none !important;
+  z-index: 0;
 }
 
 @media (max-width: 768px) {
@@ -366,10 +363,6 @@ video {
     transform: translateY(0);
     opacity: 1;
   }
-}
-
-.link:hover .link-icon {
-  transform: translateY(-2px);
 }
 
 @media screen and (min-width: 400px) {

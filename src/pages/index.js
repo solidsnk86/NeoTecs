@@ -75,7 +75,7 @@ export default function Home() {
           {cardContent.map((card) => (
             <div
               key={card.id}
-              className="p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow"
+              className="p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow z-50"
             >
               <span className="text-xl font-bold">{card.feature}</span>
               <p className="text-text-second py-3">{card.children}</p>

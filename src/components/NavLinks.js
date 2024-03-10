@@ -3,7 +3,7 @@ import { ArrowLeftIcon } from 'lucide-react';
 import { NavSwitch } from './NavSwicth';
 import { TitlesContext } from '../shared/TitlesContext';
 
-export function LectureNav() {
+export function NavLinks() {
   const { titles } = useContext(TitlesContext);
   const [selectedSlug, setSelectedSlug] = useState(titles[0]?.slug);
 
@@ -16,7 +16,7 @@ export function LectureNav() {
       <div className="sticky top-4">
         <div className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 w-fit mt-3">
           <ArrowLeftIcon
-            className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all"
+            className="text-text-primary cursor-pointer hover:border-zinc-400 transition-all"
             onClick={(e) => history.back(e)}
           />
         </div>

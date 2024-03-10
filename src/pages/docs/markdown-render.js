@@ -1,5 +1,5 @@
 import { Nav } from '../../components/Nav';
-import { LectureNav } from '../../components/LectureNav';
+import { LectureNav } from '../../components/NavLinks';
 import { NavSwitch } from '../../components/NavSwicth';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';

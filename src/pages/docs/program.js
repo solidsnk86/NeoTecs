@@ -1,5 +1,5 @@
 import { Nav } from '../../components/Nav';
-import { LectureNav } from '../../components/LectureNav';
+import { NavLinks } from '../../components/NavLinks';
 import { Footer } from '../../components/Footer';
 import { NavSwitch } from '../../components/NavSwicth';
 import { Introduction } from './Introduction';
@@ -11,7 +11,7 @@ export default function Program() {
     <TitlesContextProvider>
       <Nav className="fixed xl:relative w-full h-12 z-50" />
       <div className="max-w-screen-xl mx-auto flex items-stretch py-16">
-        <LectureNav />
+        <NavLinks />
         <div className="w-full max-w-none prose px-4 md:px-8">
           <NavSwitch inline />
           <Introduction />
