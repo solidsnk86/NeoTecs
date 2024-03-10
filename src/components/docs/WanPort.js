@@ -3,6 +3,7 @@ import IndexTitle from '../IndexTitle';
 import LinkButton from '../LinkButton';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
+import { ShareButton } from '../ShareButton';
 
 export const WanPort = () => {
   return (
@@ -215,13 +216,15 @@ export const WanPort = () => {
           <iframe
             src="https://www.youtube.com/embed/q7716CICOiM?si=q74VjDSvyxXCdDbc"
             title="YouTube video player"
-            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullscreen
+            allowFullScreen
             className="rounded-lg w-96 h-64"
           ></iframe>
         </div>
       </article>
+      <ShareButton setTitle={WanPort.title} />
     </section>
   );
 };
+
+WanPort.title = 'Guía para configurar dispositivos • Tp Link';

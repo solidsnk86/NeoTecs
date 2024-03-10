@@ -20,7 +20,7 @@ export const BrandsSwitch = ({ inline }) => {
       title: 'MikroTik',
     },
   ];
-  const isActive = (link) => link.href === router.asPath;
+  const isActive = (link) => link.href === router.pathname;
   return (
     <div
       className={`inline-block mb-4 border border-slate-400 border-opacity-20 shadow-md shadow-slate-500 dark:!shadow xl:rounded-xl rounded-b-xl overflow-hidden mt-16 xl:w-[200px] w-100% xl:overflow-y-auto ${

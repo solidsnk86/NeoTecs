@@ -2,7 +2,6 @@ import { FaWindows, FaMousePointer } from 'react-icons/fa';
 import IndexTitle from '../IndexTitle';
 import LinkButton from '../LinkButton';
 import { SectionTitle } from '../SectionTitle';
-import { ShareButton } from '../ShareButton';
 
 export const TlWn722n = () => {
   return (
@@ -151,9 +150,8 @@ export const TlWn722n = () => {
         <iframe
           src="https://www.youtube.com/embed/Rbfx0pzzRgA?si=gIMn9ahz-s-Hh1JT"
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullscreen
+          allowFullScreen
           className="rounded-lg w-96 h-64"
         ></iframe>
       </div>
@@ -177,9 +175,6 @@ export const TlWn722n = () => {
           feedback.
         </LinkButton>
       </p>
-      <ShareButton setTitle={TlWn722n.title} />
     </section>
   );
 };
-
-TlWn722n.title = 'Configura dispositivos Tp - Link';
