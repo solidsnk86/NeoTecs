@@ -21,7 +21,7 @@ export const LinkButton: React.FC<LinkInterfaceProps> = ({ url, children, classN
                 rel='noopener'
             >
                 {children}
-                {Icon && <Icon className={`w-[10px] h-[10px] xl:w-[14px] xl:h-[14px] text-${color} link-icon`} />}
+                {Icon && <Icon className={`h-[10px] xl:h-[14px] text-${color} link-icon`} />}
             </Link>
         </span>
     );

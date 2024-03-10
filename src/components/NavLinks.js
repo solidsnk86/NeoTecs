@@ -14,9 +14,9 @@ export function NavLinks() {
   return (
     <div className="w-80 px-4 md:px-8 hidden lg:block">
       <div className="sticky top-4">
-        <div className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 w-fit mt-3">
+        <div className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 w-fit mt-3 hover:brightness-125 cursor-pointer">
           <ArrowLeftIcon
-            className="text-text-primary cursor-pointer hover:border-zinc-400 transition-all"
+            className="text-text-primary"
             onClick={(e) => history.back(e)}
           />
         </div>
