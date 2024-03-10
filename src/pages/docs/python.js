@@ -1,5 +1,5 @@
 import { Nav } from '../../components/Nav';
-import { LectureNav } from '../../components/LectureNav';
+import { NavLinks } from '../../components/NavLinks';
 import { NavSwitch } from '../../components/NavSwicth';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
@@ -15,7 +15,7 @@ export default function Python() {
     <TitlesContextProvider>
       <Nav className="fixed xl:relative w-full h-12 z-50" />
       <div className="max-w-screen-xl mx-auto flex items-stretch py-16">
-        <LectureNav />
+        <NavLinks />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
           <HeaderTitle>Python</HeaderTitle>
@@ -285,7 +285,7 @@ export default function Python() {
               ausencia de un valor.
             </li>
           </ul>
-          <p className='list-css-span'>
+          <p className="list-css-span">
             Ahora trabajaremos en escribir un programa más interesante que pueda
             tomar la entrada del usuario y saludar al usuario. Para hacer esto,
             utilizaremos otra función incorporada llamada input, que muestra un

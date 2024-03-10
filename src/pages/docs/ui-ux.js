@@ -1,5 +1,4 @@
 import { Nav } from '../../components/Nav';
-import { LectureNav } from '../../components/LectureNav';
 import { NavSwitch } from '../../components/NavSwicth';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
@@ -11,12 +10,13 @@ import { InfoIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 import ImageComponent from '../../components/ImageComponent';
+import { NavLinks } from '../../components/NavLinks';
 export default function UiUx() {
   return (
     <TitlesContextProvider>
       <Nav className="fixed xl:relative w-full h-12 z-30" />
       <div className="max-w-screen-xl mx-auto flex items-stretch py-16">
-        <LectureNav />
+        <NavLinks />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
           <HeaderTitle>Interfaces de Usuario - UI/UX</HeaderTitle>

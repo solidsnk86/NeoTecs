@@ -3,7 +3,6 @@ import { Footer } from '../../components/Footer';
 import JavascriptExample from '../../components/JavascriptExample';
 import HeaderTitle from '../../components/HeaderTitlte';
 import IndexTitle from '../../components/IndexTitle';
-import { LectureNav } from '../../components/LectureNav';
 import LinkButton from '../../components/LinkButton';
 import { Pre } from '../../components/Pre';
 import { Nav } from '../../components/Nav';
@@ -12,12 +11,13 @@ import { ShareButton } from '../../components/ShareButton';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import ImageComponent from '../../components/ImageComponent';
+import { NavLinks } from '../../components/NavLinks';
 export default function JavaScript() {
   return (
     <TitlesContextProvider>
       <Nav className="fixed xl:relative w-full h-12 z-50" />
       <div className="max-w-screen-xl mx-auto flex items-stretch py-16">
-        <LectureNav />
+        <NavLinks />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
           <HeaderTitle>Javascript</HeaderTitle>
