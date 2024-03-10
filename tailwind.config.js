@@ -31,7 +31,6 @@ module.exports = {
       },
       animation: {
         marquee: 'marquee var(--duration) linear infinite',
-        meteor: 'meteor 5s linear infinite',
         spin: 'spin calc(var(--speed) * 2) infinite linear',
         slide: 'slide var(--speed) ease-in-out infinite alternate',
       },

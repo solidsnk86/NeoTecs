@@ -9,14 +9,14 @@ interface ShimmerButtonProps {
 	background?: string
 	className?: string
 	children?: ReactNode
-	[key: string]: unknown // ...props
+	[key: string]: unknown
 }
 
 export const ShimmerButton = ({
 	shimmerColor = '#92FF99',
 	shimmerSize = '0.1em',
 	shimmerDuration = '.9s',
-	borderRadius = '10px',
+	borderRadius = '50px',
 	background = 'radial-gradient(ellipse 80% 50% at 50% 120%,#0A0C25,#080E1B)',
 	className,
 	children,
