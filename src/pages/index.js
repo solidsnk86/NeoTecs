@@ -86,12 +86,12 @@ export default function Home() {
 
       <HomeBlock>
         <HomeBlockTitle>Acerca de NeoTecs</HomeBlockTitle>
-        <div className="dark:bg-[#09090B] bg-[#FFFFFF] border dark:border-zinc-800 p-3 rounded-xl shadow-sm shadow-slate-200 dark:shadow-none z-50">
-          <p className="text-md space-y-3 font-bold">Para aprender...</p>
-          <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full" />
-          <p className="dark:bg-[#09090B] bg-[#FFFFFF] mt-4 text-text-second">
-            {aboutNeo}
-          </p>
+        <div className="cards text-zinc-200 rounded-[13px] p-4 hover:bg-opacity-70 duration-200 z-40">
+          <article className=" z-50">
+            <p className="text-md space-y-3 font-bold z-50">Para aprender...</p>
+            <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full z-50" />
+            <p>{aboutNeo}</p>
+          </article>
         </div>
       </HomeBlock>
 
