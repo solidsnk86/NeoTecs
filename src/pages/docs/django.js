@@ -95,7 +95,7 @@ export default function DjangoDocs() {
               los sitios web de
               <LinkButton
                 url="https://www.nytimes.com/"
-                color="[#0C4B33]"
+                color="green-600"
                 iconName="ArrowUpRight"
               >
                 The New York Times
@@ -103,7 +103,7 @@ export default function DjangoDocs() {
               o
               <LinkButton
                 url="https://www.nytimes.com/"
-                color="[#0C4B33]"
+                color="green-600"
                 iconName="ArrowUpRight"
               >
                 Facebook
@@ -179,7 +179,7 @@ export default function DjangoDocs() {
             <p>
               <LinkButton
                 url="https://www.djangoproject.com/"
-                color="[#0C4B33]"
+                color="green-600"
                 iconName="ArrowUpRight"
               >
                 Django
@@ -195,7 +195,7 @@ export default function DjangoDocs() {
                 que también tendrás que
                 <LinkButton
                   href="https://pip.pypa.io/en/stable/installing/"
-                  color="[#0C4B33]"
+                  color="green-400"
                   iconName="ArrowUpRight"
                 >
                   instalar
@@ -371,7 +371,7 @@ export default function DjangoDocs() {
                   paquetes en la documentación oficial de
                   <LinkButton
                     url="https://python.org/"
-                    color="[#0C4B33]"
+                    color="green-600"
                     iconName="ArrowUpRight"
                   >
                     Python
@@ -636,14 +636,16 @@ export default function DjangoDocs() {
               información específica. Por ejemplo, al ir a
               <LinkButton
                 url="https://twitter.com/CalcagniGabriel"
-                color="[#0C4B33]"
+                color="green-600"
+                iconName="ArrowUpRight"
               >
                 https://twitter.com/CalcagniGabriel
               </LinkButton>
               se muestran todos mis tweets, y al dirigirse a
               <LinkButton
                 url="https://twitter.com/CalcagniGabriel"
-                color="[#0C4B33]"
+                color="green-600"
+                iconName="ArrowUpRight"
               >
                 https://github.com/solidsnk86
               </LinkButton>
@@ -884,7 +886,7 @@ export default function DjangoDocs() {
               utilizar el lenguaje de
               <LinkButton
                 url="https://docs.djangoproject.com/en/4.0/ref/templates/language/"
-                color="[#0C4B33]"
+                color="green-600"
                 iconName="ArrowUpRight"
               >
                 plantillas de Django
@@ -942,4 +944,4 @@ export default function DjangoDocs() {
   );
 }
 
-DjangoDocs.title = 'Aprende Django y Web Dinámicas en Neotecs gratis!';
+DjangoDocs.title = 'Aprende Django y Web Dinámicas en Neotecs!';

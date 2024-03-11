@@ -8,11 +8,12 @@ import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { PlayIcon, Wifi } from 'lucide-react';
 import { CpeBrands } from '../components/CpeBrands';
 import { cardContent, aboutNeo, wanPort } from '../components/Constants';
+import ButtonEffect from '../components/ButtonEffect';
 
 const HomeBlock = ({ children }) => {
   return (
     <div
-      className={`max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16`}
+      className={`max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16 z-50`}
     >
       {children}
     </div>

@@ -102,8 +102,8 @@ body::before {
   --line: hsla(0, 0%, 39%, 0.15);
   --size: 60px;
   content: '';
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   position: fixed;
   background: linear-gradient(
         90deg,

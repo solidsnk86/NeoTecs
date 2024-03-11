@@ -1,4 +1,5 @@
 import { ArrowLeftIcon } from 'lucide-react';
+import { Button } from '@nextui-org/button';
 import { Footer } from '../../components/Footer';
 import { Nav } from '../../components/Nav';
 import { ToastContainer, toast } from 'react-toastify';
@@ -64,9 +65,9 @@ export default function FeedBack() {
         onSubmit={handleSubmit(onSubmit)}
         className="xl:w-1/3 p-14 flex justify-center mx-auto text-text-primary text-left flex-col space-y-4"
       >
-        <div className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 xl:left-6 xl:top-14 top-14 left-2 fixed mt-3">
+        <div className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 xl:left-6 xl:top-14 top-14 left-2 fixed mt-3 hover:border-zinc-200 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300">
           <ArrowLeftIcon
-            className="text-text-primary cursor-pointer hover:translate-x-[-2px] transition-all"
+            className="text-text-primary"
             onClick={(e) => history.back(e)}
           />
         </div>
@@ -110,13 +111,13 @@ export default function FeedBack() {
             />
           </label>
 
-          <button
+          <Button
             className="flex justify-center mx-auto px-3 py-1 font-semibold outline-4 outline-offset-2 outline-lime-400 rounded-md bg-button-variant shadow-sm shadow-zinc-400 dark:!shadow text-text-variant hover:opacity-90"
             type="submit"
             disabled={isSubmitting}
           >
             {isSubmitting ? 'Enviando...' : 'Enviar'}
-          </button>
+          </Button>
         </div>
       </form>
       <Footer />
