@@ -217,7 +217,7 @@ export const WanPort = () => {
             src="https://www.youtube.com/embed/q7716CICOiM?si=q74VjDSvyxXCdDbc"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
+            allowFullScreen={true}
             className="rounded-lg w-96 h-64"
           ></iframe>
         </div>

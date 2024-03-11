@@ -151,7 +151,7 @@ export const TlWn722n = () => {
           src="https://www.youtube.com/embed/Rbfx0pzzRgA?si=gIMn9ahz-s-Hh1JT"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
+          allowFullScreen={true}
           className="rounded-lg w-96 h-64"
         ></iframe>
       </div>
