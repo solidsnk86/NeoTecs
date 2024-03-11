@@ -8,12 +8,11 @@ import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { PlayIcon, Wifi } from 'lucide-react';
 import { CpeBrands } from '../components/CpeBrands';
 import { cardContent, aboutNeo, wanPort } from '../components/Constants';
-import ButtonEffect from '../components/ButtonEffect';
 
 const HomeBlock = ({ children }) => {
   return (
     <div
-      className={`max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16 z-50`}
+      className={`max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16 z-20`}
     >
       {children}
     </div>
@@ -57,7 +56,7 @@ export default function Home() {
               </p>
             </div>
           </header>
-          <aside className="mt-10 border border-zinc-200/85 dark:border-zinc-800/40 dark:shadow-none p-6 rounded-lg">
+          <aside className="dark:bg-[#09090B] bg-[#FFFFFF] mt-10 border border-zinc-200/85 dark:border-zinc-800/40 dark:shadow-none p-6 rounded-lg">
             <p className="text-3xl font-semibold">
               <PlayIcon className="inline mx-2 border mb-[6px] text-green-500 border-green-900 rounded-lg p-2 w-9 h-9 bg-[#072719]" />
               Comencemos!
@@ -76,7 +75,7 @@ export default function Home() {
           {cardContent.map((card) => (
             <div
               key={card.id}
-              className="p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow z-50"
+              className="dark:bg-[#09090B] bg-[#FFFFFF] p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow z-50"
             >
               <span className="text-xl font-bold">{card.feature}</span>
               <p className="text-text-second py-3">{card.children}</p>
@@ -87,10 +86,12 @@ export default function Home() {
 
       <HomeBlock>
         <HomeBlockTitle>Acerca de NeoTecs</HomeBlockTitle>
-        <div className="border dark:border-zinc-800 p-3 rounded-xl shadow-sm shadow-slate-200 dark:shadow-none">
+        <div className="dark:bg-[#09090B] bg-[#FFFFFF] border dark:border-zinc-800 p-3 rounded-xl shadow-sm shadow-slate-200 dark:shadow-none z-50">
           <p className="text-md space-y-3 font-bold">Para aprender...</p>
           <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full" />
-          <p className="mt-4 text-text-second ">{aboutNeo}</p>
+          <p className="dark:bg-[#09090B] bg-[#FFFFFF] mt-4 text-text-second">
+            {aboutNeo}
+          </p>
         </div>
       </HomeBlock>
 
@@ -104,7 +105,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <HomeBlock className=" py-4">
+      <HomeBlock className="py-4">
         <div className="cards text-zinc-200 rounded-[13px] p-4 hover:bg-opacity-70 duration-200 z-40">
           <article className=" z-50">
             <p className="text-md space-y-3 font-bold z-50">
