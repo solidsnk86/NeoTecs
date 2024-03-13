@@ -38,7 +38,7 @@ export const Pre = ({ children, lang = '' }) => {
       <span
         onClick={handleCopyClick}
         title="Copiar"
-        className="text-xs absolute z-10 top-[26px] right-[8px] cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all"
+        className="text-xs absolute z-10 top-[26px] right-[8px] cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all duration-100"
       >
         {copied ? (
           <div className="check-effect">

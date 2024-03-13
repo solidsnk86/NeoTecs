@@ -315,7 +315,7 @@ export const MarqueeLogos = () => {
                     Lenguajes que vas aprender a continuación
                 </p>
             </div>
-            <div className='relative flex flex-col items-center justify-center w-full h-full gap-4 py-20 overflow-hidden rounded-lg bg-background'>
+            <div className='relative flex flex-col items-center justify-center w-full h-full gap-4 py-20 overflow-hidden bg-background'>
                 <Marquee pauseOnHover className='[--duration:40s]'>
                     {reviews.map((review) => (
                         <ReviewCard key={review.name} {...review} />
@@ -328,8 +328,8 @@ export const MarqueeLogos = () => {
                             <ReviewCard key={review.name} {...review} />
                         ))}
                 </Marquee>
-                <span className='shadow-left'></span>
-                <span className='shadow-right'></span>
+                <span className='brands-shadow-left'></span>
+                <span className='brands-shadow-right'></span>
             </div>
         </section>
     );

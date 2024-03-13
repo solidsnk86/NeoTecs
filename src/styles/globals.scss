@@ -561,6 +561,47 @@ li {
   text-wrap: balance;
 }
 
+.description-videos {
+  position: relative;
+  z-index: 99;
+}
+
+.brands-shadow-left {
+  position: absolute;
+  background: linear-gradient(to right, var(--color-surface), transparent);
+  width: 40px;
+  height: 100%;
+  top: 0;
+  left: 25%;
+}
+
+.brands-shadow-right {
+  position: absolute;
+  background: linear-gradient(to left, var(--color-surface), transparent);
+  width: 40px;
+  height: 100%;
+  top: 0;
+  right: 25%;
+}
+
+@media (max-width: 900px) {
+  .brands-shadow-left {
+    left: 10%;
+  }
+  .brands-shadow-right {
+    right: 10%;
+  }
+}
+
+@media (max-width: 700px) {
+  .brands-shadow-left {
+    left: 0;
+  }
+  .brands-shadow-right {
+    right: 0;
+  }
+}
+
 /*--------|
 # IMPORTS |
 ---------*/
