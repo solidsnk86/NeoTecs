@@ -47,7 +47,7 @@ export default function FeedBack() {
         },
         setTimeout(() => {
           window.location.reload();
-        }, 3600),
+        }, 3900),
       );
     } else {
       toast('Error al enviar el feedback', {
