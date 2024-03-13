@@ -3,6 +3,9 @@ import { StepForward, FileText, FootprintsIcon, Code2 } from 'lucide-react';
 export const githubMarkdownURL =
   'https://raw.githubusercontent.com/solidsnk86/neo-scraper/master/LEEME.md';
 
+export const githubAvatar =
+  'https://avatars.githubusercontent.com/u/93176365?s=400&u=6f5ba483bed08a874198c38f5b7140f39e74593f&v=4';
+
 export const currencyGoogleSheetsURL =
   process.env.NEXT_PUBLIC_CURRENCY_GOOGLE_SHEETS_URL;
 
