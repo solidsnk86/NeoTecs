@@ -12,7 +12,7 @@ export default function Scraping() {
     <>
       <Nav className="fixed xl:relative w-full h-12 z-50" />
       <main className="text-text-primary flex flex-col justify-center m-auto p-10 xl:w-10/12">
-        <div className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 xl:left-6 xl:top-14 top-14 left-2 fixed mt-3 cursor-pointer hover:border-zinc-300 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125">
+        <div className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 xl:left-6 xl:top-14 top-14 left-[5px] fixed mt-3 cursor-pointer hover:border-zinc-300 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125">
           <ArrowLeftIcon
             className="text-text-primary"
             onClick={() => history.back()}
