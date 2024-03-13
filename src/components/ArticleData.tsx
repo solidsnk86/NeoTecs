@@ -25,7 +25,7 @@ const ArticleData = () => {
 
     return (
         <Suspense fallback={<Preloader />}>
-            <div className="p-4 grid md:grid-cols-2 gap-2 text-center">
+            <div className="p-4 grid md:grid-cols-2 gap-6 text-center">
                 {data.map((article, index) => (
                     <article key={index}>
                         <Articles
