@@ -65,7 +65,10 @@ export default function FeedBack() {
         onSubmit={handleSubmit(onSubmit)}
         className="xl:w-1/3 p-14 flex justify-center mx-auto text-text-primary text-left flex-col space-y-4"
       >
-        <div className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 xl:left-6 xl:top-14 top-14 left-2 fixed mt-3 hover:border-zinc-200 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300">
+        <div
+          className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 xl:left-6 xl:top-14 top-14 left-2 fixed mt-3 hover:border-zinc-300 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300"
+          title="Volver atrás"
+        >
           <ArrowLeftIcon
             className="text-text-primary"
             onClick={(e) => history.back(e)}
@@ -74,13 +77,13 @@ export default function FeedBack() {
         <h1 className="flex justify-center pt-6 mx-auto text-5xl text-transparent relative [-webkit-text-stroke-width:2px] [-webkit-text-stroke-color:var(--color-on-surface)]">
           Feedback
         </h1>
-        <p className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-3 text-text-primary text-xs xl:text-sm shadow-md shadow-slate-200/80 dark:!shadow">
+        <p className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-3 text-text-primary text-xs xl:text-sm shadow-md shadow-slate-200/80 dark:!shadow relative">
           "¿Podrías proporcionarme tus comentarios sobre la página web? ¿Hiciste
           alguna observación de errores o inconvenientes? No dudes en compartir
           todas tus dudas y preocupaciones. Estoy aquí para ayudarte y mejorar
           la experiencia en línea."
         </p>
-        <div className="bg-[#F7F9F9] dark:bg-[#16181C] border border-zinc-200/50 dark:border-zinc-800 p-5 rounded space-y-3 shadow-md shadow-slate-200/80 dark:!shadow text-xs xl:text-sm">
+        <div className="bg-[#F7F9F9] dark:bg-[#16181C] border border-zinc-200/50 dark:border-zinc-800 p-5 rounded space-y-3 shadow-md shadow-slate-200/80 dark:!shadow text-xs xl:text-sm relative">
           <label className="label-feedback">
             Nombre:
             <input
