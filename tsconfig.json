@@ -23,6 +23,6 @@
     "src/pages/docs/google-sheets.js",
     "src/components/JavascriptExample.js",
     "src/components/Scraping.js"
-  ],
+, "src/components/ArticleComponent.js"  ],
   "exclude": ["node_modules"]
 }

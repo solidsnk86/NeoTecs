@@ -1,5 +1,4 @@
 import { StepForward, FileText, FootprintsIcon, Code2 } from 'lucide-react';
-import LinkButton from './LinkButton';
 
 export const githubMarkdownURL =
   'https://raw.githubusercontent.com/solidsnk86/neo-scraper/master/LEEME.md';
@@ -9,7 +8,7 @@ export const currencyGoogleSheetsURL =
 
 export const googleSheetURL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
 
-export const articlesURL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_ARTICLE;
+export const articlesURL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_ARTICLES;
 
 const user = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
 export const youTube = user;
@@ -64,23 +63,6 @@ export const cardContent = [
       'Explico los conceptos de programación paso a paso, con ejemplos y ejercicios que te ayudarán a comprenderlos a fondo.',
   },
 ];
-
-export const wanPort = (
-  <>
-    ¡No te preocupes! No necesitas comprar un nuevo router. Con esta solución
-    sencilla, podrás recuperar tu conexión a Internet en pocos minutos,
-    <LinkButton
-      url="/docs#soluci%C3%B3n-aver%C3%ADa-del-wan-port"
-      className=""
-      iconName="Router"
-      color="lime-400"
-      target="_self"
-    >
-      aquí la solución
-    </LinkButton>
-    .
-  </>
-);
 
 export const aboutNeo =
   'Este curso de NeoTecs se enfoca en el diseño e implementación de aplicaciones web con Python, JavaScript y SQL, utilizando frameworks como React, Django y Bootstrap. Los temas incluyen diseño de bases de datos, escalabilidad, seguridad y experiencia de usuario. Los estudiantes adquieren habilidades en la escritura de APIs, creación de interfaces interactivas y uso de servicios en la nube como GitHub, Vercel y Netlify para diseñar e implementar aplicaciones web. Entre otros ejemplos...';

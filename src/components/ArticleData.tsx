@@ -1,8 +1,10 @@
 import { articlesURL } from './Constants';
+import { Articles } from './Articles';
 import { useState, useEffect } from 'react';
-import FormatDate from './FormatDate';
+import { Suspense } from 'react';
+import { Preloader } from './Preloader';
 
-export default function fetchArticleData() {
+const ArticleData = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -10,16 +12,33 @@ export default function fetchArticleData() {
             const response = await fetch(articlesURL);
             const csvData = await response.text();
             const parsedData = csvData
-                .split('/n')
+                .split('\n')
                 .slice(1)
                 .map((row) => {
                     const [title, content, url, published] = row.split(',');
-                    return { title, content, url, published: FormatDate(published) };
+                    return { title, content, url, published };
                 });
             setData(parsedData);
         };
         fetchData();
     }, []);
 
-    return data;
-}
+    return (
+        <Suspense fallback={<Preloader />}>
+            <div className='p-4 grid md:grid-cols-2 gap-2 text-center'>
+                {data.map((article, index) => (
+                    <article key={index}>
+                        <Articles
+                            title={`${article.title}`}
+                            content={`${article.content}`}
+                            src={`${article.url}`}
+                            publishedAt={article.published}
+                        />
+                    </article>
+                ))}
+            </div>
+        </Suspense>
+    );
+};
+
+export default ArticleData;

@@ -7,9 +7,10 @@ import { MarqueeLogos } from '../sections/Brands';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { PlayIcon, Wifi } from 'lucide-react';
 import { CpeBrands } from '../components/CpeBrands';
-import { cardContent, aboutNeo, wanPort } from '../components/Constants';
+import { cardContent, aboutNeo } from '../components/Constants';
+import ArticleData from '../components/ArticleData';
 
-const HomeBlock = ({ children }) => {
+export const HomeBlock = ({ children }) => {
   return (
     <div
       className={`max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16 z-20`}
@@ -72,9 +73,9 @@ export default function Home() {
       <HomeBlock>
         <HomeBlockTitle>Características</HomeBlockTitle>
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 text-center">
-          {cardContent.map((card) => (
+          {cardContent.map((card, index) => (
             <div
-              key={card.id}
+              key={index}
               className="dark:bg-[#09090B] bg-[#FFFFFF] p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow z-50"
             >
               <span className="text-xl font-bold">{card.feature}</span>
@@ -105,16 +106,9 @@ export default function Home() {
         </Link>
       </div>
 
-      <HomeBlock className="py-4">
-        <div className="cards text-zinc-200 rounded-[13px] p-4 hover:bg-opacity-70 duration-200 z-40">
-          <article className=" z-50">
-            <p className="text-md space-y-3 font-bold z-50">
-              ¿Se ha quemado o dañado el puerto WAN de tu Router?
-            </p>
-            <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full z-50" />
-            <p>{wanPort}</p>
-          </article>
-        </div>
+      <HomeBlock>
+        <HomeBlockTitle>Últimos artículos...</HomeBlockTitle>
+        <ArticleData />
       </HomeBlock>
 
       <Footer />
