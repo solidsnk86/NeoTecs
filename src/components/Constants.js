@@ -9,6 +9,8 @@ export const currencyGoogleSheetsURL =
 
 export const googleSheetURL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
 
+export const articlesURL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_ARTICLE;
+
 const user = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
 export const youTube = user;
 

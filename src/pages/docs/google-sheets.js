@@ -58,7 +58,7 @@ export default function CsvSheets() {
             <h1 className="mt-10 flex justify-center mx-auto text-6xl text-transparent relative bottom-[2px] [-webkit-text-stroke-width:4px] [-webkit-text-stroke-color:var(--color-on-surface)]">
               GerArt
             </h1>
-            <article className="bg-[#F7F9F9] dark:bg-[#16181C] border border-zinc-100/80 dark:border-zinc-800 rounded-xl text-center p-3">
+            <article className="bg-[#F7F9F9] dark:bg-[#16181C] border border-zinc-100/80 dark:border-zinc-800 rounded-xl text-center p-3 relative">
               <p>¡Bienvenidos a ésta sección de arte y dibujo!</p>
               <p>
                 Es importante tener en cuenta que los dibujos presentados aquí y
@@ -73,7 +73,7 @@ export default function CsvSheets() {
             {items.map((pic) => (
               <article key={pic.id} className="mt-3">
                 <p className="text-2xl font-mono text-center py-2">{pic.id}</p>
-                <span className="bg-button-variant text-text-variant font-semibold font-mono p-1 w-fit my-3 rounded-md">
+                <span className="bg-button-variant text-text-variant font-semibold font-mono p-1 w-fit my-3 rounded-md relative">
                   Price:
                   <Receipt className="w-6 mb-[4px] text-red-500 inline" />
                   {pic.price}
@@ -86,10 +86,10 @@ export default function CsvSheets() {
                 <aside className="font-light my-3">
                   <span>Publicado {pic.posted}</span>
                   <CalendarClockIcon className="w-4 mx-1 inline mb-1" />
-                  <span className="float-right xl:mr-[68px] uppercase font-mono px-1 mt-[7px] bg-button-variant rounded-md text-text-variant text-xs font-semibold">
+                  <span className="float-right xl:mr-[68px] uppercase font-mono px-1 mt-[7px] bg-button-variant rounded-md text-text-variant text-xs font-semibold relative">
                     {pic.isOnSale}
                   </span>
-                  <p className="bg-red-500 text-text-variant text-sm p-1 w-fit font-semibold rounded-md">
+                  <p className="bg-red-500 text-text-variant text-sm p-1 w-fit font-semibold rounded-md relative">
                     {pic.name}
                   </p>
                   <p>{pic.description}</p>

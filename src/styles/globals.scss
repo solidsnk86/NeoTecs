@@ -181,6 +181,11 @@ body::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
 }
 
+.description-videos {
+  position: relative;
+  z-index: 99;
+}
+
 @media (max-width: 388px) {
   .youtube-aside {
     transform: scale(0.8);
@@ -560,15 +565,14 @@ li {
   text-wrap: balance;
 }
 
-.description-videos {
-  position: relative;
-  z-index: 99;
-}
+/*
+|||| SHADOW LANGUAGES LOGOS
+*/
 
 .brands-shadow-left {
   position: absolute;
   background: linear-gradient(to right, var(--color-surface), transparent);
-  width: 40px;
+  width: 50px;
   height: 100%;
   top: 0;
   left: 25%;
@@ -577,7 +581,7 @@ li {
 .brands-shadow-right {
   position: absolute;
   background: linear-gradient(to left, var(--color-surface), transparent);
-  width: 40px;
+  width: 50px;
   height: 100%;
   top: 0;
   right: 25%;
