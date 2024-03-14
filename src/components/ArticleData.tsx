@@ -1,7 +1,8 @@
 import { articlesURL } from './Constants';
 import { Articles } from './Articles';
 import { useState, useEffect } from 'react';
-import { Suspense } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 import { Preloader } from './Preloader';
 
 const ArticleData = () => {
@@ -20,24 +21,44 @@ const ArticleData = () => {
                 });
             setData(parsedData);
         };
+
         fetchData();
     }, []);
 
     return (
-        <Suspense fallback={<Preloader />}>
-            <div className="p-4 grid md:grid-cols-2 gap-6 text-center">
-                {data.map((article, index) => (
-                    <article key={index}>
-                        <Articles
-                            title={`${article.title}`}
-                            content={`${article.content}`}
-                            src={`${article.url}`}
-                            publishedAt={article.published}
-                        />
-                    </article>
-                ))}
-            </div>
-        </Suspense>
+        <div className="p-4">
+            {data.length === 0 ? (
+                <Preloader />
+            ) : (
+                <Swiper
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        }
+                    }}
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
+                >
+                    {data.map((article, index) => (
+                        <SwiperSlide key={index}>
+                            <article>
+                                <Articles
+                                    title={article.title}
+                                    content={article.content}
+                                    src={article.url}
+                                    publishedAt={article.published}
+                                />
+                            </article>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            )}
+        </div>
     );
 };
 

@@ -570,7 +570,7 @@ li {
 .brands-shadow-left {
   position: absolute;
   background: linear-gradient(to right, var(--color-surface), transparent);
-  width: 60px;
+  width: 55px;
   height: 100%;
   top: 0;
   left: 25%;
@@ -578,8 +578,13 @@ li {
 
 .brands-shadow-right {
   position: absolute;
-  background: linear-gradient(to left, var(--color-surface), transparent);
-  width: 60px;
+  background: linear-gradient(
+    to left,
+    var(--color-surface),
+    var(--color-surface),
+    transparent
+  );
+  width: 55px;
   height: 100%;
   top: 0;
   right: 25%;
@@ -617,3 +622,6 @@ li {
 @import './prose.scss';
 @import './pre.scss';
 @import 'github-markdown-css/github-markdown.css';
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
