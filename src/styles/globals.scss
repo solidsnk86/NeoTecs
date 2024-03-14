@@ -612,6 +612,28 @@ li {
   font-family: 'Geist Mono';
 }
 
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 /*--------|
 # IMPORTS |
 ---------*/

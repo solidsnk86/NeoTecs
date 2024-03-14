@@ -108,6 +108,7 @@ export default function Home() {
 
       <HomeBlock>
         <HomeBlockTitle>Últimos artículos...</HomeBlockTitle>
+        <p className="text-red-400 relative my-6">Desliza para ver artículos</p>
         <ArticleData />
       </HomeBlock>
 

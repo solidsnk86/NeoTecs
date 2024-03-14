@@ -33,6 +33,7 @@ const ArticleData = () => {
                 <Swiper
                     spaceBetween={50}
                     slidesPerView={1}
+                    pagination={{ clickable: true }}
                     breakpoints={{
                         640: {
                             slidesPerView: 2,
