@@ -1045,7 +1045,7 @@ export default function CssDoc() {
               <LinkButton
                 url="https://sass-lang.com/"
                 color="[#395692]"
-                iconName={'ArrowupRight'}
+                iconName={'ArrowUpRight'}
               >
                 Sass
               </LinkButton>
