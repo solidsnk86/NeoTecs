@@ -746,10 +746,9 @@ export default function CssDoc() {
               </html>
               `
           }</Pre>
-          <ImageComponent
-            src="/images/responsive0.gif"
-            altImage="Ejemplo responsive en CSS"
-          />
+          <div className="images-client">
+            <video src="/videos/responsive0.mp4" autoPlay loop muted />
+          </div>
           <li>
             Otra forma de manejar diferentes tamaños de pantalla es utilizando
             un nuevo atributo CSS conocido como

@@ -506,6 +506,72 @@ export default function HtmlDoc() {
 
         `
       }</Pre>
+      <SectionTitle title="Propiedades aria" />
+      <article className="list-css-span">
+        <p>
+          Es importante destacar que las propiedades aria:
+          <span>Accessible Rich Internet Applications</span>en<span>HTML</span>
+          se utilizan para mejorar la accesibilidad de las páginas web,
+          especialmente para personas con discapacidades, incluidas las personas
+          con discapacidad visual que utilizan lectores de pantalla. Estas
+          propiedades proporcionan información adicional sobre los elementos de
+          la página que puede no ser evidente solo con el marcado
+          <span>HTML</span>estándar.
+        </p>
+        <p>
+          Aquí hay algunas razones clave por las cuales se utilizan las
+          propiedades<span>aria</span>:
+        </p>
+        <ol>
+          <li>
+            <span>Accesibilidad</span>: Las propiedades aria permiten mejorar la
+            accesibilidad de los elementos de la página web al proporcionar
+            información adicional sobre su función, estado o significado. Esto
+            ayuda a los lectores de pantalla y otros dispositivos de asistencia
+            a interpretar correctamente la página y a comunicar su contenido a
+            los usuarios con discapacidades.
+          </li>
+          <li>
+            <span>Semántica mejorada</span>: Aunque<span>HTML5</span>proporciona
+            una gran cantidad de elementos semánticos, a veces no es suficiente
+            para describir completamente la estructura y el propósito de una
+            página web, especialmente en aplicaciones web complejas. Las
+            propiedades aria complementan esta semántica al proporcionar más
+            detalles sobre la función y el comportamiento de los elementos.
+          </li>
+          <li>
+            <span>Compatibilidad con tecnologías de asistencias</span>: Al
+            utilizar propiedades aria, se mejora la compatibilidad con
+            tecnologías de asistencia como lectores de pantalla, navegadores de
+            voz y otras herramientas de apoyo utilizadas por personas con
+            discapacidades.
+          </li>
+        </ol>
+        <p>
+          Algunos ejemplos comunes de propiedades aria incluyen
+          <span>aria-label</span>,<span>aria-labelledby</span>,{' '}
+          <span>aria-describedby</span>,<span>aria-hidden</span>,
+          <span>aria-checked</span>, entre otros. Estas propiedades se utilizan
+          para describir la relación entre los elementos de la página, su estado
+          actual y su función.
+        </p>
+        <p>
+          Es importante utilizar las propiedades<span>aria</span>de manera
+          adecuada y significativa para garantizar una experiencia de usuario
+          accesible y comprensible para todos los usuarios, independientemente
+          de sus capacidades.
+        </p>
+        <p className="font-semibold">Cabe destacar que:</p>
+        <p>
+          Estas propiedades no son parte del lenguaje<span>HTML</span>per se,
+          sino que son parte de un conjunto de estándares desarrollados por el
+          <span>World Wide Web Consortium (W3C)</span>para mejorar la
+          accesibilidad de las aplicaciones web. Aunque son utilizadas
+          principalmente en el contexto de<span>HTML</span>, también pueden ser
+          utilizadas en otros lenguajes de marcado web, como
+          <span>XHTML y XML</span>.
+        </p>
+      </article>
       <p className="text-text-primary">
         ¡Eso concluye nuestro contenido por aquí! ツ
       </p>

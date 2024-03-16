@@ -36,6 +36,9 @@ export const Introduction = () => {
         <li>
           <a href="#cheat-sheet-html">Cheat Sheet HTML</a>
         </li>
+        <li>
+          <a href="#propiedades-aria">Propiedades aria</a>
+        </li>
       </ol>
       <span id="introduccion" />
       <SectionTitle title="Introducción" />
