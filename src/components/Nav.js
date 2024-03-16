@@ -97,7 +97,7 @@ export const Nav = ({ className }) => {
             target="_blank"
           >
             <span
-              className={`px-[3px] pt-[2px] hidden sm:block rounded-md border bg-card text-text-primary hover:border-zinc-400 dark:border-zinc-700 duration-100 font-semibold xl:text-sm text-xs`}
+              className={`px-[3px] pt-[2px] hidden sm:block rounded-md border bg-card text-text-primary hover:bg-bg-card hover:border-zinc-400 dark:border-zinc-700 duration-100 font-semibold xl:text-sm text-xs`}
               title="Reporte de bichos"
             >
               <Bug className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
@@ -115,7 +115,7 @@ export const Nav = ({ className }) => {
             className="flex items-center space-x-2 mb-3 hover:opacity-[.8] hover:transition-all"
           >
             <span
-              className={`px-[3px] pt-[2px] hidden sm:block rounded-md border bg-card text-text-primary hover:border-zinc-400 dark:border-zinc-700 duration-100 font-semibold xl:text-sm text-xs`}
+              className={`px-[3px] pt-[2px] hidden sm:block rounded-md border bg-card text-text-primary hover:bg-bg-card hover:border-zinc-400 dark:border-zinc-700 duration-100 font-semibold xl:text-sm text-xs`}
               title="Feedback"
             >
               <MessageCircleIcon className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
@@ -133,7 +133,7 @@ export const Nav = ({ className }) => {
             className="flex items-center space-x-2 mb-3 hover:opacity-[.8] hover:transition-all"
           >
             <span
-              className={`px-[3px] pt-[2px] hidden sm:block rounded-md border bg-card text-text-primary hover:border-zinc-400 dark:border-zinc-700 duration-100 font-semibold xl:text-sm text-xs`}
+              className={`px-[3px] pt-[2px] hidden sm:block rounded-md border bg-card text-text-primary hover:bg-bg-card hover:border-zinc-400 dark:border-zinc-700 duration-100 font-semibold xl:text-sm text-xs`}
               title="Github"
             >
               <Github className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />

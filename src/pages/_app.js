@@ -37,6 +37,10 @@ function MyApp({ Component, pageProps, router }) {
           property="og:image"
           content="https:neotecs.netlify.app/images/logos/NeoTecs_Tutorial_logo.png"
         />
+        <meta
+          name="keywords"
+          content="Configuración Wifi Gobierno de San Luis, Programación Python, Programación Javascript, Conceptos básicos de programación, Conceptos avanzados de programación"
+        />
         <meta property="og:site_name" content="Neotecs" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@CalcagniGabriel" />

@@ -1,4 +1,5 @@
 import ImageComponent from '../../components/ImageComponent';
+import Indextitle from '../../components/IndexTitle';
 import LinkButton from '../../components/LinkButton';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
@@ -282,8 +283,8 @@ export default function HtmlDoc() {
       }</Pre>
       <ImageComponent src="/images/form.png" altImage="Formulario en HTML" />
       <SectionTitle title="Meta Tags" />
-      <article className="list-css-span">
-        <p>
+      <article>
+        <p className="list-css-span">
           Las etiquetas<span>{'<meta>'}</span>en HTML se utilizan para
           proporcionar información adicional sobre la página web. Estas
           etiquetas no tienen contenido visible directo en la página, pero son
@@ -293,48 +294,111 @@ export default function HtmlDoc() {
         </p>
         <ol>
           <li>
-            Descripción de la Página
-            <span>{'<meta name="description" content="..." />'}</span>:
+            <span className="font-semibold">Descripción de la Página:</span>
+            <Pre lang="html">{
+              /**html */ `
+              <meta name="description" content="..." />
+              `
+            }</Pre>
             Proporciona una breve descripción del contenido de la página. Los
             motores de búsqueda a menudo utilizan esta descripción en sus
             resultados.
           </li>
           <li>
-            Autor<span>{'<meta name="author" content="..." />'}</span>: Indica
-            el autor de la página.
+            <span className="font-semibold">Descripción del Autor:</span>
+            <Pre lang="html">{
+              /**html */ `
+              <meta name="author" content="..." />
+              `
+            }</Pre>
+            Indica el nombre del autor de la página.
           </li>
           <li>
-            Etiquetas Open Graph
-            <span>{'<meta property="og:..." content="..." />'}</span>: Se
-            utilizan para controlar cómo se muestra el contenido de una página
-            cuando se comparte en redes sociales. Esto incluye la imagen, el
-            título, la descripción, etc.
+            <span className="font-semibold">Etiquetas Open Graph:</span>
+            <Pre lang="html">{
+              /**html */ `
+              <meta property="og:..." content="..." />
+              `
+            }</Pre>
+            Se utilizan para controlar cómo se muestra el contenido de una
+            página cuando se comparte en redes sociales. Esto incluye la imagen,
+            el título, la descripción, etc.
           </li>
           <li>
-            Íconos
-            <span>
+            <span className="font-semibold">Íconos:</span>
+            <Pre lang="html">
               {
-                '<link rel="shortcut icon" href="..." /> y <link rel="apple-touch-icon" href="..." />'
+                /**html */ `
+              <link rel="shortcut icon" href="..." /> y <link rel="apple-touch-icon" href="..." />
+              `
               }
-            </span>
-            : Establecen los íconos que se mostrarán en la pestaña del navegador
-            y en dispositivos Apple, respectivamente.
+            </Pre>
+            Establecen los íconos que se mostrarán en la pestaña del navegador y
+            en dispositivos Apple, respectivamente.
           </li>
           <li>
-            Color de Tema
-            <span>{'<meta name="theme-color" content="..." />'}</span>: Define
-            el color de tema principal de la página web, que puede influir en la
-            apariencia de la interfaz del navegador en dispositivos móviles. En
-            definitiva esto cambia el color de la pestaña del navegador en la
-            cual se está visualizando la página.
+            <span className="font-semibold">Color de Tema</span>
+            <Pre lang="html">{
+              /**html */ `
+              <meta name="theme-color" content="..." />
+              `
+            }</Pre>
+            Define el color de tema principal de la página web, que puede
+            influir en la apariencia de la interfaz del navegador en
+            dispositivos móviles. En definitiva esto cambia el color de la
+            pestaña del navegador en la cual se está visualizando la página.
           </li>
           <li>
-            Tarjeta de Twitter
-            <span>{'<meta name="twitter:..." content="..." />'}</span>: Similar
-            a Open Graph, pero específico para Twitter. Permite personalizar
-            cómo se muestra el contenido cuando se comparte en esta plataforma.
+            <span className="font-semibold">Tarjeta de Twitter</span>
+            <Pre lang="html">{
+              /**html */ `
+              <meta name="twitter:..." content="..." />
+              `
+            }</Pre>
+            Similar a Open Graph, pero específico para Twitter. Permite
+            personalizar cómo se muestra el contenido cuando se comparte en esta
+            plataforma.
           </li>
         </ol>
+      </article>
+      <p className="font-semibold">
+        ¿Por qué es importante la metainformación?
+      </p>
+      <p>
+        La metainformación juega un papel significativo en mejorar el SEO de una
+        página web, haciéndola más accesible y comprensible para los motores de
+        búsqueda y las plataformas de redes sociales. La metainformación
+        adecuada ayuda a los motores de búsqueda a indexar eficazmente las
+        páginas web, mejorando su clasificación en los resultados de búsqueda.
+        Además, la metainformación como Open Graph mejora la apariencia de los
+        enlaces compartidos en las redes sociales, haciendo que el contenido sea
+        más atractivo e informativo para los usuarios.
+      </p>
+      <Indextitle>Otros Meta Tags:</Indextitle>
+      <article>
+        <p>
+          Metainformación de palabras clave: Esta metainformación incluye las
+          palabras clave relacionadas con el contenido de la página web, lo que
+          ayuda a los motores de búsqueda a indexar la página.
+        </p>
+        <Pre lang="html">{
+          /*html */ `
+            <meta name="keywords" content="palabra_clave1, palabra_clave2, palabra_clave3" />
+            `
+        }</Pre>
+        <p>
+          Metainformación de Open Graph: Esta metainformación mejora la forma en
+          que se representa una página web cuando se comparte en plataformas de
+          redes sociales, proporcionando información como el título, la
+          descripción y la imagen previa.
+        </p>
+        <Pre lang="html">{
+          /**html */ `
+          <meta property="og:title" content="Título aquí" />
+          <meta property="og:description" content="Descripción aquí" />
+          <meta property="og:image" content="url_de_la_imagen_aquí" />
+          `
+        }</Pre>
       </article>
       <SectionTitle title="Cheat Sheet HTML" />
       <ul>
