@@ -1031,7 +1031,7 @@ export default function CssDoc() {
           }</Pre>
           <span id="sass" />
           <SectionTitle title="Sass (Hojas de Estilo Sintácticamente Asombrosas)" />
-          <ul>
+          <ul className="list-css-span">
             <li>
               Hasta ahora, hemos encontrado varias formas de eliminar la
               redundancia en CSS, como moverlo a archivos separados o usar
@@ -1056,12 +1056,9 @@ export default function CssDoc() {
             <li>
               Cuando escribimos en Sass, creamos un nuevo archivo con la
               extensión
-              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
-                variables.scss
-              </span>
-              . En este archivo, podemos crear una nueva variable agregando un
-              signo de dólar
-              <span className="text-[#395692] mx-1">("$")</span>
+              <span>variables.scss</span>. En este archivo, podemos crear una
+              nueva variable agregando un signo de dólar
+              <span>("$")</span>
               antes de un nombre, seguido de dos puntos y luego un valor. Por
               ejemplo, escribiríamos
               <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
@@ -1090,37 +1087,28 @@ export default function CssDoc() {
               }
               `
           }</Pre>
-          <ul>
+          <ul className="list-css-span">
             <li>
               Para vincular este estilo a nuestro archivo HTML, no podemos
               simplemente enlazar el archivo
-              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
-                .scss
-              </span>
-              , ya que la mayoría de los navegadores web solo reconocen archivos
-              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
-                .css
-              </span>
-              . Para resolver este problema, debemos
+              <span>.scss</span>, ya que la mayoría de los navegadores web solo
+              reconocen archivos
+              <span>.css</span>. Para resolver este problema, debemos
               <LinkButton
                 url="https://sass-lang.com/install"
                 color="[#395692]"
                 iconName={'ArrowUpRight'}
               >
-                descargar un programa llamado Sass
+                descargar el programa llamado Sass
               </LinkButton>
               en nuestras computadoras. Luego, en la terminal, escribimos
-              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
-                sass variables.scss:variables.css
-              </span>
-              . Este comando compilará un archivo
+              <span>sass variables.scss:variables.css</span>. Este comando
+              compilará un archivo
               <b className="text-[#395692] mx-1">".scss"</b> llamado
               variables.scss en un archivo
               <b className="text-[#395692] mx-1">".css"</b> llamado
-              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
-                variables.css
-              </span>
-              , al cual puedes agregar un enlace en tu página HTML.
+              <span>variables.css</span>, al cual puedes agregar un enlace en tu
+              página HTML.
             </li>
             <li>
               Mientras usamos Sass, también podemos anidar físicamente nuestro
@@ -1163,7 +1151,7 @@ export default function CssDoc() {
             }
               `
           }</Pre>
-          <li>
+          <li className="list-css-span">
             Otra característica que Sass nos brinda se conoce como
             <LinkButton
               url="https://sass-lang.com/guide"
@@ -1174,15 +1162,13 @@ export default function CssDoc() {
             </LinkButton>
             . Esto nos permite crear un conjunto básico de estilos que pueden
             ser compartidos por varios elementos diferentes. Lo hacemos
-            agregando un <b className="text-[#395692] mx-1">'%'</b> antes del
-            nombre de una clase, agregando algunos estilos y luego, más
+            agregando un <span className="text-[#395692] mx-1">'%'</span> antes
+            del nombre de una clase, agregando algunos estilos y luego, más
             adelante, agregando la línea
-            <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
-              `@extend %nombre-de-clase`
-            </span>
+            <span>@extend %nombre-de-clase</span>
             al principio de algunos estilos. Por ejemplo, el siguiente código
             aplica los estilos dentro de la clase
-            <b className="text-[#395692] mx-1">"message"</b> a cada una de las
+            <span className="text-[#395692] mx-1">"message"</span> a cada una de las
             clases diferentes a continuación, lo que resulta en una página web
             que se ve de la siguiente manera:
           </li>
