@@ -37,7 +37,7 @@ export default function JavaScript() {
               <a href="#variables">Variables</a>
             </li>
             <li>
-              <a href="#queryselector">querySelector</a>
+              <a href="#queryselector">Query Selector</a>
             </li>
             <li>
               <a href="#dom">Manipulación del DOM</a>
@@ -59,7 +59,7 @@ export default function JavaScript() {
               <a href="#intervalos">Intervalos</a>
             </li>
             <li>
-              <a href="#local">Almacenamiento local</a>
+              <a href="#almacenamiento-local">Almacenamiento local</a>
             </li>
             <li>
               <a href="#apis">APIs</a>
@@ -328,7 +328,6 @@ export default function JavaScript() {
               altImage="Contador de javascript con alerta"
             />
           </article>
-          <span id="queryselector" />
           <SectionTitle title="querySelector" />
           <article>
             <p>
@@ -871,14 +870,12 @@ export default function JavaScript() {
               La consola es una herramienta útil para probar pequeños fragmentos
               de código y depurar. Puedes escribir y ejecutar código JavaScript
               en la consola, la cual se encuentra al inspeccionar un elemento en
-              tu navegador web y luego haciendo clic en{' '}
-              <span className="text-amber-400 mx-[2px]">"consola"</span> (el
-              proceso exacto puede variar según el navegador). Una herramienta
-              útil para la depuración es imprimir en la consola, lo cual puedes
-              hacer utilizando la función
-              <span className="bg-gray-800">console.log</span>. Por ejemplo, en
-              la página
-              <span className="text-amber-400 mx-1">"colors.html"</span>
+              tu navegador web y luego haciendo clic en <span>"consola"</span>{' '}
+              (el proceso exacto puede variar según el navegador). Una
+              herramienta útil para la depuración es imprimir en la consola, lo
+              cual puedes hacer utilizando la función
+              <span>console.log</span>. Por ejemplo, en la página
+              <span>"colors.html"</span>
               mencionada arriba, puedo agregar la siguiente línea:
             </p>
             <Pre lang="javascript">{
@@ -897,9 +894,9 @@ export default function JavaScript() {
               que hemos visto anteriormente, JavaScript ahora nos proporciona la
               capacidad de utilizar Funciones de Flecha, donde tenemos una
               entrada (o paréntesis cuando no hay entrada) seguida de
-              <span className="bg-gray-800">{'=>'}</span>y luego algún código
-              que se ejecutará. Por ejemplo, podemos modificar nuestro script
-              anterior para utilizar una función de flecha anónima:
+              <span>{'=>'}</span>y luego algún código que se ejecutará. Por
+              ejemplo, podemos modificar nuestro script anterior para utilizar
+              una función de flecha anónima:
             </p>
             <Pre lang="javascript">{
               /*javascript */ `
@@ -915,7 +912,7 @@ export default function JavaScript() {
             <p className="list-css-span">
               También podemos tener funciones con nombres que utilizan flechas,
               como en esta reescritura de la función
-              <span className="bg-gray-800">count</span>:
+              <span>count</span>:
             </p>
             <Pre lang="javascript">{
               /*javascript */ `
@@ -935,10 +932,10 @@ export default function JavaScript() {
               colores utilizando un menú desplegable en lugar de tres botones
               separados. Podemos detectar cambios en un elemento select
               utilizando el atributo
-              <span className="bg-gray-800">onchange</span>. En JavaScript, esto
-              es una palabra clave que cambia según el contexto en el que se
-              utiliza. En el caso de un manejador de eventos,
-              <span className="bg-gray-800">this</span>
+              <span>onchange</span>. En JavaScript, esto es una palabra clave
+              que cambia según el contexto en el que se utiliza. En el caso de
+              un manejador de eventos,
+              <span>this</span>
               se refiere al objeto que desencadenó el evento.
             </p>
             <Pre lang="javascript">{
@@ -1026,8 +1023,7 @@ export default function JavaScript() {
               estructura HTML de la página. Observa a continuación cómo dejamos
               espacio para una lista no ordenada, pero aún no agregamos
               elementos a ella. También observa que agregamos un enlace a
-              <span className="bg-gray-800">tasks.js</span>, donde escribiremos
-              nuestro JavaScript.
+              <span>tasks.js</span>, donde escribiremos nuestro JavaScript.
             </p>
             <Pre lang="html">{
               /*html */ `
@@ -1070,9 +1066,7 @@ export default function JavaScript() {
               </li>
               <li>
                 En JavaScript, usamos
-                <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
-                  .length
-                </span>
+                <span>.length</span>
                 para encontrar la longitud de objetos como cadenas y arreglos.
               </li>
               <li>
@@ -1092,7 +1086,7 @@ export default function JavaScript() {
                 </LinkButton>
                 . Luego, podemos agregar esos elementos al DOM utilizando la
                 función
-                <span className="bg-gray-800 border-b-2 text-zinc-100 border-amber-400 px-1 py-[2px] mx-1 rounded">
+                <span>
                   append
                 </span>
                 .
@@ -1182,7 +1176,6 @@ export default function JavaScript() {
             src="/images/count4.gif"
             altImage="Contador de javascript"
           />
-          <span id="local" />
           <SectionTitle title="Almacenamiento Local" />
           <article>
             <p>
@@ -1204,16 +1197,14 @@ export default function JavaScript() {
             </p>
             <ul className="list-css-span">
               <li>
-                <span className="bg-gray-800 ">localStorage.getItem(key)</span>:
-                Esta función busca una entrada en el almacenamiento local con
-                una clave dada y devuelve el valor asociado con esa clave.
+                <span>localStorage.getItem(key)</span>: Esta función busca una
+                entrada en el almacenamiento local con una clave dada y devuelve
+                el valor asociado con esa clave.
               </li>
               <li>
-                <span className="bg-gray-800 ">
-                  localStorage.setItem(key, value)
-                </span>
-                : Esta función establece una entrada en el almacenamiento local,
-                asociando la clave con un nuevo valor.
+                <span>localStorage.setItem(key, value)</span>: Esta función
+                establece una entrada en el almacenamiento local, asociando la
+                clave con un nuevo valor.
               </li>
             </ul>
             <p>

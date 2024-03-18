@@ -109,9 +109,6 @@ const LoginForm = ({ onClose }) => {
           <div className="hr-container">
             <hr />o<hr />
           </div>
-          <p className="text-center font-thin dark:text-sky-300 text-text-strong">
-            <Link href="/docs/reset">¿Te has olvidado la contraseña?</Link>
-          </p>
         </aside>
       </div>
       <ToastContainer closeButton closeOnClick />
