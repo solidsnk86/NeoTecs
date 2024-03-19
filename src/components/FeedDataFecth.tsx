@@ -52,7 +52,10 @@ export const FeedbackData = () => {
     };
 
     const sendMail = (item) => {
-        const emailLink = `mailto:${item.email}`;
+        const issues = 'https://github.com/solidsnk86/NeoTecs/issues/new'
+        const subject = 'subjetc=Gracias por tu feedback'
+        const body = `body=Hola${item.nombre}! Es un agrado para mí recibir retroalimentación en mi web, estaré analizando en breve tu comentario, puedes generar un <a href=${issues}>issue</a> en Github para discutirlo. Desde ya muchas gracias! Gabriel de NeoTecs.-`
+        const emailLink = `mailto:${item.email}?${subject}&${body}`;
         window.open(emailLink);
     };
 
