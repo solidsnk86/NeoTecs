@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import supabase from '../components/utils/supabase';
 import FormatData from './FormatDate';
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 export const FeedbackData = () => {
     const [items, setItems] = useState([]);
@@ -60,37 +61,53 @@ export const FeedbackData = () => {
     };
 
     return (
-        <>
+        <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            breakpoints={{
+                640: {
+                    slidesPerView: 1,
+                },
+                1024: {
+                    slidesPerView: 1,
+                }
+            }}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+        >
             {items.map((item) => (
-                <div
-                    className="bg-white dark:bg-zinc-800/50 border border-gray-300 dark:border-zinc-700 p-6 rounded-md shadow-md my-10 mx-auto xl:w-1/2 relative z-50"
-                    key={item.id}
-                >
-                    <div className="text-gray-600 dark:text-gray-300 text-sm xl:text-base mb-4">
-                        <p>Este feedback se ha creado el {FormatData(item.fecha)}</p>
-                        <label className="block font-bold mt-4">Mensaje:</label>
-                        <p className="my-2">{item.comentario}</p>
-                        <p className="text-right text-gray-700 dark:text-gray-400">{item.nombre}</p>
-                        <div className="flex items-center space-x-4 mt-4">
-                            <button
-                                className="text-blue-500 dark:text-blue-400 hover:underline focus:outline-none"
-                                title="Responder"
-                                onClick={() => sendMail(item)}
-                            >
-                                Responder
-                            </button>
-                            <button
-                                onClick={() => handleDelete(item.id)}
-                                className="text-red-500 dark:text-red-400 hover:underline focus:outline-none"
-                                title="Borrar comentario"
-                            >
-                                Eliminar
-                            </button>
+                <SwiperSlide>
+                    <div
+                        className="bg-white dark:bg-zinc-800/50 border border-gray-300 dark:border-zinc-700 p-6 rounded-md shadow-md my-10 mx-auto xl:w-1/2 relative z-50"
+                        key={item.id}
+                    >
+                        <div className="text-gray-600 dark:text-gray-300 text-sm xl:text-base mb-4">
+                            <p>Este feedback se ha creado el {FormatData(item.fecha)}</p>
+                            <label className="block font-bold mt-4">Mensaje:</label>
+                            <p className="my-2">{item.comentario}</p>
+                            <p className="text-right text-gray-700 dark:text-gray-400">{item.nombre}</p>
+                            <div className="flex items-center space-x-4 mt-4">
+                                <button
+                                    className="text-blue-500 dark:text-blue-400 hover:underline focus:outline-none"
+                                    title="Responder"
+                                    onClick={() => sendMail(item)}
+                                >
+                                    Responder
+                                </button>
+                                <button
+                                    onClick={() => handleDelete(item.id)}
+                                    className="text-red-500 dark:text-red-400 hover:underline focus:outline-none"
+                                    title="Borrar comentario"
+                                >
+                                    Eliminar
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </SwiperSlide>
             ))}
-        </>
+        </Swiper>
 
     );
 };
