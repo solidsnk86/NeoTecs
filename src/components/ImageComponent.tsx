@@ -12,7 +12,7 @@ const ImageComponent: React.FC<ImageComponentProps> = ({
     className,
     altImage,
 }) => {
-    const imageAlt = `${altImage}` + `,url de la imagen: ${src}`;
+    const imageAlt = `${altImage}` + `, url de la imagen: ${src}`;
     return (
         <figure className="images-client">
             <img

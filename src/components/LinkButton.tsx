@@ -9,9 +9,10 @@ interface LinkInterfaceProps {
     color: string,
     iconName?: string
     target?: string
+    download?: boolean
 }
 
-export const LinkButton: React.FC<LinkInterfaceProps> = ({ url, children, className, color, iconName, target }) => {
+export const LinkButton: React.FC<LinkInterfaceProps> = ({ url, children, className, color, iconName, target, download }) => {
     const Icon = icons[iconName];
 
     return (
@@ -19,6 +20,8 @@ export const LinkButton: React.FC<LinkInterfaceProps> = ({ url, children, classN
             <Link href={`${url}`} className={`text-${color} underline link dark:hover:brightness-200 hover:brightness-150 transition-colors duration-300`}
                 target={`_blank` ? target : null}
                 rel='noopener'
+                download={download}
+
             >
                 {children}
                 {Icon && <Icon className={`h-[10px] xl:h-[14px] text-${color} link-icon`} />}
