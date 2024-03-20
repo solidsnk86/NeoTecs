@@ -290,12 +290,12 @@ const reviews = [
         link: 'https://developer.mozilla.org/es/docs/Glossary/SQL',
         logo: (
             <figure>
-            <img
-              src="/images/icons/sql-database-generic-svgrepo-com.svg"
-              className="h-[60px]"
-              alt="Imagen de logo SQL"
-            />
-          </figure>
+                <img
+                    src="/images/icons/sql-database-generic-svgrepo-com.svg"
+                    className="h-[60px]"
+                    alt="Imagen de logo SQL"
+                />
+            </figure>
         )
     }
 ];
@@ -317,7 +317,7 @@ const ReviewCard = ({
             rel="noopener noreferrer"
             className="relative min-w-[250px] flex justify-center items-center overflow-hidden rounded-xl bg-zinc-800/50 w-full py-4 px-14 group review-cards duration-300"
         >
-            <div className="flex flex-row items-center justify-center w-full h-auto gap-2">
+            <div className="flex flex-row items-center justify-center w-full h-auto gap-4">
                 {logo}
             </div>
         </a>
