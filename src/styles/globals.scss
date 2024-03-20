@@ -564,7 +564,7 @@ li {
 }
 
 /*
-|||| SHADOW LANGUAGES LOGOS
+|||| SHADOW MARQUEE LOGOS
 */
 
 .brands-shadow-left {
@@ -611,6 +611,19 @@ li {
 .font-geist {
   font-family: 'Geist Mono';
 }
+
+/*
+### HOVER MARQUEE LOGOS 
+*/
+
+.review-cards:hover {
+  transform: scale(1.2);
+  transition-duration: 0.4s;
+}
+
+/*
+### Swiper
+*/
 
 .swiper-pagination {
   position: absolute;
