@@ -2,6 +2,7 @@
 import React from 'react';
 import { ReactNode } from 'react';
 import { Marquee } from '../components/magicui/marquee';
+import { title } from 'process';
 
 const reviews = [
     {
@@ -284,12 +285,27 @@ const reviews = [
             </svg>
         ),
     },
+    {
+        name: 'Sql',
+        link: 'https://developer.mozilla.org/es/docs/Glossary/SQL',
+        logo: (
+            <figure>
+            <img
+              src="/images/icons/sql-database-generic-svgrepo-com.svg"
+              className="h-[60px]"
+              alt="Imagen de logo SQL"
+            />
+          </figure>
+        )
+    }
 ];
 
 const ReviewCard = ({
+    name,
     logo,
     link,
 }: {
+    name: string
     logo: string | ReactNode;
     link: string;
 }) => {
@@ -297,6 +313,7 @@ const ReviewCard = ({
         <a
             href={link}
             target="_blank"
+            title={`Ver la documentación de ${name}`}
             rel="noopener noreferrer"
             className="relative min-w-[250px] flex justify-center items-center overflow-hidden rounded-xl bg-zinc-800/50 w-full py-4 px-14 group review-cards duration-300"
         >
