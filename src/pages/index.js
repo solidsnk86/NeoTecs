@@ -99,12 +99,12 @@ export default function Home() {
 
       <MarqueeLogos />
 
-      <div className="container flex items-center h-[56vh] justify-center mx-auto relative">
+      <div className="container flex items-center h-[58vh] justify-center mx-auto relative">
         <span
-          className="absolute w-px h-[45%] bg-gradient-to-t from-zinc-500 via-zinc-500/50 to-transparent"
+          className="absolute w-px h-[45%] top-5 bg-gradient-to-t from-zinc-500 via-zinc-500/50 to-transparent"
           aria-hidden="true"
         />
-        <span className="absolute bottom-[22%] z-10 flex items-center justify-center w-16 h-16 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200">
+        <span className="absolute bottom-[31%] z-50 flex items-center justify-center w-16 h-16 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-purple-400/30 group-hover:border-zinc-200">
           <BookOpen className="w-10 h-10 mt-1 text-purple-400" />
         </span>
         <h1 className="absolute bottom-8 font-bold text-3xl">
@@ -126,7 +126,7 @@ export default function Home() {
       <HomeBlock>
         <HomeBlockTitle>Últimos artículos...</HomeBlockTitle>
         <p className="text-red-400 relative my-6 font-semibold">
-          Desliza para ver artículos
+          Desliza para ver los artículos
         </p>
         <ArticleData />
       </HomeBlock>
