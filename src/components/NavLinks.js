@@ -15,7 +15,7 @@ export function NavLinks() {
     <div className="w-80 px-4 md:px-8 hidden lg:block">
       <div className="sticky top-4">
         <div
-          title="Volvar atrás"
+          title="Volver atrás"
           className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 w-fit mt-3 hover:border-zinc-200 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300"
         >
           <ArrowLeftIcon
