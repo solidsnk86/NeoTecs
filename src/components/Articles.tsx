@@ -35,7 +35,7 @@ export const Articles = ({
                     url={src}
                     iconName="ArrowRight"
                     color="gray-100"
-                    className="px-2 py-1 text-sm bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded hover:border-zinc-300 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300"
+                    className="px-2 py-[4.5px] text-sm text-text-primary bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded hover:border-zinc-300 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300"
                     underline={false}
                 >
                     Ir al artículo

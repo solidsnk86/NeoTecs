@@ -101,10 +101,10 @@ export default function Home() {
 
       <div className="container flex items-center h-[58vh] justify-center mx-auto relative my-2">
         <span
-          className="absolute w-px h-[47%] xl:h-[45%] xl:top-5 top-4 bg-gradient-to-t from-zinc-500 via-zinc-500/50 to-transparent"
+          className="absolute w-px h-[46%] xl:h-[42%] xl:top-5 top-[14px] bg-gradient-to-t from-zinc-500 via-zinc-500/50 to-transparent"
           aria-hidden="true"
         />
-        <span className="absolute xl:bottom-[31%] bottom-[38%] z-50 flex items-center justify-center w-16 h-16 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-purple-400/30 group-hover:border-zinc-200">
+        <span className="absolute xl:bottom-[31%] bottom-[37%] z-50 flex items-center justify-center w-[75px] h-[75px] text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-purple-400/30 group-hover:border-zinc-200">
           <BookOpen className="w-10 h-10 mt-1 text-purple-400 text-shadow-sm shado-purple-300" />
         </span>
         <div className="justify-center mx-auto flex">
