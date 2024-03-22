@@ -73,7 +73,7 @@ export default function Home() {
 
       <HomeBlock>
         <HomeBlockTitle>Características</HomeBlockTitle>
-        <div className="grid md:grid-cols-2 gap-4 md:gap-8 text-center cards-client">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8 text-center">
           {cardContent.map((card, index) => (
             <div
               key={index}
@@ -101,18 +101,20 @@ export default function Home() {
 
       <div className="container flex items-center h-[58vh] justify-center mx-auto relative my-2">
         <span
-          className="absolute w-px h-[45%] top-5 bg-gradient-to-t from-zinc-500 via-zinc-500/50 to-transparent"
+          className="absolute w-px h-[45%] xl:top-5 top-4 bg-gradient-to-t from-zinc-500 via-zinc-500/50 to-transparent"
           aria-hidden="true"
         />
-        <span className="absolute bottom-[31%] z-50 flex items-center justify-center w-16 h-16 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-purple-400/30 group-hover:border-zinc-200">
-          <BookOpen className="w-10 h-10 mt-1 text-purple-400" />
+        <span className="absolute xl:bottom-[31%] bottom-[38%] z-50 flex items-center justify-center w-16 h-16 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-purple-400/30 group-hover:border-zinc-200">
+          <BookOpen className="w-10 h-10 mt-1 text-purple-400 text-shadow-sm shado-purple-300" />
         </span>
-        <h1 className="absolute bottom-10 font-bold text-4xl">
-          Listo para empezar?
-        </h1>
-        <p className="absolute bottom-0 text-text-second">
-          Ahora que has sido presentado al curso, vamos a sumergirnos.
-        </p>
+        <div className="justify-center mx-auto flex">
+          <h1 className="absolute xl:bottom-10 bottom-14 font-bold text-4xl">
+            Listo para empezar?
+          </h1>
+          <p className="absolute bottom-[-10px] text-text-second text-balance text-center">
+            Ahora que has sido presentado al curso, vamos a sumergirnos.
+          </p>
+        </div>
       </div>
 
       <div className="my-20 justify-center mx-auto flex">
