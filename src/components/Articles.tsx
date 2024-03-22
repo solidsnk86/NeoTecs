@@ -1,5 +1,6 @@
 import { githubAvatar } from './Constants';
 import LinkButton from './LinkButton';
+import { SharerComponent } from './SharerComponent';
 
 export const Articles = ({
     title,
@@ -28,15 +29,18 @@ export const Articles = ({
             </header>
             <p className="text-xl font-bold ">{title}</p>
             <p className='text-text-second'>{content}</p>
-            <LinkButton
-                url={src}
-                iconName="ArrowRight"
-                color="gray-100"
-                className="absolute bottom-4 right-4 px-2 py-1 border dark:border-zinc-800 rounded-lg dark:hover:border-zinc-600 text-sm"
-                underline={false}
-            >
-                Ir al artículo
-            </LinkButton>
+            <div className='absolute bottom-4 right-4'>
+                <SharerComponent setTitle={title} setText={content} setUrl={src} className='absolute right-[120px] top-[1px]' />
+                <LinkButton
+                    url={src}
+                    iconName="ArrowRight"
+                    color="gray-100"
+                    className="px-2 py-1 text-sm bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded hover:border-zinc-300 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300"
+                    underline={false}
+                >
+                    Ir al artículo
+                </LinkButton>
+            </div>
         </div>
     );
 };
