@@ -30,7 +30,7 @@ export const Articles = ({
             <p className="text-xl font-bold ">{title}</p>
             <p className='text-text-second'>{content}</p>
             <div className='absolute bottom-4 right-4'>
-                <SharerComponent setTitle={title} setText={content} setUrl={src} className='absolute right-[120px] top-[1px]' />
+                <SharerComponent setTitle={title} setText={content} setUrl={src} className='px-1 py-[5px] absolute top-[1px] right-[120px]' />
                 <LinkButton
                     url={src}
                     iconName="ArrowRight"

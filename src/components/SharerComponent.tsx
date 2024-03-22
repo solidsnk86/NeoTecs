@@ -26,11 +26,11 @@ export const SharerComponent = ({
     };
     return (
         <div
-            className={`${className} w-fit flex px-[2px] py-[5px] bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded hover:border-zinc-300 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300`}
+            className={`${className} w-fit flex bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded hover:border-zinc-300 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300`}
             onClick={share}
             title={`Compartir artículo: ${setTitle}`}
         >
-            <Share className="w-[17px] h-[17px] text-zinc-100 mx-1 inline" />
+            <Share className="w-[17px] h-[17px] text-text-primary mx-1 inline" />
         </div>
     );
 };
