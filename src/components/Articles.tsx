@@ -20,7 +20,7 @@ export const Articles = ({
                 <img
                     src={githubAvatar}
                     className="rounded-full w-[33px] h-[33px]"
-                    alt="Avatar profile"
+                    alt="Avatar Github profile"
                 />
                 <p className="mx-2 mt-[6px] text-text-second font-semibold text-sm font-geist">
                     Gabriel C.
@@ -31,8 +31,9 @@ export const Articles = ({
             <LinkButton
                 url={src}
                 iconName="ArrowRight"
-                color="red-400"
-                className="absolute bottom-4 right-4"
+                color="gray-100"
+                className="absolute bottom-4 right-4 px-2 py-1 border dark:border-zinc-800 rounded-lg dark:hover:border-zinc-600 text-sm"
+                underline={false}
             >
                 Ir al artículo
             </LinkButton>
