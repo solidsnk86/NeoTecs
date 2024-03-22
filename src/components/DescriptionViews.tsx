@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import FormatDate from './FormatDate';
-import { youTube } from '../components/Constants';
+import { youTube } from './Constants';
 
-export const DescriptionViews = ({ videoId }) => {
+export const DescriptionViews = ({ videoId }: { videoId: string }) => {
   const [views, setViews] = useState(0);
   const [datePublished, setDatePublished] = useState('');
 

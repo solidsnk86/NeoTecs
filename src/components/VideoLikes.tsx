@@ -45,7 +45,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
     if (navigator.share) {
       navigator.share({
         title: 'Neotecs Informática',
-        text: `Aprende como realizar una configuración Wi-Fi correctamente.`,
+        text: cpe,
         url: `https://www.youtube.com/watch?v=${videoId}=1s`,
       });
     }
@@ -87,7 +87,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
         </span>
         <div
           className="text-[#575757] bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full h-[28px] relative top-[7px] px-[6px]"
-          onClick={ShareButton}
+          onClick={() => ShareButton()}
         >
           <ReplyOutlinedIcon
             fontSize="small"
