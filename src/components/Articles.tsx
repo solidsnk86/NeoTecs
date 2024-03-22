@@ -14,7 +14,7 @@ export const Articles = ({
     publishedAt: number;
 }) => {
     return (
-        <div className="article-card xl:h-[350px] h-[410px] relative text-left text-wrap space-y-2 dark:bg-[#09090B] bg-[#FFFFFF] p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow z-50 aspect-square">
+        <div className="article-card h-[350px] relative text-left text-wrap space-y-2 dark:bg-[#09090B] bg-[#FFFFFF] p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow z-50">
             <span className="float-left text-xs">Publicado el {publishedAt}</span>
             <br />
             <header className="flex">
