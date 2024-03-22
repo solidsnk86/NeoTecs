@@ -14,7 +14,7 @@ export const Articles = ({
     publishedAt: number;
 }) => {
     return (
-        <div className="article-card xl:h-[350px] h-[410px] relative text-left text-wrap space-y-2 dark:bg-[#09090B] bg-[#FFFFFF] p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow z-50">
+        <div className="article-card xl:h-[350px] h-[410px] relative text-left text-wrap space-y-2 dark:bg-[#09090B] bg-[#FFFFFF] p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow z-50 aspect-square">
             <span className="float-left text-xs">Publicado el {publishedAt}</span>
             <br />
             <header className="flex">
@@ -28,7 +28,7 @@ export const Articles = ({
                 </p>
             </header>
             <p className="text-xl font-bold ">{title}</p>
-            <p className='text-text-second'>{content}</p>
+            <p className='text-text-second line-clamp-4 list-css-span'>{content}</p>
             <div className='absolute bottom-4 right-4'>
                 <SharerComponent setTitle={title} setText={content} setUrl={src} className='px-1 py-[5px] absolute top-[1px] right-[120px]' />
                 <LinkButton
