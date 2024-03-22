@@ -92,14 +92,14 @@ export default function Home() {
           <article className=" z-50">
             <p className="text-md space-y-3 font-bold z-50">Para aprender...</p>
             <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full z-50" />
-            <p>{aboutNeo}</p>
+            <p className="text-zinc-400">{aboutNeo}</p>
           </article>
         </div>
       </HomeBlock>
 
       <MarqueeLogos />
 
-      <div className="container flex items-center h-[58vh] justify-center mx-auto relative">
+      <div className="container flex items-center h-[58vh] justify-center mx-auto relative my-2">
         <span
           className="absolute w-px h-[45%] top-5 bg-gradient-to-t from-zinc-500 via-zinc-500/50 to-transparent"
           aria-hidden="true"
@@ -107,7 +107,7 @@ export default function Home() {
         <span className="absolute bottom-[31%] z-50 flex items-center justify-center w-16 h-16 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-purple-400/30 group-hover:border-zinc-200">
           <BookOpen className="w-10 h-10 mt-1 text-purple-400" />
         </span>
-        <h1 className="absolute bottom-8 font-bold text-3xl">
+        <h1 className="absolute bottom-10 font-bold text-4xl">
           Listo para empezar?
         </h1>
         <p className="absolute bottom-0 text-text-second">
