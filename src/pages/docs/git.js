@@ -285,7 +285,7 @@ export default function GitDocs() {
                 en el que se agregó la misma línea de dos maneras diferentes:
               </li>
             </ul>
-            <Pre lang="javascript">{
+            <Pre lang="output example">{
               /*git */ `
               a = 1
               <<<<< HEAD
