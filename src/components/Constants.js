@@ -67,6 +67,61 @@ export const cardContent = [
   },
 ];
 
+export const links = [
+  {
+    href: '/docs/program',
+    title: 'Html',
+  },
+  {
+    href: '/docs/css',
+    title: 'Css',
+  },
+  {
+    href: '/docs/git',
+    title: 'Git',
+  },
+  {
+    href: '/docs/python',
+    title: 'Python',
+  },
+  {
+    href: '/docs/django',
+    title: 'Django',
+  },
+  {
+    href: '/docs/javascript',
+    title: 'Javascript',
+  },
+  {
+    href: '/docs/sql',
+    title: 'SQL',
+  },
+  {
+    href: '/docs/ui-ux',
+    title: 'UI/UX',
+  },
+  {
+    href: '/docs/testing',
+    title: 'CI/DI',
+  },
+  {
+    href: 'scalability',
+    title: 'Escalabilidad',
+  },
+  {
+    href: '/docs/scraping',
+    title: 'Web Scraping',
+  },
+  {
+    href: '/docs/markdown-render',
+    title: 'MarkDown Render',
+  },
+  {
+    href: '/docs/google-sheets',
+    title: 'Google Sheets',
+  },
+];
+
 export const aboutNeo =
   'Este curso de NeoTecs se enfoca en el diseño e implementación de aplicaciones web con Python, JavaScript y SQL, utilizando frameworks como React, Django y Bootstrap. Los temas incluyen diseño de bases de datos, escalabilidad, seguridad y experiencia de usuario. Los estudiantes adquieren habilidades en la escritura de APIs, creación de interfaces interactivas y uso de servicios en la nube como GitHub, Vercel y Netlify para diseñar e implementar aplicaciones web. Entre otros ejemplos...';
 

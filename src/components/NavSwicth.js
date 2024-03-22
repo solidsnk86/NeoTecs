@@ -1,63 +1,9 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { links } from './Constants';
 
 export const NavSwitch = ({ inline }) => {
   const router = useRouter();
-
-  const links = [
-    {
-      href: '/docs/program',
-      title: 'Html',
-    },
-    {
-      href: '/docs/css',
-      title: 'Css',
-    },
-    {
-      href: '/docs/git',
-      title: 'Git',
-    },
-    {
-      href: '/docs/python',
-      title: 'Python',
-    },
-    {
-      href: '/docs/django',
-      title: 'Django',
-    },
-    {
-      href: '/docs/javascript',
-      title: 'Javascript',
-    },
-    {
-      href: '/docs/sql',
-      title: 'SQL',
-    },
-    {
-      href: '/docs/ui-ux',
-      title: 'UI/UX',
-    },
-    {
-      href: '/docs/testing',
-      title: 'CI/DI',
-    },
-    {
-      href: 'scalability',
-      title: 'Escalabilidad',
-    },
-    {
-      href: '/docs/scraping',
-      title: 'Web Scraping',
-    },
-    {
-      href: '/docs/markdown-render',
-      title: 'MarkDown Render',
-    },
-    {
-      href: '/docs/google-sheets',
-      title: 'Google Sheets',
-    },
-  ];
 
   const isActive = (link) => link.href === router.asPath;
 
