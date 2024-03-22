@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BookOpen } from 'lucide-react';
 import { Nav } from '../components/Nav';
 import { HomeHeader } from '../components/HomeHeader';
 import { Footer } from '../components/Footer';
@@ -10,10 +11,10 @@ import { CpeBrands } from '../components/CpeBrands';
 import { cardContent, aboutNeo } from '../components/Constants';
 import ArticleData from '../components/ArticleData';
 
-export const HomeBlock = ({ children }) => {
+export const HomeBlock = ({ children, className }) => {
   return (
     <div
-      className={`max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16 z-20`}
+      className={`${className} max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16 z-20`}
     >
       {children}
     </div>
@@ -98,6 +99,22 @@ export default function Home() {
 
       <MarqueeLogos />
 
+      <div className="container flex items-center h-[56vh] justify-center mx-auto relative">
+        <span
+          className="absolute w-px h-[45%] bg-gradient-to-t from-zinc-500 via-zinc-500/50 to-transparent"
+          aria-hidden="true"
+        />
+        <span className="absolute bottom-[22%] z-10 flex items-center justify-center w-16 h-16 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200">
+          <BookOpen className="w-10 h-10 mt-1 text-purple-400" />
+        </span>
+        <h1 className="absolute bottom-8 font-bold text-3xl">
+          Listo para empezar?
+        </h1>
+        <p className="absolute bottom-0 text-text-second">
+          Ahora que has sido presentado al curso, vamos a sumergirnos.
+        </p>
+      </div>
+
       <div className="my-20 justify-center mx-auto flex">
         <Link href="/docs/program">
           <ShimmerButton shimmerDuration="1.8s" size="large">
@@ -108,7 +125,9 @@ export default function Home() {
 
       <HomeBlock>
         <HomeBlockTitle>Últimos artículos...</HomeBlockTitle>
-        <p className="text-red-400 relative my-6">Desliza para ver artículos</p>
+        <p className="text-red-400 relative my-6 font-semibold">
+          Desliza para ver artículos
+        </p>
         <ArticleData />
       </HomeBlock>
 
