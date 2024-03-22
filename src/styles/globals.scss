@@ -263,6 +263,39 @@ video {
   border-radius: 10px;
 }
 
+.cards-client {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: -99;
+
+  view-timeline-name: --card;
+  view-timeline-axis: block;
+
+  animation-timeline: --card;
+  animation-name: slideIn;
+
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(5%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 /* ==============> HR <=============== */
 
 .hr-container {

@@ -72,7 +72,7 @@ export default function Home() {
 
       <HomeBlock>
         <HomeBlockTitle>Características</HomeBlockTitle>
-        <div className="grid md:grid-cols-2 gap-4 md:gap-8 text-center">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8 text-center cards-client">
           {cardContent.map((card, index) => (
             <div
               key={index}

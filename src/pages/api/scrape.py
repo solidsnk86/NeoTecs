@@ -9,7 +9,7 @@ CORS(app, resources ={r"/api/*": {"origins": "*"}})
 @app.route('/api/scrape', methods=['GET'])
 def scrape():
     try:
-        url = 'https://cv-gec.vercel.app'
+        url = 'https://portfolio-mgc.vercel.app'
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
 
