@@ -50,8 +50,7 @@ export default function Scraper() {
             {Array.isArray(scrape.images[index]) &&
               scrape.images[index].map((image, i) => (
                 <li key={i}>
-                  <p>Alt: {image.alt}</p>
-                  <p>Src: {image.src}</p>
+                  <img src={image.src} alt={image.alt} />
                 </li>
               ))}
           </ul>

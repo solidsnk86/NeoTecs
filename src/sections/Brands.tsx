@@ -2,7 +2,6 @@
 import React from 'react';
 import { ReactNode } from 'react';
 import { Marquee } from '../components/magicui/marquee';
-import { title } from 'process';
 
 const reviews = [
     {
