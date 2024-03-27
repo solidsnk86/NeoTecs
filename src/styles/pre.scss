@@ -4,6 +4,13 @@ pre {
   color: #006e24;
 }
 
+.custom-pre {
+  font-family: 'Cascadia Code PL';
+  font-size: small;
+  font-weight: bold;
+  top: 1px;
+}
+
 @keyframes translateRight {
   0% {
     transform: translateX(-60px);

@@ -132,7 +132,7 @@ export const microlink = 'https://geolocation.microlink.io';
 
 export const compartirWhatsapp = () => {
   const url = window.location.href;
-  const message = `Explora ésta página web dónde aprenderás a configurar tus dispositivos Wifi 📡 y Programación 👨‍💻: ${url}`;
+  const message = `Explora ésta página web dónde aprenderás a configurar tus dispositivos inalámbricos 📡 y encontrarás artículos para aprender a programar 👨‍💻: ${url}`;
   const encodeMessage = encodeURIComponent(message);
   window.open(`https://wa.me/?text=${encodeMessage}`);
 };
@@ -173,5 +173,5 @@ export default function sendWhatsapp(id, price) {
 }
 
 export const portfolioUrl = 'https://portfolio-mgc.vercel.app/';
-
+export const favicon = '/images/icons/favicon-neoctecs2.png';
 export const currentYear = new Date().getFullYear();

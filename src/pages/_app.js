@@ -6,6 +6,7 @@ import { renderToString } from 'react-dom/server';
 import { NeoTecsIcon } from '../components/Icons/NeoTecsIcon';
 import { useGA } from '../shared/use-ga';
 import '../styles/globals.scss';
+import { favicon } from '../components/Constants';
 
 function MyApp({ Component, pageProps, router }) {
   const title = Component.title || 'Neotecs - Informática';
@@ -23,11 +24,11 @@ function MyApp({ Component, pageProps, router }) {
       <Head>
         <link
           rel="shortcut icon"
-          href={`data:image/svg+xml,${encodeURIComponent(neoTecsIconString)}`}
+          href={favicon}
         />
         <link
           rel="apple-touch-icon"
-          href={`data:image/svg+xml,${encodeURIComponent(neoTecsIconString)}`}
+          href={favicon}
         />
         <title>{title}</title>
         <meta property="og:title" content={title} />
