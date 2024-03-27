@@ -1,4 +1,3 @@
-import { githubAvatar } from './Constants';
 import LinkButton from './LinkButton';
 import { SharerComponent } from './SharerComponent';
 
@@ -19,18 +18,18 @@ export const Articles = ({
             <br />
             <header className="flex">
                 <img
-                    src={githubAvatar}
+                    src={'/images/logos/NeoTecs_Tutorial_logo.png'}
                     className="rounded-full w-[33px] h-[33px]"
                     alt="Avatar Github profile"
                 />
                 <p className="mx-2 mt-[6px] text-text-second font-semibold text-sm font-geist">
-                    Gabriel C.
+                    NeoTecs
                 </p>
             </header>
             <p className="text-xl font-bold ">{title}</p>
             <p className='text-text-second line-clamp-4 list-css-span'>{content}</p>
             <div className='absolute bottom-4 right-4'>
-                <SharerComponent setTitle={title} setText={content} setUrl={src} className='absolute top-[-2px] right-[106px] cursor-pointer hover:opacity-70' />
+                <SharerComponent setTitle={title} setText={content} setUrl={src} className='absolute top-[-2px] right-[100px] cursor-pointer hover:opacity-70' />
                 <LinkButton
                     url={src}
                     iconName="ArrowRight"
