@@ -41,19 +41,19 @@ export const ShimmerButton = ({
 			)}
 			{...props}
 		>
-			{/* spark container */}
+			{/* contenedor de la chispa */}
 			<div className='absolute inset-0 overflow-visible [container-type:size]'>
-				{/* spark */}
+				{/* chispa */}
 				<div className='absolute inset-0 h-[100cqh] animate-slide [aspect-ratio:1] [border-radius:0] [mask:none] '>
-					{/* spark before */}
+					{/* chispa before */}
 					<div className='absolute inset-[-100%] w-auto rotate-0 animate-spin [background:conic-gradient(from_calc(270deg-(var(--spread)*0.5)),transparent_0,hsl(0_0%_100%/1)_var(--spread),transparent_var(--spread))] [translate:0_0]' />
 				</div>
 			</div>
 
-			{/* backdrop */}
+			{/* fondo */}
 			<div className='absolute [background:var(--button-variant)] [border-radius:var(--radius)] [inset:var(--cut)]' />
-			{/* content */}
 
+			{/* contenido */}
 			<div className='relative z-10 flex text-lg font-semibold text-text-variant pointer-events-none md:text-xl'>
 				{children}
 			</div>
