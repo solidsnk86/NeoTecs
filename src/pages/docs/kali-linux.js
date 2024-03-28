@@ -366,7 +366,6 @@ export default function Page() {
             <Pre lang="shell bash">{
               /**shell bash */ `
                 linset
-
                 `
             }</Pre>
           </article>
