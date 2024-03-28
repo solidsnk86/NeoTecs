@@ -233,10 +233,10 @@ export default function JavaScript() {
           </article>
           <Pre lang="javascript">{
             /*javascript */ `
-                function hola() {
-                    alert('Hola, Mundanos!')
-                }
-                `
+            function hola() {
+              alert("Hola mundanos!")
+            }    
+            `
           }</Pre>
           <p>
             Ahora, trabajemos en ejecutar esta función cada vez que se haga clic
@@ -1086,10 +1086,7 @@ export default function JavaScript() {
                 </LinkButton>
                 . Luego, podemos agregar esos elementos al DOM utilizando la
                 función
-                <span>
-                  append
-                </span>
-                .
+                <span>append</span>.
               </li>
             </ul>
             <Pre lang="javascript">{

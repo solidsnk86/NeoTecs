@@ -32,25 +32,27 @@ export const Pre = ({ children, lang = '' }) => {
 
   return (
     <div className="relative">
-      <p className="bg-[#1E1E1E] translate-y-[23px] text-amber-500 text-xs uppercase font-bold pl-4 p-1 rounded-md">
-        {lang}
-      </p>
-      <span
-        onClick={handleCopyClick}
-        title="Copiar"
-        className="text-xs absolute z-10 top-[26px] right-[8px] cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all duration-100"
-      >
-        {copied ? (
-          <div className="check-effect">
-            Copiado!
-            <Check className="w-[14px] text-lime-400 h-[14px] inline mx-1 mb-[2px]" />
-          </div>
-        ) : (
-          <Copy className="w-[14px] h-[14px] inline mx-1 copy-effect" />
-        )}
-      </span>
+      <header className="">
+        <p className="bg-[#282C34] translate-y-[23px] text-amber-500 text-xs uppercase font-bold pl-4 p-1 rounded-md">
+          {lang}
+        </p>
+        <span
+          onClick={handleCopyClick}
+          title="Copiar"
+          className="text-xs absolute z-10 top-[26px] right-[8px] cursor-pointer text-zinc-100 hover:opacity-[.7] transition-all duration-100"
+        >
+          {copied ? (
+            <div className="check-effect">
+              Copiado!
+              <Check className="w-[14px] text-lime-400 h-[14px] inline mx-1 mb-[2px]" />
+            </div>
+          ) : (
+            <Copy className="w-[14px] h-[14px] inline mx-1 copy-effect" />
+          )}
+        </span>
+      </header>
       <Highlight
-        theme={themes.vsDark}
+        theme={themes.oneDark}
         code={removeIndent(children)}
         language={lang.toLowerCase()}
       >

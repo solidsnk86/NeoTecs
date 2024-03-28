@@ -14,6 +14,7 @@ module.exports = {
           'Consolas',
           'courier new',
           'monospace',
+          'Cascadia Code PL'
         ],
       },
       colors: {

@@ -1,14 +1,13 @@
 pre {
   position: relative;
-  background-color: #181818;
+  background-color: #23272e;
   color: #006e24;
 }
 
 .custom-pre {
   font-family: 'Cascadia Code PL';
-  font-size: small;
+  font-size: 14px;
   font-weight: bold;
-  top: 2px;
 }
 
 @keyframes translateRight {
