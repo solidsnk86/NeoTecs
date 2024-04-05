@@ -370,22 +370,6 @@ video {
   fill: var(--mikrotik-icon);
 }
 
-.link-icon {
-  display: inline;
-  height: 0.9em;
-  width: 0.9em;
-  font-weight: 200;
-  transition: transform 0.2s ease-out;
-}
-
-@media screen and (min-width: 400px) {
-  .link-icon {
-    height: 0.8em;
-    width: 0.8em;
-    margin-inline: 3px;
-    margin-bottom: 3px;
-  }
-}
 .chain-link {
   padding-bottom: 3px;
   color: cornflowerblue;

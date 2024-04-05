@@ -210,18 +210,27 @@ export default function HtmlDoc() {
         `
         }
       </Pre>
-      <p>
-        Para poder renderizar ésto en el navegador, vamos a instalar un
-        extensión de Visual Studio Code llamada,
+      <p>Para visualizarlo les doy dos extensiones de ejemplo:</p>
+      <ol>
+        <li>
+        Esta extensión es de Microsoft llamada
+        <LinkButton url='vscode:extension/ms-vscode.live-server' color='sky-400' iconName='Cast'>
+        Live Preview
+        </LinkButton>
+        </li>
+        <li>
+        Esta otra extensión es
+        extensión para Visual Studio Code llamada,
         <LinkButton
-          url="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
+          url="vscode:extension/ritwickdey.LiveServer"
           color="[tomato]"
           iconName={'Puzzle'}
         >
           Live Server
         </LinkButton>
         .
-      </p>
+        </li>
+      </ol>
       <p>Cuando se renderiza esta página, veremos algo como ésto:</p>
       <ImageComponent
         src="/images/html-elements-commit.png"
