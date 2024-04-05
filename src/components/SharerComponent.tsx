@@ -30,7 +30,7 @@ export const SharerComponent = ({
             onClick={share}
             title={`Compartir artículo: ${setTitle}`}
         >
-            <Share className="w-[14px] h-[14px] text-text-primary mx-1 inline" />
+            <Share className="w-[14px] h-[14px] text-text-primary mx-2 translate-y-[0.5px] inline" />
         </div>
     );
 };

@@ -220,15 +220,14 @@ export default function HtmlDoc() {
         </li>
         <li>
         Esta otra extensión es
-        extensión para Visual Studio Code llamada,
+        extensión para Visual Studio Code llamada
         <LinkButton
           url="vscode:extension/ritwickdey.LiveServer"
           color="[tomato]"
-          iconName={'Puzzle'}
+          iconName="Radio"
         >
           Live Server
         </LinkButton>
-        .
         </li>
       </ol>
       <p>Cuando se renderiza esta página, veremos algo como ésto:</p>
