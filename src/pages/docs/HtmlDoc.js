@@ -219,8 +219,7 @@ export default function HtmlDoc() {
         </LinkButton>
         </li>
         <li>
-        Esta otra extensión es
-        extensión para Visual Studio Code llamada
+        Esta otra extensión para Visual Studio Code llamada
         <LinkButton
           url="vscode:extension/ritwickdey.LiveServer"
           color="[tomato]"
