@@ -1,6 +1,6 @@
 import { ArrowLeftIcon } from 'lucide-react';
-import { Footer } from '../../components/Footer';
 import { FeedbackData } from '../../components/FeedDataFecth';
+import { Footer } from '../../components/Footer';
 import { Nav } from '../../components/Nav';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import HeaderTitle from '../../components/HeaderTitlte';

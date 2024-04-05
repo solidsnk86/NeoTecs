@@ -127,7 +127,7 @@ export default function Home() {
 
       <HomeBlock>
         <HomeBlockTitle>Últimos artículos...</HomeBlockTitle>
-        <p className="text-red-400 relative my-6 font-semibold">
+        <p className="text-text-primary relative my-6 font-semibold">
           Desliza para ver los artículos
         </p>
         <ArticleData />

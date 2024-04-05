@@ -321,7 +321,7 @@ export default function UbiquitiDocs() {
                 color="text-strong"
                 iconName={'MessageSquareWarning'}
               >
-                feedback.
+                feedback
               </LinkButton>
             </p>
             <ShareButton setTitle={UbiquitiDocs.title} />

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useContext, useState } from 'react';
-import { ArrowLeftIcon } from 'lucide-react';
+import { ArrowLeftIcon, Home } from 'lucide-react';
 import { TitlesContext } from '../shared/TitlesContext';
 import { BrandsSwitch } from './BrandsSwitch';
 
@@ -15,11 +15,22 @@ export function DocsNav() {
   return (
     <div className="w-80 px-4 md:px-8 hidden lg:block">
       <div className="sticky top-20">
+        <div className='flex gap-4'>
         <div className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 w-fit mt-3 hover:border-zinc-200 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300">
           <ArrowLeftIcon
             className="text-text-primary"
             onClick={(e) => history.back(e)}
           />
+        </div>
+        <div
+          title="Volver al Inicio"
+          className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 w-fit mt-3 hover:border-zinc-200 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300"
+        >
+          <Home
+            className="text-text-primary"
+            onClick={() => window.open('/', '_self')}
+          />
+        </div>
         </div>
         <div className="sticky top-4">
           <BrandsSwitch />

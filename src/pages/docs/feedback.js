@@ -110,7 +110,7 @@ export default function FeedBack() {
               value={comentario}
               onChange={(e) => setComentario(e.target.value)}
               placeholder="Comentario..."
-              className=" h-28 resize-y"
+              className="h-28 resize-y cont"
             />
           </label>
 

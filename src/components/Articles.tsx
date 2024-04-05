@@ -26,7 +26,7 @@ export const Articles = ({
                     NeoTecs
                 </p>
             </header>
-            <p className="text-xl font-semibold ">{title}</p>
+            <p className="text-xl font-semibold text-violet-400">{title}</p>
             <p className='text-text-second line-clamp-4 text-[15px]'><i>{content}</i></p>
             <div className='absolute bottom-4 right-4'>
                 <SharerComponent setTitle={title} setText={content} setUrl={src} className='absolute top-[-2px] right-[100px] cursor-pointer hover:opacity-70' />
