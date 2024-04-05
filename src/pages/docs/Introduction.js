@@ -74,7 +74,7 @@ export const Introduction = () => {
       >
         Atom
       </LinkButton>
-      y
+      y{' '}
       <LinkButton
         color="red-400"
         url="https://www.vim.org/"
