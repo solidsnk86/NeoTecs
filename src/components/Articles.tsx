@@ -34,7 +34,7 @@ export const Articles = ({
                     url={src}
                     iconName="ArrowRight"
                     color="gray-100"
-                    className='text-sm hover:opacity-70'
+                    className='text-sm hover:opacity-70 hover:underline'
                     underline={false}
                 >
                     Ir al artículo
