@@ -36,11 +36,12 @@
     --bg-card: #f7f9f9;
     --second-color-text: #363636;
     --image-shadow: #bbbbc0;
+    --hover-button: #ddd;
 
     --youtube-link: #ff0000;
 
     --color-code: #6f43c0;
-    --color-pre-bg: 23272E;
+    --color-pre-bg: #23272e;
     --color-pre-color: #e3e2e6;
     --color-green: #006e24;
     --color-orange: #8c5000;
@@ -76,6 +77,7 @@
     --bg-card: #16181c;
     --second-color-text: #9c9ca4;
     --image-shadow: #16181c;
+    --hover-button: #21242a;
 
     --youtube-link: #ff0000;
 
@@ -174,14 +176,47 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
-.section-likes:hover {
-  background-color: #21242a;
-  border: 1px solid #444;
-}
-
 .youtube-aside::-webkit-scrollbar {
   background-color: transparent;
   cursor: pointer;
+}
+
+.contenedor-botones {
+  position: relative;
+  display: flex;
+}
+.boton-a {
+  padding-block: 2px;
+  padding-inline: 12px;
+  background-color: var(--bg-card);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-right: none;
+  cursor: pointer;
+}
+.boton-a:hover {
+  background-color: var(--hover-button);
+  transition: 0.3s ease-in-out;
+}
+.boton-b {
+  padding-block: 2px;
+  padding-inline: 10px;
+  background-color: var(--bg-card);
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  border-left: none;
+  cursor: pointer;
+}
+.boton-b:hover {
+  background-color: var(--hover-button);
+  transition: 0.3s ease-in-out;
+}
+.reply-icon {
+  transform: scaleX(-1);
+  cursor: pointer;
+}
+.reply-icon:hover {
+  background-color: var(--hover-button);
 }
 
 .description-videos {
