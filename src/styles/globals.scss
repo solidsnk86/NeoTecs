@@ -174,6 +174,11 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
+.section-likes:hover {
+  background-color: #21242a;
+  border: 1px solid #444;
+}
+
 .youtube-aside::-webkit-scrollbar {
   background-color: transparent;
   cursor: pointer;
@@ -246,11 +251,13 @@ a {
   animation-fill-mode: both;
 }
 
-@keyframes reveal { 0% {
-  opacity: 0;
-  filter: brightness(2);
-  scale: 0.9;
-}}
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    filter: brightness(2);
+    scale: 0.9;
+  }
+}
 
 .images-client img,
 video {

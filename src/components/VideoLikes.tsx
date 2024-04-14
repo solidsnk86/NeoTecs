@@ -71,18 +71,18 @@ export const VideoLikes = ({ videoId, cpe }) => {
             Suscríbete
           </p>
         </div>
-        <span className="flex bg-card-bg border border-gray-200 dark:border-zinc-800/50 relative bottom-[2px] rounded-full my-2 w-fit px-3 py-1 transition-all">
+        <span className="flex bg-card-bg border border-gray-200 dark:border-zinc-800/50 relative bottom-[2px] rounded-full my-2 w-fit px-3 py-1 transition-all section-likes">
           <span className="flex relative top-[1px] gap-2">
             <LikeButton
               onClick={() =>
                 window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)
               }
-              className="hover:fill-gray-500 cursor-pointer hover:-rotate-6 transition-all"
+              className="hover:fill-zinc-600 cursor-pointer hover:-rotate-6 transition-all"
             />{' '}
             {likes}
             <hr className="border-l-[1px] h-5 border-[#575757] relative bottom-[1px]" />
             <UnlikeButton
-              className="hover:fill-gray-500/80 cursor-pointer"
+              className="hover:fill-zinc-600 cursor-pointer"
               onClick={() =>
                 window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)
               }
@@ -90,7 +90,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
           </span>
         </span>
         <div
-          className="text-[#575757] bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full h-[28px] relative top-[7px] px-[6px] hover:border-zinc-600"
+          className="text-[#575757] bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full h-[28px] relative top-[7px] px-[6px] hover:border-[#444]"
           onClick={() => ShareButton()}
         >
           <ReplyOutlinedIcon
