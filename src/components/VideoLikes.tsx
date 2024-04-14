@@ -90,12 +90,12 @@ export const VideoLikes = ({ videoId, cpe }) => {
           </span>
         </span>
         <div
-          className="text-[#575757] bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full h-[28px] relative top-[7px] px-[6px]"
+          className="text-[#575757] bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full h-[28px] relative top-[7px] px-[6px] hover:border-zinc-600"
           onClick={() => ShareButton()}
         >
           <ReplyOutlinedIcon
             fontSize="small"
-            className="relative top-[1px] right-[1px] text-text-primary cursor-pointer hover:opacity-70"
+            className="relative top-[1px] right-[1px] text-text-primary cursor-pointer"
           />
         </div>
       </aside>
