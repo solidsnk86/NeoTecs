@@ -1,10 +1,10 @@
 'use client';
 
-import { LikeButton } from '../components/Icons/LikeButton'
-import { UnlikeButton } from '../components/Icons/UnlikeButton'
+import { LikeButton } from '../components/Icons/LikeButton';
+import { UnlikeButton } from '../components/Icons/UnlikeButton';
 import React, { useState, useEffect } from 'react';
 import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
-import { youTube } from '../components/Constants'
+import { youTube } from '../components/Constants';
 
 export const VideoLikes = ({ videoId, cpe }) => {
   const [likes, setLikes] = useState(0);
@@ -74,14 +74,18 @@ export const VideoLikes = ({ videoId, cpe }) => {
         <span className="flex bg-card-bg border border-gray-200 dark:border-zinc-800/50 relative bottom-[2px] rounded-full my-2 w-fit px-3 py-1 transition-all">
           <span className="flex relative top-[1px] gap-2">
             <LikeButton
-              onClick={() => window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)}
-              className="hover:fill-gray-500 cursor-pointer"
+              onClick={() =>
+                window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)
+              }
+              className="hover:fill-gray-500 cursor-pointer hover:-rotate-6 transition-all"
             />{' '}
             {likes}
             <hr className="border-l-[1px] h-5 border-[#575757] relative bottom-[1px]" />
             <UnlikeButton
               className="hover:fill-gray-500/80 cursor-pointer"
-              onClick={() => window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)}
+              onClick={() =>
+                window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)
+              }
             />
           </span>
         </span>
