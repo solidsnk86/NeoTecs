@@ -52,7 +52,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
   };
 
   return (
-    <div className="flex gap-[12px] xl:gap-[14px] lg:gap-[14px] md:gap-[12px] my-2 sm:mx-2">
+    <div className="flex gap-[12px] xl:gap-[12px] lg:gap-[14px] md:gap-[12px] my-2 sm:mx-2">
       <img
         className="rounded-full w-10 h-10"
         src="/images/logos/NeoTecs_Tutorial_logo.png"
@@ -77,12 +77,12 @@ export const VideoLikes = ({ videoId, cpe }) => {
               onClick={() =>
                 window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)
               }
-              className="hover:fill-zinc-600 cursor-pointer hover:-rotate-6 transition-all"
-            />{' '}
+              className=" cursor-pointer hover:-rotate-6 transition-all like-down"
+            /><div className='absolute bg-red-400 h-auto w-full'></div>
             {likes}
             <hr className="border-l-[1px] h-5 border-[#575757] relative bottom-[1px]" />
             <UnlikeButton
-              className="hover:fill-zinc-600 cursor-pointer"
+              className=" cursor-pointer"
               onClick={() =>
                 window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)
               }
@@ -90,12 +90,12 @@ export const VideoLikes = ({ videoId, cpe }) => {
           </span>
         </span>
         <div
-          className="text-[#575757] bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full h-[28px] relative top-[7px] px-[6px] hover:border-[#444]"
+          className="text-[#575757] bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full h-[29px] relative top-[7px] px-[6px] reply-icon"
           onClick={() => ShareButton()}
         >
           <ReplyOutlinedIcon
             fontSize="small"
-            className="relative top-[1px] right-[1px] text-text-primary cursor-pointer"
+            className="relative w-6 h-6 right-[1px] dark:stroke-white stroke-black text-transparent cursor-pointer"
           />
         </div>
       </aside>
