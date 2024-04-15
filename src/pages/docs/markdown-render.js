@@ -105,9 +105,8 @@ export default function MarkDownRender() {
           </p>
           <Pre lang="bash">{
             /*bash */ `
-                            npm install github-markdown-css
-
-                            `
+            npm install github-markdown-css
+            `
           }</Pre>
           <p>
             Importa la librería de estilos en tu archivo de estilos (por
@@ -115,10 +114,9 @@ export default function MarkDownRender() {
           </p>
           <Pre lang="javascript">{
             /*javascript */ `
-                        /* styles.css */
-                        @import 'github-markdown-css/github-markdown.css';
-
-                        `
+          /* styles.css */
+           @import 'github-markdown-css/github-markdown.css';
+          `
           }</Pre>
           <p className="list-css-span">
             Debes usar el componente<span>rehypeRaw</span>proporcionado por
