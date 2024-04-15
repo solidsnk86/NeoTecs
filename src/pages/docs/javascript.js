@@ -1110,7 +1110,7 @@ export default function JavaScript() {
                   const taskText = newTaskInput.value.trim();
               
                   // Verifica que el texto de la tarea no esté vacío
-                  if (taskText !== '') {
+                  if (taskText !== "") {
                     // Crea un nuevo elemento de lista (li) en el DOM
                     const li = document.createElement('li');
               
@@ -1121,7 +1121,7 @@ export default function JavaScript() {
                     tasksList.appendChild(li);
               
                     // Limpia el input de la nueva tarea después de agregarla a la lista
-                    newTaskInput.value = '';
+                    newTaskInput.value = "";
                   }
                 });
                 });
