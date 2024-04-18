@@ -703,6 +703,17 @@ li {
 
 .article-card {
   box-shadow: 1px 3px 6px var(--color-outline-variant);
+  overflow: hidden;
+}
+
+.article-card::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #3b82f6, #a855f7, #ff6699);
 }
 
 /*--------|
