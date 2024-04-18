@@ -112,7 +112,7 @@ export default function CurrencyConverter() {
           </button>
           <p className="text-zinc-100 pb-2">
             {`U$D ${amountToConvert} es alrededor de  ` +
-              currencyResult +
+              currencyResult.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") +
               ` ${currency.toUpperCase()}`}
           </p>
         </aside>
