@@ -27,7 +27,7 @@ export const Articles = ({
             NeoTecs
           </p>
         </header>
-        <p className="text-xl font-semibold text-zinc-100">{title}</p>
+        <p className="text-xl font-semibold text-text-primary">{title}</p>
         <p className="text-text-second line-clamp-4 text-[15px]">
           <i>{content}</i>
         </p>
