@@ -1,7 +1,7 @@
-import { ExternalLinkIcon } from 'lucide-react';
 import IndexTitle from './IndexTitle';
 import Link from 'next/link';
 import { SectionTitle } from './SectionTitle';
+import { LinkButton } from './LinkButton.tsx';
 import { Pre } from './Pre';
 import DataCurrency from '../components/CurrencyExample';
 
@@ -31,14 +31,13 @@ export const JavascriptExample = () => {
           llamada<span>api</span>y luego dentro de ella un archivo
           <span>currency.js</span>que lo vamos a programar después, primero
           vamos nuestra hoja de cálculos de
-          <Link
-            href="https://docs.google.com/spreadsheets/u/0/"
-            className="mx-1 text-amber-600 link"
+          <LinkButton
+            url="https://docs.google.com/spreadsheets/u/0/"
+            color="amber-400"
+            children="Google Sheets"
+            iconName="ArrowUpRight"
             target="_blank"
-          >
-            Google Sheets.
-            <ExternalLinkIcon className="link-icon" />
-          </Link>
+          />
         </p>
         <p>
           En esta hoja de cálculos, vamos hacer un ejemplo rápido. Ustedes lo

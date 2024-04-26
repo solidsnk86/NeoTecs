@@ -21,9 +21,9 @@ export const HomeBlock = ({ children, className }) => {
   );
 };
 
-export const HomeBlockTitle = ({ Tag = 'h2', children }) => {
+export const HomeBlockTitle = ({ Tag = 'h2', children, className = '' }) => {
   return (
-    <Tag className="text-4xl font-bold sm:text-5xl mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-300 py-2">
+    <Tag className={`${className} text-4xl font-bold sm:text-5xl mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-300 py-2`}>
       {children}
     </Tag>
   );
@@ -125,7 +125,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <HomeBlock>
+      <HomeBlock className=" aspect-video">
         <HomeBlockTitle>Últimos artículos...</HomeBlockTitle>
         <p className="text-text-primary relative my-6 font-semibold">
           Desliza para ver más artículos
