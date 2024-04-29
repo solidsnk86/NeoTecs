@@ -1,15 +1,15 @@
-import Link from 'next/link';
 import { BookOpen } from 'lucide-react';
-import { Nav } from '../components/Nav';
-import { HomeHeader } from '../components/HomeHeader';
-import { Footer } from '../components/Footer';
-import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
-import { MarqueeLogos } from '../sections/Brands';
-import { ShimmerButton } from '../components/magicui/ShimmerButton';
-import { PlayIcon, Wifi } from 'lucide-react';
-import { CpeBrands } from '../components/CpeBrands';
 import { cardContent, aboutNeo } from '../components/Constants';
+import { CpeBrands } from '../components/CpeBrands';
+import { Footer } from '../components/Footer';
+import { HomeHeader } from '../components/HomeHeader';
+import { MarqueeLogos } from '../sections/Brands';
+import { Nav } from '../components/Nav';
+import { PlayIcon, Wifi } from 'lucide-react';
+import { ShimmerButton } from '../components/magicui/ShimmerButton';
+import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import ArticleData from '../components/ArticleData';
+import Link from 'next/link';
 
 export const HomeBlock = ({ children, className = '' }) => {
   return (
