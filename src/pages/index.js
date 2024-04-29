@@ -7,7 +7,6 @@ import { MarqueeLogos } from '../sections/Brands';
 import { Nav } from '../components/Nav';
 import { PlayIcon, Wifi } from 'lucide-react';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
-import { Suspense } from 'react';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import ArticleData from '../components/ArticleData';
 import Link from 'next/link';
@@ -133,9 +132,7 @@ export default function Home() {
         <p className="text-text-primary relative my-6 font-semibold">
           Desliza para ver más artículos
         </p>
-        <Suspense fallback={<div className=' text-zinc-100 font-semibold'>Cargando artículos...</div>}>
-          <ArticleData />
-        </Suspense>
+        <ArticleData />
       </HomeBlock>
       <Footer />
     </main>
