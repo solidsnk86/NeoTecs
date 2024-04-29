@@ -1,9 +1,9 @@
-import { articlesURL } from './Constants';
-import { Articles } from './Articles';
-import { useState, useEffect } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { Articles } from './Articles';
+import { articlesURL } from './Constants';
 import { Preloader } from './Preloader';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { useState, useEffect } from 'react';
 
 const ArticleData = () => {
   const [data, setData] = useState([]);
