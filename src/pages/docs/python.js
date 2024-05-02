@@ -308,40 +308,37 @@ export default function Python() {
           </div>
           <p>Un par de cosas para señalar aquí:</p>
           <ul>
-            <li>
+            <li className="list-css-span">
               En la primera línea, en lugar de asignar la variable
-              <b className="text-sky-400 mx-1">"name"</b> a un valor explícito,
-              la estamos asignando a lo que devuelve la función
-              <b className="text-sky-400 mx-1">"input"</b>.
+              <span>"name"</span> a un valor explícito, la estamos asignando a
+              lo que devuelve la función
+              <span>"input"</span>.
             </li>
             <li>
               En la segunda línea, estamos utilizando el operador
-              <b className="text-sky-400 mx-1">"+"</b> para combinar o
-              concatenar dos cadenas. En Python, el operador
-              <b className="text-sky-400 mx-1">"+"</b> se puede utilizar para
-              sumar números o concatenar cadenas y listas.
+              <span>"+"</span> para combinar o concatenar dos cadenas. En
+              Python, el operador
+              <span>"+"</span> se puede utilizar para sumar números o concatenar
+              cadenas y listas.
             </li>
           </ul>
           <span id="formateo-de-cadenas" />
           <SectionTitle title="Formato de Cadenas" />
           <article>
-            <p>
+            <p className="list-css-span">
               Si bien podemos utilizar el operador
-              <b className="text-sky-400 mx-1">"+"</b> para combinar cadenas
-              como hicimos anteriormente, en las últimas versiones de Python,
-              existen formas aún más sencillas de trabajar con cadenas,
-              conocidas como
-              <b className="text-sky-400 mx-1">"cadenas formateadas"</b> o
-              <b className="text-sky-400 mx-1">"f-strings"</b> en resumen.
+              <span>"+"</span> para combinar cadenas como hicimos anteriormente,
+              en las últimas versiones de Python, existen formas aún más
+              sencillas de trabajar con cadenas, conocidas como
+              <span>"cadenas formateadas"</span> o<span>"f-strings"</span> en
+              resumen.
             </p>
             <p className="list-css-span">
               Para indicar que estamos utilizando cadenas formateadas,
               simplemente agregamos una f antes de las comillas. Por ejemplo, en
               lugar de usar "Hello, " + name como hicimos anteriormente,
               podríamos escribir
-              <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
-                {'f"Hello, {name}" '}
-              </span>
+              <span>{'f"Hello, {name}" '}</span>
               para obtener el mismo resultado. Incluso podemos insertar una
               función en esta cadena si lo deseamos, y convertir nuestro
               programa anterior en una sola línea:
