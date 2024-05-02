@@ -479,13 +479,12 @@ export default function Python() {
                 print(name[1])
                 `
             }</Pre>
-            <p>
+            <p className="list-css-span">
               imprime el primer carácter
-              <b className="text-sky-400 mx-1">(o índice-0)</b> en la cadena,
-              que en este caso es <b className="text-sky-400 mx-1">M</b>, y
-              luego imprime el segundo carácter
-              <b className="text-sky-400 mx-1">(índice-1)</b>, que es
-              <b className="text-sky-400 mx-1">"a"</b>.
+              <span>(o índice-0)</span> en la cadena, que en este caso es{' '}
+              <span>M</span>, y luego imprime el segundo carácter
+              <span>(índice-1)</span>, que es
+              <span>"a"</span>.
             </p>
           </article>
           <span id="listas" />
@@ -494,7 +493,7 @@ export default function Python() {
             <li>Ordenadas: Sí</li>
             <li>Mutables: Sí</li>
           </ol>
-          <p>
+          <p className="list-css-span">
             Una
             <LinkButton
               url="https://www.w3schools.com/python/python_lists.asp"
@@ -508,14 +507,8 @@ export default function Python() {
             continuación. Al igual que con las cadenas, podemos imprimir una
             lista completa o algunos elementos individuales. También podemos
             agregar elementos a una lista utilizando
-            <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
-              append
-            </span>
-            y ordenar una lista utilizando
-            <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
-              sort
-            </span>
-            .
+            <span>append</span>y ordenar una lista utilizando
+            <span>sort</span>.
           </p>
           <Pre lang="python">{
             /*python */ `
@@ -573,7 +566,7 @@ export default function Python() {
               Una tupla es una colección que está ordenada y no se puede
               modificar.
             </p>
-            <ol>
+            <ol className="list-css-span">
               <li>
                 Los elementos de una tupla están ordenados, no se pueden cambiar
                 y permiten valores duplicados.
@@ -581,14 +574,8 @@ export default function Python() {
               <li>
                 Los elementos de una tupla se indexan, el primer elemento tiene
                 el índice
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-red-400">
-                  [0]
-                </span>
-                , el segundo elemento tiene el índice
-                <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-red-400">
-                  [1]
-                </span>
-                , y así sucesivamente.
+                <span>[0]</span>, el segundo elemento tiene el índice
+                <span>[1]</span>, y así sucesivamente.
               </li>
             </ol>
           </article>
