@@ -543,10 +543,10 @@ export default function Python() {
               <li>Ordenadas: Sí</li>
               <li>Mutables: No</li>
             </ol>
-            <p>
+            <p className="list-css-span">
               Las tuplas generalmente se utilizan cuando necesitas almacenar
-              solo dos o tres valores juntos, como los valores x e y para un
-              punto. En el código de Python, utilizamos paréntesis:
+              solo dos o tres valores juntos, como los valores<span>x e y</span>
+              para un punto. En el código de Python, utilizamos paréntesis:
             </p>
             <Pre lang="python">{
               /*python */ `
