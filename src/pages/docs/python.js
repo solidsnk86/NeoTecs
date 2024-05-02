@@ -482,7 +482,7 @@ export default function Python() {
             <p>
               imprime el primer carácter
               <b className="text-sky-400 mx-1">(o índice-0)</b> en la cadena,
-              que en este caso es <b className="text-sky-400 mx-1">H</b>, y
+              que en este caso es <b className="text-sky-400 mx-1">M</b>, y
               luego imprime el segundo carácter
               <b className="text-sky-400 mx-1">(índice-1)</b>, que es
               <b className="text-sky-400 mx-1">"a"</b>.
