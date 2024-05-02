@@ -473,7 +473,7 @@ export default function GitDocs() {
               </li>
             </ul>
             <p>
-              ¡Eso es todo para esta clase! ¡La próxima vez, estaremos viendo
+              ¡Eso es todo para esta clase! ¡Para la próxima, estaremos viendo
               Python!
             </p>
           </article>
