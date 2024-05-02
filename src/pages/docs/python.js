@@ -373,11 +373,11 @@ export default function Python() {
                 else:
                 `
             }</Pre>
-            <li>
+            <li className="list-css-span">
               Entrando en cómo funciona el programa anterior, las sentencias
               condicionales en Python contienen una palabra clave
-              <b className="text-sky-400 mx-1">(if, elif o else)</b>y luego
-              <b className="text-sky-400 mx-1">(excepto en el caso de else)</b>
+              <span>(if, elif o else)</span>y luego
+              <span>(excepto en el caso de else)</span>
               una expresión booleana, es decir, una expresión que se evalúa como
               True o False. Luego, todo el código que queremos ejecutar si
               cierta expresión es verdadera se encuentra sangrado directamente
@@ -407,32 +407,30 @@ export default function Python() {
               volverás mejor en la interpretación de estos errores, lo que es
               una habilidad muy valiosa.
             </li>
-            <li>
+            <li className="list-css-span">
               Veamos un poco más de cerca esta excepción específica: Si
               observamos en la parte inferior, veremos que nos encontramos con
               un TypeError, lo que generalmente significa que Python esperaba
               que una variable fuera de un tipo específico, pero encontró que
               era de otro tipo. En este caso, la excepción nos dice que no
               podemos usar el símbolo
-              <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
-                {'>'}
-              </span>
+              <span>{'>'}</span>
               para comparar una cadena
-              <b className="text-sky-400 mx-1">(str)</b>y un entero
-              <b className="text-sky-400 mx-1">(int)</b>, y luego arriba podemos
-              ver que esta comparación ocurre en la línea 2.
+              <span>(str)</span>y un entero
+              <span>(int)</span>, y luego arriba podemos ver que esta
+              comparación ocurre en la línea 2.
             </li>
-            <li>
+            <li className="list-css-span">
               En este caso, es evidente que 0 es un entero, por lo que debe ser
               el caso que nuestra variable
-              <b className="text-sky-400 mx-1">"num</b> es una cadena. Esto
-              sucede porque resulta que la función
-              <b className="text-sky-400 mx-1">"input</b> siempre devuelve una
-              cadena, y debemos especificar que debe convertirse
-              <b className="text-sky-400 mx-1">(o fundirse)</b>
+              <span>"num</span> es una cadena. Esto sucede porque resulta que la
+              función
+              <span>"input</span> siempre devuelve una cadena, y debemos
+              especificar que debe convertirse
+              <span>(o fundirse)</span>
               en un entero utilizando la función
-              <b className="text-sky-400 mx-1">"int</b>. Esto significa que
-              nuestra primera línea ahora se vería así:
+              <span>"int</span>. Esto significa que nuestra primera línea ahora
+              se vería así:
             </li>
             <Pre lang="python">{
               /*python */ `
