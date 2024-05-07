@@ -53,13 +53,12 @@ export const FeedbackData = () => {
 
   const sendMail = (item) => {
     const subjectText = 'Gracias por tu feedback';
-    const subject = `subject=${encodeURIComponent(subjectText)}`;
+    const subject = encodeURIComponent(subjectText);
     const issues = 'https://github.com/solidsnk86/NeoTecs/issues/new';
     const body = `¡Hola ${item.nombre}! Es un agrado para mí recibir retroalimentación en mi web, estaré analizando en breve tu comentario. Puedes generar un issue en ${issues} para discutirlo. Desde ya muchas gracias! Gabriel de NeoTecs.-\n\n`;
-    const encodedSubject = encodeURIComponent(subject);
     const encodedBody = encodeURIComponent(body);
 
-    const emailLink = `mailto:${item.email}?${encodedSubject}&body=${encodedBody}`;
+    const emailLink = `mailto:${item.email}?subject=${subject}&body=${encodedBody}`;
     window.open(emailLink, '_blank');
   };
 
