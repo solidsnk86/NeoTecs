@@ -7,7 +7,6 @@ function dateFormated(string) {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-    timeZoneName: 'longOffset',
     hour: '2-digit',
     minute: '2-digit',
   });

@@ -52,11 +52,15 @@ export const FeedbackData = () => {
   };
 
   const sendMail = (item) => {
+    const subjectText = 'Gracias por tu feedback';
+    const subject = `subject=${encodeURIComponent(subjectText)}`;
     const issues = 'https://github.com/solidsnk86/NeoTecs/issues/new';
-    const subject = 'subjetc=Gracias por tu feedback';
-    const body = `body=Hola ${item.nombre}! Es un agrado para mí recibir retroalimentación en mi web, estaré analizando en breve tu comentario, puedes generar un issue en ${issues}, para discutirlo. Desde ya muchas gracias! Gabriel de NeoTecs.-\n\n`;
-    const emailLink = `mailto:${item.email}?${subject}&${body}`;
-    window.open(emailLink);
+    const body = `¡Hola ${item.nombre}! Es un agrado para mí recibir retroalimentación en mi web, estaré analizando en breve tu comentario. Puedes generar un issue en ${issues} para discutirlo. Desde ya muchas gracias! Gabriel de NeoTecs.-\n\n`;
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
+
+    const emailLink = `mailto:${item.email}?${encodedSubject}&body=${encodedBody}`;
+    window.open(emailLink, '_blank');
   };
 
   const fechaFormateada = (f) => {
@@ -64,17 +68,18 @@ export const FeedbackData = () => {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
+      timeZone: 'America/Argentina/Buenos_Aires',
     });
     return fecha;
   };
 
   const horaFormateada = (h) => {
     const hora = new Date(h).toLocaleTimeString('es-ES', {
-        hour: "2-digit",
-        minute: "2-digit",
-    })
-    return hora
-  }
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+    return hora;
+  };
 
   return (
     <Swiper
@@ -99,7 +104,12 @@ export const FeedbackData = () => {
             key={item.id}
           >
             <div className="text-gray-600 dark:text-gray-300 text-sm xl:text-base mb-4">
-              <p className=''>Este feedback se ha creado el {`${fechaFormateada(item.fecha)} a las ${horaFormateada(item.fecha)}`}</p>
+              <p className="">
+                Este feedback se ha creado el{' '}
+                {`${fechaFormateada(item.fecha)} a las ${horaFormateada(
+                  item.fecha,
+                )}`}
+              </p>
               <label className="block font-bold mt-4">Mensaje:</label>
               <p className="my-2">{item.comentario}</p>
               <p className="text-right text-gray-700 dark:text-gray-400">
