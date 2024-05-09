@@ -97,10 +97,9 @@ export const FeedbackData = () => {
       onSwiper={(swiper) => console.log(swiper)}
     >
       {items.map((item) => (
-        <SwiperSlide>
+        <SwiperSlide key={item.id}>
           <div
             className="bg-white dark:bg-zinc-800/50 border border-gray-300 dark:border-zinc-700 p-6 rounded-md shadow-md my-10 mx-auto xl:w-1/2 relative z-50"
-            key={item.id}
           >
             <div className="text-gray-600 dark:text-gray-300 text-sm xl:text-base mb-4">
               <p className="">
