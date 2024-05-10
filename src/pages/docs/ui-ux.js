@@ -150,22 +150,18 @@ export default function UiUx() {
               /*javascript */ `
               // Muestra una página y oculta las otras dos
               function showPage(page) {
-              
                   // Oculta todas las divisiones (divs):
                   document.querySelectorAll('div').forEach(div => {
                       div.style.display = 'none';
                   });
-              
                   // Muestra la div proporcionada en el argumento
                   document.querySelector(\`#\${page}\`).style.display = 'block';
               }
               
               // Espera a que la página se cargue:
               document.addEventListener('DOMContentLoaded', function() {
-              
                   // Selecciona todos los botones
                   document.querySelectorAll('button').forEach(button => {
-              
                       // Cuando se hace clic en un botón, cambia a esa página
                       button.onclick = function() {
                           showPage(this.dataset.page);
