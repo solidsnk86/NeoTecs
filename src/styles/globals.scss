@@ -716,26 +716,32 @@ li {
   background: linear-gradient(to right, #3b82f6, #a855f7, #ff6699);
 }
 
-.spinner {
+.progressive-bar {
   position: fixed;
-  left: calc(50% - 20px);
-  top: 50%;
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border-left-color: #a855f7;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    #3b82f6,
+    #a855f7,
+    #ff6699,
+    #3b82f6,
+    #a855f7,
+    #ff6699
+  );
+  background-size: 200% 100%;
+  top: 0;
+  width: 100%;
+  height: 4px;
   z-index: 99;
-  animation: spinn 1s linear infinite;
+  animation: progressive 2s linear infinite;
 }
 
-@keyframes spinn {
+@keyframes progressive {
   0% {
-    transform: rotate(0deg);
+    background-position: 0% 0%;
   }
-
   100% {
-    transform: rotate(360deg);
+    background-position: 100% 0%;
   }
 }
 
