@@ -134,7 +134,7 @@ export default function Home() {
         </p>
         <ArticleData />
       </HomeBlock>
-     <div className='progressive-bar'></div>
+      <Footer />
     </main>
   );
 }
