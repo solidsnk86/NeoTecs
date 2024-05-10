@@ -327,7 +327,7 @@ export const JavascriptExample = () => {
         <span>fetch</span>de estos datos en cualquier componente que creemos
         para la obtención de estos datos, pero dijimos que íbamos hacerla un
         poco más compleja para que sea más eficiente la forma de actualizar los
-        datos sin estar sentados detrás de nuestro editor de código favorito 😄!
+        datos sin estar sentados detrás de nuestro editor de código favorito!
       </p>
       <p className="list-css-span">
         Bien, vamos a hacer nuestro archivo<span>currency.js</span> más
