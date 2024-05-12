@@ -273,9 +273,9 @@ export default function CssDoc() {
               </html>
               `
           }</Pre>
-          <li>
+          <li className='list-css-span'>
             Crearemos un archivo
-            <span className="border border-[#395692] rounded px-1 py-1 border-l-4 mx-1">
+            <span>
               styles.css
             </span>
             que se vería de la siguiente manera:
@@ -381,14 +381,14 @@ export default function CssDoc() {
             src="/images/table-style.png"
             altImage="Ejemplo para tabla en CSS"
           />
-          <li>
+          <li className='list-css-span'>
             Lo anterior se parece mucho a lo que teníamos antes, pero ahora, ya
             sea incluyendo una etiqueta de estilo
-            <span className="border-gray-800 border rounded mx-1">
+            <span>
               {'<style>'}
             </span>
             o un enlace a una hoja de estilo
-            <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
+            <span>
               {'<link rel="stylesheet" href="styles.css">'}
             </span>
             en la sección head de nuestro documento html. Agregamos el siguiente
@@ -412,22 +412,22 @@ export default function CssDoc() {
               }
               `
           }</Pre>
-          <p>Lo que nos deja una hermosa tabla estilada como ésta:</p>
+          <p>Lo que nos deja una tabla estilada como ésta:</p>
           <ImageComponent
             src="/images/table-styled.png"
             altImage="Ejemplo de CSS"
           />
-          <li>
+          <li className='list-css-span'>
             Es posible que ya estés pensando que hay cierta repetición
             innecesaria en nuestro CSS en este momento, ya que tanto
-            <b className="border border-[#395692] rounded px-1 border-l-4 mx-1">
+            <span>
               td
-            </b>
+            </span>
             como
-            <b className="border border-[#395692] rounded px-1 border-l-4 mx-1">
+            <span>
               th
-            </b>
-            tienen el mismo estilo. Podemos y <em>"debemos" </em>
+            </span>
+            tienen el mismo estilo. Podemos y <span>debem</span>
             condensar esto en el siguiente código, utilizando una coma para
             indicar que el estilo debe aplicarse a más de un tipo de elemento.
           </li>
@@ -459,15 +459,15 @@ export default function CssDoc() {
                 Tipo de elemento: esto es lo que hemos estado haciendo hasta
                 ahora, estilizando todos los elementos del mismo tipo.
               </li>
-              <li>
+              <li className='list-css-span'>
                 Id: Otra opción es dar a nuestros elementos HTML un id de la
                 siguiente manera:
                 <br />
-                <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
+                <span>
                   {'<h1 id="primer-encabezado">¡Hola!</h1>'}
                 </span>
                 y luego aplicar estilos usando
-                <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
+                <span>
                   {'#first-header {...}'}
                 </span>
                 utilizando el signo de numeral para indicar que estamos buscando
@@ -475,19 +475,19 @@ export default function CssDoc() {
                 tener el mismo id, y ningún elemento puede tener más de un id
                 porque es único.
               </li>
-              <li>
+              <li className='list-css-span'>
                 Clase: Esto es similar al id, pero una clase puede ser
                 compartida por más de un elemento, y un solo elemento puede
                 tener más de una clase. Agregamos clases a un elemento HTML de
                 la siguiente manera:
                 <br />
-                <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
+                <span>
                   {'<h1 class="texto-pagina atenuado">¡Hola!</h1>'}
                 </span>
                 (nota que acabamos de agregar dos clases al elemento:
                 texto-pagina y atenuado). Luego, estilizamos en función de la
                 clase usando un punto en lugar de un signo de numeral:
-                <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
+                <span>
                   {'.atenuado {...}'}
                 </span>
               </li>
