@@ -498,11 +498,11 @@ export default function CssDoc() {
               debería ser rojo según su clase pero azul según su id? CSS tiene
               un orden de especificidad que va así:
             </li>
-            <ol>
-              <li>Estilo en línea (in-line styling).</li>
-              <li>Id (id="")</li>
-              <li>Clase (class="")</li>
-              <li>Tipo de Elemento</li>
+            <ol className='list-css-span'>
+              <li><span>Estilo en línea (in-line styling).</span></li>
+              <li><span>Id (id="")</span></li>
+              <li><span>Clase (class="")</span></li>
+              <li><span>Tipo de Elemento</span></li>
             </ol>
             <li>
               Además de la coma para múltiples selectores, hay varias otras
@@ -631,9 +631,9 @@ export default function CssDoc() {
               escribimos añadiendo dos puntos después de nuestro selector y
               luego especificando la circunstancia después de esos dos puntos.
             </li>
-            <li>
+            <li className='list-css-span'>
               En el caso del botón, agregaríamos
-              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
+              <span>
                 :hover
               </span>
               al selector del botón para indicar el diseño que se aplicará solo
@@ -673,7 +673,7 @@ export default function CssDoc() {
           />
           <span id="responsive" />
           <SectionTitle title="Diseño Responsivo" />
-          <ul>
+          <ul className='list-css-span'>
             <li>
               Hoy en día, muchas personas visitan sitios web en dispositivos
               distintos a las computadoras, como smartphones y tabletas. Es
@@ -682,9 +682,9 @@ export default function CssDoc() {
             </li>
             <li>
               Una forma de lograr esto es mediante el conocimiento del
-              "viewport" (ventana gráfica). El viewport es la parte de la
+              <span>viewport</span>(ventana gráfica). El<span>viewport</span>es la parte de la
               pantalla que es visible para el usuario en un momento dado. Por
-              defecto, muchas páginas web asumen que el viewport es el mismo en
+              defecto, muchas páginas web asumen que el<span>viewport</span>es el mismo en
               cualquier dispositivo, lo que lleva a que muchos sitios
               (especialmente los más antiguos) sean difíciles de interactuar en
               dispositivos móviles.
@@ -710,11 +710,11 @@ export default function CssDoc() {
               formas de cambiar el estilo de una página según la forma en que se
               está visualizando la página.
             </li>
-            <li>
+            <li className='list-css-span'>
               Como ejemplo de una consulta de medios (media query), intentemos
               cambiar simplemente el color de la pantalla cuando se reduce a un
               cierto tamaño. Indicamos una consulta de medios escribiendo
-              <span className="border border-[#395692] rounded px-1 border-l-4 mx-1">
+              <span>
                 @media
               </span>
               , seguido del tipo de consulta entre paréntesis:
