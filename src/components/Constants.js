@@ -120,6 +120,10 @@ export const links = [
     href: '/docs/google-sheets',
     title: 'Google Sheets',
   },
+  {
+    href: '/docs/javascript-arrays',
+    title: 'JavaScript Arrays',
+  },
 ];
 
 export const aboutNeo =

@@ -1,17 +1,14 @@
 import { Footer } from '../../components/Footer';
-import JavascriptExample from '../../components/JavascriptExample';
 import HeaderTitle from '../../components/HeaderTitlte';
 import IndexTitle from '../../components/IndexTitle';
-import LinkButton from '../../components/LinkButton';
 import { Pre } from '../../components/Pre';
 import { Nav } from '../../components/Nav';
 import { NavSwitch } from '../../components/NavSwicth';
 import { ShareButton } from '../../components/ShareButton';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-import ImageComponent from '../../components/ImageComponent';
 import { NavLinks } from '../../components/NavLinks';
-export default function JavaScript() {
+export default function JavaScriptArrays() {
   return (
     <TitlesContextProvider>
       <Nav className="fixed xl:relative w-full h-12 z-50" />
@@ -21,8 +18,7 @@ export default function JavaScript() {
           <NavSwitch inline />
           <HeaderTitle>Javascript Arrays</HeaderTitle>
           <hr className="border-text-primary" />
-          <IndexTitle>Métodos de Array</IndexTitle>
-          <SectionTitle title="Introducción" />
+          <SectionTitle title="Métodos de arrays" />
           <ul>
             <li>
               Los arrays son una estructura de datos fundamental en JavaScript
@@ -30,7 +26,7 @@ export default function JavaScript() {
               forma eficiente. Son muy versátiles y se utilizan ampliamente en
               el desarrollo web y de aplicaciones.
             </li>
-            <li>Hoy, introduciremos un nuevo lenguaje de programación:</li>
+            <li>Hoy, veremos diferentes métodos de arrays:</li>
           </ul>
           <IndexTitle>Javascript</IndexTitle>
           <figure>
@@ -55,8 +51,123 @@ export default function JavaScript() {
               </defs>
             </svg>
           </figure>
+          <article>
+            <p>
+              Los arrays en JavaScript son una herramienta poderosa para
+              trabajar con conjuntos de datos. Con su amplia gama de propiedades
+              y métodos, así como las diversas formas de acceder y manipular sus
+              elementos, los arrays son esenciales para la mayoría de las
+              aplicaciones web y de software en JavaScript.
+            </p>
+            <p>Veremos algunos ejemplos simples pero muy útiles.</p>
+            <Pre lang="javascript">{
+              /**javscript */ `
+                // Transforma cada número multiplicándolo por 2
+                const numbers = [1, 2, 3];
+                console.log(numbers.map((num) => num * 2));
+                // Filtra la comida que no sea carnívora
+                const meal = ["🥝", "🥦", "🍖", "🥕"];
+                console.log(meal.filter((m) => m !== "🍖"));
+                // Encuentra y devuelve el gallo
+                const animals = ["🐄", "🐑", "🐎", "🐓"];
+                console.log(animals.find((a) => a === "🐓"));
+                // Dónde está el murciélago
+                const animal2 = ["🦖", "🐔", "🦇", "🐈"];
+                console.log(animal2.findIndex((a2) => a2 === "🦇"));
+                // Rellena el array con dinero
+                const emptyArray = ["", "", ""];
+                console.log(emptyArray.fill("💵"));
+                // ¿Todo está ok?
+                const array = ["✅", "❌", "✅", "✅"];
+                console.log(array.every((a) => a === "✅"));
+                // ¿Hay algún error?
+                console.log(array.some((a) => a === "❌"));               
+                `
+            }</Pre>
+            <SectionTitle title="Propiedades y métodos de arrays" />
+            <p>
+              Los arrays en JavaScript tienen varias propiedades y métodos
+              útiles que facilitan su manipulación:
+            </p>
+            <ol className="list-css-span">
+              <li>
+                <span>lenght</span>: Propiedad que indica la longitud del array.
+              </li>
+              <li>
+                <span>push()</span>: Método que agrega uno o más elementos al
+                final del array.
+              </li>
+              <li>
+                <span>pop()</span>: Método que elimina el último elemento del
+                array y lo devuelve.
+              </li>
+              <li>
+                <span>shift()</span>: Método que elimina el primer elemento del
+                array y lo devuelve.
+              </li>
+              <li>
+                <span>unshift()</span>: Método que agrega uno o más elementos al
+                inicio del array.
+              </li>
+              <li>
+                <span>slice()</span>: Método que devuelve una copia superficial
+                de una porción del array.
+              </li>
+              <li>
+                <span>splice()</span>: Método que cambia el contenido de un
+                array eliminando elementos existentes y/o agregando nuevos
+                elementos.
+              </li>
+              <li>
+                <span>forEach()</span>: Método que ejecuta una función dada una
+                vez por cada elemento del array.
+              </li>
+              <li>
+                <span>find(callback)</span>: Este método devuelve el primer
+                elemento en el array que cumple con la condición proporcionada
+                en la función de retorno de llamada (callback). Si no se
+                encuentra ningún elemento, devuelve undefined.
+              </li>
+              <li>
+                <span>findIndex(callback)</span>: Similar a find(), pero en
+                lugar de devolver el elemento encontrado, devuelve el índice del
+                primer elemento que cumple con la condición proporcionada en la
+                función de retorno de llamada. Si no se encuentra ningún
+                elemento, devuelve -1.
+              </li>
+              <li>
+                <span>fill(value)</span>: Este método rellena todos los
+                elementos del array con el valor proporcionado. Puedes
+                especificar opcionalmente un índice de inicio y un índice de
+                finalización para limitar el rango de elementos que se llenarán.
+              </li>
+              <li>
+                <span>every(callback)</span>: Este método comprueba si todos los
+                elementos del array cumplen con la condición proporcionada en la
+                función de retorno de llamada. Devuelve true si todos los
+                elementos pasan la prueba; de lo contrario, devuelve false.
+              </li>
+              <li>
+                <span>some(callback)</span>: Similar a every(), pero comprueba
+                si al menos un elemento del array cumple con la condición
+                proporcionada en la función de retorno de llamada. Devuelve true
+                si al menos un elemento pasa la prueba; de lo contrario,
+                devuelve false.
+              </li>
+            </ol>
+            <p>
+              Estos métodos son muy útiles para realizar operaciones específicas
+              en arrays y simplificar el código al trabajar con ellos.
+            </p>
+          </article>
+          <ShareButton setTitle={JavaScriptArrays.title} />
         </div>
       </div>
+      <Footer />
     </TitlesContextProvider>
   );
 }
+
+JavaScriptArrays.title = "JavaScript Arrays - Métodos"
+
+
