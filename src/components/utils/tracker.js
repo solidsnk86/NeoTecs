@@ -40,8 +40,13 @@ export default function Tracker() {
               longitude: jsonData.coordinates.longitude,
             },
           });
-
-          sendDataToSupabase(jsonData);
+          const localURL = window.location.href;
+          if (
+            !localURL === 'http://localhost:3001/' &&
+            'http://localhost:3000/'
+          ) {
+            sendDataToSupabase(jsonData);
+          }
         } else {
           console.error(
             'Error fetching visit data:',
