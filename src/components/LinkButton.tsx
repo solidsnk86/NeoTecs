@@ -39,7 +39,7 @@ export const LinkButton: React.FC<LinkInterfaceProps> = ({
         {children}
         {Icon && (
           <Icon
-            className={`text-${color} font-extralight h-[16px] -translate-x-[3px] inline`}
+            className={`text-${color} font-extralight h-[16px] -translate-x-[3px] -translate-y-[1px] inline`}
           />
         )}
       </Link>
