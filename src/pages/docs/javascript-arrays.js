@@ -159,6 +159,38 @@ export default function JavaScriptArrays() {
               Estos métodos son muy útiles para realizar operaciones específicas
               en arrays y simplificar el código al trabajar con ellos.
             </p>
+            <p>
+              Aquí una pruba para aprender y realizar sobre cómo podemos maejar
+              un array de los cuales debemos encontrar el par de elementos
+              adyacentes y que tienen como resultado el prodcuto más alto y
+              devuelven ese resultado:
+            </p>
+            <Pre lang="javascript">{
+              /**javascript */ `
+              /**
+              * Dado un array de enteros, encontar el par de elementos adyacentes que
+              * tienen el producto más alto y devuelven ese producto.
+              * @param {array} inputArray
+              * @returns {product}
+              * Ejemplo inputArray = [3,6,-2,5,7,3]
+              * solution2(inputArray) = 21
+              * El producto más grande serían el 7 y el 3
+              */
+              function solution1(inputArray) {
+              let maxProduct = -Infinity; // Esto garantiza que cualquier número natural sea mayor que maxProduct
+
+              for (let i = 0; i < inputArray.length - 1; i++) {
+              const product = inputArray[i] * inputArray[i + 1];
+
+              if (product > maxProduct) {
+              maxProduct = product;
+              }
+              }
+              return maxProduct;
+              }
+              console.log(solution1([3, 6, -2, -5, 7, 3])); // Debería devolver 21
+              `
+            }</Pre>
           </article>
           <ShareButton setTitle={JavaScriptArrays.title} />
         </div>
@@ -168,6 +200,4 @@ export default function JavaScriptArrays() {
   );
 }
 
-JavaScriptArrays.title = "JavaScript Arrays - Métodos"
-
-
+JavaScriptArrays.title = 'JavaScript Arrays - Métodos';
