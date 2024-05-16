@@ -8,6 +8,7 @@ import { ShareButton } from '../../components/ShareButton';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import { NavLinks } from '../../components/NavLinks';
+
 export default function JavaScriptArrays() {
   return (
     <TitlesContextProvider>
@@ -18,7 +19,7 @@ export default function JavaScriptArrays() {
           <NavSwitch inline />
           <HeaderTitle>Javascript Arrays</HeaderTitle>
           <hr className="border-text-primary" />
-          <SectionTitle title="Métodos de arrays" />
+          <IndexTitle>Métodos de Arrays</IndexTitle>
           <ul>
             <li>
               Los arrays son una estructura de datos fundamental en JavaScript
