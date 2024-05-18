@@ -40,10 +40,12 @@ export default function Tracker() {
               longitude: jsonData.coordinates.longitude,
             },
           });
-          const localURL = window.location.href;
+          const dataIPs = ['45.178.0.86', '45.178.0.108'];
+          const currentDataIP = '45.178.0.108';
+
           if (
-            !localURL === 'http://localhost:3001/' &&
-            'http://localhost:3000/'
+            localURL !== 'http://localhost:3000/' &&
+            (currentDataIP !== dataIPs[0] || currentDataIP !== dataIPs[1])
           ) {
             sendDataToSupabase(jsonData);
           }
