@@ -5,17 +5,16 @@ const transporter = nodemailer.createTransport({
   auth: {
     user: process.env.NEXT_PUBLIC_GMAIL_EMAIL,
     pass: process.env.NEXT_PUBLIC_GMAIL_PASS,
-    
   },
 });
 
-async function enviarCorreoElectronico(destinatario, mensaje) {
+async function enviarCorreoElectronico(email, nombre) {
   try {
     await transporter.sendMail({
       from: process.env.NEXT_PUBLIC_GMAIL_EMAIL,
-      to: destinatario,
+      to: email,
       subject: 'Muchas gracias por tu feedback',
-      text: mensaje,
+      text: `Buenas ${nombre}! He recibido este feedback desde NeoTecs. ¡Gracias por tomarte el tiempo para proporcionar tus comentarios! Estaremos revisando tu mensaje y trabajando para mejorar nuestra experiencia en línea. ¡Esperamos verte pronto en nuestro sitio web!`,
     });
     console.log('Correo electrónico enviado correctamente a', destinatario);
   } catch (error) {

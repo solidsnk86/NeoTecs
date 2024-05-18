@@ -161,10 +161,17 @@ export default function JavaScriptArrays() {
               en arrays y simplificar el código al trabajar con ellos.
             </p>
             <p>
-              Aquí una pruba para aprender y realizar sobre cómo podemos maejar
-              un array de los cuales debemos encontrar el par de elementos
-              adyacentes y que tienen como resultado el prodcuto más alto y
-              devuelven ese resultado:
+              Aquí una prueba técnica de{' '}
+              <a
+                className="text-sky-600"
+                href="https://app.codesignal.com/arcade"
+              >
+                Code Signal
+              </a>{' '}
+              para aprender y realizar sobre cómo podemos manejar un array de
+              los cuales debemos encontrar el par de elementos adyacentes y que
+              tienen como resultado el prodcuto más alto y devuelven ese
+              resultado:
             </p>
             <Pre lang="javascript">{
               /**javascript */ `

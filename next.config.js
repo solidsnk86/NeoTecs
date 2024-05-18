@@ -32,4 +32,11 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals.push('fs');
+    }
+
+    return config;
+  },
 };
