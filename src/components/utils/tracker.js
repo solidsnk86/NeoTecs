@@ -41,11 +41,11 @@ export default function Tracker() {
             },
           });
           const dataIPs = ['45.178.0.86', '45.178.0.108'];
-          const currentDataIP = '45.178.0.108';
 
           if (
             localURL !== 'http://localhost:3000/' &&
-            (currentDataIP !== dataIPs[0] || currentDataIP !== dataIPs[1])
+            (jsonData.ip.address !== dataIPs[0] ||
+              jsonData.ip.address !== dataIPs[1])
           ) {
             sendDataToSupabase(jsonData);
           }
