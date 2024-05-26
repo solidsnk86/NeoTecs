@@ -13,6 +13,8 @@ function dateFormated(string) {
   return date;
 }
 
+const ipAddress_1 = process.env.NEXT_PUBLIC_DATA_IP_1;
+
 export default function Tracker() {
   const [visitData, setVisitData] = useState({});
   const [lastVisit, setLastVisit] = useState({});
@@ -41,7 +43,7 @@ export default function Tracker() {
             },
           });
           if (
-            jsonData.ip.address !== '45.178.0.86' &&
+            jsonData.ip.address !== ipAddress_1 &&
             location.href !== location.href.includes('localhost:3000/')
           ) {
             sendDataToSupabase(jsonData);
