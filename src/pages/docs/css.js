@@ -159,7 +159,7 @@ export default function CssDoc() {
             </li>
             <li>
               Cambiamos el estilo al alterar las propiedades de CSS de un
-              elemento, escribiendo algo como color: azul o text-align: centro.
+              elemento, escribiendo algo como color: blue o text-align: center.
             </li>
             <li>
               En el siguiente ejemplo, hacemos un ligero cambio en nuestro
@@ -273,11 +273,9 @@ export default function CssDoc() {
               </html>
               `
           }</Pre>
-          <li className='list-css-span'>
+          <li className="list-css-span">
             Crearemos un archivo
-            <span>
-              styles.css
-            </span>
+            <span>styles.css</span>
             que se vería de la siguiente manera:
           </li>
           <Pre lang="css">
@@ -381,16 +379,11 @@ export default function CssDoc() {
             src="/images/table-style.png"
             altImage="Ejemplo para tabla en CSS"
           />
-          <li className='list-css-span'>
+          <li className="list-css-span">
             Lo anterior se parece mucho a lo que teníamos antes, pero ahora, ya
             sea incluyendo una etiqueta de estilo
-            <span>
-              {'<style>'}
-            </span>
-            o un enlace a una hoja de estilo
-            <span>
-              {'<link rel="stylesheet" href="styles.css">'}
-            </span>
+            <span>{'<style>'}</span>o un enlace a una hoja de estilo
+            <span>{'<link rel="stylesheet" href="styles.css">'}</span>
             en la sección head de nuestro documento html. Agregamos el siguiente
             CSS:
           </li>
@@ -417,16 +410,12 @@ export default function CssDoc() {
             src="/images/table-styled.png"
             altImage="Ejemplo de CSS"
           />
-          <li className='list-css-span'>
+          <li className="list-css-span">
             Es posible que ya estés pensando que hay cierta repetición
             innecesaria en nuestro CSS en este momento, ya que tanto
-            <span>
-              td
-            </span>
+            <span>td</span>
             como
-            <span>
-              th
-            </span>
+            <span>th</span>
             tienen el mismo estilo. Podemos y <span>debem</span>
             condensar esto en el siguiente código, utilizando una coma para
             indicar que el estilo debe aplicarse a más de un tipo de elemento.
@@ -459,37 +448,29 @@ export default function CssDoc() {
                 Tipo de elemento: esto es lo que hemos estado haciendo hasta
                 ahora, estilizando todos los elementos del mismo tipo.
               </li>
-              <li className='list-css-span'>
+              <li className="list-css-span">
                 Id: Otra opción es dar a nuestros elementos HTML un id de la
                 siguiente manera:
                 <br />
-                <span>
-                  {'<h1 id="primer-encabezado">¡Hola!</h1>'}
-                </span>
-                y luego aplicar estilos usando
-                <span>
-                  {'#first-header {...}'}
-                </span>
+                <span>{'<h1 id="primer-encabezado">¡Hola!</h1>'}</span>y luego
+                aplicar estilos usando
+                <span>{'#first-header {...}'}</span>
                 utilizando el signo de numeral para indicar que estamos buscando
                 por id. Es importante destacar que ningún par de elementos puede
                 tener el mismo id, y ningún elemento puede tener más de un id
                 porque es único.
               </li>
-              <li className='list-css-span'>
+              <li className="list-css-span">
                 Clase: Esto es similar al id, pero una clase puede ser
                 compartida por más de un elemento, y un solo elemento puede
                 tener más de una clase. Agregamos clases a un elemento HTML de
                 la siguiente manera:
                 <br />
-                <span>
-                  {'<h1 class="texto-pagina atenuado">¡Hola!</h1>'}
-                </span>
+                <span>{'<h1 class="texto-pagina atenuado">¡Hola!</h1>'}</span>
                 (nota que acabamos de agregar dos clases al elemento:
                 texto-pagina y atenuado). Luego, estilizamos en función de la
                 clase usando un punto en lugar de un signo de numeral:
-                <span>
-                  {'.atenuado {...}'}
-                </span>
+                <span>{'.atenuado {...}'}</span>
               </li>
             </ol>
             <li>
@@ -498,11 +479,19 @@ export default function CssDoc() {
               debería ser rojo según su clase pero azul según su id? CSS tiene
               un orden de especificidad que va así:
             </li>
-            <ol className='list-css-span'>
-              <li><span>Estilo en línea (in-line styling).</span></li>
-              <li><span>Id (id="")</span></li>
-              <li><span>Clase (class="")</span></li>
-              <li><span>Tipo de Elemento</span></li>
+            <ol className="list-css-span">
+              <li>
+                <span>Estilo en línea (in-line styling).</span>
+              </li>
+              <li>
+                <span>Id (id="")</span>
+              </li>
+              <li>
+                <span>Clase (class="")</span>
+              </li>
+              <li>
+                <span>Tipo de Elemento</span>
+              </li>
             </ol>
             <li>
               Además de la coma para múltiples selectores, hay varias otras
@@ -631,11 +620,9 @@ export default function CssDoc() {
               escribimos añadiendo dos puntos después de nuestro selector y
               luego especificando la circunstancia después de esos dos puntos.
             </li>
-            <li className='list-css-span'>
+            <li className="list-css-span">
               En el caso del botón, agregaríamos
-              <span>
-                :hover
-              </span>
+              <span>:hover</span>
               al selector del botón para indicar el diseño que se aplicará solo
               cuando se pasa el cursor sobre él.
             </li>
@@ -673,7 +660,7 @@ export default function CssDoc() {
           />
           <span id="responsive" />
           <SectionTitle title="Diseño Responsivo" />
-          <ul className='list-css-span'>
+          <ul className="list-css-span">
             <li>
               Hoy en día, muchas personas visitan sitios web en dispositivos
               distintos a las computadoras, como smartphones y tabletas. Es
@@ -682,12 +669,12 @@ export default function CssDoc() {
             </li>
             <li>
               Una forma de lograr esto es mediante el conocimiento del
-              <span>viewport</span>(ventana gráfica). El<span>viewport</span>es la parte de la
-              pantalla que es visible para el usuario en un momento dado. Por
-              defecto, muchas páginas web asumen que el<span>viewport</span>es el mismo en
-              cualquier dispositivo, lo que lleva a que muchos sitios
-              (especialmente los más antiguos) sean difíciles de interactuar en
-              dispositivos móviles.
+              <span>viewport</span>(ventana gráfica). El<span>viewport</span>es
+              la parte de la pantalla que es visible para el usuario en un
+              momento dado. Por defecto, muchas páginas web asumen que el
+              <span>viewport</span>es el mismo en cualquier dispositivo, lo que
+              lleva a que muchos sitios (especialmente los más antiguos) sean
+              difíciles de interactuar en dispositivos móviles.
             </li>
             <li>
               Una forma sencilla de mejorar la apariencia de un sitio en un
@@ -710,14 +697,12 @@ export default function CssDoc() {
               formas de cambiar el estilo de una página según la forma en que se
               está visualizando la página.
             </li>
-            <li className='list-css-span'>
+            <li className="list-css-span">
               Como ejemplo de una consulta de medios (media query), intentemos
               cambiar simplemente el color de la pantalla cuando se reduce a un
               cierto tamaño. Indicamos una consulta de medios escribiendo
-              <span>
-                @media
-              </span>
-              , seguido del tipo de consulta entre paréntesis:
+              <span>@media</span>, seguido del tipo de consulta entre
+              paréntesis:
             </li>
           </ul>
           <Pre lang="html">{
@@ -1168,9 +1153,9 @@ export default function CssDoc() {
             <span>@extend %nombre-de-clase</span>
             al principio de algunos estilos. Por ejemplo, el siguiente código
             aplica los estilos dentro de la clase
-            <span className="text-[#395692] mx-1">"message"</span> a cada una de las
-            clases diferentes a continuación, lo que resulta en una página web
-            que se ve de la siguiente manera:
+            <span className="text-[#395692] mx-1">"message"</span> a cada una de
+            las clases diferentes a continuación, lo que resulta en una página
+            web que se ve de la siguiente manera:
           </li>
           <Pre lang="css">{
             /*css */ `
