@@ -40,12 +40,9 @@ export default function Tracker() {
               longitude: jsonData.coordinates.longitude,
             },
           });
-          const dataIPs = ['45.178.0.86', '45.178.0.108'];
-          const localURL = 'http://localhost:3000/';
           if (
-            localURL !== 'http://localhost:3000/' &&
-            jsonData.ip.address !== dataIPs[0] &&
-            jsonData.ip.address !== dataIPs[1]
+            jsonData.ip.address !== '45.178.0.86' &&
+            location.href !== location.href.includes('localhost:3000/')
           ) {
             sendDataToSupabase(jsonData);
           }
