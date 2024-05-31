@@ -21,7 +21,7 @@ export const HomeBlock = ({ children, className = '' }) => {
   );
 };
 
-export const HomeBlockTitle = ({ Tag = 'h2', children, className = '' }) => { 
+export const HomeBlockTitle = ({ Tag = 'h2', children, className = '' }) => {
   return (
     <Tag
       className={`${className} text-4xl font-bold sm:text-5xl mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-300 py-2`}
@@ -79,7 +79,7 @@ export default function Home() {
           {cardContent.map((card, index) => (
             <div
               key={index}
-              className="dark:bg-[#09090B] bg-[#FFFFFF] p-4 rounded-lg border dark:border-zinc-800 shadow-sm shadow-slate-200 dark:!shadow z-50"
+              className="dark:bg-[#09090B] bg-[#FFFFFF] p-4 rounded-lg border dark:border-zinc-900 shadow-sm shadow-slate-200 dark:!shadow z-50"
             >
               <span className="text-xl font-bold">{card.feature}</span>
               <p className="text-text-second py-3">{card.children}</p>
