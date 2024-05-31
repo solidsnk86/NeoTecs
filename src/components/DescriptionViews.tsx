@@ -48,7 +48,7 @@ export const DescriptionViews = ({ videoId }: { videoId: string }) => {
   return (
     <div className="text-left my-1 font-bold">
       <span>{formatView()} Vistas</span>
-      <span> · Publicado el {FormatDate(datePublished)}</span>
+      <time> · Publicado el {FormatDate(datePublished)}</time>
     </div>
   );
 };
