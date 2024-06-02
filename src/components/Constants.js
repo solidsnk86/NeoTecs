@@ -154,7 +154,7 @@ export const compartirLinkedIn = () => {
 };
 
 export const compartiTelegram = () => {
-  const text = '¡Aprende a configurar tu Wifi en minutos!';
+  const text = '¡Aprende a configurar tu Wifi en 5 minutos!';
   const url = encodeURIComponent(window.location.href);
   const encodeT = encodeURIComponent(text) + url;
   const telegramLink = `https://t.me/share/url?text=${encodeT}`;
