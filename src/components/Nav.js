@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Bug, Github, MessageCircleIcon } from 'lucide-react';
-import { Button } from '@nextui-org/button';
 import { useState, useRef, useEffect } from 'react';
 import { useIsomorphicLayoutEffect } from './hooks/useIsomorphicLayoutEffect';
 import { NeotecsLogo } from './NeotecsLogo';

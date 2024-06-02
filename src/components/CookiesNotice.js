@@ -38,10 +38,9 @@ export const CookieNotice = () => {
         utilizamos, consulta nuestra
         <Link
           href="docs/politicas-privacidad"
-          className="mx-1 underline hover:text-sky-500"
+          className="mx-1 text-sky-600 hover:underline"
         >
           Política de Privacidad.
-          <ExternalLink className="link-icon w-[13px] h-[13px] inline -translate-x-2" />
         </Link>
       </p>
       <div className="xl:inline mt-[10px]">
