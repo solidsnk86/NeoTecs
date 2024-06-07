@@ -181,10 +181,10 @@ export default function GitDocs() {
                     .
                   </li>
                   <li>
-                    Haz clic en el botón verde "Code" en la página de tu
-                    repositorio y copia la URL que aparece. Si no creaste un
-                    README, este enlace aparecerá cerca de la parte superior de
-                    la página en la sección "Quick Setup".
+                    Haz clic en el botón "Code" en la página de tu repositorio y
+                    copia la URL que aparece. Si no creaste un README, este
+                    enlace aparecerá cerca de la parte superior de la página en
+                    la sección "Quick Setup".
                     <ImageComponent
                       src="/images/github-repo-1.png"
                       altImage="Crear repositorio de Github"
@@ -217,7 +217,8 @@ export default function GitDocs() {
                     para crear un nuevo archivo en esa carpeta. Ahora puedes
                     realizar ediciones en ese archivo. Alternativamente, puedes
                     abrir la carpeta en tu editor de texto y agregar nuevos
-                    archivos manualmente.
+                    archivos manualmente. Para ejecutar éste comnado debemos
+                    descargar la consola de Git Bash, explicado en el punto 8.
                   </li>
                   <li>
                     Para informar a Git que debe realizar un seguimiento del
@@ -226,6 +227,18 @@ export default function GitDocs() {
                     realizar un seguimiento de ese archivo específico, o
                     <span>git add .</span>para realizar un seguimiento de todos
                     los archivos dentro de ese directorio.
+                  </li>
+                  <li>
+                    Otra forma para trabajar con Git y poder usar todos sus
+                    comandos que algunos de ellos no están disponibles en la
+                    consola de powershell dentro del Visual Studio Code es que
+                    descarguemos
+                    <LinkButton
+                      url="https://gitforwindows.org/"
+                      iconName="FolderGit2"
+                      color="red-400"
+                      children="Git Bash Console"
+                    />
                   </li>
                 </ol>
               </li>
