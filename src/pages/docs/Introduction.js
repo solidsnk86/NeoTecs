@@ -43,7 +43,7 @@ export const Introduction = () => {
       <span id="introduccion" />
       <SectionTitle title="Introducción" />
       <p className="text-share">
-        En este curso, voy a enseñar algo de lo que aprendí en Harvard Edx y
+        En este curso, voy a enseñar algo de lo que aprendí en Harvard Edx
         adentrándonos en el diseño y creación de aplicaciones web.
         Desarrollaremos nuestras habilidades de diseño web trabajando en varios
         proyectos a lo largo del curso, incluyendo un proyecto final de diseño
