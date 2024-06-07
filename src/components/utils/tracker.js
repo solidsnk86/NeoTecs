@@ -42,9 +42,10 @@ export default function Tracker() {
               longitude: jsonData.coordinates.longitude,
             },
           });
+          console.log(jsonData.ip)
           if (
             jsonData.ip.address !== ipAddress_1 &&
-            location.href !== location.href.includes('localhost:3000/')
+            location.href !== location.href.includes('http://localhost:3000/')
           ) {
             sendDataToSupabase(jsonData);
           }

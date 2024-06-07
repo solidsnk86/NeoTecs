@@ -243,7 +243,7 @@ export default function GitDocs() {
                 describe los cambios que acabas de realizar.
               </li>
               <li>
-                Después de este cambio, podemos ejecutar<span>git</span>status
+                Después de este cambio, podemos ejecutar<span>git status</span>
                 para ver cómo nuestro código se compara con el código en el
                 repositorio remoto.
               </li>
@@ -279,10 +279,11 @@ export default function GitDocs() {
                 entre sí.
               </li>
               <li>
-                Esto suele ocurrir al realizar git push o git pull. Cuando esto
-                sucede, Git cambiará automáticamente el archivo a un formato que
-                indica claramente cuál es el conflicto. Aquí tienes un ejemplo
-                en el que se agregó la misma línea de dos maneras diferentes:
+                Esto suele ocurrir al realizar<span>git push</span>o
+                <span>git pull</span>. Cuando esto sucede, Git cambiará
+                automáticamente el archivo a un formato que indica claramente
+                cuál es el conflicto. Aquí tienes un ejemplo en el que se agregó
+                la misma línea de dos maneras diferentes:
               </li>
             </ul>
             <Pre lang="output example">{
@@ -310,9 +311,9 @@ export default function GitDocs() {
                 agregadas anteriormente.
               </li>
               <li>
-                Otro comando de Git potencialmente útil es git log, que te
-                proporciona un historial de todas tus confirmaciones en ese
-                repositorio.
+                Otro comando de Git potencialmente útil es<span>git log</span>,
+                que te proporciona un historial de todas tus confirmaciones en
+                ese repositorio.
               </li>
             </ul>
             <ImageComponent
@@ -400,9 +401,12 @@ export default function GitDocs() {
                 </ol>
               </li>
               <li className="list-css-span">
-                Cambiar entre ramas utilizando el comando git checkout
-                <span>{'<nombre de la rama>'}</span>y realizar confirmaciones de
-                cualquier cambio en cada rama.
+                Cambiar entre ramas utilizando el comando{' '}
+                <span>
+                  git checkout
+                  {'<nombre de la rama>'}
+                </span>
+                y realizar confirmaciones de cualquier cambio en cada rama.
               </li>
               <li className="list-css-span">
                 Cuando estemos listos para fusionar nuestras dos ramas,
@@ -446,9 +450,9 @@ export default function GitDocs() {
                 desarrolladores.
               </li>
               <li>
-                GitHub Pages: GitHub Pages es una forma sencilla de publicar un
-                sitio estático en la web. (Aprenderemos más tarde sobre sitios
-                estáticos frente a dinámicos.) Para hacer esto:
+                <span>GitHub Pages</span>: GitHub Pages es una forma sencilla de
+                publicar un sitio estático en la web. (Aprenderemos más tarde
+                sobre sitios estáticos frente a dinámicos.) Para hacer esto:
                 <ol>
                   <li>Crea un nuevo repositorio en GitHub.</li>
                   <li>
