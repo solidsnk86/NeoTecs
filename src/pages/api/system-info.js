@@ -1,3 +1,4 @@
+'use-client';
 import os from 'node:os';
 
 function formatDate(string) {
