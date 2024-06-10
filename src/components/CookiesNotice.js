@@ -37,7 +37,7 @@ export const CookieNotice = () => {
         como en otros medios. Para obtener más información sobre las cookies que
         utilizamos, consulta nuestra
         <Link
-          href="docs/politicas-privacidad"
+          href="/politicas-privacidad"
           className="mx-1 text-sky-600 hover:underline"
         >
           Política de Privacidad.
