@@ -27,10 +27,10 @@ export default function handlerInfo(req, res) {
           model: os.cpus().shift().model.trim(),
           cores: os.cpus().length / 2,
           threads: os.cpus().length,
-          speed: (os.cpus().shift().speed / 1000).toFixed(2) + ' GHz',
+          speed: (os.cpus().shift().speed / 1000).toFixed(2) + 'GHz',
           avaliableMemory:
-            (os.totalmem() / 1024 / 1024 / 1024).toFixed(2) + ' GB',
-          freeMemory: (os.freemem() / 1024 / 1024 / 1024).toFixed(2) + ' GB',
+            (os.totalmem() / 1024 / 1024 / 1024).toFixed(2) + 'GB',
+          freeMemory: (os.freemem() / 1024 / 1024 / 1024).toFixed(2) + 'GB',
         },
       },
       'user-info': {
