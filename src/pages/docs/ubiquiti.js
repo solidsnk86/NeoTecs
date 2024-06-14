@@ -317,7 +317,7 @@ export default function UbiquitiDocs() {
               </LinkButton>
               . Ante cualquier duda no dudes en escribir al
               <LinkButton
-                href={'/docs/feedback'}
+                href={'./feedback.js'}
                 color="text-strong"
                 iconName={'MessageSquareWarning'}
               >

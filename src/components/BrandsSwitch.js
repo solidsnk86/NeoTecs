@@ -25,7 +25,7 @@ export const BrandsSwitch = ({ inline }) => {
   return (
     <div
       className={`inline-block mb-4 bg-[#FFFFFF] dark:bg-[#09090B] border border-slate-400 border-opacity-20 shadow-md shadow-slate-500 dark:!shadow xl:rounded-xl rounded-b-xl overflow-hidden mt-16 xl:w-[200px] w-100% xl:overflow-y-auto description-videos ${
-        inline ? 'mb-8 lg:hidden w-100% inline-flex justify-center' : ''
+        inline ? 'mb-8 lg:hidden w-100% inline-flex justify-center z-0' : ''
       }`}
     >
       {links.map((link) => (
