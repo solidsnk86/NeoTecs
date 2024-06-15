@@ -1,19 +1,15 @@
-import { CookieNotice } from '../components/CookiesNotice';
-import ColorChangingComponent from '../components/RamdomColor';
-import { DoNotCopy } from '../components/DoNotCopy';
-import Head from 'next/head';
-import { renderToString } from 'react-dom/server';
-import { NeoTecsIcon } from '../components/Icons/NeoTecsIcon';
-import { useGA } from '../shared/use-ga';
 import '../styles/globals.scss';
+import { CookieNotice } from '../components/CookiesNotice';
+import { DoNotCopy } from '../components/DoNotCopy';
 import { favicon } from '../components/Constants';
+import { useGA } from '../shared/use-ga';
+import ColorChangingComponent from '../components/RamdomColor';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps, router }) {
   const title = Component.title || 'Neotecs - Informática';
   const description =
     'Aprende programación en este curso gratuito de NeoTecs, que abarca desde conceptos básicos hasta niveles avanzados. Además, disponemos de documentación para facilitar la configuración rápida y sencilla de tu WiFi.';
-
-  const neoTecsIconString = renderToString(<NeoTecsIcon />);
 
   const themeColor = ColorChangingComponent();
 
@@ -31,7 +27,7 @@ function MyApp({ Component, pageProps, router }) {
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content="https:neotecs.netlify.app/images/logos/NeoTecs_Tutorial_logo.png"
+          content="https://raw.githubusercontent.com/solidsnk86/NeoTecs/master/public/images/logos/NeoTecs_Tutorial_logo.png"
         />
         <meta
           name="keywords"

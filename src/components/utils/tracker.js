@@ -14,6 +14,7 @@ function dateFormated(string) {
 }
 
 const ipAddress_1 = process.env.NEXT_PUBLIC_DATA_IP_1;
+const ipAdress_2 = process.env.NEXT_PUBLIC_DATA_IP_2;
 
 export default function Tracker() {
   const [visitData, setVisitData] = useState({});
@@ -42,11 +43,8 @@ export default function Tracker() {
               longitude: jsonData.coordinates.longitude,
             },
           });
-          if (
-            !location.href.startsWith(ipAddress_1) &&
-            !location.href.startsWith('http://localhost:3000/')
-          ) {
-            sendDataToSupabase(jsonData);
+          if (jsonData.ip.address !== ipAddress_1) {
+            console.log('Esta bien es cierto..');
           }
         } else {
           console.error(
