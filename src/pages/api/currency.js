@@ -2,8 +2,7 @@ import { currencyGoogleSheetsURL } from '../../components/Constants';
 
 export default async function handlerCurrency(req, res) {
   'use-client';
-  res.header('Access-Control-Allow-Origin', '*');
-  
+
   try {
     const fetchData = async () => {
       const response = await fetch(currencyGoogleSheetsURL);
