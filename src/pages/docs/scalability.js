@@ -1013,10 +1013,12 @@ export default function Scalability() {
               proyectos! Si tienes más preguntas o necesitas ayuda con algo
               específico, no dudes en preguntar.
             </p>
-            <p>Mi feed..</p>
-            <LinkButton url="/docs/feedback" color="red-400">
-              Feedback
-            </LinkButton>
+            <p>
+              Mi feed...
+              <LinkButton url="/docs/feedback" color="red-400">
+                Feedback
+              </LinkButton>
+            </p>
           </article>
           <ShareButton setTitle={Scalability.title} />
         </div>
