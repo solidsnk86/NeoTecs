@@ -15,7 +15,7 @@ export default function UbiquitiDocs() {
   return (
     <TitlesContextProvider>
       <Nav className="fixed w-full h-12 z-50" />
-      <div className="max-w-screen-xl mx-auto flex items-stretch py-16">
+      <div className="max-w-screen-xl mx-auto flex items-stretch">
         <DocsNav />
         <div className="w-full max-w-none prose px-4 md:px-8">
           <BrandsSwitch inline />

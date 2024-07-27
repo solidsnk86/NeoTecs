@@ -13,7 +13,7 @@ export default function MarkDownRender() {
   return (
     <TitlesContextProvider>
       <Nav className="fixed xl:relative w-full h-12 z-50" />
-      <div className="max-w-screen-xl mx-auto flex items-stretch py-16">
+      <div className="max-w-screen-xl mx-auto flex items-stretch">
         <NavLinks />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
@@ -40,7 +40,7 @@ export default function MarkDownRender() {
             obtener información más detallada:
             <LinkButton
               url="https://remarkjs.github.io/react-markdown/"
-              color="amber-600"
+              color="sky-600"
               iconName={'ArrowUpRight'}
             >
               react-markdown en GitHub
@@ -275,7 +275,7 @@ export default function MarkDownRender() {
             implementar en algún proyecto. Ante cualquier duda o consulta pueden
             escribirme en el
             <LinkButton
-              color="amber-600"
+              color="sky-600"
               iconName={'MessageSquareWarning'}
               url="/docs/feedback"
             >

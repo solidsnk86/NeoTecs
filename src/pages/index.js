@@ -33,8 +33,9 @@ export const HomeBlockTitle = ({ Tag = 'h2', children, className = '' }) => {
 
 export default function Home() {
   return (
-    <main className="text-text-primary">
-      <Nav className={'bg-transparent'} />
+   <>
+     <main className="text-text-primary">
+     <Nav className={'relative'} />
       <HomeHeader />
       <HomeBlock>
         <HomeBlockTitle>¿Sabés Configurar tu CPE inalámbrico?</HomeBlockTitle>
@@ -53,7 +54,7 @@ export default function Home() {
               <h2 className="text-3xl mx-auto font-semibold my-3 border-b-4 border-outline w-fit">
                 Documentación Wifi
               </h2>
-              <p className="text-md text-outline">
+              <p className="text-md text-text-second">
                 Descubre cómo configurar diferentes modelos <br />
                 de dispositvos inalámbricos de las marcas
                 <br /> más conocidas con esta guía.
@@ -136,5 +137,6 @@ export default function Home() {
       </HomeBlock>
       <Footer />
     </main>
+   </>
   );
 }

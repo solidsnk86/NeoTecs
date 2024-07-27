@@ -15,10 +15,10 @@ export default function DjangoDocs() {
   return (
     <TitlesContextProvider>
       <Nav className="backdrop-blur-md bg-transparent fixed xl:relative w-full h-12 z-50" />
-      <div className="max-w-screen-xl mx-auto flex items-stretch py-16">
+      <div className="max-w-screen-xl mx-auto flex items-stretch">
         <NavLinks />
+        <NavSwitch inline />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
-          <NavSwitch inline />
           <HeaderTitle>Django</HeaderTitle>
           <hr className="border-text-primary" />
           <Indextitle>Índice</Indextitle>

@@ -3,7 +3,7 @@ import { User, KeyRound } from 'lucide-react';
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import supabase from '../../components/utils/supabase';
-import Link from 'next/link';
+
 
 const LoginForm = ({ onClose }) => {
   const [email, setEmail] = useState('');

@@ -5,12 +5,11 @@ export default async function handler(req, res) {
     const { nombre, email, comentario } = req.body;
 
     const { data, error } = await supabase
-
-    .from('feedback')
+      .from('feedback')
       .insert([{ nombre, email, comentario }]);
 
     if (!data) {
-      throw new Error("No fue posible enviar los datos", error);
+      throw new Error('No fue posible enviar los datos', error);
     }
 
     return res.status(200).json({ success: true, data });

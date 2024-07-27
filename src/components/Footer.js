@@ -15,7 +15,7 @@ import Tracker from '../components/utils/tracker';
 
 export const Footer = () => {
   return (
-    <section className="border-t-2 border-outline text-text-primary mt-14">
+    <section className="border-t-2 border-outline text-text-primary">
       <span className="relative flex justify-center m-auto bg-outline px-[2px] py-[2px] w-fit h-fit rounded-full bottom-[19px]">
         <FaChevronCircleUp
           className="text-text-variant text-[33px] relative cursor-pointer hover:opacity-[.9] transition-all"

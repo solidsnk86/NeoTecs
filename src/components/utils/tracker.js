@@ -13,7 +13,10 @@ function dateFormated(string) {
   return date;
 }
 
-const local = 'http://localhost:3000/';
+const local = [
+  'http://localhost:3000/',
+  'http://localhost:3001/'
+];
 
 export default function Tracker() {
   const [visitData, setVisitData] = useState({});
@@ -42,7 +45,7 @@ export default function Tracker() {
               longitude: jsonData.coordinates.longitude,
             },
           });
-          if (window.location.href === local) {
+          if (local.includes(window.location.href)) {
             return null;
           } else {
             sendDataToSupabase(jsonData);

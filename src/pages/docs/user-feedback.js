@@ -16,7 +16,7 @@ export default function UserFeedback() {
           onClick={(e) => history.back(e)}
         />
       </div>
-      <div className="max-w-screen-xl mx-auto flex items-stretch py-16">
+      <div className="max-w-screen-xl mx-auto flex items-stretch">
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <HeaderTitle>Feedback de los usuarios</HeaderTitle>
           <hr className="border-text-primary" />

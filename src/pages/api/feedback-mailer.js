@@ -1,6 +1,6 @@
-const nodemailer = require('nodemailer');
+import { createTransport } from 'nodemailer';
 
-const transporter = nodemailer.createTransport({
+const transporter = createTransport({
   service: 'gmail',
   auth: {
     user: process.env.NEXT_PUBLIC_GMAIL_EMAIL,
@@ -22,4 +22,4 @@ async function enviarCorreoElectronico(email, nombre) {
   }
 }
 
-module.exports = enviarCorreoElectronico;
+export default enviarCorreoElectronico;
