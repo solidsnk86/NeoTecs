@@ -10,6 +10,7 @@ import { ExternalLinkIcon, MessageCircleIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 import { NavLinks } from '../../components/NavLinks';
+import { LinkButton } from '../../components/LinkButton';
 
 export default function Scalability() {
   return (
@@ -502,13 +503,13 @@ export default function Scalability() {
             </div>
             <p>
               Django proporciona su propio
-              <Link
-                href="https://docs.djangoproject.com/en/4.0/topics/cache/"
-                className="text-red-400 mx-1 underline link"
+              <LinkButton
+                url="https://docs.djangoproject.com/en/4.0/topics/cache/"
+                color="red-400"
+                iconName="ArrowUpRight"
               >
                 marco de trabajo de caché
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               que nos permitirá incorporar el almacenamiento en caché en
               nuestros proyectos. Este marco ofrece varias formas de implementar
               una caché:
@@ -536,13 +537,13 @@ export default function Scalability() {
             <p>
               Aquí no entraremos en detalles sobre cómo implementar el
               almacenamiento en caché en Django, ¡pero eche un vistazo a la
-              <Link
-                href="https://docs.djangoproject.com/en/4.0/topics/cache/"
-                className="text-red-400 mx-1 underline link"
+              <LinkButton
+                url="https://docs.djangoproject.com/en/4.0/topics/cache/"
+                iconName="ArrowUpRight"
+                color="red-400"
               >
                 documentación
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               si está interesado!
             </p>
           </article>
@@ -889,61 +890,61 @@ export default function Scalability() {
             <p>Lado del Servidor:</p>
             <ul>
               <li>
-                <Link
-                  href="https://expressjs.com/"
-                  className="underline text-red-400 mx-1 link"
+                <LinkButton
+                  url="https://expressjs.com/"
+                  color="red-400"
+                  iconName="ArrowUpRight"
                 >
                   Express.js
-                  <ExternalLinkIcon className="link-icon" />
-                </Link>
+                </LinkButton>
               </li>
               <li>
-                <Link
-                  href="https://rubyonrails.org/"
-                  className="underline text-red-400 mx-1 link"
+                <LinkButton
+                  url="https://rubyonrails.org/"
+                  color="red-400"
+                  iconName="ArrowUpRight"
                 >
                   Ruby on Rails
-                  <ExternalLinkIcon className="link-icon" />
-                </Link>
+                </LinkButton>
               </li>
               <li>
-                <Link
-                  href="https://flask.palletsprojects.com/en/1.1.x/"
-                  className="underline text-red-400 mx-1 link"
+                <LinkButton
+                  url="https://flask.palletsprojects.com/en/1.1.x/"
+                  color="red-400"
+                  iconName="ArrowUpRight"
                 >
                   Flask
-                  <ExternalLinkIcon className="link-icon" />
-                </Link>
+                </LinkButton>
               </li>
             </ul>
             <p>Lado del Cliente:</p>
             <ul>
               <li>
-                <Link
-                  href="https://angularjs.org/"
-                  className="underline text-red-400 mx-1 link"
+                <LinkButton
+                  url="https://angularjs.org/"
+                  color="red-400"
+                  iconName="ArrowUpRight"
                 >
                   Angular.js
-                  <ExternalLinkIcon className="link-icon" />
-                </Link>
+                </LinkButton>
               </li>
               <li>
-                <Link
-                  href="https://reactjs.org/"
-                  className="underline text-red-400 mx-1 link"
+                <LinkButton
+                  url="https://reactjs.org/"
+                  color="red-400"
+                  iconName="ArrowUpRight"
                 >
                   React
-                  <ExternalLinkIcon className="link-icon" />
-                </Link>
+                </LinkButton>
               </li>
               <li>
-                <Link
-                  href="https://nextjs.org/"
-                  className="underline text-red-400 mx-1 link"
+                <LinkButton
+                  url="https://nextjs.org/"
+                  color="red-400"
+                  iconName="ArrowUpRight"
                 >
                   Next.js
-                  <ExternalLinkIcon className="link-icon" />
-                </Link>
+                </LinkButton>
               </li>
             </ul>
             <p>
@@ -953,51 +954,51 @@ export default function Scalability() {
             </p>
             <ul>
               <li>
-                <Link
-                  href="https://aws.amazon.com/getting-started/hands-on/websites/"
-                  className="underline text-red-400 mx-1 link"
+                <LinkButton
+                  url="https://aws.amazon.com/getting-started/hands-on/websites/"
+                  color="red-400"
+                  iconName="ArrowUpRight"
                 >
                   Amazon web Services
-                  <ExternalLinkIcon className="link-icon" />
-                </Link>
+                </LinkButton>
               </li>
               <li>
-                <Link
-                  href="https://github.com/"
-                  className="underline text-red-400 mx-1 link"
+                <LinkButton
+                  url="https://github.com/"
+                  color="red-400"
+                  iconName="ArrowUpRight"
                 >
                   GitHub
-                  <ExternalLinkIcon className="link-icon" />
-                </Link>
+                </LinkButton>
               </li>
               <li>
-                <Link
-                  href="https://app.netlify.com/"
-                  className="underline text-red-400 mx-1 link"
+                <LinkButton
+                  url="https://app.netlify.com/"
+                  color="red-400"
+                  iconName="ArrowUpRight"
                 >
                   Netlify
-                  <ExternalLinkIcon className="link-icon" />
-                </Link>
+                </LinkButton>
               </li>
               <li>
-                <Link
-                  href="https://www.heroku.com/"
-                  className="underline text-red-400 mx-1 link"
+                <LinkButton
+                  url="https://www.heroku.com/"
+                  color="red-400"
+                  iconName="ArrowUpRight"
                 >
                   Heroku
-                  <ExternalLinkIcon className="link-icon" />
-                </Link>
+                </LinkButton>
               </li>
             </ul>
             <p>
               Pueden dar un vistazo a la sección de cómo crear una
-              <Link
-                href="/docs/google-sheets"
-                className="mx-1 link text-red-400 hover:opacity-[.8] hover:transition-all"
+              <LinkButton
+                url="/docs/google-sheets"
+                color="red-400"
+                iconName="ArrowUpRight"
               >
                 base de datos con Google Sheets
-                <ExternalLinkIcon className="link-icon" />
-              </Link>
+              </LinkButton>
               , con React y Next.js más API routes.
             </p>
             <p>
@@ -1013,17 +1014,9 @@ export default function Scalability() {
               específico, no dudes en preguntar.
             </p>
             <p>Mi feed..</p>
-            <Link
-              href="/docs/feedback"
-              className="flex items-center space-x-2 mb-3 hover:opacity-[.8] hover:transition-all no-underline"
-            >
-              <span
-                className={`px-[3px] pt-[2px] rounded-md border no-underline bg-button-variant text-text-variant dark:border-zinc-700 font-semibold xl:text-sm text-xs`}
-              >
-                <MessageCircleIcon className="inline mb-1 cursor-pointer w-4 h-4 mx-1" />
-                {'Feedback'}
-              </span>
-            </Link>
+            <LinkButton url="/docs/feedback" color="red-400">
+              Feedback
+            </LinkButton>
           </article>
           <ShareButton setTitle={Scalability.title} />
         </div>
