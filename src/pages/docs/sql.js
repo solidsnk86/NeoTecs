@@ -436,7 +436,7 @@ export default function SqlDocs() {
               >
                 SQLite
               </LinkButton>
-              . (No lo usaremos en la conferencia, pero también puedes descargar
+              . (No se usará en este curso, pero también puedes descargar
               <LinkButton
                 url="https://sqlitebrowser.org/dl/"
                 color="sky-700"
