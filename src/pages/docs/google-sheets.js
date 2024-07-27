@@ -19,7 +19,7 @@ export default function CsvSheets() {
   return (
     <TitlesContextProvider>
       <Nav className="fixed xl:relative w-full h-12 z-50" />
-      <div className="max-w-screen-xl mx-auto flex items-stretch">
+      <div className="max-w-screen-xl mx-auto flex items-stretch mb-20">
         <NavLinks />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
@@ -93,13 +93,20 @@ export default function CsvSheets() {
                     {pic.name}
                   </p>
                   <p>{pic.description}</p>
-                  <span
-                    className="cursor-pointer hover:underline hover:text-lime-500 font-mono text-sm"
-                    onClick={() => sendWhatsapp(pic.id, pic.price)}
-                  >
-                    Encargar
-                    <WhatsApp fontSize="small" className=" mx-1 mb-1" />
-                  </span>
+                  {pic.isOnSale === 'disponible' ? (
+                    <span
+                      className="cursor-pointer hover:underline hover:text-lime-500 font-mono text-sm"
+                      onClick={() => sendWhatsapp(pic.id, pic.price)}
+                      title={
+                        pic.isOnSale === 'disponible'
+                          ? `Encargar ${pic.id}, valor: U$D ${pic.price}`
+                          : 'No está disponible!'
+                      }
+                    >
+                      Encargar
+                      <WhatsApp fontSize="small" className="mx-1 mb-1" />
+                    </span>
+                  ) : null}
                 </aside>
               </article>
             ))}
