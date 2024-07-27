@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Cascadia Code PL';
+  src: url('/public/fonts/CascadiaCodePL-SemiBold.ttf');
+}
+
 .custom-pre {
   border-radius: none;
   border: 1px solid var(--color-outline-variant);
