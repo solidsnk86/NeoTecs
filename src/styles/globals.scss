@@ -17,8 +17,8 @@
     --color-on-surface: #1a1b1f;
     --color-surface-variant: #f3f3f3;
     --color-on-surface-variant: #44474e;
-    --color-outline: #74777f;
-    --color-outline-variant: #c4c6d0;
+    --color-outline: #e0e0e0;
+    --color-outline-variant: #e0e0e0;
     --color-inverse-surface: #2f3033;
     --color-inverse-on-surface: #f2f0f4;
     --color-inverse-primary: #abc7ff;
@@ -39,12 +39,13 @@
     --hover-button: #ddd;
 
     --youtube-link: #ff0000;
-
+    --color-outline-feedback: rgb(224, 183, 105);
     --color-code: #6f43c0;
     --color-pre-bg: #23272e;
     --color-pre-color: #e3e2e6;
     --color-green: #006e24;
     --color-orange: #8c5000;
+    --bg-color-pre: #EEEEEE; 
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -59,7 +60,7 @@
     --color-surface-variant: #0f1419;
     --color-on-surface-variant: #c4c6d0;
     --color-outline: #8e9099;
-    --color-outline-variant: #44474e;
+    --color-outline-variant: #333;
     --color-inverse-surface: #e3e2e6;
     --color-inverse-on-surface: #2f3033;
     --color-inverse-primary: #005cbb;
@@ -80,10 +81,11 @@
     --hover-button: #21242a;
 
     --youtube-link: #ff0000;
-
+    --color-outline-feedback: orange;
     --color-code: #d3bbff;
     --color-green: #55e16b;
     --color-orange: #ffb874;
+    --bg-color-pre: #2A2929;
   }
 }
 
@@ -99,21 +101,19 @@ body {
 }
 
 body::before {
-  --line: hsla(0, 0%, 39%, 0.15);
-  --size: 60px;
+  --dot-color: hsla(0, 0%, 39%, 0.15);
+  --dot-size: 1px;
+  --dot-gap: 20px;
   content: '';
   height: 100vh;
   width: 100vw;
   position: fixed;
-  background: linear-gradient(
-        90deg,
-        var(--line) 1px,
-        transparent 1px var(--size)
-      )
-      50% 50% / var(--size) var(--size),
-    linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% /
-      var(--size) var(--size);
-  mask: linear-gradient(-15deg, transparent 30%, white);
+  background: radial-gradient(
+      var(--dot-color) var(--dot-size),
+      transparent var(--dot-size)
+    )
+    0 0 / var(--dot-gap) var(--dot-gap);
+  mask: linear-gradient(-15deg, transparent 15%, white);
   top: 0;
   transform-style: flat;
   pointer-events: none;
@@ -231,10 +231,6 @@ body::-webkit-scrollbar-thumb:hover {
     left: -30px;
     gap: 0;
   }
-}
-
-.nav-header {
-  background-color: rgba(255, 252, 252, 0.753);
 }
 
 a {
@@ -485,6 +481,10 @@ textarea {
   border: solid 0.5px var(--color-outline);
   border-radius: 3px;
   padding: 8px;
+
+  &:focus {
+    outline-color: var(--color-outline-feedback);
+  }
 }
 
 #result p {

@@ -1,13 +1,29 @@
-pre {
-  position: relative;
-  background-color: #23272e;
-  color: #006e24;
+.custom-pre {
+  border-radius: none;
+  border: 1px solid var(--color-outline-variant);
+  background-color: var(--bg-color-pre);
+  font-family: 'Cascadia Code PL';
+  font-size: 13px;
+  font-weight: 400;
 }
 
-.custom-pre {
-  font-family: 'Cascadia Code PL';
-  font-size: 14px;
-  font-weight:500;
+.line {
+  display: flex;
+}
+
+.line-number {
+  width: 1em;
+  font-weight: 300;
+  color: var(--second-color-text);
+  user-select: none;
+  opacity: 0.5;
+  text-align: right;
+  margin-right: 1.3em;
+}
+
+.line-content {
+  color: var(--second-color-text);
+  flex: 1;
 }
 
 @keyframes translateRight {
@@ -56,6 +72,6 @@ pre {
 
 .check-effect {
   animation-name: insideOut;
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
   animation-timing-function: ease-in;
 }
