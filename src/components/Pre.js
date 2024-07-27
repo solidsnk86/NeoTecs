@@ -57,7 +57,8 @@ export const Pre = ({ children, lang = '' }) => {
         language={lang.toLowerCase()}
       >
         {({ tokens, getLineProps, getTokenProps }) => (
-          <pre className="custom-pre" lang={lang} ref={preRef}>
+          tokens.length < 25 ? (
+            <pre className="custom-pre" lang={lang} ref={preRef}>
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })} key={i} className="line">
                 <span className="line-number">{i + 1}</span>
@@ -69,6 +70,20 @@ export const Pre = ({ children, lang = '' }) => {
               </div>
             ))}
           </pre>
+          ) : (
+            <pre className="custom-pre overflow-y-scroll h-[470px]" lang={lang} ref={preRef}>
+            {tokens.map((line, i) => (
+              <div {...getLineProps({ line, key: i })} key={i} className="line">
+                <span className="line-number">{i + 1}</span>
+                <span className="line-content">
+                  {line.map((token, key) => (
+                    <span {...getTokenProps({ token, key })} key={key} />
+                  ))}
+                </span>
+              </div>
+            ))}
+          </pre>
+          )
         )}
       </Highlight>
     </div>
