@@ -58,6 +58,17 @@ export default function FeedBack() {
     }
   };
 
+  const resizeTextArea = () => {
+    const textarea = document.getElementById('text-area');
+
+    const adjustHeight = () => {
+      textarea.style.height = 'auto';
+      textarea.style.height = textarea.scrollHeight + 'px';
+    };
+
+    textarea.addEventListener('input', adjustHeight);
+  };
+
   return (
     <>
       <Nav className="fixed xl:relative w-full z-50" />
@@ -108,9 +119,11 @@ export default function FeedBack() {
             Comentario:
             <textarea
               value={comentario}
+              id="text-area"
+              onInput={(e) => resizeTextArea(e)}
               onChange={(e) => setComentario(e.target.value)}
               placeholder="Comentario..."
-              className="h-28 resize-y cont"
+              className="h-auto overflow-y-hidden resize-y"
             />
           </label>
 
