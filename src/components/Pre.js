@@ -32,8 +32,8 @@ export const Pre = ({ children, lang = '' }) => {
 
   return (
     <div className="relative">
-      <div className=" bg-black border-r border-t border-l border-[#333] translate-y-[30px] text-amber-500 uppercase font-bold h-[30px] rounded-t-md overflow-hidden">
-        <small className="bg-[#2A2929] p-6 text-xs">{lang}</small>
+      <div className="bg-[#F6F8FA] dark:bg-black border-r border-t border-l dark:border-[#333] border-[#e0e0e0] translate-y-[30px] text-amber-500 uppercase font-bold h-[30px] rounded-t-md overflow-hidden">
+        <small className="dark:bg-[#2A2929] bg-[#EEEEEE] p-6 text-xs">{lang}</small>
       </div>
       <span
         onClick={handleCopyClick}
@@ -57,12 +57,13 @@ export const Pre = ({ children, lang = '' }) => {
         {({ tokens, getLineProps, getTokenProps }) => (
           <pre className="custom-pre" lang={lang} ref={preRef}>
             {tokens.map((line, i) => (
-              <div {...getLineProps({ line, key: i })} key={i}>
-                {line.map((token, key) => (
-                  <o>
+              <div {...getLineProps({ line, key: i })} key={i} className="line">
+                <span className="line-number">{i + 1}</span>
+                <span className="line-content">
+                  {line.map((token, key) => (
                     <span {...getTokenProps({ token, key })} key={key} />
-                  </o>
-                ))}
+                  ))}
+                </span>
               </div>
             ))}
           </pre>
