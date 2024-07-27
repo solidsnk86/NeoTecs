@@ -13,7 +13,7 @@ export function NavLinks() {
 
   return (
     <div className="w-80 px-4 md:px-8 hidden lg:block">
-      <div className="sticky top-4">
+      <div className="sticky top-2">
         <div className="flex gap-4">
           <div
             title="Volver atrás"

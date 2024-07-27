@@ -12,8 +12,6 @@ export const Pre = ({ children, lang = '' }) => {
   const preRef = useRef(null);
   const [copied, setCopied] = useState(false);
 
-  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
   const handleCopyClick = () => {
     if (preRef.current) {
       const range = document.createRange();
