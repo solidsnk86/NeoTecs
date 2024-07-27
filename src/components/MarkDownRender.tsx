@@ -8,40 +8,40 @@ import 'github-markdown-css/github-markdown.css';
 import 'highlight.js/styles/github-dark.css';
 
 const MarkdownRenderer = ({ url }) => {
-    const [markdownContent, setMarkdownContent] = useState('');
+  const [markdownContent, setMarkdownContent] = useState('');
 
-    useEffect(() => {
-        fetch(url)
-            .then((response) => response.text())
-            .then((data) => setMarkdownContent(data))
-            .catch((error) =>
-                console.error('Error al buscar el documento Markdown:', error),
-            );
-    }, [url]);
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.text())
+      .then((data) => setMarkdownContent(data))
+      .catch((error) =>
+        console.error('Error al buscar el documento Markdown:', error),
+      );
+  }, [url]);
 
-    return (
-        <div className='text-text-primary'>
-            <ReactMarkdown
-                rehypePlugins={[
-                    rehypeRaw,
-                    rehypeSlug,
-                    rehypeAutolinkHeadings,
-                    [rehypeHighlight, { ignoreMissing: true }],
-                ]}
-                components={{
-                    pre: ({ children }) => (
-                        <div className="my-3 code-block">
-                            <pre>{children}</pre>
-                        </div>
-                    ),
-                    li: ({ children }) => <li className="custom-li">{children}</li>,
-                }}
-                className="space-y-2"
-            >
-                {markdownContent}
-            </ReactMarkdown>
-        </div>
-    );
+  return (
+    <div className="text-text-primary">
+      <ReactMarkdown
+        rehypePlugins={[
+          rehypeRaw,
+          rehypeSlug,
+          rehypeAutolinkHeadings,
+          [rehypeHighlight, { ignoreMissing: true }],
+        ]}
+        components={{
+          pre: ({ children }) => (
+            <div className="my-3 code-block">
+              <pre>{children}</pre>
+            </div>
+          ),
+          li: ({ children }) => <li className="custom-li">{children}</li>,
+        }}
+        className="space-y-2"
+      >
+        {markdownContent}
+      </ReactMarkdown>
+    </div>
+  );
 };
 
 export default MarkdownRenderer;

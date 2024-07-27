@@ -53,6 +53,7 @@
   animation-name: translateRight;
   animation-duration: 0.5s;
   animation-timing-function: ease-in;
+  text-rendering: optimizeLegibility;
 }
 
 @keyframes insideOut {
@@ -74,4 +75,5 @@
   animation-name: insideOut;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
+  text-rendering: optimizeLegibility;
 }

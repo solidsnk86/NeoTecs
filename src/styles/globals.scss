@@ -60,7 +60,7 @@
     --color-surface-variant: #0f1419;
     --color-on-surface-variant: #2f3033;
     --color-outline: #8e9099;
-    --color-outline-variant: #444;
+    --color-outline-variant: #333;
     --color-inverse-surface: #e3e2e6;
     --color-inverse-on-surface: #2f3033;
     --color-inverse-primary: #005cbb;
@@ -446,9 +446,13 @@ video {
 
 .code-block {
   border-radius: 5px;
-  background-color: #303030;
   overflow-x: auto;
   text-rendering: optimizeLegibility;
+
+  & pre {
+    background-color: var(--bg-color-pre);
+    z-index: 99;
+  }
 }
 
 .image-markdown {
