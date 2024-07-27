@@ -30,9 +30,12 @@ export const LinkButton: React.FC<LinkInterfaceProps> = ({
     <span className={`${className} inline ml-1` || ''}>
       <Link
         href={`${url}`}
-        className={cn(`text-${color} ${
-          underline ? true : false
-        } link dark:hover:brightness-200 hover:brightness-150 transition-colors duration-300`, color)}
+        className={cn(
+          `text-${color} ${
+            underline ? true : false
+          } link dark:hover:brightness-200 hover:brightness-150 transition-colors duration-300`,
+          color,
+        )}
         target={target}
         rel="noopener"
         download={download}
@@ -40,7 +43,10 @@ export const LinkButton: React.FC<LinkInterfaceProps> = ({
         {children}
         {Icon && (
           <Icon
-            className={cn(`text-${color} ml-1 font-extralight h-[16px] -translate-x-[3px] -translate-y-[1px] inline`, color)}
+            className={cn(
+              `text-${color} font-extralight h-[16px] -translate-x-[3px] -translate-y-[1px] inline`,
+              color,
+            )}
           />
         )}
       </Link>

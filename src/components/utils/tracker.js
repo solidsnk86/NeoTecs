@@ -15,7 +15,7 @@ function dateFormated(string) {
 
 const local = [
   'http://localhost:3000/',
-  'http://localhost:3001/'
+  'http://localhost:3001/',
 ];
 
 export default function Tracker() {

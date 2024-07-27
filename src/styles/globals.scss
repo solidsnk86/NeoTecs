@@ -16,7 +16,7 @@
     --color-surface: #ffffff;
     --color-on-surface: #1a1b1f;
     --color-surface-variant: #f3f3f3;
-    --color-on-surface-variant: #44474e;
+    --color-on-surface-variant: #f3f3f3;
     --color-outline: #e0e0e0;
     --color-outline-variant: #e0e0e0;
     --color-inverse-surface: #2f3033;
@@ -58,9 +58,9 @@
     --color-surface: #09090b;
     --color-on-surface: #e3e2e6;
     --color-surface-variant: #0f1419;
-    --color-on-surface-variant: #c4c6d0;
+    --color-on-surface-variant: #2f3033;
     --color-outline: #8e9099;
-    --color-outline-variant: #333;
+    --color-outline-variant: #444;
     --color-inverse-surface: #e3e2e6;
     --color-inverse-on-surface: #2f3033;
     --color-inverse-primary: #005cbb;
@@ -477,8 +477,9 @@ video {
 
 .label-feedback input,
 textarea {
-  color: #333;
-  border: solid 0.5px var(--color-outline);
+  background-color: var(--color-on-surface-variant);
+  color: var(--second-color-text);
+  border: solid 0.5px var(--color-outline-variant);
   border-radius: 3px;
   padding: 8px;
 
