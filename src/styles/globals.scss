@@ -45,7 +45,9 @@
     --color-pre-color: #e3e2e6;
     --color-green: #006e24;
     --color-orange: #8c5000;
-    --bg-color-pre: #EEEEEE; 
+    --bg-color-pre: #EEEEEE;
+    --scrollbar-track: transparent;
+    --scrollbar-thumb: #C1C1C1;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -86,6 +88,8 @@
     --color-green: #55e16b;
     --color-orange: #ffb874;
     --bg-color-pre: #2A2929;
+    --scrollbar-track: #424242;
+    --scrollbar-thumb: #686868;
   }
 }
 
