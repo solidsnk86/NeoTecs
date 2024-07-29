@@ -4,6 +4,7 @@ import { Footer } from '../../components/Footer';
 import { Nav } from '../../components/Nav';
 import { ToastContainer, toast } from 'react-toastify';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -15,6 +16,8 @@ export default function FeedBack() {
     handleSubmit,
     formState: { isSubmitting },
   } = useForm();
+
+  const router = useRouter();
 
   const onSubmit = async () => {
     const isDarkMode = window.matchMedia(
@@ -82,7 +85,7 @@ export default function FeedBack() {
         >
           <ArrowLeftIcon
             className="text-text-primary"
-            onClick={(e) => globalThis.history.back(e)}
+            onClick={(e) => router.back(e)}
           />
         </div>
         <h1 className="flex justify-center pt-6 mx-auto text-5xl text-transparent relative [-webkit-text-stroke-width:2px] [-webkit-text-stroke-color:var(--color-on-surface)]">

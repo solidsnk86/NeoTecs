@@ -2,10 +2,12 @@ import React, { useContext, useState } from 'react';
 import { ArrowLeftIcon, Home } from 'lucide-react';
 import { NavSwitch } from './NavSwicth';
 import { TitlesContext } from '../shared/TitlesContext';
+import { useRouter } from 'next/navigation';
 
 export function NavLinks() {
   const { titles } = useContext(TitlesContext);
   const [selectedSlug, setSelectedSlug] = useState(titles[0]?.slug);
+  const router = useRouter();
 
   const handleTitleClick = (slug) => {
     setSelectedSlug(slug);
@@ -21,7 +23,7 @@ export function NavLinks() {
           >
             <ArrowLeftIcon
               className="text-text-primary"
-              onClick={(e) => history.back(e)}
+              onClick={(e) => router.back(e)}
             />
           </div>
           <div
