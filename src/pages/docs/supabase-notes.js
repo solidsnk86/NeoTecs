@@ -4,9 +4,9 @@ import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 import { NavLinks } from '../../components/NavLinks';
-import supabase from '../../components/utils/supabase';
 import { useState, useEffect, useRef } from 'react';
 import AuthButton from '../../components/auth-button';
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 
 function formatDate(str) {
   const date = new Date(str).toLocaleDateString('es-ES', {
@@ -19,6 +19,8 @@ function formatDate(str) {
   return date;
 }
 
+const supabase = createClientComponentClient();
+
 export default function SupabaseDB() {
   const [notes, setNotes] = useState([]);
   const [edit, setEdit] = useState(null);
@@ -29,7 +31,7 @@ export default function SupabaseDB() {
       const { data, error } = await supabase
         .from('notes')
         .select()
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: true });
       setNotes(data);
 
       if (error) {
@@ -136,7 +138,8 @@ export default function SupabaseDB() {
           <article
             className="resize-y max-w-80"
             id="notes"
-            contentEditable={true}
+            contentEditable
+            suppressContentEditableWarning={true}
             ref={noteInputRef}
           >
             <p>Puedes agregar una nota aquí...</p>
@@ -155,6 +158,7 @@ export default function SupabaseDB() {
               <pre
                 id={`pre-${n.id}`}
                 contentEditable={edit === n.id}
+                suppressContentEditableWarning={true}
                 className="my-10 max-w-max text-pretty"
                 onClick={() => handleEdit(n.id)}
                 onBlur={() => updateNote(n.id)}
