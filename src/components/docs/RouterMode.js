@@ -20,7 +20,7 @@ export const RouterMode = () => {
         <LinkButton
           url="https://192.168.0.254/"
           color="[cornflowerblue]"
-          iconName={'ArrowUpRight'}
+          iconName="ArrowUpRight"
         >
           enlace
         </LinkButton>
@@ -162,7 +162,7 @@ export const RouterMode = () => {
           <LinkButton
             url="https://www.tp-link.com/ar/support/faq/"
             color="[cornflowerblue]"
-            iconName={'HelpCircle'}
+            iconName="HelpCircle"
           >
             (Preguntas frecuentes FAQs)
           </LinkButton>
@@ -209,9 +209,9 @@ export const RouterMode = () => {
       <p>
         Si surgen dudas en la configuración con gusto los escucho en mi
         <LinkButton
-          url={'/docs/feedback'}
+          url="/docs/feedback"
           color="text-strong"
-          iconName={'MessageSquareWarning'}
+          iconName="MessageSquareWarning"
         >
           feedback.
         </LinkButton>

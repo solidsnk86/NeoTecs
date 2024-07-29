@@ -1,13 +1,13 @@
 import { Builder, By, Key } from 'selenium-webdriver';
-import chrome from 'selenium-webdriver/chrome.js';
+import chrome from 'selenium-webdriver/chrome';
 import path from 'path';
 
 async function configureCPE(ip, username, password) {
-  let options = new chrome.ServiceBuilder(
+  const options = new chrome.ServiceBuilder(
     path.resolve('/chromedriver-win64/chromedriver.exe'),
   );
 
-  let driver = await new Builder()
+  const driver = await new Builder()
     .forBrowser('chrome')
     .setChromeOptions(options)
     .build();
@@ -23,7 +23,7 @@ async function configureCPE(ip, username, password) {
       .sendKeys(password, Key.RETURN);
 
     await driver.get(`http://${ip}`);
-    let parameterInput = await driver.findElement(By.name('parameter_name'));
+    const parameterInput = await driver.findElement(By.name('parameter_name'));
     await parameterInput.clear();
     await parameterInput.sendKeys('new_value');
     await driver.findElement(By.name('save')).click();

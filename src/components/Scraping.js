@@ -48,8 +48,8 @@ export default function Scraper() {
           </p>
           <ul className="text-zinc-500">
             {Array.isArray(scrape.images[index]) &&
-              scrape.images[index].map((image, i) => (
-                <li key={i}>
+              scrape.images[index].map((image) => (
+                <li key={image.src}>
                   <img src={image.src} alt={image.alt} />
                 </li>
               ))}
@@ -58,8 +58,8 @@ export default function Scraper() {
             <p>Links:</p>
             <ul>
               {Array.isArray(scrape.links[index]) &&
-                scrape.links[index].map((link, i) => (
-                  <li key={i}>
+                scrape.links[index].map((link) => (
+                  <li key={link.src}>
                     <p>Alt: {link.alt}</p>
                     <p>Src: {link.src}</p>
                   </li>

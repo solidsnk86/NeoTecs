@@ -19,11 +19,11 @@ export const DescriptionViews = ({ videoId }: { videoId: string }) => {
 
         if (data.items && data.items.length > 0) {
           const video = data.items[0];
-          const views = video.statistics.viewCount;
-          const datePublished = video.snippet.publishedAt;
+          const youtubeViews = video.statistics.viewCount;
+          const youtubeDatePublished = video.snippet.publishedAt;
 
-          setViews(views);
-          setDatePublished(datePublished);
+          setViews(youtubeViews);
+          setDatePublished(youtubeDatePublished);
         } else {
           console.error(
             'No se encontraron datos del video en la respuesta de la API de YouTube',

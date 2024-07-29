@@ -43,9 +43,9 @@ const ArticleData = () => {
             },
           }}
         >
-          {data.map((article, index) => (
+          {data.map((article) => (
             <SwiperSlide
-              key={index}
+              key={article.title}
               className=" cursor-grab active:cursor-grabbing"
             >
               <article className="p-4">

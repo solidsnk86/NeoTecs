@@ -1,7 +1,7 @@
 import IndexTitle from './IndexTitle';
 import { Pre } from './Pre';
 import { SectionTitle } from './SectionTitle';
-import { LinkButton } from './LinkButton';
+import LinkButton from './LinkButton';
 
 export const SqlExamples = () => {
   return (
@@ -173,10 +173,8 @@ export const SqlExamples = () => {
           <li>
             Especificamos que los campos origen y destino son
             <LinkButton
-              url={
-                'https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/'
-              }
-              color={'[#00BCF2]'}
+              url="https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/"
+              color="[#00BCF2]"
               iconName="ArrowUpRight"
             >
               ForeignKey
@@ -195,10 +193,8 @@ export const SqlExamples = () => {
             aeropuerto, todos los vuelos asociados a él también deben ser
             eliminados. Hay
             <LinkButton
-              url={
-                'https://docs.djangoproject.com/en/4.0/ref/models/fields/#django.db.models.ForeignKey.on_delete/'
-              }
-              color={'[#00BCF2]'}
+              url="https://docs.djangoproject.com/en/4.0/ref/models/fields/#django.db.models.ForeignKey.on_delete/"
+              color="[#00BCF2]"
               iconName="ArrowUpRight"
             >
               otras varias opciones

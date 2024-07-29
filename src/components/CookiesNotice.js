@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ExternalLink } from 'lucide-react';
 
 export const CookieNotice = () => {
   const [isClosed, setIsClosed] = useState(true);

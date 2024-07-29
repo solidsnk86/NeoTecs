@@ -3,7 +3,7 @@ import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import HeaderTitle from '../HeaderTitlte';
 import IndexTitle from '../IndexTitle';
-import { LinkButton } from '../LinkButton';
+import LinkButton from '../LinkButton';
 import ImageComponent from '../ImageComponent';
 
 export const APClientRouterMode = () => {
@@ -59,7 +59,7 @@ export const APClientRouterMode = () => {
         <FaWindows className="inline-flex text-xl mb-1 mx-2 text-[cornflowerblue]" />
         + R y escribimos:
       </p>
-      <Pre lang="bash">{`ncpa.cpl`}</Pre>
+      <Pre lang="bash">ncpa.cpl</Pre>
       <p>Damos enter para ejecutar el comando, veremos la siguiente ventana:</p>
       <ImageComponent
         src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-propiedades-red.png?raw=true"
@@ -175,7 +175,7 @@ export const APClientRouterMode = () => {
       <p>
         Muchas gracias por llegar hasta aquí, si quieren visitar el
         <LinkButton
-          url={'https://www.youtube.com/@tutosNeoTecs'}
+          url="https://www.youtube.com/@tutosNeoTecs"
           color="youtube-link"
           iconName="Youtube"
         >

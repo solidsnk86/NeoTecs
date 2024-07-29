@@ -13,14 +13,23 @@ function dateFormated(string) {
   return date;
 }
 
-const local = [
-  'http://localhost:3000/',
-  'http://localhost:3001/',
-];
+const local = ['http://localhost:3000/', 'http://localhost:3001/'];
 
 export default function Tracker() {
   const [visitData, setVisitData] = useState({});
   const [lastVisit, setLastVisit] = useState({});
+
+  const sendDataToSupabase = async (jsonData) => {
+    await supabase.from('visitors').insert({
+      ip_address: jsonData.ip.address,
+      latitude: jsonData.coordinates.latitude,
+      longitude: jsonData.coordinates.longitude,
+      postal_code: jsonData.city.postalCode,
+      city_name: jsonData.city.name,
+      country_name: jsonData.country.name,
+      country_flag: jsonData.country.flag,
+    });
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,18 +69,6 @@ export default function Tracker() {
       } catch (error) {
         console.error('Error fetching visit data:', error);
       }
-    };
-
-    const sendDataToSupabase = async (jsonData) => {
-      await supabase.from('visitors').insert({
-        ip_address: jsonData.ip.address,
-        latitude: jsonData.coordinates.latitude,
-        longitude: jsonData.coordinates.longitude,
-        postal_code: jsonData.city.postalCode,
-        city_name: jsonData.city.name,
-        country_name: jsonData.country.name,
-        country_flag: jsonData.country.flag,
-      });
     };
 
     const fetchLastVisit = async () => {

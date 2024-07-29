@@ -1,6 +1,6 @@
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
-import { LinkButton } from '../LinkButton';
+import LinkButton from '../LinkButton';
 import ImageComponent from '../ImageComponent';
 
 export const ClientMode = () => {
