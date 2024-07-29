@@ -68,8 +68,11 @@ export const Footer = () => {
               ),
               href: '/docs/politicas-privacidad',
             },
-          ].map((link, index) => (
-            <aside key={index} className="inline-block mt-3 xl:text-sm text-xs">
+          ].map((link) => (
+            <aside
+              key={link.href}
+              className="inline-block mt-3 xl:text-sm text-xs"
+            >
               <Link
                 href={link.href}
                 className="mx-3 items-center hover:underline underline-offset-2 font-semibold"

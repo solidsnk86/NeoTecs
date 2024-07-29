@@ -41,6 +41,8 @@ module.exports = {
     'react/require-default-props': 'off',
     'import/no-useless-path-segments': 'off',
     'spaced-comment': ['off'],
+    'no-useless-escape': 'off',
+    'jsx-a11y/control-has-associated-label': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
     'import/order': 'off',
     'no-console': 'off',

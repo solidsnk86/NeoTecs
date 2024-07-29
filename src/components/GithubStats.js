@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { GithubIcon } from './GithubIcon';
+import { GithubIcon } from '../components/Icons/GithubIcon';
 
 function getLocalStats(repoName) {
   return {

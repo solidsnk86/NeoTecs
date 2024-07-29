@@ -188,7 +188,7 @@ export const GoogleSheetsExample = () => {
       <LinkButton
         url="https://atroposjs.com/docs"
         color="red-500"
-        iconName={'ArrowUpRight'}
+        iconName="ArrowUpRight"
       >
         Atropos js
       </LinkButton>

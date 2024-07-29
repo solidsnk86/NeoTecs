@@ -186,7 +186,7 @@ export const ClientMode = () => {
       <p>
         Muchas gracias por llegar hasta aquí, si quieren visitar el
         <LinkButton
-          url={'https://www.youtube.com/@tutosNeoTecs'}
+          url="https://www.youtube.com/@tutosNeoTecs"
           color="[cornflowerblue]"
           iconName="Youtube"
         >
