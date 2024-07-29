@@ -1,7 +1,7 @@
 import IndexTitle from './IndexTitle';
 import Link from 'next/link';
 import { SectionTitle } from './SectionTitle';
-import { LinkButton } from './LinkButton.tsx';
+import LinkButton from './LinkButton';
 import { Pre } from './Pre';
 import DataCurrency from '../components/CurrencyExample';
 
@@ -34,10 +34,11 @@ const JavascriptExample = () => {
           <LinkButton
             url="https://docs.google.com/spreadsheets/u/0/"
             color="amber-400"
-            children="Google Sheets"
             iconName="ArrowUpRight"
             target="_blank"
-          />
+          >
+            Google Sheets
+          </LinkButton>
         </p>
         <p>
           En esta hoja de cálculos, vamos hacer un ejemplo rápido. Ustedes lo

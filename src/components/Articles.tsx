@@ -13,13 +13,13 @@ export const Articles = ({
   publishedAt: number;
 }) => {
   return (
-    <article className='relative p-2'>
+    <article className="relative p-2">
       <div className="article-card h-[350px] relative text-left text-wrap space-y-2 dark:bg-[#09090B] bg-[#FFFFFF] p-4 rounded-lg border dark:border-zinc-900 shadow-sm shadow-slate-200 dark:!shadow z-50">
         <time className="float-left text-xs">Publicado el {publishedAt}</time>
         <br />
         <header className="flex">
           <img
-            src={'/images/icons/favicon-neotecs.jpg'}
+            src="/images/icons/favicon-neotecs.jpg"
             className="rounded-full w-[33px] h-[33px]"
             alt="Avatar Github profile"
           />

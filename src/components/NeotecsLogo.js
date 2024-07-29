@@ -1,5 +1,5 @@
 export const NeotecsLogo = (props) => {
-  const { children, ...attrs } = props;
+  const { ...attrs } = props;
   return (
     <svg
       width="80"

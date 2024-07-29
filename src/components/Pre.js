@@ -56,35 +56,47 @@ export const Pre = ({ children, lang = '' }) => {
         code={removeIndent(children)}
         language={lang.toLowerCase()}
       >
-        {({ tokens, getLineProps, getTokenProps }) => (
+        {({ tokens, getLineProps, getTokenProps }) =>
           tokens.length < 25 ? (
             <pre className="custom-pre" lang={lang} ref={preRef}>
-            {tokens.map((line, i) => (
-              <div {...getLineProps({ line, key: i })} key={i} className="line">
-                <span className="line-number">{i + 1}</span>
-                <span className="line-content">
-                  {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} key={key} />
-                  ))}
-                </span>
-              </div>
-            ))}
-          </pre>
+              {tokens.map((line, i) => (
+                <div
+                  {...getLineProps({ line, key: i })}
+                  key={line}
+                  className="line"
+                >
+                  <span className="line-number">{i + 1}</span>
+                  <span className="line-content">
+                    {line.map((token, key) => (
+                      <span {...getTokenProps({ token, key })} key={token} />
+                    ))}
+                  </span>
+                </div>
+              ))}
+            </pre>
           ) : (
-            <pre className="custom-pre overflow-y-scroll h-[470px]" lang={lang} ref={preRef}>
-            {tokens.map((line, i) => (
-              <div {...getLineProps({ line, key: i })} key={i} className="line">
-                <span className="line-number">{i + 1}</span>
-                <span className="line-content">
-                  {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} key={key} />
-                  ))}
-                </span>
-              </div>
-            ))}
-          </pre>
+            <pre
+              className="custom-pre overflow-y-scroll h-[470px]"
+              lang={lang}
+              ref={preRef}
+            >
+              {tokens.map((line, i) => (
+                <div
+                  {...getLineProps({ line, key: i })}
+                  key={line}
+                  className="line"
+                >
+                  <span className="line-number">{i + 1}</span>
+                  <span className="line-content">
+                    {line.map((token, key) => (
+                      <span {...getTokenProps({ token, key })} key={token} />
+                    ))}
+                  </span>
+                </div>
+              ))}
+            </pre>
           )
-        )}
+        }
       </Highlight>
     </div>
   );

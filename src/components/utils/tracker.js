@@ -69,6 +69,7 @@ export default function Tracker() {
       } catch (error) {
         console.error('Error fetching visit data:', error);
       }
+      return undefined;
     };
 
     const fetchLastVisit = async () => {

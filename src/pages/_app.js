@@ -3,14 +3,11 @@ import Head from 'next/head';
 import { CookieNotice } from '../components/CookiesNotice';
 import { DoNotCopy } from '../components/DoNotCopy';
 import { favicon } from '../components/Constants';
-import ColorChangingComponent from '../components/RamdomColor';
 
 function MyApp({ Component, pageProps }) {
   const title = Component.title || 'Neotecs - Informática';
   const description =
     'Aprende programación en este curso gratuito de NeoTecs, que abarca desde conceptos básicos hasta niveles avanzados. Además, disponemos de documentación para facilitar la configuración rápida y sencilla de tu WiFi.';
-
-  const themeColor = ColorChangingComponent();
 
   return (
     <>
@@ -40,7 +37,7 @@ function MyApp({ Component, pageProps }) {
           name="twitter:image"
           content="/images/logos/NeoTecs_Tutorial_logo.png"
         />
-        <meta name="theme-color" content={themeColor} />
+        <meta name="theme-color" content="#6f43c0" />
       </Head>
       <DoNotCopy />
       <CookieNotice />

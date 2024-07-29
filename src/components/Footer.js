@@ -19,7 +19,7 @@ export const Footer = () => {
       <span className="relative flex justify-center m-auto bg-outline px-[2px] py-[2px] w-fit h-fit rounded-full bottom-[19px]">
         <FaChevronCircleUp
           className="text-text-variant text-[33px] relative cursor-pointer hover:opacity-[.9] transition-all"
-          onClick={() => (window.location.href = '#')}
+          onClick={(location.href = '#')}
         />
       </span>
       <article className="max-w-screen-xl mx-auto px-4 md:px-8">

@@ -1,5 +1,5 @@
 export const GithubIcon = (props) => {
-  const { children, ...attrs } = props;
+  const { ...attrs } = props;
   return (
     <svg
       className="github-icon"
