@@ -54,7 +54,7 @@ export default function MikrotikDocs() {
               <FaWindows className="inline-flex mx-1 mb-1 text-xl text-[cornflowerblue]" />
               + R y escribimos:
             </p>
-            <Pre lang="bash">{`ncpa.cpl`}</Pre>
+            <Pre lang="bash">ncpa.cpl</Pre>
             <p>
               <FaSignInAlt className="inline-flex mr-2" />
               enter, veremos la siguiente ventana:
@@ -70,9 +70,9 @@ export default function MikrotikDocs() {
             </p>
             <ol>
               <li>Dirección IP:</li>
-              <Pre lang="bash">{`192.168.88.10`}</Pre>
+              <Pre lang="bash">192.168.88.10</Pre>
               <li>Máscara de sub red:</li>
-              <Pre lang="bash">{`255.255.255.0`}</Pre>
+              <Pre lang="bash">255.255.255.0</Pre>
             </ol>
             <ImageComponent
               src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/propiedades-ethernet-mikrotik.png?raw=true"
@@ -80,7 +80,7 @@ export default function MikrotikDocs() {
             />
             <SectionTitle title="URL Mikrotik" />
             <p>Nos dirijimos al navegador y colocamos la url:</p>
-            <Pre lang="bash">{`http://198.168.88.1`}</Pre>
+            <Pre lang="bash">http://198.168.88.1</Pre>
             <p>
               Nos aparecera una interfaz para el login de la antena algo así:
             </p>
@@ -162,17 +162,17 @@ export default function MikrotikDocs() {
               Muchas gracias por llegar hasta aquí, pueden ver el vídeo
               explicativo en mi
               <LinkButton
-                u={'https://www.youtube.com/@tutosNeoTecs'}
+                url="https://www.youtube.com/@tutosNeoTecs"
                 color="youtube-link"
-                iconName={'Youtube'}
+                iconName="Youtube"
               >
                 canal
               </LinkButton>
               . Ante cualquier duda no dudes en escribir al
               <LinkButton
-                url={'/docs/feedback'}
+                url="/docs/feedback"
                 color="text-strong"
-                iconName={'MessageSquareWarning'}
+                iconName="MessageSquareWarning"
               >
                 feedback.
               </LinkButton>

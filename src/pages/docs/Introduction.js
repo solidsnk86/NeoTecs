@@ -54,7 +54,7 @@ export const Introduction = () => {
       <LinkButton
         color="red-400"
         url="https://code.visualstudio.com/"
-        iconName={'ArrowUpRight'}
+        iconName="ArrowUpRight"
       >
         Visual Studio Code
       </LinkButton>
@@ -62,7 +62,7 @@ export const Introduction = () => {
       <LinkButton
         color="red-400"
         url="https://www.sublimetext.com/"
-        iconName={'ArrowUpRight'}
+        iconName="ArrowUpRight"
       >
         Sublime Tex
       </LinkButton>
@@ -70,7 +70,7 @@ export const Introduction = () => {
       <LinkButton
         color="red-400"
         url="https://atom.io/"
-        iconName={'ArrowUpRight'}
+        iconName="ArrowUpRight"
       >
         Atom
       </LinkButton>
@@ -78,7 +78,7 @@ export const Introduction = () => {
       <LinkButton
         color="red-400"
         url="https://www.vim.org/"
-        iconName={'ArrowUpRight'}
+        iconName="ArrowUpRight"
       >
         Vim
       </LinkButton>

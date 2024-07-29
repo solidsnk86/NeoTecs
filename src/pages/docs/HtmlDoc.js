@@ -213,20 +213,24 @@ export default function HtmlDoc() {
       <p>Para visualizarlo les doy dos extensiones de ejemplo:</p>
       <ol>
         <li>
-        Esta extensión es de Microsoft llamada
-        <LinkButton url='vscode:extension/ms-vscode.live-server' color='sky-400' iconName='Cast'>
-        Live Preview
-        </LinkButton>
+          Esta extensión es de Microsoft llamada
+          <LinkButton
+            url="vscode:extension/ms-vscode.live-server"
+            color="sky-400"
+            iconName="Cast"
+          >
+            Live Preview
+          </LinkButton>
         </li>
         <li>
-        Esta otra extensión para Visual Studio Code llamada
-        <LinkButton
-          url="vscode:extension/ritwickdey.LiveServer"
-          color="[tomato]"
-          iconName="Radio"
-        >
-          Live Server
-        </LinkButton>
+          Esta otra extensión para Visual Studio Code llamada
+          <LinkButton
+            url="vscode:extension/ritwickdey.LiveServer"
+            color="[tomato]"
+            iconName="Radio"
+          >
+            Live Server
+          </LinkButton>
         </li>
       </ol>
       <p>Cuando se renderiza esta página, veremos algo como ésto:</p>
@@ -242,7 +246,7 @@ export default function HtmlDoc() {
         <LinkButton
           url="https://www.w3schools.com/html/default.asp"
           color="[tomato]"
-          iconName={'ArrowUpRight'}
+          iconName="ArrowUpRight"
         >
           W3 Schools
         </LinkButton>

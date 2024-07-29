@@ -23,11 +23,11 @@ export const VideoLikes = ({ videoId, cpe }) => {
 
         if (data.items && data.items.length > 0) {
           const video = data.items[0];
-          const likes = video.statistics.likeCount;
-          const suscriptors = video.statistics.subscriberCount;
+          const youtubeLikes = video.statistics.likeCount;
+          const youtubeSuscriptors = video.statistics.subscriberCount;
 
-          setLikes(likes);
-          setSuscriptors(suscriptors);
+          setLikes(youtubeLikes);
+          setSuscriptors(youtubeSuscriptors);
         } else {
           console.error(
             'No se encontraron datos del video en la respuesta de la API de YouTube',
@@ -78,7 +78,8 @@ export const VideoLikes = ({ videoId, cpe }) => {
                 window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)
               }
               className=" cursor-pointer hover:-rotate-6 transition-all like-down"
-            /><div className='absolute bg-red-400 h-auto w-full'></div>
+            />
+            <div className="absolute bg-red-400 h-auto w-full"></div>
             {likes}
             <hr className="border-l-[1px] h-5 border-[#575757] relative bottom-[1px]" />
             <UnlikeButton

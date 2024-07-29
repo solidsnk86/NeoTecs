@@ -9,6 +9,7 @@ import { ShareButton } from '../../components/ShareButton';
 import LinkButton from '../../components/LinkButton';
 import HeaderTitle from '../../components/HeaderTitlte';
 import IndexTitle from '../../components/IndexTitle';
+
 export default function MarkDownRender() {
   return (
     <TitlesContextProvider>
@@ -41,7 +42,7 @@ export default function MarkDownRender() {
             <LinkButton
               url="https://remarkjs.github.io/react-markdown/"
               color="sky-600"
-              iconName={'ArrowUpRight'}
+              iconName="ArrowUpRight"
             >
               react-markdown en GitHub
             </LinkButton>
@@ -276,7 +277,7 @@ export default function MarkDownRender() {
             escribirme en el
             <LinkButton
               color="sky-600"
-              iconName={'MessageSquareWarning'}
+              iconName="MessageSquareWarning"
               url="/docs/feedback"
             >
               feedback

@@ -5,7 +5,7 @@ import { LinkButton } from './LinkButton.tsx';
 import { Pre } from './Pre';
 import DataCurrency from '../components/CurrencyExample';
 
-export const JavascriptExample = () => {
+const JavascriptExample = () => {
   return (
     <article>
       <SectionTitle title="End-Point API" />

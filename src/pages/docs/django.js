@@ -11,6 +11,7 @@ import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 import ImageComponent from '../../components/ImageComponent';
 import { NavLinks } from '../../components/NavLinks';
+
 export default function DjangoDocs() {
   return (
     <TitlesContextProvider>

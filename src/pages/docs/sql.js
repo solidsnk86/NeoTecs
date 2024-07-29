@@ -3,7 +3,7 @@ import { NavSwitch } from '../../components/NavSwicth';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-import { LinkButton } from '../../components/LinkButton';
+import LinkButton from '../../components/LinkButton';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import { AlertTriangle, InfoIcon } from 'lucide-react';
@@ -12,6 +12,7 @@ import Indextitle from '../../components/IndexTitle';
 import { SqlExamples } from '../../components/SqlExamples';
 import ImageComponent from '../../components/ImageComponent';
 import { NavLinks } from '../../components/NavLinks';
+
 export default function SqlDocs() {
   return (
     <TitlesContextProvider>

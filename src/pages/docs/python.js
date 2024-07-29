@@ -213,7 +213,7 @@ export default function Python() {
               <LinkButton
                 url="https://www.python.org/downloads/"
                 color="sky-400"
-                iconName={'HardDriveDownload'}
+                iconName="HardDriveDownload"
               >
                 Python
               </LinkButton>
@@ -222,7 +222,7 @@ export default function Python() {
               <LinkButton
                 url="https://pip.pypa.io/en/stable/installing/"
                 color="sky-400"
-                iconName={'HardDriveDownload'}
+                iconName="HardDriveDownload"
               >
                 Pip
               </LinkButton>
@@ -386,7 +386,7 @@ export default function Python() {
               <LinkButton
                 url="https://docs.python.org/3/tutorial/errors.html"
                 color="sky-400"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 excepción
               </LinkButton>
@@ -493,7 +493,7 @@ export default function Python() {
             <LinkButton
               url="https://www.w3schools.com/python/python_lists.asp"
               color="sky-400"
-              iconName={'ArrowUpRight'}
+              iconName="ArrowUpRight"
             >
               lista en Python
             </LinkButton>
@@ -548,7 +548,7 @@ export default function Python() {
               <LinkButton
                 url="https://www.w3schools.com/python/python_lists.asp"
                 color="sky-400"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 tupla
               </LinkButton>
@@ -586,7 +586,7 @@ export default function Python() {
               <LinkButton
                 url="https://www.w3schools.com/python/python_sets.asp"
                 color="sky-400"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 conjuntos
               </LinkButton>
@@ -650,7 +650,7 @@ export default function Python() {
               <LinkButton
                 url="https://www.w3schools.com/python/python_sets.asp"
                 color="sky-400"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 diccionarios
               </LinkButton>
@@ -696,7 +696,7 @@ export default function Python() {
               <LinkButton
                 url="https://www.w3schools.com/python/python_for_loops.asp"
                 color="sky-400"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 bucles
               </LinkButton>
@@ -955,7 +955,7 @@ export default function Python() {
               <LinkButton
                 url="https://en.wikipedia.org/wiki/Object-oriented_programming"
                 color="sky-400"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 Programación Orientada a Objetos
               </LinkButton>
@@ -1112,7 +1112,7 @@ export default function Python() {
               <LinkButton
                 url="https://en.wikipedia.org/wiki/Functional_programming"
                 color="sky-400"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 Programación Funcional
               </LinkButton>
@@ -1288,7 +1288,7 @@ export default function Python() {
               <LinkButton
                 url="https://www.w3schools.com/python/python_try_except.asp"
                 color="sky-400"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 manejo de excepciones
               </LinkButton>

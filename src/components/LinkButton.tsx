@@ -14,7 +14,7 @@ interface LinkInterfaceProps {
   download?: boolean;
 }
 
-export const LinkButton: React.FC<LinkInterfaceProps> = ({
+const LinkButton: React.FC<LinkInterfaceProps> = ({
   url,
   children,
   className,

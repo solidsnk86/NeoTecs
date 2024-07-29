@@ -10,6 +10,7 @@ import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 import ImageComponent from '../../components/ImageComponent';
 import { NavLinks } from '../../components/NavLinks';
+
 export default function GitDocs() {
   return (
     <TitlesContextProvider>
@@ -126,8 +127,8 @@ export default function GitDocs() {
                 puedes crear una
                 <LinkButton
                   url="https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"
-                  color={'sky-400'}
-                  iconName={'Github'}
+                  color="sky-400"
+                  iconName="Github"
                 >
                   aquí
                 </LinkButton>
@@ -174,7 +175,7 @@ export default function GitDocs() {
                     <LinkButton
                       url="https://git-scm.com/downloads"
                       color="sky-400"
-                      iconName={'FolderGit2'}
+                      iconName="FolderGit2"
                     >
                       aquí
                     </LinkButton>
@@ -237,8 +238,9 @@ export default function GitDocs() {
                       url="https://gitforwindows.org/"
                       iconName="FolderGit2"
                       color="red-400"
-                      children="Git Bash Console"
-                    />
+                    >
+                      Git Bash Console
+                    </LinkButton>
                   </li>
                 </ol>
               </li>

@@ -12,6 +12,7 @@ import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
 import ImageComponent from '../../components/ImageComponent';
 import { NavLinks } from '../../components/NavLinks';
+
 export default function JavaScript() {
   return (
     <TitlesContextProvider>
@@ -191,7 +192,7 @@ export default function JavaScript() {
               <LinkButton
                 url="https://medium.com/@vsvaibhav2016/introduction-to-event-driven-programming-28161b79c223"
                 color="amber-400"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 Programación Orientada a Eventos
               </LinkButton>
@@ -211,7 +212,7 @@ export default function JavaScript() {
               <LinkButton
                 url="https://www.w3schools.com/js/js_htmldom_eventlistener.asp"
                 color="amber-400"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 Escuchadores de Eventos
               </LinkButton>
@@ -224,7 +225,7 @@ export default function JavaScript() {
               <LinkButton
                 url="https://www.w3schools.com/js/js_functions.asp"
                 color="amber-400"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 función
               </LinkButton>
@@ -362,7 +363,7 @@ export default function JavaScript() {
               <LinkButton
                 url="https://www.w3schools.com/js/js_if_else.asp"
                 color="amber-400"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 condiciones
               </LinkButton>
@@ -606,7 +607,7 @@ export default function JavaScript() {
               <LinkButton
                 url="https://www.w3schools.com/js/js_function_definition.asp"
                 color="amber-400"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 anónima
               </LinkButton>
@@ -722,7 +723,7 @@ export default function JavaScript() {
                 <LinkButton
                   url="https://getbootstrap.com/docs/4.5/getting-started/introduction/#js"
                   color="amber-400"
-                  iconName={'ArrowUpRight'}
+                  iconName="ArrowUpRight"
                 >
                   Bootstrap
                 </LinkButton>
@@ -1080,7 +1081,7 @@ export default function JavaScript() {
                 <LinkButton
                   url="https://www.w3schools.com/jsref/met_document_createelement.asp"
                   color="amber-400"
-                  iconName={'ArrowUpRight'}
+                  iconName="ArrowUpRight"
                 >
                   createElement
                 </LinkButton>
@@ -1145,7 +1146,7 @@ export default function JavaScript() {
             <LinkButton
               url="https://www.w3schools.com/jsref/met_win_setinterval.asp"
               color="amber-400"
-              iconName={'ArrowUpRight'}
+              iconName="ArrowUpRight"
             >
               setIntervals
             </LinkButton>
@@ -1356,7 +1357,7 @@ export default function JavaScript() {
             <LinkButton
               url="https://www.w3schools.com/js/js_objects.asp"
               color="amber-400"
-              iconName={'ArrowUpRight'}
+              iconName="ArrowUpRight"
             >
               objeto de JavaScript
             </LinkButton>
@@ -1411,7 +1412,7 @@ export default function JavaScript() {
             <LinkButton
               url="https://www.mulesoft.com/resources/api/what-is-an-api"
               color="amber400"
-              iconName={'ArrowUpRight'}
+              iconName="ArrowUpRight"
             >
               APIs
             </LinkButton>
@@ -1431,7 +1432,7 @@ export default function JavaScript() {
             <LinkButton
               url="https://www.w3schools.com/js/js_json_intro.asp"
               color="amber-400"
-              iconName={'ArrowUpRight'}
+              iconName="ArrowUpRight"
             >
               JSON
             </LinkButton>
@@ -1476,7 +1477,7 @@ export default function JavaScript() {
               <LinkButton
                 url="https://exchangeratesapi.io/"
                 color="amber-400"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 Banco Central Europeo
               </LinkButton>
@@ -1486,7 +1487,7 @@ export default function JavaScript() {
               <LinkButton
                 u="https://api.exchangeratesapi.io/latest?base=USD"
                 color="amber-400"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 https://api.exchangeratesapi.io/latest?base=USD
               </LinkButton>

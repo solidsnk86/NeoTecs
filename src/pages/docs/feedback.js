@@ -82,7 +82,7 @@ export default function FeedBack() {
         >
           <ArrowLeftIcon
             className="text-text-primary"
-            onClick={(e) => history.back(e)}
+            onClick={(e) => globalThis.history.back(e)}
           />
         </div>
         <h1 className="flex justify-center pt-6 mx-auto text-5xl text-transparent relative [-webkit-text-stroke-width:2px] [-webkit-text-stroke-color:var(--color-on-surface)]">

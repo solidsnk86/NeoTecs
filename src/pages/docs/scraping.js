@@ -1,12 +1,12 @@
-import { AlertTriangle } from 'lucide-react';
 import { Nav } from '../../components/Nav';
-import { ArrowLeftIcon } from 'lucide-react';
+import { ArrowLeftIcon, AlertTriangle } from 'lucide-react';
 import LinkButton from '../../components/LinkButton';
 import MarkdownRenderer from '../../components/MarkDownRender';
 import { githubMarkdownURL } from '../../components/Constants';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
 import HeaderTitle from '../../components/HeaderTitlte';
+
 export default function Scraping() {
   return (
     <>
@@ -15,7 +15,7 @@ export default function Scraping() {
         <div className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 xl:left-6 xl:top-14 top-14 left-[5px] fixed mt-3 cursor-pointer hover:border-zinc-300 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125">
           <ArrowLeftIcon
             className="text-text-primary"
-            onClick={() => history.back()}
+            onClick={() => globalThis.history.back}
           />
         </div>
         <HeaderTitle className="text-5xl my-10">Web Scraping</HeaderTitle>
@@ -44,10 +44,9 @@ export default function Scraping() {
             como:
           </p>
           <LinkButton
-            className={''}
             url="https://www.pythonanywhere.com/"
             color="red-500"
-            iconName={'ArrowUpRight'}
+            iconName="ArrowUpRight"
           >
             Python Anywhere
           </LinkButton>
@@ -64,10 +63,9 @@ export default function Scraping() {
             complementos, te invito a seguir este enlace:
           </p>
           <LinkButton
-            className={''}
             url="/docs/markdown-render"
             color="red-500"
-            iconName={'ArrowUpRight'}
+            iconName="ArrowUpRight"
           >
             React Markdown Render
           </LinkButton>
@@ -75,10 +73,9 @@ export default function Scraping() {
         <p className="text-center my-10 bg-button-variant text-text-variant w-fit p-2">
           Si tienen alguna consulta para hacer, los escucho en mi
           <LinkButton
-            className={''}
             url="/docs/feedback"
             color="text-strong"
-            iconName={'MessageSquareWarning'}
+            iconName="MessageSquareWarning"
           >
             feedback
           </LinkButton>

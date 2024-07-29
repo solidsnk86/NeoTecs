@@ -12,7 +12,7 @@ export const PrivacyPolicy = () => {
         <div className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 cursor-pointer dark:border-zinc-800 border rounded p-1 xl:left-6 xl:top-14 top-14 left-[5px] fixed mt-3 hover:border-zinc-300 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125">
           <ArrowLeftIcon
             className="text-text-primary"
-            onClick={(e) => history.back(e)}
+            onClick={(e) => globalThis.history.back(e)}
           />
         </div>
         <div className="mt-16 space-y-8 policy">
@@ -111,7 +111,7 @@ export const PrivacyPolicy = () => {
             <LinkButton
               url="mailto:calcagni.gabriel86@gmail.com"
               color="[cornflowerblue] dark:text-text-strong"
-              iconName={'Mail'}
+              iconName="Mail"
             >
               calcagni.gabriel86@gmail.com
             </LinkButton>

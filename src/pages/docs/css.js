@@ -10,6 +10,7 @@ import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 import ImageComponent from '../../components/ImageComponent';
 import { NavLinks } from '../../components/NavLinks';
+
 export default function CssDoc() {
   return (
     <TitlesContextProvider>
@@ -17,7 +18,7 @@ export default function CssDoc() {
       <div className="max-w-screen-xl mx-auto flex items-stretch">
         <NavLinks />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
-        <NavSwitch inline />
+          <NavSwitch inline />
           <HeaderTitle>CSS (Hojas de Estilo de Cascada)</HeaderTitle>
           <hr className="border-text-primary" />
           <Indextitle>Índice</Indextitle>
@@ -740,7 +741,7 @@ export default function CssDoc() {
             <LinkButton
               url="https://www.w3schools.com/css/css3_flexbox.asp"
               color="[#395692]"
-              iconName={'ArrowUpRight'}
+              iconName="ArrowUpRight"
             >
               flexbox
             </LinkButton>
@@ -878,7 +879,7 @@ export default function CssDoc() {
               <LinkButton
                 url="https://getbootstrap.com/docs/4.5/components/"
                 color="[#395692]"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 Bootstrap
               </LinkButton>
@@ -891,7 +892,7 @@ export default function CssDoc() {
               <LinkButton
                 url="https://getbootstrap.com/docs/4.0/layout/grid/"
                 color="[#395692]"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 sistema de cuadrícula
               </LinkButton>
@@ -1030,7 +1031,7 @@ export default function CssDoc() {
               <LinkButton
                 url="https://sass-lang.com/"
                 color="[#395692]"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 Sass
               </LinkButton>
@@ -1082,7 +1083,7 @@ export default function CssDoc() {
               <LinkButton
                 url="https://sass-lang.com/install"
                 color="[#395692]"
-                iconName={'ArrowUpRight'}
+                iconName="ArrowUpRight"
               >
                 descargar el programa llamado Sass
               </LinkButton>
@@ -1141,7 +1142,7 @@ export default function CssDoc() {
             <LinkButton
               url="https://sass-lang.com/guide"
               color="[#395692]"
-              iconName={'ArrowUpRight'}
+              iconName="ArrowUpRight"
             >
               herencia
             </LinkButton>

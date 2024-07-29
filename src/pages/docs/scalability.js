@@ -3,14 +3,12 @@ import { NavSwitch } from '../../components/NavSwicth';
 import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
-import Link from 'next/link';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
-import { ExternalLinkIcon, MessageCircleIcon } from 'lucide-react';
 import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 import { NavLinks } from '../../components/NavLinks';
-import { LinkButton } from '../../components/LinkButton';
+import LinkButton from '../../components/LinkButton';
 
 export default function Scalability() {
   return (

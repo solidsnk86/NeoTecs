@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import supabase from '../../components/utils/supabase';
 
-
 const LoginForm = ({ onClose }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -45,7 +44,6 @@ const LoginForm = ({ onClose }) => {
               theme: isDarkMode ? 'dark' : 'light',
             },
           );
-          return;
         }
       } else {
         console.log('Usuario autenticado:', user);
@@ -75,7 +73,7 @@ const LoginForm = ({ onClose }) => {
           <h2 className="text-center font-semibold text-lg">
             Inicio sesión Admin
           </h2>
-          <label>Email:</label>
+          <span>Email:</span>
           <div className="bg-[#ffffff] text-text-variant rounded dark:border-zinc-800 border-zinc-200 border">
             <User className="inline text-zinc-800 border-r-[1px] border-zinc-400 pr-2 m-2" />
             <input
@@ -84,7 +82,7 @@ const LoginForm = ({ onClose }) => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <label>Contraseña:</label>
+          <span>Contraseña:</span>
           <div className="bg-[#ffffff] text-black rounded dark:border-zinc-800 border-zinc-200 border">
             <KeyRound className="inline text-zinc-800 border-r-[1px] border-zinc-400 pr-2 m-2" />
             <input
