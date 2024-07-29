@@ -183,8 +183,8 @@ export const APClientRouterMode = () => {
         </LinkButton>
         Ante cualquier duda no dudes en escribir al
         <LinkButton
-          url={'/docs/feedback'}
-          color={'text-strong'}
+          url="/docs/feedback"
+          color="text-strong"
           iconName="MessageSquareWarning"
         >
           feedback.

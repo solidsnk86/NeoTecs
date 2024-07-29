@@ -29,6 +29,7 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-misued-promises': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
     'import/prefer-default-export': 'off',
     '@next/next/no-img-element': 'off',
     'jsx-a11y/anchor-is-valid': 'off',

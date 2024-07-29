@@ -1,9 +1,9 @@
 import '../styles/globals.scss';
+import Head from 'next/head';
 import { CookieNotice } from '../components/CookiesNotice';
 import { DoNotCopy } from '../components/DoNotCopy';
 import { favicon } from '../components/Constants';
 import ColorChangingComponent from '../components/RamdomColor';
-import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   const title = Component.title || 'Neotecs - Informática';

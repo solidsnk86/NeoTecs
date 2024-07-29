@@ -145,7 +145,7 @@ export const ClientMode = () => {
           <LinkButton
             url="mailto:support@tp-link.com."
             color="[cornflowerblue]"
-            iconName={'Mail'}
+            iconName="Mail"
           >
             support@tp-link.com.
           </LinkButton>
@@ -178,7 +178,7 @@ export const ClientMode = () => {
         <LinkButton
           url="mailto:support@tp-link.com."
           color="[cornflowerblue]"
-          iconName={'Mail'}
+          iconName="Mail"
         >
           support@tp-link.com
         </LinkButton>
@@ -187,15 +187,15 @@ export const ClientMode = () => {
         Muchas gracias por llegar hasta aquí, si quieren visitar el
         <LinkButton
           url={'https://www.youtube.com/@tutosNeoTecs'}
-          color={'[cornflowerblue]'}
+          color="[cornflowerblue]"
           iconName="Youtube"
         >
           canal de YouTube.
         </LinkButton>
         Ante cualquier duda no dudes en escribir al
         <LinkButton
-          url={'/docs/feedback'}
-          color={'text-strong'}
+          url="/docs/feedback"
+          color="text-strong"
           iconName="MessageSquareWarning"
         >
           feedback.

@@ -33,110 +33,112 @@ export const HomeBlockTitle = ({ Tag = 'h2', children, className = '' }) => {
 
 export default function Home() {
   return (
-   <>
-     <main className="text-text-primary">
-     <Nav className={'relative'} />
-      <HomeHeader />
-      <HomeBlock>
-        <HomeBlockTitle>¿Sabés Configurar tu CPE inalámbrico?</HomeBlockTitle>
-        <p>Te dejo estos videos para que aprendas cómo configurarlos.</p>
-        <ul className="inline-flex text-left m-auto mt-2 mb-4 gap-6">
-          <li className="custom-text-shadow">✅ Rápido</li>
-          <li className="custom-text-shadow">✅ Fácil</li>
-          <li className="custom-text-shadow">✅ Práctico</li>
-        </ul>
-        <YouTubeVideoSection />
-        <div className="xl:flex justify-center mx-auto w-full relative">
-          <header className="xl:flex xl:w-1/2 p-2 xl:mt-[70px]">
-            <span className="effect-backround"></span>
-            <Wifi className="inline bg-button-variant mx-4 w-16 h-16 text-green-600 font-bold border p-3 border-green-400 rounded-lg xl:mx-8 xl:mt-10 mt-4" />
-            <div>
-              <h2 className="text-3xl mx-auto font-semibold my-3 border-b-4 border-outline w-fit">
-                Documentación Wifi
-              </h2>
-              <p className="text-md text-text-second">
-                Descubre cómo configurar diferentes modelos <br />
-                de dispositvos inalámbricos de las marcas
-                <br /> más conocidas con esta guía.
+    <>
+      <main className="text-text-primary">
+        <Nav className={'relative'} />
+        <HomeHeader />
+        <HomeBlock>
+          <HomeBlockTitle>¿Sabés Configurar tu CPE inalámbrico?</HomeBlockTitle>
+          <p>Te dejo estos videos para que aprendas cómo configurarlos.</p>
+          <ul className="inline-flex text-left m-auto mt-2 mb-4 gap-6">
+            <li className="custom-text-shadow">✅ Rápido</li>
+            <li className="custom-text-shadow">✅ Fácil</li>
+            <li className="custom-text-shadow">✅ Práctico</li>
+          </ul>
+          <YouTubeVideoSection />
+          <div className="xl:flex justify-center mx-auto w-full relative">
+            <header className="xl:flex xl:w-1/2 p-2 xl:mt-[70px]">
+              <span className="effect-backround"></span>
+              <Wifi className="inline bg-button-variant mx-4 w-16 h-16 text-green-600 font-bold border p-3 border-green-400 rounded-lg xl:mx-8 xl:mt-10 mt-4" />
+              <div>
+                <h2 className="text-3xl mx-auto font-semibold my-3 border-b-4 border-outline w-fit">
+                  Documentación Wifi
+                </h2>
+                <p className="text-md text-text-second">
+                  Descubre cómo configurar diferentes modelos <br />
+                  de dispositvos inalámbricos de las marcas
+                  <br /> más conocidas con esta guía.
+                </p>
+              </div>
+            </header>
+            <aside className="dark:bg-[#09090B] bg-[#FFFFFF] mt-10 border border-zinc-200/85 dark:border-zinc-800/40 dark:shadow-none p-6 rounded-lg">
+              <p className="text-3xl font-semibold">
+                <PlayIcon className="inline mx-2 border mb-[6px] text-green-500 border-green-900 rounded-lg p-2 w-9 h-9 bg-[#072719]" />
+                Comencemos!
               </p>
-            </div>
-          </header>
-          <aside className="dark:bg-[#09090B] bg-[#FFFFFF] mt-10 border border-zinc-200/85 dark:border-zinc-800/40 dark:shadow-none p-6 rounded-lg">
-            <p className="text-3xl font-semibold">
-              <PlayIcon className="inline mx-2 border mb-[6px] text-green-500 border-green-900 rounded-lg p-2 w-9 h-9 bg-[#072719]" />
-              Comencemos!
+              <p className="my-3 text-text-second">
+                ¿Cúal necesitas configurar? Tp-Link, Ubiquiti o Mikrotik:
+              </p>
+              <CpeBrands />
+            </aside>
+          </div>
+        </HomeBlock>
+
+        <HomeBlock>
+          <HomeBlockTitle>Características</HomeBlockTitle>
+          <div className="grid md:grid-cols-2 gap-4 md:gap-8 text-center">
+            {cardContent.map((card) => (
+              <div
+                key={card.id}
+                className="dark:bg-[#09090B] bg-[#FFFFFF] p-4 rounded-lg border dark:border-zinc-900 shadow-sm shadow-slate-200 dark:!shadow z-50"
+              >
+                <span className="text-xl font-bold">{card.feature}</span>
+                <p className="text-text-second py-3">{card.children}</p>
+              </div>
+            ))}
+          </div>
+        </HomeBlock>
+
+        <HomeBlock>
+          <HomeBlockTitle>Acerca de NeoTecs</HomeBlockTitle>
+          <div className="cards text-zinc-200 rounded-[13px] p-4 hover:bg-opacity-70 duration-200 z-40">
+            <article className=" z-50">
+              <p className="text-md space-y-3 font-bold z-50">
+                Para aprender...
+              </p>
+              <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full z-50" />
+              <p className="text-zinc-400">{aboutNeo}</p>
+            </article>
+          </div>
+        </HomeBlock>
+
+        <MarqueeLogos />
+
+        <div className="container flex items-center h-[58vh] justify-center mx-auto relative my-2">
+          <span
+            className="absolute w-px h-[46%] xl:h-[42%] xl:top-5 top-[14px] bg-gradient-to-t from-zinc-500 via-zinc-500/50 to-transparent"
+            aria-hidden="true"
+          />
+          <span className="absolute xl:bottom-[31%] bottom-[37%] z-50 flex items-center justify-center w-[75px] h-[75px] text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-purple-400/30 group-hover:border-zinc-200">
+            <BookOpen className="w-10 h-10 mt-1 text-purple-400 text-shadow-sm shado-purple-300" />
+          </span>
+          <div className="justify-center mx-auto flex">
+            <h1 className="absolute xl:bottom-10 bottom-14 font-bold text-4xl">
+              Listo para empezar?
+            </h1>
+            <p className="absolute bottom-[-10px] text-text-second text-balance text-center">
+              Ahora que has sido presentado al curso, vamos a sumergirnos.
             </p>
-            <p className="my-3 text-text-second">
-              ¿Cúal necesitas configurar? Tp-Link, Ubiquiti o Mikrotik:
-            </p>
-            <CpeBrands />
-          </aside>
+          </div>
         </div>
-      </HomeBlock>
 
-      <HomeBlock>
-        <HomeBlockTitle>Características</HomeBlockTitle>
-        <div className="grid md:grid-cols-2 gap-4 md:gap-8 text-center">
-          {cardContent.map((card, index) => (
-            <div
-              key={index}
-              className="dark:bg-[#09090B] bg-[#FFFFFF] p-4 rounded-lg border dark:border-zinc-900 shadow-sm shadow-slate-200 dark:!shadow z-50"
-            >
-              <span className="text-xl font-bold">{card.feature}</span>
-              <p className="text-text-second py-3">{card.children}</p>
-            </div>
-          ))}
+        <div className="my-20 justify-center mx-auto flex">
+          <Link href="/docs/program">
+            <ShimmerButton shimmerDuration="1.8s" size="large">
+              Comencemos
+            </ShimmerButton>
+          </Link>
         </div>
-      </HomeBlock>
 
-      <HomeBlock>
-        <HomeBlockTitle>Acerca de NeoTecs</HomeBlockTitle>
-        <div className="cards text-zinc-200 rounded-[13px] p-4 hover:bg-opacity-70 duration-200 z-40">
-          <article className=" z-50">
-            <p className="text-md space-y-3 font-bold z-50">Para aprender...</p>
-            <hr className="my-2 border-zinc-200 dark:border-zinc-800 w-full z-50" />
-            <p className="text-zinc-400">{aboutNeo}</p>
-          </article>
-        </div>
-      </HomeBlock>
-
-      <MarqueeLogos />
-
-      <div className="container flex items-center h-[58vh] justify-center mx-auto relative my-2">
-        <span
-          className="absolute w-px h-[46%] xl:h-[42%] xl:top-5 top-[14px] bg-gradient-to-t from-zinc-500 via-zinc-500/50 to-transparent"
-          aria-hidden="true"
-        />
-        <span className="absolute xl:bottom-[31%] bottom-[37%] z-50 flex items-center justify-center w-[75px] h-[75px] text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-purple-400/30 group-hover:border-zinc-200">
-          <BookOpen className="w-10 h-10 mt-1 text-purple-400 text-shadow-sm shado-purple-300" />
-        </span>
-        <div className="justify-center mx-auto flex">
-          <h1 className="absolute xl:bottom-10 bottom-14 font-bold text-4xl">
-            Listo para empezar?
-          </h1>
-          <p className="absolute bottom-[-10px] text-text-second text-balance text-center">
-            Ahora que has sido presentado al curso, vamos a sumergirnos.
+        <HomeBlock className=" aspect-video">
+          <HomeBlockTitle>Últimos artículos...</HomeBlockTitle>
+          <p className="text-text-primary relative my-6 font-semibold">
+            Desliza para ver más artículos
           </p>
-        </div>
-      </div>
-
-      <div className="my-20 justify-center mx-auto flex">
-        <Link href="/docs/program">
-          <ShimmerButton shimmerDuration="1.8s" size="large">
-            Comencemos
-          </ShimmerButton>
-        </Link>
-      </div>
-
-      <HomeBlock className=" aspect-video">
-        <HomeBlockTitle>Últimos artículos...</HomeBlockTitle>
-        <p className="text-text-primary relative my-6 font-semibold">
-          Desliza para ver más artículos
-        </p>
-        <ArticleData />
-      </HomeBlock>
-      <Footer />
-    </main>
-   </>
+          <ArticleData />
+        </HomeBlock>
+        <Footer />
+      </main>
+    </>
   );
 }
