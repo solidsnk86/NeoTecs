@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { ArrowLeftIcon, Home } from 'lucide-react';
+import { ArrowLeftIcon, Home, Share } from 'lucide-react';
 import { NavSwitch } from './NavSwicth';
 import { TitlesContext } from '../shared/TitlesContext';
 import { useRouter } from 'next/navigation';
@@ -16,7 +16,7 @@ export function NavLinks() {
   return (
     <div className="hidden w-80 lg:block border-r border-zinc-200 dark:border-zinc-800">
       <div className="sticky top-2">
-        <div className="flex gap-4">
+        <div className="flex gap-4 justify-center mx-auto my-0">
           <div
             title="Volver atrás"
             className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 w-fit mt-3 hover:border-zinc-200 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300"
@@ -33,6 +33,15 @@ export function NavLinks() {
             <Home
               className="text-text-primary"
               onClick={() => router.push('/')}
+            />
+          </div>
+          <div
+            title="Volver atrás"
+            className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 w-fit mt-3 hover:border-zinc-200 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300"
+          >
+            <Share
+              className="text-text-primary"
+              onClick={(e) => router.back(e)}
             />
           </div>
         </div>
