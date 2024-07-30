@@ -21,7 +21,7 @@ export default function JavaScript() {
         <NavLinks />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
-          <HeaderTitle>Javascript</HeaderTitle>
+          <HeaderTitle><span class="highlight">JavaScript</span></HeaderTitle>
           <hr className="border-text-primary" />
           <IndexTitle>Índice</IndexTitle>
           <ol className="indice">

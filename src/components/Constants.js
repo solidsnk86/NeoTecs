@@ -90,7 +90,7 @@ export const links = [
   },
   {
     href: '/docs/javascript',
-    title: 'Javascript',
+    title: 'JavaScript',
   },
   {
     href: '/docs/sql',

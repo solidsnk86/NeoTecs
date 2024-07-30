@@ -14,7 +14,7 @@ export function NavLinks() {
   };
 
   return (
-    <div className="w-80 px-4 md:px-8 hidden lg:block">
+    <div className="hidden w-80 lg:block border-r border-zinc-200 dark:border-zinc-800">
       <div className="sticky top-2">
         <div className="flex gap-4">
           <div
@@ -32,17 +32,17 @@ export function NavLinks() {
           >
             <Home
               className="text-text-primary"
-              onClick={() => window.open('/', '_self')}
+              onClick={() => router.push('/')}
             />
           </div>
         </div>
         <NavSwitch />
-        <ul className="text-xs h-56 overflow-y-auto scroll-bar rounded-xl overflow-hidden">
+        <ul className="text-xs h-56 overflow-y-auto scroll-bar overflow-hidden">
           {titles.map((title) => (
             <li key={title.slug}>
               <a
                 href={`#${title.slug}`}
-                className={`text-[cornflowerblue] px-2 py-1 block hover:underline hover:text-primary font-medium duration-100 ${
+                className={`text-[cornflowerblue] mb-1 w-full px-2 block hover:underline hover:text-primary font-medium duration-100 ${
                   selectedSlug === title.slug
                     ? ' bg-card-bg text-text-strong bg-opacity-10'
                     : ''
