@@ -1,8 +1,9 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { ArrowLeftIcon, Home, Share } from 'lucide-react';
 import { NavSwitch } from './NavSwicth';
 import { TitlesContext } from '../shared/TitlesContext';
 import { useRouter } from 'next/navigation';
+import { shareText } from './Constants';
 
 export function NavLinks() {
   const { titles } = useContext(TitlesContext);
@@ -11,6 +12,20 @@ export function NavLinks() {
 
   const handleTitleClick = (slug) => {
     setSelectedSlug(slug);
+  };
+
+  const share = () => {
+    try {
+      if (navigator.share) {
+        navigator.share({
+          title: document.title,
+          text: shareText,
+          url: location.href,
+        });
+      }
+    } catch (_) {
+      throw new Error('Navigator does not allow share');
+    }
   };
 
   return (
@@ -39,16 +54,13 @@ export function NavLinks() {
             title="Volver atrás"
             className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 w-fit mt-3 hover:border-zinc-200 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300"
           >
-            <Share
-              className="text-text-primary"
-              onClick={(e) => router.back(e)}
-            />
+            <Share className="text-text-primary" onClick={share} />
           </div>
         </div>
         <NavSwitch />
         <ul className="text-xs h-60 overflow-y-auto scroll-bar overflow-hidden">
           {titles.map((title) => (
-            <li className='m-0' key={title.slug}>
+            <li className="m-0" key={title.slug}>
               <a
                 href={`#${title.slug}`}
                 className={`text-[cornflowerblue] py-1 w-full px-2 block hover:bg-zinc-600/35 hover:text-primary font-medium duration-100 ${
