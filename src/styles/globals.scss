@@ -11,7 +11,7 @@
   :root {
     --color-secondary: #565e71;
     --color-on-secondary: #ffffff;
-    --color-secondary-container: #dae2f9;
+    --color-secondary-container: #e3e7f1;
     --color-on-secondary-container: #131c2b;
     --color-surface: #ffffff;
     --color-on-surface: #1a1b1f;
@@ -55,7 +55,7 @@
     --color-on-primary-container: #d7e3ff;
     --color-secondary: #bec6dc;
     --color-on-secondary: #283041;
-    --color-secondary-container: #3e4759;
+    --color-secondary-container: #b8b8b811;
     --color-on-secondary-container: #dae2f9;
     --color-surface: #09090b;
     --color-on-surface: #e3e2e6;
@@ -142,7 +142,7 @@ body::-webkit-scrollbar-thumb {
   height: 100px;
 }
 body::-webkit-scrollbar-track {
-  background-color: #b8b8b811;
+  background-color: var(--color-secondary-container);
 }
 body::-webkit-scrollbar-thumb:hover {
   background-color: #0f0f0f;
@@ -151,7 +151,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .scroll-bar::-webkit-scrollbar-track {
-  background-color: #b8b8b811;
+  background-color: var(--color-secondary-container);
 }
 
 @media (min-width: 1280px) {

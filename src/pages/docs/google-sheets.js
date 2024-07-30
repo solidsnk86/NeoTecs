@@ -19,7 +19,7 @@ export default function CsvSheets() {
   return (
     <TitlesContextProvider>
       <Nav className="fixed xl:relative w-full h-12 z-50" />
-      <div className="max-w-screen-xl mx-auto flex items-stretch mb-20">
+      <div className="max-w-screen-xl flex items-stretch mb-20">
         <NavLinks />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
