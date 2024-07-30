@@ -12,16 +12,18 @@ import { FacebookIcon, Linkedin } from 'lucide-react';
 import { TwitterIcon } from '../components/Icons/TwitterIcon';
 import Link from 'next/link';
 import Tracker from '../components/utils/tracker';
+import { useRouter } from 'next/navigation';
 
 export const Footer = () => {
+  const router = useRouter();
   return (
     <section className="border-t-2 border-outline text-text-primary">
-      <span className="relative flex justify-center m-auto bg-outline px-[2px] py-[2px] w-fit h-fit rounded-full bottom-[19px]">
-        <FaChevronCircleUp
-          className="text-text-variant text-[33px] relative cursor-pointer hover:opacity-[.9] transition-all"
-          onClick={() => window.location.href('#')}
-        />
-      </span>
+      <a
+        onClick={() => router.replace('#')}
+        className="relative flex justify-center m-auto bg-outline px-[2px] py-[2px] w-fit h-fit rounded-full bottom-[19px]"
+      >
+        <FaChevronCircleUp className="text-text-variant text-[33px] relative cursor-pointer hover:opacity-[.9] transition-all" />
+      </a>
       <article className="max-w-screen-xl mx-auto px-4 md:px-8">
         <h3 className="text-center font-semibold">Compartir en las redes:</h3>
         <div className="flex items-center justify-center gap-x-8 text-2xl mt-3 mb-9">
