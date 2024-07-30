@@ -46,12 +46,12 @@ export function NavLinks() {
           </div>
         </div>
         <NavSwitch />
-        <ul className="text-xs h-56 overflow-y-auto scroll-bar overflow-hidden">
+        <ul className="text-xs h-60 overflow-y-auto scroll-bar overflow-hidden">
           {titles.map((title) => (
-            <li key={title.slug}>
+            <li className='m-0' key={title.slug}>
               <a
                 href={`#${title.slug}`}
-                className={`text-[cornflowerblue] mb-1 w-full px-2 block hover:underline hover:text-primary font-medium duration-100 ${
+                className={`text-[cornflowerblue] py-1 w-full px-2 block hover:bg-zinc-600/35 hover:text-primary font-medium duration-100 ${
                   selectedSlug === title.slug
                     ? ' bg-card-bg text-text-strong bg-opacity-10'
                     : ''
