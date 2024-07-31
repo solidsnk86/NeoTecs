@@ -8,7 +8,6 @@ import { youTube } from '../components/Constants';
 
 export const VideoLikes = ({ videoId, cpe }) => {
   const [likes, setLikes] = useState(0);
-  const [suscriptors, setSuscriptors] = useState(0);
   const [channelTitle, setChannelTitle] = useState('');
 
   useEffect(() => {
@@ -25,12 +24,10 @@ export const VideoLikes = ({ videoId, cpe }) => {
         if (data.items && data.items.length > 0) {
           const video = data.items[0];
           const youtubeLikes = video.statistics.likeCount;
-          const youtubeSuscriptors = video.snippet.categoryId;
           const titleChannel = video.snippet.channelTitle;
 
           setChannelTitle(titleChannel);
           setLikes(youtubeLikes);
-          setSuscriptors(youtubeSuscriptors);
         } else {
           console.error(
             'No se encontraron datos del video en la respuesta de la API de YouTube',
@@ -55,52 +52,40 @@ export const VideoLikes = ({ videoId, cpe }) => {
   };
 
   return (
-    <div className="flex gap-[12px] xl:gap-[12px] lg:gap-[14px] md:gap-[12px] my-2 sm:mx-2">
-      <header className='flex items-center gap-2'>
+    <div className="flex gap-4 my-2 justify-between items-center">
+      <header className="flex items-center gap-2">
         <img
           className="rounded-full w-10 h-10"
           src="/images/logos/NeoTecs_Tutorial_logo.png"
           alt="logo"
         />
-        <span className="font-bold text-sm">{channelTitle}</span>
+        <span className="font-bold text-xs">{channelTitle}</span>
       </header>
-      <aside className="youtube-aside inline-flex space-x-[10px] xl:flex xl:space-x-3 xl:left-0 xl:relative xl:scale-[1] lg:flex lg:space-x-1 lg:scale-[0.9] lg:relative lg:left-[-30px] video-likes">
+      <aside className="flex items-center space-x-3">
         <div>
-          <p
-            className="relative top-[7px] mx-1 font-bold px-2 text-text-variant py-1 rounded-full bg-button-variant cursor-pointer hover:opacity-80"
+          <button
+            className="relative mx-1 font-bold px-2 text-text-variant py-1 rounded-full bg-button-variant cursor-pointer hover:opacity-80"
             onClick={() => window.open('https://www.youtube.com/@tutosNeoTecs')}
           >
             Suscríbete
-          </p>
+          </button>
         </div>
-        <span className="flex bg-card-bg border border-gray-200 dark:border-zinc-800/50 relative bottom-[2px] rounded-full my-2 w-fit px-3 py-1 transition-all section-likes">
-          <span className="flex relative top-[1px] gap-2">
-            <LikeButton
-              onClick={() =>
-                window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)
-              }
-              className=" cursor-pointer hover:-rotate-6 transition-all like-down"
-            />
-            <div className="absolute bg-red-400 h-auto w-full"></div>
-            {likes}
-            <hr className="border-l-[1px] h-5 border-[#575757] relative bottom-[1px]" />
-            <UnlikeButton
-              className=" cursor-pointer"
-              onClick={() =>
-                window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)
-              }
-            />
-          </span>
-        </span>
-        <div
-          className="text-[#575757] bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full h-[29px] relative top-[7px] px-[6px] reply-icon"
+        <div className="flex items-center bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full px-3 py-1">
+          <LikeButton
+            onClick={() =>
+              window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)
+            }
+            className="cursor-pointer hover:-rotate-6 transition-transform"
+          />
+          <span className="mx-1">{likes}</span>
+        </div>
+        <button
+          className="text-text-primary font-semibold flex gap-1 bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full p-1 cursor-pointer hover:opacity-80"
           onClick={() => ShareButton()}
         >
-          <ReplyOutlinedIcon
-            fontSize="small"
-            className="relative w-6 h-6 right-[1px] dark:stroke-white stroke-black text-transparent cursor-pointer"
-          />
-        </div>
+          <ReplyOutlinedIcon className="inline w-4 h-4 text-current" />
+          Compartir
+        </button>
       </aside>
     </div>
   );
