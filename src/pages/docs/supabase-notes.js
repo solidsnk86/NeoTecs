@@ -136,7 +136,7 @@ export default function SupabaseDB() {
           <SupabaseExample />
           <Indextitle>Crear Nota</Indextitle>
           <article
-            className="resize-y max-w-80"
+            className="resize-y max-w-80 dark:bg-zinc-800/60 bg-zinc-100 px-2 rounded"
             id="notes"
             contentEditable
             suppressContentEditableWarning={true}

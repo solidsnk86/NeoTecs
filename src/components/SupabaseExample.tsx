@@ -54,7 +54,6 @@ export const SupabaseExample = () => {
         </svg>
         supabase
       </IndexTitle>
-      <IndexTitle>Creando una Base de Datos</IndexTitle>
       <p>
         En este artículo vamos a crear una base de datos con{' '}
         <a href="https://supabase.com/" className="text-[#3ECE8D]">
@@ -70,12 +69,11 @@ export const SupabaseExample = () => {
         configuraremos Supabase, crearemos una base de datos y la conectaremos a
         nuestra aplicación React con Next.js.
       </p>
-      <p className="list-css-span">
+      <p>
         Comenzaremos configurando nuestra base de datos en Supabase, luego
         veremos cómo integrar esta base de datos en nuestra aplicación para
-        poder crear, leer, actualizar y eliminar<span>(CRUD)</span>notas. Esto
-        permitirá una gestión completa de las notas directamente desde nuestra
-        aplicación.
+        poder crear, leer, actualizar y eliminar (CRUD) notas. Esto permitirá
+        una gestión completa de las notas directamente desde nuestra aplicación.
       </p>
       <ol>
         <li>Crear una cuenta en Supabase y configurar un nuevo proyecto.</li>
@@ -106,46 +104,127 @@ export const SupabaseExample = () => {
         src="/images/editor-sql-supabase.png"
         altImage="Editor SQL Supabase"
       />
-      <p className="list-css-span" id="tabla">
+      <p>
         Bien, ahora vamos a crear nuestra tabla de datos, en este caso la vamos
-        a llamar<span>notes</span>. Utilizaremos la siguiente instrucción SQL
+        a llamar <span>notes</span>. Utilizaremos la siguiente instrucción SQL:
       </p>
       <Pre lang="sql">{
         /**sql */ `
-        create table 
+        CREATE TABLE 
             public.notes (
-            id serial not null,    
-            title text null,
-            created_at timestamp with time zone null default (now() at time zone 'utc'::text),
-            constraint notes_pkey primary key (id)
+            id SERIAL not null,    
+            title TEXT null,
+            created_at TIMESTAMP with time zone null default (now() at time zone 'utc'::text),
+            constraint notes_pkey PRIMARY key (id)
         )
+
+        -- Vamos a insertar algo de datos para muestra
+        INSERT INTO notes (title)
+        values
+        ('Hoy he creado un proyecto en Supabase')
+        ('He agregado algo de datos y la he consultado desde Next.js')
+        ('Esto es asombroso 😲')
         `
       }</Pre>
-      <p className="list-css-span">
-        Esta instrucción crea una tabla llamada<span>notes</span>con los
+      <p>
+        Esta instrucción crea una tabla llamada <span>notes</span> con los
         siguientes campos:
-        <ul>
-          <li>
-            <span>id</span>: Un identificador único para cada nota, generado
-            automáticamente (serial).
-          </li>
-          <li>
-            <span>title</span>: El título de la nota, que puede ser texto o
-            null.
-          </li>
-          <li>
-            <span>created_at</span>: La fecha y hora de creación de la nota, con
-            la zona horaria UTC por defecto.
-          </li>
-        </ul>
+      </p>
+      <ul>
+        <li>
+          <span>id</span>: Un identificador único para cada nota, generado
+          automáticamente (serial).
+        </li>
+        <li>
+          <span>title</span>: El título de la nota, que puede ser texto o null.
+        </li>
+        <li>
+          <span>created_at</span>: La fecha y hora de creación de la nota, con
+          la zona horaria UTC por defecto.
+        </li>
+        <li>
+          Por último ingresamos algo de datos en la tabla para mostrarlos luego.
+        </li>
+      </ul>
+      <p className="list-css-span">
         Además, definimos una clave primaria<span>primary key</span>en el campo
         <span>id</span>para asegurar que cada nota tenga un identificador único.
-        Por último hacemos click en el botón<span>Run</span>.
+        Por último, hacemos click en el botón<span>Run</span>.
+      </p>
+      <SectionTitle title="Creamos nuestra app con Next.js" />
+      <p>
+        Bien, empezamos creando nuestro proyecto con Next.js. Para eso, abrimos
+        nuestra terminal favorita y escribimos:
+      </p>
+      <Pre lang="bash">{
+        /**bash */ `
+        npx create-next-app@latest
+        `
+      }</Pre>
+      <p>
+        Este comando iniciará un asistente que te guiará a través de los pasos
+        necesarios para configurar tu nuevo proyecto. A continuación, se
+        describen algunos de los pasos que encontrarás:
+      </p>
+      <ul className="list-css-span">
+        <li>
+          <span>Nombre del Proyecto</span>: Debes proporcionar un nombre para tu
+          aplicación. Este nombre se utilizará para crear el directorio que
+          contendrá tu proyecto.
+        </li>
+        <li>
+          <span>Tecnologías a Usar</span>: Se te pedirá que selecciones algunas
+          tecnologías adicionales que quieras incluir en tu proyecto, como
+          TypeScript, ESLint, Tailwind CSS, entre otras.
+        </li>
+      </ul>
+      <p className="list-css-span">
+        Una vez que hayas completado estos pasos, Next.js creará una estructura
+        de carpetas y archivos para tu proyecto. Dentro de la carpeta{' '}
+        <span>app</span>, encontrarás un archivo llamado <span>Page.tsx</span>.
+      </p>
+      <p className="list-css-span">
+        Este archivo,<span>Page.tsx</span>, es el punto de entrada de tu
+        aplicación y donde puedes empezar a definir el contenido de la página
+        principal. Por ejemplo, puedes editar este archivo para mostrar un
+        mensaje de bienvenida, listar productos, o cualquier otra funcionalidad
+        que tu aplicación necesite.
+      </p>
+      <p>
+        Antes de proceder con el desarrollo, es importante conectar tu proyecto
+        con Supabase si planeas utilizarlo para la gestión de datos. Supabase es
+        una plataforma que proporciona una base de datos PostgreSQL,
+        autenticación y almacenamiento en tiempo real.
+      </p>
+      <p>
+        Para conectar tu aplicación Next.js con Supabase, sigue estos pasos:
+      </p>
+      <ul>
+        <li>
+          Ve a la página de Supabase y crea una nueva cuenta si aún no tienes
+          una.
+        </li>
+        <li>Crea un nuevo proyecto en el panel de Supabase.</li>
+        <li>
+          Sigue las instrucciones de configuración proporcionadas por Supabase
+          para conectar tu proyecto Next.js. Esto generalmente implica instalar
+          la biblioteca de cliente de Supabase y configurar las credenciales de
+          tu proyecto.
+        </li>
+      </ul>
+      <p>
+        Una vez que hayas conectado Supabase, podrás utilizar sus
+        funcionalidades para manejar datos en tu aplicación, como crear, leer,
+        actualizar y eliminar registros en la base de datos.
       </p>
       <SectionTitle title="Conectando Supabase" />
       <p>
         Para conectar Supabase con nuestra aplicación, necesitamos dos cosas
-        importantes: la URL del proyecto de Supabase y la anon public key. Estos
+        importantes:{' '}
+        <code className="text-text-primary">
+          la URL del proyecto de Supabase
+        </code>{' '}
+        y la <code className="text-text-primary">anon public key</code>. Estos
         son los pasos:
       </p>
       <p>Primero debemos instalar las dependencias de supabase:</p>
@@ -161,11 +240,11 @@ export const SupabaseExample = () => {
         </li>
         <li>
           En la sección de configuración, encontrarás la URL del proyecto y la
-          anon public key bajo la pestaña de API.
+          anon public key en la pestaña de API.
         </li>
         <li>
           Guarda estos valores en tu aplicación React utilizando{' '}
-          <a href="dot-env" className="text-[#3ECE8D]">
+          <a href="#dot-env" className="text-[#3ECE8D]">
             variables de entorno
           </a>{' '}
           para mayor seguridad.
@@ -182,12 +261,13 @@ export const SupabaseExample = () => {
         altImage="Supabase settings"
       />
       <p className="list-css-span">
-        Copiamos la<span>URL</span>y la<span>Anon Public Key</span>, éstos
+        Copiamos la<span>URL</span>y la<span>Anon Public Key</span>, estos
         valores son privados y por razones de seguridad se debe crear una
         variable de entorno. Para eso vamos a crear en la carpeta
-        <span>📂/src</span>o <span>📁/app</span>de nuestra aplicación React y
-        Next.js un archivo<span>⚙ .env.local</span>de la siguiente manera:
+        <span>📂/src</span>o<span>📁/app</span> de nuestra aplicación React y
+        Next.js un archivo<span>⚙ .env.local</span> de la siguiente manera:
       </p>
+      <span id="dot-env" />
       <Pre lang=".env">{
         /**.env */ `
         NEXT_PUBLIC_SUPABASE_URL=tu_url_de_supabase_aquí
@@ -195,10 +275,10 @@ export const SupabaseExample = () => {
         `
       }</Pre>
       <SectionTitle title="Creación del Cliente" />
-      <p className="list-css-span">
+      <p>
         Para crear nuestro cliente de Supabase, vamos a crear el siguiente
-        archivo JavaScript en la carpeta<span>🔧 utils</span>. El archivo se
-        llamará<span>supabase.js</span>:
+        archivo JavaScript en la carpeta <span>🔧 utils</span>. El archivo se
+        llamará <span>supabase.js</span>:
       </p>
       <Pre lang="javascript">{
         /**javascript */ `
@@ -234,33 +314,54 @@ export const SupabaseExample = () => {
           utilizada en otras partes de la aplicación.
         </li>
       </ul>
-      <Pre lang="typescript">{
-        /**typescript */ `
-        import { useState, useEffect } from 'react'
-        import { supabase } from '@/utils/supabase'
-
+      <SectionTitle title="Creamos el Componente" />
+      <Pre lang="javascript">{
+        /**javascript */ `
+        import supabase from '../../components/utils/supabase';
+        import { useEffect, useState } from 'react';
+        
         export default function Notes() {
-            const [notes, setNotes] = useState([]);
-          
-            const notesDB = async () => {
+          const [notes, setNotes] = useState([]);
+        
+          useEffect(() => {
+            const fetchData = async () => {
               try {
-                const { data, error } = await supabase
-                  .from('notes')
-                  .select()
-                  .order('created_at', { ascending: true });
-                setNotes(data);
-          
+                const { data, error } = await supabase.from('notes').select();
+        
                 if (error) {
-                  throw new Error('Cannot query the data');
+                  throw new Error('Error al recibir datos');
+                }
+        
+                if (data) {
+                  setNotes(data);
                 }
               } catch (error) {
-                console.error('Error querying data from Supabase:', error);
-           }
-        };
-
-        return <pre>{JSON.stringify(notes, null, 2)}</pre>
+                console.error(error);
+              }
+            };
+        
+            fetchData();
+          }, []);
+        
+          return (
+            <pre>
+              <code className='text-text-primary'>{JSON.stringify(notes, null, 2)}</code>
+            </pre>
+          );
+        }        
         `
       }</Pre>
+      <SectionTitle title="Recibiendo Datos" />
+      <p>
+        Una vez hemos creado nuestro componente, ya podemos renderizarlo en la
+        app, a continución veremos los datos:
+      </p>
+      <ImageComponent
+        src="/images/supa-example.png"
+        altImage="Supabase Example Data"
+      />
+      <SectionTitle title="Creando Notas Ejemplo" />
+      <p>Aquí les dejo una muestra del ejemplo:</p>
     </article>
   );
 };
