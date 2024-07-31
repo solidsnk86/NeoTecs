@@ -77,7 +77,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 text-center">
           {cardContent.map((card) => (
             <div
-              key={card.id}
+              key={card.feature}
               className="dark:bg-[#09090B] bg-[#FFFFFF] p-4 rounded-lg border dark:border-zinc-900 shadow-sm shadow-slate-200 dark:!shadow z-50"
             >
               <span className="text-xl font-bold">{card.feature}</span>

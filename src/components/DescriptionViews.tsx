@@ -6,7 +6,7 @@ export const DescriptionViews = ({ videoId }: { videoId: string }) => {
   const [views, setViews] = useState(0);
   const [datePublished, setDatePublished] = useState('');
 
-  https: useEffect(() => {
+  useEffect(() => {
     const getVideoDetails = async () => {
       try {
         const response = await fetch(
