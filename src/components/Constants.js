@@ -124,6 +124,10 @@ export const links = [
     href: '/docs/javascript-arrays',
     title: 'JavaScript Arrays',
   },
+  {
+    href: '/docs/supabase-notes',
+    title: 'Notas Supabase',
+  },
 ];
 
 export const aboutNeo =

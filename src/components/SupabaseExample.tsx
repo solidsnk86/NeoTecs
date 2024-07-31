@@ -361,7 +361,10 @@ export const SupabaseExample = () => {
         altImage="Supabase Example Data"
       />
       <SectionTitle title="Creando Notas Ejemplo" />
-      <p>Aquí les dejo una muestra del ejemplo:</p>
+      <p>
+        Aquí les dejo una muestra del ejemplo, se pueden editar las notas
+        haciendo click en ellas:
+      </p>
     </article>
   );
 };
