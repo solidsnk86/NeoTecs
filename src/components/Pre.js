@@ -62,7 +62,7 @@ export const Pre = ({ children, lang = '' }) => {
               {tokens.map((line, i) => (
                 <div
                   {...getLineProps({ line, key: i })}
-                  key={i}
+                  key={line}
                   className="line"
                 >
                   <span className="line-number">{i + 1}</span>
@@ -70,7 +70,7 @@ export const Pre = ({ children, lang = '' }) => {
                     {line.map((token, keyIndex) => (
                       <span
                         {...getTokenProps({ token, key: keyIndex })}
-                        key={keyIndex}
+                        key={token}
                       />
                     ))}
                   </span>
@@ -86,7 +86,7 @@ export const Pre = ({ children, lang = '' }) => {
               {tokens.map((line, i) => (
                 <div
                   {...getLineProps({ line, key: i })}
-                  key={i}
+                  key={line}
                   className="line"
                 >
                   <span className="line-number">{i + 1}</span>
@@ -94,7 +94,7 @@ export const Pre = ({ children, lang = '' }) => {
                     {line.map((token, keyIndex) => (
                       <span
                         {...getTokenProps({ token, key: keyIndex })}
-                        key={keyIndex}
+                        key={token}
                       />
                     ))}
                   </span>
