@@ -242,28 +242,6 @@ a {
   font-weight: bold;
 }
 
-.highlight {
-  position: relative;
-  z-index: 0;
-  -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: #09090b;
-}
-
-.highlight::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.2em;
-  height: 1.5em;
-  background: #F7DF1E;
-  mask-image: url('/images/crayon-amarillo.png');
-  mask-size: cover;
-  mask-repeat: no-repeat;
-  transform: translateX(65px);
-  z-index: -1;
-}
-
 /* ============> NAV SWICTH <============ */
 
 .nav-switch {

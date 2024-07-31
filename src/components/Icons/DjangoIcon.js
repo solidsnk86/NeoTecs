@@ -2,7 +2,7 @@ export const DjangoIcon = ({ className = '' }) => {
   return (
     <svg
       width={120}
-      height={60}
+      height={100}
       viewBox="0 -166.5 512 512"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"

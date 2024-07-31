@@ -58,7 +58,7 @@ export function NavLinks() {
             />
           </div>
           <div
-            title={`Compárte: ${documentTitle.text}`}
+            title={`Compartir sección: ${documentTitle.text}`}
             className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 w-fit mt-3 hover:border-zinc-200 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300"
           >
             <Share className="text-text-primary" onClick={share} />
