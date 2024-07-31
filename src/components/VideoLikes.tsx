@@ -1,7 +1,6 @@
 'use client';
 
 import { LikeButton } from '../components/Icons/LikeButton';
-import { UnlikeButton } from '../components/Icons/UnlikeButton';
 import React, { useState, useEffect } from 'react';
 import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
 import { youTube } from '../components/Constants';
@@ -44,7 +43,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
   const ShareButton = () => {
     if (navigator.share) {
       navigator.share({
-        title: 'Neotecs Informática',
+        title: channelTitle,
         text: cpe,
         url: `https://www.youtube.com/watch?v=${videoId}=1s`,
       });
@@ -59,7 +58,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
           src="/images/logos/NeoTecs_Tutorial_logo.png"
           alt="logo"
         />
-        <span className="font-bold text-xs">{channelTitle}</span>
+        <span className="font-bold text-sm">{channelTitle}</span>
       </header>
       <aside className="flex items-center space-x-3">
         <div>
@@ -70,7 +69,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
             Suscríbete
           </button>
         </div>
-        <div className="flex items-center bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full px-3 py-1">
+        <button className="flex items-center bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full px-2 py-1 hover:opacity-80">
           <LikeButton
             onClick={() =>
               window.open(`https://www.youtube.com/watch?v=${videoId}=1s`)
@@ -78,7 +77,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
             className="cursor-pointer hover:-rotate-6 transition-transform"
           />
           <span className="mx-1">{likes}</span>
-        </div>
+        </button>
         <button
           className="text-text-primary font-semibold flex gap-1 bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full p-1 cursor-pointer hover:opacity-80"
           onClick={() => ShareButton()}
