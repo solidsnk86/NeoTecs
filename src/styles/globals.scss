@@ -364,6 +364,12 @@ video {
   margin: 0 10px;
 }
 
+.code code {
+  color: var(--second-color-text);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: 5px;
+}
+
 /* ==============> LOGIN <=============== */
 
 .login-form input {
