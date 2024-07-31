@@ -9,7 +9,7 @@ export const NavSwitch = ({ inline }) => {
 
   return (
     <div
-      className={`scroll-bar inline-block overflow-hidden mt-4 w-full xl:h-60 xl:overflow-y-auto border-t border-b border-zinc-400 dark:border-zinc-800 z-50 ${
+      className={`scroll-bar inline-block overflow-hidden mt-4 w-full xl:h-60 xl:overflow-y-auto border-t border-b border-zinc-400 dark:border-zinc-500 z-50 ${
         inline
           ? 'mb-8 lg:hidden w-100% flex overflow-x-scroll overflow-hidden xl:border dark:border-zinc-800 border-gray-800 border-t-0 border-l-0 border-r-0 border-b text-text-primary text-xs z-20 nav-switch'
           : ''
