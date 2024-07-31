@@ -5,8 +5,8 @@ import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 import { NavLinks } from '../../components/NavLinks';
 import { useState, useEffect, useRef } from 'react';
-import AuthButton from '../../components/auth-button';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { SupabaseExample } from '../../components/SupabaseExample';
 
 function formatDate(str) {
   const date = new Date(str).toLocaleDateString('es-ES', {
@@ -131,9 +131,9 @@ export default function SupabaseDB() {
         <NavLinks />
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
-          <HeaderTitle>Notas con Supabase DB</HeaderTitle>
+          <HeaderTitle>Notas con Supabase</HeaderTitle>
           <hr className="border-text-primary" />
-          <AuthButton />
+          <SupabaseExample />
           <Indextitle>Crear Nota</Indextitle>
           <article
             className="resize-y max-w-80"
