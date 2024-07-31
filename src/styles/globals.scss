@@ -451,26 +451,6 @@ video {
   transition: ease-in-out 0.2s;
 }
 
-.highlight {
-  position: relative;
-  display: inline-block;
-}
-
-.highlight::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  bottom: 50%;
-  background: yellow;
-  mask-image: url('/public/images/mario.png');
-  mask-size: contain;
-  mask-repeat: no-repeat;
-  z-index: -1;
-  transform: rotate(-2deg);
-}
-
 /* =======> SCRAPING STYLES <======= */
 
 .effect-background {

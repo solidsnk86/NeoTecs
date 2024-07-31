@@ -6,7 +6,7 @@ export const DescriptionViews = ({ videoId }: { videoId: string }) => {
   const [views, setViews] = useState(0);
   const [datePublished, setDatePublished] = useState('');
 
-  useEffect(() => {
+  https: useEffect(() => {
     const getVideoDetails = async () => {
       try {
         const response = await fetch(
@@ -38,9 +38,9 @@ export const DescriptionViews = ({ videoId }: { videoId: string }) => {
   }, [videoId]);
 
   const formatView = () => {
-    if (views > 1000) {
+    if (views >= 1000) {
       const formattedViews = (views / 1000).toFixed(1);
-      return `${formattedViews} K`;
+      return formattedViews.replace(/.0/, '') + 'K';
     }
     return views.toString();
   };

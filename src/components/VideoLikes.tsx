@@ -9,6 +9,7 @@ import { youTube } from '../components/Constants';
 export const VideoLikes = ({ videoId, cpe }) => {
   const [likes, setLikes] = useState(0);
   const [suscriptors, setSuscriptors] = useState(0);
+  const [channelTitle, setChannelTitle] = useState('');
 
   useEffect(() => {
     const getVideoDetails = async () => {
@@ -24,8 +25,10 @@ export const VideoLikes = ({ videoId, cpe }) => {
         if (data.items && data.items.length > 0) {
           const video = data.items[0];
           const youtubeLikes = video.statistics.likeCount;
-          const youtubeSuscriptors = video.statistics.subscriberCount;
+          const youtubeSuscriptors = video.snippet.categoryId;
+          const titleChannel = video.snippet.channelTitle;
 
+          setChannelTitle(titleChannel);
           setLikes(youtubeLikes);
           setSuscriptors(youtubeSuscriptors);
         } else {
@@ -53,15 +56,14 @@ export const VideoLikes = ({ videoId, cpe }) => {
 
   return (
     <div className="flex gap-[12px] xl:gap-[12px] lg:gap-[14px] md:gap-[12px] my-2 sm:mx-2">
-      <img
-        className="rounded-full w-10 h-10"
-        src="/images/logos/NeoTecs_Tutorial_logo.png"
-        alt="logo"
-      />
-      <div className="flex-col">
-        <span className="font-bold">Neo TECs</span>
-        <p className="font-light text-[#5D5D5D]">{suscriptors} suscriptores</p>
-      </div>
+      <header className='flex items-center gap-2'>
+        <img
+          className="rounded-full w-10 h-10"
+          src="/images/logos/NeoTecs_Tutorial_logo.png"
+          alt="logo"
+        />
+        <span className="font-bold text-sm">{channelTitle}</span>
+      </header>
       <aside className="youtube-aside inline-flex space-x-[10px] xl:flex xl:space-x-3 xl:left-0 xl:relative xl:scale-[1] lg:flex lg:space-x-1 lg:scale-[0.9] lg:relative lg:left-[-30px] video-likes">
         <div>
           <p

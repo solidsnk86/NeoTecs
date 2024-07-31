@@ -22,7 +22,7 @@ export default function JavaScript() {
         <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
           <NavSwitch inline />
           <HeaderTitle>
-            <span className="highlight">JavaScript</span>
+            <img src='/public/images/crayon-amarillo.png' className='w-10 h-10' />JavaScript
           </HeaderTitle>
           <hr className="border-text-primary" />
           <IndexTitle>Índice</IndexTitle>
