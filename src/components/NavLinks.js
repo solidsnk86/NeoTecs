@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { ArrowLeftIcon, Home, Share } from 'lucide-react';
 import { NavSwitch } from './NavSwicth';
 import { TitlesContext } from '../shared/TitlesContext';
@@ -8,6 +8,7 @@ import { shareText } from './Constants';
 export function NavLinks() {
   const { titles } = useContext(TitlesContext);
   const [selectedSlug, setSelectedSlug] = useState(titles[0]?.slug);
+  const [documentTitle, setDocumentTitle] = useState('');
   const router = useRouter();
 
   const handleTitleClick = (slug) => {
@@ -28,12 +29,18 @@ export function NavLinks() {
     }
   };
 
+  useEffect(() => {
+    setDocumentTitle({
+      text: document.title,
+    });
+  }, []);
+
   return (
     <div className="hidden w-80 lg:block border-r border-zinc-200 dark:border-zinc-800">
       <div className="sticky top-2">
-        <div className="flex gap-4 justify-center mx-auto my-0">
+        <div className="flex gap-4 justify-center mx-auto my-0 z-50">
           <div
-            title="Volver atrás"
+            title="Volver"
             className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 w-fit mt-3 hover:border-zinc-200 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300"
           >
             <ArrowLeftIcon
@@ -51,7 +58,7 @@ export function NavLinks() {
             />
           </div>
           <div
-            title="Volver atrás"
+            title={`Compárte: ${documentTitle.text}`}
             className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 w-fit mt-3 hover:border-zinc-200 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300"
           >
             <Share className="text-text-primary" onClick={share} />
