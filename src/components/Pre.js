@@ -1,12 +1,19 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useMemo } from 'react';
 import { Highlight, themes } from 'prism-react-renderer';
 import stripIndent from 'strip-indent';
 import { Copy, Check } from 'lucide-react';
-import { v4 as uuidv4 } from 'uuid';
 import 'react-toastify/dist/ReactToastify.css';
 
 const removeIndent = (code = '') => {
   return stripIndent(code).trim();
+};
+
+const generateUniqueKey = (str, position) => {
+  const hash = str.split('').reduce((acc, char) => {
+    const chr = char.charCodeAt(0);
+    return (acc < 5) - acc + chr || 0;
+  }, 0);
+  return `${hash}-${position}`;
 };
 
 export const Pre = ({ children, lang = '' }) => {
@@ -31,6 +38,8 @@ export const Pre = ({ children, lang = '' }) => {
     }, 1600);
   };
 
+  const code = useMemo(() => removeIndent(children), [children]);
+
   return (
     <div className="relative">
       <div className="bg-[#F6F8FA] dark:bg-black border-r border-t border-l dark:border-[#333] border-[#e0e0e0] translate-y-[30px] text-amber-500 uppercase font-bold h-[30px] rounded-t-md overflow-hidden">
@@ -54,54 +63,42 @@ export const Pre = ({ children, lang = '' }) => {
       </span>
       <Highlight
         theme={themes.oneDark}
-        code={removeIndent(children)}
+        code={code}
         language={lang.toLowerCase()}
       >
-        {({ tokens, getLineProps, getTokenProps }) =>
-          tokens.length < 25 ? (
-            <pre className="custom-pre" lang={lang} ref={preRef}>
-              {tokens.map((line) => (
-                <div
-                  {...getLineProps({ line })}
-                  key={uuidv4()}
-                  className="line"
-                >
-                  <span className="line-number">
-                    {tokens.indexOf(line) + 1}
-                  </span>
+        {({ tokens, getLineProps, getTokenProps }) => (
+          <pre
+            className={`custom-pre ${
+              tokens.length >= 25 ? 'overflow-y-scroll h-[470px]' : ''
+            }`}
+            lang={lang}
+            ref={preRef}
+          >
+            {tokens.map((line, lineIndex) => {
+              const lineContent = line.map((token) => token.content).join('');
+              const lineKey = generateUniqueKey(lineContent, lineIndex);
+              return (
+                <div {...getLineProps({ line })} key={lineKey} className="line">
+                  <span className="line-number">{lineIndex + 1}</span>
                   <span className="line-content">
-                    {line.map((token) => (
-                      <span {...getTokenProps({ token })} key={uuidv4()} />
-                    ))}
+                    {line.map((token, tokenIndex) => {
+                      const tokenKey = generateUniqueKey(
+                        token.content,
+                        tokenIndex,
+                      );
+                      return (
+                        <span
+                          {...getTokenProps({ token })}
+                          key={`${lineKey}-${tokenKey}`}
+                        />
+                      );
+                    })}
                   </span>
                 </div>
-              ))}
-            </pre>
-          ) : (
-            <pre
-              className="custom-pre overflow-y-scroll h-[470px]"
-              lang={lang}
-              ref={preRef}
-            >
-              {tokens.map((line) => (
-                <div
-                  {...getLineProps({ line })}
-                  key={uuidv4()}
-                  className="line"
-                >
-                  <span className="line-number">
-                    {tokens.indexOf(line) + 1}
-                  </span>
-                  <span className="line-content">
-                    {line.map((token) => (
-                      <span {...getTokenProps({ token })} key={uuidv4()} />
-                    ))}
-                  </span>
-                </div>
-              ))}
-            </pre>
-          )
-        }
+              );
+            })}
+          </pre>
+        )}
       </Highlight>
     </div>
   );
