@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { microlink } from '../../components/Constants';
 import supabase from './supabase';
+import { useRouter } from 'next/router';
 
 function dateFormated(string) {
   const date = new Date(string).toLocaleDateString('es-Es', {
@@ -13,11 +14,21 @@ function dateFormated(string) {
   return date;
 }
 
-const local = ['http://localhost:3000/', 'http://localhost:3001/'];
-
 export default function Tracker() {
   const [visitData, setVisitData] = useState({});
   const [lastVisit, setLastVisit] = useState({});
+  const router = useRouter();
+
+  const getPathName = () => {
+    const local = [
+      `http://localhost:3000${router.asPath}`,
+      `http://localhost:3001${router.asPath}`,
+    ];
+    const url = local.includes(window.location.href);
+    return url;
+  };
+
+  const url = getPathName();
 
   const sendDataToSupabase = async (jsonData) => {
     await supabase.from('visitors').insert({
@@ -54,7 +65,7 @@ export default function Tracker() {
               longitude: jsonData.coordinates.longitude,
             },
           });
-          if (local.includes(window.location.href)) {
+          if (url) {
             return null;
           } else {
             sendDataToSupabase(jsonData);
@@ -93,7 +104,7 @@ export default function Tracker() {
 
     fetchData();
     fetchLastVisit();
-  }, []);
+  });
 
   return (
     <div className="text-text-primary mt-5 w-fit justify-center mx-auto p-4 space-y-2 visits">

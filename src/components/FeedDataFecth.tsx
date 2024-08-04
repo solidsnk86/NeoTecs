@@ -5,23 +5,24 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 export const FeedbackData = () => {
   const [items, setItems] = useState([]);
 
-  useEffect(() => {
-    const fetchFeedback = async () => {
-      try {
-        const { data, error } = await supabase
-          .from('feedback')
-          .select('*')
-          .order('fecha', { ascending: false });
+  const fetchFeedback = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('feedback')
+        .select('*')
+        .order('fecha', { ascending: false });
 
-        if (error) {
-          throw error;
-        }
-
-        setItems(data);
-      } catch (error) {
-        console.error('Error fetching feedback:', error.message);
+      if (error) {
+        throw error;
       }
-    };
+
+      setItems(data);
+    } catch (error) {
+      console.error('Error fetching feedback:', error.message);
+    }
+  };
+
+  useEffect(() => {
     fetchFeedback();
   }, []);
 
@@ -48,6 +49,7 @@ export const FeedbackData = () => {
       }
 
       setItems(newData);
+      fetchFeedback();
     } catch (error) {
       console.error('Error deleting feedback:', error.message);
     }
@@ -92,7 +94,7 @@ export const FeedbackData = () => {
           slidesPerView: 1,
         },
         1024: {
-          slidesPerView: 1,
+          slidesPerView: 2,
         },
       }}
       onSlideChange={() => console.log('slide change')}
