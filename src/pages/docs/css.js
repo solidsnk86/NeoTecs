@@ -1197,4 +1197,4 @@ export default function CssDoc() {
   );
 }
 
-CssDoc.title = '🎨 Aprende CSS en NeoTecs!';
+CssDoc.title = 'Aprende CSS en NeoTecs!';
