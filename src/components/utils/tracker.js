@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { microlink } from '../../components/Constants';
 import supabase from './supabase';
 import { useRouter } from 'next/router';
 
 function dateFormated(string) {
-  const date = new Date(string).toLocaleDateString('es-Es', {
+  const date = new Date(string).toLocaleDateString('es-ES', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -19,16 +19,13 @@ export default function Tracker() {
   const [lastVisit, setLastVisit] = useState({});
   const router = useRouter();
 
-  const getPathName = () => {
-    const local = [
+  const local = useMemo(
+    () => [
       `http://localhost:3000${router.asPath}`,
       `http://localhost:3001${router.asPath}`,
-    ];
-    const url = local.includes(window.location.href);
-    return url;
-  };
-
-  const url = getPathName();
+    ],
+    [router.asPath],
+  );
 
   const sendDataToSupabase = async (jsonData) => {
     await supabase.from('visitors').insert({
@@ -47,7 +44,7 @@ export default function Tracker() {
       try {
         const res = await fetch(microlink);
         if (res.ok) {
-          const jsonData = await res.json(microlink);
+          const jsonData = await res.json();
           setVisitData({
             city: {
               name: jsonData.city.name,
@@ -65,10 +62,9 @@ export default function Tracker() {
               longitude: jsonData.coordinates.longitude,
             },
           });
-          if (url) {
-            return null;
-          } else {
-            sendDataToSupabase(jsonData);
+
+          if (!local.includes(window.location.href)) {
+            await sendDataToSupabase(jsonData);
           }
         } else {
           console.error(
@@ -80,7 +76,6 @@ export default function Tracker() {
       } catch (error) {
         console.error('Error fetching visit data:', error);
       }
-      return undefined;
     };
 
     const fetchLastVisit = async () => {
@@ -94,8 +89,7 @@ export default function Tracker() {
         if (error) {
           console.error('Error fetching last visit data:', error);
         } else if (data.length > 0) {
-          const lastVisitData = data[0];
-          setLastVisit(lastVisitData);
+          setLastVisit(data[0]);
         }
       } catch (error) {
         console.error('Error fetching last visit data:', error);
@@ -104,7 +98,7 @@ export default function Tracker() {
 
     fetchData();
     fetchLastVisit();
-  });
+  }, [local]);
 
   return (
     <div className="text-text-primary mt-5 w-fit justify-center mx-auto p-4 space-y-2 visits">
@@ -112,7 +106,7 @@ export default function Tracker() {
         {visitData.city && (
           <div className="flex mx-auto justify-center">
             <p className="font-mono text-[10px]">
-              La última visita a NeoTecs fué el{' '}
+              La última visita a NeoTecs fue el{' '}
               {dateFormated(lastVisit.created_at)}, desde {lastVisit.city_name},{' '}
               {lastVisit.country_name} {lastVisit.country_flag}
             </p>
