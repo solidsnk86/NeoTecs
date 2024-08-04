@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Highlight, themes } from 'prism-react-renderer';
 import stripIndent from 'strip-indent';
 import { Copy, Check } from 'lucide-react';
+import { v4 as uuidv4 } from 'uuid';
 import 'react-toastify/dist/ReactToastify.css';
 
 const removeIndent = (code = '') => {
@@ -59,19 +60,18 @@ export const Pre = ({ children, lang = '' }) => {
         {({ tokens, getLineProps, getTokenProps }) =>
           tokens.length < 25 ? (
             <pre className="custom-pre" lang={lang} ref={preRef}>
-              {tokens.map((line, i) => (
+              {tokens.map((line) => (
                 <div
-                  {...getLineProps({ line, key: i })}
-                  key={line}
+                  {...getLineProps({ line })}
+                  key={uuidv4()}
                   className="line"
                 >
-                  <span className="line-number">{i + 1}</span>
+                  <span className="line-number">
+                    {tokens.indexOf(line) + 1}
+                  </span>
                   <span className="line-content">
-                    {line.map((token, keyIndex) => (
-                      <span
-                        {...getTokenProps({ token, key: keyIndex })}
-                        key={token}
-                      />
+                    {line.map((token) => (
+                      <span {...getTokenProps({ token })} key={uuidv4()} />
                     ))}
                   </span>
                 </div>
@@ -83,19 +83,18 @@ export const Pre = ({ children, lang = '' }) => {
               lang={lang}
               ref={preRef}
             >
-              {tokens.map((line, i) => (
+              {tokens.map((line) => (
                 <div
-                  {...getLineProps({ line, key: i })}
-                  key={line}
+                  {...getLineProps({ line })}
+                  key={uuidv4()}
                   className="line"
                 >
-                  <span className="line-number">{i + 1}</span>
+                  <span className="line-number">
+                    {tokens.indexOf(line) + 1}
+                  </span>
                   <span className="line-content">
-                    {line.map((token, keyIndex) => (
-                      <span
-                        {...getTokenProps({ token, key: keyIndex })}
-                        key={token}
-                      />
+                    {line.map((token) => (
+                      <span {...getTokenProps({ token })} key={uuidv4()} />
                     ))}
                   </span>
                 </div>

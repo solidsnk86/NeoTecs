@@ -18,6 +18,7 @@ export const youTube = user;
 
 export const cardContent = [
   {
+    id: crypto.randomUUID(),
     feature: (
       <>
         <span className="border border-lime-500/45 mx-2 rounded-lg p-[6px] bg-lime-400/25">
@@ -30,6 +31,7 @@ export const cardContent = [
       'Este curso de programación se enfoca en ejercicios prácticos para que puedas aplicar lo que aprendes en proyectos reales.',
   },
   {
+    id: crypto.randomUUID(),
     feature: (
       <>
         <span className="border border-sky-500/45 mx-2 rounded-lg p-[6px] bg-sky-400/25">
@@ -42,6 +44,7 @@ export const cardContent = [
       'NeoTecs ofrece tutoriales en video y recursos didácticos para que puedas comprender a configurar tu wifi de manera efectiva.',
   },
   {
+    id: crypto.randomUUID(),
     feature: (
       <>
         <span className="border border-amber-500/45 mx-2 rounded-lg p-[6px] bg-amber-400/25">
@@ -54,6 +57,7 @@ export const cardContent = [
       'Sí, el curso incluye documentación detallada y extensa sobre diversos lenguajes de programación y tecnologías relacionadas.',
   },
   {
+    id: crypto.randomUUID(),
     feature: (
       <>
         <span className="border border-red-500/45 mx-2 rounded-lg p-[6px] bg-red-400/25">
