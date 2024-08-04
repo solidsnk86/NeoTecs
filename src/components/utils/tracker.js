@@ -62,7 +62,6 @@ export default function Tracker() {
               longitude: jsonData.coordinates.longitude,
             },
           });
-          console.log(jsonData.city.name);
           if (!local.includes(window.location.href)) {
             await sendDataToSupabase(jsonData);
           }

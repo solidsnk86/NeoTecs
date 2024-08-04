@@ -286,7 +286,7 @@ export const SqlExamples = () => {
             `
         }</Pre>
         <p className="list-css-span">
-          Dentro de nuestro nuevo<sapn>layout.html</sapn>
+          Dentro de nuestro nuevo<span>layout.html</span>
         </p>
         <Pre lang="html">{
           /*html */ `
