@@ -90,7 +90,7 @@ export const Footer = () => {
             href={portfolioUrl}
             target="_blank"
             rel="noopener"
-            className="ml-1 hover:text-text-strong"
+            className="ml-1 hover:text-[tomato]"
           >
             solidSnk86
           </a>
