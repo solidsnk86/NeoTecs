@@ -13,7 +13,7 @@ import Link from 'next/link';
 export const HomeBlock = ({ children, className = '' }) => {
   return (
     <div
-      className={`${className} max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-20 z-20`}
+      className={`${className} max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16 z-20`}
     >
       {children}
     </div>

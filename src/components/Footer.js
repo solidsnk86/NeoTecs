@@ -84,15 +84,15 @@ export const Footer = () => {
             </aside>
           ))}
         </div>
-        <p className="flex justify-center text-sm mt-16 font-semibold">
-          2023 © NeoTecs · By
-          <a href={portfolioUrl} target="_blank" rel="noopener">
-            <img
-              className="w-16 h-16 relative bottom-6 ml-2 text-[#111] hover:scale-[1.2] transition-all duration-500 solidSnk86"
-              src="https://raw.githubusercontent.com/solidsnk86/CV_GEC/master/solidsnk86.png"
-              alt="Solid Snake en pixelart"
-              title="SolidSnk86"
-            />
+        <p className="flex justify-center text-sm my-16 font-semibold">
+          2023 © NeoTecs · Hecho con 💖 por
+          <a
+            href={portfolioUrl}
+            target="_blank"
+            rel="noopener"
+            className="ml-1 hover:text-text-strong"
+          >
+            solidSnk86
           </a>
         </p>
       </article>
