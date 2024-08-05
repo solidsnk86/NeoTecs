@@ -62,11 +62,7 @@ export default function Tracker() {
               longitude: jsonData.coordinates.longitude,
             },
           });
-          if (
-            !local.includes(
-              window.location.href && jsonData.city.name !== 'Santa Clara',
-            )
-          ) {
+          if (!local.includes(window.location.href)) {
             await sendDataToSupabase(jsonData);
           }
         } else {
