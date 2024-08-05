@@ -268,7 +268,7 @@ export const SupabaseExample = () => {
         Next.js un archivo<span>⚙ .env.local</span> de la siguiente manera:
       </p>
       <span id="dot-env" />
-      <Pre lang=".env">{
+      <Pre lang=".env.local">{
         /**.env */ `
         NEXT_PUBLIC_SUPABASE_URL=tu_url_de_supabase_aquí
         NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_public_anon_key
