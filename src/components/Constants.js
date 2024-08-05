@@ -41,7 +41,7 @@ export const cardContent = [
       </>
     ),
     children:
-      'NeoTecs ofrece tutoriales en video y recursos didácticos para que puedas comprender a configurar tu wifi de manera efectiva.',
+      'NeoTecs ofrece tutoriales en vídeo y recursos didácticos para que puedas comprender a configurar tu wifi de manera efectiva.',
   },
   {
     id: crypto.randomUUID(),

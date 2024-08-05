@@ -13,7 +13,7 @@ import Link from 'next/link';
 export const HomeBlock = ({ children, className = '' }) => {
   return (
     <div
-      className={`${className} max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-16 z-20`}
+      className={`${className} max-w-screen-xl mx-auto px-4 md:px-8 text-lg text-center py-20 z-20`}
     >
       {children}
     </div>
@@ -23,7 +23,7 @@ export const HomeBlock = ({ children, className = '' }) => {
 export const HomeBlockTitle = ({ Tag = 'h2', children, className = '' }) => {
   return (
     <Tag
-      className={`${className} text-4xl font-bold sm:text-5xl mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-300 py-2`}
+      className={`${className} text-4xl font-bold sm:text-5xl mb-20 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-300 py-2`}
     >
       {children}
     </Tag>
@@ -98,19 +98,16 @@ export default function Home() {
 
       <MarqueeLogos />
 
-      <div className="container flex items-center h-[58vh] justify-center mx-auto relative my-2">
-        <span
-          className="absolute w-px h-[46%] xl:h-[42%] xl:top-5 top-[14px] bg-gradient-to-t from-zinc-500 via-zinc-500/50 to-transparent"
-          aria-hidden="true"
-        />
-        <span className="absolute xl:bottom-[31%] bottom-[37%] z-50 flex items-center justify-center w-[75px] h-[75px] text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-purple-400/30 group-hover:border-zinc-200">
-          <BookOpen className="w-10 h-10 mt-1 text-purple-400 text-shadow-sm shado-purple-300" />
-        </span>
-        <div className="justify-center mx-auto flex">
-          <h1 className="absolute xl:bottom-10 bottom-14 font-bold text-4xl">
-            Listo para empezar?
-          </h1>
-          <p className="absolute bottom-[-10px] text-text-second text-balance text-center">
+      <div className="grid h-[58vh] justify-center mx-auto relative my-20">
+        <div className="justify_center grid mx-auto">
+          <span className="w-px relative left-[36px] h-[130px] bg-gradient-to-t from-zinc-500 via-zinc-500/50 to-transparent" />
+          <span className="z-50 relative flex items-center justify-center w-[75px] h-[75px] text-sm border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-purple-400/30 group-hover:border-zinc-200">
+            <BookOpen className="w-10 h-10 mt-1 text-purple-400 text-shadow-sm shado-purple-300" />
+          </span>
+        </div>
+        <div className="justify-center mx-auto grid mt-20 text-center">
+          <h1 className="font-bold text-4xl">Listo para empezar?</h1>
+          <p className="text-text-second text-balance my-5">
             Ahora que has sido presentado al curso, vamos a sumergirnos.
           </p>
         </div>
