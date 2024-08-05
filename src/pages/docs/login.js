@@ -4,17 +4,23 @@ import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import supabase from '../../components/utils/supabase';
 
-const LoginForm = ({ onClose }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [failedAttempts, setFailedAttempts] = useState(0);
+const LoginForm = () => {
+  const [form, setForm] = useState({
+    email: '',
+    password: '',
+  });
+  const [userInfo, setUserInfo] = useState(null);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const handleLogin = async () => {
     const isDarkMode = window.matchMedia(
       '(prefers-color-scheme: dark)',
     ).matches;
 
-    if (!password || !email) {
+    if (!form.password || !form.email) {
       toast.warning('Esta sección es solo para el administrador de NeoTecs.', {
         position: toast.POSITION.TOP_CENTER,
         theme: isDarkMode ? 'dark' : 'light',
@@ -23,37 +29,34 @@ const LoginForm = ({ onClose }) => {
     }
 
     try {
-      const { user, error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: form.email,
+        password: form.password,
       });
+
       if (error) {
         console.error('Error al iniciar sesión:', error.message);
         toast.error(error.message, {
           position: toast.POSITION.TOP_CENTER,
           theme: isDarkMode ? 'dark' : 'light',
         });
+      } else if (data.user) {
+        const { data: userData, error: userError } =
+          await supabase.auth.getUser();
 
-        setFailedAttempts(failedAttempts + 1);
-
-        if (failedAttempts + 1 >= 2) {
-          toast.error(
-            'Alto ahí 🛑! Para mí que no eres el verdadero Administrador.',
-            {
-              position: toast.POSITION.TOP_CENTER,
-              theme: isDarkMode ? 'dark' : 'light',
-            },
+        if (userError) {
+          console.error(
+            'Error al obtener datos del usuario:',
+            userError.message,
           );
+        } else {
+          setUserInfo(userData.user);
+          console.log('Usuario autenticado:', userData.user);
+          toast.success('Sesión de Administrador iniciada.', {
+            position: toast.POSITION.TOP_CENTER,
+            theme: isDarkMode ? 'dark' : 'light',
+          });
         }
-      } else {
-        console.log('Usuario autenticado:', user);
-        toast.success('Sesión de Administrador iniciada.', {
-          position: toast.POSITION.TOP_CENTER,
-          theme: isDarkMode ? 'dark' : 'light',
-        });
-        setTimeout(() => {
-          onClose();
-        }, 2300);
       }
     } catch (error) {
       const text =
@@ -78,8 +81,9 @@ const LoginForm = ({ onClose }) => {
             <User className="inline text-zinc-800 border-r-[1px] border-zinc-400 pr-2 m-2" />
             <input
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              name="email"
+              value={form.email}
+              onChange={handleChange}
             />
           </div>
           <span>Contraseña:</span>
@@ -87,8 +91,9 @@ const LoginForm = ({ onClose }) => {
             <KeyRound className="inline text-zinc-800 border-r-[1px] border-zinc-400 pr-2 m-2" />
             <input
               type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              name="password"
+              value={form.password}
+              onChange={handleChange}
               onKeyDown={(event) => {
                 if (event.key === 'Enter') {
                   handleLogin();
@@ -110,6 +115,12 @@ const LoginForm = ({ onClose }) => {
         </aside>
       </div>
       <ToastContainer closeButton closeOnClick />
+      {userInfo && (
+        <div className="user-info">
+          <h3>Información del Usuario:</h3>
+          <pre>{JSON.stringify(userInfo, null, 2)}</pre>
+        </div>
+      )}
     </section>
   );
 };

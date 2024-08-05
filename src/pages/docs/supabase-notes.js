@@ -178,3 +178,5 @@ export default function SupabaseDB() {
     </TitlesContextProvider>
   );
 }
+
+SupabaseDB.title = 'Crea Notas con Supabase ⚡';
