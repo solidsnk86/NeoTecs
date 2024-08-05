@@ -8,14 +8,6 @@ const removeIndent = (code = '') => {
   return stripIndent(code).trim();
 };
 
-const generateUniqueKey = (str, position) => {
-  const hash = str.split('').reduce((acc, char) => {
-    const chr = char.charCodeAt(0);
-    return (acc < 5) - acc + chr || 0;
-  }, 0);
-  return `${hash}-${position}`;
-};
-
 export const Pre = ({ children, lang = '' }) => {
   const preRef = useRef(null);
   const [copied, setCopied] = useState(false);
@@ -65,6 +57,7 @@ export const Pre = ({ children, lang = '' }) => {
         theme={themes.oneDark}
         code={code}
         language={lang.toLowerCase()}
+        key={crypto.randomUUID()}
       >
         {({ tokens, getLineProps, getTokenProps }) => (
           <pre
@@ -73,23 +66,24 @@ export const Pre = ({ children, lang = '' }) => {
             }`}
             lang={lang}
             ref={preRef}
+            key={crypto.randomUUID()}
           >
             {tokens.map((line, lineIndex) => {
-              const lineContent = line.map((token) => token.content).join('');
-              const lineKey = generateUniqueKey(lineContent, lineIndex);
               return (
-                <div {...getLineProps({ line })} key={lineKey} className="line">
-                  <span className="line-number">{lineIndex + 1}</span>
-                  <span className="line-content">
-                    {line.map((token, tokenIndex) => {
-                      const tokenKey = generateUniqueKey(
-                        token.content,
-                        tokenIndex,
-                      );
+                <div
+                  {...getLineProps({ line })}
+                  className="line"
+                  key={crypto.randomUUID()}
+                >
+                  <span className="line-number" key={crypto.randomUUID()}>
+                    {lineIndex + 1}
+                  </span>
+                  <span className="line-content" key={crypto.randomUUID()}>
+                    {line.map((token) => {
                       return (
                         <span
                           {...getTokenProps({ token })}
-                          key={`${lineKey}-${tokenKey}`}
+                          key={crypto.randomUUID()}
                         />
                       );
                     })}
