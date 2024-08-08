@@ -590,3 +590,5 @@ export default function HtmlDoc() {
     </main>
   );
 }
+
+HtmlDoc.title = '👨‍💻 Aprende programación en NeoTecs!';
