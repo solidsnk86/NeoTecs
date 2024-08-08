@@ -14,6 +14,8 @@ function dateFormated(string) {
   return date;
 }
 
+const IP1 = process.env.NEXT_PUBLIC_DATA_IP_1;
+
 export default function Tracker() {
   const [visitData, setVisitData] = useState({});
   const [lastVisit, setLastVisit] = useState({});
@@ -62,8 +64,11 @@ export default function Tracker() {
               longitude: jsonData.coordinates.longitude,
             },
           });
-          if (!local.includes(window.location.href)) {
-            await sendDataToSupabase(jsonData);
+          if (
+            !local.includes(window.location.href) &&
+            jsonData.ip.address !== IP1
+          ) {
+            sendDataToSupabase(jsonData);
           }
         } else {
           console.error(
