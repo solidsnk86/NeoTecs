@@ -66,7 +66,7 @@ export default function Tracker() {
           });
           if (
             !local.includes(window.location.href) &&
-            jsonData.ip.address !== IP1
+            !jsonData.ip.address === IP1
           ) {
             sendDataToSupabase(jsonData);
           }
