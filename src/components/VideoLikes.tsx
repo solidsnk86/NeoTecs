@@ -58,7 +58,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
           src="/images/logos/NeoTecs_Tutorial_logo.png"
           alt="logo"
         />
-        <span className="font-bold text-sm">{channelTitle}</span>
+        <span className="font-bold text-[12px]">{channelTitle}</span>
       </header>
       <aside className="flex items-center space-x-3">
         <div>
