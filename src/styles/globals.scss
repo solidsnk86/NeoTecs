@@ -29,7 +29,7 @@
     --color-surface-4: #dfe8f7;
     --color-surface-5: #dae5f5;
     --button-variant: #0f0f0f;
-    --text-shadow: #6f43c0;
+    --text-shadow: #88d456;
     --tp-link-icon: #4acbd6;
     --ubiquiti-icon: #0559c9;
     --mikrotik-icon: #293239;
@@ -73,7 +73,7 @@
     --color-surface-4: #2b303a;
     --color-surface-5: #2e333e;
     --button-variant: #f1f1f1;
-    --text-shadow: #88d456;
+    --text-shadow: #6f43c0;
     --tp-link-icon: #4acbd6;
     --ubiquiti-icon: #0559c9;
     --mikrotik-icon: #293239;
@@ -152,6 +152,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 .scroll-bar::-webkit-scrollbar-track {
   background-color: var(--color-secondary-container);
+}
+
+lite-youtube {
+  border-radius: 20px;
 }
 
 @media (min-width: 1280px) {
@@ -586,10 +590,6 @@ li {
 /*--------------------|
 |-----> FOOTER <------|
 ---------------------*/
-
-.solidSnk86 {
-  filter: drop-shadow(0px 0px 10px var(--color-inverse-surface));
-}
 
 .elemento-con-sombra {
   position: relative;

@@ -1,6 +1,7 @@
 .atropos-header {
   width: 100%;
   aspect-ratio: 631 / 383;
+  animation: move 2.5s linear forwards;
 }
 .atropos-header .atropos-inner {
   border-radius: 10px;
@@ -52,14 +53,30 @@
   justify-content: center;
   align-items: center;
 }
-
 .background-light::before {
   content: '';
   position: absolute;
-  top: 30%;
-  left: calc(28% - 50px);
-  width: 50%;
-  height: 50%;
-  background-color: rgba(238, 130, 238, 0.644);
-  filter: blur(128px) drop-shadow(0 0 10px rgba(238, 130, 238, 0.63));
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background-color: rgba(238, 130, 238, 0.281);
+  border-radius: 10px;
+  filter: blur(60px) drop-shadow(0 0 10px rgba(238, 130, 238, 0.548));
+  animation: move 3.5s linear forwards;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
