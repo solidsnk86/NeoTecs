@@ -52,3 +52,14 @@
   justify-content: center;
   align-items: center;
 }
+
+.background-light::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: calc(28% - 50px);
+  width: 50%;
+  height: 50%;
+  background-color: rgba(238, 130, 238, 0.644);
+  filter: blur(128px) drop-shadow(0 0 10px rgba(238, 130, 238, 0.63));
+}
