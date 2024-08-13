@@ -37,7 +37,9 @@ export default function Home() {
       <HomeHeader />
       <HomeBlock>
         <HomeBlockTitle>¿Sabés Configurar tu CPE inalámbrico?</HomeBlockTitle>
-        <p>Te dejo estos videos para que aprendas cómo configurarlos.</p>
+        <p className="font-semibold mb-10 text-xl">
+          Te dejo estos videos para que aprendas cómo configurarlos!
+        </p>
         <ul className="inline-flex text-left m-auto mt-2 mb-4 gap-6">
           <li className="custom-text-shadow">✅ Rápido</li>
           <li className="custom-text-shadow">✅ Fácil</li>
