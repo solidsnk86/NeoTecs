@@ -1,7 +1,12 @@
 const atroposPkg = require('atropos/package.json');
 const path = require('path');
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  register: true,
+  skipWaiting: true,
+});
 
-module.exports = {
+module.exports = withPWA({
   async headers() {
     return [
       {
@@ -39,4 +44,4 @@ module.exports = {
 
     return config;
   },
-};
+});
