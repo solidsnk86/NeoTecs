@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const HomeHeader = () => {
   return (
-    <div className="-mt-16">
+    <div className="-mt-22">
       <div className="max-w-screen-lg mx-auto pt-32 pb-16 px-4 md:px-8 lg:px-16 relative">
         <div className="background-light">
           <Atropos
