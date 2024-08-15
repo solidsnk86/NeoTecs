@@ -1,7 +1,6 @@
 .atropos-header {
   width: 100%;
   aspect-ratio: 631 / 383;
-  animation: move 2.5s linear forwards;
 }
 .atropos-header .atropos-inner {
   border-radius: 10px;
@@ -63,20 +62,4 @@
   background-color: rgba(238, 130, 238, 0.164);
   border-radius: 10px;
   filter: blur(60px) drop-shadow(0 0 10px rgba(238, 130, 238, 0.151));
-  animation: move 3.5s linear forwards;
-}
-
-@keyframes move {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(0.5);
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
