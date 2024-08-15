@@ -3,7 +3,7 @@
 import { LikeButton } from '../components/Icons/LikeButton';
 import React, { useState, useEffect } from 'react';
 import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
-import { youTube } from '../components/Constants';
+import { youtubeApiKey } from '../components/Constants';
 
 export const VideoLikes = ({ videoId, cpe }) => {
   const [likes, setLikes] = useState(0);
@@ -13,7 +13,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
     const getVideoDetails = async () => {
       try {
         const response = await fetch(
-          `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${videoId}&key=${youTube}`,
+          `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${videoId}&key=${youtubeApiKey}`,
         );
         if (!response.ok) {
           throw new Error('Error al obtener datos de la API de YouTube');

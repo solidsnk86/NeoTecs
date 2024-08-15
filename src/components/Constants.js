@@ -14,7 +14,7 @@ export const googleSheetURL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
 export const articlesURL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_ARTICLES;
 
 const user = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
-export const youTube = user;
+export const youtubeApiKey = user;
 
 export const cardContent = [
   {
