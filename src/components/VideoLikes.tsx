@@ -82,7 +82,7 @@ export const VideoLikes = ({ videoId, cpe }) => {
           className="text-text-primary items-center font-semibold flex gap-1 bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-full p-1 cursor-pointer hover:opacity-80"
           onClick={() => ShareButton()}
         >
-          <ReplyOutlinedIcon className="inline w-4 h-4 text-current" />
+          <ReplyOutlinedIcon fontSize="small" className="inline text-current" />
           Compartir
         </button>
       </aside>
