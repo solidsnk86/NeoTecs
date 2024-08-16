@@ -16,7 +16,7 @@ const ArticleData = () => {
         .split('\n')
         .slice(1)
         .map((row) => {
-          const [title, content, url, published] = row.split(',');
+          const [title, content, url, published] = row.split('\t');
           return { title, content, url, published };
         });
       setData(parsedData);
