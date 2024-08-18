@@ -1,9 +1,9 @@
 'use client';
 
-import { LikeButton } from '../components/Icons/LikeButton';
+import { LikeButton } from './Icons/LikeButton';
 import React, { useState, useEffect } from 'react';
 import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
-import { youtubeApiKey } from '../components/Constants';
+import { youtubeApiKey } from './Constants';
 
 export const VideoLikes = ({ videoId, cpe }) => {
   const [likes, setLikes] = useState(0);

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import supabase from '../components/utils/supabase';
+import supabase from './utils/supabase';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 export const FeedbackData = () => {

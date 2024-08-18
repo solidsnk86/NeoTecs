@@ -9,7 +9,7 @@ import {
   Ruler,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import GetLocation from '../components/GetLocation';
+import GetLocation from './GetLocation';
 import { apiKey } from './Constants';
 
 function kelvinToCelsius(temp: number) {
