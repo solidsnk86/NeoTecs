@@ -1,5 +1,3 @@
-'use client';
-
 import {
   LucideThermometer,
   Droplets,
@@ -50,6 +48,8 @@ function getWeatherIconUrl(iconCode) {
 }
 
 export const Weather = () => {
+  'use client';
+
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
