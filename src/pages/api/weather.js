@@ -1,5 +1,3 @@
-import GetLocation from '../../components/GetLocation';
-
 export default async function handler(req, res) {
   const city = await GetLocation();
   const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;

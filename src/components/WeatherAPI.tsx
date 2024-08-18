@@ -9,13 +9,15 @@ import {
   Ruler,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import GetLocation from '../components/GetLocation';
+import { apiKey } from './Constants';
 
-function kelvinToCelsius(temp) {
+function kelvinToCelsius(temp: number) {
   return temp - 273.15;
 }
 
-function formatTime(str) {
-  const time = new Date(str * 1000).toLocaleTimeString('es-Es', {
+function formatTime(seconds: number) {
+  const time = new Date(seconds * 1000).toLocaleTimeString('es-Es', {
     hour: '2-digit',
     minute: '2-digit',
   });
@@ -54,13 +56,11 @@ export const Weather = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      const city = await GetLocation();
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
       try {
-        const res = await fetch('/api/weather', {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application-json',
-          },
-        });
+        const res = await fetch(url);
         if (!res.ok) {
           throw new Error(res.statusText);
         }
