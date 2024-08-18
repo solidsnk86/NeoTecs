@@ -130,6 +130,10 @@ body::before {
   }
 }
 
+.aspect {
+  aspect-ratio: 631 / 280;
+}
+
 /* =======> SCROLLBAR <======== */
 
 body::-webkit-scrollbar {
