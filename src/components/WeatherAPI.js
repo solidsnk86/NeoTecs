@@ -50,9 +50,9 @@ function getWeatherIconUrl(iconCode) {
 }
 
 export const Weather = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
