@@ -9,6 +9,7 @@ import {
   Ruler,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import GetLocation from './GetLocation';
 
 function kelvinToCelsius(temp) {
   return temp - 273.15;
@@ -55,7 +56,12 @@ export const Weather = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('/api/weather');
+        const res = await fetch('/api/weather', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application-json',
+          },
+        });
         if (!res.ok) {
           throw new Error(res.statusText);
         }
