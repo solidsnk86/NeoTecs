@@ -75,7 +75,7 @@ export default function Home() {
         </div>
       </HomeBlock>
 
-      <HomeBlock className="aspect">
+      <HomeBlock className="aspect z-50">
         <Weather />
       </HomeBlock>
 
