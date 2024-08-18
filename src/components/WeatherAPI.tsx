@@ -43,7 +43,7 @@ function mapCondition(condition) {
   }
 }
 
-function getWeatherIconUrl(iconCode) {
+function getWeatherIconUrl(iconCode: any | string) {
   return `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 }
 
