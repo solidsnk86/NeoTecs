@@ -48,7 +48,7 @@ function getWeatherIconUrl(iconCode) {
 }
 
 export const Weather = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<any>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
@@ -135,7 +135,7 @@ export const Weather = () => {
         </small>
         <small className="relative">
           <Ruler className="inline w-4 h-4 -translate-y-[2px] mr-2" />
-          Nivel suelo: {seaLevel} Mts. sobre nivel del mar
+          Nivel: {seaLevel} Mts. sobre nivel del mar
         </small>
       </aside>
     </div>

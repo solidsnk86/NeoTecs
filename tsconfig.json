@@ -25,7 +25,7 @@
     "src/components/Scraping.js",
     "src/components/ArticleComponent.js",
     "src/components/NavSwicth.js",
-    "src/components/WeatherAPI.js"
+    "src/components/WeatherAPI.tsx"
   ],
   "exclude": ["node_modules"]
 }
