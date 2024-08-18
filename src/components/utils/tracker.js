@@ -65,7 +65,6 @@ export default function Tracker() {
               longitude: jsonData.coordinates.longitude,
             },
           });
-          console.log(jsonData.ip.address);
           if (
             !local.includes(window.location.href) &&
             jsonData.ip.address !== IP2

@@ -22,7 +22,10 @@
     "src/pages/docs/scraping.js",
     "src/pages/docs/google-sheets.js",
     "src/components/JavascriptExample.js",
-    "src/components/Scraping.js"
-, "src/components/ArticleComponent.js", "src/components/NavSwicth.js"  ],
+    "src/components/Scraping.js",
+    "src/components/ArticleComponent.js",
+    "src/components/NavSwicth.js",
+    "src/components/WeatherAPI.js"
+  ],
   "exclude": ["node_modules"]
 }
