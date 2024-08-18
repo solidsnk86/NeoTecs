@@ -88,7 +88,7 @@ export const Weather = () => {
   const seaLevel = data.main.grnd_level;
 
   return (
-    <div className="grid text-text-second justify-center mx-auto w-fit border dark:border-zinc-800 border-zinc-200 p-6 rounded-xl">
+    <div className="grid text-text-second justify-center mx-auto bg-[#232386] w-fit border dark:border-zinc-800 border-zinc-200 p-6 rounded-xl z-50">
       <p>El tiempo en {name} hoy!</p>
       <div className=" inline-flex justify-center mx-auto">
         <p>{condition}</p>
