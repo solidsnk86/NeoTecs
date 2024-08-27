@@ -245,7 +245,7 @@ export default function HtmlDoc() {
         especialmente útil para aprender sobre estos elementos es
         <LinkButton
           url="https://www.w3schools.com/html/default.asp"
-          color="[tomato]"
+          color="tomato"
           iconName="ArrowUpRight"
         >
           W3 Schools

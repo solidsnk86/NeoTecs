@@ -30,7 +30,7 @@ const LinkButton: React.FC<LinkInterfaceProps> = ({
       <Link
         href={`${url}`}
         className="link dark:hover:brightness-200 hover:brightness-150 transition-colors duration-300"
-        style={{ color: `${color};`, textDecoration: `${underline}` }}
+        style={{ color: `${color}`, textDecoration: `${underline}` }}
         target={target}
         rel="noopener"
         download={download}

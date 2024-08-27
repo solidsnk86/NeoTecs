@@ -127,7 +127,7 @@ export default function GitDocs() {
                 puedes crear una
                 <LinkButton
                   url="https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"
-                  color="sky-400"
+                  color="skyblue"
                   iconName="Github"
                 >
                   aquí
@@ -237,7 +237,7 @@ export default function GitDocs() {
                     <LinkButton
                       url="https://gitforwindows.org/"
                       iconName="FolderGit2"
-                      color="red-400"
+                      color="skyblue"
                     >
                       Git Bash Console
                     </LinkButton>

@@ -52,7 +52,7 @@ export const Introduction = () => {
         en tu computadora local. Algunos populares incluyen:
       </p>
       <LinkButton
-        color="[tomato]"
+        color="tomato"
         url="https://code.visualstudio.com/"
         iconName="ArrowUpRight"
       >
@@ -60,23 +60,19 @@ export const Introduction = () => {
       </LinkButton>
       ,
       <LinkButton
-        color="[tomato]"
+        color="tomato"
         url="https://www.sublimetext.com/"
         iconName="ArrowUpRight"
       >
         Sublime Tex
       </LinkButton>
       ,
-      <LinkButton
-        color="[tomato]"
-        url="https://atom.io/"
-        iconName="ArrowUpRight"
-      >
+      <LinkButton color="tomato" url="https://atom.io/" iconName="ArrowUpRight">
         Atom
       </LinkButton>
       y{' '}
       <LinkButton
-        color="[tomato]"
+        color="tomato"
         url="https://www.vim.org/"
         iconName="ArrowUpRight"
       >

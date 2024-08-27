@@ -740,7 +740,7 @@ export default function CssDoc() {
             un nuevo atributo CSS conocido como
             <LinkButton
               url="https://www.w3schools.com/css/css3_flexbox.asp"
-              color="[#395692]"
+              color="#395692"
               iconName="ArrowUpRight"
             >
               flexbox
@@ -878,7 +878,7 @@ export default function CssDoc() {
               A continuación, podemos explorar algunas de las características de
               <LinkButton
                 url="https://getbootstrap.com/docs/4.5/components/"
-                color="[#395692]"
+                color="#395692"
                 iconName="ArrowUpRight"
               >
                 Bootstrap
@@ -891,7 +891,7 @@ export default function CssDoc() {
               Una característica popular de Bootstrap es su
               <LinkButton
                 url="https://getbootstrap.com/docs/4.0/layout/grid/"
-                color="[#395692]"
+                color="#395692"
                 iconName="ArrowUpRight"
               >
                 sistema de cuadrícula
@@ -1030,7 +1030,7 @@ export default function CssDoc() {
             <li>
               <LinkButton
                 url="https://sass-lang.com/"
-                color="[#395692]"
+                color="#395692"
                 iconName="ArrowUpRight"
               >
                 Sass
@@ -1082,7 +1082,7 @@ export default function CssDoc() {
               <span>.css</span>. Para resolver este problema, debemos
               <LinkButton
                 url="https://sass-lang.com/install"
-                color="[#395692]"
+                color="#395692"
                 iconName="ArrowUpRight"
               >
                 descargar el programa llamado Sass
@@ -1141,7 +1141,7 @@ export default function CssDoc() {
             Otra característica que Sass nos brinda se conoce como
             <LinkButton
               url="https://sass-lang.com/guide"
-              color="[#395692]"
+              color="#395692"
               iconName="ArrowUpRight"
             >
               herencia
