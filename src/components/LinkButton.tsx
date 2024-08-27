@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { icons } from 'lucide-react';
-import { cn } from '../lib/utils';
 
 interface LinkInterfaceProps {
   url: string;
@@ -30,12 +29,8 @@ const LinkButton: React.FC<LinkInterfaceProps> = ({
     <span className={`${className} inline ml-1` || ''}>
       <Link
         href={`${url}`}
-        className={cn(
-          `text-${color} ${
-            underline ? true : false
-          } link dark:hover:brightness-200 hover:brightness-150 transition-colors duration-300`,
-          color,
-        )}
+        className="link dark:hover:brightness-200 hover:brightness-150 transition-colors duration-300"
+        style={{ color: `${color};`, textDecoration: `${underline}` }}
         target={target}
         rel="noopener"
         download={download}
@@ -43,10 +38,8 @@ const LinkButton: React.FC<LinkInterfaceProps> = ({
         {children}
         {Icon && (
           <Icon
-            className={cn(
-              `text-${color} font-extralight h-[16px] -translate-x-[3px] -translate-y-[1px] inline`,
-              color,
-            )}
+            className="font-extralight h-[16px] -translate-x-[3px] -translate-y-[1px] inline"
+            style={{ color: `${color}` }}
           />
         )}
       </Link>

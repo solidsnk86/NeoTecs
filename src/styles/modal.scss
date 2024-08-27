@@ -1,0 +1,15 @@
+dialog[open] {
+  scale: 1;
+  transition: scale 0.3s ease-in-out, opacity 0.3s ease;
+  translate: 0 0;
+
+  @starting-style {
+    scale: 0;
+    translate: 0 100px;
+  }
+}
+
+dialog {
+  transition: scale 0.3s ease, display 3s allow-discrete;
+  scale: 0;
+}
