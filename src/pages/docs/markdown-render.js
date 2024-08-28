@@ -41,7 +41,7 @@ export default function MarkDownRender() {
             obtener información más detallada:
             <LinkButton
               url="https://remarkjs.github.io/react-markdown/"
-              color="sky-600"
+              color="skyblue"
               iconName="ArrowUpRight"
             >
               react-markdown en GitHub
@@ -276,7 +276,7 @@ export default function MarkDownRender() {
             implementar en algún proyecto. Ante cualquier duda o consulta pueden
             escribirme en el
             <LinkButton
-              color="sky-600"
+              color="skyblue"
               iconName="MessageSquareWarning"
               url="/docs/feedback"
             >

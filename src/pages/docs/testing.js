@@ -472,7 +472,7 @@ export default function Testing() {
               biblioteca de pruebas de Django
               <LinkButton
                 url="https://docs.djangoproject.com/en/4.0/topics/testing/overview/"
-                color="purple-400"
+                color="violet"
                 iconName="ArrowUpRight"
               >
                 TestCase
@@ -814,7 +814,7 @@ export default function Testing() {
               en el navegador, uno de los cuales se llama
               <LinkButton
                 url="https://www.selenium.dev/"
-                color="purple-400"
+                color="violet"
                 iconName="ArrowUpRight"
               >
                 Selenium
@@ -1082,7 +1082,7 @@ export default function Testing() {
               continua es conocida como
               <LinkButton
                 url="https://github.com/features/actions"
-                color="purple-400"
+                color="violet"
                 iconName="ArrowUpRight"
               >
                 GitHub Actions
@@ -1262,7 +1262,7 @@ export default function Testing() {
               lanzar un servidor
               <LinkButton
                 url="https://cs50.harvard.edu/web/2020/notes/7/"
-                color="purple-400"
+                color="violet"
                 iconName="ArrowUpRight"
               >
                 AWS

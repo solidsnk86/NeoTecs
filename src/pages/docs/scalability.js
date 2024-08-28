@@ -503,7 +503,7 @@ export default function Scalability() {
               Django proporciona su propio
               <LinkButton
                 url="https://docs.djangoproject.com/en/4.0/topics/cache/"
-                color="red-400"
+                color="tomato"
                 iconName="ArrowUpRight"
               >
                 marco de trabajo de caché
@@ -538,7 +538,7 @@ export default function Scalability() {
               <LinkButton
                 url="https://docs.djangoproject.com/en/4.0/topics/cache/"
                 iconName="ArrowUpRight"
-                color="red-400"
+                color="tomato"
               >
                 documentación
               </LinkButton>
@@ -899,7 +899,7 @@ export default function Scalability() {
               <li>
                 <LinkButton
                   url="https://rubyonrails.org/"
-                  color="red-400"
+                  color="tomato"
                   iconName="ArrowUpRight"
                 >
                   Ruby on Rails
@@ -908,7 +908,7 @@ export default function Scalability() {
               <li>
                 <LinkButton
                   url="https://flask.palletsprojects.com/en/1.1.x/"
-                  color="red-400"
+                  color="tomato"
                   iconName="ArrowUpRight"
                 >
                   Flask
@@ -920,7 +920,7 @@ export default function Scalability() {
               <li>
                 <LinkButton
                   url="https://angularjs.org/"
-                  color="red-400"
+                  color="tomato"
                   iconName="ArrowUpRight"
                 >
                   Angular.js
@@ -929,7 +929,7 @@ export default function Scalability() {
               <li>
                 <LinkButton
                   url="https://reactjs.org/"
-                  color="red-400"
+                  color="tomato"
                   iconName="ArrowUpRight"
                 >
                   React
@@ -938,7 +938,7 @@ export default function Scalability() {
               <li>
                 <LinkButton
                   url="https://nextjs.org/"
-                  color="red-400"
+                  color="tomato"
                   iconName="ArrowUpRight"
                 >
                   Next.js
@@ -954,7 +954,7 @@ export default function Scalability() {
               <li>
                 <LinkButton
                   url="https://aws.amazon.com/getting-started/hands-on/websites/"
-                  color="red-400"
+                  color="tomato"
                   iconName="ArrowUpRight"
                 >
                   Amazon web Services
@@ -963,7 +963,7 @@ export default function Scalability() {
               <li>
                 <LinkButton
                   url="https://github.com/"
-                  color="red-400"
+                  color="tomato"
                   iconName="ArrowUpRight"
                 >
                   GitHub
@@ -972,7 +972,7 @@ export default function Scalability() {
               <li>
                 <LinkButton
                   url="https://app.netlify.com/"
-                  color="red-400"
+                  color="tomato"
                   iconName="ArrowUpRight"
                 >
                   Netlify
@@ -981,7 +981,7 @@ export default function Scalability() {
               <li>
                 <LinkButton
                   url="https://www.heroku.com/"
-                  color="red-400"
+                  color="tomato"
                   iconName="ArrowUpRight"
                 >
                   Heroku
@@ -992,7 +992,7 @@ export default function Scalability() {
               Pueden dar un vistazo a la sección de cómo crear una
               <LinkButton
                 url="/docs/google-sheets"
-                color="red-400"
+                color="tomato"
                 iconName="ArrowUpRight"
               >
                 base de datos con Google Sheets
@@ -1013,7 +1013,7 @@ export default function Scalability() {
             </p>
             <p>
               Mi feed...
-              <LinkButton url="/docs/feedback" color="red-400">
+              <LinkButton url="/docs/feedback" color="tomato">
                 Feedback
               </LinkButton>
             </p>

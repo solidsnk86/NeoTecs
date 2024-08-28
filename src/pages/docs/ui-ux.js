@@ -225,7 +225,7 @@ export default function UiUx() {
               que aprendimos en el curso anterior de
               <LinkButton
                 url="/docs/django#django"
-                color="lime-500"
+                color="limegreen"
                 iconName="ArrowUpRight"
               >
                 Django
@@ -307,7 +307,7 @@ export default function UiUx() {
               Podemos resolver este problema utilizando la
               <LinkButton
                 url="https://developer.mozilla.org/en-US/docs/Web/API/History_API"
-                color="lime-500"
+                color="limegreen"
                 iconName="ArrowUpRight"
               >
                 API de Historial de JavaScript
@@ -1110,7 +1110,7 @@ export default function UiUx() {
               biblioteca llamada
               <LinkButton
                 url="https://reactjs.org/"
-                color="lime-500"
+                color="limegreen"
                 iconName="ArrowUpRight"
               >
                 React
@@ -1500,7 +1500,7 @@ export default function UiUx() {
               <li>
                 <LinkButton
                   url="/docs/scraping"
-                  color="lime-500"
+                  color="limegreen"
                   iconName="ArrowUpRight"
                 >
                   Web Scraping con React Js y Python
@@ -1509,7 +1509,7 @@ export default function UiUx() {
               <li>
                 <LinkButton
                   url="/docs/google-sheets"
-                  color="lime-500"
+                  color="limegreen"
                   iconName="Table"
                 >
                   Base de datos con Google Sheets (Hojas de Cálculos de Excel)
@@ -1518,7 +1518,7 @@ export default function UiUx() {
               <li>
                 <LinkButton
                   url="/docs/javascript#cambio-divisas"
-                  color="lime-500"
+                  color="limegreen"
                   iconName="ArrowUpRight"
                 >
                   Api Routes con javascript (Cambio de Divisas)
@@ -1768,7 +1768,7 @@ export default function UiUx() {
             <li>
               <LinkButton
                 url="/docs/markdown-render"
-                color="lime-500"
+                color="limegreen"
                 iconName="ArrowUpRight"
               >
                 Renderizar MarkDown con react y Axios
@@ -1780,7 +1780,7 @@ export default function UiUx() {
             consulta para hacer, los escucho en mi
             <LinkButton
               url="/docs/feedback"
-              color="lime-500"
+              color="limegreen"
               iconName="MessageSquareWarning"
             >
               feedback

@@ -67,7 +67,7 @@ export const GoogleSheetsExample2 = () => {
       </p>
       <LinkButton
         url="https://www.papaparse.com/docs"
-        color="blue-500"
+        color="tomato"
         iconName="ArrowUpRight"
       >
         Papaparse

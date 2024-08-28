@@ -33,7 +33,7 @@ const JavascriptExample = () => {
           vamos nuestra hoja de cálculos de
           <LinkButton
             url="https://docs.google.com/spreadsheets/u/0/"
-            color="amber-400"
+            color="orange"
             iconName="ArrowUpRight"
             target="_blank"
           >
