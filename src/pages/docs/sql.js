@@ -137,7 +137,7 @@ export default function SqlDocs() {
               con bases de datos
               <LinkButton
                 url="https://www.oracle.com/database/what-is-a-relational-database/#:~:text=A%20relational%20database%20is%20a,of%20representing%20data%20in%20tables."
-                color="sky-700"
+                color="skyblue"
                 iconName="ArrowUpRight"
               >
                 relacionales
@@ -145,7 +145,7 @@ export default function SqlDocs() {
               , donde la información se organiza en
               <LinkButton
                 url="https://www.essentialsql.com/what-is-a-database-table/"
-                color="sky-700"
+                color="skyblue"
                 iconName="ArrowUpRight"
               >
                 tablas
@@ -172,7 +172,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://www.mysql.com/"
-                  color="sky-700"
+                  color="skyblue"
                   iconName="ArrowUpRight"
                 >
                   MySQL
@@ -181,7 +181,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://www.postgresql.org/"
-                  color="sky-700"
+                  color="skyblue"
                   iconName="ArrowUpRight"
                 >
                   PostgreeSQL
@@ -190,7 +190,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://www.sqlite.org/index.html"
-                  color="sky-700"
+                  color="skyblue"
                   iconName="ArrowUpRight"
                 >
                   SQLite
@@ -214,7 +214,7 @@ export default function SqlDocs() {
               SQLite tiene{' '}
               <LinkButton
                 url="https://www.sqlite.org/datatype3.html"
-                color="sky-700"
+                color="skyblue"
                 iconName="ArrowUpRight"
               >
                 tipos
@@ -278,7 +278,7 @@ export default function SqlDocs() {
                 nuestra clave primaria
                 <LinkButton
                   url="https://www.w3schools.com/sql/sql_primarykey.ASP"
-                  color="sky-700"
+                  color="skyblue"
                   iconName="ArrowUpRight"
                 >
                   PRIMARY-KEY
@@ -308,7 +308,7 @@ export default function SqlDocs() {
               <b>PRIMARY KEY</b> al hacer una columna, pero hay varias otras
               <LinkButton
                 url="https://www.tutorialspoint.com/sqlite/sqlite_constraints.htm"
-                color="sky-700"
+                color="skyblue"
                 iconName="ArrowUpRight"
               >
                 restrincciones
@@ -432,7 +432,7 @@ export default function SqlDocs() {
               computadora, primero debes descargar{' '}
               <LinkButton
                 url="https://www.sqlite.org/download.html"
-                color="sky-700"
+                color="skyblue"
                 iconName="ArrowUpRight"
               >
                 SQLite
@@ -440,7 +440,7 @@ export default function SqlDocs() {
               . (No se usará en este curso, pero también puedes descargar
               <LinkButton
                 url="https://sqlitebrowser.org/dl/"
-                color="sky-700"
+                color="skyblue"
                 iconName="ArrowUpRight"
               >
                 DB Browser
@@ -540,7 +540,7 @@ export default function SqlDocs() {
               Y también podemos utilizar otras lógicas
               <LinkButton
                 url="https://sqlitebrowser.org/dl/"
-                color="sky-700"
+                color="skyblblue"
                 iconName="ArrowUpRight"
               >
                 (AND, OR)
@@ -602,7 +602,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://sqlitebrowser.org/dl/"
-                  color="sky-700"
+                  color="skyblue"
                   iconName="ArrowUpRight"
                 >
                   AVERAGE (PROMEDIO)
@@ -611,7 +611,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://sqlitebrowser.org/dl/"
-                  color="sky-700"
+                  color="skyblue"
                   iconName="ArrowUpRight"
                 >
                   COUNT (CONTAR)
@@ -620,7 +620,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://sqlitebrowser.org/dl/"
-                  color="sky-700"
+                  color="skyblue"
                   iconName="ArrowUpRight"
                 >
                   MAX (MÁXIMO)
@@ -629,7 +629,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://sqlitebrowser.org/dl/"
-                  color="sky-700"
+                  color="skyblue"
                   iconName="ArrowUpRight"
                 >
                   MIN (MÍNIMO)
@@ -638,7 +638,7 @@ export default function SqlDocs() {
               <li>
                 <LinkButton
                   url="https://sqlitebrowser.org/dl/"
-                  color="sky-700"
+                  color="skyblue"
                   iconName="ArrowUpRight"
                 >
                   SUM (SUMA)
@@ -747,7 +747,7 @@ export default function SqlDocs() {
               <span>destination_id</span>, llamamos a esos valores
               <LinkButton
                 url="https://www.w3schools.com/sql/sql_foreignkey.asp"
-                color="sky-700"
+                color="skyblue"
                 iconName="ArrowUpRight"
               >
                 Claves Foráneas
@@ -803,7 +803,7 @@ export default function SqlDocs() {
               datos. Afortunadamente, SQL cuenta con una consulta
               <LinkButton
                 url="https://www.w3schools.com/sql/sql_join.asp"
-                color="sky-700"
+                color="skyblue"
                 iconName="ArrowUpRight"
               >
                 JOIN
@@ -849,7 +849,7 @@ export default function SqlDocs() {
               Acabamos de utilizar algo llamado
               <LinkButton
                 url="https://www.w3schools.com/sql/sql_join_inner.asp"
-                color="sky-700"
+                color="skyblue"
                 iconName="ArrowUpRight"
               >
                 INNER JOIN
@@ -859,7 +859,7 @@ export default function SqlDocs() {
               incluyendo
               <LinkButton
                 url="https://www.w3schools.com/sql/sql_join_left.asp"
-                color="sky-700"
+                color="skyblue"
                 iconName="ArrowUpRight"
               >
                 LEFT JOINs
@@ -867,7 +867,7 @@ export default function SqlDocs() {
               ,
               <LinkButton
                 url="https://www.w3schools.com/sql/sql_join_right.asp"
-                ccolor="sky-700"
+                ccolor="skyblue"
                 iconName="ArrowUpRight"
               >
                 RIGHT JOINs
@@ -875,7 +875,7 @@ export default function SqlDocs() {
               y
               <LinkButton
                 url="https://www.w3schools.com/sql/sql_join_full.asp"
-                color="sky-700"
+                color="skyblue"
                 iconName="ArrowUpRight"
               >
                 FULL OUTER JOINs
@@ -907,7 +907,7 @@ export default function SqlDocs() {
               vulnerabilidades asociadas con el uso de SQL. Comenzaremos con la
               <LinkButton
                 url="https://www.w3schools.com/sql/sql_injection.asp"
-                color="sky-700"
+                color="skyblue"
                 iconName="ArrowUpRight"
               >
                 Inyección SQL
@@ -1000,7 +1000,7 @@ export default function SqlDocs() {
                 conoce como una Condición de Carrera,
                 <LinkButton
                   url="https://www.w3schools.com/sql/sql_injection.asp"
-                  color="sky-700"
+                  color="skyblue"
                   iconName="ArrowUpRight"
                 >
                   Race Condition
@@ -1036,7 +1036,7 @@ export default function SqlDocs() {
               Los
               <LinkButton
                 url="https://docs.djangoproject.com/en/4.0/topics/db/models/"
-                color="sky-700"
+                color="skyblue"
                 iconName="ArrowUpRight"
               >
                 modelos de Django
@@ -1044,7 +1044,7 @@ export default function SqlDocs() {
               son un nivel de
               <LinkButton
                 url="https://techterms.com/definition/abstraction"
-                color="sky-700"
+                color="skyblue"
                 iconName="ArrowUpRight"
               >
                 abstracción
@@ -1117,7 +1117,7 @@ export default function SqlDocs() {
                 duración. Los dos primeros son campos
                 <LinkButton
                   url="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#charfield"
-                  color="sky-700"
+                  color="skyblue"
                   iconName="ArrowUpRight"
                 >
                   Char
@@ -1126,7 +1126,7 @@ export default function SqlDocs() {
                 campo
                 <LinkButton
                   url="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#integerfield"
-                  color="sky-700"
+                  color="skyblue"
                   iconName="ArrowUpRight"
                 >
                   Integer
@@ -1134,7 +1134,7 @@ export default function SqlDocs() {
                 . Estos son solo dos de las muchas
                 <LinkButton
                   url="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#built-in-field-classes"
-                  color="sky-700"
+                  color="skyblue"
                   iconName="ArrowUpRight"
                 >
                   clases de campos integradas
@@ -1147,7 +1147,7 @@ export default function SqlDocs() {
                 para un campo dado consultando la
                 <LinkButton
                   url="https://docs.djangoproject.com/en/4.0/ref/forms/fields/#built-in-field-classes"
-                  color="sky-700"
+                  color="skyblue"
                   iconName="ArrowUpRight"
                 >
                   documentación
