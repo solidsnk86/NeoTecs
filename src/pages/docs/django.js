@@ -96,7 +96,7 @@ export default function DjangoDocs() {
               los sitios web de
               <LinkButton
                 url="https://www.nytimes.com/"
-                color="green-600"
+                color="lightgreen"
                 iconName="ArrowUpRight"
               >
                 The New York Times
@@ -104,7 +104,7 @@ export default function DjangoDocs() {
               o
               <LinkButton
                 url="https://www.nytimes.com/"
-                color="green-600"
+                color="lightgreen"
                 iconName="ArrowUpRight"
               >
                 Facebook
@@ -180,7 +180,7 @@ export default function DjangoDocs() {
             <p>
               <LinkButton
                 url="https://www.djangoproject.com/"
-                color="green-600"
+                color="lightgreen"
                 iconName="ArrowUpRight"
               >
                 Django
@@ -196,7 +196,7 @@ export default function DjangoDocs() {
                 que también tendrás que
                 <LinkButton
                   href="https://pip.pypa.io/en/stable/installing/"
-                  color="green-400"
+                  color="lightgreen"
                   iconName="ArrowUpRight"
                 >
                   instalar
@@ -372,7 +372,7 @@ export default function DjangoDocs() {
                   paquetes en la documentación oficial de
                   <LinkButton
                     url="https://python.org/"
-                    color="green-600"
+                    color="lightgreen"
                     iconName="ArrowUpRight"
                   >
                     Python
@@ -637,7 +637,7 @@ export default function DjangoDocs() {
               información específica. Por ejemplo, al ir a
               <LinkButton
                 url="https://twitter.com/CalcagniGabriel"
-                color="green-600"
+                color="lightgreen"
                 iconName="ArrowUpRight"
               >
                 https://twitter.com/CalcagniGabriel
@@ -645,7 +645,7 @@ export default function DjangoDocs() {
               se muestran todos mis tweets, y al dirigirse a
               <LinkButton
                 url="https://twitter.com/CalcagniGabriel"
-                color="green-600"
+                color="lightgreen"
                 iconName="ArrowUpRight"
               >
                 https://github.com/solidsnk86
@@ -887,7 +887,7 @@ export default function DjangoDocs() {
               utilizar el lenguaje de
               <LinkButton
                 url="https://docs.djangoproject.com/en/4.0/ref/templates/language/"
-                color="green-600"
+                color="lightgreen"
                 iconName="ArrowUpRight"
               >
                 plantillas de Django
