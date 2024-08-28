@@ -193,7 +193,7 @@ export default function JavaScript() {
               programación web es que admite la
               <LinkButton
                 url="https://medium.com/@vsvaibhav2016/introduction-to-event-driven-programming-28161b79c223"
-                color="amber-400"
+                color="orange"
                 iconName="ArrowUpRight"
               >
                 Programación Orientada a Eventos
@@ -213,7 +213,7 @@ export default function JavaScript() {
               utilizamos
               <LinkButton
                 url="https://www.w3schools.com/js/js_htmldom_eventlistener.asp"
-                color="amber-400"
+                color="orange"
                 iconName="ArrowUpRight"
               >
                 Escuchadores de Eventos
@@ -226,7 +226,7 @@ export default function JavaScript() {
               Comencemos por convertir nuestro JavaScript anterior en una
               <LinkButton
                 url="https://www.w3schools.com/js/js_functions.asp"
-                color="amber-400"
+                color="orange"
                 iconName="ArrowUpRight"
               >
                 función
@@ -364,7 +364,7 @@ export default function JavaScript() {
               Al igual que en Python, también podemos aprovechar las
               <LinkButton
                 url="https://www.w3schools.com/js/js_if_else.asp"
-                color="amber-400"
+                color="orange"
                 iconName="ArrowUpRight"
               >
                 condiciones
@@ -608,7 +608,7 @@ export default function JavaScript() {
               En el ejemplo anterior, hemos utilizado una función
               <LinkButton
                 url="https://www.w3schools.com/js/js_function_definition.asp"
-                color="amber-400"
+                color="orange"
                 iconName="ArrowUpRight"
               >
                 anónima
@@ -724,7 +724,7 @@ export default function JavaScript() {
                 JavaScript que otras personas ya han escrito. Por ejemplo,
                 <LinkButton
                   url="https://getbootstrap.com/docs/4.5/getting-started/introduction/#js"
-                  color="amber-400"
+                  color="orange"
                   iconName="ArrowUpRight"
                 >
                   Bootstrap
@@ -1082,7 +1082,7 @@ export default function JavaScript() {
                 función
                 <LinkButton
                   url="https://www.w3schools.com/jsref/met_document_createelement.asp"
-                  color="amber-400"
+                  color="orange"
                   iconName="ArrowUpRight"
                 >
                   createElement
@@ -1147,7 +1147,7 @@ export default function JavaScript() {
             utilizamos la función
             <LinkButton
               url="https://www.w3schools.com/jsref/met_win_setinterval.asp"
-              color="amber-400"
+              color="orange"
               iconName="ArrowUpRight"
             >
               setIntervals
@@ -1358,7 +1358,7 @@ export default function JavaScript() {
             Un
             <LinkButton
               url="https://www.w3schools.com/js/js_objects.asp"
-              color="amber-400"
+              color="orange"
               iconName="ArrowUpRight"
             >
               objeto de JavaScript
@@ -1413,7 +1413,7 @@ export default function JavaScript() {
             usar
             <LinkButton
               url="https://www.mulesoft.com/resources/api/what-is-an-api"
-              color="amber400"
+              color="orange"
               iconName="ArrowUpRight"
             >
               APIs
@@ -1433,7 +1433,7 @@ export default function JavaScript() {
             Por ejemplo, un vuelo en formato
             <LinkButton
               url="https://www.w3schools.com/js/js_json_intro.asp"
-              color="amber-400"
+              color="orange"
               iconName="ArrowUpRight"
             >
               JSON
@@ -1478,7 +1478,7 @@ export default function JavaScript() {
               ejercicio, utilizaremos la API de tipos de cambio del
               <LinkButton
                 url="https://exchangeratesapi.io/"
-                color="amber-400"
+                color="orange"
                 iconName="ArrowUpRight"
               >
                 Banco Central Europeo
@@ -1488,7 +1488,7 @@ export default function JavaScript() {
               una API. Podemos probar esta API visitando la URL:
               <LinkButton
                 u="https://api.exchangeratesapi.io/latest?base=USD"
-                color="amber-400"
+                color="orange"
                 iconName="ArrowUpRight"
               >
                 https://api.exchangeratesapi.io/latest?base=USD
