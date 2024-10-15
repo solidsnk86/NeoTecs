@@ -1,4 +1,4 @@
-'use-client';
+'use-server';
 
 import os from 'node:os';
 
