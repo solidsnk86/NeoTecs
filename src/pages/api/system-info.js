@@ -14,17 +14,17 @@ function formatDate(string) {
   return date;
 }
 
-export default function handlerInfo(req, res) {
+export default async function handlerInfo(req, res) {
   try {
     res.status(200).json({
       success: true,
       timeStamp: formatDate(new Date().getTime()),
-      'operating-system-info': {
+      operatingSystemInfo: {
         os: os.version(),
         architecture: os.arch(),
         build: os.release().replace('10.0.', ''),
       },
-      'hardware-info': {
+      hardwareInfo: {
         proccesor: {
           model: os.cpus().shift().model.trim(),
           cores: os.cpus().length / 2,
@@ -35,7 +35,7 @@ export default function handlerInfo(req, res) {
           freeMemory: (os.freemem() / 1024 / 1024 / 1024).toFixed(2) + 'GB',
         },
       },
-      'user-info': {
+      userInfo: {
         user: os.userInfo().username,
         path: os.userInfo().homedir,
       },
