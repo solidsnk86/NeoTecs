@@ -30,10 +30,10 @@ export default async function handlerCurrency(req, res) {
 
     const currencyData = await fetchData();
     const lastUpdate = currencyData.length > 0 ? currencyData[0].update : '';
-    const ratesObject = currencyData.reduce((acc, { currency, rates }) => {
-      acc[currency] = rates;
-      return acc;
-    }, {});
+    const ratesObject = {};
+    currencyData.forEach(({ currency, rates }) => {
+      ratesObject[currency] = rates;
+    });
 
     res.status(200).json({
       success: true,

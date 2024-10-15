@@ -9,55 +9,32 @@ import {
   Ruler,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import GetLocation from './GetLocation';
 import { apiKey } from './Constants';
+import { Weather } from './Weather';
 
-function kelvinToCelsius(temp: number) {
-  return temp - 273.15;
-}
-
-function formatTime(seconds: number) {
-  const time = new Date(seconds * 1000).toLocaleTimeString('es-Es', {
-    hour: '2-digit',
-    minute: '2-digit',
-  });
-  return time;
-}
-
-function mapCondition(condition) {
-  switch (condition) {
-    case 'few clouds':
-      return 'Leve nubosidad';
-    case 'overcast clouds':
-      return 'Nublado';
-    case 'sunny':
-      return 'Soleado';
-    case 'clear sky':
-      return 'Cielo despejado';
-    case 'scattered clouds':
-      return 'Nubes dispersas';
-    case 'broken clouds':
-      return 'Nubes desarmadas';
-    case 'light rain':
-      return 'Lluvia ligera';
-    default:
-      return condition;
-  }
-}
-
-function getWeatherIconUrl(iconCode: any | string) {
-  return `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-}
-
-export const Weather = () => {
+export const WeatherAPI = () => {
   const [data, setData] = useState<any>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [obj, setObjetc] = useState({
+    latitude: Number(),
+    longitude: Number(),
+  });
 
   useEffect(() => {
+    const getPosition = () => {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        setObjetc({
+          latitude: lat,
+          longitude: lon,
+        });
+      });
+    };
+
     const fetchData = async () => {
-      const city = await GetLocation();
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${obj.latitude}&lon=${obj.longitude}&appid=${apiKey}`;
 
       try {
         const res = await fetch(url);
@@ -72,24 +49,28 @@ export const Weather = () => {
         setLoading(false);
       }
     };
-    fetchData();
-  }, []);
+
+    getPosition();
+    setTimeout(() => {
+      fetchData();
+    }, 2000);
+  }, [obj.latitude, obj.longitude]);
 
   if (loading) return <div>Cargando...</div>;
   if (error) return <div>Error: {error}</div>;
   if (!data) return null;
 
   const { name } = data;
-  const temperature = kelvinToCelsius(data.main.temp).toFixed(1);
-  const feelsLike = kelvinToCelsius(data.main.feels_like).toFixed(1);
-  const condition = mapCondition(data.weather[0].description);
+  const temperature = Weather.kelvinToCelsius(data.main.temp).toFixed(1);
+  const feelsLike = Weather.kelvinToCelsius(data.main.feels_like).toFixed(1);
+  const condition = Weather.mapConditionEs(data.weather[0].description);
   const humidity = data.main.humidity;
-  const iconUrl = getWeatherIconUrl(data.weather[0].icon);
+  const iconUrl = Weather.getWeatherIconUrl(data.weather[0].icon);
   const pressure = data.main.pressure;
   const windSpeed = data.wind.speed;
   const windDeg = data.wind.deg;
-  const sunrise = formatTime(data.sys.sunrise);
-  const sunset = formatTime(data.sys.sunset);
+  const sunrise = Weather.formatTime(data.sys.sunrise);
+  const sunset = Weather.formatTime(data.sys.sunset);
   const seaLevel = data.main.grnd_level;
 
   return (

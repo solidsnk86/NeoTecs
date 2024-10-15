@@ -9,7 +9,7 @@ import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import ArticleData from '../components/ArticleData';
 import Link from 'next/link';
-import { Weather } from '../components/WeatherAPI';
+import { WeatherAPI } from '../components/WeatherAPI';
 
 export const HomeBlock = ({ children, className = '' }) => {
   return (
@@ -76,7 +76,7 @@ export default function Home() {
       </HomeBlock>
 
       <HomeBlock className="aspect z-50">
-        <Weather />
+        <WeatherAPI />
       </HomeBlock>
 
       <HomeBlock>
