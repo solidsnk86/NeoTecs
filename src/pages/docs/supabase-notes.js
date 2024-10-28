@@ -7,7 +7,7 @@ import { NavLinks } from '../../components/NavLinks';
 import { useState, useEffect, useRef } from 'react';
 import { SupabaseExample } from '../../components/SupabaseExample';
 import { Notes } from '../../Model/notes-model';
-import { DateFormat } from '../../lib/date-formatter';
+import { DateFormat } from '@/lib/date-formatter';
 
 export default function SupabaseDB() {
   const [notes, setNotes] = useState([]);
@@ -72,7 +72,7 @@ export default function SupabaseDB() {
           <SupabaseExample />
           <Indextitle>Crear Nota</Indextitle>
           <article
-            className="resize-y max-w-80 dark:bg-zinc-800/60 bg-zinc-100 px-2 rounded"
+            className="resize-y max-w-80 dark:bg-zinc-800/60 bg-zinc-100 px-2 py-[2px] rounded z-50"
             id="notes"
             contentEditable
             suppressContentEditableWarning={true}
