@@ -5,8 +5,8 @@ import HeaderTitle from '../../components/HeaderTitlte';
 import Indextitle from '../../components/IndexTitle';
 import { NavLinks } from '../../components/NavLinks';
 import { useState, useEffect, useRef } from 'react';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { SupabaseExample } from '../../components/SupabaseExample';
+import { Notes } from '../../Model/notes-model';
 
 function formatDate(str) {
   const date = new Date(str).toLocaleDateString('es-ES', {
@@ -16,30 +16,17 @@ function formatDate(str) {
     hour: '2-digit',
     minute: '2-digit',
   });
-  return date;
+  return date.replace(',', ' a las');
 }
-
-const supabase = createClientComponentClient();
 
 export default function SupabaseDB() {
   const [notes, setNotes] = useState([]);
   const [edit, setEdit] = useState(null);
   const noteInputRef = useRef(null);
 
-  const notesDB = async () => {
-    try {
-      const { data, error } = await supabase
-        .from('notes')
-        .select()
-        .order('created_at', { ascending: true });
-      setNotes(data);
-
-      if (error) {
-        throw new Error('Cannot query the data');
-      }
-    } catch (error) {
-      console.error('Error querying data from Supabase:', error);
-    }
+  const updateData = async () => {
+    const data = await Notes.get();
+    setNotes(data);
   };
 
   const sendNote = async () => {
@@ -47,77 +34,26 @@ export default function SupabaseDB() {
     const note = {
       title: noteInput.innerText,
     };
-
-    try {
-      const res = await fetch('/api/notes-sender', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(note),
-      });
-
-      if (res.ok) {
-        notesDB();
-      } else {
-        const errorData = await res.json();
-        console.error('Error sending note:', errorData);
-      }
-    } catch (error) {
-      console.error('Unexpected error sending note:', error);
-    }
+    await Notes.create(note);
+    updateData();
   };
 
   const updateNote = async (id) => {
     const preEdit = document.getElementById(`pre-${id}`);
     const updatedNote = {
-      id,
       title: preEdit.innerText,
     };
-
-    try {
-      const res = await fetch('/api/notes-update', {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(updatedNote),
-      });
-
-      if (res.ok) {
-        notesDB();
-      } else {
-        const errorData = await res.json();
-        console.error('Error updating note:', errorData);
-      }
-    } catch (error) {
-      console.error('Unexpected error updating note:', error);
-    }
+    await Notes.update(id, updatedNote);
+    updateData();
   };
 
   const deleteNote = async (id) => {
-    const { data, error } = await supabase.from('notes').delete().match({ id });
-
-    if (error) {
-      throw new Error('Error', error);
-    } else {
-      console.log('Data deleted:', data);
-    }
-
-    const { data: newData, error: newError } = await supabase
-      .from('notes')
-      .select('*')
-      .order('created_at', { ascending: false });
-
-    if (newError) {
-      throw new Error('Error', newError);
-    }
-    setNotes(newData);
-    notesDB();
+    await Notes.delete(id);
+    updateData();
   };
 
   useEffect(() => {
-    notesDB();
+    updateData();
   }, []);
 
   const handleEdit = (id) => {
@@ -142,7 +78,7 @@ export default function SupabaseDB() {
             suppressContentEditableWarning={true}
             ref={noteInputRef}
           >
-            <p>Puedes agregar una nota aquí...</p>
+            <p className="p-2">Puedes agregar una nota aquí...</p>
           </article>
           <button
             onClick={sendNote}
@@ -151,22 +87,22 @@ export default function SupabaseDB() {
             Enviar
           </button>
           <Indextitle>Notas</Indextitle>
-          {notes.map((n, i) => (
-            <article key={n.id}>
+          {notes.map((note, i) => (
+            <article key={note.id}>
               <p>Nota: {i + 1}</p>
-              <small>Creada el {formatDate(n.created_at)}</small>
+              <small>Creada el {formatDate(note.created_at)}</small>
               <pre
-                id={`pre-${n.id}`}
-                contentEditable={edit === n.id}
+                id={`pre-${note.id}`}
+                contentEditable={edit === note.id}
                 suppressContentEditableWarning={true}
                 className="my-10 max-w-max text-pretty"
-                onClick={() => handleEdit(n.id)}
-                onBlur={() => updateNote(n.id)}
+                onClick={() => handleEdit(note.id)}
+                onBlur={() => updateNote(note.id)}
               >
-                {n.title}
+                {note.title}
               </pre>
               <button
-                onClick={() => deleteNote(n.id)}
+                onClick={() => deleteNote(note.id)}
                 className="px-2 border border-zinc-800 bg-slate-300 text-black font-semibold rounded-full my-4"
               >
                 Borrar Nota
