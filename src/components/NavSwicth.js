@@ -28,7 +28,7 @@ export const NavSwitch = ({ inline }) => {
       // Scroll the container
       container.scrollTo({
         top: targetScroll,
-        behavior: 'smooth',
+        behaivor: 'auto',
       });
     }
   };
