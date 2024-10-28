@@ -7,17 +7,7 @@ import { NavLinks } from '../../components/NavLinks';
 import { useState, useEffect, useRef } from 'react';
 import { SupabaseExample } from '../../components/SupabaseExample';
 import { Notes } from '../../Model/notes-model';
-
-function formatDate(str) {
-  const date = new Date(str).toLocaleDateString('es-ES', {
-    year: 'numeric',
-    month: 'short',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-  });
-  return date.replace(',', ' a las');
-}
+import { DateFormat } from '../../lib/date-formatter';
 
 export default function SupabaseDB() {
   const [notes, setNotes] = useState([]);
@@ -35,7 +25,14 @@ export default function SupabaseDB() {
       title: noteInput.innerText,
     };
     await Notes.create(note);
-    updateData();
+    await updateData();
+    noteInput.innerText = 'Puedes agregar una nota aquí...';
+    setTimeout(() => {
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: 'smooth',
+      });
+    }, 100);
   };
 
   const updateNote = async (id) => {
@@ -65,7 +62,10 @@ export default function SupabaseDB() {
       <Nav className="fixed xl:relative w-full h-12 z-50" />
       <div className="max-w-screen-xl flex items-stretch">
         <NavLinks />
-        <div className="w-full max-w-none prose px-4 md:px-8 text-text-primary">
+        <div
+          className="w-full max-w-none prose px-4 md:px-8 text-text-primary"
+          id="container"
+        >
           <NavSwitch inline />
           <HeaderTitle>Notas con Supabase</HeaderTitle>
           <hr className="border-text-primary" />
@@ -90,7 +90,7 @@ export default function SupabaseDB() {
           {notes.map((note, i) => (
             <article key={note.id}>
               <p>Nota: {i + 1}</p>
-              <small>Creada el {formatDate(note.created_at)}</small>
+              <small>Creada el {DateFormat.dateAndTime(note.created_at)}</small>
               <pre
                 id={`pre-${note.id}`}
                 contentEditable={edit === note.id}

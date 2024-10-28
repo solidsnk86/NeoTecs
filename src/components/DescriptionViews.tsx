@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import FormatDate from './FormatDate';
 import { youtubeApiKey } from './Constants';
+import { DateFormat } from '@/lib/date-formatter';
 
 export const DescriptionViews = ({ videoId }: { videoId: string }) => {
   const [views, setViews] = useState(0);
@@ -48,7 +48,7 @@ export const DescriptionViews = ({ videoId }: { videoId: string }) => {
   return (
     <div className="text-left my-1 font-bold">
       <span>{formatView()} Vistas</span>
-      <time> · Publicado el {FormatDate(datePublished)}</time>
+      <time> · Publicado el {DateFormat.date(datePublished)}</time>
     </div>
   );
 };
