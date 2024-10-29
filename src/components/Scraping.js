@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import axios from 'axios';
 
 export default function Scraper() {
   const [disabled, setDisabled] = useState(false);
@@ -14,8 +13,11 @@ export default function Scraper() {
 
   const handleScrape = async () => {
     try {
-      const response = await axios.post(
+      const response = await fetch(
         'https://www.pythonanywhere.com/user/SolidSnk86/files/home/SolidSnk86/scrape/',
+        {
+          method: 'POST',
+        },
       );
       setScraping(response.data);
       setDisabled(true);
