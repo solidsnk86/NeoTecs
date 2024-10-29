@@ -14,6 +14,7 @@ export default function SupabaseDB() {
   const [edit, setEdit] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const noteInputRef = useRef(null);
+  const originalText = {};
 
   const updateData = async () => {
     const data = await Notes.get();
@@ -40,8 +41,13 @@ export default function SupabaseDB() {
 
   const updateNote = async (id) => {
     const preEdit = document.getElementById(`pre-${id}`);
+    notes.forEach((note) => {
+      originalText[note.id] = note.title;
+    });
+    const currentText = preEdit.innerText;
     const updatedNote = {
       title: preEdit.innerText,
+      edited: originalText[id] !== currentText,
     };
     await Notes.update(id, updatedNote);
     updateData();
@@ -96,6 +102,7 @@ export default function SupabaseDB() {
             <article key={note.id}>
               <p>Nota: {i + 1}</p>
               <small>Creada el {DateFormat.dateAndTime(note.created_at)}</small>
+              <small>{note.edited ? ' • (editada)' : ''}</small>
               <pre
                 id={`pre-${note.id}`}
                 contentEditable={edit === note.id}
