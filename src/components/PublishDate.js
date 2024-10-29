@@ -1,5 +1,5 @@
 import React from 'react';
-import FormatDate from './FormatDate';
+import { DateFormat } from '../lib/date-formatter';
 
 export const PublishDate = () => {
   return (
@@ -7,7 +7,7 @@ export const PublishDate = () => {
       {[
         {
           text: 'Publicado ',
-          date: FormatDate('01 Octubre 2023'),
+          date: DateFormat.date('01 Octubre 2023'),
         },
       ].map((item) => (
         <p className="text-gray-700 text-sm italic antialiased">
