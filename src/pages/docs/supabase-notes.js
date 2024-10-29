@@ -12,6 +12,7 @@ import { DateFormat } from '@/lib/date-formatter';
 export default function SupabaseDB() {
   const [notes, setNotes] = useState([]);
   const [edit, setEdit] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const noteInputRef = useRef(null);
 
   const updateData = async () => {
@@ -24,6 +25,7 @@ export default function SupabaseDB() {
     const note = {
       title: noteInput.innerText,
     };
+    setIsLoading(true);
     await Notes.create(note);
     await updateData();
     noteInput.innerText = 'Puedes agregar una nota aquí...';
@@ -33,6 +35,7 @@ export default function SupabaseDB() {
         behavior: 'smooth',
       });
     }, 100);
+    setIsLoading(false);
   };
 
   const updateNote = async (id) => {
@@ -45,8 +48,10 @@ export default function SupabaseDB() {
   };
 
   const deleteNote = async (id) => {
+    setIsLoading(true);
     await Notes.delete(id);
     updateData();
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -72,7 +77,7 @@ export default function SupabaseDB() {
           <SupabaseExample />
           <Indextitle>Crear Nota</Indextitle>
           <article
-            className="resize-y max-w-80 dark:bg-zinc-800/60 bg-zinc-100 px-2 py-[2px] rounded z-50"
+            className="resize-y max-w-80 dark:bg-zinc-800/60 bg-zinc-100 px-2 rounded z-50"
             id="notes"
             contentEditable
             suppressContentEditableWarning={true}
@@ -82,9 +87,9 @@ export default function SupabaseDB() {
           </article>
           <button
             onClick={sendNote}
-            className="px-2 border border-zinc-800 bg-slate-300 text-black font-semibold rounded-full my-4"
+            className="px-2 border border-zinc-800 bg-slate-300 text-black font-semibold rounded-full my-4 hover:opacity-80"
           >
-            Enviar
+            {isLoading ? 'Enviando..' : 'Enviar'}
           </button>
           <Indextitle>Notas</Indextitle>
           {notes.map((note, i) => (
@@ -103,7 +108,7 @@ export default function SupabaseDB() {
               </pre>
               <button
                 onClick={() => deleteNote(note.id)}
-                className="px-2 border border-zinc-800 bg-slate-300 text-black font-semibold rounded-full my-4"
+                className="px-2 border border-zinc-800 bg-slate-300 text-black font-semibold rounded-full my-4 hover:opacity-80"
               >
                 Borrar Nota
               </button>
