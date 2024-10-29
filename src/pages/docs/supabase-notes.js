@@ -8,6 +8,7 @@ import { useState, useEffect, useRef } from 'react';
 import { SupabaseExample } from '../../components/SupabaseExample';
 import { Notes } from '../../Model/notes-model';
 import { DateFormat } from '@/lib/date-formatter';
+import { Footer } from '../../components/Footer';
 
 export default function SupabaseDB() {
   const [notes, setNotes] = useState([]);
@@ -99,7 +100,10 @@ export default function SupabaseDB() {
           </button>
           <Indextitle>Notas</Indextitle>
           {notes.map((note, i) => (
-            <article key={note.id}>
+            <article
+              key={note.id}
+              className="border dark:border-zinc-800/80 p-4 my-4 w-fit"
+            >
               <p>Nota: {i + 1}</p>
               <small>Creada el {DateFormat.dateAndTime(note.created_at)}</small>
               <small>{note.edited ? ' • (editada)' : ''}</small>
@@ -123,6 +127,7 @@ export default function SupabaseDB() {
           ))}
         </div>
       </div>
+      <Footer />
     </TitlesContextProvider>
   );
 }
