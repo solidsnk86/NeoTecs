@@ -12,7 +12,7 @@ import { DateFormat } from '@/lib/date-formatter';
 export default function SupabaseDB() {
   const [notes, setNotes] = useState([]);
   const [edit, setEdit] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const noteInputRef = useRef(null);
 
   const updateData = async () => {
