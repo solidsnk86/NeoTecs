@@ -8,4 +8,16 @@
       text-decoration: none;
     }
   }
+  padding-top: 112px;
+}
+
+@media (min-width: 1280px) {
+  .prose {
+    padding-top: 0px;
+  }
+}
+@media (min-width: 1024px) {
+  .prose {
+    padding-top: 0px;
+  }
 }

@@ -253,8 +253,10 @@ a {
 /* ============> NAV SWICTH <============ */
 
 .nav-switch {
-  position: sticky;
-  top: 48px;
+  position: fixed;
+  width: 100%;
+  top: 32px;
+  left: 0;
   animation: add-shadow linear both;
   animation-timeline: scroll();
   animation-range: 0 150px;

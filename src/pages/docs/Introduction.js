@@ -5,7 +5,7 @@ import { SectionTitle } from '../../components/SectionTitle';
 
 export const Introduction = () => {
   return (
-    <main className="text-text-primary">
+    <main className="text-text-primary pt-28 xl:pt-0 lg:pt-0">
       <HeaderTitle>Curso de Programación con Python y Javascript</HeaderTitle>
       <hr className="border-text-primary" />
       <IndexTitle>Índice</IndexTitle>
