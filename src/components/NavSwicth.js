@@ -64,8 +64,8 @@ export const NavSwitch = ({ inline }) => {
           >
             <div className="flex items-center w-auto text-center">
               <button
-                className={`font-semibold px-4 py-2 m-4 rounded-full bg-gradient-to-b dark:from-indigo-500 dark:to-indigo-900 
-                 from-blue-200 to-blue-400 border dark:border-zinc-800/50 border-zinc-300/60 
+                className={`font-semibold px-4 py-2 m-4 rounded-full bg-gradient-to-b from-indigo-500 to-indigo-900 
+                  border dark:border-zinc-800/50 border-zinc-300/60 
                 xl:bg-none xl:w-auto text-white xl:px-0 xl:py-0 xl:border-none xl:shadow-none ${
                   active ? 'shadow-btn' : ''
                 }`}
