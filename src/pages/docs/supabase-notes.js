@@ -99,32 +99,48 @@ export default function SupabaseDB() {
             {isLoading ? 'Enviando..' : 'Enviar'}
           </button>
           <Indextitle>Notas</Indextitle>
-          {notes.map((note, i) => (
-            <article
-              key={note.id}
-              className="border dark:border-zinc-800/80 p-4 my-4 w-fit"
-            >
-              <p>Nota: {i + 1}</p>
-              <small>Creada el {DateFormat.dateAndTime(note.created_at)}</small>
-              <small>{note.edited ? ' • (editada)' : ''}</small>
-              <pre
-                id={`pre-${note.id}`}
-                contentEditable={edit === note.id}
-                suppressContentEditableWarning={true}
-                className="my-10 max-w-max text-pretty"
-                onClick={() => handleEdit(note.id)}
-                onBlur={() => updateNote(note.id)}
+          <section className="grid xl:grid-cols-3 lg:grid-cols-2 my-20 gap-3">
+            {notes.map((note, i) => (
+              <div
+                key={note.id}
+                className="p-6 rounded-xl transition-all duration-300 hover:shadow-lg dark:bg-zinc-800/80 bg-zinc-100/90 backdrop-blur-sm border dark:border-zinc-700/50 border-zinc-200"
               >
-                {note.title}
-              </pre>
-              <button
-                onClick={() => deleteNote(note.id)}
-                className="px-2 border dark:border-zinc-800 border-zinc-400/20 bg-slate-300 text-black font-semibold rounded-full my-4 hover:opacity-80"
-              >
-                Borrar Nota
-              </button>
-            </article>
-          ))}
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm font-medium dark:text-zinc-400 text-zinc-600">
+                    Nota {i + 1}
+                  </span>
+                  <button
+                    onClick={() => deleteNote(note.id)}
+                    className="text-sm px-3 py-1 rounded-full transition-colors duration-200 hover:bg-red-500/10 dark:hover:text-red-400 hover:text-red-600"
+                  >
+                    Borrar
+                  </button>
+                </div>
+
+                <pre
+                  id={`pre-${note.id}`}
+                  contentEditable={edit === note.id}
+                  suppressContentEditableWarning={true}
+                  className={`min-h-24 bg-slate-700/15 mb-4 font-sans text-base whitespace-pre-wrap break-words text-text-primary
+                  focus:outline-none focus:ring-2 focus:ring-blue-500/30 rounded-lg p-2 transition-colors duration-200`}
+                  onClick={() => handleEdit(note.id)}
+                  onBlur={() => updateNote(note.id)}
+                >
+                  {note.title}
+                </pre>
+
+                <div className="flex items-center gap-2 text-xs dark:text-zinc-400 text-zinc-500">
+                  <time>{DateFormat.dateAndTime(note.created_at)}</time>
+                  {note.edited && (
+                    <>
+                      <span>•</span>
+                      <span className="italic">editada</span>
+                    </>
+                  )}
+                </div>
+              </div>
+            ))}
+          </section>
         </div>
       </div>
       <Footer />
