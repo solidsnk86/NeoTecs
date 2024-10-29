@@ -41,9 +41,11 @@ export const NavSwitch = ({ inline }) => {
     <div
       ref={containerRef}
       id="container-nav"
-      className={`scroll-bar inline-block overflow-hidden mt-4 w-full xl:h-60 xl:overflow-y-auto border-t border-b border-zinc-400 dark:border-zinc-500 z-50 ${
+      className={`scroll-bar inline-block overflow-hidden mt-4 w-full xl:h-60 xl:overflow-y-auto border-t border-b 
+      border-zinc-400 dark:border-zinc-500 z-50 ${
         inline
-          ? 'mb-8 lg:hidden w-[100%] flex overflow-x-scroll overflow-hidden xl:border dark:border-zinc-800 border-gray-800 border-t-0 border-l-0 border-r-0 border-b text-text-primary text-xs z-20 nav-switch'
+          ? `mb-8 lg:hidden w-[100%] flex overflow-x-scroll overflow-hidden xl:border 
+          dark:border-zinc-800 border-gray-800 border-t-0 border-l-0 border-r-0 border-b text-text-primary text-xs z-20 nav-switch`
           : ''
       }`}
     >
@@ -54,15 +56,23 @@ export const NavSwitch = ({ inline }) => {
             href={link.href}
             key={link.href}
             ref={active ? activeItemRef : null}
-            className={`xl:p-2 w-full flex duration-100 !no-underline ${
+            className={`xl:p-2 w-full flex duration-100 !no-underline z-50 ${
               active
-                ? 'xl:bg-gradient-to-b from-sky-700 via-sky-800 xl:bg-sky-900 xl:bg-opacity-50 border-b-[3px] border-amber-600 xl:border-none'
+                ? 'xl:bg-gradient-to-b from-sky-600/30 via-sky-700/80 xl:bg-sky-900/50 xl:bg-opacity-50'
                 : 'dark:hover:bg-[#202327] hover:bg-[#BDC5CC] hover:opacity-90'
             }`}
           >
-            <p className="font-semibold line-clamp-1 px-4 xl:w-auto text-text-primary text-center xl:px-0 xl:line-clamp-none">
-              {link.title}
-            </p>
+            <div className="flex items-center w-auto text-center">
+              <button
+                className={`font-semibold px-4 py-2 m-4 rounded-full bg-gradient-to-b dark:from-indigo-500 dark:to-indigo-900 
+                 from-blue-200 to-blue-400 border dark:border-zinc-800/50 border-zinc-300/60 
+                xl:bg-none xl:w-auto text-white xl:px-0 xl:py-0 xl:border-none xl:shadow-none ${
+                  active ? 'shadow-btn' : ''
+                }`}
+              >
+                {link.title}
+              </button>
+            </div>
           </Link>
         );
       })}

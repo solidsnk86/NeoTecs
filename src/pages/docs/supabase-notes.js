@@ -87,7 +87,7 @@ export default function SupabaseDB() {
           </article>
           <button
             onClick={sendNote}
-            className="px-2 border border-zinc-800 bg-slate-300 text-black font-semibold rounded-full my-4 hover:opacity-80"
+            className="px-2 border dark:border-zinc-800 border-zinc-400/20 bg-slate-300 text-black font-semibold rounded-full my-4 hover:opacity-80"
           >
             {isLoading ? 'Enviando..' : 'Enviar'}
           </button>
@@ -108,7 +108,7 @@ export default function SupabaseDB() {
               </pre>
               <button
                 onClick={() => deleteNote(note.id)}
-                className="px-2 border border-zinc-800 bg-slate-300 text-black font-semibold rounded-full my-4 hover:opacity-80"
+                className="px-2 border dark:border-zinc-800 border-zinc-400/20 bg-slate-300 text-black font-semibold rounded-full my-4 hover:opacity-80"
               >
                 Borrar Nota
               </button>

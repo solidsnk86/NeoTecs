@@ -116,23 +116,23 @@ export const links = [
   },
   {
     href: '/docs/scraping',
-    title: 'Web Scraping',
+    title: 'Scraping',
   },
   {
     href: '/docs/markdown-render',
-    title: 'MarkDown Render',
+    title: 'MarkDown',
   },
   {
     href: '/docs/google-sheets',
-    title: 'Google Sheets',
+    title: 'Database',
   },
   {
     href: '/docs/javascript-arrays',
-    title: 'JavaScript Arrays',
+    title: 'Arrays',
   },
   {
     href: '/docs/supabase-notes',
-    title: 'Notas Supabase',
+    title: 'Supabase',
   },
 ];
 
