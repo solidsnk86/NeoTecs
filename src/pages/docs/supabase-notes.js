@@ -9,11 +9,13 @@ import { SupabaseExample } from '../../components/SupabaseExample';
 import { Notes } from '../../Model/notes-model';
 import { DateFormat } from '@/lib/date-formatter';
 import { Footer } from '../../components/Footer';
+import { GetLocation } from '../../components/GetLocation';
 
 export default function SupabaseDB() {
   const [notes, setNotes] = useState([]);
   const [edit, setEdit] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [location, setoLocation] = useState([]);
   const noteInputRef = useRef(null);
   const originalText = {};
 
@@ -22,10 +24,21 @@ export default function SupabaseDB() {
     setNotes(data);
   };
 
+  const getLocation = async () => {
+    const p = await GetLocation.province();
+    const c = await GetLocation.country();
+    setoLocation({
+      province: p,
+      country: c,
+    });
+  };
+
   const sendNote = async () => {
     const noteInput = noteInputRef.current;
     const note = {
       title: noteInput.innerText,
+      province: location.province,
+      country: location.country,
     };
     if (noteInput.innerText.length > 100) {
       noteInput.innerText = 'Límite de caracteres excedido. MAX=100';
@@ -54,6 +67,8 @@ export default function SupabaseDB() {
     const updatedNote = {
       title: preEdit.innerText,
       edited: originalText[id] !== currentText,
+      province: location.province,
+      country: location.country,
     };
     if (preEdit.innerText.length > 100) {
       preEdit.innerText = 'Límite de caracteres excedido. MAX=100';
@@ -72,6 +87,7 @@ export default function SupabaseDB() {
 
   useEffect(() => {
     updateData();
+    getLocation();
   }, []);
 
   const handleEdit = (id) => {
@@ -118,7 +134,13 @@ export default function SupabaseDB() {
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm font-medium dark:text-zinc-400 text-zinc-600">
-                    Nota {i + 1}
+                    Nota {i + 1}{' '}
+                    {note.edited && (
+                      <>
+                        <span className="mr-1">•</span>
+                        <span className="italic text-xs">editada</span>
+                      </>
+                    )}
                   </span>
                   <button
                     onClick={() => deleteNote(note.id)}
@@ -141,13 +163,10 @@ export default function SupabaseDB() {
                 </pre>
 
                 <div className="flex items-center gap-2 text-xs dark:text-zinc-400 text-zinc-500">
-                  <time>{DateFormat.dateAndTime(note.created_at)}</time>
-                  {note.edited && (
-                    <>
-                      <span>•</span>
-                      <span className="italic">editada</span>
-                    </>
-                  )}
+                  <time>
+                    {DateFormat.dateAndTime(note.created_at)} • {note.province},{' '}
+                    {note.country}
+                  </time>
                 </div>
               </div>
             ))}
