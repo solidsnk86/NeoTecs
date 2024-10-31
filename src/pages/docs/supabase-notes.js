@@ -27,9 +27,14 @@ export default function SupabaseDB() {
     const note = {
       title: noteInput.innerText,
     };
-    setIsLoading(true);
-    await Notes.create(note);
-    await updateData();
+    if (noteInput.innerText.length > 100) {
+      noteInput.innerText = 'Límite de caracteres excedido. MAX=100';
+      return;
+    } else {
+      setIsLoading(true);
+      await Notes.create(note);
+      await updateData();
+    }
     noteInput.innerText = 'Puedes agregar una nota aquí...';
     setTimeout(() => {
       window.scrollTo({
@@ -50,8 +55,12 @@ export default function SupabaseDB() {
       title: preEdit.innerText,
       edited: originalText[id] !== currentText,
     };
-    await Notes.update(id, updatedNote);
-    updateData();
+    if (preEdit.innerText.length > 100) {
+      preEdit.innerText = 'Límite de caracteres excedido. MAX=100';
+    } else {
+      await Notes.update(id, updatedNote);
+      updateData();
+    }
   };
 
   const deleteNote = async (id) => {
@@ -90,7 +99,9 @@ export default function SupabaseDB() {
             suppressContentEditableWarning={true}
             ref={noteInputRef}
           >
-            <p className="p-2">Puedes agregar una nota aquí...</p>
+            <p className="p-2">
+              Agregar una nota aquí... 100 caracteres máximo.
+            </p>
           </article>
           <button
             onClick={sendNote}
