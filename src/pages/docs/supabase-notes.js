@@ -35,7 +35,7 @@ export default function SupabaseDB() {
       await Notes.create(note);
       await updateData();
     }
-    noteInput.innerText = 'Puedes agregar una nota aquí...';
+    noteInput.innerText = 'Agregar una nota aquí... 100 caracteres máximo.';
     setTimeout(() => {
       window.scrollTo({
         top: document.documentElement.scrollHeight,
@@ -100,7 +100,7 @@ export default function SupabaseDB() {
             ref={noteInputRef}
           >
             <p className="p-2">
-              Agregar una nota aquí... 100 caracteres máximo.
+              Agrega una nota aquí... 100 caracteres máximo.
             </p>
           </article>
           <button
