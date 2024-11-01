@@ -769,13 +769,13 @@ export default function Python() {
             <Pre lang="python">{
               /*python */ `
                 # Crea una lista:
-                names = ["Harry", "Ron", "Hermione"]
+                nombres = ["Harry", "Ron", "Hermione"]
                 
                 # Imprime en pantalla cada nombre:
-                for name in names:
+                for nombre in nombres:
                     print(name)
                 
-                """ Output:
+                """ Output:nombres
                 Harry
                 Ron
                 Hermione
@@ -1021,15 +1021,15 @@ export default function Python() {
             </p>
             <Pre lang="python">{
               /*python */ `
-                class Flight():
+                class Vuelo():
                 # Método para crear un vuelo nuevo y su capacidad:
-                def __init__(self, capacity):
-                    self.capacity = capacity
-                    self.passengers = []
+                def __init__(self, capacidad):
+                    self.capacidad = capacidad
+                    self.pasajeros = []
             
                     # Método para agregar pasajeros al vuelo:
-                def add_passenger(self, name):
-                    self.passengers.append(name)
+                def agregar_pasajero(self, nombre):
+                    self.pasajeros.append(nombre)
                 `
             }</Pre>
             <p>
@@ -1040,22 +1040,22 @@ export default function Python() {
             </p>
             <Pre lang="python">{
               /*python */ `
-                class Flight():
+                class Vuelo():
                 # Método para crear un vuelo nuevo y su capacidad:
-                def __init__(self, capacity):
-                    self.capacity = capacity
-                    self.passengers = []
+                def __init__(self, capacidad):
+                    self.capacidad = capacidad
+                    self.pasajeros = []
             
                 # Método para agregar pasajeros al vuelo:
-                def add_passenger(self, name):
-                    if not self.open_seats():
+                def agregar_pasajero(self, nombre):
+                    if not self.asientos_disponibles():
                         return False
-                    self.passengers.append(name)
+                    self.pasajeros.append(nombre)
                     return True
             
                 # Método para devolver el número de los asientos disponibles:
-                def open_seats(self):
-                    return self.capacity - len(self.passengers)
+                def acientos_disponibles(self):
+                    return self.capacidad - len(self.pasajeros)
                 `
             }</Pre>
             <p>
@@ -1089,7 +1089,7 @@ export default function Python() {
                 
                 # Intentar añadir a cada persona de la lista al vuelo
                 for persona in personas:
-                    if vuelo.add_pasajero(persona):
+                    if vuelo.agregar_pasajero(persona):
                         print(f"Se añadió a {persona} al vuelo con éxito")
                     else:
                         print(f"No hay asientos disponibles para {persona}")
@@ -1151,6 +1151,73 @@ export default function Python() {
                 Terminado con la función
                 """
                 `
+            }</Pre>
+            <p className="list-css-span">
+              Los decoradores también se pueden usar en las clases para los
+              <span>getters</span>y<span>setters</span>, para las clases
+              abstractas, usar métdos estáticos, entre otros. Veamos un ejemplo
+              en una clase con los decoradores de getters y setters:
+            </p>
+            <Pre lang="python">{
+              /**python */ `
+              # Clase con decoradores getters y setters
+              class Persona:
+                # Se inicializa una clase con sus atributos
+                def __init__(self, nombre, apellido, edad):
+                self._nombre = nombre
+                self._apellido = apellido
+                self._edad = edad
+            
+                # Decorador para obtener el nombre
+                @property
+                def nombre(self):
+                  return self._nombre
+
+                # Decorador para agregar o cambiar el nombre
+                @nombre.setter
+                def nombre(self, nombre):
+                  self._nombre = nombre
+
+                @property
+                def edad(self):
+                  return self._edad
+
+                @edad.setter
+                def edad(self, edad):
+                  self._edad = edad
+
+                def nombre_completo(self):
+                  return f"Nombre completo: {self._nombre} {self._apellido}"
+
+              `
+            }</Pre>
+            <p className="list-css-span">
+              Para probar esta clase podemos crear un archivo nuevo llamado
+              <span>test_persona.py</span>y creamos los siguientes objetos:
+            </p>
+            <Pre lang="python">{
+              /**python */ `
+              # Creamos dos objetos para pruebas
+              persona = Persona("Manuel", "Calavera", 98)
+              persona1 = Persona("Dominic", "Decocco", 38)
+              persona.nombre_completo()
+              persona1.nombre_completo()
+              """Salida en consola
+              Nombre completo: Manuel Calavera
+              Nombre completo: Dominic Decocco
+              """
+              # Modificar el nombre
+              persona.nombre = "Neo"
+              persona.nombre_completo()
+              """Salida en consola
+              Nombre completo: Manuel Calavera
+              Nombre completo: Dominic Decocco
+              Nombre completo: Neo Calavera
+              """
+              # Obtener edad
+              print(persona1.edad)  # en consola: 38
+
+              `
             }</Pre>
           </article>
           <span id="funciones-lambda" />
