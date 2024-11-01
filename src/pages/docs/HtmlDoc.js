@@ -216,7 +216,7 @@ export default function HtmlDoc() {
           Esta extensión es de Microsoft llamada
           <LinkButton
             url="vscode:extension/ms-vscode.live-server"
-            color="sky-400"
+            color="tomato"
             iconName="Cast"
           >
             Live Preview
@@ -226,7 +226,7 @@ export default function HtmlDoc() {
           Esta otra extensión para Visual Studio Code llamada
           <LinkButton
             url="vscode:extension/ritwickdey.LiveServer"
-            color="[tomato]"
+            color="tomato"
             iconName="Radio"
           >
             Live Server

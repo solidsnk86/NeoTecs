@@ -1061,7 +1061,7 @@ export default function Python() {
             <p>
               Observa que arriba utilizamos la línea
               <span className="bg-gray-800 border-b-2 border-sky-800 px-1 py-[2px] mx-1 rounded text-zinc-50">
-                "if not self.open_seats()"
+                "if not self.asientos_disponibles"
               </span>
               para determinar si hay o no asientos disponibles. Esto funciona
               porque en Python, el número 0 puede interpretarse como False, y
@@ -1072,7 +1072,8 @@ export default function Python() {
               para indicar lo contrario de la declaración siguiente, por lo que{' '}
               <b className="text-sky-400 mx-1">"not True"</b> es False y
               <b className="text-sky-400 mx-1">"not False"</b> es True. Por lo
-              tanto, si <b className="text-sky-400 mx-1">"open_seats"</b>
+              tanto, si{' '}
+              <b className="text-sky-400 mx-1">"asientos_disponibles"</b>
               devuelve 0, toda la expresión se evaluará como True.
             </p>
             <p>
@@ -1111,7 +1112,7 @@ export default function Python() {
               también admite el Paradigma de
               <LinkButton
                 url="https://en.wikipedia.org/wiki/Functional_programming"
-                color="skyblues"
+                color="#38BDF8"
                 iconName="ArrowUpRight"
               >
                 Programación Funcional
@@ -1163,12 +1164,12 @@ export default function Python() {
               # Clase con decoradores getters y setters
               class Persona:
                 # Se inicializa una clase con sus atributos
-                def __init__(self, nombre, apellido, edad):
-                self._nombre = nombre
-                self._apellido = apellido
-                self._edad = edad
+                 def __init__(self, nombre, apellido, edad):
+                 self._nombre = nombre
+                 self._apellido = apellido
+                 self._edad = edad
             
-                # Decorador para obtener el nombre
+                 # Decorador para obtener el nombre
                 @property
                 def nombre(self):
                   return self._nombre
@@ -1375,7 +1376,7 @@ export default function Python() {
                 try:
                     result = x / y
                 except ZeroDivisionError:
-                    print("Error: No se puee dividir por 0.")
+                    print("Error: No se puede dividir por 0.")
                     # Salir del programa
                     sys.exit(1)
                 
