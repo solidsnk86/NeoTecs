@@ -191,6 +191,6 @@ export default function sendWhatsapp(id, price) {
   window.open(wapUrl);
 }
 
-export const portfolioUrl = 'https://portfolio-mgc.vercel.app/';
+export const portfolioUrl = 'https://personal-portfolio-mgc.vercel.app/';
 export const favicon = '/images/icons/favicon-neoctecs2.png';
 export const currentYear = new Date().getFullYear();
