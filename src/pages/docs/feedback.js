@@ -4,7 +4,6 @@ import { Footer } from '../../components/Footer';
 import { Nav } from '../../components/Nav';
 import { ToastContainer, toast } from 'react-toastify';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -16,8 +15,6 @@ export default function FeedBack() {
     handleSubmit,
     formState: { isSubmitting },
   } = useForm();
-
-  const router = useRouter();
 
   const onSubmit = async () => {
     const isDarkMode = window.matchMedia(
@@ -48,10 +45,10 @@ export default function FeedBack() {
           type: 'success',
           theme: isDarkMode ? 'dark' : 'light',
         },
-        setTimeout(() => {
-          window.location.reload();
-        }, 3900),
       );
+      setNombre('');
+      setEmail('');
+      setComentario('');
     } else {
       toast('Error al enviar el feedback', {
         position: toast.POSITION.TOP_CENTER,
@@ -85,7 +82,7 @@ export default function FeedBack() {
         >
           <ArrowLeftIcon
             className="text-text-primary"
-            onClick={(e) => router.back(e)}
+            onClick={() => history.back()}
           />
         </div>
         <h1 className="flex justify-center pt-6 mx-auto text-5xl text-transparent relative [-webkit-text-stroke-width:2px] [-webkit-text-stroke-color:var(--color-on-surface)]">

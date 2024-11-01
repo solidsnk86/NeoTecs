@@ -26,7 +26,7 @@ export const FeedbackData = () => {
     fetchFeedback();
   }, []);
 
-  const handleDelete = async (id) => {
+  const handleDelete = async (id: any) => {
     try {
       const { data, error } = await supabase
         .from('feedback')
@@ -55,7 +55,7 @@ export const FeedbackData = () => {
     }
   };
 
-  const sendMail = (item) => {
+  const sendMail = (item: any) => {
     const subjectText = 'Gracias por tu feedback';
     const subject = encodeURIComponent(subjectText);
     const issues = 'https://github.com/solidsnk86/NeoTecs/issues/new';
@@ -66,20 +66,20 @@ export const FeedbackData = () => {
     window.open(emailLink, '_blank');
   };
 
-  const fechaFormateada = (f) => {
+  const fechaFormateada = (f: Date | string | number) => {
     const fecha = new Date(f).toLocaleDateString('es-ES', {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
-      timeZone: 'America/Argentina/Buenos_Aires',
     });
     return fecha;
   };
 
-  const horaFormateada = (h) => {
+  const horaFormateada = (h: Date | string | number) => {
     const hora = new Date(h).toLocaleTimeString('es-ES', {
       hour: '2-digit',
       minute: '2-digit',
+      timeZone: 'America/Argentina/Buenos_Aires',
     });
     return hora;
   };
@@ -104,25 +104,10 @@ export const FeedbackData = () => {
         <SwiperSlide key={item.id}>
           <div className="bg-white dark:bg-zinc-800/50 border border-gray-300 dark:border-zinc-700 p-6 rounded-md shadow-md my-10 mx-auto xl:w-1/2 relative z-50">
             <div className="text-gray-600 dark:text-gray-300 text-sm xl:text-base mb-4">
-              <p className="">
-                Este feedback se ha creado el{' '}
-                {`${fechaFormateada(item.fecha)} a las ${horaFormateada(
-                  item.fecha,
-                )}`}
-              </p>
+              <p className="text-gray-700 dark:text-gray-400">{item.nombre}</p>
               <label className="block font-bold mt-4">Mensaje:</label>
               <p className="my-2">{item.comentario}</p>
-              <p className="text-right text-gray-700 dark:text-gray-400">
-                {item.nombre}
-              </p>
-              <div className="flex items-center space-x-4 mt-4">
-                <button
-                  className="text-blue-500 dark:text-blue-400 hover:underline focus:outline-none"
-                  title="Responder"
-                  onClick={() => sendMail(item)}
-                >
-                  Responder
-                </button>
+              <div className="flex items-center justify-between my-4">
                 <button
                   onClick={() => handleDelete(item.id)}
                   className="text-red-500 dark:text-red-400 hover:underline focus:outline-none"
@@ -130,7 +115,20 @@ export const FeedbackData = () => {
                 >
                   Eliminar
                 </button>
+                <button
+                  className="text-blue-500 dark:text-blue-400 hover:underline focus:outline-none"
+                  title="Responder"
+                  onClick={() => sendMail(item)}
+                >
+                  Responder
+                </button>
               </div>
+              <time className="text-xs">
+                Este feedback se ha creado el{' '}
+                {`${fechaFormateada(item.fecha)} a las ${horaFormateada(
+                  item.fecha,
+                )}`}
+              </time>
             </div>
           </div>
         </SwiperSlide>
