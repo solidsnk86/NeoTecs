@@ -181,10 +181,10 @@ export const SupabaseExample = () => {
       <p className="list-css-span">
         Una vez que hayas completado estos pasos, Next.js creará una estructura
         de carpetas y archivos para tu proyecto. Dentro de la carpeta{' '}
-        <span>app</span>, encontrarás un archivo llamado <span>Page.tsx</span>.
+        <span>app</span>, encontrarás un archivo llamado <span>page.tsx</span>.
       </p>
       <p className="list-css-span">
-        Este archivo,<span>Page.tsx</span>, es el punto de entrada de tu
+        Este archivo,<span>page.tsx</span>, es el punto de entrada de tu
         aplicación y donde puedes empezar a definir el contenido de la página
         principal. Por ejemplo, puedes editar este archivo para mostrar un
         mensaje de bienvenida, listar productos, o cualquier otra funcionalidad
