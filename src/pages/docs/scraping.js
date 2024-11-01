@@ -15,7 +15,7 @@ export default function Scraping() {
         <div className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 xl:left-6 xl:top-14 top-14 left-[5px] fixed mt-3 cursor-pointer hover:border-zinc-300 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125">
           <ArrowLeftIcon
             className="text-text-primary"
-            onClick={() => globalThis.history.back}
+            onClick={() => history.back()}
           />
         </div>
         <HeaderTitle className="text-5xl my-10">Web Scraping</HeaderTitle>
@@ -74,7 +74,7 @@ export default function Scraping() {
           Si tienen alguna consulta para hacer, los escucho en mi
           <LinkButton
             url="/docs/feedback"
-            color="text-strong"
+            color="tomato"
             iconName="MessageSquareWarning"
           >
             feedback

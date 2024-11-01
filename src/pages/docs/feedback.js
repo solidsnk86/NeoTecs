@@ -77,7 +77,7 @@ export default function FeedBack() {
       <Nav className="fixed xl:relative w-full z-50" />
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="xl:w-1/3 p-14 flex justify-center mx-auto text-text-primary text-left flex-col space-y-4 mb-10"
+        className=" max-w-xl p-14 flex justify-center mx-auto text-text-primary text-left flex-col space-y-4 mb-10"
       >
         <div
           className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-1 xl:left-6 xl:top-14 top-14 left-2 fixed mt-3 hover:border-zinc-300 dark:hover:border-zinc-600 shadow-md dark:hover:brightness-125 cursor-pointer duration-300"
@@ -127,6 +127,7 @@ export default function FeedBack() {
               onChange={(e) => setComentario(e.target.value)}
               placeholder="Comentario..."
               className="h-auto overflow-y-hidden resize-y"
+              maxLength={120}
             />
           </label>
 

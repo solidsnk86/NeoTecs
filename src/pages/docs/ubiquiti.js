@@ -310,7 +310,7 @@ export default function UbiquitiDocs() {
               explicativo en mi
               <LinkButton
                 url="https://www.youtube.com/@tutosNeoTecs"
-                color="red-500"
+                color="tomato"
                 iconName="Youtube"
               >
                 canal
@@ -318,7 +318,7 @@ export default function UbiquitiDocs() {
               . Ante cualquier duda no dudes en escribir al
               <LinkButton
                 href="./feedback.js"
-                color="text-strong"
+                color="violet"
                 iconName="MessageSquareWarning"
               >
                 feedback
