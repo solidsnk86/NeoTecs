@@ -10,14 +10,15 @@ import 'highlight.js/styles/github-dark.css';
 const MarkdownRenderer = ({ url }) => {
   const [markdownContent, setMarkdownContent] = useState('');
 
+  const getMarkDown = async () => {
+    const response = await fetch(url);
+    const data = await response.text();
+    setMarkdownContent(data);
+  };
+
   useEffect(() => {
-    fetch(url)
-      .then((response) => response.text())
-      .then((data) => setMarkdownContent(data))
-      .catch((error) =>
-        console.error('Error al buscar el documento Markdown:', error),
-      );
-  }, [url]);
+    getMarkDown();
+  });
 
   return (
     <div className="text-text-primary">
