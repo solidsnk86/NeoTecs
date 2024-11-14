@@ -7,6 +7,10 @@
   src: url(https://assets.codepen.io/605876/GeistMonoVariableVF.ttf);
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --color-secondary: #565e71;
