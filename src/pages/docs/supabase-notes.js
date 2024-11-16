@@ -25,11 +25,11 @@ export default function SupabaseDB() {
   };
 
   const getLocation = async () => {
-    const p = await GetLocation.province();
-    const c = await GetLocation.country();
+    const prov = await GetLocation.province();
+    const coun = await GetLocation.country();
     setoLocation({
-      province: p,
-      country: c,
+      province: prov,
+      country: coun,
     });
   };
 
