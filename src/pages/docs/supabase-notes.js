@@ -6,7 +6,7 @@ import Indextitle from '../../components/IndexTitle';
 import { NavLinks } from '../../components/NavLinks';
 import { useState, useEffect, useRef } from 'react';
 import { SupabaseExample } from '../../components/SupabaseExample';
-import { Notes } from '../../Model/notes-model';
+import { Notes } from '../../Model/ModelNotes';
 import { DateFormat } from '@/lib/date-formatter';
 import { Footer } from '../../components/Footer';
 import { GetLocation } from '../../components/GetLocation';
