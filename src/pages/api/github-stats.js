@@ -94,6 +94,11 @@ export default async function githubStats(req, res) {
     const username = req.query.username || 'solidsnk86';
     const data = await getGithubData(username);
 
+    if (req.method !== 'GET') {
+      res.status(405).json({ success: false, message: 'Método no permitido!' });
+      return;
+    }
+
     res.status(200).json({
       success: true,
       data: data.filteredData,

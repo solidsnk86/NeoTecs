@@ -10,7 +10,7 @@ import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import ArticleData from '../components/ArticleData';
 import Link from 'next/link';
 import { WeatherAPI } from '../components/WeatherAPI';
-import GithubSearch from '../components/GithubUsersStats';
+import { GithubSearch } from '../components/GithubUsersStats';
 
 export const HomeBlock = ({ children, className = '' }) => {
   return (

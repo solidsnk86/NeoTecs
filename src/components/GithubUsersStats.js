@@ -32,8 +32,8 @@ export const GithubSearch = () => {
 
   return (
     <div className="p-4">
-      <form onSubmit={handleSubmit} className="flex space-y-4 justify-center">
-        <div className="flex items-center space-x-2">
+      <form onSubmit={handleSubmit} className="grid space-y-4 justify-center">
+        <div className="xl:flex !xl:flex-col items-center space-x-2 space-y-2">
           <label htmlFor="github-user" className="text-sm font-medium">
             Usuario de GitHub:
           </label>
