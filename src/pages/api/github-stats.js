@@ -1,19 +1,34 @@
-import { exec } from 'child_process';
-import { promisify } from 'util';
+// Puedes usar una variable de entorno para el token
+const GITHUB_TOKEN = process.env.NEX_PUBLIC_GITHUB_TOKEN;
 
-// Convertir exec a Promise
-const execAsync = promisify(exec);
-
-// Función para obtener datos usando GitHub CLI
-const getGithubCli = async (username) => {
+const getGithubData = async (username) => {
   try {
-    const { stdout: userData } = await execAsync(`gh api users/${username}`);
-    const userJson = JSON.parse(userData);
+    const headers = GITHUB_TOKEN
+      ? {
+          Authorization: `token ${GITHUB_TOKEN}`,
+          Accept: 'application/vnd.github.v3+json',
+        }
+      : {
+          Accept: 'application/vnd.github.v3+json',
+        };
 
-    const { stdout: reposData } = await execAsync(
-      `gh api users/${username}/repos`,
+    const userResponse = await fetch(
+      `https://api.github.com/users/${username}`,
+      { headers },
     );
-    const reposJson = JSON.parse(reposData);
+    if (!userResponse.ok) {
+      throw new Error(`Error en la API de GitHub: ${userResponse.statusText}`);
+    }
+    const userJson = await userResponse.json();
+
+    const reposResponse = await fetch(
+      `https://api.github.com/users/${username}/repos`,
+      { headers },
+    );
+    if (!reposResponse.ok) {
+      throw new Error(`Error al obtener repos: ${reposResponse.statusText}`);
+    }
+    const reposJson = await reposResponse.json();
 
     const filteredData = {
       user: {
@@ -54,11 +69,11 @@ const getGithubCli = async (username) => {
 export default async function githubStats(req, res) {
   try {
     const username = req.query.username || 'solidsnk86';
-    const data = await getGithubCli(username);
+    const data = await getGithubData(username);
 
     res.status(200).json({
       success: true,
-      my_github_stats: data,
+      data_cli: data,
     });
   } catch (error) {
     res.status(500).json({
