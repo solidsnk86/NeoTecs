@@ -12,7 +12,9 @@ export const GithubSearch = () => {
     setError(null);
 
     try {
-      const res = await fetch(`/api/github-stats?username=${value}`);
+      const res = await fetch(
+        `/api/github-stats?username=${value.toLowerCase()}`,
+      );
       const data = await res.json();
 
       if (!res.ok) {
@@ -41,12 +43,12 @@ export const GithubSearch = () => {
             value={value}
             type="text"
             placeholder="github_user"
-            className="border rounded-md px-3 py-1"
+            className="border rounded-md px-3 py-1 text-black"
             onChange={(e) => setValue(e.target.value)}
           />
           <button
             type="submit"
-            className="px-8 py-1 rounded-md bg-indigo-500 text-white hover:bg-indigo-600 disabled:opacity-50 border border-indigo-400"
+            className="px-8 py-1 rounded-md bg-indigo-500 text-white font-semibold hover:bg-indigo-600 disabled:opacity-50 border border-indigo-400"
             disabled={loading || !value.trim()}
           >
             {loading ? 'Buscando...' : 'Buscar'}
