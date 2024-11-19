@@ -1,4 +1,3 @@
-// Puedes usar una variable de entorno para el token
 const GITHUB_TOKEN = process.env.NEX_PUBLIC_GITHUB_TOKEN;
 
 const getGithubData = async (username) => {
