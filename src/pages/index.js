@@ -10,6 +10,7 @@ import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import ArticleData from '../components/ArticleData';
 import Link from 'next/link';
 import { WeatherAPI } from '../components/WeatherAPI';
+import GithubSearch from '../components/GithubUsersStats';
 
 export const HomeBlock = ({ children, className = '' }) => {
   return (
@@ -128,7 +129,12 @@ export default function Home() {
         </Link>
       </div>
 
-      <HomeBlock className=" aspect-video">
+      <HomeBlock>
+        <HomeBlockTitle>Tu Api para Github filtrada</HomeBlockTitle>
+        <GithubSearch />
+      </HomeBlock>
+
+      <HomeBlock className="aspect-video">
         <HomeBlockTitle>Últimos artículos...</HomeBlockTitle>
         <p className="text-text-primary relative my-6 font-semibold">
           Desliza para ver más artículos
