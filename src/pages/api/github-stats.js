@@ -1,4 +1,4 @@
-const GITHUB_TOKEN = process.env.NEX_PUBLIC_GITHUB_TOKEN;
+const GITHUB_TOKEN = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
 
 const getGithubData = async (username) => {
   try {
@@ -29,6 +29,26 @@ const getGithubData = async (username) => {
     }
     const reposJson = await reposResponse.json();
 
+    const languages = {};
+    reposJson.forEach((repo) => {
+      const lang = repo.language || 'Sin especificar';
+      languages[lang] = (languages[lang] || 0) + 1;
+    });
+
+    const languagesArray = Object.entries(languages)
+      .map(([name, count]) => ({
+        name,
+        count,
+        percentage: ((count / reposJson.length) * 100).toFixed(1),
+      }))
+      .sort((a, b) => b.count - a.count);
+
+    const mostUsed = languagesArray[0] || {
+      name: 'Sin lenguajes',
+      count: 0,
+      percentage: '0.0',
+    };
+
     const filteredData = {
       user: {
         name: userJson.name,
@@ -44,7 +64,7 @@ const getGithubData = async (username) => {
       repos: reposJson.map((repo) => ({
         name: repo.name,
         description: repo.description,
-        language: repo.language,
+        language: repo.language || 'Sin especificar',
         stars: repo.stargazers_count,
         forks: repo.forks_count,
         url: repo.html_url,
@@ -59,7 +79,11 @@ const getGithubData = async (username) => {
       })),
     };
 
-    return filteredData;
+    return {
+      filteredData,
+      languages: languagesArray,
+      mostUsed,
+    };
   } catch (error) {
     throw new Error(`Error al obtener datos de GitHub: ${error.message}`);
   }
@@ -72,7 +96,9 @@ export default async function githubStats(req, res) {
 
     res.status(200).json({
       success: true,
-      data_cli: data,
+      data: data.filteredData,
+      languages: data.languages,
+      most_used: data.mostUsed,
     });
   } catch (error) {
     res.status(500).json({
