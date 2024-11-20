@@ -42,7 +42,7 @@ export const GithubSearch = () => {
             name="github-user"
             value={value}
             type="text"
-            placeholder="github_user"
+            placeholder="Usuario de Github"
             className="border rounded-md px-3 py-1 text-black"
             onChange={(e) => setValue(e.target.value)}
           />
