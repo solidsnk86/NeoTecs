@@ -102,6 +102,17 @@ export default async function githubStats(req, res) {
       return;
     }
 
+    if (req.method === 'OPTIONS') {
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Access-Control-Allow-Methods', 'GET');
+      res.setHeader(
+        'Access-Control-Allow-Headers',
+        'Authorization, Content-Type',
+      );
+      res.status(204).end();
+      return;
+    }
+
     res.status(200).json({
       success: true,
       data: data.filteredData,
