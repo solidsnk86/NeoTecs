@@ -22,7 +22,7 @@ export const HomeBlock = ({ children, className = '' }) => {
   );
 };
 
-export const HomeBlockTitle = ({ Tag = 'h2', children, className = '' }) => {
+export const HomeBlockTitle = ({ Tag = 'h2', children, className }) => {
   return (
     <Tag
       className={`${className} text-4xl font-bold sm:text-5xl mb-20 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-300 py-2`}
