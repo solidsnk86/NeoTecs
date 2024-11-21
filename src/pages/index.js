@@ -129,11 +129,6 @@ export default function Home() {
         </Link>
       </div>
 
-      <HomeBlock>
-        <HomeBlockTitle>Tu Api para Github filtrada</HomeBlockTitle>
-        <GithubSearch />
-      </HomeBlock>
-
       <HomeBlock className="aspect-video">
         <HomeBlockTitle>Últimos artículos...</HomeBlockTitle>
         <p className="text-text-primary relative my-6 font-semibold">
@@ -141,6 +136,12 @@ export default function Home() {
         </p>
         <ArticleData />
       </HomeBlock>
+
+      <HomeBlock>
+        <HomeBlockTitle>Tu Api para Github filtrada</HomeBlockTitle>
+        <GithubSearch />
+      </HomeBlock>
+
       <Footer />
     </main>
   );

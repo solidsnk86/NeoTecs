@@ -1,3 +1,4 @@
+import { Star } from 'lucide-react';
 import { useState } from 'react';
 
 export const GithubSearch = () => {
@@ -69,7 +70,7 @@ export const GithubSearch = () => {
         <div className="mt-4 space-y-4">
           <div className="relative p-4 bg-bg-card rounded-md z-50 border dark:border-zinc-800">
             <h2 className="text-xl font-bold">{userData.data.user.name}</h2>
-            <p className="text-gray-600">{userData.data.user.bio}</p>
+            <p className="text-gray-400">{userData.data.user.bio}</p>
             <div className="mt-2">
               <p>Repositorios: {userData.data.user.public_repos}</p>
               <p>
@@ -88,7 +89,10 @@ export const GithubSearch = () => {
                 <h3 className="font-bold">{repo.name}</h3>
                 <p className="text-sm text-text-second">{repo.description}</p>
                 <div className="mt-2 text-sm">
-                  <span className="mr-3">⭐ {repo.stars}</span>
+                  <span className="mr-3">
+                    <Star className="w-5 h-5 inline mx-1 fill-amber-400" />{' '}
+                    {repo.stars}
+                  </span>
                   <span>{repo.language}</span>
                 </div>
               </div>
