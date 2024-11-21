@@ -22,9 +22,10 @@ export const HomeBlock = ({ children, className = '' }) => {
   );
 };
 
-export const HomeBlockTitle = ({ Tag = 'h2', children, className }) => {
+export const HomeBlockTitle = ({ Tag = 'h2', children, className, id }) => {
   return (
     <Tag
+      id={id}
       className={`${className} text-4xl font-bold sm:text-5xl mb-20 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-300 py-2`}
     >
       {children}
@@ -138,7 +139,9 @@ export default function Home() {
       </HomeBlock>
 
       <HomeBlock className="mb-16">
-        <HomeBlockTitle>Explora tus estadísticas de GitHub</HomeBlockTitle>
+        <HomeBlockTitle id="#github-stats">
+          Explora tus estadísticas de GitHub
+        </HomeBlockTitle>
         <div className="flex justify-center mx-auto bg-bg-card w-fit px-4 py-1 border border-zinc-800 rounded-md">
           <p>
             Descubre cuál es tu lenguaje de programación más utilizado y más con

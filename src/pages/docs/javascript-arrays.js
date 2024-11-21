@@ -199,6 +199,9 @@ export default function JavaScriptArrays() {
               console.log(solution1([3, 6, -2, -5, 7, 3])); // Debería devolver 21
               `
             }</Pre>
+            <p>
+              
+            </p>
           </article>
           <ShareButton setTitle={JavaScriptArrays.title} />
         </div>
