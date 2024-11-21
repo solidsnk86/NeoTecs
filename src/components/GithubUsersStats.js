@@ -34,9 +34,12 @@ export const GithubSearch = () => {
     <div className="p-4">
       <form onSubmit={handleSubmit} className="grid space-y-4 justify-center">
         <div className="xl:flex !xl:flex-col items-center space-x-2 space-y-2">
-          <span htmlFor="github-user" className="text-base font-medium">
+          <h3
+            htmlFor="github-user"
+            className="text-md font-semibold translate-y-[3px]"
+          >
             Usuario de GitHub:
-          </span>
+          </h3>
           <input
             id="github-user"
             name="github-user"

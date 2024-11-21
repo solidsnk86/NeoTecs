@@ -94,7 +94,7 @@ export default async function githubStats(req, res) {
   res.setHeader('Access-Control-Allow-Methods', 'GET');
 
   try {
-    const username = req.query.username || 'solidsnk86';
+    const username = req.query.username;
     const data = await getGithubData(username);
 
     if (req.method !== 'GET') {
