@@ -138,10 +138,14 @@ export default function Home() {
       </HomeBlock>
 
       <HomeBlock className="mb-16">
-        <HomeBlockTitle>Tu Api para Github</HomeBlockTitle>
+        <HomeBlockTitle>Explora tus estadísticas de GitHub</HomeBlockTitle>
         <div className="flex justify-center mx-auto bg-bg-card w-fit px-4 py-1 border border-zinc-800 rounded-md">
-          <p>¿Quieres saber cuál es tu lenguaje de programamción más usado?</p>
+          <p>
+            Descubre cuál es tu lenguaje de programación más utilizado y más con
+            esta herramienta.
+          </p>
         </div>
+
         <GithubSearch />
       </HomeBlock>
 
