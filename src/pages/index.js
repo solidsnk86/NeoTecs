@@ -116,7 +116,7 @@ export default function Home() {
         <div className="justify-center mx-auto grid mt-20 text-center">
           <h1 className="font-bold text-4xl">Listo para empezar?</h1>
           <p className="text-text-second text-balance my-5">
-            Ahora que has sido presentado al curso, vamos a sumergirnos.
+            Ahora que has sido presentado al tutorial, vamos a sumergirnos.
           </p>
         </div>
       </div>
