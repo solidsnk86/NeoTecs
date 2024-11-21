@@ -137,7 +137,7 @@ export default function Home() {
         <ArticleData />
       </HomeBlock>
 
-      <HomeBlock>
+      <HomeBlock className="mb-16">
         <HomeBlockTitle>Tu Api para Github filtrada</HomeBlockTitle>
         <GithubSearch />
       </HomeBlock>
