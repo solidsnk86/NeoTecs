@@ -6,6 +6,7 @@ import HeaderTitle from '../HeaderTitlte';
 import IndexTitle from '../IndexTitle';
 import LinkButton from '../LinkButton';
 import ImageComponent from '../ImageComponent';
+import CustomModal from '../CustomModal';
 
 export const APClientRouterMode = () => {
   return (
@@ -62,10 +63,12 @@ export const APClientRouterMode = () => {
       </p>
       <Pre lang="bash">ncpa.cpl</Pre>
       <p>Damos enter para ejecutar el comando, veremos la siguiente ventana:</p>
-      <ImageComponent
-        src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-propiedades-red.png?raw=true"
-        altImage="Imagen del panel de comtrol (Conexiones de red)"
-      />
+      <CustomModal>
+        <ImageComponent
+          src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-propiedades-red.png?raw=true"
+          altImage="Imagen del panel de control (Conexiones de red)"
+        />
+      </CustomModal>
       <p className="paragraph">
         En Red o (Ethernet) hacemos clic derecho sobre el ícono, nos dirijimos a
         propiedades. Dónde está la opción Habilitar el protocolo de Internet
