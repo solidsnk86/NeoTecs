@@ -15,17 +15,13 @@ export const NavSwitch = ({ inline }) => {
       const container = containerRef.current;
       const activeItem = activeItemRef.current;
 
-      // Get container dimensions
       const containerHeight = container.clientHeight;
 
-      // Get active item dimensions
       const itemTop = activeItem.offsetTop;
       const itemHeight = activeItem.clientHeight;
 
-      // Calculate the center position
       const targetScroll = itemTop - (containerHeight - itemHeight) / 2;
 
-      // Scroll the container
       container.scrollTo({
         top: targetScroll,
         behaivor: 'auto',
