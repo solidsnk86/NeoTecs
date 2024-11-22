@@ -1,4 +1,5 @@
 import { FaWindows } from 'react-icons/fa';
+import { AlertTriangle } from 'lucide-react';
 import { Pre } from '../Pre';
 import { SectionTitle } from '../SectionTitle';
 import HeaderTitle from '../HeaderTitlte';
@@ -151,12 +152,46 @@ export const APClientRouterMode = () => {
         src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente5.png?raw=true"
         altImage="Panle Inalámbrico de Tp Link"
       />
+      <SectionTitle title="Configuración de la distancia CPE" />
+      <div className="border-l-4 border-red-500 px-1 bg-opacity-[0.6] p-3 pl-5 font-semibold">
+        <p className="font-bold text-xl text-red-500">
+          <AlertTriangle className="w-6 inline mb-1" /> Importante
+        </p>
+        <p>
+          Para tener en cuenta, la configuración de distancia de manera
+          automática versus la configuración de manera manual, pueden encontrar
+          muchas variaciones de rendimiento por lo cual dejo algunas
+          consideraciones técnicas importantes:
+        </p>
+      </div>
+      <ol>
+        <li>
+          El modo automático puede generar inestabilidad por cambios frecuentes
+          de canal y potencia.
+        </li>
+        <li>
+          La configuración manual permite:
+          <ul>
+            <li>Optimizar la conexión según el entorno específico</li>
+            <li>Reducir interrupciones de señal</li>
+            <li>Controlar mejor la interferencia con otros dispositivos</li>
+          </ul>
+        </li>
+        <li>Para una configuración manual óptima, recomiendo:</li>
+        <ul>
+          <li>Analizar previamente el espectro de frecuencias</li>
+          <li> Elegir un canal con menor interferencia</li>
+          <li>Ajustar la potencia de transmisión según la distancia</li>
+        </ul>
+      </ol>
       <p>
-        Esperamos que termine de escanear y seleccionamos el nodo del Gobierno,
-        en éste caso la red WiFi gratis del gobierno de San Luis. Tildamos la
-        casilla a nuestra izquierda y hacemos clic en Fijar al Punto de Acceso.
-        Configuramos la distancia, en éste caso estamos a 200 metros de la
-        antena, 2 cuadras aproximadamente; ponemos: 0.2. Aplicamos y guardamos.
+        Bueno seguimos en el caso, espero que se haya comprendido la explicaión
+        de la diferencia entre automático y manual. Una vez que termine de
+        escanear y seleccionamos el nodo del Gobierno, en éste caso la red WiFi
+        gratis del gobierno de San Luis. Tildamos la casilla a nuestra izquierda
+        y hacemos clic en Fijar al Punto de Acceso. Configuramos la distancia,
+        en éste caso estamos a 200 metros de la antena, 2 cuadras
+        aproximadamente; ponemos: 0.2. Aplicamos y guardamos.
       </p>
       <ImageComponent
         src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/ApRouterCliente6.png?raw=true"

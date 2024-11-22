@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function Scraper() {
   const [disabled, setDisabled] = useState(false);
-  const [scrape, setScraping] = useState({
+  const [scraping, setScraping] = useState({
     titles: [],
     paragraphs: [],
     items: [],
@@ -37,20 +37,20 @@ export default function Scraper() {
           Hacer Scraping
         </button>
       </div>
-      {Object.keys(scrape.titles).map((index) => (
+      {Object.keys(scraping.titles).map((value) => (
         <article
-          key={index}
+          key={value}
           className="text-zinc-100 space-y-3 border-zinc-200 border-[1px] shadow-md rounded shadow-zinc-200 mt-6 p-6 dark:!shadow dark:border-zinc-800 overflow-x-auto"
         >
           <h1 className="text-[tomato] underline text-lg">
-            {scrape.titles[index]}
+            {scraping.titles[value]}
           </h1>
           <p className="text-text-primary p-3 text-sm">
-            {scrape.paragraphs[index]}
+            {scraping.paragraphs[value]}
           </p>
           <ul className="text-zinc-500">
-            {Array.isArray(scrape.images[index]) &&
-              scrape.images[index].map((image) => (
+            {Array.isArray(scraping.images[value]) &&
+              scraping.images[value].map((image) => (
                 <li key={image.src}>
                   <img src={image.src} alt={image.alt} />
                 </li>
@@ -59,8 +59,8 @@ export default function Scraper() {
           <div>
             <p>Links:</p>
             <ul>
-              {Array.isArray(scrape.links[index]) &&
-                scrape.links[index].map((link) => (
+              {Array.isArray(scraping.links[value]) &&
+                scraping.links[value].map((link) => (
                   <li key={link.src}>
                     <p>Alt: {link.alt}</p>
                     <p>Src: {link.src}</p>
