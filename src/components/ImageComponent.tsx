@@ -16,7 +16,7 @@ const ImageComponent: React.FC<ImageComponentProps> = ({
     <figure className="images-client">
       <img
         src={src}
-        className={className}
+        className={`aspect-[16/9] ${className}`}
         width="100%"
         height="auto"
         alt={imageAlt}
