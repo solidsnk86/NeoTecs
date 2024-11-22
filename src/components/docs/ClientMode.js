@@ -144,7 +144,7 @@ export const ClientMode = () => {
           cara. Puede ser el problema de CPE; por favor contactar{' '}
           <LinkButton
             url="mailto:support@tp-link.com."
-            color="[cornflowerblue]"
+            color="cornflowerblue"
             iconName="Mail"
           >
             support@tp-link.com.
@@ -177,7 +177,7 @@ export const ClientMode = () => {
         el problema de CPE; por favor contactar a{' '}
         <LinkButton
           url="mailto:support@tp-link.com."
-          color="[cornflowerblue]"
+          color="cornflowerblue"
           iconName="Mail"
         >
           support@tp-link.com
@@ -187,7 +187,7 @@ export const ClientMode = () => {
         Muchas gracias por llegar hasta aquí, si quieren visitar el
         <LinkButton
           url="https://www.youtube.com/@tutosNeoTecs"
-          color="[cornflowerblue]"
+          color="cornflowerblue"
           iconName="Youtube"
         >
           canal de YouTube.
@@ -195,7 +195,7 @@ export const ClientMode = () => {
         Ante cualquier duda no dudes en escribir al
         <LinkButton
           url="/docs/feedback"
-          color="text-strong"
+          color="tomato"
           iconName="MessageSquareWarning"
         >
           feedback.

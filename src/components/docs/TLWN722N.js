@@ -22,7 +22,7 @@ export const TlWn722n = () => {
           Primer paso: Descargamos el driver desde la web de TP-Link
           <LinkButton
             url="https://www.tp-link.com/ar/support/download/tl-wn722n/v1/#Driver"
-            color="text-strong"
+            color="cornflowerblue"
             iconName="HardDriveDownload"
           >
             aquí.
@@ -159,7 +159,7 @@ export const TlWn722n = () => {
         Muchas gracias por llegar hasta aquí, si quieren visitar el
         <LinkButton
           url="https://www.youtube.com/@tutosNeoTecs"
-          color="[cornflowerblue]"
+          color="cornflowerblue"
           iconName="Youtube"
         >
           canal de YouTube.
@@ -169,7 +169,7 @@ export const TlWn722n = () => {
         ¿Dudas? escribir al
         <LinkButton
           href="/docs/feedback"
-          color="text-strong"
+          color="tomato"
           iconName="MessageSquareWarning"
         >
           feedback.

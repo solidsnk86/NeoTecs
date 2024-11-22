@@ -211,7 +211,7 @@ export const APClientRouterMode = () => {
         Muchas gracias por llegar hasta aquí, si quieren visitar el
         <LinkButton
           url="https://www.youtube.com/@tutosNeoTecs"
-          color="youtube-link"
+          color="tomato"
           iconName="Youtube"
         >
           canal de YouTube.
@@ -219,7 +219,7 @@ export const APClientRouterMode = () => {
         Ante cualquier duda no dudes en escribir al
         <LinkButton
           url="/docs/feedback"
-          color="text-strong"
+          color="tomato"
           iconName="MessageSquareWarning"
         >
           feedback.

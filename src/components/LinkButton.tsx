@@ -7,7 +7,7 @@ interface LinkInterfaceProps {
   children?: string;
   className?: string;
   underline?: boolean;
-  color: string;
+  color?: string;
   iconName?: string;
   target?: string;
   download?: boolean;

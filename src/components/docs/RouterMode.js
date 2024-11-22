@@ -19,7 +19,7 @@ export const RouterMode = () => {
         seguir este
         <LinkButton
           url="https://192.168.0.254/"
-          color="[cornflowerblue]"
+          color="cornflowerblue"
           iconName="ArrowUpRight"
         >
           enlace
@@ -161,7 +161,7 @@ export const RouterMode = () => {
           Si no recuerda el procedimiento, consulte nuevamente las
           <LinkButton
             url="https://www.tp-link.com/ar/support/faq/"
-            color="[cornflowerblue]"
+            color="cornflowerblue"
             iconName="HelpCircle"
           >
             (Preguntas frecuentes FAQs)
@@ -210,7 +210,7 @@ export const RouterMode = () => {
         Si surgen dudas en la configuración con gusto los escucho en mi
         <LinkButton
           url="/docs/feedback"
-          color="text-strong"
+          color="tomato"
           iconName="MessageSquareWarning"
         >
           feedback.
