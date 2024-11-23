@@ -52,9 +52,7 @@ export function YouTubeComments({
 
   return (
     <article className="p-4">
-      <h1 className="text-2xl text-text-primary font-bold mb-4">
-        Últimos Comentarios del video {videoText}
-      </h1>
+      <h1 className="text-2xl text-text-primary font-bold mb-4">{videoText}</h1>
       <p className="block text-text-second mb-4 relative w-fit">
         Cantidad de comentarios:{' '}
         <MessageCircle className="w-5 h-5 inline mx-1 -translate-y-[2px]" />
@@ -66,12 +64,13 @@ export function YouTubeComments({
       {comments.length === 0 ? (
         <p className="text-gray-500">No hay comentarios disponibles.</p>
       ) : (
-        <div className="space-y-4">
-          {comments.map((comment) => {
+        <div className="">
+          {comments.map((comment, index) => {
             return (
               <div
                 key={comment.id}
-                className="border border-zinc-200 dark:border-zinc-800/60 p-4 rounded-lg"
+                className="p-4"
+                style={{ background: `${index % 2 === 0 ? '#ddd' : '#ccc'}` }}
               >
                 <div className="flex items-center gap-2">
                   <img
@@ -99,7 +98,7 @@ export function YouTubeComments({
                   </div>
                 </div>
                 <div className="block">
-                  <p className="mt-2 dark:text-zinc-400 text-zinc-600">
+                  <p className="mt-2 dark:text-zinc-400 text-zinc-600 text-pretty">
                     {comment.snippet.topLevelComment.snippet.textDisplay}
                   </p>
                 </div>
