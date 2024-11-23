@@ -109,7 +109,7 @@ export const WeatherAPI = () => {
         </small>
         <small>
           <Compass className="inline w-4 h-4 -translate-y-[2px] mr-2" />
-          Dirección del viento: {windDeg} °
+          Dirección del viento: {windDeg}°
         </small>
         <small>
           <Sunrise className="inline w-4 h-4 -translate-y-[2px] mr-2" />
