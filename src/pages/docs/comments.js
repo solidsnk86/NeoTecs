@@ -21,7 +21,7 @@ export default function Comments() {
           setError(response.statusText);
         }
         setLoading(false);
-        setData(dataVideo.items);
+        setData(dataVideo.items || []);
       } catch (err) {
         setError(err);
         setLoading(false);
