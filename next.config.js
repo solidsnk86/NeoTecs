@@ -5,7 +5,7 @@ module.exports = {
   async headers() {
     return [
       {
-        source: '/api/scrape',
+        source: '/api/github-stats',
         headers: [
           {
             key: 'Access-Control-Allow-Origin',
