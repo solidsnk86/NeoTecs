@@ -26,14 +26,11 @@ const ImageComponent: React.FC<ImageWithModalProps> = ({
       zIndex: 1000,
     },
     content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      transform: 'translate(-50%, -50%)',
+      top: '0',
+      left: '0',
+      width: '100%',
+      height: 'auto',
       padding: '20px',
-      maxWidth: '90vw',
-      maxHeight: '90vh',
       overflow: 'auto',
       backgroundColor: 'transparent',
       border: 'none',
@@ -48,15 +45,14 @@ const ImageComponent: React.FC<ImageWithModalProps> = ({
       >
         <Image
           src={src}
-          className={`aspect-[16/9] ${className}`}
-          width={1600}
-          height={900}
+          className={`${className}`}
+          width={1200}
+          height={800}
           alt={imageAlt}
           priority
         />
       </figure>
 
-      {/* Modal con la imagen ampliada */}
       <ReactModal
         isOpen={isModalOpen}
         onRequestClose={() => setIsModalOpen(false)}
@@ -66,13 +62,14 @@ const ImageComponent: React.FC<ImageWithModalProps> = ({
         <div className="flex flex-col items-center">
           <Image
             src={src}
-            width={1920}
+            width={1980}
             height={1080}
             alt={imageAlt}
             quality={100}
           />
+          <small className="text-white font-semibold">{altImage}</small>
           <button
-            className="mt-4 px-6 py-2 bg-indigo-500 text-white rounded-full hover:bg-indigo-600 transition-colors"
+            className="mt-4 px-6 py-2 bg-indigo-500 text-white rounded-full hover:bg-indi-600 transition-colors"
             onClick={() => setIsModalOpen(false)}
           >
             Cerrar
