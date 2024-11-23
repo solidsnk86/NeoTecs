@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { DateFormat } from '@/lib/date-formatter';
 import { youtubeApiKey } from './Constants';
+import { Preloader } from '@/components/Preloader';
 
 export function YouTubeComments({
   videoId,
@@ -43,7 +44,7 @@ export function YouTubeComments({
   }, [videoId]);
 
   if (loading) {
-    return <p className="text-text-primary">Cargando comentarios...</p>;
+    return <Preloader />;
   }
 
   if (error) {
@@ -51,7 +52,7 @@ export function YouTubeComments({
   }
 
   return (
-    <article className="p-4">
+    <article className="p-3 w-full">
       <h1 className="text-2xl text-text-primary font-bold mb-4">{videoText}</h1>
       <p className="block text-text-second mb-4 relative w-fit">
         Cantidad de comentarios:{' '}
@@ -65,13 +66,9 @@ export function YouTubeComments({
         <p className="text-gray-500">No hay comentarios disponibles.</p>
       ) : (
         <div className="">
-          {comments.map((comment, index) => {
+          {comments.map((comment) => {
             return (
-              <div
-                key={comment.id}
-                className="p-4"
-                style={{ background: `${index % 2 === 0 ? '#ddd' : '#ccc'}` }}
-              >
+              <div key={comment.id} className="p-4">
                 <div className="flex items-center gap-2">
                   <img
                     src={
