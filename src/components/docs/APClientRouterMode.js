@@ -6,9 +6,11 @@ import HeaderTitle from '../HeaderTitlte';
 import IndexTitle from '../IndexTitle';
 import LinkButton from '../LinkButton';
 import ImageComponent from '../ImageComponent';
-import CustomModal from '../CustomModal';
+import { CustomModal } from '../CustomModal';
+import { useState } from 'react';
 
 export const APClientRouterMode = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <section className="max-w-800 text-text-primary">
       <HeaderTitle className=" my-6">Configuración Tp Link</HeaderTitle>
@@ -63,12 +65,13 @@ export const APClientRouterMode = () => {
       </p>
       <Pre lang="bash">ncpa.cpl</Pre>
       <p>Damos enter para ejecutar el comando, veremos la siguiente ventana:</p>
-      <CustomModal>
+      <CustomModal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <ImageComponent
           src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-propiedades-red.png?raw=true"
           altImage="Imagen del panel de control (Conexiones de red)"
         />
       </CustomModal>
+
       <p className="paragraph">
         En Red o (Ethernet) hacemos clic derecho sobre el ícono, nos dirijimos a
         propiedades. Dónde está la opción Habilitar el protocolo de Internet

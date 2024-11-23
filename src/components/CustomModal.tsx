@@ -1,30 +1,54 @@
 import React from 'react';
-import Modal from 'react-modal'
+import ReactModal from 'react-modal';
 
 interface ModalProps {
   isOpen?: boolean;
   onClose?: () => void;
-  ImageComp: React.ReactNode;
+  children: React.ReactNode;
+}
+if (typeof window !== 'undefined') {
+  ReactModal.setAppElement('body');
 }
 
-Modal.setAppElement('#root');
+export const CustomModal = ({
+  isOpen = false,
+  onClose,
+  children,
+}: ModalProps) => {
+  const customStyles = {
+    overlay: {
+      backgroundColor: 'rgba(0, 0, 0, 0.75)',
+      zIndex: 1000,
+    },
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      transform: 'translate(-50%, -50%)',
+      padding: '20px',
+      maxWidth: '90vw',
+      maxHeight: '90vh',
+      overflow: 'auto',
+    },
+  };
 
-export const CustomModal = ({ isOpen, onClose, ImageComp }: ModalProps) => {
   return (
-    <Modal
+    <ReactModal
       isOpen={isOpen}
       onRequestClose={onClose}
-      contentLabel="Ampliar Imagen"
+      style={customStyles}
+      contentLabel="Modal"
     >
-      {ImageComp}
-      <button
-        className="my-3 bg-button-variant text-text-variant p-2 rounded-full font-semibold hover:opacity-90"
-        onClick={onClose}
-      >
-        Cerrar
-      </button>
-    </Modal>
+      <div className="flex flex-col items-center">
+        {children}
+        <button
+          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600"
+          onClick={onClose}
+        >
+          Cerrar
+        </button>
+      </div>
+    </ReactModal>
   );
 };
-
-export default CustomModal;
