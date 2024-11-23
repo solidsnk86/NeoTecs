@@ -10,6 +10,7 @@ import { Pre } from '../../components/Pre';
 import { SectionTitle } from '../../components/SectionTitle';
 import { ShareButton } from '../../components/ShareButton';
 import { TitlesContextProvider } from '../../components/TitlesContextProvider';
+import ImageComponent from '../../components/ImageComponent';
 
 export default function UbiquitiDocs() {
   return (
@@ -75,7 +76,7 @@ export default function UbiquitiDocs() {
               <div className="images-client flex justify-left m-auto">
                 <img
                   src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/poe-injector-ubiquiti-poe-24-24w-g-gigabit-removebg-preview.png?raw=true"
-                  alt="imágen menú principal pharos os"
+                  alt="imágen panel de control Windows 10"
                   id="imgAP"
                 />
               </div>
@@ -92,13 +93,10 @@ export default function UbiquitiDocs() {
               <FaSignInAlt className="inline-flex mr-2" />
               enter, veremos la siguiente ventana:
             </p>
-            <div className="images-client">
-              <img
-                src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-propiedades-red.png?raw=true"
-                alt="imágen menú principal pharos os"
-                id="imgAP"
-              />
-            </div>
+            <ImageComponent
+              src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-propiedades-red.png?raw=true"
+              altImage="Panel de control Windows 10"
+            />
             <p>Vamos a "Propiedades".</p>
             <p>
               Luego seleccionamos propiedades del protocolo TCP /IP y colocamos
@@ -110,26 +108,20 @@ export default function UbiquitiDocs() {
               <li>Máscara de sub red:</li>
               <Pre lang="bash">`255.255.255.0`</Pre>
             </ol>
-            <div className="images-client flex justify-center m-auto">
-              <img
-                src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/protocolo-ip-ubiquiti.png?raw=true"
-                alt="imágen menú principal pharos os"
-                id="imgAP"
-              />
-            </div>
+            <ImageComponent
+              src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/protocolo-ip-ubiquiti.png?raw=true"
+              altImage="Propiedades habilitar el protocolo TCP/IP "
+            />
             <SectionTitle title="URL y Login Ubiquiti" />
             <p>Nos dirijimos al navegador y colocamos la url:</p>
             <Pre lang="bash">`htpps://198.168.1.20`</Pre>
             <p>
               Nos aparecera una interfaz para el login de la antena algo así:
             </p>
-            <div className="images-client flex justify-center m-auto">
-              <img
-                src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/protocolo-ip-ubiquiti.png?raw=true"
-                alt="Propiedades panel de control TCP/IPv4."
-                id="imgAP"
-              />
-            </div>
+            <ImageComponent
+              src="https://github.com/solidsnk86/NeoTecs/blob/master/public/images/protocolo-ip-ubiquiti.png?raw=true"
+              altImage="Propiedades panel de control TCP/IPv4."
+            />
             <p>Seleccionamos el país, aceptamos los términos y hacemos...</p>
             <p>
               Click en
@@ -143,15 +135,12 @@ export default function UbiquitiDocs() {
               foto ya está configurada y muestra el estado general de la
               antena.)
             </p>
-            <div className="images-client flex justify-center m-auto">
-              <img
-                src="https://img.community.ui.com/7c899a6c-3b35-47f1-88ca-c35f9cd19a95/questions/2139dfc0-1464-497a-982f-b3011d1f910d/da5c6eb2-ec74-43c5-9757-72721f3546c6"
-                alt="imágen menú inalámbrico pharos os2"
-                id="imgAP"
-              />
-            </div>
+            <ImageComponent
+              src="https://img.community.ui.com/7c899a6c-3b35-47f1-88ca-c35f9cd19a95/questions/2139dfc0-1464-497a-982f-b3011d1f910d/da5c6eb2-ec74-43c5-9757-72721f3546c6"
+              altImage="Menú principal Sistema Operativo Air OS Ubiquiti"
+            />
             <p>
-              Les dejo éste video de configuración UBNT Grid M2 que en sí los
+              Les dejo este video de configuración UBNT Grid M2 que en sí los
               despliegues de la configuración son bastantes parecidos de acuerdo
               a la interfaz del sistema airOS de Ubiquiti; modo estación:
             </p>
@@ -159,7 +148,7 @@ export default function UbiquitiDocs() {
               src="https://www.youtube.com/embed/Q9bFZgllF7k?si=O4xYo-ZCdiM_9sQ5"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen=""
+              allowFullScreen
               className="rounded-lg w-96 h-64 flex justify-center m-auto max-sm:w-[100%]"
             />
             <SectionTitle title="Cambio de contraseña" />
@@ -174,13 +163,10 @@ export default function UbiquitiDocs() {
               establecer. Verificar nueva contraseña: confirme la nueva
               contraseña nuevamente.
             </p>
-            <div className="images-client flex justify-center m-auto">
-              <img
-                src="https://mikrotrik.com/wp-content/uploads/2020/02/ubnt-lite-beam-m5-login-password-change.jpg"
-                alt="imágen menú inalámbrico pharos os2"
-                id="imgAP"
-              />
-            </div>
+            <ImageComponent
+              src="https://mikrotrik.com/wp-content/uploads/2020/02/ubnt-lite-beam-m5-login-password-change.jpg"
+              altImage="Menú configuración cambio de credenciales pharos os2"
+            />
             <p>
               Presione el botón Cambiar y Aplicar desde las ventanas PoP para
               guardar la configuración. Espere hasta que Lite Beam se reinicie y
@@ -256,24 +242,15 @@ export default function UbiquitiDocs() {
               Seleccione
             </span>
             <FaMousePointer className="inline-flex relative left-[-25px] top-[15px] dark:text-[#FFFFFF] border-[#000]" />
-
-            <div className="images-client flex justify-center m-auto">
-              <img
-                src="https://i.imgur.com/wwzwKTO.png"
-                alt="imágen menú inalámbrico pharos os2"
-                id="imgAP"
-              />
-            </div>
+            <ImageComponent
+              src="https://i.imgur.com/wwzwKTO.png"
+              altImage="Menú inalámbrico para seleccionar AP"
+            />
             <p>Tienen que ver una interfaz similar a ésta:</p>
-
-            <div className="images-client flex justify-center m-auto">
-              <img
-                src="http://i.imgur.com/mUZX5Fq.png"
-                alt="imágen menú inalámbrico"
-                id="imgAP"
-              />
-            </div>
-
+            <ImageComponent
+              src="http://i.imgur.com/mUZX5Fq.png"
+              altImage="Ventana de antenas escaneadas con su intesindad de señal, etc"
+            />
             <p>Puede hacer click en el botón:</p>
             <span
               className="bg-[#CCCCCC] ml-1 text-black border-[#000] border-[1px] px-3 py-1 cursor-default mb-2"
