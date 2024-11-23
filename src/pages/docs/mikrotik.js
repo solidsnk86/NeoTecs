@@ -61,7 +61,7 @@ export default function MikrotikDocs() {
             </p>
             <ImageComponent
               src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/imagen-ap-router-propiedades-red.png?raw=true"
-              altImage="Menú principal del CPE"
+              altImage="Panel de control Windos 10 / Conexiones de Red"
             />
             <p>Vamos a "Propiedades"</p>
             <p>
@@ -76,7 +76,7 @@ export default function MikrotikDocs() {
             </ol>
             <ImageComponent
               src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/propiedades-ethernet-mikrotik.png?raw=true"
-              altImage="Url del navegador"
+              altImage="Propiedades para el habilitar el protocolo TCP/IP v4"
             />
             <SectionTitle title="URL Mikrotik" />
             <p>Nos dirijimos al navegador y colocamos la url:</p>
@@ -86,7 +86,7 @@ export default function MikrotikDocs() {
             </p>
             <ImageComponent
               src="https://www.hardreset.info/es/lpb/mikrotik-login-page/mikrotik-routerboard-hex-s-rb760igs.jpeg"
-              altImage="Imagen del menú inalámbrico del CPE"
+              altImage="Router OS Login de Mirotik / Credenciales: usuario y contraseña"
             />
             <p>
               A continuación, en usuario, ponemos (admin) y dejamos en blanco la
@@ -95,7 +95,7 @@ export default function MikrotikDocs() {
             </p>
             <ImageComponent
               src="https://www.technotrade.com.ua/userfiles/images/mikrotik_quickset_2012-10-12/quickset-menu.jpg"
-              altImage="Imagen Menú inalambrico del CPE"
+              altImage="Panel principal después del login / RouterOS Mikrotik"
             />
             <SectionTitle title="Sección Quick Set" />
             <p>
@@ -106,7 +106,7 @@ export default function MikrotikDocs() {
             </p>
             <ImageComponent
               src="https://wiki.mikrotik.com/images/thumb/2/24/Quickset639.png/717px-Quickset639.png?20170728075938"
-              altImage="Imagen del menú inlámbrico"
+              altImage="Quick Set / Configuración rápida del CPE Mikrotik"
             />
             <p>
               Seleccionamos Modo (Router), Address Aquisition: (Automatic),
@@ -134,7 +134,7 @@ export default function MikrotikDocs() {
             </p>
             <ImageComponent
               src="https://github.com/solidsnk86/neotecs.tech/blob/master/img/Web-Fig-Mikrotik.png?raw=true"
-              altImage="Imagen de administración del CPE"
+              altImage="Web Fig / Sección de configuración avanzada de RouterOS Mikrotik"
             />
             <p>
               Una vez dentro de la placa de red de la antena veremos el
@@ -163,7 +163,7 @@ export default function MikrotikDocs() {
               explicativo en mi
               <LinkButton
                 url="https://www.youtube.com/@tutosNeoTecs"
-                color="youtube-link"
+                color="tomato"
                 iconName="Youtube"
               >
                 canal
@@ -171,7 +171,7 @@ export default function MikrotikDocs() {
               . Ante cualquier duda no dudes en escribir al
               <LinkButton
                 url="/docs/feedback"
-                color="text-strong"
+                color="tomato"
                 iconName="MessageSquareWarning"
               >
                 feedback.
