@@ -15,6 +15,7 @@ export const articlesURL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_ARTICLES;
 
 const user = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
 export const youtubeApiKey = user;
+export const channelId = 'PLTmuoTGunlv7T7pyHEzlG2PaqniaVCprL';
 
 export const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
 

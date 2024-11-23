@@ -1,19 +1,24 @@
 import { useState, useEffect } from 'react';
 import { MessageCircle } from 'lucide-react';
+import { DateFormat } from '@/lib/date-formatter';
+import { youtubeApiKey } from './Constants';
 
-export function YouTubeComments() {
+export function YouTubeComments({
+  videoId,
+  videoText,
+}: {
+  videoId: string;
+  videoText: string;
+}) {
   const [comments, setComments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const getYouTubeComments = async () => {
-      const videoId = 'brN50pXmZR8';
-      const apiKey = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
-
       try {
         const response = await fetch(
-          `https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=${videoId}&key=${apiKey}`,
+          `https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=${videoId}&key=${youtubeApiKey}`,
         );
         const data = await response.json();
 
@@ -35,7 +40,7 @@ export function YouTubeComments() {
     };
 
     getYouTubeComments();
-  }, []);
+  }, [videoId]);
 
   if (loading) {
     return <p className="text-text-primary">Cargando comentarios...</p>;
@@ -48,7 +53,7 @@ export function YouTubeComments() {
   return (
     <article className="p-4">
       <h1 className="text-2xl text-text-primary font-bold mb-4">
-        Últimos Comentarios de YouTube
+        Últimos Comentarios del video {videoText}
       </h1>
       <p className="block text-text-second mb-4 relative w-fit">
         Cantidad de comentarios:{' '}
@@ -63,7 +68,6 @@ export function YouTubeComments() {
       ) : (
         <div className="space-y-4">
           {comments.map((comment) => {
-            console.log(comment);
             return (
               <div
                 key={comment.id}
@@ -78,11 +82,21 @@ export function YouTubeComments() {
                     alt={
                       comment.snippet.topLevelComment.snippet.authorDisplayName
                     }
-                    className="w-10 h-10 rounded-full"
+                    className="w-12 h-12 rounded-full"
                   />
-                  <p className="font-bold dark:text-zinc-300 text-zinc-700">
-                    {comment.snippet.topLevelComment.snippet.authorDisplayName}
-                  </p>
+                  <div className="">
+                    <p className="font-bold dark:text-zinc-300 text-zinc-700">
+                      {
+                        comment.snippet.topLevelComment.snippet
+                          .authorDisplayName
+                      }
+                    </p>
+                    <time className="text-text-second text-sm left-0">
+                      {DateFormat.dateAndTime(
+                        comment.snippet.topLevelComment.snippet.updatedAt,
+                      )}
+                    </time>
+                  </div>
                 </div>
                 <div className="block">
                   <p className="mt-2 dark:text-zinc-400 text-zinc-600">

@@ -37,7 +37,7 @@
     "src/components/NavSwicth.js",
     "src/components/utils/WeatherAPI.tsxPI.tsx",
     ".next/types/**/*.ts",
-    "src/pages/docs/comments.js"
+    "src/pages/docs/comments.ts"
   ],
   "exclude": ["node_modules"]
 }
