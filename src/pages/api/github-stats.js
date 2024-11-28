@@ -49,6 +49,12 @@ const getGithubData = async (username) => {
       percentage: '0.0',
     };
 
+    const secondUsedLanguange = languagesArray[1] || {
+      name: 'Sin lenguajes',
+      count: 0,
+      percentage: '0.0',
+    };
+
     const filteredData = {
       user: {
         name: userJson.name,
@@ -83,6 +89,7 @@ const getGithubData = async (username) => {
       filteredData,
       languages: languagesArray,
       mostUsed,
+      secondUsedLanguange,
     };
   } catch (error) {
     throw new Error(`Error al obtener datos de GitHub: ${error.message}`);
@@ -115,6 +122,7 @@ export default async function githubStats(req, res) {
       data: data.filteredData,
       languages: data.languages,
       most_used: data.mostUsed,
+      second_most_used: data.secondUsedLanguange,
     });
   } catch (error) {
     res.status(500).json({
