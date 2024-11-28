@@ -49,7 +49,7 @@ const getGithubData = async (username) => {
       percentage: '0.0',
     };
 
-    const secondUsedLanguage = languagesArray[1] || {
+    const secondUsedLanguage = languagesArray[2] || {
       name: 'Sin lenguajes',
       count: 0,
       percentage: '0.0',
@@ -122,7 +122,7 @@ export default async function githubStats(req, res) {
       data: data.filteredData,
       languages: data.languages,
       most_used: data.mostUsed,
-      second_most_used: data.secondUsedLanguange,
+      second_most_used: data.secondUsedLanguage,
     });
   } catch (error) {
     res.status(500).json({
