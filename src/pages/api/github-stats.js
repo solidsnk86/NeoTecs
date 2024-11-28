@@ -49,7 +49,7 @@ const getGithubData = async (username) => {
       percentage: '0.0',
     };
 
-    const secondUsedLanguange = languagesArray[1] || {
+    const secondUsedLanguage = languagesArray[1] || {
       name: 'Sin lenguajes',
       count: 0,
       percentage: '0.0',
@@ -89,7 +89,7 @@ const getGithubData = async (username) => {
       filteredData,
       languages: languagesArray,
       mostUsed,
-      secondUsedLanguange,
+      secondUsedLanguage,
     };
   } catch (error) {
     throw new Error(`Error al obtener datos de GitHub: ${error.message}`);
