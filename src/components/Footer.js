@@ -58,7 +58,7 @@ export const Footer = () => {
             { name: 'Contacto', href: 'mailto:tutosneotecs@gmail.com' },
             { name: 'YouTube', href: 'https://www.youtube.com/@tutosNeoTecs' },
             { name: 'GitHub', href: 'https://github.com/solidsnk86' },
-            { name: 'Blog', href: 'https://portfolio-mgc.vercel.app/blog' },
+            { name: 'Blog', href: 'https://calcagni-gabriel.app/blog' },
             {
               name: (
                 <>
