@@ -10,7 +10,7 @@ export default function FeedBack() {
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
   const [comentario, setComentario] = useState('');
-  const [MAX_CHAR, setMaxChar] = useState(160);
+  const [MAX_CHAR] = useState(160);
   const [count, setCount] = useState(0);
   const {
     handleSubmit,
