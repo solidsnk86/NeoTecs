@@ -1,17 +1,19 @@
 import LinkButton from './LinkButton';
 import { SharerComponent } from './SharerComponent';
 
+interface ArticleProps {
+  title: string;
+  content: string;
+  src: string;
+  publishedAt: string;
+}
+
 export const Articles = ({
   title,
   content,
   src,
   publishedAt,
-}: {
-  title: string;
-  content: string;
-  src: string;
-  publishedAt: number;
-}) => {
+}: ArticleProps) => {
   return (
     <article className="relative p-2">
       <div className="article-card h-[350px] relative text-left text-wrap space-y-2 dark:bg-[#09090B] bg-[#FFFFFF] p-4 rounded-lg border dark:border-zinc-900 shadow-sm shadow-slate-200 dark:!shadow z-50">

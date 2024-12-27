@@ -1,54 +1,84 @@
 import { useState, useEffect } from 'react';
-import { youtubeApiKey } from './Constants';
 import { DateFormat } from '@/lib/date-formatter';
 
+interface YouTubeData {
+  data?: {
+    snippet?: {
+      publishedAt?: string;
+    };
+    statistics?: {
+      viewCount: string;
+    };
+  };
+}
+
 export const DescriptionViews = ({ videoId }: { videoId: string }) => {
-  const [views, setViews] = useState(0);
-  const [datePublished, setDatePublished] = useState('');
+  const [views, setViews] = useState<number>(0);
+  const [datePublished, setDatePublished] = useState<string>('');
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string>('');
 
   useEffect(() => {
-    const getVideoDetails = async () => {
+    const getApiData = async () => {
       try {
-        const response = await fetch(
-          `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${videoId}&key=${youtubeApiKey}`,
-        );
-        if (!response.ok) {
+        setIsLoading(true);
+        const res = await fetch(`/api/youtube-stats?videoId=${videoId}`);
+
+        if (!res.ok) {
           throw new Error('Error al obtener datos');
         }
-        const data = await response.json();
 
-        if (data.items && data.items.length > 0) {
-          const video = data.items[0];
-          const youtubeViews = video.statistics.viewCount;
-          const youtubeDatePublished = video.snippet.publishedAt;
+        const data: YouTubeData = await res.json();
 
-          setViews(youtubeViews);
-          setDatePublished(youtubeDatePublished);
-        } else {
-          console.error(
-            'No se encontraron datos del video en la respuesta de la API de YouTube',
-          );
+        if (data.data?.statistics?.viewCount) {
+          setViews(parseInt(data.data.statistics.viewCount, 10));
         }
-      } catch (error) {
-        console.error('Error al obtener los detalles del video:', error);
+
+        if (data.data?.snippet?.publishedAt) {
+          setDatePublished(data.data.snippet.publishedAt);
+        }
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Error desconocido');
+      } finally {
+        setIsLoading(false);
       }
     };
 
-    getVideoDetails();
+    if (videoId) {
+      getApiData();
+    }
   }, [videoId]);
 
-  const formatView = () => {
-    if (views >= 1000) {
-      const formattedViews = (views / 1000).toFixed(1);
-      return formattedViews.replace(/.0/, '') + 'K';
+  const formatView = (viewCount: number): string => {
+    if (viewCount >= 1000000) {
+      const formattedViews = (viewCount / 1000000).toFixed(1);
+      return formattedViews.replace(/.0$/, '') + 'M';
     }
-    return views.toString();
+    if (viewCount >= 1000) {
+      const formattedViews = (viewCount / 1000).toFixed(1);
+      return formattedViews.replace(/.0$/, '') + 'K';
+    }
+    return viewCount.toString();
   };
+
+  if (isLoading) {
+    return <div>Cargando...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  if (!views && !datePublished) {
+    return null;
+  }
 
   return (
     <div className="text-left my-1 font-bold">
-      <span>{formatView()} Vistas</span>
-      <time> · Publicado el {DateFormat.date(datePublished)}</time>
+      <span>{formatView(views)} Vistas</span>
+      {datePublished && (
+        <time> · Publicado el {DateFormat.date(datePublished)}</time>
+      )}
     </div>
   );
 };

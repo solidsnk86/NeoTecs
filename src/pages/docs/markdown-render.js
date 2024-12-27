@@ -59,8 +59,8 @@ export default function MarkDownRender() {
             <li>Para empezar vamos a instalar las siguientes dependencias:</li>
             <Pre lang="bash">{
               /*bash */ `
-                            npm install react-markdown
-                            `
+              npm install react-markdown
+              `
             }</Pre>
             <li>
               Para importar los estilos de GitHub, tienes que importarlo en tu
@@ -68,32 +68,32 @@ export default function MarkDownRender() {
             </li>
             <Pre lang="javascript">{
               /*javascript */ `
-                            @import 'github-markdown-css';
-                            `
+              @import 'github-markdown-css';
+              `
             }</Pre>
             <li>Personaliza los estilos adicionales a tu gusto:</li>
             <Pre lang="css">{
               /*css */ `
-                            .markdown-body {
-                                box-sizing: border-box;
-                                min-width: 200px;
-                                max-width: 980px;
-                                margin: 0 auto;
-                                padding: 45px;
-                            }
-                            `
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+            `
             }</Pre>
             <li>
               Para agregar estilos aplicamos un className en nuestro componente:
             </li>
             <Pre lang="javascript">{
               /*javascript */ `
-                            return (
-                                <div className="markdown-body">
-                                  <ReactMarkdown>{markdownContent}</ReactMarkdown>
-                                </div>
-                              );
-                            `
+            return (
+            <div className="markdown-body">
+              <ReactMarkdown>{markdownContent}</ReactMarkdown>
+            </div>
+            );
+            `
             }</Pre>
           </ol>
           <SectionTitle title="Estilos MarkDown" />
