@@ -1,9 +1,8 @@
 import { ArrowLeftIcon } from 'lucide-react';
-import { Button } from '@nextui-org/button';
 import { Footer } from '../../components/Footer';
 import { Nav } from '../../components/Nav';
 import { ToastContainer, toast } from 'react-toastify';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -11,6 +10,8 @@ export default function FeedBack() {
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
   const [comentario, setComentario] = useState('');
+  const [MAX_CHAR, setMaxChar] = useState(160);
+  const [count, setCount] = useState(0);
   const {
     handleSubmit,
     formState: { isSubmitting },
@@ -69,6 +70,15 @@ export default function FeedBack() {
     textarea.addEventListener('input', adjustHeight);
   };
 
+  useEffect(() => {
+    function getChar() {
+      const wordCount = comentario.split('').length;
+      setCount(MAX_CHAR - wordCount);
+    }
+
+    getChar();
+  }, [MAX_CHAR, comentario]);
+
   return (
     <>
       <Nav className="fixed xl:relative w-full z-50" />
@@ -89,10 +99,10 @@ export default function FeedBack() {
           Feedback
         </h1>
         <p className="bg-[#F7F9F9] dark:bg-[#16181C] border-zinc-200/50 dark:border-zinc-800 border rounded p-3 text-text-primary text-xs xl:text-sm shadow-md shadow-slate-200/80 dark:!shadow relative">
-          "¿Podrías proporcionarme tus comentarios sobre la página web? ¿Hiciste
+          ¿Podrías proporcionarme tus comentarios sobre la página web? ¿Hiciste
           alguna observación de errores o inconvenientes? No dudes en compartir
           todas tus dudas y preocupaciones. Estoy aquí para ayudarte y mejorar
-          la experiencia en línea."
+          la experiencia en línea.
         </p>
         <div className="bg-[#F7F9F9] dark:bg-[#16181C] border border-zinc-200/50 dark:border-zinc-800 p-5 rounded space-y-3 shadow-md shadow-slate-200/80 dark:!shadow text-xs xl:text-sm relative">
           <label className="label-feedback">
@@ -120,21 +130,22 @@ export default function FeedBack() {
             <textarea
               value={comentario}
               id="text-area"
-              onInput={(e) => resizeTextArea(e)}
+              onInput={resizeTextArea}
               onChange={(e) => setComentario(e.target.value)}
               placeholder="Comentario..."
-              className="h-auto overflow-y-hidden resize-y"
-              maxLength={120}
+              className="resize-none overflow-hidden"
+              maxLength={MAX_CHAR}
             />
+            <small className="">Caracteres: {count}</small>
           </label>
 
-          <Button
+          <button
             className="flex justify-center mx-auto px-3 py-1 font-semibold outline-4 outline-offset-2 outline-lime-400 rounded-md bg-button-variant shadow-sm shadow-zinc-400 dark:!shadow text-text-variant hover:opacity-90"
             type="submit"
             disabled={isSubmitting}
           >
             {isSubmitting ? 'Enviando...' : 'Enviar'}
-          </Button>
+          </button>
         </div>
       </form>
       <Footer />
