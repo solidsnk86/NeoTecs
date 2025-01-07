@@ -150,7 +150,7 @@ export default function Home() {
             Ingresa a esta sección de mi portafolio para ver tus estadísticas:
           </p>
         </div>
-        <Link>https://calcagni-gabriel.vercel.app/</Link>
+        <Link>https://calcagni-gabriel.vercel.app/github-stats</Link>
       </HomeBlock>
 
       <Footer />
