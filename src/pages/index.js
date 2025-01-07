@@ -10,7 +10,6 @@ import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import ArticleData from '../components/ArticleData';
 import Link from 'next/link';
 import { WeatherAPI } from '../components/WeatherAPI';
-import { GithubSearch } from '../components/GithubUsersStats';
 
 export const HomeBlock = ({ children, className = '' }) => {
   return (
@@ -147,9 +146,11 @@ export default function Home() {
             Descubre cuál es tu lenguaje de programación más utilizado y más con
             esta herramienta.
           </p>
+          <p>
+            Ingresa a esta sección de mi portafolio para ver tus estadísticas:
+          </p>
         </div>
-
-        <GithubSearch />
+        <Link>https://calcagni-gabriel.vercel.app/</Link>
       </HomeBlock>
 
       <Footer />
