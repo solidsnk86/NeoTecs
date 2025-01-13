@@ -25,13 +25,17 @@ export default function SupabaseDB() {
   };
 
   const getLocation = async () => {
-    const prov = await GetLocation.province();
+    const prov = await GetLocation.city();
     const coun = await GetLocation.country();
     setoLocation({
       province: prov,
       country: coun,
     });
   };
+
+  useEffect(() => {
+    getLocation();
+  }, []);
 
   const sendNote = async () => {
     const noteInput = noteInputRef.current;
@@ -87,7 +91,6 @@ export default function SupabaseDB() {
 
   useEffect(() => {
     updateData();
-    getLocation();
   }, []);
 
   const handleEdit = (id) => {
