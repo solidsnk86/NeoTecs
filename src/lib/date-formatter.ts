@@ -1,5 +1,9 @@
+interface DateFormatProps {
+  ts: Date | string;
+}
+
 export class DateFormat {
-  public static dateAndTime(ts: Date | string) {
+  public static dateAndTime({ ts }: DateFormatProps) {
     const date = new Date(ts).toLocaleDateString('es-ES', {
       year: 'numeric',
       month: 'short',
@@ -10,7 +14,7 @@ export class DateFormat {
     return date;
   }
 
-  public static date(ts: Date | string) {
+  public static date({ ts }: DateFormatProps) {
     const date = new Date(ts).toLocaleDateString('es-ES', {
       year: 'numeric',
       month: 'short',
@@ -19,7 +23,7 @@ export class DateFormat {
     return date;
   }
 
-  public static time(ts: Date | string) {
+  public static time({ ts }: DateFormatProps) {
     const date = new Date(ts).toLocaleTimeString('es-ES', {
       hour: '2-digit',
       minute: '2-digit',

@@ -9,7 +9,6 @@ import {
   Ruler,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { apiKey } from './Constants';
 import { Weather } from './Weather';
 
 export const WeatherAPI = () => {
@@ -34,7 +33,7 @@ export const WeatherAPI = () => {
     };
 
     const fetchData = async () => {
-      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${obj.latitude}&lon=${obj.longitude}&appid=${apiKey}`;
+      const url = `https://solid-geolocation.vercel.app/weather?latitude=${obj.latitude}&longitude=${obj.longitude}`;
 
       try {
         const res = await fetch(url);

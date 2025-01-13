@@ -17,8 +17,6 @@ const user = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
 export const youtubeApiKey = user;
 export const channelId = 'PLTmuoTGunlv7T7pyHEzlG2PaqniaVCprL';
 
-export const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
-
 export const cardContent = [
   {
     id: crypto.randomUUID(),
@@ -147,8 +145,6 @@ export const aboutNeo = `
 export const shareText = `
   No te pierdas este tutorial gratuito para aprender a programar con ejemplos y ejercicios prácticos,
   también incluye contenido de como configurar tu antena inalámbrica para la provicnia de San Luis 📡!!`;
-
-export const microlink = 'https://geolocation.microlink.io';
 
 export const compartirWhatsapp = () => {
   const url = window.location.href;
