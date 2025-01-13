@@ -9,7 +9,7 @@ import { SupabaseExample } from '../../components/SupabaseExample';
 import { Notes } from '../../Model/ModelNotes';
 import { DateFormat } from '@/lib/date-formatter';
 import { Footer } from '../../components/Footer';
-import { GetLocation } from '../../components/GetLocation';
+import { GetLocation } from '@/lib/GetLocation';
 
 export default function SupabaseDB() {
   const [notes, setNotes] = useState([]);
