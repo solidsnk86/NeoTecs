@@ -56,7 +56,7 @@ export default function Tracker() {
     };
 
     fetchData();
-  }, [lastVisit, visitData]);
+  }, []);
 
   const getLastVisit = async () => {
     const response = await fetch('/api/visit-data');
