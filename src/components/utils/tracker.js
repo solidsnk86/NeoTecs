@@ -15,7 +15,7 @@ export default function Tracker() {
   const [lastVisit, setLastVisit] = useState([]);
 
   const sendDataToSupabase = async (objData) => {
-    return await fetch('/api/send-visit-data', {
+    await fetch('/api/send-visit-data', {
       method: 'POST',
       body: JSON.stringify(objData),
     });
@@ -41,7 +41,7 @@ export default function Tracker() {
           const currentIP = jsonData.ip;
 
           if (lastVisit.ip !== currentIP) {
-            sendDataToSupabase(jsonData);
+            sendDataToSupabase(visitData);
           }
         } else {
           console.error(
@@ -56,7 +56,7 @@ export default function Tracker() {
     };
 
     fetchData();
-  }, []);
+  }, [lastVisit, visitData]);
 
   const getLastVisit = async () => {
     const response = await fetch('/api/visit-data');
