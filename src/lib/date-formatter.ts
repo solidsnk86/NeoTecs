@@ -6,7 +6,7 @@ export class DateFormat {
   public static dateAndTime({ ts }: DateFormatProps) {
     const date = new Date(ts).toLocaleDateString('es-ES', {
       year: 'numeric',
-      month: 'short',
+      month: 'long',
       day: '2-digit',
       hour: '2-digit',
       minute: '2-digit',

@@ -9,7 +9,9 @@ export default async function handler(req, res) {
       .insert([{ nombre, email, comentario }]);
 
     if (!data) {
-      console.error('No fue posible enviar los datos', error);
+      return res
+        .status(400)
+        .json({ message: 'No se pudo enviar los datos', error });
     }
 
     return res.status(200).json({ success: true, data });
