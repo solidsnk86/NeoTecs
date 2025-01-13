@@ -1,54 +1,29 @@
 import { useState, useEffect } from 'react';
-
 import { DateFormat } from '@/lib/date-formatter';
+import { GetLocation } from '@/lib/GetLocation';
+import { sendDataToSupabase } from './send-data';
 
 export default function Tracker() {
-  const [visitData, setVisitData] = useState({
-    latitude: 0,
-    longitude: 0,
-    postal_code: '',
-    city_name: '',
-    country_name: '',
-    country_flag: '',
-    ip: '',
-  });
+  const [visitData, setVisitData] = useState({});
   const [lastVisit, setLastVisit] = useState([]);
-
-  const sendDataToSupabase = async (objData) => {
-    await fetch('/api/send-visit-data', {
-      method: 'POST',
-      body: JSON.stringify(objData),
-    });
-  };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(
-          'https://solid-geolocation.vercel.app/location',
-        );
-        if (res.ok) {
-          const jsonData = await res.json();
-          setVisitData({
-            latitude: jsonData.coords.latitude,
-            longitude: jsonData.coords.longitude,
-            postal_code: jsonData.city.postal_code,
-            city_name: jsonData.city.name,
-            country_name: jsonData.country.name,
-            country_flag: jsonData.country.emoji_flag,
-            ip: jsonData.ip,
-          });
-          const currentIP = jsonData.ip;
+        const newVisitData = {
+          latitude: await GetLocation.latitude(),
+          longitude: await GetLocation.longitude(),
+          postal_code: await GetLocation.postalCode(),
+          city_name: await GetLocation.city(),
+          country_name: await GetLocation.country(),
+          country_flag: await GetLocation.flag(),
+          ip: await GetLocation.ip(),
+        };
 
-          if (lastVisit.ip !== currentIP) {
-            sendDataToSupabase(visitData);
-          }
-        } else {
-          console.error(
-            'Error fetching visit data:',
-            res.status,
-            res.statusText,
-          );
+        setVisitData(newVisitData);
+
+        if (lastVisit.ip !== newVisitData.ip) {
+          await sendDataToSupabase(newVisitData);
         }
       } catch (error) {
         console.error('Error fetching visit data:', error);
@@ -56,13 +31,18 @@ export default function Tracker() {
     };
 
     fetchData();
-  }, []);
+  }, [lastVisit.ip]);
 
   const getLastVisit = async () => {
-    const response = await fetch('/api/visit-data');
-    if (!response.ok) console.error('Cannot get api data', response.statusText);
-    const data = await response.json();
-    setLastVisit(data.dataDB[0]);
+    try {
+      const response = await fetch('/api/visit-data');
+      if (!response.ok)
+        throw new Error('Cannot get api data: ' + response.statusText);
+      const data = await response.json();
+      setLastVisit(data.dataDB[0]);
+    } catch (error) {
+      console.error('Error getting last visit:', error);
+    }
   };
 
   useEffect(() => {
