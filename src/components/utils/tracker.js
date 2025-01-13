@@ -1,5 +1,4 @@
 import { useState, useEffect, useMemo } from 'react';
-import { microlink } from '../../components/Constants';
 import supabase from './supabase';
 import { useRouter } from 'next/router';
 
@@ -13,8 +12,6 @@ function dateFormated(string) {
   });
   return date;
 }
-
-// const IP1 = process.env.NEXT_PUBLIC_DATA_IP_1;
 const IP2 = process.env.NEXT_PUBLIC_DATA_IP_2;
 
 export default function Tracker() {
@@ -45,24 +42,26 @@ export default function Tracker() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(microlink);
+        const res = await fetch(
+          'https://solid-geolocation.vercel.app/location',
+        );
         if (res.ok) {
           const jsonData = await res.json();
           setVisitData({
             city: {
               name: jsonData.city.name,
-              postalCode: jsonData.city.postalCode,
+              postalCode: jsonData.city.postal_code,
             },
             country: {
               name: jsonData.country.name,
-              flag: jsonData.country.flag,
+              flag: jsonData.country.emoji_flag,
             },
             ip: {
-              address: jsonData.ip.address,
+              address: jsonData.ip,
             },
             coordinates: {
-              latitude: jsonData.coordinates.latitude,
-              longitude: jsonData.coordinates.longitude,
+              latitude: jsonData.coords.latitude,
+              longitude: jsonData.coords.longitude,
             },
           });
           if (
