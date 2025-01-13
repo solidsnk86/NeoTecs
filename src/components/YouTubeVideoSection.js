@@ -1,5 +1,4 @@
 import { YouTubeVideo } from './YouTubeVideo';
-import { VideoLikes } from './VideoLikes';
 import { DescriptionViews } from './DescriptionViews';
 
 export function YouTubeVideoSection() {
@@ -28,7 +27,6 @@ export function YouTubeVideoSection() {
     <div className="grid grid-cols-1 gap-[14px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center justify-center my-8 flex-wrap relative z-50">
       {videos.map(({ video, cpe, children }) => (
         <YouTubeVideo key={video} video={video} cpe={cpe}>
-          <VideoLikes videoId={video} cpe={cpe} />
           <div className="bg-card-bg border border-gray-200 dark:border-zinc-800/50 rounded-lg p-2 my-2 description-videos">
             <DescriptionViews videoId={video} />
             {children}
