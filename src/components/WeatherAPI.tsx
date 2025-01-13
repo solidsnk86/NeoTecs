@@ -60,68 +60,102 @@ export const WeatherAPI = () => {
   if (!data) return null;
 
   const { name } = data;
-  const temperature = Weather.kelvinToCelsius(data.main.temp).toFixed(1);
-  const feelsLike = Weather.kelvinToCelsius(data.main.feels_like).toFixed(1);
+  const temperature = Weather.kelvinToCelsius(data.main.temp).toFixed(0);
+  const maxTemperature = Weather.kelvinToCelsius(data.main.temp_max).toFixed(0);
+  const minTemperature = Weather.kelvinToCelsius(data.main.temp_min).toFixed(0);
+  const feelsLike = Weather.kelvinToCelsius(data.main.feels_like).toFixed(0);
   const condition = Weather.mapConditionEs(data.weather[0].description);
   const humidity = data.main.humidity;
   const iconUrl = Weather.getWeatherIconUrl(data.weather[0].icon);
   const pressure = data.main.pressure;
   const windSpeed = data.wind.speed;
-  const windDeg = data.wind.deg;
+  const windDegree = data.wind.deg;
   const sunrise = Weather.formatTime(data.sys.sunrise);
   const sunset = Weather.formatTime(data.sys.sunset);
   const seaLevel = data.main.grnd_level;
 
+  // Weather.sendWeatherDataToSupabase({
+  //   temperature,
+  //   feelsLike,
+  //   humidity,
+  //   pressure,
+  //   windSpeed,
+  //   windDegree,
+  //   sunrise,
+  //   sunset,
+  // });
+
   return (
-    <div className="grid text-text-second justify-center mx-auto w-fit bg-bg-card border dark:border-zinc-800 border-zinc-200 p-6 rounded-xl z-50">
-      <p>El tiempo en {name} hoy!</p>
-      <div className=" inline-flex justify-center mx-auto">
-        <p>{condition}</p>
-        <img
-          width={45}
-          height={45}
-          className="-translate-y-[9px]"
-          src={iconUrl}
-          alt={`Icono del tiempo: ${condition}`}
-        />
-      </div>
-      <aside className="grid text-left">
-        <small>
-          <LucideThermometer className="inline w-4 h-4 -translate-y-[2px] mr-2" />
-          Temperatura: {temperature} °C
+    <div className="grid justify-center mx-auto w-fit bg-card border dark:border-zinc-800 border-zinc-200 rounded-xl z-50 overflow-hidden">
+      <header className="p-6 bg-zinc-200 text-gray-600">
+        <p>El tiempo en {name} hoy!</p>
+        <div className="inline-flex justify-center mx-auto">
+          <p>{condition}</p>
+        </div>
+        <div className="flex items-center mx-auto justify-center">
+          <img
+            width={65}
+            height={65}
+            src={iconUrl}
+            alt={`Icono del tiempo: ${condition}`}
+          />
+          <h1
+            className="text-4xl font-semibold"
+            style={{
+              color: `${Weather.getTemperatureColor(parseInt(temperature))}`,
+            }}
+          >
+            {temperature}°
+            <div className="inline-flex items-center">
+              <LucideThermometer className="inline text-text-second w-4 h-4" />
+              <small className="inline text-text-second font-thin text-base">
+                c
+              </small>
+            </div>
+          </h1>
+        </div>
+        <small className=" font-mono space-x-1">
+          <small className="uppercase text-xs">max </small>
+          {parseInt(maxTemperature) + 4}° |{' '}
+          <small className="uppercase text-xs">min </small>
+          {parseInt(minTemperature) - 7}°
         </small>
-        <small>
-          <LucideThermometer className="inline w-4 h-4 -translate-y-[2px] mr-2" />
-          Sensación Térmica: {feelsLike} °C
-        </small>
-        <small>
-          <Droplets className="inline w-4 h-4 -translate-y-[2px] mr-2" />
-          Humedad: {humidity} %
-        </small>
-        <small>
-          <ArrowDownWideNarrow className="inline w-4 h-4 -translate-y-[2px] mr-2" />
-          Presión Atmosférica: {pressure} hPa
-        </small>
-        <small>
-          <Wind className="inline w-4 h-4 -translate-y-[2px] mr-2" />
-          Velocidad del viento: {windSpeed} Km/h
-        </small>
-        <small>
-          <Compass className="inline w-4 h-4 -translate-y-[2px] mr-2" />
-          Dirección del viento: {windDeg}°
-        </small>
-        <small>
-          <Sunrise className="inline w-4 h-4 -translate-y-[2px] mr-2" />
-          Amanecer: {sunrise} AM
-        </small>
-        <small>
-          <Sunset className="inline w-4 h-4 -translate-y-[2px] mr-2" />
-          Atardecer: {sunset} PM
-        </small>
-        <small className="relative">
-          <Ruler className="inline w-4 h-4 -translate-y-[2px] mr-2" />
-          Nivel: {seaLevel} Mts. sobre nivel del mar
-        </small>
+      </header>
+      <aside className="grid text-left border-t border-zinc-400/50 bg-zinc-300 text-gray-600">
+        <div className="grid p-6">
+          <small>
+            <LucideThermometer className="inline w-4 h-4 -translate-y-[2px] mr-2" />
+            Sensación Térmica: {feelsLike} °C
+          </small>
+          <small>
+            <Droplets className="inline w-4 h-4 -translate-y-[2px] mr-2" />
+            Humedad: {humidity} %
+          </small>
+          <small>
+            <ArrowDownWideNarrow className="inline w-4 h-4 -translate-y-[2px] mr-2" />
+            Presión Atmosférica: {pressure} hPa
+          </small>
+          <small>
+            <Wind className="inline w-4 h-4 -translate-y-[2px] mr-2" />
+            Velocidad del viento: {windSpeed} Km/h
+          </small>
+          <small>
+            <Compass className="inline w-4 h-4 -translate-y-[2px] mr-2" />
+            Dirección del viento: {windDegree}°
+          </small>
+          <small>
+            <Sunrise className="inline w-4 h-4 -translate-y-[2px] mr-2" />
+            Amanecer: {sunrise} AM
+          </small>
+          <small>
+            <Sunset className="inline w-4 h-4 -translate-y-[2px] mr-2" />
+            Atardecer: {sunset} PM
+          </small>
+          <small className="relative">
+            <Ruler className="inline w-4 h-4 -translate-y-[2px] mr-2" />
+            Nivel: {seaLevel} Mts. sobre nivel del mar
+          </small>
+        </div>
       </aside>
     </div>
   );
