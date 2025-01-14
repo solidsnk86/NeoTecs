@@ -142,7 +142,7 @@ export default function Home() {
           Explora tus estadísticas de GitHub
         </HomeBlockTitle>
 
-        <div className="flex justify-center mx-auto bg-bg-card w-fit px-4 py-1 border border-zinc-800 rounded-md z-50">
+        <div className="flex relative justify-center mx-auto bg-bg-card w-fit px-4 py-1 border border-zinc-200 dark:border-zinc-800 rounded-md z-50">
           <p>
             Descubre cuál es tu lenguaje de programación más utilizado y más con
             esta herramienta. Ingresa a esta sección de mi portafolio para ver
