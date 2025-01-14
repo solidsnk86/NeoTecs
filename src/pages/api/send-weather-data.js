@@ -1,26 +1,17 @@
 import supabase from '../../components/utils/supabase';
 
 export default async function sendWeatherData(req, res) {
-  const {
-    temperature,
-    feelsLike,
-    humidity,
-    pressure,
-    windSpeed,
-    windDegree,
-    sunrise,
-    sunset,
-  } = req.body;
+  const { temp, feels, humi, press, speed, degree, sunri, suns } = req.body;
 
   const objData = {
-    temperature: temperature,
-    feels_like: feelsLike,
-    humidity: humidity,
-    pressure: pressure,
-    wind_speed: windSpeed,
-    wind_degree: windDegree,
-    sunrise: sunrise,
-    sunset: sunset,
+    temperature: temp,
+    feels_like: feels,
+    humidity: humi,
+    pressure: press,
+    wind_speed: speed,
+    wind_degree: degree,
+    sunrise: sunri,
+    sunset: suns,
   };
 
   if (req.method === 'POST') {

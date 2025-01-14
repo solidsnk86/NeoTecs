@@ -96,21 +96,23 @@ export const WeatherAPI = () => {
           <h1
             className="text-4xl font-bold"
             style={{
-              color: `${Weather.getTemperatureColor(parseInt(temperature))}`,
+              color: `${Weather.getTemperatureColor(
+                parseInt(temperature, 10),
+              )}`,
             }}
           >
             {temperature}°
           </h1>
           <Thermometer
             temperature={temperature}
-            color={Weather.getTemperatureColor(parseInt(temperature))}
+            color={Weather.getTemperatureColor(parseInt(temperature, 10))}
           />
         </div>
         <small className="font-semibold font-mono space-x-1">
           <small className="uppercase text-xs">max </small>
-          {parseInt(maxTemperature) + 4}° |{' '}
+          {parseInt(maxTemperature, 10) + 4}° |{' '}
           <small className="uppercase text-xs">min </small>
-          {parseInt(minTemperature) - 7}°
+          {parseInt(minTemperature, 10) - 7}°
         </small>
       </header>
       <aside className="grid text-left border-t border-zinc-400/50 dark:border-zinc-700/50 bg-zinc-200 dark:bg-zinc-800 dark:text-gray-300 text-zinc-800">

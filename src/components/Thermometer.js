@@ -82,7 +82,7 @@ export const Thermometer = ({ temperature, color, className = '' }) => {
       />
 
       {/* Marcas de temperatura */}
-      {[0, 25, 50, 75, 100].map((mark, index) => (
+      {[0, 25, 50, 75, 100].map((mark) => (
         <g key={mark}>
           <line
             x1="45"

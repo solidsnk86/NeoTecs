@@ -6,25 +6,22 @@ export default function Tracker() {
   const [visitData, setVisitData] = useState({});
   const [lastVisit, setLastVisit] = useState([]);
 
-  const sendDataToSupabase = async (objData) => {
-    try {
-      const response = await fetch('/api/send-visit-data', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(objData),
-      });
+  async function sendDataToSupabase(objData) {
+    const response = await fetch('/api/send-visit-data', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(objData),
+    });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      return await response.json();
-    } catch (error) {
-      console.error('Error sending data:', error);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
-  };
+    const data = await response.json();
+
+    return data;
+  }
 
   useEffect(() => {
     const fetchData = async () => {
