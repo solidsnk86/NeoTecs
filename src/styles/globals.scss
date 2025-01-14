@@ -109,7 +109,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--color-surface);
   scroll-behavior: smooth;
-  z-index: 1;
+  z-index: -1;
 }
 
 body::before {

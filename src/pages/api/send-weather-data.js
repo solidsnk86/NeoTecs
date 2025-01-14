@@ -25,7 +25,9 @@ export default async function sendWeatherData(req, res) {
 
   if (req.method === 'POST') {
     try {
-      const { error } = await supabase.from('weather_data').insert([objData]);
+      const { error } = await supabase
+        .from('weather_data')
+        .insert([JSON.parse(objData)]);
 
       if (error) {
         res.status(400).json({

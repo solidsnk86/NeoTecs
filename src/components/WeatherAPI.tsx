@@ -7,12 +7,14 @@ import {
   Sunrise,
   Sunset,
   Ruler,
+  ArrowUpIcon,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Weather } from './Weather';
+import { WeatherResponse } from '@/types/definitions';
 
 export const WeatherAPI = () => {
-  const [data, setData] = useState<any>([]);
+  const [data, setData] = useState<WeatherResponse>();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [obj, setObjetc] = useState({
@@ -74,6 +76,23 @@ export const WeatherAPI = () => {
   const sunset = Weather.formatTime(data.sys.sunset);
   const seaLevel = data.main.grnd_level;
 
+  const dataArr = [];
+  dataArr.push(
+    temperature,
+    maxTemperature,
+    minTemperature,
+    feelsLike,
+    condition,
+    humidity,
+    iconUrl,
+    pressure,
+    windSpeed,
+    windDegree,
+    sunrise,
+    sunset,
+    seaLevel,
+  );
+
   // Weather.sendWeatherDataToSupabase({
   //   temperature,
   //   feelsLike,
@@ -86,8 +105,11 @@ export const WeatherAPI = () => {
   // });
 
   return (
-    <div className="grid justify-center mx-auto w-fit bg-card border dark:border-zinc-800 border-zinc-200 rounded-xl z-50 overflow-hidden">
-      <header className="p-6 bg-zinc-200 text-gray-600">
+    <div
+      className="grid justify-center mx-auto w-fit bg-card border dark:border-zinc-800 border-zinc-200 rounded-xl overflow-hidden"
+      style={{ zIndex: 2 }}
+    >
+      <header className="p-6 bg-zinc-200 dark:bg-zinc-900 text-gray-600 dark:text-gray-300 font-semibold">
         <p>El tiempo en {name} hoy!</p>
         <div className="inline-flex justify-center mx-auto">
           <p>{condition}</p>
@@ -100,7 +122,7 @@ export const WeatherAPI = () => {
             alt={`Icono del tiempo: ${condition}`}
           />
           <h1
-            className="text-4xl font-semibold"
+            className="text-4xl font-bold"
             style={{
               color: `${Weather.getTemperatureColor(parseInt(temperature))}`,
             }}
@@ -114,14 +136,14 @@ export const WeatherAPI = () => {
             </div>
           </h1>
         </div>
-        <small className=" font-mono space-x-1">
+        <small className="font-semibold font-mono space-x-1">
           <small className="uppercase text-xs">max </small>
           {parseInt(maxTemperature) + 4}° |{' '}
           <small className="uppercase text-xs">min </small>
           {parseInt(minTemperature) - 7}°
         </small>
       </header>
-      <aside className="grid text-left border-t border-zinc-400/50 bg-zinc-300 text-gray-600">
+      <aside className="grid text-left border-t border-zinc-400/50 dark:border-zinc-700 bg-zinc-300 dark:bg-zinc-800 dark:text-gray-300 text-gray-600">
         <div className="grid p-6">
           <small>
             <LucideThermometer className="inline w-4 h-4 -translate-y-[2px] mr-2" />
@@ -139,9 +161,9 @@ export const WeatherAPI = () => {
             <Wind className="inline w-4 h-4 -translate-y-[2px] mr-2" />
             Velocidad del viento: {windSpeed} Km/h
           </small>
-          <small>
-            <Compass className="inline w-4 h-4 -translate-y-[2px] mr-2" />
-            Dirección del viento: {windDegree}°
+          <small className="items-center">
+            <Compass className="inline w-4 h-4 -translate-y-[2px] mr-2 -rotate-45" />
+            Dirección del viento: {windDegree}°{' '}
           </small>
           <small>
             <Sunrise className="inline w-4 h-4 -translate-y-[2px] mr-2" />
