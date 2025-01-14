@@ -97,7 +97,7 @@ export default function Home() {
 
       <HomeBlock>
         <HomeBlockTitle>Acerca de NeoTecs</HomeBlockTitle>
-        <div className="cards text-zinc-200 rounded-[13px] p-4 hover:bg-opacity-70 duration-200 z-40">
+        <div className="cards text-zinc-200 rounded-[13px] p-4">
           <article className=" z-50">
             <p className="text-zinc-400">{aboutNeo}</p>
           </article>
