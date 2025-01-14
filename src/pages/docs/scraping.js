@@ -19,14 +19,6 @@ export default function Scraping() {
           />
         </div>
         <HeaderTitle className="text-5xl my-10">Web Scraping</HeaderTitle>
-        <hr className="border-text-primary" />
-        <p className="my-10 text-share">
-          En este segmento, exploraremos el web scraping, una técnica que nos
-          permite extraer información de páginas web. En este ejemplo, llevaré a
-          cabo el scraping en mi propio portafolio web. Es importante utilizar
-          esta técnica con responsabilidad y respeto a las políticas de uso de
-          los sitios web objetivo.
-        </p>
         <hr className="border-zinc-300 dark:border-zinc-800 my-10" />
         <MarkdownRenderer url={githubMarkdownURL} />
         <hr className="border-zinc-300 dark:border-zinc-800 my-10" />
