@@ -17,10 +17,10 @@ import { useRouter } from 'next/navigation';
 export const Footer = () => {
   const router = useRouter();
   return (
-    <section className="border-t border-zinc-800 text-text-primary">
+    <section className="border-t border-zinc-200 dark:border-zinc-800 text-text-primary">
       <span
         onClick={() => router.replace('#')}
-        className="relative flex justify-center m-auto bg-outline px-[2px] py-[2px] w-fit h-fit rounded-full bottom-[19px]"
+        className="relative flex justify-center m-auto bg-zinc-400 dark:bg-zinc-700 px-[2px] py-[2px] w-fit h-fit rounded-full bottom-[19px]"
       >
         <FaChevronCircleUp className="text-text-variant text-[33px] relative cursor-pointer hover:opacity-[.9] transition-all" />
       </span>
