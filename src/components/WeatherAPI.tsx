@@ -7,11 +7,11 @@ import {
   Sunrise,
   Sunset,
   Ruler,
-  ArrowUpIcon,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Weather } from './Weather';
 import { WeatherResponse } from '@/types/definitions';
+import { Thermometer } from '@/components/Thermometer';
 
 export const WeatherAPI = () => {
   const [data, setData] = useState<WeatherResponse>();
@@ -106,10 +106,10 @@ export const WeatherAPI = () => {
 
   return (
     <div
-      className="grid justify-center mx-auto w-fit bg-card border dark:border-zinc-800 border-zinc-200 rounded-xl overflow-hidden"
-      style={{ zIndex: 2 }}
+      className="grid justify-center mx-auto w-fit border dark:border-zinc-800 border-zinc-300 rounded-xl overflow-hidden"
+      style={{ zIndex: 9 }}
     >
-      <header className="p-6 bg-zinc-200 dark:bg-zinc-900 text-gray-600 dark:text-gray-300 font-semibold">
+      <header className="p-6 bg-zinc-300 dark:bg-zinc-900 text-zinc-800 dark:text-gray-300 font-semibold">
         <p>El tiempo en {name} hoy!</p>
         <div className="inline-flex justify-center mx-auto">
           <p>{condition}</p>
@@ -128,13 +128,8 @@ export const WeatherAPI = () => {
             }}
           >
             {temperature}°
-            <div className="inline-flex items-center">
-              <LucideThermometer className="inline text-text-second w-4 h-4" />
-              <small className="inline text-text-second font-thin text-base">
-                c
-              </small>
-            </div>
           </h1>
+          <Thermometer temperature={temperature} />
         </div>
         <small className="font-semibold font-mono space-x-1">
           <small className="uppercase text-xs">max </small>
@@ -143,43 +138,43 @@ export const WeatherAPI = () => {
           {parseInt(minTemperature) - 7}°
         </small>
       </header>
-      <aside className="grid text-left border-t border-zinc-400/50 dark:border-zinc-700/50 bg-zinc-300 dark:bg-zinc-800 dark:text-gray-300 text-gray-600">
+      <aside className="grid text-left border-t border-zinc-400/50 dark:border-zinc-700/50 bg-zinc-200 dark:bg-zinc-800 dark:text-gray-300 text-zinc-800">
         <div className="grid p-6">
-          <small>
-            <LucideThermometer className="inline w-4 h-4 -translate-y-[2px] mr-2" />
+          <small className="items-center flex">
+            <LucideThermometer className="inline w-4 h-4 mr-2" />
             Sensación Térmica: {feelsLike} °C
           </small>
-          <small>
-            <Droplets className="inline w-4 h-4 -translate-y-[2px] mr-2" />
+          <small className="items-center flex">
+            <Droplets className="inline w-4 h-4 mr-2" />
             Humedad: {humidity} %
           </small>
-          <small>
-            <ArrowDownWideNarrow className="inline w-4 h-4 -translate-y-[2px] mr-2" />
+          <small className="items-center flex">
+            <ArrowDownWideNarrow className="inline w-4 h-4 mr-2" />
             Presión Atmosférica: {pressure} hPa
           </small>
-          <small>
+          <small className="items-center flex">
             <Wind className="inline w-4 h-4 -translate-y-[2px] mr-2" />
             Velocidad del viento: {windSpeed} Km/h
           </small>
-          <small className="items-center">
+          <small className="items-center flex align-middle">
             <Compass
-              className="inline w-4 h-4 -translate-y-[2px] mr-2 -rotate-45"
+              className="inline w-4 h-4 mr-2 -rotate-45"
               style={{
                 rotate: `${windDegree}deg`,
               }}
             />
             Dirección del viento: {windDegree}°{' '}
           </small>
-          <small>
-            <Sunrise className="inline w-4 h-4 -translate-y-[2px] mr-2" />
+          <small className="items-center flex">
+            <Sunrise className="inline w-4 h-4 mr-2" />
             Amanecer: {sunrise} AM
           </small>
-          <small>
-            <Sunset className="inline w-4 h-4 -translate-y-[2px] mr-2" />
+          <small className="items-center flex">
+            <Sunset className="inline w-4 h-4 mr-2" />
             Atardecer: {sunset} PM
           </small>
-          <small className="relative">
-            <Ruler className="inline w-4 h-4 -translate-y-[2px] mr-2" />
+          <small className="items-center flex">
+            <Ruler className="inline w-4 h-4 mr-2" />
             Nivel: {seaLevel} Mts. sobre nivel del mar
           </small>
         </div>
