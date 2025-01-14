@@ -48,7 +48,7 @@ export class Weather {
     } else if (temp <= 20) {
       return '#A7F3D0'; // Verde agua pastel (templado)
     } else if (temp <= 25) {
-      return '#FDE68A'; // Amarillo suave (cálido)
+      return '#F6EC4B'; // Amarillo suave (cálido)
     } else if (temp <= 30) {
       return '#FBCFE8'; // Rosa pastel (calor moderado)
     } else if (temp <= 35) {

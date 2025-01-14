@@ -1,15 +1,6 @@
 import React from 'react';
 
-export const Thermometer = ({ temperature, className = '' }) => {
-  const getFillColor = (temp) => {
-    if (temp < 10) return ['#A5B4FC', '#0080FF']; // Azul para frío
-    if (temp < 20) return ['#A7F3D0', '#4CBB17']; // Verde para templado
-    if (temp < 30) return ['#FFD700', '#FDE68A']; // Amarillo para cálido
-    return ['#F9A8D4', '#F87171']; // Rojo para caliente
-  };
-
-  const colors = getFillColor(temperature);
-
+export const Thermometer = ({ temperature, color, className = '' }) => {
   return (
     <svg
       width="30"
@@ -37,14 +28,14 @@ export const Thermometer = ({ temperature, className = '' }) => {
 
         {/* Gradiente para el mercurio */}
         <linearGradient id="mercuryGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style={{ stopColor: colors[0] }} />
-          <stop offset="100%" style={{ stopColor: colors[1] }} />
+          <stop offset="0%" style={{ stopColor: color }} />
+          <stop offset="100%" style={{ stopColor: color }} />
         </linearGradient>
 
         {/* Gradiente para el bulbo */}
         <radialGradient id="bulbGradient" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" style={{ stopColor: colors[0] }} />
-          <stop offset="100%" style={{ stopColor: colors[1] }} />
+          <stop offset="0%" style={{ stopColor: color }} />
+          <stop offset="100%" style={{ stopColor: color }} />
         </radialGradient>
       </defs>
 

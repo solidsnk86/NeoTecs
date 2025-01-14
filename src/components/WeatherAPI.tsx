@@ -76,34 +76,6 @@ export const WeatherAPI = () => {
   const sunset = Weather.formatTime(data.sys.sunset);
   const seaLevel = data.main.grnd_level;
 
-  const dataArr = [];
-  dataArr.push(
-    temperature,
-    maxTemperature,
-    minTemperature,
-    feelsLike,
-    condition,
-    humidity,
-    iconUrl,
-    pressure,
-    windSpeed,
-    windDegree,
-    sunrise,
-    sunset,
-    seaLevel,
-  );
-
-  // Weather.sendWeatherDataToSupabase({
-  //   temperature,
-  //   feelsLike,
-  //   humidity,
-  //   pressure,
-  //   windSpeed,
-  //   windDegree,
-  //   sunrise,
-  //   sunset,
-  // });
-
   return (
     <div
       className="grid justify-center mx-auto w-fit border dark:border-zinc-800 border-zinc-300 rounded-xl overflow-hidden"
@@ -129,7 +101,10 @@ export const WeatherAPI = () => {
           >
             {temperature}°
           </h1>
-          <Thermometer temperature={temperature} />
+          <Thermometer
+            temperature={temperature}
+            color={Weather.getTemperatureColor(parseInt(temperature))}
+          />
         </div>
         <small className="font-semibold font-mono space-x-1">
           <small className="uppercase text-xs">max </small>
