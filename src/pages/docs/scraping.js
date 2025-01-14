@@ -1,7 +1,7 @@
 import { Nav } from '../../components/Nav';
 import { ArrowLeftIcon, AlertTriangle } from 'lucide-react';
 import LinkButton from '../../components/LinkButton';
-import MarkdownRenderer from '../../components/MarkDownRender';
+import { MarkdownRenderer } from '../../components/MarkDownRender';
 import { githubMarkdownURL } from '../../components/Constants';
 import { Footer } from '../../components/Footer';
 import { ShareButton } from '../../components/ShareButton';
