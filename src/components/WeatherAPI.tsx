@@ -34,6 +34,10 @@ export const WeatherAPI = () => {
       });
     };
 
+    getPosition();
+  }, []);
+
+  useEffect(() => {
     const fetchData = async () => {
       const url = `https://solid-geolocation.vercel.app/weather?latitude=${obj.latitude}&longitude=${obj.longitude}`;
 
@@ -51,7 +55,6 @@ export const WeatherAPI = () => {
       }
     };
 
-    getPosition();
     setTimeout(() => {
       fetchData();
     }, 2000);
@@ -78,10 +81,10 @@ export const WeatherAPI = () => {
 
   return (
     <div
-      className="grid justify-center mx-auto w-fit border dark:border-zinc-800 border-zinc-300 rounded-xl overflow-hidden"
+      className="grid justify-center mx-auto w-fit border dark:border-zinc-800 border-zinc-100 rounded-xl overflow-hidden"
       style={{ zIndex: 9 }}
     >
-      <header className="p-6 bg-zinc-300 dark:bg-zinc-900 text-zinc-800 dark:text-gray-300 font-semibold">
+      <header className="p-6 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-gray-300 font-semibold">
         <p>El tiempo en {name} hoy!</p>
         <div className="inline-flex justify-center mx-auto">
           <p>{condition}</p>
@@ -94,7 +97,7 @@ export const WeatherAPI = () => {
             alt={`Icono del tiempo: ${condition}`}
           />
           <h1
-            className="text-4xl font-bold"
+            className="text-5xl font-bold"
             style={{
               color: `${Weather.getTemperatureColor(
                 parseInt(temperature, 10),
@@ -115,7 +118,7 @@ export const WeatherAPI = () => {
           {parseInt(minTemperature, 10) - 7}°
         </small>
       </header>
-      <aside className="grid text-left border-t border-zinc-400/50 dark:border-zinc-700/50 bg-zinc-200 dark:bg-zinc-800 dark:text-gray-300 text-zinc-800">
+      <aside className="grid text-left border-t border-zinc-200/50 dark:border-zinc-700/50 bg-zinc-50 dark:bg-zinc-800 dark:text-gray-300 text-zinc-800">
         <div className="grid p-6">
           <small className="items-center flex">
             <LucideThermometer className="inline w-4 h-4 mr-2" />

@@ -38,23 +38,23 @@ export class Weather {
 
   public static getTemperatureColor = (temp: number): string => {
     if (temp <= 0) {
-      return '#334155'; // Azul oscuro tenue (frío extremo)
+      return '#1E3A8A'; // Azul oscuro intenso (frío extremo)
     } else if (temp <= 5) {
-      return '#CBD5E1'; // Azul grisáceo claro (muy frío)
+      return '#3B82F6'; // Azul estándar (muy frío)
     } else if (temp <= 10) {
-      return '#A5B4FC'; // Azul pastel (frío moderado)
+      return '#60A5FA'; // Azul claro (frío moderado)
     } else if (temp <= 15) {
-      return '#93C5FD'; // Azul cielo suave (fresco)
+      return '#93C5FD'; // Azul cielo (fresco)
     } else if (temp <= 20) {
-      return '#A7F3D0'; // Verde agua pastel (templado)
+      return '#22C55E'; // Verde brillante (templado)
     } else if (temp <= 25) {
-      return '#F6EC4B'; // Amarillo suave (cálido)
+      return '#FACC15'; // Amarillo cálido (cálido)
     } else if (temp <= 30) {
-      return '#FBCFE8'; // Rosa pastel (calor moderado)
+      return '#FB923C'; // Naranja brillante (calor moderado)
     } else if (temp <= 35) {
-      return '#F9A8D4'; // Rosa más intenso (calor alto)
+      return '#F87171'; // Rojo brillante (calor alto)
     } else {
-      return '#F87171'; // Rojo tenue (calor extremo)
+      return '#B91C1C'; // Rojo intenso (calor extremo)
     }
   };
 

@@ -7,7 +7,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import 'github-markdown-css/github-markdown.css';
 import 'highlight.js/styles/github-dark.css';
 
-const MarkdownRenderer = ({ url }: { url: string }) => {
+export const MarkdownRenderer = ({ url }: { url: string }) => {
   const [markdownContent, setMarkdownContent] = useState<string>();
 
   const getMarkDown = async () => {
@@ -44,5 +44,3 @@ const MarkdownRenderer = ({ url }: { url: string }) => {
     </div>
   );
 };
-
-export default MarkdownRenderer;

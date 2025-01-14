@@ -4,7 +4,7 @@ export const Thermometer = ({ temperature, color, className = '' }) => {
   return (
     <svg
       width="30"
-      height="40"
+      height="50"
       viewBox="0 0 100 300"
       xmlns="http://www.w3.org/2000/svg"
       className={className}

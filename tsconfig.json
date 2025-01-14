@@ -38,7 +38,8 @@
     "src/components/utils/WeatherAPI.tsxPI.tsx",
     ".next/types/**/*.ts",
     "src/pages/docs/comments.ts",
-    "src/components/utils/tracker.js"
+    "src/components/utils/tracker.js",
+    "src/components/WeatherCard.js"
   ],
   "exclude": ["node_modules"]
 }
