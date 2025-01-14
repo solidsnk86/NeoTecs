@@ -143,7 +143,7 @@ export const WeatherAPI = () => {
           {parseInt(minTemperature) - 7}°
         </small>
       </header>
-      <aside className="grid text-left border-t border-zinc-400/50 dark:border-zinc-700 bg-zinc-300 dark:bg-zinc-800 dark:text-gray-300 text-gray-600">
+      <aside className="grid text-left border-t border-zinc-400/50 dark:border-zinc-700/50 bg-zinc-300 dark:bg-zinc-800 dark:text-gray-300 text-gray-600">
         <div className="grid p-6">
           <small>
             <LucideThermometer className="inline w-4 h-4 -translate-y-[2px] mr-2" />
@@ -162,7 +162,12 @@ export const WeatherAPI = () => {
             Velocidad del viento: {windSpeed} Km/h
           </small>
           <small className="items-center">
-            <Compass className="inline w-4 h-4 -translate-y-[2px] mr-2 -rotate-45" />
+            <Compass
+              className="inline w-4 h-4 -translate-y-[2px] mr-2 -rotate-45"
+              style={{
+                rotate: `${windDegree}deg`,
+              }}
+            />
             Dirección del viento: {windDegree}°{' '}
           </small>
           <small>
