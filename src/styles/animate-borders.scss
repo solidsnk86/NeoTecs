@@ -7,8 +7,8 @@
   border-radius: 10px;
   position: relative;
 }
-@property --angle {
-  syntax: '<angle>';
+@property --rotate {
+  syntax: '<rotate>';
   initial-value: 0deg;
   inherits: false;
 }
@@ -19,7 +19,7 @@
   height: 100%;
   width: 100%;
   background: conic-gradient(
-    from var(--angle),
+    from var(--rotate),
     #ff4545,
     #00ff99,
     #006aff,
@@ -32,14 +32,14 @@
   z-index: -2;
   padding: 3px;
   border-radius: 10px;
-  animation: 3.5s spin linear infinite;
+  animation: 3.5s rotate linear infinite;
 }
 .card::before {
   filter: blur(1.5rem);
   opacity: 0.7;
-  animation: 3s spin linear infinite;
+  animation: 3s rotate linear infinite;
 }
-@keyframes spin {
+@keyframes rotate {
   to {
     --angle: 360deg;
   }
