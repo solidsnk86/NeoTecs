@@ -321,7 +321,7 @@ const ReviewCard = ({
 
 export const MarqueeLogos = () => {
   return (
-    <section className="flex flex-col flex-wrap items-center justify-center">
+    <section className="flex flex-col flex-wrap items-center justify-center my-16">
       <div className="relative flex flex-col items-center justify-center w-full h-full gap-4 py-20 overflow-hidden bg-background">
         <Marquee pauseOnHover className="[--duration:40s]">
           {reviews.map((review) => (

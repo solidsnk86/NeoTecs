@@ -650,7 +650,8 @@ li {
   animation: 3s rotate linear infinite;
 }
 
-.cards::before {
+.cards::before,
+.cards::after {
   content: '';
   position: absolute;
   top: 2px;
@@ -660,7 +661,21 @@ li {
   background: black;
   border-radius: 12px;
   z-index: -1;
-  filter: blur(0.1rem);
+}
+
+.cards::after {
+  background: conic-gradient(
+    from var(--angulo),
+    #ff4545,
+    #00ff99,
+    #006aff,
+    #ff0095,
+    #ff4545
+  );
+  z-index: -2;
+  opacity: 0.4;
+  filter: blur(1.5rem);
+  animation: 3s rotate linear infinite;
 }
 
 @keyframes rotate {
