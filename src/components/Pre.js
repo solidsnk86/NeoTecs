@@ -1,12 +1,8 @@
 import React, { useRef, useState, useMemo } from 'react';
 import { Highlight, themes } from 'prism-react-renderer';
-import stripIndent from 'strip-indent';
+import cleanIndent from 'clean-indent';
 import { Copy, Check } from 'lucide-react';
 import 'react-toastify/dist/ReactToastify.css';
-
-const removeIndent = (code = '') => {
-  return stripIndent(code).trim();
-};
 
 export const Pre = ({ children, lang = '' }) => {
   const preRef = useRef(null);
@@ -30,7 +26,7 @@ export const Pre = ({ children, lang = '' }) => {
     }, 1600);
   };
 
-  const code = useMemo(() => removeIndent(children), [children]);
+  const code = useMemo(() => cleanIndent(children), [children]);
 
   return (
     <div className="relative">

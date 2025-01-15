@@ -3,10 +3,10 @@ import {
   Droplets,
   ArrowDownWideNarrow,
   Wind,
-  Compass,
   Sunrise,
   Sunset,
   Ruler,
+  ArrowUpCircleIcon,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Weather } from './Weather';
@@ -137,7 +137,7 @@ export const WeatherAPI = () => {
             Velocidad del viento: {windSpeed} Km/h
           </small>
           <small className="items-center flex align-middle">
-            <Compass
+            <ArrowUpCircleIcon
               className="inline w-4 h-4 mr-2 -rotate-45"
               style={{
                 rotate: `${windDegree}deg`,

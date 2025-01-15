@@ -25,6 +25,7 @@
     "atropos": "^2.0.2",
     "body-parser": "^1.20.3",
     "class-variance-authority": "^0.7.0",
+    "clean-indent": "^1.0.14",
     "cors": "^2.8.5",
     "express": "^4.21.1",
     "framer-motion": "^10.18.0",
