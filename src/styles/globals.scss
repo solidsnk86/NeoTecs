@@ -630,10 +630,16 @@ li {
   z-index: -1;
 }
 
+@property --angulo {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
 .cards {
   position: relative;
   background: conic-gradient(
-    from var(--angle),
+    from var(--angulo),
     #ff4545,
     #00ff99,
     #006aff,
@@ -655,6 +661,12 @@ li {
   border-radius: 12px;
   z-index: -1;
   filter: blur(0.1rem);
+}
+
+@keyframes rotate {
+  to {
+    --angulo: 360deg;
+  }
 }
 
 .languages {
@@ -820,4 +832,3 @@ li {
 @import 'swiper/scss/navigation';
 @import 'swiper/scss/pagination';
 @import './modal.scss';
-@import './animate-borders.scss';
