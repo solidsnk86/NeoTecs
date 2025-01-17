@@ -39,7 +39,8 @@
     ".next/types/**/*.ts",
     "src/pages/docs/comments.ts",
     "src/components/utils/tracker.js",
-    "src/components/WeatherCard.js"
+    "src/components/WeatherCard.js",
+    "src/pages/api/badge-counter.js"
   ],
   "exclude": ["node_modules"]
 }
