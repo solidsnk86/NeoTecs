@@ -1,7 +1,7 @@
 import supabase from '../../components/utils/supabase';
 
 export default async function handler(req, res) {
-  const originUrl = req.headers.referer || 'https://github.com/github';
+  const originUrl = req.headers.referer;
   const user = originUrl.match(/github\.com\/([^/]+)\/?/)[1];
   const { badge_color, counter_color } = req.query;
 
@@ -48,13 +48,11 @@ export default async function handler(req, res) {
     <!-- Fondo con gradiente -->
     <defs>
         <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="100%" style="stop-color:#${
-              badge_color || '#2E2D34'
-            }"/>
+            <stop offset="100%" style="stop-color:#${badge_color || '2E2D34'}"/>
         </linearGradient>
         <linearGradient id="count-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="100%" style="stop-color:#${
-              counter_color || '#FF832A'
+              counter_color || 'FF832A'
             }"/>
         </linearGradient>
     </defs>
