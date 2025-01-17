@@ -1,6 +1,6 @@
 import supabase from '../../components/utils/supabase';
 
-export default async function handler(req, res) {
+export default async function badgerCount(req, res) {
   const { user } = req.query;
   const { badge_color, counter_color } = req.query;
   const originUrl = req.url;
