@@ -2,6 +2,7 @@ import supabase from '../../components/utils/supabase';
 
 export default async function handler(req, res) {
   const originUrl = req.headers.referer;
+  await supabase.from('badge_counter').insert([{ gh_url: originUrl }]);
   const user = originUrl.match(/github\.com\/([^/]+)\/?/)[1];
   const { badge_color, counter_color } = req.query;
 
@@ -27,7 +28,7 @@ export default async function handler(req, res) {
 
     const { error: insertError } = await supabase
       .from('badge_counter')
-      .insert([{ visit_count: newCount, gh_profile: user }]);
+      .insert([{ visit_count: newCount, gh_profile: user, gh_url: originUrl }]);
 
     if (insertError) {
       throw new Error('Cannot send data to DB: ' + insertError.message);
