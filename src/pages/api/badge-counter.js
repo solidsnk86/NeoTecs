@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   const originUrl = req.url;
   const username = String(user).toLowerCase();
   const formatThousand = (value) => {
-    return value >= 1000 ? '190' : '180';
+    return value >= 1000 ? '192' : '186';
   };
   const formatValue = (value) => (value >= 1000 ? `${value / 1000}K` : value);
   try {
@@ -36,8 +36,8 @@ export default async function handler(req, res) {
     }
 
     const adjustCounter = (counter) => {
-      if (counter < 10) return '156';
-      if (counter >= 10) return '152';
+      if (counter < 10) return '158';
+      if (counter >= 10) return '154';
       if (counter > 100) return '140';
       if (String(counter).match(/1.0K/)) return '130';
       if (counter >= 10000) return '120';
@@ -60,10 +60,10 @@ export default async function handler(req, res) {
     </defs>
 
     <!-- Rectángulo base  -->
-    <rect width="182" height="30" fill="url(#bg-gradient)"/>
+    <rect width="184" height="30" rx="6" fill="url(#bg-gradient)"/>
 
     <!-- Sección del contador -->
-    <rect x="142" width="40" height="30" fill="url(#count-gradient)"/>
+    <rect x="142" width="42" height="30" rx="6" fill="url(#count-gradient)"/>
 
     <!-- Icono de ojo -->
     <path d="M30,15 c0,0 -5,-7 -11,-7 -6,0 -11,7 -11,7 s5,7 11,7 c6,0 11,-7 11,-7" 
