@@ -1,11 +1,9 @@
 import supabase from '../../components/utils/supabase';
 
 export default async function handler(req, res) {
-  const originUrl = new URL(req.url);
-  const url = originUrl.origin;
-  await supabase.from('badge_counter').insert([{ gh_url: originUrl }]);
-  const user = url.match(/github\.com\/([^/]+)\/?/)[1];
+  const { user } = req.query.toLowerCase();
   const { badge_color, counter_color } = req.query;
+  const originUrl = req.url;
 
   const formatThousand = (value) => {
     return value >= 1000 ? '190' : '180';
