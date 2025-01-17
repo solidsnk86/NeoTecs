@@ -1,10 +1,10 @@
 import supabase from '../../components/utils/supabase';
 
 export default async function handler(req, res) {
-  const { user } = req.query.toLowerCase();
+  const { user } = req.query;
   const { badge_color, counter_color } = req.query;
   const originUrl = req.url;
-
+  const username = String(user).toLowerCase();
   const formatThousand = (value) => {
     return value >= 1000 ? '190' : '180';
   };
@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     const { data: lastCount } = await supabase
       .from('badge_counter')
       .select('visit_count, gh_profile')
-      .eq('gh_profile', user)
+      .eq('gh_profile', username)
       .order('created_at', { ascending: false })
       .limit(1);
 
@@ -27,7 +27,9 @@ export default async function handler(req, res) {
 
     const { error: insertError } = await supabase
       .from('badge_counter')
-      .insert([{ visit_count: newCount, gh_profile: user, gh_url: originUrl }]);
+      .insert([
+        { visit_count: newCount, gh_profile: username, gh_url: originUrl },
+      ]);
 
     if (insertError) {
       throw new Error('Cannot send data to DB: ' + insertError.message);
