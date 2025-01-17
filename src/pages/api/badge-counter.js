@@ -3,7 +3,7 @@ import supabase from '../../components/utils/supabase';
 export default async function badgerCount(req, res) {
   const { user } = req.query;
   const { badge_color, counter_color } = req.query;
-  const originUrl = req.headers.host;
+  const originUrl = res.headers.host;
   const username = String(user).toLowerCase();
   const formatThousand = (value) => {
     return value >= 1000 ? '192' : '186';
