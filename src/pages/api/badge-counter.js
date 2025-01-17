@@ -1,9 +1,10 @@
+import { NextResponse } from 'next/server';
 import supabase from '../../components/utils/supabase';
 
 export default async function badgerCount(req, res) {
   const { user } = req.query;
   const { badge_color, counter_color } = req.query;
-  const originUrl = req.url;
+  const originUrl = NextResponse.next();
   const username = String(user).toLowerCase();
   const formatThousand = (value) => {
     return value >= 1000 ? '192' : '186';
@@ -28,7 +29,7 @@ export default async function badgerCount(req, res) {
     const { error: insertError } = await supabase
       .from('badge_counter')
       .insert([
-        { visit_count: newCount, gh_profile: username, gh_url: originUrl },
+        { visit_count: newCount, gh_profile: username, gh_url: originUrl.url },
       ]);
 
     if (insertError) {
