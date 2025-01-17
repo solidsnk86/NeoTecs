@@ -12,6 +12,7 @@ import { useState, useEffect } from 'react';
 import { Weather } from './Weather';
 import { WeatherResponse } from '@/types/definitions';
 import { Thermometer } from '@/components/Thermometer';
+import Image from 'next/image';
 
 export const WeatherAPI = () => {
   const [data, setData] = useState<WeatherResponse>();
@@ -90,7 +91,7 @@ export const WeatherAPI = () => {
           <p>{condition}</p>
         </div>
         <div className="flex items-center mx-auto justify-center">
-          <img
+          <Image
             width={65}
             height={65}
             src={iconUrl}

@@ -24,6 +24,7 @@ module.exports = {
       'img.community.ui.com',
       'mikrotrik.com',
       'i.imgur.com',
+      'openweathermap.org',
     ],
   },
   reactStrictMode: true,
