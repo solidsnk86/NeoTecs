@@ -1,8 +1,7 @@
 import supabase from '../../components/utils/supabase';
 
 export default async function handler(req, res) {
-  const originUrl = 'https://github.com/solidsnk86';
-
+  const originUrl = req.url;
   const user = originUrl.match(/github\.com\/([^/]+)\/?/)[1];
   const { badge_color, counter_color } = req.query;
 
