@@ -10,7 +10,7 @@ export default async function GET(req, res) {
   }
 
   try {
-    const { main, coord, weather, wind, sys } = await fetchWeatherData({
+    const { main, coord, weather, wind, sys, name } = await fetchWeatherData({
       latitude: parseFloat(lat),
       longitude: parseFloat(lon),
     });
@@ -24,7 +24,7 @@ export default async function GET(req, res) {
     }
     res
       .status(200)
-      .json({ status: res.status, main, coord, weather, wind, sys });
+      .json({ status: res.status, main, coord, weather, wind, sys, name });
   } catch (error) {
     res
       .status(500)

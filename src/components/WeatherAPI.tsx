@@ -39,7 +39,7 @@ export const WeatherAPI = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = `https://solid-geolocation.vercel.app/weather?latitude=${obj.latitude}&longitude=${obj.longitude}`;
+      const url = `/api/open-weather-api?lat=${obj.latitude}&lon=${obj.longitude}`;
 
       try {
         const res = await fetch(url);
