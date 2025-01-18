@@ -6,10 +6,13 @@ export default async function badgerCount(req, res) {
   const formatThousand = (value) => {
     return value >= 1000 ? '192' : '186';
   };
-  const formatValue = (value) =>
-    value >= 1000 || value >= 100000
-      ? `${value / 1000 || value / 10000}K`
-      : value;
+  const formatValue = (value) => {
+    let formatedValue = 0;
+    if (value >= 1000) {
+      formatedValue = (value / 1000).toFixed(1);
+    }
+    return `${formatedValue}K`;
+  };
 
   try {
     const { data: lastCount } = await supabase
@@ -36,13 +39,13 @@ export default async function badgerCount(req, res) {
     }
 
     const adjustCounter = (counter) => {
-      if (counter < 10) return '158';
-      if (counter >= 10) return '154';
-      if (counter >= 100) return '136';
-      if (String(counter).match(/1.0K/)) return '130';
       if (counter >= 10000) return '120';
-      return counter;
+      if (counter >= 100) return '150';
+      if (counter >= 10) return '154';
+      if (String(counter).includes('1.0K')) return '120';
+      return '158';
     };
+
     const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${formatThousand(
       newCount,
@@ -81,9 +84,7 @@ export default async function badgerCount(req, res) {
       newCount,
     )}" y="20" fill="#fff" font-family="Arial, sans-serif" font-size="${
       newCount >= 1000 ? '12' : '14'
-    }" text-align="center" font-weight="600">${formatValue(
-      newCount.toFixed(0),
-    )}</text>
+    }" text-align="center" font-weight="600">${formatValue(newCount)}</text>
     </svg>
     `;
 
