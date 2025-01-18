@@ -55,7 +55,7 @@ export default async function badgerCount(req, res) {
     <defs>
         <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0" style="stop-color: #282534" />
-            <stop offset="100%" style="stop-color:#${badge_color || '2E2D34'}"/>
+            <stop offset="100%" style="stop-color:#${badge_color || '4868A9'}"/>
         </linearGradient>
         <linearGradient id="count-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="100%" style="stop-color:#${
