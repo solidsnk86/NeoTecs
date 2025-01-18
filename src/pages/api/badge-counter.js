@@ -7,11 +7,13 @@ export default async function badgerCount(req, res) {
     return value >= 1000 ? '192' : '186';
   };
   const formatValue = (value) => {
-    let formatedValue = 0;
+    let formattedValue = 0;
     if (value >= 1000) {
-      formatedValue = (value / 1000).toFixed(1);
+      formattedValue = (value / 1000).toFixed(1);
+    } else if (value >= 10000) {
+      formattedValue = (value / 10000).toFixed(1);
     }
-    return `${formatedValue}K`;
+    return `${formattedValue}K`;
   };
 
   try {
@@ -39,7 +41,7 @@ export default async function badgerCount(req, res) {
     }
 
     const adjustCounter = (counter) => {
-      if (counter >= 10000) return '120';
+      if (counter >= 10000) return '146';
       if (counter >= 100) return '150';
       if (counter >= 10) return '154';
       if (String(counter).includes('1.0K')) return '120';
