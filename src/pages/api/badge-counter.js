@@ -13,7 +13,7 @@ export default async function badgerCount(req, res) {
     } else if (value >= 10000) {
       formattedValue = (value / 10000).toFixed(1);
     }
-    return `${formattedValue}K`;
+    return formattedValue === 0 ? value : formattedValue;
   };
 
   try {
