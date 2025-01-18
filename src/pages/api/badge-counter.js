@@ -39,7 +39,7 @@ export default async function badgerCount(req, res) {
     const adjustCounter = (counter) => {
       if (counter < 10) return '158';
       if (counter >= 10) return '154';
-      if (counter > 100) return '139';
+      if (counter >= 100) return '136';
       if (String(counter).match(/1.0K/)) return '130';
       if (counter >= 10000) return '120';
       return counter;
