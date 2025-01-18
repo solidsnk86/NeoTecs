@@ -45,8 +45,9 @@ export default async function badgerCount(req, res) {
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${formatThousand(
       newCount,
     )} 30" width="${formatThousand(newCount)}" height="30">
-     <style>#badge-main:hover{opacity: 0.6;transition: .6s all;cursor:default;}
+     <style>#badge-main:hover{opacity: 0.8;transition: .6s all;cursor:default;}
      #text-counter:hover{fill:#4183c4;transition:.6s all;cursor:default;}
+     #main-text, #eyes{cursor:default;}
      #eyes {animation: blink 4s infinite;}
      @keyframes blink {0%,100% {opacity: 1;}95% {opacity: 1;}96% {opacity: 0.1;}98% {opacity: 0.1;}99% {opacity: 1;}}
      </style>
@@ -68,7 +69,7 @@ export default async function badgerCount(req, res) {
     <rect x="142" width="42" height="30" fill="url(#count-gradient)"/>
 
     <text id="eyes" y="19" x="6" font-size="16" text-rendering="geometricPrecision">👀</text>
-    <text x="33" y="20" fill="#fff" font-family="Arial, sans-serif" font-size="14" margin-right="4px" text-rendering="geometricPrecision" 
+    <text id="main-text" x="33" y="20" fill="#fff" font-family="Arial, sans-serif" font-size="14" margin-right="4px" text-rendering="geometricPrecision" 
     font-weight="700">Visitas al perfil</text>
     <text id="text-counter" x="${adjustCounter(
       newCount,
