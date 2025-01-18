@@ -2,7 +2,7 @@ import supabase from '../../components/utils/supabase';
 
 export default async function badgerCount(req, res) {
   const { user } = req.query;
-  const { badge_color, counter_color } = req.query;
+  const { badge_gradient_1, badge_gradient_2, counter_color } = req.query;
   const username = String(user).toLowerCase();
   const formatThousand = (value) => {
     return value >= 1000 ? '192' : '186';
@@ -39,7 +39,7 @@ export default async function badgerCount(req, res) {
     const adjustCounter = (counter) => {
       if (counter < 10) return '158';
       if (counter >= 10) return '154';
-      if (counter > 100) return '140';
+      if (counter > 100) return '139';
       if (String(counter).match(/1.0K/)) return '130';
       if (counter >= 10000) return '120';
       return counter;
@@ -57,8 +57,12 @@ export default async function badgerCount(req, res) {
     <!-- Fondo con gradiente -->
     <defs>
         <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0" style="stop-color: #282534" />
-            <stop offset="100%" style="stop-color:#${badge_color || '4868A9'}"/>
+            <stop offset="0" style="stop-color: #${
+              badge_gradient_1 || '282534'
+            }" />
+            <stop offset="100%" style="stop-color:#${
+              badge_gradient_2 || '4868A9'
+            }"/>
         </linearGradient>
         <linearGradient id="count-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="100%" style="stop-color:#${
