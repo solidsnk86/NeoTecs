@@ -7,7 +7,10 @@ export default async function badgerCount(req, res) {
   const formatThousand = (value) => {
     return value >= 1000 ? '192' : '186';
   };
-  const formatValue = (value) => (value >= 1000 ? `${value / 1000}K` : value);
+  const formatValue = (value) =>
+    value >= 1000 || value >= 100000
+      ? `${value / 1000 || value / 10000}K`
+      : value;
 
   try {
     const { data: lastCount } = await supabase
