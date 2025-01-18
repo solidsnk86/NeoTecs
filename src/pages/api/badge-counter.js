@@ -3,7 +3,6 @@ import supabase from '../../components/utils/supabase';
 export default async function badgerCount(req, res) {
   const { user } = req.query;
   const { badge_color, counter_color } = req.query;
-  const originUrl = req.headers.referer;
   const username = String(user).toLowerCase();
   const formatThousand = (value) => {
     return value >= 1000 ? '192' : '186';
@@ -28,9 +27,7 @@ export default async function badgerCount(req, res) {
 
     const { error: insertError } = await supabase
       .from('badge_counter')
-      .insert([
-        { visit_count: newCount, gh_profile: username, gh_url: originUrl },
-      ]);
+      .insert([{ visit_count: newCount, gh_profile: username }]);
 
     if (insertError) {
       throw new Error('Cannot send data to DB: ' + insertError.message);
@@ -51,6 +48,7 @@ export default async function badgerCount(req, res) {
     <!-- Fondo con gradiente -->
     <defs>
         <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0" style="stop-color: #282534" />
             <stop offset="100%" style="stop-color:#${badge_color || '2E2D34'}"/>
         </linearGradient>
         <linearGradient id="count-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -60,24 +58,19 @@ export default async function badgerCount(req, res) {
         </linearGradient>
     </defs>
 
-    <!-- Rectángulo base  -->
-    <rect width="184" height="30" rx="6" fill="url(#bg-gradient)"/>
+    <rect width="184" height="30" fill="url(#bg-gradient)"/>
 
-    <!-- Sección del contador -->
-    <rect x="142" width="42" height="30" rx="6" fill="url(#count-gradient)"/>
+    <rect x="142" width="42" height="30" fill="url(#count-gradient)"/>
 
-    <!-- Icono de ojo -->
-    <path d="M30,15 c0,0 -5,-7 -11,-7 -6,0 -11,7 -11,7 s5,7 11,7 c6,0 11,-7 11,-7" 
-        stroke="#fff" fill="none" stroke-width="1.5"/>
-    <circle cx="19" cy="15" r="3" fill="#fff"/>
-
-    <!-- Texto -->
-    <text x="36" y="20" fill="#fff" font-family="Arial, sans-serif" font-size="14" margin-right="4px">Visitas al perfil</text>
+    <text y="19" x="6" font-size="16" text-rendering="geometricPrecision">👀</text>
+    <text x="33" y="20" fill="#fff" font-family="Arial, sans-serif" font-size="14" margin-right="4px" text-rendering="geometricPrecision" font-weight="700">Visitas al perfil</text>
     <text x="${adjustCounter(
       newCount,
     )}" y="20" fill="#fff" font-family="Arial, sans-serif" font-size="${
       newCount >= 1000 ? '12' : '14'
-    }" text-align="center">${formatValue(newCount.toFixed(0))}</text>
+    }" text-align="center" font-weight="600">${formatValue(
+      newCount.toFixed(0),
+    )}</text>
     </svg>
     `;
 
