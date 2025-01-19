@@ -40,7 +40,8 @@
     "src/pages/docs/comments.ts",
     "src/components/utils/tracker.js",
     "src/components/WeatherCard.js",
-    "src/pages/api/badge-counter.js"
+    "src/pages/api/badge-counter.js",
+    "src/components/utils/get-closest-city.js"
   ],
   "exclude": ["node_modules"]
 }

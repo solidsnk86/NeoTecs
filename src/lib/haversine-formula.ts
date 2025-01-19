@@ -10,9 +10,9 @@ interface HaversineProps {
 
 export const haversine = ({ locationA, locationB }: HaversineProps) => {
   // Conversión de grados a radianes
-  const latitudeA = degreesToRadians(locationA.lon);
-  const latitudeB = degreesToRadians(locationA.lon);
-  const longitudeA = degreesToRadians(locationB.lon);
+  const latitudeA = degreesToRadians(locationA.lat);
+  const latitudeB = degreesToRadians(locationB.lat);
+  const longitudeA = degreesToRadians(locationA.lon);
   const longitudeB = degreesToRadians(locationB.lon);
   // Fórmula de Haversine
   const formula =
