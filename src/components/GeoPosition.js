@@ -45,7 +45,7 @@ export const GeoPosotionBadge = () => {
   );
 
   return (
-    <div className="w-fit flex justify-center mx-auto my-6 bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 relative">
+    <div className="w-fit flex justify-center mx-auto my-24 rounded-xl cards">
       <div className="p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <InfoRow label="Ciudad" value={location.city} />
