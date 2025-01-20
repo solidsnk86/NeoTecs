@@ -48,7 +48,7 @@ export const GeoPosotionBadge = () => {
 
   return (
     <div className="w-fit justify-center mx-auto my-24 rounded-xl cards">
-      <h2 className="font-semibold text-2xl py-2 px-2 text-white">
+      <h2 className="font-semibold text-2xl py-3 px-3 text-white">
         Información WiFi Gobierno San Luis
       </h2>
       <div className="p-4">
