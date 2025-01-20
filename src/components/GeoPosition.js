@@ -41,7 +41,7 @@ export const GeoPosotionBadge = () => {
     <div className="flex items-center space-x-2">
       <span className="text-zinc-400 text-sm">{label}:</span>
       <span className="text-white text-sm font-medium">
-        {value === '' ? 'Cargando...' : value}
+        {value === '' ? 'Cargando' : value}
       </span>
     </div>
   );
