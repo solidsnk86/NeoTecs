@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getCoords } from './utils/getCoords';
+import { Info } from 'lucide-react';
 
 export const GeoPosotionBadge = () => {
   const [location, setLocataion] = useState({
@@ -23,8 +24,9 @@ export const GeoPosotionBadge = () => {
   const getCityLocation = async () => {
     const { lat, lon } = await getCoords();
     const response = await fetch(
-      `https://calcagni-gabriel.vercel.app/api/san-luis-geolocation?lat=${lat}&lon=${lon}`,
+      `https://calcagni-gabriel.vercel.app/api/geolocation?lat=${lat}&lon=${lon}`,
     );
+    if (!response.ok) console.error('Response error: ', response.statusText);
     const jsonData = await response.json();
     return jsonData;
   };
@@ -40,16 +42,20 @@ export const GeoPosotionBadge = () => {
   const InfoRow = ({ label, value }) => (
     <div className="flex items-center space-x-2">
       <span className="text-zinc-400 text-sm">{label}:</span>
-      <span className="text-white text-sm font-medium">
+      <span className="text-text-primary text-sm font-medium">
         {value === '' ? 'Cargando' : value}
       </span>
     </div>
   );
 
   return (
-    <div className="w-fit justify-center mx-auto my-24 rounded-xl cards">
-      <h2 className="font-semibold text-2xl py-3 px-3 text-white">
-        Información WiFi Gobierno San Luis
+    <div
+      className={`w-fit justify-center mx-auto my-24 border border-zinc-200/50 dark:border-zinc-800/50 p-3 rounded-[14px]
+      bg-zinc-100 dark:bg-zinc-900 relative text-text-primary shadow-md`}
+    >
+      <h2 className="font-semibold text-2xl py-3 px-3 items-center flex gap-2 mx-auto justify-center">
+        <Info />
+        Información WiFi Gob. San Luis
       </h2>
       <div className="p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

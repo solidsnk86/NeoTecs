@@ -4,8 +4,8 @@ import Link from 'next/link';
 export const Donations = () => {
   return (
     <Link
-      className={`w-fit border border-zinc-200/50 dark:border-zinc-800/50 p-3 my-16 rounded-[14px] flex justify-center mx-auto items-center 
-        cursor-pointer gap-2 bg-zinc-100 dark:bg-zinc-900 relative shadow-md dark:hover:brightness-125 transition-all duration-300`}
+      className={`w-fit border border-zinc-200/50 dark:border-zinc-800/50 p-3 my-16 rounded-[14px] flex justify-center mx-auto 
+        items-center cursor-pointer gap-2 bg-zinc-100 dark:bg-zinc-900 relative shadow-md dark:hover:brightness-125 transition-all duration-300`}
       href="https://link.mercadopago.com.ar/neotecs"
     >
       <CoffeeIcon

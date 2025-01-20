@@ -9,7 +9,6 @@ import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import ArticleData from '../components/ArticleData';
 import Link from 'next/link';
-import { WeatherAPI } from '../components/WeatherAPI';
 import { GeoPosotionBadge } from '../components/GeoPosition';
 import { Donations } from '../components/Donations';
 
@@ -78,10 +77,6 @@ export default function Home() {
             <CpeBrands />
           </aside>
         </div>
-      </HomeBlock>
-
-      <HomeBlock className="aspect z-50 relative">
-        <WeatherAPI />
       </HomeBlock>
 
       <HomeBlock>

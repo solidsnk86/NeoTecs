@@ -42,8 +42,8 @@
     "src/components/WeatherCard.js",
     "src/pages/api/badge-counter.js",
     "src/components/utils/get-closest-city.js",
-    "src/components/GeoPosition.js",
-    "src/components/GeoPosition.js"
+    "src/components/GeoPosition.tsx",
+    "src/components/GeoPosition.tsx"
   ],
   "exclude": ["node_modules"]
 }
