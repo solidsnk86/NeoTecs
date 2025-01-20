@@ -10,6 +10,7 @@ import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import ArticleData from '../components/ArticleData';
 import Link from 'next/link';
 import { WeatherAPI } from '../components/WeatherAPI';
+import { GeoPosotionBadge } from '../components/GeoPosition';
 
 export const HomeBlock = ({ children, className = '' }) => {
   return (
@@ -48,6 +49,7 @@ export default function Home() {
           <li className="custom-text-shadow">✅ Práctico</li>
         </ul>
         <YouTubeVideoSection />
+        <GeoPosotionBadge />
         <div className="xl:flex justify-center mx-auto w-full relative">
           <header className="xl:flex xl:w-1/2 p-2 xl:mt-[70px]">
             <span className="effect-backround"></span>

@@ -1,11 +1,13 @@
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Bug, Github, MessageCircleIcon } from 'lucide-react';
 import { NeotecsLogo } from './NeotecsLogo';
+import { getCoords } from './utils/getCoords';
 
 export const Nav = ({ className }) => {
   return (
     <div
-      className={`${className} z-50 px-4 h-12 w-full md:relative fixed border-b border-zinc-200 dark:border-zinc-800 bg-background-color flex justify-between text-text-primary`}
+      className={`${className} z-50 px-4 h-12 w-full md:relative fixed border-b border-zinc-200 dark:border-zinc-900 bg-background-color flex justify-between text-text-primary`}
     >
       <div className="relative bottom-[17px]">
         <Link href="/" title="Inicio">
