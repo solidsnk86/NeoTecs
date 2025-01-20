@@ -1,8 +1,6 @@
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Bug, Github, MessageCircleIcon } from 'lucide-react';
 import { NeotecsLogo } from './NeotecsLogo';
-import { getCoords } from './utils/getCoords';
 
 export const Nav = ({ className }) => {
   return (
