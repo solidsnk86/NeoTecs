@@ -40,12 +40,17 @@ export const GeoPosotionBadge = () => {
   const InfoRow = ({ label, value }) => (
     <div className="flex items-center space-x-2">
       <span className="text-zinc-400 text-sm">{label}:</span>
-      <span className="text-white text-sm font-medium">{value}</span>
+      <span className="text-white text-sm font-medium">
+        {value === '' ? 'Cargando...' : value}
+      </span>
     </div>
   );
 
   return (
-    <div className="w-fit flex justify-center mx-auto my-24 rounded-xl cards">
+    <div className="w-fit justify-center mx-auto my-24 rounded-xl cards">
+      <h2 className="font-semibold text-2xl py-2 px-1">
+        Información para WiFi Gobierno San Luis
+      </h2>
       <div className="p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <InfoRow label="Ciudad" value={location.city} />
