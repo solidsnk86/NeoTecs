@@ -53,7 +53,10 @@ export const GeoPosotionBadge = () => {
       className={`w-fit justify-center mx-auto my-24 border border-zinc-200/50 dark:border-zinc-800/50 p-3 rounded-[14px]
       bg-zinc-100 dark:bg-zinc-900 relative text-text-primary shadow-md`}
     >
-      <h2 className="font-semibold text-2xl py-3 px-3 items-center flex gap-2 mx-auto justify-center">
+      <h2
+        title="Información válida para la provincia de San Luis"
+        className="font-semibold text-2xl py-3 px-3 items-center flex gap-2 mx-auto justify-center"
+      >
         <Info />
         Información WiFi Gob. San Luis
       </h2>
