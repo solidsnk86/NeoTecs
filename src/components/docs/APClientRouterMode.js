@@ -9,7 +9,7 @@ import ImageComponent from '../ImageComponent';
 
 export const APClientRouterMode = () => {
   return (
-    <section className="max-w-800 text-text-primary">
+    <section className="text-text-primary">
       <HeaderTitle className=" my-6">Configuración Tp Link</HeaderTitle>
       <hr className="border-text-primary" />
       <IndexTitle>Índice</IndexTitle>

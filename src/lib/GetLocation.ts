@@ -7,32 +7,43 @@ export class GetLocation {
     return data;
   }
 
-  static async ip() {
+  public static async getPrecisionLocation(
+    latitude: number,
+    longitude: number,
+  ) {
+    const response = await fetch(
+      `https://calcagni-gabriel.vercel.app/geolocation?lat${latitude}&lon=${longitude}`,
+    );
+    const jsonData = await response.json();
+    return jsonData;
+  }
+
+  public static async ip() {
     const data = await this.getData();
     return data.ip;
   }
 
-  static async city() {
+  public static async city() {
     const data = await this.getData();
     return data.city.name;
   }
 
-  static async postalCode() {
+  public static async postalCode() {
     const data = await this.getData();
     return data.city.postal_code;
   }
 
-  static async country() {
+  public static async country() {
     const data = await this.getData();
     return data.country.name;
   }
 
-  static async flag() {
+  public static async flag() {
     const data = await this.getData();
     return data.country.emoji_flag;
   }
 
-  static async latitude() {
+  public static async latitude() {
     const data = await this.getData();
     return data.coords.latitude;
   }
