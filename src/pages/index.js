@@ -9,7 +9,7 @@ import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import ArticleData from '../components/ArticleData';
 import Link from 'next/link';
-import { GeoPosotionBadge } from '../components/GeoPosition';
+import GeoPosotionBadge from '../components/GeoPosition';
 import { Donations } from '../components/Donations';
 
 export const HomeBlock = ({ children, className = '' }) => {

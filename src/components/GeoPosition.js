@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { getCoords } from './utils/getCoords';
 import { Info } from 'lucide-react';
 
-export const GeoPosotionBadge = () => {
-  const [location, setLocataion] = useState({
+export const GeoPositionBadge = () => {
+  const [location, setLocation] = useState({
     city: '',
     state: '',
     country: '',
@@ -21,43 +21,81 @@ export const GeoPosotionBadge = () => {
       MAC5g: '',
     },
   });
+  const [query, setQuery] = useState('');
+  const [searchResult, setSearchResult] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const getCityLocation = async () => {
-    const { lat, lon } = await getCoords();
-    const response = await fetch(
-      `https://calcagni-gabriel.vercel.app/api/geolocation?lat=${lat}&lon=${lon}`,
-    );
-    if (!response.ok) console.error('Response error: ', response.statusText);
-    const jsonData = await response.json();
-    return jsonData;
+    try {
+      const { lat, lon } = await getCoords();
+      const response = await fetch(
+        `https://calcagni-gabriel.vercel.app/api/geolocation?lat=${lat}&lon=${lon}`,
+      );
+      if (!response.ok) {
+        throw new Error(`Response error: ${response.statusText}`);
+      }
+      const jsonData = await response.json();
+      return jsonData;
+    } catch (error) {
+      console.error('Error fetching location:', error);
+      return null;
+    }
   };
 
   useEffect(() => {
-    async function GET() {
+    async function fetchInitialData() {
+      setIsLoading(true);
       const dataLocation = await getCityLocation();
-      setLocataion(dataLocation);
+      if (dataLocation) {
+        setLocation(dataLocation);
+      }
+      setIsLoading(false);
     }
-    GET();
+    fetchInitialData();
   }, []);
+
+  const sendQuery = async (searchQuery) => {
+    try {
+      setIsLoading(true);
+      const { lat, lon } = await getCoords();
+      const response = await fetch(
+        `https://calcagni-gabriel.vercel.app/api/geolocation?lat=${lat}&lon=${lon}&query=${searchQuery}`,
+      );
+      if (!response.ok) {
+        throw new Error(`Response error: ${response.statusText}`);
+      }
+      const data = await response.json();
+      setSearchResult(data);
+    } catch (error) {
+      console.error('Error searching antenna:', error);
+      setSearchResult(null);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (query.trim()) {
+      await sendQuery(query);
+    }
+  };
 
   const InfoRow = ({ label, value }) => (
     <div className="flex items-center space-x-2">
       <span className="text-zinc-400 text-sm">{label}:</span>
       <span className="text-text-primary text-sm font-medium">
-        {value === '' ? 'Cargando' : value}
+        {isLoading ? 'Cargando...' : value || 'No disponible'}
       </span>
     </div>
   );
 
   const writeMAC = (mac = '') => {
-    return mac.split(' ').join('-');
+    return mac ? mac.split(' ').join('-') : 'No disponible';
   };
 
   return (
-    <div
-      className={`w-fit justify-center mx-auto my-24 border border-zinc-200/50 dark:border-zinc-800/50 p-3 rounded-[14px]
-      bg-zinc-100 dark:bg-zinc-900 relative text-text-primary shadow-md`}
-    >
+    <div className="xl:max-w-xl w-full justify-center mx-auto my-24 border border-zinc-200/50 dark:border-zinc-800/50 p-3 rounded-[14px] bg-zinc-100 dark:bg-zinc-900 relative text-text-primary shadow-md overflow-hidden">
       <h2
         title="Información válida para la provincia de San Luis"
         className="font-semibold text-2xl py-3 px-3 items-center flex gap-2 mx-auto justify-center"
@@ -79,15 +117,42 @@ export const GeoPosotionBadge = () => {
           <InfoRow label="MAC" value={writeMAC(location.closest_wifi.MAC)} />
           <InfoRow
             label="MAC-5Ghz"
-            value={
-              location.closest_wifi?.MAC5g
-                ? location.closest_wifi.MAC5g
-                : 'MAC no disponible'
-            }
+            value={writeMAC(location.closest_wifi.MAC5g)}
           />
         </div>
-        <div></div>
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col justify-center gap-2 pt-4"
+        >
+          <div className="flex justify-center mx-auto gap-4">
+            <input
+              type="text"
+              name="antenna"
+              placeholder="Ingrese el nombre de la antena"
+              className="border border-zinc-200 dark:border-zinc-800/50 rounded-lg p-1 bg-transparent placeholder:text-sm"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="py-[2px] px-2 bg-zinc-800 rounded-lg border border-zinc-200 dark:border-zinc-700/50 hover:brightness-110 text-base disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isLoading ? 'Buscando...' : 'Buscar'}
+            </button>
+          </div>
+        </form>
+        {searchResult && (
+          <div className="mt-4 grid md:grid-cols-2 grid-cols-1 gap-2">
+            <InfoRow label="Antena" value={searchResult.antenna?.name} />
+            <InfoRow label="Distancia" value={searchResult.distance} />
+            <InfoRow label="MAC" value={writeMAC(searchResult.MAC)} />
+            <InfoRow label="MAC-5G" value={writeMAC(searchResult.MAC5G)} />
+          </div>
+        )}
       </div>
     </div>
   );
 };
+
+export default GeoPositionBadge;
