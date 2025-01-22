@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { getCoords } from './utils/getCoords';
 import { Info } from 'lucide-react';
 
-export const GeoPositionBadge = () => {
+export const GeoPositionCard = () => {
   const [location, setLocation] = useState({
     city: '',
     state: '',
@@ -24,6 +24,7 @@ export const GeoPositionBadge = () => {
   const [query, setQuery] = useState('');
   const [searchResult, setSearchResult] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  // const [status, setStatus] = useState({});
 
   const getCityLocation = async () => {
     try {
@@ -94,17 +95,17 @@ export const GeoPositionBadge = () => {
     return mac ? mac.split(' ').join('-') : 'No disponible';
   };
 
-  const configure = async () => {
-    const response = await fetch(
-      `https://bot-config-self.vercel.app/?SSID=${
-        location.closest_wifi.antenna
-      }&MAC=${
-        location.closest_wifi.MAC5G
-      }&distance=${location.closest_wifi.distance.split('mts')}`,
-    );
-    const data = await response.json();
-    return data;
-  };
+  // const configure = async () => {
+  //   const response = await fetch(
+  //     `https://bot-config-self.vercel.app/?SSID=${
+  //       location.closest_wifi.antenna
+  //     }&MAC=${
+  //       location.closest_wifi.MAC5G
+  //     }&distance=${location.closest_wifi.distance.split('mts')}`,
+  //   );
+  //   const data = await response.json();
+  //   setStatus(data);
+  // };
 
   return (
     <div className="xl:max-w-xl w-full justify-center mx-auto my-24 border border-zinc-200/50 dark:border-zinc-800/50 p-3 rounded-[14px] bg-zinc-100 dark:bg-zinc-900 relative text-text-primary shadow-md overflow-hidden">
@@ -141,7 +142,7 @@ export const GeoPositionBadge = () => {
               type="text"
               name="antenna"
               placeholder="Nombre de la antena..."
-              className="border border-zinc-200 dark:border-zinc-800/50 rounded-lg p-1 bg-transparent placeholder:text-base"
+              className="border border-zinc-100 dark:border-zinc-800/50 rounded-md p-1 bg-zinc-50 dark:bg-transparent placeholder:text-base"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               required
@@ -149,12 +150,12 @@ export const GeoPositionBadge = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="py-[2px] md:w-24 px-2 bg-zinc-800 rounded-lg border border-zinc-200 dark:border-zinc-700/50 hover:brightness-110 text-base disabled:opacity-50 disabled:cursor-not-allowed"
+              className="py-[2px] md:w-24 px-2 text-white dark:bg-zinc-800 bg-[#0F0F0F] rounded-md border border-zinc-200 dark:border-zinc-700/50 hover:brightness-110 text-base disabled:cursor-not-allowed"
             >
               {isLoading ? 'Buscando...' : 'Buscar'}
             </button>
-            <button onClick={configure}>Configurar</button>
           </div>
+          {/* {status && <small>{status.message}</small>} */}
         </form>
         {searchResult && (
           <div className="mt-4 grid md:grid-cols-2 grid-cols-1 gap-2">
@@ -169,4 +170,4 @@ export const GeoPositionBadge = () => {
   );
 };
 
-export default GeoPositionBadge;
+export default GeoPositionCard;

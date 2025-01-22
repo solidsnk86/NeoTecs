@@ -58,7 +58,7 @@ export const Nav = ({ className }) => {
           <NeotecsLogo className="cursor-pointer hover:scale-110 transition-all duration-300" />
         </Link>
       </div>
-      <aside className="flex space-x-3 mt-3">
+      <aside className="flex space-x-3 mt-3 items-center">
         {navItems.map((item) => (
           <NavItem key={crypto.randomUUID()} {...item} />
         ))}
