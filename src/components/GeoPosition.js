@@ -18,7 +18,7 @@ export const GeoPositionBadge = () => {
       distance: '',
       type: '',
       MAC: '',
-      MAC5g: '',
+      MAC5G: '',
     },
   });
   const [query, setQuery] = useState('');
@@ -96,7 +96,7 @@ export const GeoPositionBadge = () => {
 
   const configure = async () => {
     const response = await fetch(
-      `http://localhost:3639/?SSID=${location.closest_wifi.antenna}&MAC=${searchResult.MAC5G}&distance=${location.closest_wifi.distance}`,
+      `http://bot-config-self.vercel.app/?SSID=${location.closest_wifi.antenna}&MAC=${location.closest_wifi.MAC5G}&distance=${location.closest_wifi.distance}`,
     );
     const data = await response.json();
     return data;
@@ -125,7 +125,7 @@ export const GeoPositionBadge = () => {
           <InfoRow label="MAC" value={writeMAC(location.closest_wifi.MAC)} />
           <InfoRow
             label="MAC-5Ghz"
-            value={writeMAC(location.closest_wifi.MAC5g)}
+            value={writeMAC(location.closest_wifi.MAC5G)}
           />
         </div>
         <form
