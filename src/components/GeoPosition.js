@@ -94,6 +94,14 @@ export const GeoPositionBadge = () => {
     return mac ? mac.split(' ').join('-') : 'No disponible';
   };
 
+  const configure = async () => {
+    const response = await fetch(
+      `http://localhost:3639/?SSID=${location.closest_wifi.antenna}&MAC=${searchResult.MAC5G}&distance=${location.closest_wifi.distance}`,
+    );
+    const data = await response.json();
+    return data;
+  };
+
   return (
     <div className="xl:max-w-xl w-full justify-center mx-auto my-24 border border-zinc-200/50 dark:border-zinc-800/50 p-3 rounded-[14px] bg-zinc-100 dark:bg-zinc-900 relative text-text-primary shadow-md overflow-hidden">
       <h2
@@ -141,6 +149,7 @@ export const GeoPositionBadge = () => {
             >
               {isLoading ? 'Buscando...' : 'Buscar'}
             </button>
+            <button onClick={configure}>Configurar</button>
           </div>
         </form>
         {searchResult && (
