@@ -96,7 +96,11 @@ export const GeoPositionBadge = () => {
 
   const configure = async () => {
     const response = await fetch(
-      `http://bot-config-self.vercel.app/?SSID=${location.closest_wifi.antenna}&MAC=${location.closest_wifi.MAC5G}&distance=${location.closest_wifi.distance}`,
+      `https://bot-config-self.vercel.app/?SSID=${
+        location.closest_wifi.antenna
+      }&MAC=${
+        location.closest_wifi.MAC5G
+      }&distance=${location.closest_wifi.distance.split('mts')}`,
     );
     const data = await response.json();
     return data;
