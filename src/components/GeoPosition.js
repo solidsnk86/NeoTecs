@@ -18,6 +18,7 @@ export const GeoPosotionBadge = () => {
       distance: '',
       type: '',
       MAC: '',
+      MAC5g: '',
     },
   });
 
@@ -48,6 +49,10 @@ export const GeoPosotionBadge = () => {
     </div>
   );
 
+  const writeMAC = (mac = '') => {
+    return mac.split(' ').join('-');
+  };
+
   return (
     <div
       className={`w-fit justify-center mx-auto my-24 border border-zinc-200/50 dark:border-zinc-800/50 p-3 rounded-[14px]
@@ -71,7 +76,17 @@ export const GeoPosotionBadge = () => {
           />
           <InfoRow label="Distancia" value={location.closest_wifi.distance} />
           <InfoRow label="Tipo" value={location.closest_wifi.type} />
+          <InfoRow label="MAC" value={writeMAC(location.closest_wifi.MAC)} />
+          <InfoRow
+            label="MAC-5Ghz"
+            value={
+              location.closest_wifi?.MAC5g
+                ? location.closest_wifi.MAC5g
+                : 'MAC no disponible'
+            }
+          />
         </div>
+        <div></div>
       </div>
     </div>
   );
