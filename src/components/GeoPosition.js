@@ -124,19 +124,20 @@ export const GeoPositionBadge = () => {
           onSubmit={handleSubmit}
           className="flex flex-col justify-center gap-2 pt-4"
         >
-          <div className="flex justify-center mx-auto gap-4">
+          <div className="md:flex grid justify-center mx-auto md:gap-4 gap-2">
             <input
               type="text"
               name="antenna"
-              placeholder="Ingrese el nombre de la antena"
-              className="border border-zinc-200 dark:border-zinc-800/50 rounded-lg p-1 bg-transparent placeholder:text-sm"
+              placeholder="Nombre de la antena..."
+              className="border border-zinc-200 dark:border-zinc-800/50 rounded-lg p-1 bg-transparent placeholder:text-base"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
+              required
             />
             <button
               type="submit"
               disabled={isLoading}
-              className="py-[2px] px-2 bg-zinc-800 rounded-lg border border-zinc-200 dark:border-zinc-700/50 hover:brightness-110 text-base disabled:opacity-50 disabled:cursor-not-allowed"
+              className="py-[2px] md:w-24 px-2 bg-zinc-800 rounded-lg border border-zinc-200 dark:border-zinc-700/50 hover:brightness-110 text-base disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? 'Buscando...' : 'Buscar'}
             </button>
