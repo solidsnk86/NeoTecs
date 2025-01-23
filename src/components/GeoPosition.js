@@ -84,7 +84,7 @@ export const GeoPositionCard = () => {
 
   const InfoRow = ({ label, value }) => (
     <div className="flex items-center space-x-2">
-      <span className="text-zinc-400 text-sm">{label}:</span>
+      <span className="text-zinc-500 dark:text-zinc-400 text-sm">{label}:</span>
       <span className="text-text-primary text-sm font-medium">
         {isLoading ? 'Cargando...' : value || 'No disponible'}
       </span>
@@ -108,7 +108,7 @@ export const GeoPositionCard = () => {
   // };
 
   return (
-    <div className="xl:max-w-xl w-full justify-center mx-auto my-24 border border-zinc-200/50 dark:border-zinc-800/50 p-3 rounded-[14px] bg-zinc-100 dark:bg-zinc-900 relative text-text-primary shadow-md overflow-hidden">
+    <div className="xl:max-w-xl w-full justify-center mx-auto my-24 border border-zinc-200/50 dark:border-zinc-800/50 p-3 rounded-[14px] bg-[#ffffff] dark:bg-zinc-900 relative text-text-primary overflow-hidden">
       <h2
         title="Información válida para la provincia de San Luis"
         className="font-semibold text-2xl py-3 px-3 items-center flex gap-2 mx-auto justify-center"
@@ -169,5 +169,3 @@ export const GeoPositionCard = () => {
     </div>
   );
 };
-
-export default GeoPositionCard;

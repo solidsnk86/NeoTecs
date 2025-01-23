@@ -9,7 +9,7 @@ import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import ArticleData from '../components/ArticleData';
 import Link from 'next/link';
-import GeoPosotionBadge from '../components/GeoPosition';
+import { GeoPositionCard } from '../components/GeoPosition';
 import { Donations } from '../components/Donations';
 
 export const HomeBlock = ({ children, className = '' }) => {
@@ -49,7 +49,7 @@ export default function Home() {
           <li className="custom-text-shadow">✅ Práctico</li>
         </ul>
         <YouTubeVideoSection />
-        <GeoPosotionBadge />
+        <GeoPositionCard />
         <Donations />
         <div className="xl:flex justify-center mx-auto w-full relative">
           <header className="xl:flex xl:w-1/2 p-2 xl:mt-[70px]">
