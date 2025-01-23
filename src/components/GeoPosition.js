@@ -24,7 +24,6 @@ export const GeoPositionCard = () => {
   const [query, setQuery] = useState('');
   const [searchResult, setSearchResult] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  // const [status, setStatus] = useState({});
 
   const getCityLocation = async () => {
     try {
@@ -95,18 +94,6 @@ export const GeoPositionCard = () => {
     return mac ? mac.split(' ').join('-') : 'No disponible';
   };
 
-  // const configure = async () => {
-  //   const response = await fetch(
-  //     `https://bot-config-self.vercel.app/?SSID=${
-  //       location.closest_wifi.antenna
-  //     }&MAC=${
-  //       location.closest_wifi.MAC5G
-  //     }&distance=${location.closest_wifi.distance.split('mts')}`,
-  //   );
-  //   const data = await response.json();
-  //   setStatus(data);
-  // };
-
   return (
     <div className="xl:max-w-xl w-full justify-center mx-auto my-24 border border-zinc-200/50 dark:border-zinc-800/50 p-3 rounded-[14px] bg-[#ffffff] dark:bg-zinc-900 relative text-text-primary overflow-hidden">
       <h2
@@ -155,7 +142,6 @@ export const GeoPositionCard = () => {
               {isLoading ? 'Buscando...' : 'Buscar'}
             </button>
           </div>
-          {/* {status && <small>{status.message}</small>} */}
         </form>
         {searchResult && (
           <div className="mt-4 grid md:grid-cols-2 grid-cols-1 gap-2">
