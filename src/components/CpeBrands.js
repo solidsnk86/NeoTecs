@@ -1,30 +1,33 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { TpLinkIcon } from '../components/Icons/TpLinkIcon';
 import { UbiquitiIcon } from '../components/Icons/UbiquitiIcon';
 import { MikrotikIcon } from '../components/Icons/MikrotikIcon';
 
 export const CpeBrands = ({ inline }) => {
-  const router = useRouter();
-
   const links = [
     {
       href: '/docs',
-      icon: <TpLinkIcon className="tplink-icon w-10 h-10" />,
+      icon: (
+        <TpLinkIcon className="tplink-icon w-10 h-10 disabled:cursor-not-allowed" />
+      ),
       title: 'Tp - Link',
     },
     {
       href: '/docs/ubiquiti',
-      icon: <UbiquitiIcon className="ubiquiti-icon w-10 h-10" />,
+      icon: (
+        <UbiquitiIcon className="ubiquiti-icon w-10 h-10 disabled:cursor-not-allowed" />
+      ),
       title: 'Ubiquiti',
     },
     {
       href: '/docs/mikrotik',
-      icon: <MikrotikIcon className="mikrotik-icon w-10 h-10" />,
+      icon: (
+        <MikrotikIcon className="mikrotik-icon w-10 h-10 disabled:cursor-not-allowed" />
+      ),
       title: 'Mikrotik',
     },
   ];
-  const isActive = (link) => link.href === router.asPath;
+
   return (
     <div
       className={`flex mb-4 border-zinc-800 rounded overflow-hidden w-100% shadow-md shadow-[#dad9d9] dark:shadow-[#000] ${
@@ -35,11 +38,7 @@ export const CpeBrands = ({ inline }) => {
         <Link
           href={link.href}
           key={link.href}
-          className={`p-2 w-full flex justify-center items-center duration-100 ${
-            isActive(link)
-              ? 'bg-[#484848]'
-              : 'hover:bg-[#474747] hover:opacity-90'
-          }`}
+          className="p-2 w-full flex justify-center items-center duration-100 dark:hover:bg-zinc-900 hover:bg-zinc-100"
           title={link.title}
         >
           {link.icon}

@@ -96,7 +96,7 @@ export default function Home() {
 
       <HomeBlock>
         <HomeBlockTitle>Acerca de NeoTecs</HomeBlockTitle>
-        <div className="dark:cards text-zinc-200 rounded-[13px] p-4">
+        <div className="cards text-zinc-200 rounded-[13px] p-4">
           <article className=" z-50">
             <p className="text-zinc-400">{aboutNeo}</p>
           </article>
@@ -114,7 +114,7 @@ export default function Home() {
         </div>
         <div className="justify-center mx-auto grid mt-20 text-center">
           <h1 className="font-bold text-4xl">Listo para empezar?</h1>
-          <p className="text-text-second text-balance my-5">
+          <p className="text-text-second text-lg text-balance my-5">
             Ahora que has sido presentado al tutorial, vamos a sumergirnos.
           </p>
         </div>
