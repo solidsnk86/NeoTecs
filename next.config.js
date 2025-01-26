@@ -11,6 +11,14 @@ module.exports = {
             key: 'Access-Control-Allow-Origin',
             value: '*',
           },
+          {
+            key: 'X-Rate-Limit-Limit',
+            value: '100',
+          },
+          {
+            key: 'X-Rate-Limit-Reset',
+            value: '1629997200',
+          },
         ],
       },
     ];
