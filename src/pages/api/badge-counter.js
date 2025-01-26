@@ -55,8 +55,7 @@ export default async function badgerCount(req, res) {
     <style>
         #badge-main {
             filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
-            transition: all 0.3s ease;
-            transform: translateY(-1px);
+            transition: all 0.3s ease;s
         }
         #main-text {
             text-shadow: 0 1px 1px rgba(0,0,0,0.2);
