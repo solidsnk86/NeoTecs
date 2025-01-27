@@ -1,10 +1,9 @@
 import { cardContent, aboutNeo } from '../components/Constants';
-import { CpeBrands } from '../components/CpeBrands';
 import { Footer } from '../components/Footer';
 import { HomeHeader } from '../components/HomeHeader';
 import { MarqueeLogos } from '../sections/Brands';
 import { Nav } from '../components/Nav';
-import { PlayIcon, Wifi, BookOpen } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import { ShimmerButton } from '../components/magicui/ShimmerButton';
 import { YouTubeVideoSection } from '../components/YouTubeVideoSection';
 import ArticleData from '../components/ArticleData';
@@ -51,32 +50,6 @@ export default function Home() {
         <YouTubeVideoSection />
         <GeoPositionCard />
         <Donations />
-        <div className="xl:flex justify-center mx-auto w-full relative">
-          <header className="xl:flex xl:w-1/2 p-2 xl:mt-[70px]">
-            <span className="effect-backround"></span>
-            <Wifi className="inline bg-button-variant mx-4 w-16 h-16 text-green-600 font-bold border p-3 border-green-400 rounded-lg xl:mx-8 xl:mt-10 mt-4" />
-            <div>
-              <h2 className="text-3xl mx-auto font-semibold my-3 border-b-4 border-outline w-fit">
-                Documentación Wifi
-              </h2>
-              <p className="text-md text-text-second">
-                Descubre cómo configurar diferentes modelos <br />
-                de dispositvos inalámbricos de las marcas
-                <br /> más conocidas con esta guía.
-              </p>
-            </div>
-          </header>
-          <aside className="dark:bg-[#09090B] bg-[#FFFFFF] mt-10 border border-zinc-200/85 dark:border-zinc-800/40 dark:shadow-none p-6 rounded-lg">
-            <p className="text-3xl font-semibold">
-              <PlayIcon className="inline mx-2 border mb-[6px] text-green-500 border-green-900 rounded-lg p-2 w-9 h-9 bg-[#072719]" />
-              Comencemos!
-            </p>
-            <p className="my-3 text-text-second">
-              ¿Cúal necesitas configurar? Tp-Link, Ubiquiti o Mikrotik:
-            </p>
-            <CpeBrands />
-          </aside>
-        </div>
       </HomeBlock>
 
       <HomeBlock>
