@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getCoords } from './utils/getCoords';
-import { Info } from 'lucide-react';
+import { Wifi, MapPin, Search } from 'lucide-react';
 
 export const GeoPositionCard = () => {
   const [location, setLocation] = useState({
@@ -24,10 +24,12 @@ export const GeoPositionCard = () => {
   const [query, setQuery] = useState('');
   const [searchResult, setSearchResult] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [coords, setCoords] = useState({ latitude: 0, longitude: 0 });
 
   const getCityLocation = async () => {
     try {
       const { lat, lon } = await getCoords();
+      setCoords({ latitude: lat, longitude: lon });
       const response = await fetch(
         `https://calcagni-gabriel.vercel.app/api/geolocation?lat=${lat}&lon=${lon}`,
       );
@@ -100,14 +102,27 @@ export const GeoPositionCard = () => {
         title="Información válida para la provincia de San Luis"
         className="font-semibold text-2xl py-3 px-3 items-center flex gap-2 mx-auto justify-center"
       >
-        <Info />
-        Información WiFi Gob. San Luis
+        <MapPin className="w-10 h-10 py-1 px-2 border border-blue-300/50 rounded-xl bg-blue-200/30 text-red-400/80" />
+        Su posición
       </h2>
       <div className="p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <InfoRow label="Ciudad" value={location.city} />
           <InfoRow label="Provincia" value={location.state} />
           <InfoRow label="País" value={location.country} />
+          <InfoRow label="Latitud" value={coords.latitude} />
+          <InfoRow label="Longitud" value={coords.longitude} />
+        </div>
+      </div>
+      <h2
+        title="Información válida para la provincia de San Luis"
+        className="font-semibold text-2xl py-3 px-3 items-center flex gap-2 mx-auto justify-center"
+      >
+        <Wifi className="w-10 h-10 py-1 px-2 border border-green-300/50 rounded-xl bg-green-200/30 text-green-300" />
+        Información WiFi Gob. San Luis
+      </h2>
+      <div className="p-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <InfoRow
             label="Antena más próxima"
             value={location.closest_wifi.antenna}
@@ -124,6 +139,13 @@ export const GeoPositionCard = () => {
           onSubmit={handleSubmit}
           className="flex flex-col justify-center gap-2 pt-4"
         >
+          <h2
+            title="Información válida para la provincia de San Luis"
+            className="font-semibold text-2xl py-3 px-3 items-center flex gap-2 mx-auto justify-center"
+          >
+            <Search className="w-10 h-10 py-1 px-2 border border-zinc-300/50 rounded-xl bg-zinc-200/30 text-zinc-300" />
+            Buscar antenna
+          </h2>
           <div className="md:flex grid justify-center mx-auto md:gap-4 gap-2">
             <input
               type="text"
