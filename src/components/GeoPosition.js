@@ -97,51 +97,56 @@ export const GeoPositionCard = () => {
   };
 
   return (
-    <div className="xl:max-w-xl w-full justify-center mx-auto my-24 border border-zinc-200/50 dark:border-zinc-800/50 p-3 rounded-[14px] bg-[#ffffff] dark:bg-zinc-900 relative text-text-primary overflow-hidden">
-      <h2
-        title="Información válida para la provincia de San Luis"
-        className="font-semibold text-2xl py-3 px-3 items-center flex gap-2 mx-auto justify-start md:justify-center"
-      >
-        <MapPin className="w-10 h-10 py-1 px-2 border border-blue-300/50 rounded-xl bg-blue-200/30 text-red-400/80" />
-        Su posición
-      </h2>
-      <div className="p-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <InfoRow label="Ciudad" value={location.city} />
-          <InfoRow label="Provincia" value={location.state} />
-          <InfoRow label="País" value={location.country} />
-          <InfoRow label="Latitud" value={coords.latitude} />
-          <InfoRow label="Longitud" value={coords.longitude} />
+    <div className="xl:max-w-xl w-full justify-center mx-auto my-24 space-y-3">
+      <div className="border border-zinc-200/50 dark:border-zinc-800/50 p-3 rounded-[14px] bg-[#ffffff] dark:bg-zinc-900 relative text-text-primary overflow-hidden">
+        <h2
+          title="Información válida para la provincia Argentina"
+          className="font-semibold text-lg md:text-2xl py-3 px-3 items-center flex gap-2 mx-auto justify-start md:justify-center"
+        >
+          <MapPin className="w-10 h-10 py-1 px-2 border border-blue-300/50 rounded-xl bg-blue-200/30 text-red-400/80" />
+          Tú posición
+        </h2>
+        <div className="p-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <InfoRow label="Ciudad" value={location.city} />
+            <InfoRow label="Provincia" value={location.state} />
+            <InfoRow label="País" value={location.country} />
+            <InfoRow label="Latitud" value={coords.latitude} />
+            <InfoRow label="Longitud" value={coords.longitude} />
+          </div>
         </div>
       </div>
-      <h2
-        title="Información válida para Argentina"
-        className="font-semibold text-2xl py-3 px-3 items-center flex gap-2 mx-auto justify-start md:justify-center text-left"
-      >
-        <Wifi className="w-10 h-10 py-1 px-2 border border-green-300/50 rounded-xl bg-green-200/30 text-green-300" />
-        Información WiFi Gob. San Luis
-      </h2>
-      <div className="p-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <InfoRow
-            label="Antena más próxima"
-            value={location.closest_wifi.antenna}
-          />
-          <InfoRow label="Distancia" value={location.closest_wifi.distance} />
-          <InfoRow label="Tipo" value={location.closest_wifi.type} />
-          <InfoRow label="MAC" value={writeMAC(location.closest_wifi.MAC)} />
-          <InfoRow
-            label="MAC-5Ghz"
-            value={writeMAC(location.closest_wifi.MAC5G)}
-          />
+      <div className="border border-zinc-200/50 dark:border-zinc-800/50 p-3 rounded-[14px] bg-[#ffffff] dark:bg-zinc-900 relative text-text-primary overflow-hidden">
+        <h2
+          title="Información válida para la provincia de San Luis"
+          className="font-semibold text-lg md:text-2xl py-3 px-3 items-center flex gap-2 mx-auto justify-start md:justify-center text-left"
+        >
+          <Wifi className="w-10 h-10 py-1 px-2 border border-green-300/50 rounded-xl bg-green-200/30 text-green-300" />
+          Información WiFi Gob. San Luis
+        </h2>
+        <div className="p-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <InfoRow
+              label="Antena más próxima"
+              value={location.closest_wifi.antenna}
+            />
+            <InfoRow label="Distancia" value={location.closest_wifi.distance} />
+            <InfoRow label="Tipo" value={location.closest_wifi.type} />
+            <InfoRow label="MAC" value={writeMAC(location.closest_wifi.MAC)} />
+            <InfoRow
+              label="MAC-5Ghz"
+              value={writeMAC(location.closest_wifi.MAC5G)}
+            />
+          </div>
         </div>
+
         <form
           onSubmit={handleSubmit}
           className="flex flex-col justify-center gap-2 pt-4"
         >
           <h2
             title="Información válida para la provincia de San Luis"
-            className="font-semibold text-2xl py-3 px-3 items-center flex gap-2 mx-auto justify-start md:justify-center"
+            className="font-semibold text-lg md:text-2xl py-3 px-3 items-center flex gap-2 mx-auto justify-start md:justify-center"
           >
             <Search className="w-10 h-10 py-1 px-2 border border-zinc-300/50 rounded-xl bg-zinc-200/30 text-zinc-300" />
             Buscar antenna
