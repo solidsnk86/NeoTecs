@@ -4,7 +4,7 @@ export default async function badgerCount(req, res) {
   const { user, badge_gradient_1, badge_gradient_2, counter_color } = req.query;
   const username = String(user).toLowerCase();
   const formatThousand = (value) => {
-    return value >= 1000 ? '192' : '186';
+    return value >= 1000 ? '176' : '172';
   };
   const formatValue = (value) => {
     let formattedValue = 0;
@@ -41,17 +41,17 @@ export default async function badgerCount(req, res) {
     }
 
     const adjustCounter = (counter) => {
-      if (counter >= 10000) return '146';
-      if (counter >= 100) return '150';
-      if (counter >= 10) return '154';
-      if (String(counter).includes('1.0K')) return '120';
-      return '158';
+      if (counter >= 10000) return '138';
+      if (counter >= 100) return '140';
+      if (counter >= 10) return '146';
+      if (String(counter).includes('1.0K')) return '114';
+      return '150';
     };
 
     const svg = `
    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${formatThousand(
      newCount,
-   )} 30" width="${formatThousand(newCount)}" height="30">
+   )} 26" width="${formatThousand(newCount)}" height="26">
     <style>
         #badge-main {
             filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
@@ -89,21 +89,18 @@ export default async function badgerCount(req, res) {
             }"/>
         </linearGradient>
     </defs>
-
-    <!-- Borde sutil exterior -->
-    <rect width="184" height="30" rx="4" fill="none" stroke="rgba(52, 52, 52, 0.405)" stroke-width="1"/>
     
-    <rect id="badge-main" width="184" height="30" rx="4" fill="url(#bg-gradient)"/>
+    <rect id="badge-main" width="176" height="26" rx="2" fill="url(#bg-gradient)"/>
     
-    <rect x="142" width="42" height="30" ry="4" fill="url(#count-gradient)" class="counter-box"/>
+    <rect x="136" width="36" height="26" ry="2" fill="url(#count-gradient)" class="counter-box"/>
     
-    <text id="eyes" y="19" x="6" font-size="16" text-rendering="geometricPrecision">👀</text>
-    <text id="main-text" x="33" y="20" fill="#fff" font-family="Arial, sans-serif" font-size="14" text-rendering="geometricPrecision" font-weight="700">Visitas al perfil</text>
+    <text id="eyes" y="17" x="4" font-size="16" text-rendering="geometricPrecision">👀</text>
+    <text id="main-text" x="33" y="18" fill="#fff" font-family="Arial, sans-serif" font-size="14" text-rendering="geometricPrecision" font-weight="500">Visitas al perfil</text>
     <text id="text-counter" x="${adjustCounter(
       newCount,
-    )}" y="20" fill="#fff" font-family="Arial, sans-serif" font-size="${
+    )}" y="18" fill="#fff" font-family="Arial, sans-serif" font-size="${
       newCount >= 1000 ? '12' : '14'
-    }" text-align="center" font-weight="600">${formatValue(newCount)}</text>
+    }" text-align="center" font-weight="500">${formatValue(newCount)}</text>
 </svg>
     `;
 
