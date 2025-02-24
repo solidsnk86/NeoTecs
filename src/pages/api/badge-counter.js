@@ -90,7 +90,7 @@ export default async function badgerCount(req, res) {
         </linearGradient>
     </defs>
     
-    <rect width="163" height="26" ry="2" fill="#3D444D"/>
+    <rect width="163" height="26" ry="2.5" fill="#3D444D"/>
     <rect x="1" y="1" id="badge-main" ry="2" width="161" height="24" fill="url(#bg-gradient)"/>
     
     <rect x="1" y="1" id="badge-main" ry="2" width="161" height="24" fill="url(#bg-gradient)"/>
