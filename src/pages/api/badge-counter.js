@@ -41,11 +41,11 @@ export default async function badgerCount(req, res) {
     }
 
     const adjustCounter = (counter) => {
-      if (counter >= 10000) return '138';
-      if (counter >= 100) return '136';
-      if (counter >= 10) return '139';
-      if (String(counter).includes('1.0K')) return '114';
-      return '140';
+      if (counter >= 10000) return '136';
+      if (counter >= 100) return '134';
+      if (counter >= 10) return '137';
+      if (String(counter).includes('1.0K')) return '112';
+      return '138';
     };
 
     const svg = `
@@ -89,15 +89,16 @@ export default async function badgerCount(req, res) {
             }"/>
         </linearGradient>
     </defs>
-
-    <rect id="badge-main" width="168" height="26" fill="url(#bg-gradient)"/>
     
-    <rect id="badge-main" width="168" height="26" fill="url(#bg-gradient)"/>
+    <rect width="163" height="26" fill="#3D444D"/>
+    <rect id="badge-main" width="162" height="25" fill="url(#bg-gradient)"/>
     
-    <rect x="130" width="36" height="26" fill="url(#count-gradient)" class="counter-box"/>
+    <rect id="badge-main" width="162" height="25" fill="url(#bg-gradient)"/>
     
-    <text id="eyes" y="17" x="4" font-size="16" text-rendering="geometricPrecision">👀</text>
-    <text id="main-text" x="31" y="18" fill="#fff" font-family="Arial, sans-serif" font-size="14" text-rendering="geometricPrecision" font-weight="500">Visitas al perfil</text>
+    <rect x="128" width="34" height="25" fill="url(#count-gradient)" class="counter-box"/>
+    
+    <text id="eyes" y="17" x="4" font-size="15" text-rendering="geometricPrecision">👀</text>
+    <text id="main-text" x="30" y="18" fill="#fff" font-family="Arial, sans-serif" font-size="14" text-rendering="geometricPrecision" font-weight="500">Visitas al perfil</text>
     <text id="text-counter" x="${adjustCounter(
       newCount,
     )}" y="18" fill="#fff" font-family="Arial, sans-serif" font-size="${
