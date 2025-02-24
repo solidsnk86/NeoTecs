@@ -45,7 +45,7 @@ export default async function badgerCount(req, res) {
       if (counter >= 100) return '134';
       if (counter >= 10) return '137';
       if (String(counter).includes('1.0K')) return '112';
-      return '138';
+      return '140';
     };
 
     const svg = `
@@ -99,7 +99,7 @@ export default async function badgerCount(req, res) {
     <rect x="128" y="1" width="34" rx="2.5" height="24" fill="url(#count-gradient)" class="counter-box"/>
     
     <text id="eyes" y="17" x="4" font-size="15" text-rendering="geometricPrecision">👀</text>
-    <text id="main-text" x="30" y="18" fill="#fff" font-family="Arial, sans-serif" font-size="14" text-rendering="geometricPrecision" font-weight="500">Visitas al perfil</text>
+    <text id="main-text" x="29" y="18" fill="#fff" font-family="Arial, sans-serif" font-size="14" text-rendering="geometricPrecision" font-weight="500">Visitas al perfil</text>
     <text id="text-counter" x="${adjustCounter(
       newCount,
     )}" y="18" fill="#fff" font-family="Arial, sans-serif" font-size="${
