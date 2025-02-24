@@ -95,6 +95,7 @@ export default async function badgerCount(req, res) {
     
     <rect x="1" y="1" id="badge-main" ry="2" width="161" height="24" fill="url(#bg-gradient)"/>
     
+    <rect x="128" y="1" width="2" height="24" fill="url(#count-gradient)" class="counter-box"/>
     <rect x="128" y="1" width="34" rx="2" height="24" fill="url(#count-gradient)" class="counter-box"/>
     
     <text id="eyes" y="17" x="4" font-size="15" text-rendering="geometricPrecision">👀</text>
