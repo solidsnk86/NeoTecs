@@ -90,13 +90,13 @@ export default async function badgerCount(req, res) {
         </linearGradient>
     </defs>
     
-    <rect width="163" height="26" ry="2.5" fill="#3D444D"/>
-    <rect x="1" y="1" id="badge-main" ry="2" width="161" height="24" fill="url(#bg-gradient)"/>
+    <rect width="163" height="26" ry="2.8" fill="#3D444D"/>
+    <rect x="1" y="1" id="badge-main" ry="2.5" width="161" height="24" fill="url(#bg-gradient)"/>
     
-    <rect x="1" y="1" id="badge-main" ry="2" width="161" height="24" fill="url(#bg-gradient)"/>
+    <rect x="1" y="1" id="badge-main" ry="2.5" width="161" height="24" fill="url(#bg-gradient)"/>
     
     <rect x="128" y="1" width="2" height="24" fill="url(#count-gradient)" class="counter-box"/>
-    <rect x="128" y="1" width="34" rx="2" height="24" fill="url(#count-gradient)" class="counter-box"/>
+    <rect x="128" y="1" width="34" rx="2.5" height="24" fill="url(#count-gradient)" class="counter-box"/>
     
     <text id="eyes" y="17" x="4" font-size="15" text-rendering="geometricPrecision">👀</text>
     <text id="main-text" x="30" y="18" fill="#fff" font-family="Arial, sans-serif" font-size="14" text-rendering="geometricPrecision" font-weight="500">Visitas al perfil</text>
