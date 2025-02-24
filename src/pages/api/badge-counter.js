@@ -102,7 +102,7 @@ export default async function badgerCount(req, res) {
     <text id="text-counter" x="${adjustCounter(
       newCount,
     )}" y="18" fill="#fff" font-family="Arial, sans-serif" font-size="${
-      newCount >= 1000 ? '12' : '14'
+      newCount >= 1000 ? '11' : '13'
     }" text-align="center" font-weight="500">${formatValue(newCount)}</text>
 </svg>
     `;
