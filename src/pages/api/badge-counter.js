@@ -97,7 +97,7 @@ export default async function badgerCount(req, res) {
     <rect x="130" width="36" height="26" fill="url(#count-gradient)" class="counter-box"/>
     
     <text id="eyes" y="17" x="4" font-size="16" text-rendering="geometricPrecision">👀</text>
-    <text id="main-text" x="33" y="18" fill="#fff" font-family="Arial, sans-serif" font-size="14" text-rendering="geometricPrecision" font-weight="500">Visitas al perfil</text>
+    <text id="main-text" x="31" y="18" fill="#fff" font-family="Arial, sans-serif" font-size="14" text-rendering="geometricPrecision" font-weight="500">Visitas al perfil</text>
     <text id="text-counter" x="${adjustCounter(
       newCount,
     )}" y="18" fill="#fff" font-family="Arial, sans-serif" font-size="${
