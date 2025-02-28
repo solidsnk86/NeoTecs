@@ -2,23 +2,11 @@
 
 import os from 'node:os';
 
-function formatDate(string) {
-  const date = new Date(string).toLocaleDateString('es-Es', {
-    year: 'numeric',
-    month: 'long',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-  });
-  return date;
-}
-
 export default async function handlerInfo(req, res) {
   try {
     res.status(200).json({
       success: true,
-      timeStamp: formatDate(new Date().getTime()),
+      timeStamp: new Date().getTime(),
       operatingSystemInfo: {
         os: os.version(),
         architecture: os.arch(),
