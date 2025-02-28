@@ -31,8 +31,7 @@ export default async function handlerInfo(req, res) {
   } catch (error) {
     res.status(500).json({
       success: false,
-      error: new Error('Error al desplegar la API:', error),
+      error: new Error('Error en el servidor:', error),
     });
-    console.error('Error al desplegar la API:', error);
   }
 }
