@@ -1,15 +1,51 @@
-dialog[open] {
-  scale: 1;
-  transition: scale 0.3s ease-in-out, opacity 0.3s ease;
-  translate: 0 0;
-
-  @starting-style {
-    scale: 0;
-    translate: 0 100px;
-  }
+dialog::backdrop {
+  backdrop-filter: blur(3px);
+  background: #0a0a0a4f;
+  cursor: alias;
 }
 
 dialog {
-  transition: scale 0.3s ease, display 3s allow-discrete;
-  scale: 0;
+  width: 50%;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  animation: dialogEffect 180ms forwards linear;
+  text-align: center;
+
+  & h3 {
+    font-weight: 600;
+    margin-right: 8px;
+  }
+
+  & span {
+    padding: 2px 4px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+  }
+
+  & a {
+    text-decoration: underline;
+    font-weight: 500;
+    color: #3575dd;
+  }
+}
+
+@keyframes dialogEffect {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
 }

@@ -1,33 +1,88 @@
-import { useContext, useEffect, useState } from 'react';
-import { ArrowLeftIcon, Home, Share } from 'lucide-react';
+import { useCallback, useContext, useEffect, useState } from 'react';
+import {
+  ArrowLeftIcon,
+  Home,
+  Share,
+  Share2,
+  Facebook,
+  Link2,
+  CopyCheck,
+} from 'lucide-react';
 import { NavSwitch } from './NavSwicth';
 import { TitlesContext } from '../shared/TitlesContext';
 import { useRouter } from 'next/navigation';
-import { shareText } from './Constants';
+import {
+  compartirFacebook,
+  compartirTwitter,
+  compartirWhatsapp,
+  shareText,
+} from './Constants';
+import { showDialog } from '@/lib/dialog';
+import { TwitterIcon } from './Icons/TwitterIcon';
+import { WhatsApp } from '@mui/icons-material';
 
 export function NavLinks() {
   const { titles } = useContext(TitlesContext);
   const [selectedSlug, setSelectedSlug] = useState(titles[0]?.slug);
   const [documentTitle, setDocumentTitle] = useState('');
+  const [isCopied, setIsCopied] = useState(null);
   const router = useRouter();
 
   const handleTitleClick = (slug) => {
     setSelectedSlug(slug);
   };
 
-  const share = () => {
-    try {
-      if (navigator.share) {
-        navigator.share({
-          title: document.title,
-          text: shareText,
-          url: location.href,
-        });
-      }
-    } catch (_) {
-      throw new Error('Navigator does not allow share');
+  const navigatorSharer = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: document.title,
+        text: shareText,
+        url: location.href,
+      });
     }
   };
+
+  const copyLink = async () => {
+    const link = window.location.href;
+    await navigator.clipboard.writeText(link);
+    setIsCopied(true);
+  };
+
+  const share = useCallback(() => {
+    showDialog({
+      content: (
+        <div className="flex p-5 bg-zinc-200 dark:bg-zinc-900 dark:text-zinc-100 gap-3">
+          <h3>Compartir por: </h3>
+          <span
+            className="cursor-pointer"
+            onClick={copyLink}
+            title={`${isCopied ? 'Copiado!' : 'Copiar Link'}`}
+          >
+            {isCopied ? <CopyCheck /> : <Link2 />}
+          </span>
+          <span className="cursor-pointer" title="Compartir">
+            <Share2 onClick={navigatorSharer} />
+          </span>
+          <span className="cursor-pointer" title="Compartir en Facebook">
+            <Facebook onClick={compartirFacebook} />
+          </span>
+          <span className="cursor-pointer" title="Compartir en X">
+            <TwitterIcon onClick={() => compartirTwitter(document.title)} />
+          </span>
+          <span className="cursor-pointer" title="Compartir por WhatsApp">
+            <WhatsApp onClick={compartirWhatsapp} />
+          </span>
+        </div>
+      ),
+    });
+  }, [isCopied]);
+
+  useEffect(() => {
+    if (isCopied) {
+      // eslint-disable-next-line no-alert
+      alert('Se ha copiado el link!');
+    }
+  }, [isCopied, share]);
 
   useEffect(() => {
     setDocumentTitle({

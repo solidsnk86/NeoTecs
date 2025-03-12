@@ -30,7 +30,7 @@ export class GetLocation {
 
   public static async postalCode() {
     const data = await this.getData();
-    return data.city.postal_code;
+    return data.city.postalCode;
   }
 
   public static async country() {
@@ -40,7 +40,7 @@ export class GetLocation {
 
   public static async flag() {
     const data = await this.getData();
-    return data.country.emoji_flag;
+    return data.country.emojiFlag;
   }
 
   public static async latitude() {

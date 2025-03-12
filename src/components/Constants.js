@@ -144,7 +144,7 @@ export const aboutNeo = `
 
 export const shareText = `
   No te pierdas este tutorial gratuito para aprender a programar con ejemplos y ejercicios prácticos,
-  también incluye contenido de como configurar tu antena inalámbrica para la provicnia de San Luis 📡!!`;
+  también incluye contenido de como configurar tu antena inalámbrica para la provincia de San Luis 📡!!`;
 
 export const compartirWhatsapp = () => {
   const url = window.location.href;
@@ -153,9 +153,14 @@ export const compartirWhatsapp = () => {
   window.open(`https://wa.me/?text=${encodeMessage}`);
 };
 
-export const compartirTwitter = () => {
-  const encodeUrl = encodeURIComponent(window.location.href);
-  window.open(`https://twitter.com/share?url=${encodeUrl}`);
+export const compartirTwitter = (sharedText) => {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent(`${sharedText}\n`);
+  const hashtags = encodeURIComponent('DesarrolloWeb,JavaScript,Programación');
+
+  window.open(
+    `https://twitter.com/share?url=${url}&text=${text}&hashtags=${hashtags}`,
+  );
 };
 
 export const compartirLinkedIn = () => {
